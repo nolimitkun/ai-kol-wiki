@@ -1,0 +1,37 @@
+# 关注的 KOL 名单 — 人来维护这份文件
+# 每个条目:
+#   slug:        目录名，小写连字符
+#   name:        显示名
+#   channel:     频道 URL（YouTube 或 Bilibili，yt-dlp 支持的都行）
+#   min_minutes: 只收录不短于此时长的视频（过滤 shorts / 预告片）
+#   lang:        主要语言，供摄取时参考
+#
+# 下面是初始种子名单，按需增删。
+
+kols:
+  # ── 美国 ──────────────────────────────────────
+  - slug: karpathy
+    name: Andrej Karpathy
+    channel: https://www.youtube.com/@AndrejKarpathy/videos
+    min_minutes: 20
+    lang: en
+
+  - slug: dwarkesh
+    name: Dwarkesh Patel
+    channel: https://www.youtube.com/@DwarkeshPatel/videos
+    min_minutes: 30
+    lang: en
+
+  - slug: lex-fridman
+    name: Lex Fridman
+    channel: https://www.youtube.com/@lexfridman/videos
+    min_minutes: 30
+    lang: en
+
+  # ── 中国 ──────────────────────────────────────
+  - slug: li-mu
+    name: 李沐（跟李沐学AI）
+    channel: https://www.youtube.com/@mu_li/videos
+    # B 站镜像: https://space.bilibili.com/1567748478
+    min_minutes: 15
+    lang: zh
