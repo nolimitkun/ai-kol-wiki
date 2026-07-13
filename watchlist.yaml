@@ -28,10 +28,21 @@ kols:
     min_minutes: 30
     lang: en
 
+  - slug: no-priors
+    name: No Priors (Sarah Guo & Elad Gil)
+    channel: https://www.youtube.com/@NoPriorsPodcast/videos
+    min_minutes: 20
+    lang: en
+
+  - slug: latent-space
+    name: Latent Space (swyx & Alessio)
+    channel: https://www.youtube.com/@LatentSpacePod/videos
+    min_minutes: 20
+    lang: en
+
   # ── 中国 ──────────────────────────────────────
-  - slug: li-mu
-    name: 李沐（跟李沐学AI）
-    channel: https://www.youtube.com/@mu_li/videos
-    # B 站镜像: https://space.bilibili.com/1567748478
-    min_minutes: 15
+  - slug: zhang-xiaojun
+    name: 张小珺（商业访谈录）
+    channel: https://www.youtube.com/@xiaojunpodcast/videos
+    min_minutes: 30
     lang: zh

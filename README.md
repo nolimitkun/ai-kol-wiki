@@ -27,7 +27,7 @@ uv run scripts/fetch.py <video-url> --kol <slug>
 
 ## 目前覆盖
 
-Andrej Karpathy、Dwarkesh Podcast、Lex Fridman、李沐 等频道；
+Andrej Karpathy、Dwarkesh Podcast、Lex Fridman 等频道（watchlist 另含 No Priors、Latent Space、张小珺商业访谈录，待摄取）；
 主题页覆盖 LLM 训练管线、LLM 心理学、AI 与科学发现、算力基础设施、AI 与就业、中美 AI 生态对照等。
 
 > 转录稿来自各视频的公开字幕，版权归原作者所有；wiki 内容为观点整理与综合，均标注来源与时间戳。
