@@ -1,0 +1,48 @@
+site_name: AI KOL Wiki
+site_description: 中美 AI KOL 长视频观点知识库（LLM Wiki 模式）
+site_url: https://nolimitkun.github.io/ai-kol-wiki/
+repo_url: https://github.com/nolimitkun/ai-kol-wiki
+repo_name: nolimitkun/ai-kol-wiki
+
+# _docs 由 CI 拼装（.github/workflows/pages.yml）：
+#   README.md -> _docs/index.md，外加 wiki/、sources/、CLAUDE.md、watchlist.yaml
+# 这样 wiki 页面里的相对链接（../../sources/...、../CLAUDE.md）在站点上依然有效。
+docs_dir: _docs
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - content.action.view
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+
+# 转录稿不进导航（体量大且是原始资料），仍可通过 wiki 页面的链接访问
+not_in_nav: |
+  sources/**
+  CLAUDE.md

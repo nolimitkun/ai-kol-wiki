@@ -9,8 +9,8 @@
 
 | 层 | 位置 | 说明 |
 |---|---|---|
-| Raw Sources | [`sources/`](sources/) | 脚本抓取的带时间戳转录稿，不可变 |
-| Wiki | [`wiki/`](wiki/) | 人物页 / 主题页 / 视频页，观点可溯源到时间戳 |
+| Raw Sources | `sources/` | 脚本抓取的带时间戳转录稿，不可变 |
+| Wiki | [`wiki/`](wiki/index.md) | 人物页 / 主题页 / 视频页，观点可溯源到时间戳 |
 | Schema | [`CLAUDE.md`](CLAUDE.md) + [`watchlist.yaml`](watchlist.yaml) | 规范与 KOL 名单 |
 
 ## 使用
