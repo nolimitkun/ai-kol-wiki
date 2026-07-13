@@ -9,9 +9,27 @@
 
 （来源：[Karpathy, Intro to LLMs](../videos/20231123-karpathy-intro-to-llms.md) 00:14–00:23）
 
+## 教科书类比（Karpathy 2025-02 的框架）
+
+预训练 = 读正文阐述（建知识库）；SFT = 学例题的完整解法（模仿专家）；RL = 做课后练习题（只给答案，自己发现解法）。人类标注员写不出对 LLM 最优的解题路径——"它的认知与我们不同"——所以 RL 必不可少。RLHF 用奖励模型把 RL 扩展到不可验证域（写作等），但奖励模型可被博弈，"RLHF is not RL"：只能跑几百步的微调，缺少可无限投算力的魔法；可验证域（数学/代码）才能像 AlphaGo 一样无限跑 RL 并可能超越人类（move 37 的开放域等价物）。（[Deep Dive into LLMs](../videos/20250205-karpathy-deep-dive-into-llms.md) 02:11–03:06）
+
+数据侧细节（FineWeb：44TB / 15T token）、GPT-2 复现成本从 $40k 降到 $100–600 等见同视频 00:01–00:34。
+
+## 第三阶段的演进：RL 与思考模型
+
+Karpathy 2025-02 的更新表述：训练管线已是 **预训练 → SFT → 强化学习** 三段。RL 阶段让模型在大量数学/代码题上"刷题"，自己发现有效的思考策略（尝试、回溯、检验假设）——这些策略难以由人工标注硬编码，只能靠 RL 涌现。这是近一两年的大突破，DeepSeek R1 是首个公开系统阐述的工作。产物即"思考模型"（o1/R1 等），在难题上用推理时间换准确率。（[How I use LLMs](../videos/20250227-karpathy-how-i-use-llms.md) 00:22–00:25）
+
+这正好接上他 2023-11 预言的 System 2 方向（见 [LLM OS](llm-os.md) 开放问题）——两年内从"没有模型具备"变成行业标配。
+
+## 训练成本与数据质量（Karpathy 2024-06 的实证）
+
+复现 GPT-2 124M 的成本从 2019 年的 ~$40,000 降到 2024 年的 $10 级别（8×A100 约 2 小时）。更重要的发现：**数据质量 > token 数量**——在 FineWeb-EDU（LLM 自动做教育质量过滤）上只训 10B token 就超过原版 GPT-2（100B token）的 HellaSwag 成绩，约 10 倍学习效率。他还实测 GPT-3 论文的超参"极其保守"，max LR 放大 3 倍仍收敛更快。工程侧结论："深度学习负载多数是 memory-bound——flops 不重要，内存访问模式才重要"（FlashAttention 多算 flops 反而快 7.6 倍）。（[Let's reproduce GPT-2](../videos/20240609-karpathy-lets-reproduce-gpt2.md) 00:02、01:48–02:14、03:44–03:51）
+
 ## Scaling Laws
 
 Karpathy：性能是 N（参数）和 D（数据）的平滑可预测函数，无饱和迹象；"算法进步是很好的加分项，但扩大规模是有保证的路径"——这是算力竞赛（"Gold Rush"）的根本驱动。（同上 00:25–00:27）
+
+Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（数据靠合成续命，"人类互相教学的数据本来就是合成的"）、后训练、test-time（"思考很难，推理必然算力密集"）、agentic（spawn 子 agent 团队）；agent 的经验回流预训练形成循环。"智能最终只随一个东西 scale：算力。"（[Lex #494](../videos/20260323-lex-jensen-huang-nvidia.md) 00:22–00:28）
 
 ## 中美对照
 
