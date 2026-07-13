@@ -77,6 +77,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("url")
     ap.add_argument("--kol", required=True, help="watchlist 里的 slug，用作目录名")
+    ap.add_argument("--lang", help="强制字幕语言代码（如 zh-Hans），跳过自动选择；"
+                                   "用于自动配音版原声轨道等特殊情况")
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
     args = ap.parse_args()
 
@@ -95,12 +97,20 @@ def main() -> None:
     subs = info.get("subtitles") or {}
     autos = info.get("automatic_captions") or {}
     orig = info.get("language") or ""
-    pref = ZH_PREF if orig.startswith("zh") else EN_PREF
-    lang = pick_lang(subs, pref)
-    auto = False
-    if lang is None:
-        lang = pick_lang(autos, pref)
-        auto = True
+    if args.lang:  # 强制指定语言：先人工字幕后自动字幕，不做同族回退
+        if args.lang in subs:
+            lang, auto = args.lang, False
+        elif args.lang in autos:
+            lang, auto = args.lang, True
+        else:
+            sys.exit(f"指定语言 {args.lang} 无可用字幕。")
+    else:
+        pref = ZH_PREF if orig.startswith("zh") else EN_PREF
+        lang = pick_lang(subs, pref)
+        auto = False
+        if lang is None:
+            lang = pick_lang(autos, pref)
+            auto = True
 
     if lang is None:
         print("没有可用字幕。", file=sys.stderr)

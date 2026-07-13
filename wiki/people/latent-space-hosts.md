@@ -1,0 +1,15 @@
+# Latent Space（swyx & Alessio）
+
+- **背景**: Latent Space 播客双主播——swyx（Shawn Wang）与 Alessio Fanelli，面向"AI 工程师"的应用/工程视角；"Cooking"系列以边做饭边访谈的轻松格式著称。
+- **频道**: [YouTube @LatentSpacePod](https://www.youtube.com/@LatentSpacePod)
+- **watchlist slug**: `latent-space`
+
+## 立场与关注点
+
+- 偏 AI engineering / 应用 LLM 实践；关注 evals、agent、infra、研究组织方法等工程与研究落地话题。
+
+## 已收录访谈
+
+| 日期 | 视频 | 嘉宾 |
+|---|---|---|
+| 2026-06-25 | [AGI、o1、评估与 Scaling Laws](../videos/20260625-latent-space-mark-chen.md) | Mark Chen（OpenAI CRO） |

@@ -15,6 +15,18 @@
 
 工程底层的呼应：深度学习负载多数是 **memory-bound**，"flops 不重要，内存访问模式才重要"（FlashAttention 多算 flops 反而快 7.6 倍）；GPU 优化阶梯（精度/编译/kernel fusion/nice numbers）合计 11 倍。（[Let's reproduce GPT-2](../videos/20240609-karpathy-lets-reproduce-gpt2.md)）
 
+## TPU vs GPU（姚顺宇，Google DeepMind，2026-05）
+
+来源：[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md)
+
+- 大规模商用下**无绝对优劣**。设计理念差异：GPU（Hopper/H 系列）一个 pod 内约 8 卡两两 NVLink 高速互联；**TPU 抛弃两两互联、采 3D Torus 拓扑**，尽量多卡放一个架子，编译器/sharding 写得好则等效更大存储 + 减少通信 bound。
+- TPU 劣势：小 scale 更固定、通用性弱、无开源生态——但"大规模自用时生态不是问题，跑几十万张卡的集群，搭基础设施不是多大的事"（03:20–03:23）。
+- 这与 Jensen 从 NVIDIA 侧强调的 NVLink-72/install-base 生态形成对照：姚从使用方视角认为在超大规模下 TPU 的封闭生态不构成实质劣势。
+
+## test-time compute 的经济性（Noam Brown，OpenAI，2026-06）
+
+- 模型能力成为"投入金钱的函数"，把**推理时算力**变成基础设施的一等成本项；评估长任务"可能要跑一年"，与算力/时间预算直接冲突（[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md) 00:12–00:16）。呼应 Jensen"token 工厂 / tokens-per-sec-per-watt"的世界观。
+
 ## 中美对照
 
-（待补充：中方 KOL 对算力约束、国产芯片路线的论述。）
+见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。国产芯片的**主动**论述仍待中方素材补充。

@@ -11,18 +11,26 @@
 - [Adam Brown](people/adam-brown.md) — Google DeepMind BlueShift 负责人，理论物理学家
 - [Grant Sanderson](people/grant-sanderson.md) — 3Blue1Brown，AI 与数学观察者
 - [Ada Palmer](people/ada-palmer.md) — 文艺复兴史学家（非 AI 领域）
+- [姚顺宇](people/yao-shunyu.md) — Google DeepMind 研究员（前 Anthropic），中方一线视角
+- [Noam Brown](people/noam-brown.md) — OpenAI，推理 / test-time compute 奠基人之一
+- [Mark Chen](people/mark-chen.md) — OpenAI 首席研究官
+- [张小珺](people/zhang-xiaojun.md) — 《商业访谈录》主播（中方视角主来源）
+- [No Priors 主播](people/no-priors-hosts.md) — Sarah Guo & Elad Gil
+- [Latent Space 主播](people/latent-space-hosts.md) — swyx & Alessio
 
 ## 主题
 
 - [LLM 训练管线](topics/llm-training-pipeline.md) — 预训练 / SFT / RL、scaling laws（含 Jensen 的四阶段扩展）
 - [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力
 - [LLM 实用方法论](topics/using-llms-in-practice.md) — 如何有效使用 LLM（Karpathy、Grant/Dwarkesh 的学习法）
+- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）
+- [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
-- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、AI 规模化安全研究的伦理
-- [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy）
-- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂
-- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化
-- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题（中方视角待补充）
+- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口
+- [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）
+- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
+- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
+- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
 
 ## 视频
 
@@ -44,3 +52,12 @@
 - 2026-05-06 [#496 FFmpeg 与开源](videos/20260506-lex-ffmpeg.md)
 - 2026-05-29 [#497 Don Lincoln：物理学之谜](videos/20260529-lex-don-lincoln-physics.md)（物理）
 - 2026-06-30 [#498 罗马帝国与拜占庭](videos/20260630-lex-kaldellis-roman-empire.md)（历史）
+
+### 张小珺·商业访谈录
+- 2026-05-11 [姚顺宇：在 Anthropic 和 Gemini 训模型、英雄主义已过去](videos/20260511-zhang-xiaojun-yao-shunyu.md)
+
+### No Priors
+- 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
+
+### Latent Space
+- 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)

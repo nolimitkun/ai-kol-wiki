@@ -23,6 +23,14 @@
 ### Andrej Karpathy（美，2023-11 / 2025-02）
 - 自我改进需要 reward function：可验证域（数学/代码）可以无限跑 RL、可能出现开放域的 "move 37"（人类没想过的思考策略甚至思考语言）；开放问题是可验证域练出的推理能否迁移到不可验证域。（[Deep Dive into LLMs](../videos/20250205-karpathy-deep-dive-into-llms.md) 02:42–02:48、03:28）
 
+### Noam Brown（美，OpenAI，2026-06）
+- **Erdős 单位距离猜想**：OpenAI 用内部模型以"极低成本"反证；事后发现 5.5 也能做到（需 scaffold + steer）。一个通用 scaffold 约 $1K–$100K 就可能达成——"本可由通用模型完成，只是没人往里砸 $10 万 compute"。（[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md) 00:17–00:19）
+- 与 Adam Brown / Grant Sanderson 的同一案例互证：三人都以"AI 不迷信公认为真的结论"为 AI-for-science 的结构性优势；Noam 补充了成本维度（每代模型发布后成本降 10–100×，故 OpenAI 有意不鼓励研究员刷开放难题，而应造更强模型）。
+
+### 姚顺宇（中，Google DeepMind，2026-05）
+- 基础科学（数学/理论物理）研究者已**大量用 AI**：Gemini Deep Think 做数学推导/证明、看文章归纳；痛点（物理学家不会写代码、光打开编译器就半天）被消除。但难成"万众瞩目"，除非出现"AI 产生爱因斯坦级理论"的时刻。（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 00:42–00:44）
+- 建议年轻人做"现在没人做到的事"，点名 **AI 帮助真正的科学问题（如量子调控）** 是比纯做语言模型更蓝海的方向（03:22–03:23、03:33–03:34）。
+
 ## 中美对照
 
-（待补充：中方 KOL 关于 AI for Science 的论述。）
+AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。

@@ -20,6 +20,13 @@ Karpathy 的判断：攻击会被逐个修补，但这是持续的 cat-and-mouse
 
 Google 用 AI 批量生成开源项目安全报告引发的争议：报告冗长、一切标 critical、90 天披露期限不顾志愿者开发模式——"近乎 AI 生成报告对维护者的拒绝服务攻击"；激励错位（发现者得百万赏金，修复的志愿者一无所获）。风波推动 Google 转向提交补丁 + 奖励修复。（[FFmpeg 期](../videos/20260506-lex-ffmpeg.md) 01:09–01:17）
 
+## 安全评估的 test-time compute 缺口（Noam Brown，OpenAI，2026-06）
+
+来源：[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md)
+
+- 各家的 responsible scaling policy / preparedness framework 大多诞生于 ChatGPT 时代，**没有考虑 test-time compute**——现在"模型能力是投入金钱的函数"（$10 → $10K → $10M 能力递增），政策没回答"应在什么 budget 下评估危险能力（如生物武器）"（00:11–00:14）。
+- 与能力问题镜像：模型若在大 budget 下对有用任务不饱和，对有害任务也会如此；而"真正评估长任务可能要跑一年"与几天/几周的发布周期严重脱节（00:13–00:16）。这是评估框架层面的安全短板，与 [评估与 Benchmark](evaluation-and-benchmarks.md) 直接相关。
+
 ## 中美对照
 
-（待补充。）
+（待补充。姚顺宇 2026-05 谈及 Anthropic"以 AI 安全立身却训前沿模型"的张力，认为"一家公司制定法律只能管自己"，更可能有效的是**类似核武器的 Multi-party control 制衡**——见 [AI 实验室文化与组织](ai-lab-culture.md) 与 [中美 AI 生态对照](china-us-ai.md)。）
