@@ -20,7 +20,7 @@
 | **美方 KOL** | Andrej Karpathy、Jensen Huang、Dwarkesh Patel、Lex Fridman、No Priors（Sarah Guo & Elad Gil）、Latent Space（swyx & Alessio）、a16z（Benedict Evans、Steven Sinofsky 等） |
 | **中方 KOL** | 张小珺《商业访谈录》——姚顺宇（Google DeepMind）、何小鹏（小鹏集团）、阳萌（安克创新）、Freda（Altimeter）、雨森（真格基金）、Lewis Hong（前SpaceX） |
 | **主题** | LLM 训练管线、AI 商业化与价值捕获、物理 AI 与机器人、AI 与就业、AI 基础设施、中美 AI 生态对照、LLM 安全、评估与 Benchmark、LLM OS、AI 实验室文化、LLM 心理学、LLM 实用方法论、AI 与科学发现 |
-| **规模** | 28 期视频 · 23 个人物 · 13 个主题 · 8 个关注频道 |
+| **规模** | <!-- STATS:INLINE:START -->30 期视频 · 26 个人物 · 13 个主题 · 8 个关注频道<!-- STATS:INLINE:END --> |
 
 ## 阅读指南
 
@@ -59,6 +59,37 @@ uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 
 
 # Wiki 巡检
 uv run scripts/lint.py
+
+# 刷新本文档的数据统计（CI 每次构建自动运行）
+uv run scripts/stats.py
 ```
+
+<!-- STATS:BLOCK:START -->
+## 📊 数据统计
+
+> 自动生成于 2026-07-14（每次 CI 构建刷新）。
+
+| 指标 | 数量 |
+|---|---|
+| 视频转录稿 | 30 |
+| 人物页 | 26 |
+| 主题页 | 13 |
+| 关注频道 | 8（活跃 8） |
+
+各频道已收录期数：
+
+| 频道 | 期数 |
+|---|---|
+| Lex Fridman | 6 |
+| 张小珺（商业访谈录） | 6 |
+| Dwarkesh Patel | 5 |
+| Andrej Karpathy | 5 |
+| Latent Space (swyx & Alessio) | 3 |
+| a16z (Andreessen Horowitz) | 2 |
+| 月球大叔（Uncle Moon） | 2 |
+| No Priors (Sarah Guo & Elad Gil) | 1 |
+<!-- STATS:BLOCK:END -->
+
+---
 
 转录稿来自各视频的公开字幕，版权归原作者所有。
