@@ -54,6 +54,26 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **pre-training 是 RL 的子集**：预训练/SFT/RL 无本质算法区别，最大区别在数据分布——预训练要分布广、质量可不极致；后训练分布窄但质量要求极高（03:00–03:02）。
 - 驱动力：算力与数据强关联；算法作用是**相变式**的（Transformer 那种"从不能到能"的跳变后，是平滑提效）（00:31–00:33）。
 
+## 全景盘点：三条 scaling、mid-training 与"RLVR 可 scale、RLHF 不能"（Raschka & Lambert，2026-01）
+
+来源：[Lex #490 State of AI 2026](../videos/20260131-lex-state-of-ai-2026.md)
+
+- **架构自 GPT-2 几乎没变**，真正进展在训练配方与系统：MoE/MLA/GQA/RMSNorm 都是"旋钮"，FP8/FP4 带来速度而非新能力（00:37–00:47）。
+- **pre / mid / post-training**：mid-training 是"更专门的预训练"（长上下文、把最高质量内容放最后以抗灾难性遗忘）；**合成数据 ≠ 坏数据**（OCR 抽 PDF、改写成 QA、用 ChatGPT 优答训练），**数据质量 > 数量**——前沿实验室"想有影响力最好的方式就是找更好的数据"（01:03–01:14）。
+- **RLVR 词源**：Nathan 团队在 **Tulu 3** 造词，DeepSeek 做出训练突破；可验证奖励（数学/代码）→ rubrics/LLM-as-judge 拓展到开放域；aha moment 其实是**放大预训练里已有的自我纠错行为**（01:37–01:42）。
+- **关键定律：RLVR 可 scale（log 训练算力→线性性能，o1 首次展示、DeepSeek 复现），RLHF 不能**——RLHF 的开山之作恰是"reward model 过优化的 scaling law"；故大算力应投 RLVR，RLHF 只作收尾/风格（01:19–01:20、01:55–01:57）。下一步押注 value function / process reward model（"RLVR 2.0"）。
+- **serving 成本 >> 训练成本**：DeepSeek 预训练传闻 ~$5M、OLMo3 ~$2M，但服务上亿用户是数十亿美元级——解释了模型为何反而变小（00:51–00:53）。呼应 [AI 算力与基础设施](ai-infrastructure.md) 的吉瓦集群与 test-time 经济性。
+
+## RL 的样本效率：MCTS vs policy gradient（Eric Jang，前 DeepMind Robotics，2026-05）
+
+来源：[Dwarkesh 访谈](../videos/20260515-dwarkesh-eric-jang.md)
+
+- 从零重建 AlphaGo 后反观 LLM RL：**MCTS 给每一步提供监督目标**（低方差），而 LLM 的 policy-gradient RL 是把整条获胜轨迹所有 token 一起上调——即 Karpathy 的"**用吸管吸取监督信号**"，一局里真正有效的信号极少（01:24–01:28、01:45–01:46）。
+- **bits per FLOP 框架**：学习速度 = 每 FLOP 样本数 × 每样本比特数。长程 RL 让前者下降（要展开数天工作才得一个信号），后者也远逊监督学习（未训练模型要在 10 万词表里瞎猜约 10 万次才撞对一次），故绝大部分训练时间耗在"低通过率区"几乎不学习（02:12–02:17）。这为"RL 阶段只能跑几百步 / 需良好初始化"提供了量化解释，接续 Karpathy 的"RLHF is not RL"。
+- **AlphaGo 优雅在于永不从 0% 成功率起步、不解探索难题**：全程"在改进标签上做监督学习"，训练稳定、无需 on-policy 分布式基础设施；且训 policy 模仿 MCTS 的**整个分布**（软标签熵高）——正是**蒸馏高效**的原因（02:18–02:21）。与 [姚顺宇](../people/yao-shunyu.md) 的软蒸/硬蒸、[中美 AI 生态对照](china-us-ai.md) 相通。
+- **前向搜索为何难迁移 LLM**：语言动作空间过大，几乎不会两次采样同一子节点，PUCT 探索启发式失效；但"前向模拟未来估价值"可能以别的形态回归（01:44–01:49）。
+- 另可对照 Andy Jones《Scaling Scaling Laws with Board Games》(2021)：**搜索算力可换训练算力**，提前预示了 test-time compute（见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。

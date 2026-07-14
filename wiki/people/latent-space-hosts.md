@@ -12,4 +12,5 @@
 
 | 日期 | 视频 | 嘉宾 |
 |---|---|---|
+| 2026-06-22 | [Codex/Claude Code 之后的 AI 安全](../videos/20260622-latent-space-gray-swan.md) | Zico Kolter & Matt Fredrikson（Gray Swan） |
 | 2026-06-25 | [AGI、o1、评估与 Scaling Laws](../videos/20260625-latent-space-mark-chen.md) | Mark Chen（OpenAI CRO） |

@@ -17,6 +17,10 @@
 - [张小珺](people/zhang-xiaojun.md) — 《商业访谈录》主播（中方视角主来源）
 - [No Priors 主播](people/no-priors-hosts.md) — Sarah Guo & Elad Gil
 - [Latent Space 主播](people/latent-space-hosts.md) — swyx & Alessio
+- [Eric Jang](people/eric-jang.md) — 前 1X / DeepMind Robotics，self-play 与 RL
+- [Alex Imas & Phil Trammell](people/imas-trammell.md) — AGI 经济学（DeepMind / Epoch）
+- [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
+- [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 
 ## 主题
 
@@ -42,11 +46,14 @@
 - 2025-02-27 [How I use LLMs](videos/20250227-karpathy-how-i-use-llms.md)
 
 ### Dwarkesh Podcast
+- 2026-05-15 [Eric Jang：从零重建 AlphaGo，谈 self-play、RL 与 LLM 的未来](videos/20260515-dwarkesh-eric-jang.md)
+- 2026-06-04 [Alex Imas & Phil Trammell：AI 越强，它占经济的份额可能越小](videos/20260604-dwarkesh-imas-trammell.md)
 - 2026-06-16 [Ada Palmer：Machiavelli 被误读](videos/20260616-dwarkesh-ada-palmer-machiavelli.md)（思想史）
 - 2026-06-30 [Grant Sanderson：AI 反证数学猜想之后](videos/20260630-dwarkesh-grant-sanderson-ai-math.md)
 - 2026-07-10 [Adam Brown：第一性原理讲广义相对论](videos/20260710-dwarkesh-adam-brown-general-relativity.md)
 
 ### Lex Fridman Podcast
+- 2026-01-31 [#490 State of AI 2026：LLM、编码、Scaling、中国、Agent、GPU、AGI](videos/20260131-lex-state-of-ai-2026.md)（Raschka & Lambert）
 - 2026-03-23 [#494 Jensen Huang：NVIDIA 与 AI 革命](videos/20260323-lex-jensen-huang-nvidia.md)
 - 2026-04-09 [#495 维京时代](videos/20260409-lex-brownworth-vikings.md)（历史）
 - 2026-05-06 [#496 FFmpeg 与开源](videos/20260506-lex-ffmpeg.md)
@@ -60,4 +67,5 @@
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
 
 ### Latent Space
+- 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
 - 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)
