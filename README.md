@@ -1,13 +1,10 @@
 # AI KOL Wiki
 
 中美 AI 领域深度访谈与演讲的结构化知识库：视频的完整转录稿 + 个人物页 + 跨 KOL 对照的主题页。
+  -  **[开始浏览 .md 格式](wiki/index.md)**
+  -  **[开始浏览 github page 格式](https://nolimitkun.github.io/ai-kol-wiki/)**
 
-- **→ [开始浏览 .md 格式](wiki/index.md)**
-
-- **→ [开始浏览 github page 格式](https://nolimitkun.github.io/ai-kol-wiki/)**
----
-
-## 这是什么
+## 项目介绍
 
 我们把中美 AI 领域 KOL 的长视频（Podcast 访谈、技术演讲、投资札记）转录成带时间戳的全文，由 LLM 提取核心观点、标注来源、交叉链接，维护成一个可检索、可对比、持续更新的 Markdown 知识库。
 
@@ -28,8 +25,6 @@
 - 按视频查阅：[视频索引](wiki/index.md#视频)——每期有概要 + 核心观点摘要 + 时间戳溯源
 
 > 所有观点标注来源（视频页 + `[HH:MM:SS]` 时间戳），区分"KOL 认为"与客观事实。
-
----
 
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
@@ -57,7 +52,6 @@
 | No Priors (Sarah Guo & Elad Gil) | 1 |
 <!-- STATS:BLOCK:END -->
 
----
 
 ## 技术细节
 
