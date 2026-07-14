@@ -62,6 +62,14 @@
 - Jensen 认为几乎所有职业被"抬升"；Grant 更谨慎——若 AI 数学 10 倍加速却无经济外溢，可能暴露某些领域本已与应用脱钩。
 - **姚顺宇是收录者中最悲观的一位**：Jensen 的"编码者从 3000 万变 10 亿"（民主化、抬升）与姚的"1/1000 的人拿 100 倍工资"（centralized、集中化）是同一现象的两种解读——Jensen 看蛋糕做大、姚看价值集中。二者都认同"与 AI 协作能力"成为关键分水岭。
 
+### 朱邦华 & 江鋆晨（中，AI Infra 创业者，2026-05/06）：价值向"有 taste 的人"集中
+
+来源：[朱邦华访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)、[江鋆晨访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
+
+- **coding agent 的两个影响**（朱邦华）：junior SWE / CS 应届更难找工作；资源更 concentrate 到"真正强、有 taste"的顶尖 system engineer / researcher，agent 无限放大他们的能力——百人维护的复杂 software 未来可能是"十个最强、最有 taste 的人"的 effort（01:31:43–01:33:46）。这是姚顺宇"centralized technology / 价值集中"在工程岗位上的具体版本。
+- **差异化 = taste / criticism，而非工程量**：朱邦华招人核心看"能不能对 code/research 看到就浑身难受、想重写"（以 Linus 对 Linux 的 gatekeeping 为范）——只有你自己知道什么是好 code，才能 supervise agent 写出超过其默认水平的 code（01:39:56–01:41:57）。江鋆晨表述为 **design taste**：AI 能替代写代码，难替代"知道什么设计更好维护/更持久"的判断；若你的设计完全依赖 AI，你自己都没法维护、也卖不出去（02:13:57–02:14:57）。
+- 两人对 CS 学生的建议一致偏"向上走"：做新范式的模型/研究、去工业界前沿或 startup 充电、做对自己最有挑战的事——而非做"AI 已能替代的 basic 工程"。
+
 ## 中美对照
 
-目前就业议题的中方视角即来自姚顺宇（在美研究员）；其"centralized technology / 价值集中"判断与美方 Jensen 的乐观"抬升论"形成鲜明张力，是本主题最值得追踪的中美分歧。Imas & Trammell 从经济学给出第三种坐标——**资本份额是否趋 1、开源模型能否让全球普惠**——其中"开源落后前沿 6–9 个月"直接把中国的开源模型（GLM/DeepSeek/Kimi，见 [中美 AI 生态对照](china-us-ai.md)）放到了"AI 会否像电力一样普惠"的关键位置。国内 KOL 对 AI 就业冲击的**本土**论述待补充。
+目前就业议题的中方视角来自姚顺宇（在美研究员）与朱邦华/江鋆晨（Infra 创业者）；其"centralized technology / 价值集中"判断与美方 Jensen 的乐观"抬升论"形成鲜明张力，是本主题最值得追踪的中美分歧。Imas & Trammell 从经济学给出第三种坐标——**资本份额是否趋 1、开源模型能否让全球普惠**——其中"开源落后前沿 6–9 个月"直接把中国的开源模型（GLM/DeepSeek/Kimi，见 [中美 AI 生态对照](china-us-ai.md)）放到了"AI 会否像电力一样普惠"的关键位置。国内 KOL 对 AI 就业冲击的**本土**论述待补充。

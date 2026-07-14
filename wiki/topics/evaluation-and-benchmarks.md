@@ -41,6 +41,14 @@
 - 换个格式（括号换点号）准确率就大变，说明**唯一公平的评估是模型截止日期之后才出现的新 benchmark**（01:45–01:46）。呼应 Mark"一个 eval 一旦公开就失效"、Noam"保留私有 held-out 集"。
 - 教育侧的同构现象：AI 时代考试正回到 **blue book / 口试**——因为数字化考试太易作弊（02:12–02:13）。
 
+## Chatbot Arena 的起源与"需向 intelligence frontier 演进"（朱邦华，中/SGLang 母公司，2026-05）
+
+来源：[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（LMSYS / Arena 联合创建者的一手视角）
+
+- **起源史**：LMSYS（盛影、郑联敏等在伯克利的非营利组织）先做 **Vicuna**（早期蒸馏开源模型，HuggingFace 千万下载），后做 **Chatbot Arena**——用人类两两盲评给模型打分，当年 OpenAI/Anthropic/xAI 都在刷这个榜；现已独立为 **LMArena**，约 15 亿美元公司（00:10:06–00:11:07、01:29:41）。朱邦华自己的 **Starling（7B）** 靠调通 PPO 在 Arena 刷到高分，是"当时唯一把 PPO 在开源侧调通的地方"。
+- **关键判断：Arena 反映的是"人喜不喜欢这个 response"，而非"能否解决最复杂问题"**。早期（模型质量还不高时）大家最看重"聊天是否讨喜"，Arena 正合适；但现在能力推向 intelligence frontier，大家真正关心的是 coding、复杂问题求解——**这恰是 Arena 现在反映不了的指标**（01:29:41–01:30:41）。
+- 结论：Arena 若要再进一步，需转向"构建更多环境、客观衡量 intelligence boundary 的 evaluation"，而非只靠人的情感判断（01:30:41）。这与 Mark Chen"benchmark 一旦公开就失效"、Noam"要控制 test-time compute"从不同角度指向同一诉求：**主观偏好榜单也在信息枯竭，需要更客观、更贴近真实任务的评估**。
+
 ## 交叉观察
 
 - 三人共识：**当代 benchmark 的信息量在枯竭**——要么被打满（姚）、要么不控制 test-time compute 就误导（Noam）、要么一公开就失效（Mark）。三者互补地指出：真正的评估需要 test-time compute 维度 + 私有/新造 eval + 团队分离。

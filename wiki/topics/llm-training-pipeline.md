@@ -74,6 +74,15 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **前向搜索为何难迁移 LLM**：语言动作空间过大，几乎不会两次采样同一子节点，PUCT 探索启发式失效；但"前向模拟未来估价值"可能以别的形态回归（01:44–01:49）。
 - 另可对照 Andy Jones《Scaling Scaling Laws with Board Games》(2021)：**搜索算力可换训练算力**，提前预示了 test-time compute（见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
 
+## RLHF vs RLVR 与 PPO 的工程暗坑（朱邦华，中/SGLang 母公司，2026-05）
+
+来源：[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（RL 理论博士 + 一线 RL infra 视角）
+
+- **RLHF vs RLVR 的分工**：RLHF（Human Feedback）训 reward model 让模型"更像人/更 align"（GPT-3.5 后"更有人味"即来自此）；**RLVR**（Verifiable Reward）针对可客观验证的数学/代码/agentic，是模型工具化（CodingAgent/WebAgent）的关键范式（00:36:42–00:38:44）。与 Raschka & Lambert"RLVR 可 scale、RLHF 不能"互补。
+- **DeepSeek V3 是 RLVR 转折点**：证明"直接从 pre-trained 点做 RLVR 就能大幅提升 intelligence"，让业界（含 NVIDIA）意识到 RL 重要性——推翻了"只做 SFT 就够"的旧认知（00:35:41）。
+- **PPO 上限远高于简化算法（DPO/GRPO），关键在工程 trick**：如 critic（value function）不能随机初始化直接上（loss 极高会把 policy 更新到错误方向、把模型破坏到救不回来），要先 **warm up critic** 再初始化 PPO（00:31:37–00:33:38）。"调通靠 intuition + 系统性排 infra 暗坑，不是理论"——呼应 [姚顺宇](../videos/20260511-zhang-xiaojun-yao-shunyu.md)"撞墙多半是代码有 bug"。
+- **pre-training 洗数据未撞墙**：更多高质量 coding data 仍能推能力边界；SFT 像对 pre-training 的小 fix；RL/post-training 是把能力推到 pre-training 定义的边界 + on-policy distillation 合成 generalist（01:09:21–01:11:25）。与姚顺宇"预训练没到头"一致。
+
 ## 中美对照
 
-见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。
+见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。朱邦华从 RL infra 侧补充：DeepSeek V3 的 RLVR 突破是 NVIDIA 收购其 NexusFlow 的直接契机（[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) 00:35:41）。

@@ -76,6 +76,16 @@
 - **SpaceX mafia**：马斯克生态培养出的一批美国年轻硬科技创业者（太空/能源/芯片/制造），是美国"在中国工业优势面前如何竞争"的新答案——"不是把中国工厂搬来，而是在美国从零到一做出全球最先进的硬件"（[02:42:59]）。
 - 与主题关联：太空是AI基础设施的新维度（见[AI基础设施](ai-infrastructure.md)）——SpaceX+xAI的太空数据中心路径，可能成为中美算力竞赛的新变量。
 
+## 中方 Infra 一线视角：朱邦华 & 江鋆晨（月球大叔，2026-05/06）
+
+来源：[朱邦华访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)、[江鋆晨访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
+
+- **模型差距（朱邦华，作为一线支持方）**：中国开源 vs 美国闭源 ≈ **6 个月**；美国开源 vs 美国闭源 ≈ **1 年**（00:23:24）。这为姚顺宇"gap 明显缩小"补上了更细的量化拆分。
+- **差距来源分中美**：国内 infra 其实很 solid，**数据受限**，且**对复杂 RL environment 的投入不如美国**，故在 agentic RL infra 上稍落后（00:24:25）。这是一个比"算力劣势"更具体的、可改进的短板。
+- **中美工程师风格**：国内同学 infra 水平高、写 code 快且 reliable、"从 0 到 100 做到 perfect"强；美国更擅长"从 0 到 1、天马行空的 crazy idea"（00:21:21–00:22:22）。与姚顺宇"中国强 C 端产品化、美国强 enterprise"是同一结构在工程层的映射。
+- **一支新力量：中国背景学者以开源研究组挑战工业界 AI Infra**——朱邦华（SGLang/Miles）、江鋆晨（LMCache/TensorMesh），以及 SGLang 原班（盛影、郑联敏）。他们的融资方横跨中美（DeepSeek、Thinking Machines、NVIDIA、AMD、阿里/腾讯/字节），是"中美 AI 生态在 infra 层高度交织"的例证——技术/开源/资本并不按国界切分。
+- 江鋆晨补充一个**去 winner-take-all** 的类比：即便 OpenAI/Anthropic 大到像 YouTube/Netflix，仍会有很多 AI 提供商（如 HBO 只服务自己用户），与姚顺宇"无 winner-take-all"、朱邦华"希望百花齐放"一致。
+
 ## 综合观察
 
 - 美方人物（Jensen、Karpathy、Raschka & Lambert）对中国 AI 的公开评价以承认实力 + 解释开源动机为主基调；开源被共同视为中国生态的加速器而非短板，Raschka & Lambert 进一步指出"美国大厂因安全不付费中国 API → 开源是切入市场的手段"这一具体机制，并证实中方一线（姚顺宇）"纸面趋同、无 winner-take-all"的判断。

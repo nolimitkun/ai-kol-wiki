@@ -27,6 +27,9 @@
 - [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
 - [Freda（段）](people/freda-duan.md) — Altimeter Capital 合伙人，硅谷投资，Token经济学/组织变革/软件冲击
 - [戴雨森（雨森）](people/dai-yusen.md) — 真格基金管理合伙人，Harness/Agent/组织变革/创业投资
+- [月球大叔](people/uncle-moon.md) — AI 技术向访谈主播（中方 infra 视角主来源之一）
+- [朱邦华（Banghua Zhu）](people/banghua-zhu.md) — SGLang 母公司 CTO，前 NexusFlow，RLHF/RLVR/RL infra
+- [江鋆晨（Junchen Jiang）](people/junchen-jiang.md) — 芝大教授 / TensorMesh CEO，KV Cache / LMCache
 
 ## 主题
 
@@ -75,6 +78,10 @@
 - 2026-05-27 [雨森创投观察第 2 集：Harness、下一个字节、2026大机会](videos/20260527-zhang-xiaojun-yusen-vc-2.md)
 - 2026-06-08 [阳萌（安克创新）：消费电子死与生、第三类公司、端侧模型、产品方法](videos/20260608-zhang-xiaojun-yangmeng-anker.md)
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
+
+### 月球大叔
+- 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)
+- 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 ### No Priors
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)

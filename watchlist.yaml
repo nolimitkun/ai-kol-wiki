@@ -52,3 +52,9 @@ kols:
     channel: https://www.youtube.com/@xiaojunpodcast/videos
     min_minutes: 30
     lang: zh
+
+  - slug: uncle-moon
+    name: 月球大叔（Uncle Moon）
+    channel: https://www.youtube.com/@uncle_moon_x/videos
+    min_minutes: 20
+    lang: zh

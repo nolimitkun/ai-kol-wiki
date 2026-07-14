@@ -60,6 +60,27 @@
 - **xAI并入SpaceX的逻辑**：不是偶然——用Starlink的低轨"数据高速公路"+太空数据中心解决算力瓶颈。（[01:19:23]："2014年马斯克就买了X.com域名"——Lewis暗示所有公司构成统一大计划。）
 - 与Jensen Huang"太空数据中心属远期"的判断形成对照：Jensen从制度视角（合约/六个九）认为地面先吃存量电力，Lewis从物理+工程视角认为太空是确定性方向。
 
+## 推理引擎与 RL 训练 Infra（朱邦华，中/SGLang 母公司，2026-05）
+
+来源：[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)
+
+- **需求排序 pre-training < RL < 推理**：推理是最大需求（所有用 AI 处都要 inference），故 SGLang 母公司从推理引擎切入，逐步做 RL、乃至 pre-training 的 inference（00:05:02）。这与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)"training infra 太一次性、模型绝大多数生命周期在推理"是同一判断。
+- **RL environments 是被忽视的新瓶颈**：agent 环境越复杂，bottleneck 常在 function calling 的 latency/concurrency——这是"为什么大家突然发现 CPU 很重要"（code execution / multi-docker 的 CPU 调度）；reward 设计是"艺术问题"（00:24:25–00:25:26）。硅谷已有一批 RL 环境公司（如 E2B），国内偏少。
+- **新架构逼出 infra 优化**：DeepSeek V4 的架构创新（sparse attention 等）逼 SGLang 做 **shadow radix**（prefix cache）与 sparse attention 优化，"划走公司一半人精力"，把 V4 性能优化了很多倍；SGLang"day one 支持新模型"（00:19:16–00:21:21）。
+- **"卡养人"**：千卡/万卡训练对 fault tolerance、MFU、accuracy 的 infra 要求与小规模完全不同——这是 frontier lab 人才稀缺的根源；"本科生摸够卡会比 PhD 干得好"（00:43:47–00:45:47）。呼应 [姚顺宇](../videos/20260511-zhang-xiaojun-yao-shunyu.md)。
+
+## KV Cache 作为独立数据层（江鋆晨，中/TensorMesh·LMCache，2026-06）
+
+来源：[月球大叔访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
+
+- **KV Cache = 大模型的记忆 = "给大模型看的视频"**（都是 3D tensor）；押注它是继模型权重、prompt 之后**下一个最大的数据层**、"未来的石油"（00:40:55–00:43:56）。数据层普适规律：web→CDN、大数据→Spark/HDFS、AI→KV Cache（00:37:50–00:39:52）。
+- **LMCache**：把 KV Cache 层与推理引擎/存储/GPU/运行环境**解耦**（不与模型解耦），做成工业界事实标准；当前可见价值 = 存下 KV Cache 避免重复计算（读长程序时 90%+ input 是那段程序，存下即跳过 90% 重算）（01:24:23–01:29:28）。类比 Spark"踩着工业界实体出来"。
+- **prefill vs decode 的算力误区（反直觉）**：硬件（Cerebras/Groq/LPU）多优化 decode（用户可见"一个字一个字蹦"），但 **~90% 算力其实花在 prefill/处理 input**——agent 的 input（几十万~几百万 token）远长于 output，且"任何 output 都会变成以后的 input"（01:31:30–01:34:32）。这是对"算力大头在生成"这一直觉的直接纠偏。
+- **OpenAI API 兼容格式 = AI 时代的 IPv4**：网络的"细腰"是 IP layer，其上创新极难（IPv6 更好却输给 IPv4 的既成事实）；AI 生态里 OpenAI API Compatible 的 query format 已是所有应用/模型/推理商承认的稳定接口，**KV Cache 有望成为下一个这样的标准层**（02:04:50–02:08:54）。
+- **硬件"IBM 化" vs disaggregation**：厂商把处理器/网络/存储 bundle 成大型机（走 IBM 老路）以最大化 margin；但历史上大型机没成数据中心主流，真正胜出的是"把便宜部件用聪明方法连起来"；**disaggregation 做到极致**（每块特殊化、可替换）可能带来颠覆性新 infra（02:08:54–02:12:56）。这与本页 [阳萌](../videos/20260608-zhang-xiaojun-yangmeng-anker.md) 的存算一体、[Jensen](../videos/20260323-lex-jensen-huang-nvidia.md) 的 extreme co-design 构成"硬件组织形态"的三种下注方向。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。国产芯片的**主动**论述仍待中方素材补充。
+
+**Infra 侧新增中方一手视角**：[朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（推理引擎/RL 框架）与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)（KV Cache 层）代表"中国背景学者以开源研究组挑战工业界 AI Infra"的一支力量——两人的项目（SGLang/vLLM、LMCache）技术栈紧密相邻，且都判断推理、而非训练，是 infra 的主战场。
