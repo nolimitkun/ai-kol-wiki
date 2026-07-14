@@ -49,6 +49,14 @@
 - **关键判断：Arena 反映的是"人喜不喜欢这个 response"，而非"能否解决最复杂问题"**。早期（模型质量还不高时）大家最看重"聊天是否讨喜"，Arena 正合适；但现在能力推向 intelligence frontier，大家真正关心的是 coding、复杂问题求解——**这恰是 Arena 现在反映不了的指标**（01:29:41–01:30:41）。
 - 结论：Arena 若要再进一步，需转向"构建更多环境、客观衡量 intelligence boundary 的 evaluation"，而非只靠人的情感判断（01:30:41）。这与 Mark Chen"benchmark 一旦公开就失效"、Noam"要控制 test-time compute"从不同角度指向同一诉求：**主观偏好榜单也在信息枯竭，需要更客观、更贴近真实任务的评估**。
 
+## 范式切换期"彻底放弃 benchmark、靠体感"（罗福莉，小米 MemoVR，2026-04）
+
+来源：[罗福莉访谈](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)
+
+- **旧 agent benchmark 失效**：去年那些"换个复杂 system prompt + 一点环境反馈"的所谓 agent 模型没有工业级可用度；**browsecomp / swebench "太局限、太离谱"**——"在 browsecomp 上训练，模型能力还是发不出去"（00:43:30–00:46:35、02:59:39）。swebench 的问题是"只关注修 bug、不是真正的软件开发"。
+- **优化这版模型时"基本不看 benchmark、靠体感"**：面临大范式变化、路径走对时，"短暂窗口期可以忽略评估，靠体感就能测出质的差异"；但迈入深水期仍需精细评估（00:46:35）。
+- 这与 Mark Chen"一个 eval 一旦公开就失效"、Noam"要控制 test-time compute"从中方一线补上一角：**agent 时代，主流公开 benchmark 与"实际可用度"严重脱节**，团队转而依赖私有测试库 + 体感 + 部署反馈（她们发布前先上 LM Arena/OpenRouter 匿名验证内部评估是否与外部一致，02:46:34）。
+
 ## 交叉观察
 
 - 三人共识：**当代 benchmark 的信息量在枯竭**——要么被打满（姚）、要么不控制 test-time compute 就误导（Noam）、要么一公开就失效（Mark）。三者互补地指出：真正的评估需要 test-time compute 维度 + 私有/新造 eval + 团队分离。

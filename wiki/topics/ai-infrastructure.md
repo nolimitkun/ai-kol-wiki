@@ -79,6 +79,24 @@
 - **OpenAI API 兼容格式 = AI 时代的 IPv4**：网络的"细腰"是 IP layer，其上创新极难（IPv6 更好却输给 IPv4 的既成事实）；AI 生态里 OpenAI API Compatible 的 query format 已是所有应用/模型/推理商承认的稳定接口，**KV Cache 有望成为下一个这样的标准层**（02:04:50–02:08:54）。
 - **硬件"IBM 化" vs disaggregation**：厂商把处理器/网络/存储 bundle 成大型机（走 IBM 老路）以最大化 margin；但历史上大型机没成数据中心主流，真正胜出的是"把便宜部件用聪明方法连起来"；**disaggregation 做到极致**（每块特殊化、可替换）可能带来颠覆性新 infra（02:08:54–02:12:56）。这与本页 [阳萌](../videos/20260608-zhang-xiaojun-yangmeng-anker.md) 的存算一体、[Jensen](../videos/20260323-lex-jensen-huang-nvidia.md) 的 extreme co-design 构成"硬件组织形态"的三种下注方向。
 
+## 面向 Agent 的架构与 RL Infra（罗福莉，小米 MemoVR，2026-04）
+
+来源：[罗福莉访谈](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)
+
+- **hybrid attention 取代 MLA 以适配 agent**：MLA 为 Chat 时代精妙地压 KV Cache 而生，但"没有可发挥空间"——上 MTP 会卡在 compute bound；MemoVR 用 **sliding window + full attention 混合**（Flash 5:1、Pro 拉到 **7:1**），更省 KV Cache、支持更长上下文，"更大模型可以更稀疏"（01:26:48–02:06:02）。与江鋆晨"KV Cache 是核心数据层"从模型架构侧呼应：省 KV Cache 是 agent 长上下文的关键。
+- **MTP（Multi-Token Prediction）只有她们在推理时用**：因 hybrid 架构天然留大量计算富裕，用投机解码把富裕算力吃满；**MTP 被 verify、无幻觉**；Flash 做到 100–150 TPS（01:31:50–01:38:52）。MLA 模型上不了 MTP 正因为它已卡在算力/访存的完美临界点。
+- **RL infra ≠ 预训练 infra**：**RL infra 必须容错**（agent 交互会莫名中断、训推不一致要容忍、要在异构集群里综合调度 GPU+CPU+存储），而预训练 infra"绝不容忍 loss spike"，两者不交融（03:30:03–03:33:04）。**"真正把 agent RL scale 起来的团队非常少，海外基本只有 Anthropic"**（03:33:04）——与朱邦华"RL environments 是新瓶颈、CPU 因 function-calling 并发变重要"精确对接。
+- **卡是瓶颈**：研究:预训练:后训练 = 3:1:1，研究用卡是训练的 3–5 倍；"idea 到代码太快，卡在卡上"（01:45:55–01:48:55）。推理卡需求远高于训练卡。
+- **全模态离散化**：音频用多层 RVQ 离散成 token（"另类"架构），图像离散化进行中——追求"一套 infra 服用所有模态"，但"有了 Qi-code 后重写一套 infra 也就两三周，没必要为架构统一牺牲模型结构"（02:12:05–02:14:09）。
+
+## 模型即操作系统/基础设施（广密，2026-04）
+
+来源：[广密·全球大模型季报第 9 集](../videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)
+
+- **最领先的三五家模型 = 世界最重要的技术基础设施 = global GDP 的操作系统**，重要性将超过今天的 Google（01:04:51–01:06:53）。详见 [LLM OS](llm-os.md)。
+- **算力是 Anthropic 冲 1000 亿 AR 的最大瓶颈**（此前低估需求、算力规划保守）；**Google worst case"TPU 都能变成另一个英伟达"**（00:29:28、00:49:42）。
+- **推理需求即将爆发几倍到十倍**（罗福莉同判断），"大部分卡点在存储"，低成本推理是关键命题（广密 01:16:12 / 罗福莉 02:30:21）。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。国产芯片的**主动**论述仍待中方素材补充。

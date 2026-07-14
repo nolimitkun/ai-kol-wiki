@@ -30,6 +30,8 @@
 - [月球大叔](people/uncle-moon.md) — AI 技术向访谈主播（中方 infra 视角主来源之一）
 - [朱邦华（Banghua Zhu）](people/banghua-zhu.md) — SGLang 母公司 CTO，前 NexusFlow，RLHF/RLVR/RL infra
 - [江鋆晨（Junchen Jiang）](people/junchen-jiang.md) — 芝大教授 / TensorMesh CEO，KV Cache / LMCache
+- [广密](people/guangmi.md) — 硅谷 AI 投资人/研究者，"全球大模型季报"主讲（中方投资视角看硅谷全景）
+- [罗福莉（Luo Fuli）](people/luo-fuli.md) — 小米大模型团队负责人（MemoVR），前 DeepSeek，Agent 范式/架构/组织平权
 
 ## 主题
 
@@ -78,6 +80,8 @@
 - 2026-05-27 [雨森创投观察第 2 集：Harness、下一个字节、2026大机会](videos/20260527-zhang-xiaojun-yusen-vc-2.md)
 - 2026-06-08 [阳萌（安克创新）：消费电子死与生、第三类公司、端侧模型、产品方法](videos/20260608-zhang-xiaojun-yangmeng-anker.md)
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
+- 2026-04-15 [广密·全球大模型季报第 9 集：Coding 是 AGI 第二幕、御三家真相、模型即 OS](videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)
+- 2026-04-24 [罗福莉：OpenClaw 是划时代 agent 框架、Agent 很吃后训练、卡的分配与组织平权](videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)
 
 ### 月球大叔
 - 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)

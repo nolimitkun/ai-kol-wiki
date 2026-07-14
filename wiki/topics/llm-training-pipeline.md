@@ -83,6 +83,17 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **PPO 上限远高于简化算法（DPO/GRPO），关键在工程 trick**：如 critic（value function）不能随机初始化直接上（loss 极高会把 policy 更新到错误方向、把模型破坏到救不回来），要先 **warm up critic** 再初始化 PPO（00:31:37–00:33:38）。"调通靠 intuition + 系统性排 infra 暗坑，不是理论"——呼应 [姚顺宇](../videos/20260511-zhang-xiaojun-yao-shunyu.md)"撞墙多半是代码有 bug"。
 - **pre-training 洗数据未撞墙**：更多高质量 coding data 仍能推能力边界；SFT 像对 pre-training 的小 fix；RL/post-training 是把能力推到 pre-training 定义的边界 + on-policy distillation 合成 generalist（01:09:21–01:11:25）。与姚顺宇"预训练没到头"一致。
 
+## 后训练前移到 Agent、卡的分配与架构决策（罗福莉，小米 MemoVR，2026-04）
+
+来源：[罗福莉访谈](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)（前 DeepSeek，现小米大模型负责人）
+
+- **后训练范式从 Chat 前移到 Agent**：要让模型在 Claude Code / OpenClaw 等众多复杂框架上都稳定，后训练必须以"在复杂 agent 框架里端到端完成长程任务"为目标，而非在简洁框架里做定制（00:10:11、03:03:39）。**"agent 很吃后训练"**。
+- **卡的分配 研究:预训练:后训练 = 3:1:1**：预训练与后训练算力应相当（Chat 时代是 3:1~5:1），研究用卡还要多于训练卡总量；"idea 到代码太快了，现在卡在卡上"（并行实验的算力才是瓶颈）（01:45:55–01:48:55）。这把姚顺宇"后训练是分水岭"量化成了具体的算力配比。
+- **skills 是预训练的补充**：组织规范/另类信息抓不到、不在预训练数据里，只能人机多轮沉淀成 skills（"现在大量 skills 是 agent 自己写的"）（00:46:35–00:49:37）。
+- **架构服务于范式**：**hybrid attention（sliding window + full）取代 MLA** 以适配 agent（省 KV Cache + 留计算富裕给 MTP）；**MTP 无幻觉**（被 verify）；**1T 参数是 agent 时代入场券**；"别给架构设太多目标，后训练做久了限制都变伪限制"（01:26:48–01:42:55）。详见 [AI 算力与基础设施](ai-infrastructure.md)。
+- **发展史复盘**：ChatGPT（4K context + chat 好交互激发智能）→ LLaMA 开头 → Qwen(纯 scaling) 与 DeepSeek(创新+scaling) → o1/R1(reasoning 从 CoreganMath 泛化到通用，"R1 诞生很偶然") → 2025 交错之年 → 2026 agent 第二幕（02:48:34–03:03:39）。
+- **彻底放弃旧 agent benchmark**：browsecomp/swebench"太局限、太离谱"，优化时"基本不看、靠体感"（详见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。朱邦华从 RL infra 侧补充：DeepSeek V3 的 RLVR 突破是 NVIDIA 收购其 NexusFlow 的直接契机（[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) 00:35:41）。
