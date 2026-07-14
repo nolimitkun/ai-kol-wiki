@@ -40,6 +40,12 @@ kols:
     min_minutes: 20
     lang: en
 
+  - slug: a16z
+    name: a16z (Andreessen Horowitz)
+    channel: https://www.youtube.com/@a16z/videos
+    min_minutes: 20
+    lang: en
+
   # ── 中国 ──────────────────────────────────────
   - slug: zhang-xiaojun
     name: 张小珺（商业访谈录）
