@@ -25,7 +25,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install MkDocs
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material mkdocs-literate-nav
 
       - uses: astral-sh/setup-uv@v8.3.2
         with:
@@ -52,6 +52,9 @@ jobs:
           cp -r wiki sources _docs/
           cp CLAUDE.md watchlist.yaml _docs/
           cp README.md _docs/index.md
+
+      - name: Generate sidebar nav (Videos grouped by channel)
+        run: uv run scripts/gen_nav.py _docs/SUMMARY.md
 
       - name: Build site
         run: mkdocs build --site-dir _site

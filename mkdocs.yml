@@ -36,6 +36,10 @@ plugins:
       lang:
         - zh
         - en
+  # 侧边栏导航由 scripts/gen_nav.py 从 wiki/index.md 生成到 _docs/SUMMARY.md，
+  # literate-nav 读取它——视频层级因此是「视频 → 频道 → 单集」。
+  - literate-nav:
+      nav_file: SUMMARY.md
 
 markdown_extensions:
   - tables
@@ -43,6 +47,9 @@ markdown_extensions:
       permalink: true
 
 # 转录稿不进导航（体量大且是原始资料），仍可通过 wiki 页面的链接访问
+# 导航由 SUMMARY.md 生成，log.md（操作日志）与原始资料不进侧边栏
 not_in_nav: |
   sources/**
   CLAUDE.md
+  SUMMARY.md
+  wiki/log.md
