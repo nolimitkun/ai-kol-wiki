@@ -23,6 +23,10 @@
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 - [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble 等
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
+- [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
+- [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
+- [Freda（段）](people/freda-duan.md) — Altimeter Capital 合伙人，硅谷投资，Token经济学/组织变革/软件冲击
+- [戴雨森（雨森）](people/dai-yusen.md) — 真格基金管理合伙人，Harness/Agent/组织变革/创业投资
 
 ## 主题
 
@@ -67,6 +71,10 @@
 ### 张小珺·商业访谈录
 - 2026-05-11 [姚顺宇：在 Anthropic 和 Gemini 训模型、英雄主义已过去](videos/20260511-zhang-xiaojun-yao-shunyu.md)
 - 2026-05-28 [何小鹏：机器人 IRON、"剪腿"风波、物理 AI 与在血海里游泳](videos/20260528-zhang-xiaojun-he-xiaopeng-robot.md)
+- 2026-05-18 [Freda 投资札记第 2 集：Tokenmaxxing、AI 组织变革、焦虑与连接](videos/20260518-zhang-xiaojun-freda-investment-2.md)
+- 2026-05-27 [雨森创投观察第 2 集：Harness、下一个字节、2026大机会](videos/20260527-zhang-xiaojun-yusen-vc-2.md)
+- 2026-06-08 [阳萌（安克创新）：消费电子死与生、第三类公司、端侧模型、产品方法](videos/20260608-zhang-xiaojun-yangmeng-anker.md)
+- 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
 
 ### No Priors
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
