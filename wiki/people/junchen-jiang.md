@@ -1,6 +1,8 @@
 # 江鋆晨（Junchen Jiang）
 
-- **背景**: 芝加哥大学计算机系教授；**TensorMesh** 联合创始人兼 CEO（基于开源 **LMCache** 打造的 KV Cache 存储/优化系统；已融两轮共 2000 万美金，投资方含 NVIDIA、AMD——两家独立看好）。学历：清华姚班本科（数学竞赛保送）→ CMU 博士（导师 **Hui Zhang / 张辉**，Conviva 创始人）→ Microsoft Research → 芝大教职。研究脉络：网络视频流媒体分析 → 视频 AI 分析 → LLM 推理系统（KV Cache）。长期合作者/公司 advisor：**Ion Stoica**（伯克利，Spark/Mesos/Databricks/Anyscale）。
+- **背景**: 芝加哥大学计算机系教授；**TensorMesh** 联合创始人兼 CEO（基于开源 **LMCache** 打造的 KV Cache 存储/优化系统；已融两轮共 2000 万美金，投资方含 NVIDIA、AMD——两家独立看好）。长期合作者/公司 advisor：**Ion Stoica**（伯克利，Spark/Mesos/Databricks/Anyscale）。
+- **学历**: 清华姚班本科（数学竞赛保送）→ CMU 博士（导师 **Hui Zhang / 张辉**，Conviva 创始人）→ Microsoft Research → 芝大教职。
+- **研究脉络**: 网络视频流媒体分析 → 视频 AI 分析 → LLM 推理系统（KV Cache）。
 - **来源出处**: [月球大叔访谈（2026-06）](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 > 与 [朱邦华](banghua-zhu.md)（SGLang/Miles）同属"从学术研究组挑战工业界 AI Infra"的中国背景创业者群体，两人的公司/项目（LMCache 与 SGLang/vLLM 推理引擎）在技术栈上紧密相邻。

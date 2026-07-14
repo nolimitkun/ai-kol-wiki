@@ -1,6 +1,7 @@
 # 朱邦华（Banghua Zhu）
 
-- **背景**: **SGLang 母公司**联合创始人兼 CTO（2025 年底创立，做推理引擎 SGLang + RL 训练框架 Miles；已融 1 亿美金、估值 4 亿多）。此前创立 **NexusFlow AI**（企业 Agent 后训练 / RL as a service）→ 2025 年中被 **NVIDIA** 收购 → 任 Nemotron RL / NemoGym tech lead。学历：清华电子系本科 → 伯克利 EECS 博士（导师 **Michael Jordan**，做统计 / 强化学习**理论**）；华盛顿大学教职 offer 目前 defer 中。江苏苏北人，数学竞赛出身。
+- **背景**: **SGLang 母公司**联合创始人兼 CTO（2025 年底创立，做推理引擎 SGLang + RL 训练框架 Miles；已融 1 亿美金、估值 4 亿多）。此前创立 **NexusFlow AI**（企业 Agent 后训练 / RL as a service）→ 2025 年中被 **NVIDIA** 收购 → 任 Nemotron RL / NemoGym tech lead。江苏苏北人，数学竞赛出身。
+- **学历**: 清华电子系本科 → 伯克利 EECS 博士（导师 **Michael Jordan**，做统计 / 强化学习**理论**）；华盛顿大学教职 offer 目前 defer 中。
 - **来源出处**: [月球大叔访谈（2026-05）](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)
 
 > SGLang 由 [盛影（Ying Sheng）](junchen-jiang.md)、郑联敏（Lianmin Zheng）与朱邦华等人在伯克利读博期间的合作中孕育；LMSYS（Vicuna、Chatbot Arena）是同一批人的早期非营利项目。朱邦华与 [江鋆晨](junchen-jiang.md)（LMCache / TensorMesh）同属"从学术研究组挑战工业界 AI Infra"的中国背景创业者群体。
