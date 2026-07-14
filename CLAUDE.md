@@ -39,7 +39,10 @@ scripts/
 
 ### Ingest（摄取一个视频）
 1. `uv run scripts/fetch.py <url> --kol <slug>` — 抓元数据和字幕，生成 `sources/.../transcript.md`。
-   若无字幕，脚本会提示；此时用 `--audio` 下载音频后人工安排转录。
+   - 若有字幕：自动下载 VTT → 纯文本（带 [HH:MM:SS] 时间戳锚点）。
+   - 若无字幕但有英文配音版：用 `--lang zh-Hans` 从配音版取中文字幕（张小珺频道常用）。
+   - 若完全无字幕：用 `--transcribe` 一键下载音频 + whisper 本地转录。需用 `.venv/bin/python` 运行（`uv run` 的隔离环境不含 whisper），首次需 `uv pip install openai-whisper`，模型约 1.5GB。
+   - 旧方式 `--audio` 仍可用，仅下载音频不转录。
 2. **完整阅读**转录稿，提取：核心论点、事实性断言、预测、与他人观点的呼应或冲突。
 3. 创建 `wiki/videos/` 页；更新或创建相关 `wiki/people/` 和 `wiki/topics/` 页。
 4. 维护交叉链接（相对路径 Markdown 链接）；更新 `wiki/index.md`。

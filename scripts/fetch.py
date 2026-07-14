@@ -6,7 +6,12 @@
 
 用法:
     uv run scripts/fetch.py <video-url> --kol <slug>
-    uv run scripts/fetch.py <video-url> --kol <slug> --audio   # 无字幕时下载音频供转录
+    uv run scripts/fetch.py <video-url> --kol <slug> --audio    # 无字幕时下载音频供转录
+    uv run scripts/fetch.py <video-url> --kol <slug> --transcribe  # 无字幕时下载音频 + whisper 转录
+
+依赖:
+    基础: yt-dlp（需系统安装）
+    转录: openai-whisper（用 --transcribe 时需要，pip install openai-whisper）
 """
 
 import argparse
@@ -24,6 +29,8 @@ SOURCES = ROOT / "sources"
 # 字幕语言偏好：优先视频原始语言（自动翻译字幕质量差），中文其次
 ZH_PREF = ["zh-Hans", "zh-CN", "zh-Hant", "zh-TW", "zh", "en-orig", "en", "en-US", "en-GB"]
 EN_PREF = ["en-orig", "en", "en-US", "en-GB", "zh-Hans", "zh-CN", "zh"]
+
+DEFAULT_WHISPER_MODEL = "medium"
 
 
 def run(cmd: list[str]) -> subprocess.CompletedProcess:
@@ -73,6 +80,48 @@ def parse_vtt(path: Path, anchor_every: int = 60) -> str:
     return " ".join(out).replace(" \n", "\n").strip()
 
 
+def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str) -> str:
+    """用 whisper 转录音频，返回带 [HH:MM:SS] 时间戳锚点的纯文本。"""
+    try:
+        import whisper
+    except ImportError:
+        sys.exit(
+            "需要安装 openai-whisper：\n"
+            "  uv pip install openai-whisper\n"
+            "注意: --transcribe 模式需用 .venv/bin/python 运行（uv run 使用隔离环境不含 whisper）\n"
+            "  .venv/bin/python scripts/fetch.py <url> --kol <slug> --transcribe"
+        )
+
+    print(f"加载 whisper 模型: {model_name}（首次运行会下载 ~1.5GB）")
+    model = whisper.load_model(model_name)
+    print(f"开始转录（语言: {lang}），请耐心等待...")
+    result = model.transcribe(
+        str(audio_path),
+        language=lang[:2],  # zh / en
+        verbose=False,
+    )
+
+    segments = result.get("segments", [])
+    if not segments:
+        return result.get("text", "").strip()
+
+    # 格式化为带时间戳锚点的纯文本，与 parse_vtt 输出一致
+    anchor_every = 60
+    next_anchor = 0.0
+    lines: list[str] = []
+    for seg in segments:
+        start = seg["start"]
+        text = seg["text"].strip()
+        if not text:
+            continue
+        if start >= next_anchor:
+            lines.append(f"\n[{fmt_ts(start)}]")
+            next_anchor = start + anchor_every
+        lines.append(text)
+
+    return " ".join(lines).replace(" \n", "\n").strip()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("url")
@@ -80,6 +129,10 @@ def main() -> None:
     ap.add_argument("--lang", help="强制字幕语言代码（如 zh-Hans），跳过自动选择；"
                                    "用于自动配音版原声轨道等特殊情况")
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
+    ap.add_argument("--transcribe", action="store_true",
+                    help="无字幕时下载音频并用 whisper 转录，生成本地 transcript.md")
+    ap.add_argument("--whisper-model", default=DEFAULT_WHISPER_MODEL,
+                    help=f"whisper 模型大小（默认 {DEFAULT_WHISPER_MODEL}）：tiny/base/small/medium/large")
     args = ap.parse_args()
 
     print(f"抓取元数据: {args.url}")
@@ -113,6 +166,47 @@ def main() -> None:
             auto = True
 
     if lang is None:
+        # ── 无字幕路径 ──
+        if args.transcribe:
+            dest.mkdir(parents=True, exist_ok=True)
+            audio_path = dest / "audio.mp3"
+            print(f"下载音频...")
+            r2 = run(["yt-dlp", "--no-playlist", "-x", "--audio-format", "mp3",
+                      "-o", str(dest / "audio.%(ext)s"), args.url])
+            if r2.returncode != 0:
+                sys.exit(f"音频下载失败:\n{r2.stderr[-2000:]}")
+            if not audio_path.exists():
+                sys.exit(f"音频文件未生成: {audio_path}")
+
+            # 确定转录语言
+            transcribe_lang = orig if orig.startswith(("zh", "en")) else \
+                (args.lang[:2] if args.lang else "zh")
+            text = transcribe_with_whisper(audio_path, args.whisper_model, transcribe_lang)
+            title_sanitized = info.get("title", "").replace('"', "'")
+            url_line = f"url: https://www.youtube.com/watch?v={vid}" if info.get("extractor", "").startswith("youtube") else f"url: {info.get('webpage_url', args.url)}"
+            channel = info.get("channel") or info.get("uploader", "")
+            dur = round((info.get("duration") or 0) / 60)
+            meta = "\n".join([
+                "---",
+                f'title: "{title_sanitized}"',
+                url_line,
+                f"kol: {args.kol}",
+                f'channel: "{channel}"',
+                f"upload_date: {upload}",
+                f"duration_minutes: {dur}",
+                f"subtitle: {transcribe_lang} (whisper {args.whisper_model})",
+                f"fetched: {date.today().isoformat()}",
+                "---",
+            ])
+            (dest / "transcript.md").write_text(meta + "\n\n" + text + "\n", encoding="utf-8")
+            seen = SOURCES / "seen.txt"
+            seen.parent.mkdir(exist_ok=True)
+            with seen.open("a", encoding="utf-8") as f:
+                f.write(vid + "\n")
+            print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
+            return
+
+        # ── 纯下载音频路径 ──
         print("没有可用字幕。", file=sys.stderr)
         if args.audio:
             dest.mkdir(parents=True, exist_ok=True)
@@ -121,6 +215,7 @@ def main() -> None:
             sys.exit(f"音频已下载到 {dest}，请安排转录（如 whisper）。")
         sys.exit("可加 --audio 下载音频后用 whisper 转录。")
 
+    # ── 有字幕路径 ──
     kind = "自动" if auto else "人工"
     print(f"下载字幕: {lang}（{kind}）")
     with tempfile.TemporaryDirectory() as tmp:
@@ -135,15 +230,18 @@ def main() -> None:
         text = parse_vtt(vtts[0])
 
     dest.mkdir(parents=True, exist_ok=True)
+    title_sanitized = info.get("title", "").replace('"', "'")
+    url_line = f"url: https://www.youtube.com/watch?v={vid}" if info.get("extractor", "").startswith("youtube") else f"url: {info.get('webpage_url', args.url)}"
+    channel = info.get("channel") or info.get("uploader", "")
+    dur = round((info.get("duration") or 0) / 60)
     meta = "\n".join([
         "---",
-        f'title: "{info.get("title", "").replace(chr(34), chr(39))}"',
-        f"url: https://www.youtube.com/watch?v={vid}" if info.get("extractor", "").startswith("youtube")
-        else f'url: {info.get("webpage_url", args.url)}',
+        f'title: "{title_sanitized}"',
+        url_line,
         f"kol: {args.kol}",
-        f'channel: "{info.get("channel") or info.get("uploader", "")}"',
+        f'channel: "{channel}"',
         f"upload_date: {upload}",
-        f"duration_minutes: {round((info.get('duration') or 0) / 60)}",
+        f"duration_minutes: {dur}",
         f"subtitle: {lang} ({kind})",
         f"fetched: {date.today().isoformat()}",
         "---",
