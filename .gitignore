@@ -1,4 +1,5 @@
 __pycache__/
+.venv/
 *.mp3
 *.m4a
 _docs/
