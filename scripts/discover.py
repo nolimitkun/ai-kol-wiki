@@ -11,12 +11,25 @@
 
 import argparse
 import subprocess
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 SEEN = ROOT / "sources" / "seen.txt"
+
+
+def fetch_channel(kol: dict, n: int) -> subprocess.CompletedProcess | None:
+    """抓单个频道的最近 N 条（仅列表，不下载）。超时返回 None。"""
+    try:
+        return subprocess.run(
+            ["yt-dlp", "--flat-playlist", "--playlist-end", str(n),
+             "--print", "%(id)s\t%(duration)s\t%(title)s", kol["channel"]],
+            capture_output=True, text=True, timeout=120,
+        )
+    except subprocess.TimeoutExpired:
+        return None
 
 
 def main() -> None:
@@ -27,14 +40,16 @@ def main() -> None:
     kols = yaml.safe_load((ROOT / "watchlist.yaml").read_text(encoding="utf-8"))["kols"]
     seen = set(SEEN.read_text().split()) if SEEN.exists() else set()
 
+    # 各频道相互独立、纯网络等待，并发抓取；map 保持原顺序输出。
+    with ThreadPoolExecutor(max_workers=min(8, len(kols) or 1)) as ex:
+        results = list(ex.map(lambda k: fetch_channel(k, args.n), kols))
+
     total = 0
-    for kol in kols:
+    for kol, r in zip(kols, results):
         print(f"\n## {kol['name']}  ({kol['slug']})")
-        r = subprocess.run(
-            ["yt-dlp", "--flat-playlist", "--playlist-end", str(args.n),
-             "--print", "%(id)s\t%(duration)s\t%(title)s", kol["channel"]],
-            capture_output=True, text=True, timeout=120,
-        )
+        if r is None:
+            print("  !! 抓取超时（120s）")
+            continue
         if r.returncode != 0:
             print(f"  !! 抓取失败: {r.stderr.strip().splitlines()[-1] if r.stderr else '未知错误'}")
             continue

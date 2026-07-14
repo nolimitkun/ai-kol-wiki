@@ -7,13 +7,14 @@
 用法:
     uv run scripts/fetch.py <video-url> --kol <slug>
     uv run scripts/fetch.py <video-url> --kol <slug> --audio    # 无字幕时下载音频供转录
-    # 无字幕时下载音频 + whisper 本地转录（whisper 体积大，按需用 --with 注入）:
-    uv run --with openai-whisper scripts/fetch.py <video-url> --kol <slug> --transcribe
+    # 无字幕时下载音频 + faster-whisper 本地转录（模型体积大，按需用 --with 注入）:
+    uv run --with faster-whisper scripts/fetch.py <video-url> --kol <slug> --transcribe
 
 依赖:
     yt-dlp 已声明为脚本内联依赖，uv run 会自动装好，无需系统预装。
-    openai-whisper 仅 --transcribe 需要，故不进内联依赖（会拖入 torch，太重），
-    改用 `uv run --with openai-whisper` 按需注入。
+    faster-whisper 仅 --transcribe 需要，故不进内联依赖，改用 `uv run --with
+    faster-whisper` 按需注入。它基于 CTranslate2，不依赖 torch，比原版 whisper
+    快约 4 倍、更省内存。
 """
 
 import argparse
@@ -32,11 +33,14 @@ SOURCES = ROOT / "sources"
 ZH_PREF = ["zh-Hans", "zh-CN", "zh-Hant", "zh-TW", "zh", "en-orig", "en", "en-US", "en-GB"]
 EN_PREF = ["en-orig", "en", "en-US", "en-GB", "zh-Hans", "zh-CN", "zh"]
 
-DEFAULT_WHISPER_MODEL = "medium"
+DEFAULT_WHISPER_MODEL = "large-v3-turbo"
 
 
-def run(cmd: list[str]) -> subprocess.CompletedProcess:
-    return subprocess.run(cmd, capture_output=True, text=True)
+def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProcess:
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+    except subprocess.TimeoutExpired:
+        sys.exit(f"命令超时（{timeout}s）: {' '.join(cmd[:2])} …")
 
 
 def pick_lang(available: dict, pref: list[str]) -> str | None:
@@ -114,41 +118,50 @@ def write_transcript(dest: Path, info: dict, args_kol: str, upload: str,
     print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
 
 
-def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str) -> str:
-    """用 whisper 转录音频，返回带 [HH:MM:SS] 时间戳锚点的纯文本。"""
+def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str,
+                            device: str = "auto") -> str:
+    """用 faster-whisper 转录音频，返回带 [HH:MM:SS] 时间戳锚点的纯文本。
+
+    faster-whisper（CTranslate2 后端）比原版 openai-whisper 快约 4 倍、省内存，
+    且不依赖 torch。device="auto" 有 GPU 就用 GPU；但若 CUDA 运行库（cuBLAS/
+    cuDNN）缺失会在编码时报错，这里捕获后自动回退到 CPU。
+    """
     try:
-        import whisper
+        from faster_whisper import WhisperModel
     except ImportError:
         sys.exit(
-            "--transcribe 需要 openai-whisper，请用 --with 按需注入：\n"
-            "  uv run --with openai-whisper scripts/fetch.py <url> --kol <slug> --transcribe"
+            "--transcribe 需要 faster-whisper，请用 --with 按需注入：\n"
+            "  uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe"
         )
 
-    print(f"加载 whisper 模型: {model_name}（首次运行会下载 ~1.5GB）")
-    model = whisper.load_model(model_name)
-    print(f"开始转录（语言: {lang}），请耐心等待...")
-    result = model.transcribe(
-        str(audio_path),
-        language=lang[:2],  # zh / en
-        verbose=False,
-    )
+    def transcribe_on(dev: str, compute_type: str) -> list:
+        model = WhisperModel(model_name, device=dev, compute_type=compute_type)
+        segments, _ = model.transcribe(str(audio_path), language=lang[:2])  # zh / en
+        return list(segments)  # 生成器，转成 list 以在此处触发实际转录、暴露错误
 
-    segments = result.get("segments", [])
-    if not segments:
-        return result.get("text", "").strip()
+    print(f"加载 whisper 模型: {model_name}（首次运行会下载模型，约 1.5GB）")
+    print(f"开始转录（设备: {device}，语言: {lang}），请耐心等待...")
+    try:
+        segs = transcribe_on(device, "auto" if device != "cpu" else "int8")
+    except RuntimeError as e:
+        if device != "cpu" and any(k in str(e).lower()
+                                   for k in ("cuda", "cublas", "cudnn", "gpu", "libcu")):
+            print(f"GPU 不可用（{str(e).splitlines()[0]}），回退到 CPU 转录...")
+            segs = transcribe_on("cpu", "int8")
+        else:
+            raise
 
     # 格式化为带时间戳锚点的纯文本，与 parse_vtt 输出一致
     anchor_every = 60
     next_anchor = 0.0
     lines: list[str] = []
-    for seg in segments:
-        start = seg["start"]
-        text = seg["text"].strip()
+    for seg in segs:
+        text = seg.text.strip()
         if not text:
             continue
-        if start >= next_anchor:
-            lines.append(f"\n[{fmt_ts(start)}]")
-            next_anchor = start + anchor_every
+        if seg.start >= next_anchor:
+            lines.append(f"\n[{fmt_ts(seg.start)}]")
+            next_anchor = seg.start + anchor_every
         lines.append(text)
 
     return " ".join(lines).replace(" \n", "\n").strip()
@@ -162,13 +175,16 @@ def main() -> None:
                                    "用于自动配音版原声轨道等特殊情况")
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
     ap.add_argument("--transcribe", action="store_true",
-                    help="无字幕时下载音频并用 whisper 转录，生成本地 transcript.md")
+                    help="无字幕时下载音频并用 faster-whisper 转录，生成本地 transcript.md")
     ap.add_argument("--whisper-model", default=DEFAULT_WHISPER_MODEL,
-                    help=f"whisper 模型大小（默认 {DEFAULT_WHISPER_MODEL}）：tiny/base/small/medium/large")
+                    help=f"faster-whisper 模型（默认 {DEFAULT_WHISPER_MODEL}）："
+                         "tiny/base/small/medium/large-v3/large-v3-turbo")
+    ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"],
+                    help="faster-whisper 推理设备（默认 auto，GPU 不可用时自动回退 CPU）")
     args = ap.parse_args()
 
     print(f"抓取元数据: {args.url}")
-    r = run(["yt-dlp", "-J", "--no-playlist", args.url])
+    r = run(["yt-dlp", "-J", "--no-playlist", args.url], timeout=120)
     if r.returncode != 0:
         sys.exit(f"yt-dlp 失败:\n{r.stderr[-2000:]}")
     info = json.loads(r.stdout)
@@ -201,29 +217,33 @@ def main() -> None:
         # ── 无字幕路径 ──
         if args.transcribe:
             dest.mkdir(parents=True, exist_ok=True)
-            audio_path = dest / "audio.mp3"
             print(f"下载音频...")
-            r2 = run(["yt-dlp", "--no-playlist", "-x", "--audio-format", "mp3",
-                      "-o", str(dest / "audio.%(ext)s"), args.url])
+            # 直接取原生音频流，不转码成 mp3：whisper 内部会用 ffmpeg 解码，
+            # 省一次有损重编码（更快、也更准）。
+            r2 = run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
+                      "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
             if r2.returncode != 0:
                 sys.exit(f"音频下载失败:\n{r2.stderr[-2000:]}")
-            if not audio_path.exists():
-                sys.exit(f"音频文件未生成: {audio_path}")
+            audio_files = [p for p in dest.glob("audio.*") if p.suffix != ".md"]
+            if not audio_files:
+                sys.exit(f"音频文件未生成于 {dest}")
+            audio_path = audio_files[0]
 
             # 确定转录语言
             transcribe_lang = orig if orig.startswith(("zh", "en")) else \
                 (args.lang[:2] if args.lang else "zh")
-            text = transcribe_with_whisper(audio_path, args.whisper_model, transcribe_lang)
+            text = transcribe_with_whisper(audio_path, args.whisper_model,
+                                           transcribe_lang, args.device)
             write_transcript(dest, info, args.kol, upload, vid,
-                             f"{transcribe_lang} (whisper {args.whisper_model})", text)
+                             f"{transcribe_lang} (faster-whisper {args.whisper_model})", text)
             return
 
         # ── 纯下载音频路径 ──
         print("没有可用字幕。", file=sys.stderr)
         if args.audio:
             dest.mkdir(parents=True, exist_ok=True)
-            run(["yt-dlp", "--no-playlist", "-x", "--audio-format", "mp3",
-                 "-o", str(dest / "audio.%(ext)s"), args.url])
+            run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
+                 "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
             sys.exit(f"音频已下载到 {dest}，请安排转录（如 whisper）。")
         sys.exit("可加 --audio 下载音频后用 whisper 转录。")
 
@@ -235,7 +255,7 @@ def main() -> None:
                "--sub-langs", lang, "--sub-format", "vtt",
                "--write-auto-subs" if auto else "--write-subs",
                "-o", f"{tmp}/sub", args.url]
-        r = run(cmd)
+        r = run(cmd, timeout=300)
         vtts = list(Path(tmp).glob("*.vtt"))
         if not vtts:
             sys.exit(f"字幕下载失败:\n{r.stderr[-2000:]}")

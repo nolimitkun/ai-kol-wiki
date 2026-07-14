@@ -50,8 +50,8 @@ uv run scripts/discover.py
 # 摄取（有字幕）
 uv run scripts/fetch.py <url> --kol <slug>
 
-# 摄取（无字幕 → whisper 本地转录，按需注入 whisper）
-uv run --with openai-whisper scripts/fetch.py <url> --kol <slug> --transcribe
+# 摄取（无字幕 → faster-whisper 本地转录，按需注入）
+uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe
 
 # Wiki 巡检
 uv run scripts/lint.py

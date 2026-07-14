@@ -2,6 +2,9 @@ __pycache__/
 .venv/
 *.mp3
 *.m4a
+*.opus
+*.webm
+*.wav
 _docs/
 _site/
 site/
