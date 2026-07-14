@@ -8,7 +8,6 @@
       uv run scripts/stats.py --check   # 只检查是否需要更新（CI 用，有变化则退出码 1）
 
 在 README.md 中放置成对标记，脚本只替换标记之间的内容：
-    <!-- STATS:INLINE:START -->…<!-- STATS:INLINE:END -->   一行规模数字
     <!-- STATS:BLOCK:START -->…<!-- STATS:BLOCK:END -->     完整统计小节
 """
 from __future__ import annotations
@@ -42,7 +41,7 @@ def per_channel() -> list[tuple[str, str, int]]:
     return rows
 
 
-def build() -> tuple[str, str]:
+def build() -> str:
     videos = len(list((ROOT / "sources").glob("*/*/transcript.md")))
     people = count_md("people")
     topics = count_md("topics")
@@ -50,10 +49,6 @@ def build() -> tuple[str, str]:
     n_channels = len(channels)
     active = sum(1 for _, _, n in channels if n)
     today = dt.date.today().isoformat()
-
-    inline = (
-        f"{videos} 期视频 · {people} 个人物 · {topics} 个主题 · {n_channels} 个关注频道"
-    )
 
     lines = [
         "## 📊 数据统计",
@@ -74,15 +69,14 @@ def build() -> tuple[str, str]:
     ]
     for _, name, n in channels:
         lines.append(f"| {name} | {n} |")
-    return inline, "\n".join(lines)
+    return "\n".join(lines)
 
 
-def replace_block(text: str, key: str, payload: str, *, inline: bool = False) -> str:
+def replace_block(text: str, key: str, payload: str) -> str:
     start = f"<!-- STATS:{key}:START -->"
     end = f"<!-- STATS:{key}:END -->"
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
-    # 行内标记（如表格单元格内）不能引入换行，否则会破坏 Markdown 表格
-    replacement = f"{start}{payload}{end}" if inline else f"{start}\n{payload}\n{end}"
+    replacement = f"{start}\n{payload}\n{end}"
     if not pattern.search(text):
         raise SystemExit(f"README.md 缺少标记 {start} … {end}")
     return pattern.sub(lambda _: replacement, text)
@@ -93,10 +87,9 @@ def main() -> None:
     ap.add_argument("--check", action="store_true", help="只检查是否需要更新")
     args = ap.parse_args()
 
-    inline, block = build()
+    block = build()
     text = README.read_text(encoding="utf-8")
-    updated = replace_block(text, "INLINE", inline, inline=True)
-    updated = replace_block(updated, "BLOCK", block)
+    updated = replace_block(text, "BLOCK", block)
 
     if updated == text:
         print("stats：README.md 已是最新")
