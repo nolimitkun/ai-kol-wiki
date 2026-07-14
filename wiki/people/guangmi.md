@@ -12,7 +12,10 @@
 - **Opus 4.5→4.6 = GPT-3→GPT-4 级跨越**："AI 的基点时刻已到"；硅谷前沿 researcher/程序员"基本不写代码了"（AI 写、人审），部分 AI research 突破已由 Codex/Claude Code 而非人类带来。
 - **token usage > DAU**：Anthropic 头部一两百万 coding 用户收入 > OpenAI 五六千万订阅；竞争指标转向 token usage 与塔尖用户；年底两家 AR 或达 800–1000 亿美金。
 - **两条 AGI 路线**：C 端流量 vs 高价值任务；OpenAI/Google 抢 C 端窗口时严重误判 coding。
-- **御三家画像**：Anthropic = 战略/专注/文化的胜利（top-down、all-in coding、重数据、防泄密、塔尖定价，风险在算力）；OpenAI = 阶段性被低估、50% 概率仍是最终 winner（bottom-up 可能出下个范式，但 SAM 摊大饼、"没有灵魂"）；Google = 最稳的追随者（算力/现金流最足、体系化，但 Gemini 3 被高估、误判 coding）。
+- **御三家画像**：
+  - **Anthropic** = 战略/专注/文化的胜利（top-down、all-in coding、重数据、防泄密、塔尖定价，风险在算力）
+  - **OpenAI** = 阶段性被低估、50% 概率仍是最终 winner（bottom-up 可能出下个范式，但 SAM 摊大饼、"没有灵魂"）
+  - **Google** = 最稳的追随者（算力/现金流最足、体系化，但 Gemini 3 被高估、误判 coding）
 - **挑战者**：META TBD 取代 XAI 成硅谷四号种子（但产品创新力不及中国团队）；XAI 因 Elon 战略摇摆、迷信"大力出奇迹"盲目 scale 参数而短期掉队（"bottleneck 是数据不是模型大小"）。
 - **壳公司**：Cursor/Manus 吃模型公司技术溢出红利，属阶段性窗口；模型公司若不开放最强 API 则壳危险。
 - **模型 = 新一代操作系统**：最领先的三五家模型 = global GDP 的 OS，每家 10 万亿美金。
