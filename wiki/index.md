@@ -21,6 +21,7 @@
 - [Alex Imas & Phil Trammell](people/imas-trammell.md) — AGI 经济学（DeepMind / Epoch）
 - [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
+- [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble 等
 
 ## 主题
 
@@ -34,6 +35,7 @@
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
+- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
 
 ## 视频
@@ -69,3 +71,7 @@
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
 - 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)
+
+### a16z
+- 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
+- 2026-07-07 [Software in the Age of Agents：headless 软件与例外处理](videos/20260707-a16z-software-in-age-of-agents.md)（Amble & Sinofsky）
