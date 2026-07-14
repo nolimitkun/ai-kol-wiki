@@ -1,17 +1,18 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = []
+# dependencies = ["openai-whisper"]
 # ///
 """摄取单个视频：抓元数据 + 字幕，生成 sources/<kol>/<date>-<id>/transcript.md
 
 用法:
     uv run scripts/fetch.py <video-url> --kol <slug>
-    uv run scripts/fetch.py <video-url> --kol <slug> --audio    # 无字幕时下载音频供转录
+    uv run scripts/fetch.py <video-url> --kol <slug> --audio      # 无字幕时下载音频
     uv run scripts/fetch.py <video-url> --kol <slug> --transcribe  # 无字幕时下载音频 + whisper 转录
+    uv run scripts/fetch.py <video-url> --kol <slug> --lang zh-Hans  # 强制字幕语言
 
 依赖:
     基础: yt-dlp（需系统安装）
-    转录: openai-whisper（用 --transcribe 时需要，pip install openai-whisper）
+    转录: openai-whisper（由 uv run 自动安装，模型首次运行下载 ~1.5GB）
 """
 
 import argparse
@@ -86,10 +87,7 @@ def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str) -> str
         import whisper
     except ImportError:
         sys.exit(
-            "需要安装 openai-whisper：\n"
-            "  uv pip install openai-whisper\n"
-            "注意: --transcribe 模式需用 .venv/bin/python 运行（uv run 使用隔离环境不含 whisper）\n"
-            "  .venv/bin/python scripts/fetch.py <url> --kol <slug> --transcribe"
+            "需要安装 openai-whisper：uv pip install openai-whisper"
         )
 
     print(f"加载 whisper 模型: {model_name}（首次运行会下载 ~1.5GB）")
