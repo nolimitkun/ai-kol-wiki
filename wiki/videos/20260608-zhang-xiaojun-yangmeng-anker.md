@@ -10,6 +10,8 @@ confidence: high
 
 # 阳萌（安克创新创始人兼CEO）：消费电子的第三类公司
 
+- **嘉宾**: [阳萌（Steven Yang）](../people/yangmeng-steven.md)（安克创新创始人兼 CEO）
+
 > 张小珺商业访谈录第144期，英文版《Anker / Steven Yang: Consumer Electronics Death & Birth, The Third Category, Product Philosophy》，218分钟。
 > 访谈风格：深入、结构清晰，阳萌展现了极强的抽象思考能力（INTP），问答质量高。
 

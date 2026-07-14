@@ -16,6 +16,27 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 WIKI = ROOT / "wiki"
+SOURCES = ROOT / "sources"
+
+
+def unwikied_sources() -> list[str]:
+    """已摄取但可能还没写 wiki 页的 source。
+
+    source 目录形如 sources/<kol>/<YYYYMMDD>-<id>/；video 页形如
+    wiki/videos/<YYYYMMDD>-<kol>-<slug>.md。两侧 kol 命名不完全一致
+    （如 lex-fridman → lex），因此只按日期做启发式匹配：某个 source 的
+    日期在 videos/ 里完全没有对应文件，则几乎肯定是「摄取了但没写页」。
+    """
+    video_dates = {p.name[:8] for p in (WIKI / "videos").glob("*.md")
+                   if p.name[:8].isdigit()}
+    missing = []
+    for d in sorted(SOURCES.glob("*/*/")):
+        if not (d / "transcript.md").exists():
+            continue
+        date_part = d.name[:8]
+        if date_part.isdigit() and date_part not in video_dates:
+            missing.append(f"{d.parent.name}/{d.name}")
+    return missing
 
 
 def all_wiki_pages() -> list[Path]:
@@ -84,6 +105,12 @@ def main() -> None:
     if not_in_index:
         issues.append(f"⚠ index.md 未覆盖 ({len(not_in_index)} 页):\n" +
                       "\n".join(f"  - {s}" for s in not_in_index))
+
+    # ── 已摄取但未写 wiki 页 ──
+    unwikied = unwikied_sources()
+    if unwikied:
+        issues.append(f"🟠 已摄取但似乎没写 wiki 页 ({len(unwikied)} 个 source):\n" +
+                      "\n".join(f"  - sources/{s}" for s in unwikied))
 
     # ── 孤儿页 & 断链 ──
     inbound: dict[str, set[str]] = defaultdict(set)  # target → source slugs

@@ -10,6 +10,8 @@ confidence: high
 
 # Freda 投资札记第2集
 
+- **嘉宾**: [Freda（段）](../people/freda-duan.md)（Altimeter Capital 合伙人）
+
 > 张小珺商业访谈录第141期。Freda（段），Altimeter Capital 合伙人，硅谷科技基金横跨一二级市场。投资案例：OpenAI、Anthropic、字节跳动、英伟达、Snowflake、Robinhood。
 > 84分钟。前半段硬核投资分析，后半段谈焦虑与人的连接。whisper medium 转录。
 

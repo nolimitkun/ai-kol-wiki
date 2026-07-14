@@ -80,6 +80,38 @@ def parse_vtt(path: Path, anchor_every: int = 60) -> str:
     return " ".join(out).replace(" \n", "\n").strip()
 
 
+def write_transcript(dest: Path, info: dict, args_kol: str, upload: str,
+                     vid: str, subtitle: str, text: str) -> None:
+    """写出带 frontmatter 的 transcript.md 并把 video id 追加到 seen.txt。"""
+    title_sanitized = info.get("title", "").replace('"', "'")
+    url_line = (f"url: https://www.youtube.com/watch?v={vid}"
+                if info.get("extractor", "").startswith("youtube")
+                else f"url: {info.get('webpage_url', '')}")
+    channel = info.get("channel") or info.get("uploader", "")
+    dur = round((info.get("duration") or 0) / 60)
+    meta = "\n".join([
+        "---",
+        f'title: "{title_sanitized}"',
+        url_line,
+        f"kol: {args_kol}",
+        f'channel: "{channel}"',
+        f"upload_date: {upload}",
+        f"duration_minutes: {dur}",
+        f"subtitle: {subtitle}",
+        f"fetched: {date.today().isoformat()}",
+        "---",
+    ])
+    dest.mkdir(parents=True, exist_ok=True)
+    (dest / "transcript.md").write_text(meta + "\n\n" + text + "\n", encoding="utf-8")
+
+    seen = SOURCES / "seen.txt"
+    seen.parent.mkdir(exist_ok=True)
+    with seen.open("a", encoding="utf-8") as f:
+        f.write(vid + "\n")
+
+    print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
+
+
 def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str) -> str:
     """用 whisper 转录音频，返回带 [HH:MM:SS] 时间戳锚点的纯文本。"""
     try:
@@ -182,28 +214,8 @@ def main() -> None:
             transcribe_lang = orig if orig.startswith(("zh", "en")) else \
                 (args.lang[:2] if args.lang else "zh")
             text = transcribe_with_whisper(audio_path, args.whisper_model, transcribe_lang)
-            title_sanitized = info.get("title", "").replace('"', "'")
-            url_line = f"url: https://www.youtube.com/watch?v={vid}" if info.get("extractor", "").startswith("youtube") else f"url: {info.get('webpage_url', args.url)}"
-            channel = info.get("channel") or info.get("uploader", "")
-            dur = round((info.get("duration") or 0) / 60)
-            meta = "\n".join([
-                "---",
-                f'title: "{title_sanitized}"',
-                url_line,
-                f"kol: {args.kol}",
-                f'channel: "{channel}"',
-                f"upload_date: {upload}",
-                f"duration_minutes: {dur}",
-                f"subtitle: {transcribe_lang} (whisper {args.whisper_model})",
-                f"fetched: {date.today().isoformat()}",
-                "---",
-            ])
-            (dest / "transcript.md").write_text(meta + "\n\n" + text + "\n", encoding="utf-8")
-            seen = SOURCES / "seen.txt"
-            seen.parent.mkdir(exist_ok=True)
-            with seen.open("a", encoding="utf-8") as f:
-                f.write(vid + "\n")
-            print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
+            write_transcript(dest, info, args.kol, upload, vid,
+                             f"{transcribe_lang} (whisper {args.whisper_model})", text)
             return
 
         # ── 纯下载音频路径 ──
@@ -229,31 +241,7 @@ def main() -> None:
             sys.exit(f"字幕下载失败:\n{r.stderr[-2000:]}")
         text = parse_vtt(vtts[0])
 
-    dest.mkdir(parents=True, exist_ok=True)
-    title_sanitized = info.get("title", "").replace('"', "'")
-    url_line = f"url: https://www.youtube.com/watch?v={vid}" if info.get("extractor", "").startswith("youtube") else f"url: {info.get('webpage_url', args.url)}"
-    channel = info.get("channel") or info.get("uploader", "")
-    dur = round((info.get("duration") or 0) / 60)
-    meta = "\n".join([
-        "---",
-        f'title: "{title_sanitized}"',
-        url_line,
-        f"kol: {args.kol}",
-        f'channel: "{channel}"',
-        f"upload_date: {upload}",
-        f"duration_minutes: {dur}",
-        f"subtitle: {lang} ({kind})",
-        f"fetched: {date.today().isoformat()}",
-        "---",
-    ])
-    (dest / "transcript.md").write_text(meta + "\n\n" + text + "\n", encoding="utf-8")
-
-    seen = SOURCES / "seen.txt"
-    seen.parent.mkdir(exist_ok=True)
-    with seen.open("a", encoding="utf-8") as f:
-        f.write(vid + "\n")
-
-    print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
+    write_transcript(dest, info, args.kol, upload, vid, f"{lang} ({kind})", text)
 
 
 if __name__ == "__main__":

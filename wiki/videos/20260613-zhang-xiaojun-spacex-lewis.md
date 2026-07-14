@@ -10,6 +10,8 @@ confidence: high
 
 # Lewis Hong（洪力德）：口述SpaceX开发史
 
+- **嘉宾**: [Lewis Hong（洪力德）](../people/lewis-hong.md)（前 SpaceX 火箭首席制造工程师，现 Aris Fund 创始 GP）
+
 > 张小珺商业访谈录第145期。Lewis Hong（洪力德），前SpaceX火箭首席制造工程师（2012-2019），现任Aris Fund创始GP。180分钟。
 > 访谈风格：叙事为主，内部人视角，工程+投资双重视角。
 

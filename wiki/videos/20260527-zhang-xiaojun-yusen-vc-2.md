@@ -10,6 +10,8 @@ confidence: high
 
 # 雨森（戴雨森）创投观察第2集
 
+- **嘉宾**: [戴雨森](../people/dai-yusen.md)（真格基金管理合伙人）
+
 > 张小珺商业访谈录第142期。戴雨森，真格基金管理合伙人。139分钟。whisper medium 转录。
 > 第1集（124期）曾预言"2026=Year of R（Return/Research/Reality）"，本次复盘打脸并深入讨论 AI 投资、Harness、组织变革、创业方向。
 
