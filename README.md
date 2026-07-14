@@ -2,8 +2,9 @@
 
 中美 AI 领域深度访谈与演讲的结构化知识库：视频的完整转录稿 + 个人物页 + 跨 KOL 对照的主题页。
 
-**→ [开始浏览](wiki/index.md)**
+- **→ [开始浏览 .md 格式](wiki/index.md)**
 
+- **→ [开始浏览 github page 格式](https://nolimitkun.github.io/ai-kol-wiki/)**
 ---
 
 ## 这是什么
