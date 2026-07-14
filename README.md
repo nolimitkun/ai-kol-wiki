@@ -52,6 +52,9 @@ uv run scripts/fetch.py <url> --kol <slug>
 
 # 摄取（无字幕 → faster-whisper 本地转录，按需注入）
 uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe
+# 同上但用 GPU（额外注入 CUDA 运行库 wheel，脚本自动配好库路径）
+uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
+  scripts/fetch.py <url> --kol <slug> --transcribe
 
 # Wiki 巡检
 uv run scripts/lint.py

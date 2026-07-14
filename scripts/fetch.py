@@ -7,18 +7,26 @@
 用法:
     uv run scripts/fetch.py <video-url> --kol <slug>
     uv run scripts/fetch.py <video-url> --kol <slug> --audio    # 无字幕时下载音频供转录
-    # 无字幕时下载音频 + faster-whisper 本地转录（模型体积大，按需用 --with 注入）:
+    # 无字幕时下载音频 + faster-whisper 本地转录（CPU）:
     uv run --with faster-whisper scripts/fetch.py <video-url> --kol <slug> --transcribe
+    # GPU 转录（更快，需再注入 CUDA 运行库 wheel）:
+    uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
+        scripts/fetch.py <video-url> --kol <slug> --transcribe
 
 依赖:
     yt-dlp 已声明为脚本内联依赖，uv run 会自动装好，无需系统预装。
     faster-whisper 仅 --transcribe 需要，故不进内联依赖，改用 `uv run --with
     faster-whisper` 按需注入。它基于 CTranslate2，不依赖 torch，比原版 whisper
     快约 4 倍、更省内存。
+    GPU：额外注入 nvidia-cublas-cu12 / nvidia-cudnn-cu12 两个 wheel 即可，脚本会
+    自动把它们的 lib 目录塞进 LD_LIBRARY_PATH（re-exec 一次）。缺这两个 wheel 或
+    无可用 GPU 时自动回退 CPU，无需改命令。
 """
 
 import argparse
+import importlib.util
 import json
+import os
 import re
 import subprocess
 import sys
@@ -41,6 +49,35 @@ def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProce
         return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired:
         sys.exit(f"命令超时（{timeout}s）: {' '.join(cmd[:2])} …")
+
+
+def _ensure_cuda_libs(device: str) -> None:
+    """让 GPU 转录在 uv 临时环境里也能用。
+
+    CTranslate2（faster-whisper 后端）在进程启动时由动态链接器加载
+    libcublas/libcudnn，须在启动前就把它们的目录放进 LD_LIBRARY_PATH。
+    若通过 `--with nvidia-cublas-cu12 --with nvidia-cudnn-cu12` 装了这些 wheel，
+    这里定位其 lib 目录、加入 LD_LIBRARY_PATH 后 re-exec 自身让链接器生效。
+    未安装则跳过——GPU 加载失败时 transcribe_with_whisper 会回退到 CPU。
+    """
+    if device == "cpu" or os.environ.get("_FETCH_CUDA_REEXEC"):
+        return
+    lib_dirs = []
+    for pkg in ("nvidia.cublas", "nvidia.cudnn"):
+        spec = importlib.util.find_spec(pkg)
+        locs = getattr(spec, "submodule_search_locations", None) if spec else None
+        if locs:
+            d = Path(list(locs)[0]) / "lib"
+            if d.is_dir():
+                lib_dirs.append(str(d))
+    if not lib_dirs:
+        return
+    current = os.environ.get("LD_LIBRARY_PATH", "")
+    if all(d in current.split(":") for d in lib_dirs):
+        return  # 已在路径中
+    os.environ["LD_LIBRARY_PATH"] = ":".join(lib_dirs + ([current] if current else []))
+    os.environ["_FETCH_CUDA_REEXEC"] = "1"
+    os.execv(sys.executable, [sys.executable, *sys.argv])
 
 
 def pick_lang(available: dict, pref: list[str]) -> str | None:
@@ -182,6 +219,10 @@ def main() -> None:
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"],
                     help="faster-whisper 推理设备（默认 auto，GPU 不可用时自动回退 CPU）")
     args = ap.parse_args()
+
+    # GPU 转录：若装了 nvidia 运行库 wheel，先把它们塞进 LD_LIBRARY_PATH 再干活
+    if args.transcribe:
+        _ensure_cuda_libs(args.device)
 
     print(f"抓取元数据: {args.url}")
     r = run(["yt-dlp", "-J", "--no-playlist", args.url], timeout=120)

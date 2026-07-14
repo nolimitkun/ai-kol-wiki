@@ -42,6 +42,7 @@ scripts/
    - 若有字幕：自动下载 VTT → 纯文本（带 [HH:MM:SS] 时间戳锚点）。
    - 若无字幕但有英文配音版：用 `--lang zh-Hans` 从配音版取中文字幕（张小珺频道常用）。
    - 若完全无字幕：用 `--transcribe` 一键下载音频 + faster-whisper 本地转录。模型体积大不进内联依赖，按需注入：`uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe`（首次会拉模型约 1.5GB；faster-whisper 基于 CTranslate2，不依赖 torch，比原版快约 4 倍，默认模型 large-v3-turbo）。
+     - GPU 转录（本机有 RTX 5090，明显更快）：再注入两个 CUDA 运行库 wheel 即可，脚本会自动配好 LD_LIBRARY_PATH：`uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 scripts/fetch.py <url> --kol <slug> --transcribe`。缺这两个 wheel 或无 GPU 时自动回退 CPU；也可用 `--device cpu` 强制。
    - 旧方式 `--audio` 仍可用，仅下载音频不转录。
 2. **完整阅读**转录稿，提取：核心论点、事实性断言、预测、与他人观点的呼应或冲突。
 3. 创建 `wiki/videos/` 页；更新或创建相关 `wiki/people/` 和 `wiki/topics/` 页。
