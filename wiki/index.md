@@ -22,6 +22,7 @@
 - [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 - [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble 等
+- [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 
 ## 主题
 
@@ -36,6 +37,7 @@
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
+- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：物理 AI vs 数字 AI、中美路线（中方素材强）
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
 
 ## 视频
@@ -64,6 +66,7 @@
 
 ### 张小珺·商业访谈录
 - 2026-05-11 [姚顺宇：在 Anthropic 和 Gemini 训模型、英雄主义已过去](videos/20260511-zhang-xiaojun-yao-shunyu.md)
+- 2026-05-28 [何小鹏：机器人 IRON、"剪腿"风波、物理 AI 与在血海里游泳](videos/20260528-zhang-xiaojun-he-xiaopeng-robot.md)
 
 ### No Priors
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
@@ -71,6 +74,7 @@
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
 - 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)
+- 2026-07-13 [Dan Biderman：AI 的记忆问题——为什么长上下文还不够](videos/20260713-latent-space-dan-biderman.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
