@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["pyyaml"]
+# dependencies = ["pyyaml", "yt-dlp"]
 # ///
 """扫描 watchlist.yaml 里各频道的最新视频，列出尚未摄取、时长达标的条目。
 
