@@ -9,4 +9,5 @@
 
 | 日期 | 期数 | 嘉宾 / 主题 |
 |---|---|---|
+| 2026-02-12 | #491 | [Peter Steinberger：OpenClaw 爆红的开源个人 Agent](../videos/20260212-lex-openclaw-steinberger.md) |
 | 2026-03-23 | #494 | [Jensen Huang：NVIDIA 与 AI 革命](../videos/20260323-lex-jensen-huang-nvidia.md) |

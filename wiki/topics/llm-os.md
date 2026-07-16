@@ -15,6 +15,15 @@
 - **KV cache 的内存怪兽**：Llama 70B 读一篇几十 KB 文章，"脑状态"就占约 80GB HBM，与整个模型参数（约 140GB）同量级——RAM 极度低效（00:22–00:23）。
 - Engram 的下注是把语料用梯度下降**训进权重**（"cartridges"，约 1000× 压缩），与文本表示（RAG/wiki，即 Karpathy 的"磁盘"）互补；长期"每人一份权重、跑在个人设备上"（00:09–00:11、00:26–00:28）。这把 LLM OS 的"内存管理"从"如何调度 RAM/磁盘"推进到"哪些知识该内化进内核本身"。
 
+### Peter Steinberger（美/奥，OpenClaw 作者，2026-02）：个人 agent 就是下一个 OS
+
+来源：[OpenClaw 访谈](../videos/20260212-lex-openclaw-steinberger.md)
+
+- **"这是 puck 要去的方向——个人 agent 会越来越成为你的操作系统"**：coding agent 与生活 agent 终将融合；当前 chat 界面只是过渡形态，"就像电视刚发明时人们在电视上播广播节目"（01:48–01:51）。
+- 从实践侧填充 LLM OS 的多个抽象层：**记忆**用 Markdown 文件 + 向量库（自评"level 2–3"，终极 boss 是 continuous RL）；**外设/驱动**用 CLI + skills 而非 MCP（CLI 可组合、可 `jq` 过滤、零 context 污染——"每个 MCP 做成 CLI 都会更好"）；**进程调度**有 heartbeat（定时"surprise me" prompt 让 agent 主动行动，被嘲"不就是 cron 吗"，"Dropbox 不就是 FTP 吗"）（00:19–00:20、02:38–02:42、02:36–02:38）。
+- **自修改软件已是现实**：agent 完全"自知"（源码、harness、文档、所跑模型），用户 prompt 即可让 agent 修改自身软件（00:22–00:24）。
+- 与 [Karpathy 的 LLM OS 框架](../videos/20231123-karpathy-intro-to-llms.md) 对照：Karpathy 从内核抽象出发，Steinberger 从产品/社区侧把同一形态"prompt 进存在"；与[罗福莉](../people/luo-fuli.md)"智能体框架 = 人与模型的中间层"是同一物的作者视角与研究者视角。
+
 ## 中方视角：模型即操作系统
 
 ### 广密（硅谷投资视角，2026-04）

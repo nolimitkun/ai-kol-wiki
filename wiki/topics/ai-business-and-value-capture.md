@@ -32,6 +32,15 @@
 - **Agent 网络效应**（[01:00:20]）：个性化 context 沉淀后，同一任务不同 agent 产出不同→有理由互相雇佣→agent marketplace。"1000块 token 费 + 9000块知识溢价。"
 - **AI 应用创新多来自第三方**（[00:49:12]）：Wide Research、Memory MD、IM 插入、心跳机制——都不是模型公司做的。"模型公司认为不本质的细节，对用户很本质。"
 
+### Peter Steinberger（美/奥，OpenClaw 作者，2026-02）：app 消亡、开源可持续性危机
+
+来源：[OpenClaw 访谈](../videos/20260212-lex-openclaw-steinberger.md)
+
+- **"每个 app 现在都是一个很慢的 API，不管它愿不愿意"**：agent 可走浏览器（Playwright + 住宅 IP）绕过封锁——"你没有让不可能的事发生，只是让它变慢了"。预计**杀死 80% 的 app**（MyFitnessPal/Sonos/日历类首当其冲：agent 有更全的 context 能做更好的决策）；app 要么变 agent-facing API 要么消亡（02:43–02:57）。这是 Sinofsky "headless 软件"论的激进版：不是软件变 headless，而是多数 head 直接不需要存在。
+- **新价值层**：给 agent 发"零花钱"预算、rent-a-human 类服务、agent marketplace——与[戴雨森](../people/dai-yusen.md)的 agent 网络效应/marketplace 判断跨洋呼应（02:54–02:56）。
+- **开源可持续性危机的一手数据**：OpenClaw 每月倒贴 1–2 万美元（赞助全转依赖库作者）；连"人人都用"的 **Tailwind 都裁员 75%**——agent 时代没人访问官网，流量入口的租值蒸发（02:20–02:22）。为 Evans 的"价值上移"补充一个受害者层：**免费开源基础设施的隐性商业模式（官网流量/雇主品牌）被 agent 掐断**。
+- 变现路线的现实选择：拒绝 VC 与创业（商业版会与开源版利益冲突），选择"加盟大厂 + 项目保持开源"（Chrome/Chromium 模式，Meta vs OpenAI 二选一）——个人 agent 这一层的价值捕获，最终仍向模型厂/平台厂收敛（02:18–02:34）。与广密"壳公司窗口会被模型公司关闭"同向。
+
 ## capex 的物理上限
 
 ### Benedict Evans（2026-06）

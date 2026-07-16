@@ -74,6 +74,16 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **前向搜索为何难迁移 LLM**：语言动作空间过大，几乎不会两次采样同一子节点，PUCT 探索启发式失效；但"前向模拟未来估价值"可能以别的形态回归（01:44–01:49）。
 - 另可对照 Andy Jones《Scaling Scaling Laws with Board Games》(2021)：**搜索算力可换训练算力**，提前预示了 test-time compute（见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
 
+## RL 的三模块与"奖励函数即传达意图"：机器人视角（柯丽一鸣，PI，2026-07）
+
+来源：[Kay Ke 访谈](../videos/20260716-zhang-xiaojun-kay-ke-physical-intelligence.md)
+
+从机器人 RL 一线给出与 LLM RL 互补的 RL 本质拆解：
+
+- **RL = 三个模块拼起来**：**探索**（选大改动还是小改动——她认为当前大模型缺乏主动探索能力）、**归因/credit assignment**（π*0.6 从大量部署数据里找"整条轨迹里哪一步是精华、值得多做"）、**奖励设计**（02:45–02:50）。这与 Eric Jang 的"MCTS 每步给监督 vs policy-gradient 整条轨迹一起上调"是同一 credit-assignment 难题的两种表述。
+- **"奖励函数"应重新框定为"向智能体传达你要它做什么"**：奖励函数只是表现方式之一，可验证任务（代码能跑）可独立于奖励函数存在；奖励易被 abuse（超级马里奥 RL 找 bug 直接触发最大奖励）——好的"奖励"应因地制宜、可泛化、需人的 common sense 先验（02:50–02:52）。与朱邦华"RLVR = 可客观验证的 reward"、洪乐潼"AI for Math 优化可验证性"同频。
+- **experience data / RECAP（π*0.6）**：让智能体在真实世界收集**自己做任务的体验数据**放回训练池，超越固定的人类演示数据——在机器人叠衣服上超越了最好的人类数据收集员。启示：真机 RL 的数据可由训好的模型自己 rollout 收集（去掉遥操作员）大幅降本（01:58–02:01）。这是 Eric Jang"长程 RL 样本效率低、监督信号稀疏"在机器人侧的正面解法尝试。
+
 ## RLHF vs RLVR 与 PPO 的工程暗坑（朱邦华，中/SGLang 母公司，2026-05）
 
 来源：[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（RL 理论博士 + 一线 RL infra 视角）
@@ -93,6 +103,16 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **架构服务于范式**：**hybrid attention（sliding window + full）取代 MLA** 以适配 agent（省 KV Cache + 留计算富裕给 MTP）；**MTP 无幻觉**（被 verify）；**1T 参数是 agent 时代入场券**；"别给架构设太多目标，后训练做久了限制都变伪限制"（01:26:48–01:42:55）。详见 [AI 算力与基础设施](ai-infrastructure.md)。
 - **发展史复盘**：ChatGPT（4K context + chat 好交互激发智能）→ LLaMA 开头 → Qwen(纯 scaling) 与 DeepSeek(创新+scaling) → o1/R1(reasoning 从 CoreganMath 泛化到通用，"R1 诞生很偶然") → 2025 交错之年 → 2026 agent 第二幕（02:48:34–03:03:39）。
 - **彻底放弃旧 agent benchmark**：browsecomp/swebench"太局限、太离谱"，优化时"基本不看、靠体感"（详见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
+
+## RL 训练的精度调试与稳定性：DeepSeek V4 适配一线（SGLang·Miles 团队，中，2026-05）
+
+来源：[月球大叔 SGLang 直播](../videos/20260501-uncle-moon-sglang-deepseek-v4.md)
+
+把上面的 RL 理论落到一线工程 debug：
+
+- **给训练做"day-0"支持远难于推理**：推理有 benchmark 可判正确，训练**没有标准 baseline**——整套 recipe 是否正确要靠"训几天涨点"验证，debug 成本极大；且训练要实现 backward、跨引擎对齐 weight 格式（FP8 rollout + FP8/BF16 training）（00:22–00:28）。
+- **精度是最耗时的环节**：逐 tensor（每层 activation、每个 gradient）与改动前做端到端比较。DeepSeek V4 的 compress attention 很稀疏、reduction 复杂，使 **KV gradient 用 BF16 精度完全不够**（CP=1 vs CP=2 的该 tensor cosine 差 0.2，其他 tensor 是 1e-4~1e-5），换 **FP32** 即解决（00:31–00:34）。
+- **训练稳定性靠 deterministic ops**：借鉴 DeepSeek 的做法在 kernel/MoE 用 deterministic mode、禁 NCCL 非确定性——原本的 **KL loss spike 消失**；DSA（sparse attention + indexer router）这类架构从 V3.2 起就被发现难训稳（00:34–00:35）。呼应朱邦华"调通靠系统性排 infra 暗坑、不是理论"。
 
 ## 中美对照
 

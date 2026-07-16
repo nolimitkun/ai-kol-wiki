@@ -15,6 +15,14 @@
 
 工程底层的呼应：深度学习负载多数是 **memory-bound**，"flops 不重要，内存访问模式才重要"（FlashAttention 多算 flops 反而快 7.6 倍）；GPU 优化阶梯（精度/编译/kernel fusion/nice numbers）合计 11 倍。（[Let's reproduce GPT-2](../videos/20240609-karpathy-lets-reproduce-gpt2.md)）
 
+## 芯片微观层：从逻辑门到 systolic array（Reiner Pope，美/MatX，2026-05）
+
+来源：[Dwarkesh 芯片设计课](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)
+
+- 为本页提供最底层的电路视角：**"最大化计算相对通信"贯穿全栈**——ALU 位宽（乘法器门数随位宽**平方**增长，是低精度算术有效的唯一根本原因）、Tensor Core/systolic array（把矩阵乘外层循环烧进硬件、权重驻留，否则 7/8 面积耗在寄存器堆搬运）、直到跨芯片推理的 batch 权衡（00:14–00:37）。与 Karpathy "flops 不重要、内存访问模式才重要" 是同一原理的上下两层。
+- **"GPU 是一大堆微型 TPU 平铺"**：TPU 粗粒度（超大 MXU）摊销搬运成本但 vector↔matrix 带宽受限，GPU 细粒度灵活但单元固定开销大；MatX 押注 splittable systolic array 兼得两者（01:15–01:20）——为本页姚顺宇的 TPU/GPU 使用方对照补上设计方视角。
+- TPU 用 **scratchpad（软件显式管理）替代 cache（硬件自动）**换确定性延迟（01:04–01:07）；大脑低时钟类比在硅上不成立——降频只线性省开关能耗，不带来能效跃升（01:12–01:15）。
+
 ## TPU vs GPU（姚顺宇，Google DeepMind，2026-05）
 
 来源：[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md)
@@ -69,6 +77,18 @@
 - **新架构逼出 infra 优化**：DeepSeek V4 的架构创新（sparse attention 等）逼 SGLang 做 **shadow radix**（prefix cache）与 sparse attention 优化，"划走公司一半人精力"，把 V4 性能优化了很多倍；SGLang"day one 支持新模型"（00:19:16–00:21:21）。
 - **"卡养人"**：千卡/万卡训练对 fault tolerance、MFU、accuracy 的 infra 要求与小规模完全不同——这是 frontier lab 人才稀缺的根源；"本科生摸够卡会比 PhD 干得好"（00:43:47–00:45:47）。呼应 [姚顺宇](../videos/20260511-zhang-xiaojun-yao-shunyu.md)。
 
+## DeepSeek V4 混合注意力的推理/训练适配（SGLang·Miles 团队，中，2026-05）
+
+来源：[月球大叔 SGLang 直播](../videos/20260501-uncle-moon-sglang-deepseek-v4.md)
+
+一线框架工程的具体案例，把 [朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)"新架构逼出 infra 优化"落到 DeepSeek V4：
+
+- **V4 混合稀疏注意力**：SWA（sliding window）+ Compress-4（每 4 token 压 1，hierarchical top-k 选最有影响力的）+ Compress-128（每 128 压 1，全注意力），框架要维护五类 KV cache 状态——用 **shadow radix cache**（虚拟地址映射物理状态）管理（00:04–00:09）。KV cache 大幅压缩（100 万 token < 10GB），打开 offload 到 CPU 的空间（验证 3× 上下文性能，00:20）。与本页 [罗福莉](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md) 的 hybrid attention 独立同频："系统约束使混合稀疏是大势所趋"。
+- **kernel 级优化**：把 KV 压缩的 5 次内存读取里的 3 个计算融成一个算子；**lightning topk** 把长上下文 topk 从 100μs 优化到 15μs（V4 有 60 层，累计影响巨大）（00:09–00:12）。但"算子融合并非总有效"——两算子须能沿同一维度切分（00:47）。
+- **并行**：长上下文用 CP（单机内快）、跨机用 PP；V4 注意力不天然支持 TP（kernel 要求头数是 64 倍数，用 padding）；已支持 PD 分离（00:12–00:19）。
+- **RL 训练（Miles）比推理难 day-0 支持**：无标准 baseline、要 backward、debug 成本大；精度是最耗时环节（CP 下 KV gradient 因 compress attention 稀疏、reduction 复杂使 BF16 不够，需换 FP32）；借鉴 DeepSeek deterministic ops 消除 KL loss spike（00:22–00:35）。详见 [LLM 训练管线](llm-training-pipeline.md)。
+- 月球大叔总结的方法论："做 MLSys 别只补代码小窟窿，要抽象出框架——system research 需要美感"；**数据管理是被低估的新方向**（agent 持续记忆、Dreams vs Memory），与 [江鋆晨"KV Cache 是下一个数据层"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同频（01:00–01:04）。
+
 ## KV Cache 作为独立数据层（江鋆晨，中/TensorMesh·LMCache，2026-06）
 
 来源：[月球大叔访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
@@ -78,6 +98,14 @@
 - **prefill vs decode 的算力误区（反直觉）**：硬件（Cerebras/Groq/LPU）多优化 decode（用户可见"一个字一个字蹦"），但 **~90% 算力其实花在 prefill/处理 input**——agent 的 input（几十万~几百万 token）远长于 output，且"任何 output 都会变成以后的 input"（01:31:30–01:34:32）。这是对"算力大头在生成"这一直觉的直接纠偏。
 - **OpenAI API 兼容格式 = AI 时代的 IPv4**：网络的"细腰"是 IP layer，其上创新极难（IPv6 更好却输给 IPv4 的既成事实）；AI 生态里 OpenAI API Compatible 的 query format 已是所有应用/模型/推理商承认的稳定接口，**KV Cache 有望成为下一个这样的标准层**（02:04:50–02:08:54）。
 - **硬件"IBM 化" vs disaggregation**：厂商把处理器/网络/存储 bundle 成大型机（走 IBM 老路）以最大化 margin；但历史上大型机没成数据中心主流，真正胜出的是"把便宜部件用聪明方法连起来"；**disaggregation 做到极致**（每块特殊化、可替换）可能带来颠覆性新 infra（02:08:54–02:12:56）。这与本页 [阳萌](../videos/20260608-zhang-xiaojun-yangmeng-anker.md) 的存算一体、[Jensen](../videos/20260323-lex-jensen-huang-nvidia.md) 的 extreme co-design 构成"硬件组织形态"的三种下注方向。
+
+## Agent Cloud 与统一存储层（Matei Zaharia & Reynold Xin，美/Databricks，2026-06）
+
+来源：[Latent Space 访谈](../videos/20260624-latent-space-databricks-agent-cloud.md)
+
+- **Omnigent = 跨 harness 的公共 API + agent cloud**：把 Claude Code/Codex/Cursor 等所有 harness 映射到一套 session API（收 message/file、吐 streaming/tool-call 流），上层做协作/安全/成本控制；开源以吃"众人写 integration"的网络效应（发布首周末 ~400 merge）。Zaharia 明确类比**网络协议（IP layer）而非 OS/数据库**——与 [江鋆晨"OpenAI API = IPv4 细腰"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 是同一"稳定接口层"直觉的两个落点（00:04–00:16）。
+- **agent cloud / 不关机 sandbox**：从 lakebase 架构去掉数据库即得；需本地持久化（库不每次重装）——解决"开车还得盯 Codex session"的荒诞（00:07–00:17）。
+- **"把数据放到对的地方，糊一层 AGI"**：**L-TAP** 只统一存储层（Postgres 页用空闲 CPU 转码成列式 parquet，无 CDC 管道），让 agent 实时 reason 业务数据、强 10 倍；**Dream Engine** 用 **ML 模型（非 LLM）+ 十年 trace** 从零重建数据库引擎、运行时 dispatch 最优数据结构（00:32–00:50）。这是"数据层 vs 计算层"权衡的又一形态，与本页 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV Cache 数据层、[Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的芯片级搬运税同属"计算 vs 通信/数据"主线。
 
 ## 面向 Agent 的架构与 RL Infra（罗福莉，小米 MemoVR，2026-04）
 

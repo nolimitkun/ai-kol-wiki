@@ -12,4 +12,5 @@
 
 | 日期 | 视频 | 嘉宾 |
 |---|---|---|
+| 2026-06-10 | [用 AI 建生物学世界模型（CZI Biohub）](../videos/20260610-no-priors-zuckerberg-czi-biology.md) | Mark Zuckerberg、Priscilla Chan、Alex Reeves |
 | 2026-06-26 | [超大规模 test-time compute 如何改变评估与安全](../videos/20260626-no-priors-noam-brown.md) | Noam Brown（OpenAI） |

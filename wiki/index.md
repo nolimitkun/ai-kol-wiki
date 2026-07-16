@@ -32,6 +32,11 @@
 - [江鋆晨（Junchen Jiang）](people/junchen-jiang.md) — 芝大教授 / TensorMesh CEO，KV Cache / LMCache
 - [广密](people/guangmi.md) — 硅谷 AI 投资人/研究者，"全球大模型季报"主讲（中方投资视角看硅谷全景）
 - [罗福莉（Luo Fuli）](people/luo-fuli.md) — 小米大模型团队负责人（MemoVR），前 DeepSeek，Agent 范式/架构/组织平权
+- [Peter Steinberger](people/peter-steinberger.md) — OpenClaw 作者，开源个人 agent / agentic engineering
+- [Reiner Pope](people/reiner-pope.md) — MatX CEO，AI 芯片设计（自底向上）
+- [Mark Zuckerberg](people/mark-zuckerberg.md) — Meta CEO / CZI，用 AI 建生物学世界模型
+- [Matei Zaharia & Reynold Xin](people/databricks-founders.md) — Databricks 联创，Spark 作者，Agent Cloud / 数据基础设施
+- [柯丽一鸣（Kay Ke）](people/kay-ke.md) — Physical Intelligence 研究员，机器人 RL（美方机器人全景）
 
 ## 主题
 
@@ -46,7 +51,7 @@
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
-- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：物理 AI vs 数字 AI、中美路线（中方素材强）
+- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
 
 ## 视频
@@ -60,6 +65,7 @@
 
 ### Dwarkesh Podcast
 - 2026-05-15 [Eric Jang：从零重建 AlphaGo，谈 self-play、RL 与 LLM 的未来](videos/20260515-dwarkesh-eric-jang.md)
+- 2026-05-22 [Reiner Pope：从逻辑门自底向上讲 AI 芯片设计](videos/20260522-dwarkesh-reiner-pope-chip-design.md)
 - 2026-06-04 [Alex Imas & Phil Trammell：AI 越强，它占经济的份额可能越小](videos/20260604-dwarkesh-imas-trammell.md)
 - 2026-06-16 [Ada Palmer：Machiavelli 被误读](videos/20260616-dwarkesh-ada-palmer-machiavelli.md)（思想史）
 - 2026-06-30 [Grant Sanderson：AI 反证数学猜想之后](videos/20260630-dwarkesh-grant-sanderson-ai-math.md)
@@ -67,6 +73,7 @@
 
 ### Lex Fridman Podcast
 - 2026-01-31 [#490 State of AI 2026：LLM、编码、Scaling、中国、Agent、GPU、AGI](videos/20260131-lex-state-of-ai-2026.md)（Raschka & Lambert）
+- 2026-02-12 [#491 Peter Steinberger：OpenClaw 爆红的开源个人 Agent](videos/20260212-lex-openclaw-steinberger.md)
 - 2026-03-23 [#494 Jensen Huang：NVIDIA 与 AI 革命](videos/20260323-lex-jensen-huang-nvidia.md)
 - 2026-04-09 [#495 维京时代](videos/20260409-lex-brownworth-vikings.md)（历史）
 - 2026-05-06 [#496 FFmpeg 与开源](videos/20260506-lex-ffmpeg.md)
@@ -75,6 +82,7 @@
 
 ### 张小珺·商业访谈录
 - 2026-04-15 [广密·全球大模型季报第 9 集：Coding 是 AGI 第二幕、御三家真相、模型即 OS](videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)
+- 2026-07-16 [柯丽一鸣（Kay Ke）：Physical Intelligence 内部视角与美国机器人全景](videos/20260716-zhang-xiaojun-kay-ke-physical-intelligence.md)
 - 2026-04-24 [罗福莉：OpenClaw 是划时代 agent 框架、Agent 很吃后训练、卡的分配与组织平权](videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)
 - 2026-05-11 [姚顺宇：在 Anthropic 和 Gemini 训模型、英雄主义已过去](videos/20260511-zhang-xiaojun-yao-shunyu.md)
 - 2026-05-18 [Freda 投资札记第 2 集：Tokenmaxxing、AI 组织变革、焦虑与连接](videos/20260518-zhang-xiaojun-freda-investment-2.md)
@@ -84,14 +92,17 @@
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
 
 ### 月球大叔
+- 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
 - 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 ### No Priors
+- 2026-06-10 [Zuckerberg、Priscilla Chan、Alex Reeves：用 AI 建生物学世界模型（CZI Biohub）](videos/20260610-no-priors-zuckerberg-czi-biology.md)
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
+- 2026-06-24 [Databricks（Matei Zaharia & Reynold Xin）：Agent Cloud 与数据基础设施](videos/20260624-latent-space-databricks-agent-cloud.md)
 - 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)
 - 2026-07-13 [Dan Biderman：AI 的记忆问题——为什么长上下文还不够](videos/20260713-latent-space-dan-biderman.md)
 

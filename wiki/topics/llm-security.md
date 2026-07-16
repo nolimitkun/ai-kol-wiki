@@ -32,12 +32,31 @@ Google 用 AI 批量生成开源项目安全报告引发的争议：报告冗长
 - 防御路线：定制小过滤模型（Signal，开销极小）双向拦截入站注入与出站违规工具调用，把"可用性 vs 安全"的 Pareto 前沿右上推；更远看好用 agent **自动化形式化验证与可解释性**——安全代码/mechinterp"一直不是不可能，只是缺人力和耐心"（00:41–00:45、00:56–00:57）。
 - **Agent identity**：当前默认"agent 拥有你的全部权限"必将改变，最可能先出现人格/profile 切换再细粒度化；agent 间存在权限提升风险（00:51–00:54）。
 
+## 被攻击者本人的视角（Peter Steinberger，OpenClaw 作者，2026-02）
+
+来源：[OpenClaw 访谈](../videos/20260212-lex-openclaw-steinberger.md)
+
+Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 自己的回应构成对照面：
+
+- **风险画像辩护**：多数 CVE 属"用户把 web 后端暴露公网"类配置问题；正确配置（私有网络、仅本人可对话）下风险与 "Claude Code --dangerously-skip-permissions / Codex YOLO 模式"相当——而那是所有 agentic 工程师的日常（00:52–01:00）。
+- **弱模型更易被注入**：最新一代模型经大量 post-training，"ignore all previous instructions"级攻击早已失效；安全文档明确警告别用便宜/弱本地模型跑高权限 agent（00:55–00:57）。与 Gray Swan"鲁棒性必须显式训练、不随规模自动增长"互补：Steinberger 观察到的是训练投入的结果，不是规模的副产品。
+- **三维权衡**：模型越智能攻击面越小，但可造成的损害越大（00:57）。
+- 实际缓解：skills 目录与 VirusTotal 合作 AI 扫描（供应链面）、sandbox、allowlist；名言式转折——一位安全研究员"骂完附上 PR"，直接被雇（00:53–00:56）。当前个人焦点即安全："等能推荐给我妈用再简化安装"，甚至希望增长慢一点（01:59–02:00）。
+- 名场面："我看着我的 agent 快乐地点掉 'I'm not a robot' 按钮"（02:58）——CAPTCHA 类人机验证在 agent 时代形同虚设，呼应 Gray Swan 对 computer use 攻击面的判断。
+
 ## 安全评估的 test-time compute 缺口（Noam Brown，OpenAI，2026-06）
 
 来源：[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md)
 
 - 各家的 responsible scaling policy / preparedness framework 大多诞生于 ChatGPT 时代，**没有考虑 test-time compute**——现在"模型能力是投入金钱的函数"（$10 → $10K → $10M 能力递增），政策没回答"应在什么 budget 下评估危险能力（如生物武器）"（00:11–00:14）。
 - 与能力问题镜像：模型若在大 budget 下对有用任务不饱和，对有害任务也会如此；而"真正评估长任务可能要跑一年"与几天/几周的发布周期严重脱节（00:13–00:16）。这是评估框架层面的安全短板，与 [评估与 Benchmark](evaluation-and-benchmarks.md) 直接相关。
+
+## 企业侧治理落地：有状态安全策略（Matei Zaharia & Reynold Xin，美/Databricks，2026-06）
+
+来源：[Agent Cloud 访谈](../videos/20260624-latent-space-databricks-agent-cloud.md)
+
+- **超越"yes/no 工具允许列表"**：单独看每个动作都可接受（读机密文档、装 NPM 新包、发布到公司网站），叠加才危险（"读机密 + 被 prompt injection + 外泄"）。解法是 **contextual / stateful policies**——按 session 累积风险状态决策（"若它装了一天前的 NPM 包、读了一千份机密文档，就拦；否则放行"），同时更安全且更好用（00:19–00:21）。这把 [Gray Swan 的 lethal trifecta](evaluation-and-benchmarks.md) 从"识别风险组合"推进到"运行时按状态阻断组合"。
+- **策略即函数、可组库**：把底层事件（Google Drive MCP 的 60 个 API）映射成高层语义（"这个会分享到公网吗"）再写策略；成本上限也是被跟踪的状态之一（00:20–00:22）。Unity Catalog 数据治理经验平移到 AI 治理——代表企业侧把 agent 安全工程化的一支。
 
 ## 中美对照
 

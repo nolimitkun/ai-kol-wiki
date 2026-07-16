@@ -25,6 +25,16 @@
 - 遇到看不懂的文件不再去约人、等几小时，"问一下 Gemini，5 秒告诉你结果就接着干"（00:41）。
 - 判断人是否"靠谱"的面试题：**24 小时从 0 到 1 做一个 RL 项目 + 1 小时讨论**——考察能否有效利用 AI，以及是否真理解 AI 做了什么（全盘扔给 AI 会在讨论中露馅）（03:31–03:33）。
 
+## Peter Steinberger（美/奥，OpenClaw 作者，2026-02）：agentic engineering 方法论
+
+来源：[OpenClaw 访谈](../videos/20260212-lex-openclaw-steinberger.md)
+
+- **"Vibe coding 是蔑称"**，他做 agentic engineering；**agentic 曲线/陷阱**：新手短 prompt → 中期过度复杂化（8 agent 编排、18 个 slash 命令）→ 精通后回归短 prompt。全自动 orchestrator = 回到 70 年代瀑布模型，丢掉 style 与 human touch（01:04–01:05、01:19–01:21）。
+- **对 agent 的共情是核心技能**：agent 每个 session 从零开始探索你的代码库，要指路、要"take your time"；世界级程序员骂 LLM，恰因编程太强妨碍其共情一个冷启动的系统（01:05–01:07、01:17–01:18）。**代码库应为 agent 优化**：别跟 agent 起的名字较劲——那是权重里最自然的名字，下次搜索它找的就是它（01:12–01:13）。
+- 工作流细节：并行 4–10 agent；**语音输入为主**（与 Karpathy "别打字了"一致，他一度说话说到失声）；从不 revert、永远 commit main（"refactor 现在很便宜"）；每个 feature 合并后问"现在有什么可以 refactor 的"、"如果重来你会怎么做"；PR 审核第一问是"你理解这个 PR 的意图吗"而非看实现（01:13–01:16、01:35–01:37）。
+- **模型手感论**：Opus 角色扮演强、动手快偏 trial-and-error（"有点太美国"），Codex 默认读更多代码、可跑 6 小时（"是德国人"）；差异在 post-training 目标而非原始智能，换模型给自己一周适应期；"模型变笨了"多半是你的项目在长 slop（01:39–01:47）。
+- **MCP vs CLI/skills**：CLI 可组合（接 `jq` 过滤、写成脚本）、零 context 污染；MCP 返回大 blob 必须整个进 context、需训练适配。skills = "一句话描述 → 按需加载"，与 CLI 天然互补；例外是需要状态的 Playwright（02:38–02:42）。
+
 ## Noam Brown（美，OpenAI，2026-06）：日常已可信任
 
 来源：[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md)

@@ -9,6 +9,7 @@
 
 | 日期 | 嘉宾 | 主题 | 视频 |
 |---|---|---|---|
+| 2026-05-01 | SGLang/Miles 团队（陈阳、万诚、袁月明） | DeepSeek V4 混合注意力的推理与 RL 训练适配 | [链接](../videos/20260501-uncle-moon-sglang-deepseek-v4.md) |
 | 2026-05-18 | [朱邦华（Banghua Zhu）](banghua-zhu.md) | SGLang、RLHF vs RLVR、二次创业 | [链接](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) |
 | 2026-06-09 | [江鋆晨（Junchen Jiang）](junchen-jiang.md) | KV Cache / LMCache、大模型的记忆 | [链接](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) |
 

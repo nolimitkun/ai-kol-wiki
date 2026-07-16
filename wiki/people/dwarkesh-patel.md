@@ -14,5 +14,6 @@
 | 日期 | 视频 | 嘉宾 |
 |---|---|---|
 | 2026-05-15 | [从零重建 AlphaGo：self-play、RL 与 LLM 的未来](../videos/20260515-dwarkesh-eric-jang.md) | Eric Jang |
+| 2026-05-22 | [从逻辑门自底向上讲 AI 芯片设计](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) | Reiner Pope |
 | 2026-06-04 | [AI 越强，它占经济的份额可能越小](../videos/20260604-dwarkesh-imas-trammell.md) | Alex Imas & Phil Trammell |
 | 2026-07-10 | [General relativity from first principles](../videos/20260710-dwarkesh-adam-brown-general-relativity.md) | Adam Brown |
