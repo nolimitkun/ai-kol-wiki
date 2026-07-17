@@ -41,6 +41,16 @@
 - **框架能弥补模型短板**：一套足够好的 agent 框架 + 中层模型，就能在 85% 场景达到顶尖模型水平（3B 端侧模型接入也能干"小模型不该能干"的事）（00:15:13–00:16:13）——OS 的"驱动/兼容层"让弱硬件也可用，是同一隐喻。
 - **模型与框架必须协同进化**（自学习）；开源框架 + 群体智能让这一层迭代极快。呼应 Dan Biderman"哪些知识该内化进内核"的问题：罗关注的是"哪些能力该由框架补、哪些该训进模型"。
 
+### Gavriel Cohen（NanoClaw 作者，2026-06）：第二大脑与 LLM Wiki 优于检索
+来源：[NanoClaw 访谈](../videos/20260629-latent-space-nanoclaw.md)
+- 继 OpenClaw 之后又一个"个人 agent 即 OS"的一线实践；主张**"claw 类 agent 的杀手级用例是第二大脑"**——不断喂信息、让 agent 建 LLM Wiki/知识图谱，而非要现成产出（00:05–00:06）。
+- **LLM Wiki 优于检索/RAG**（对 Karpathy"磁盘 ≈ RAG"框架的一个反转）：问"这周最该关注什么"没有 embedding/关键词能答，但有好的 LLM Wiki（项目/时间线/本周通话 log）就能跨文件收集给出——所以他个人直接把 agent 指向 Karpathy 的 LLM Wiki 帖照做；已知痛点是会造重复文件、需背景进程查重（**与本库 Lint 巡检同构**）（00:11–00:13）。**本条本身是本库范式的元证据**：新加坡外长用 NanoClaw + Karpathy LLM Wiki + Nemon 记忆系统搭第二大脑。
+
+### Akshat Bubna（Modal CTO，2026-07）："LLM 内核"之辩与 agent 自造基础设施
+来源：[Modal 访谈](../videos/20260708-latent-space-modal-agent-infra.md)
+- swyx 抛出非共识："也许 AIOS/LLM OS 的内核真就是个 LLM（软权限就够）"；Akshat 明确保留——sandbox 层要**硬边界**（详见 [LLM 安全](llm-security.md)）（00:43–00:44）。这是对 Karpathy"LLM 是内核进程"的一个边界追问：内核可以是 LLM，但**权限/隔离不能只靠 LLM**。
+- **agent 自供给基础设施**：self-provisioning runtime 让 agent 能 spin up 别的 agent、起自己的基础设施；SDK 从"开发者体验"转向"agent 体验"——OS 的"系统调用"正在为 agent 而非人重新设计（00:04–00:07、00:37）。
+
 ## 开放问题
 
 - 通用 System 2（慢思考换准确率）如何实现——Karpathy 2023 年认为尚无模型具备。

@@ -85,6 +85,21 @@
 - **serving 成本 >> 训练成本**：DeepSeek 预训练传闻约 500 万、OLMo3 约 200 万，但服务上亿用户是数十亿美元级——这是价值捕获的成本侧现实，也解释了模型为何反而变小（00:51–00:53）。
 - **"一个模型统治一切"的梦在死** → 走向专用化：金融/法律/医药用私有数据的定制模型是大生意（03:14–03:16）——与 Sinofsky"价值在难复制的组织逻辑/私有数据"一致。
 
+### Andrew Feldman（美，Cerebras，2026-05）：快 AI 催生新商业模式
+来源：[Cerebras 访谈](../videos/20260521-no-priors-cerebras-feldman.md)
+- **"速度不是让现有商业模式变好一点"**：Netflix 从寄 DVD 变电影公司——不是更高效地寄 DVD，而是开辟全新生意；AI 现在只替代看得见的（编码/设计/SaaS 工具），围绕它**重组工作方式**后才有新商业模式与生产力跃迁（00:28–00:29）。与 Sinofsky/Evans"价值上移"互补：Feldman 从**速度**这一维度指出上移后会长出"现在还看不见的"生意。
+- **纯 AI play 上市**：Cerebras 是唯一 100% 营收来自 AI 的标的，"从企业青春期毕业到成年"；OpenAI/Anthropic/Databricks 能在私募拿到公开市场估值，改变了传统 4 年 IPO 时间线——是价值捕获在资本市场侧的新形态（00:20–00:23）。
+
+### Lila Sciences（美，neo-lab，2026-07）：模型即价值、"零 FTE 虚拟创业"
+来源：[Lila 访谈](../videos/20260716-latent-space-lila-sciences.md)
+- **模型本身才是 moat、不冲临床（neo-lab）**：实验室是 token 生成器/数据护城河；回应"有数据训模型、有了数据又何必模型"——通用平台下**领域数据需求随广度下降、相邻领域可降到零**（00:27–00:29、00:40–00:41）。
+- **"零 FTE 虚拟创业"新商业形态**：客户带明确问题、在平台上跑完整 program（平台费+试剂+分成），可并行成千上万个虚拟创业；一个 in vivo CAR-T ≈ 5 年 biotech/6 个月/10% 成本——与戴雨森"one person company"、广密"AR 爆发"同属"AI 把创业单位成本压到极低"（00:49–00:52）。
+- **材料"苦甜 scaling"**：只有能规模化的东西才 matter，从第一个实验就 supply-chain conscious、有 techno-economic agent 蹲在角落——这是把"价值捕获"前置进研发环节的具体做法（00:42–00:43、00:52–00:54）。
+
+### Gavriel Cohen（NanoClaw，2026-06）：个人 agent 部署生意、需持续维护
+来源：[NanoClaw 访谈](../videos/20260629-latent-space-nanoclaw.md)
+- 早期采用者多是 VC/CEO"我搭好 setup 想推给全团队但不想当修 agent 的 IT"→ 催生企业 agent 部署生意（NanoClaw Co.）；**agent 不像传统软件"部署完 5 年不动"，模型底座在变必须持续升级**——价值捕获从"卖软件"转向"卖持续维护/托管"（00:14–00:18）。呼应 Steinberger"个人 agent 层的价值最终向平台厂收敛"。
+
 ## Jensen Huang：卖铲子的一方
 ### （美/NVIDIA，2026-03）
 来源：[Lex #494](../videos/20260323-lex-jensen-huang-nvidia.md)

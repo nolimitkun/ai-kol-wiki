@@ -125,8 +125,43 @@
 - **算力是 Anthropic 冲 1000 亿 AR 的最大瓶颈**（此前低估需求、算力规划保守）；**Google worst case"TPU 都能变成另一个英伟达"**（00:29:28、00:49:42）。
 - **推理需求即将爆发几倍到十倍**（罗福莉同判断），"大部分卡点在存储"，低成本推理是关键命题（广密 01:16:12 / 罗福莉 02:30:21）。
 
+## 多模态/全模态 serving：stage 抽象与 DiT 加速（vLLM Omni 团队，中，2026-05）
+
+来源：[月球大叔访谈](../videos/20260511-uncle-moon-vllm-omni.md)
+
+- **把 PD 分离推广成通用 "stage" 抽象**：LLM 的 prefill/decode 只是两个 stage；多模态里一个 stage 可能是多模态 encode/生成，stage 间要传的不只 KV cache，还有 embedding/metadata，**方向可双向、可跳 stage**（00:03–00:04）。这是把 [SGLang·Miles](../videos/20260501-uncle-moon-sglang-deepseek-v4.md)/[LMCache](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV-transfer 思路推到多模态的自然延伸。
+- **omni connector + 控制面/数据面解耦**：单卡走 shared memory、多卡自动走 **Mooncake**；轻控制信息与重 payload 分开传；chunkwise 异步流式把**首包延迟从近 10 秒降到 <1 秒、RTF<1**（00:28–00:33）。
+- **DiT 加速**（AR 复用 vLLM、Diffusion 从头写）：TeaCache（layer 级跳步）+ block 级缓存；并行 USP+Ring Attention（正交）、HSDP、VAE patching、CFG parallel（最稳）；实测显卡算力过剩、diffusion 可 continuous batching；边缘设备做 module/layer-wise CPU offload（00:41–00:57）。
+- **国产硬件插件**：CUDA/ROCm + **华为昇腾 MPU、百度昆仑**，新硬件接入不改核心 AR/Diffusion 逻辑——直接回应下方中美对照里"国产芯片主动论述待补"的缺口（00:24–00:25）。
+
+## 半导体供应链与代工：Intel 的重整（Lip-Bu Tan，美/Intel，2026-06）
+
+来源：[No Priors 访谈](../videos/20260618-no-priors-lip-bu-tan-intel.md)
+
+- **瓶颈排序：电力→氦（helium）→内存→CPU/GPU**——扩产建 fab 要几年、成本会往客户传导涨价；"AI 冲击比互联网更大更深刻"（00:11–00:13）。与 Jensen"电力是首要瓶颈"一致，但补上**氦与内存短缺**两个少被提及的物理约束。
+- **先进封装成新瓶颈**：EMIB-T vs TSMC CoWoS、玻璃基板（好热绝缘、Intel ~1000 模组专利）、人造金刚石；摩尔定律撞物理墙后靠新材料（GaN/SiC/InP）——与 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的电路级"计算 vs 通信"是产业链上下游两端（00:15–00:19）。
+- **CPU 在 AI 里回潮**：训练 CPU:GPU 从 1:8 到 1:4 甚至 1:1，RL 与 agent 编排里 CPU 更好——与 [Modal](../videos/20260708-latent-space-modal-agent-infra.md)"inference inflection：GPU:CPU 摆回 1:1"、朱邦华"RL environments 让 CPU 变重要"三方独立同频（00:05）。
+- **算力终局不押集中式**：看多 edge/client 算力（机器人/国防/家用），与 Jensen 的集中式"token 工厂"、Lewis Hong 的太空数据中心构成"算力放哪"的第三种下注；代工资本密集经济学详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)（00:41–00:44）。
+
+## 晶圆级芯片与快推理（Andrew Feldman，美/Cerebras，2026-05）
+
+来源：[No Priors 访谈](../videos/20260521-no-priors-cerebras-feldman.md)
+
+- **"要根本性更好，架构就必须不同"**：造 46,000mm²"餐盘大小"晶圆级芯片（别人造"邮票大小"），推理比 GPU 快 15–20x；对 GPU 小改不可能快 20 倍（00:02–00:07）。为本页 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)"GPU 是一堆微型 TPU"、姚顺宇 TPU/GPU 对照补上"整片晶圆"这一极端设计点。
+- **供给侧的爬坡真相**：造不出来烧了两年、每月 800 万美元；跨越 chasm 靠超算→主权基金 G42 十亿订单 battle test→OpenAI 200 亿单；制造能力今年 10x（"硬件史上最快之一"）（00:07–00:24）。与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)"硬件（Cerebras/Groq/LPU）多优化 decode"形成互证——Feldman 正是从 decode 侧"快"切入。
+- 呼应本页 Imas·Trammell 的需求侧："2025 年模型聪明到有用后需求爆炸"，"慢推理的市场是零"。
+
+## Agent 云 / sandbox / 弹性推理（Akshat Bubna，美/Modal，2026-07）
+
+来源：[Latent Space 访谈](../videos/20260708-latent-space-modal-agent-infra.md)
+
+- **self-provisioning runtime**：把硬件/扩缩容写进代码 decorator（与代码 collocate），而非读几百个无类型 Kubernetes YAML；SDK 团队从"开发者体验"转向"agent 体验（AX≈DX，余弦相似度 ~0.9）"（00:04–00:07）。
+- **sandbox 是 agent 的完美原语**：2023 年 5 月就做、去年才爆；**RL rollout 极 bursty（要 10 万个 sandbox）**、agent 本身反而不 bursty——与罗福莉"RL infra 必须容错"、朱邦华"RL environments 是新瓶颈"从 sandbox 供给侧对接（00:10–00:15、00:27–00:29）。
+- **投机解码真相**：开源 DFlash（block-based speculator），**提升 accept length 是乘法级 2–4x 提速**（改 kernel 只有几个百分点）、不降质量；上游贡献回 SGLang（00:17–00:22）。与罗福莉"MTP 被 verify、无幻觉"同属"用富裕算力做投机解码"。
+- **inference inflection**：GPU:CPU 从 8:1 摆回 ~1:1（agent 频繁 call out CPU）；capital-light 跨 17 家云建统一容量池 + 自建可靠性层，"compute strategy"团队对冲容量（类比航空对冲燃油）——与 Databricks Omnigent、[江鋆晨 disaggregation](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同属"agent 云 / 硬件组织形态"下注（00:24–00:47）。
+
 ## 中美对照
 
-见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。国产芯片的**主动**论述仍待中方素材补充。
+见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。**国产芯片的主动论述现有 [vLLM Omni 团队](../videos/20260511-uncle-moon-vllm-omni.md) 从推理框架侧补上一手素材**——昇腾/昆仑通过 hardware plugin 接入、不改核心逻辑，是"国产硬件生态靠软件框架适配抹平"的具体做法。Intel（[Lip-Bu Tan](../videos/20260618-no-priors-lip-bu-tan-intel.md)）则从美方供给侧强调"本土供应链韧性、不能只依赖一两个地理玩家、政府持股是基础设施"，与中方硬件叙事构成产业政策对照。
 
-**Infra 侧新增中方一手视角**：[朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（推理引擎/RL 框架）与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)（KV Cache 层）代表"中国背景学者以开源研究组挑战工业界 AI Infra"的一支力量——两人的项目（SGLang/vLLM、LMCache）技术栈紧密相邻，且都判断推理、而非训练，是 infra 的主战场。
+**Infra 侧新增中方一手视角**：[朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（推理引擎/RL 框架）、[江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)（KV Cache 层）与 [vLLM Omni 团队](../videos/20260511-uncle-moon-vllm-omni.md)（多模态 serving）代表"中国背景学者以开源研究组挑战工业界 AI Infra"的一支力量——技术栈紧密相邻（SGLang/vLLM/LMCache/vLLM Omni），且都判断推理、而非训练，是 infra 的主战场。

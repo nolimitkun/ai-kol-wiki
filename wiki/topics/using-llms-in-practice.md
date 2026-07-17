@@ -41,6 +41,12 @@
 
 - 已日常用模型做税务建议、买房 paperwork——"某种程度上比信任人类专家还多"；提醒 2022–23 觉得不可信而弃用的人重新评估（00:30–00:31）。
 
+## Agent 时代的用法演进：治理 agent、AX、agent 管理学习曲线（2026-05–07）
+
+- **Andrew Feldman（Cerebras）："从 10x 到 100x 但非人人适用"**：少数有"完美心智"的人把编码转成**治理 agent**——同时跑 8–10 个 agent、专设 QA agent、主动补足模型冗长/删注释的弱点；token 花费从 <$1K/人月 到 $25–30K（[Cerebras](../videos/20260521-no-priors-cerebras-feldman.md) 00:12–00:13）。为 Steinberger"agentic engineering"补上"多 agent 治理"的具体工作方式。
+- **Akshat Bubna（Modal）：AX≈DX**：给 agent 用的和给人用的体验高度一致（余弦相似度 ~0.9）；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI / 加 skill——**"agent 幻觉自己的功能"其实是产品反馈**（[Modal](../videos/20260708-latent-space-modal-agent-infra.md) 00:06–00:07、00:57–00:58）。与 Steinberger"每个 MCP 做成 CLI 都更好"同频。
+- **Gavriel Cohen（NanoClaw）：agent 管理有陡峭学习曲线**：最大误区是"扔个任务就走开等成品"，必须持续调 instruction/skill/context；个人 agent 的记忆用 **LLM Wiki 优于检索**（问"这周最该关注什么"没有语义搜索能答），痛点是造重复文件、需背景进程查重（**与本库 Lint 同构**）（[NanoClaw](../videos/20260629-latent-space-nanoclaw.md) 00:03–00:13）。
+
 ## 中美对照
 
 Karpathy 与姚顺宇都强调"把输出当第一稿/审查代码合理性"，但侧重不同：Karpathy 面向广义用户（心智模型、选模型、语音优先），姚面向前沿研究工作流（模型写 90% 代码、20–50× 实验加速、与 AI 协作能力作为招人标准）。两者共同印证 [AI 与就业](ai-and-jobs.md) 里"人向设计、判断、监督迁移"的趋势。

@@ -58,6 +58,24 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 - **超越"yes/no 工具允许列表"**：单独看每个动作都可接受（读机密文档、装 NPM 新包、发布到公司网站），叠加才危险（"读机密 + 被 prompt injection + 外泄"）。解法是 **contextual / stateful policies**——按 session 累积风险状态决策（"若它装了一天前的 NPM 包、读了一千份机密文档，就拦；否则放行"），同时更安全且更好用（00:19–00:21）。这把 [Gray Swan 的 lethal trifecta](evaluation-and-benchmarks.md) 从"识别风险组合"推进到"运行时按状态阻断组合"。
 - **策略即函数、可组库**：把底层事件（Google Drive MCP 的 60 个 API）映射成高层语义（"这个会分享到公网吗"）再写策略；成本上限也是被跟踪的状态之一（00:20–00:22）。Unity Catalog 数据治理经验平移到 AI 治理——代表企业侧把 agent 安全工程化的一支。
 
+## 个人 agent 的隔离安全模型（Gavriel Cohen / NanoClaw，2026-06）
+
+来源：[NanoClaw 访谈](../videos/20260629-latent-space-nanoclaw.md)
+
+- NanoClaw 是对 Gray Swan"lethal trifecta 噩梦（OpenClaw）"与 Steinberger"正确配置即安全"之争的**工程化回答**——把安全做进架构而非依赖配置：
+  1. 每个 agent 独立 **container**（与 messaging bridge/router 分离）；
+  2. **agent 环境里不放任何凭证**——即便被 prompt injection 也无 key 可泄露（"审 PR 时任何人都能开 PR 灌入未净化输入"）；
+  3. 出站请求经 **vault 代理**按策略注入凭证 + **human-in-the-loop 审批**（可读邮件免批、发邮件在 Slack 点 approve/reject）（00:08–00:10）。
+- 直接针对 lethal trifecta 的第 ③ 环（外泄能力）与第 ②环（敏感信息访问）动刀：让 agent 本身**结构上无法接触凭证**，把危险组合在架构层拆开——与 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md)（运行时按状态阻断）是"结构隔离"vs"运行时策略"两条互补路线。多位安全专家审过、"没人指出核心思路的问题"（00:14）。
+- 用 Agent SDK 而非 Pi、明文记录问题促使他弃用 OpenClaw 转而重写——呼应 Steinberger"别用便宜/弱模型跑高权限 agent"的另一面：代码库/依赖面本身也是攻击面（00:06–00:08）。
+
+## sandbox 层：硬边界 vs LLM 中介权限（Akshat Bubna / Modal，2026-07）
+
+来源：[Modal 访谈](../videos/20260708-latent-space-modal-agent-infra.md)
+
+- Modal 对 sandbox 层坚持**硬边界**、怀疑"LLM 中介的权限控制"（可外挂软 guardrail，但硬边界不能少，否则"有人就能 exfiltrate"）——对 swyx 抛的"LLM OS 内核就是个 LLM、软权限就够"的非共识观点明确保留（00:43–00:44）。
+- sandbox 出站网络控制（man-in-the-middle proxy 做 RL logging、注入凭证、控制 egress domain）是把 [NanoClaw 的 vault 代理](../videos/20260629-latent-space-nanoclaw.md) 思路做进基础设施层（00:27–00:29）。
+
 ## 中美对照
 
 （待补充。姚顺宇 2026-05 谈及 Anthropic"以 AI 安全立身却训前沿模型"的张力，认为"一家公司制定法律只能管自己"，更可能有效的是**类似核武器的 Multi-party control 制衡**——见 [AI 实验室文化与组织](ai-lab-culture.md) 与 [中美 AI 生态对照](china-us-ai.md)。）

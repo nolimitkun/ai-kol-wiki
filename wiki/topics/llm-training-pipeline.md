@@ -114,6 +114,16 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **精度是最耗时的环节**：逐 tensor（每层 activation、每个 gradient）与改动前做端到端比较。DeepSeek V4 的 compress attention 很稀疏、reduction 复杂，使 **KV gradient 用 BF16 精度完全不够**（CP=1 vs CP=2 的该 tensor cosine 差 0.2，其他 tensor 是 1e-4~1e-5），换 **FP32** 即解决（00:31–00:34）。
 - **训练稳定性靠 deterministic ops**：借鉴 DeepSeek 的做法在 kernel/MoE 用 deterministic mode、禁 NCCL 非确定性——原本的 **KL loss spike 消失**；DSA（sparse attention + indexer router）这类架构从 V3.2 起就被发现难训稳（00:34–00:35）。呼应朱邦华"调通靠系统性排 infra 暗坑、不是理论"。
 
+## RLVR 的终极版本：verifier 是一整间实验室（Lila Sciences，美，2026-07）
+
+来源：[Lila 访谈](../videos/20260716-latent-space-lila-sciences.md)
+
+把 RLVR 从"数学/代码可验证"推到"物理世界可验证"，是本页 RLVR 主线（Karpathy、Raschka & Lambert、朱邦华）的一个激进外延：
+
+- **"以自然/实验做 verifier 是 RLVR 的终极版本"**：RL 本质是"模型生成自己的数据、reward 强化好数据"；Lila 把物理实验室建成"可规模化 verifier"，产出**实验验证过的推理轨迹**（互联网上 order-of-zero），一展示给模型就立刻见提升——哪怕参数处于劣势（00:06–00:07、01:22–01:23）。呼应 Raschka & Lambert"RLVR 可 scale、RLHF 不能"：Lila 是把"可验证"的边界从计算延伸到物理测量。
+- **chain of thought 里实验室仪器就是 tool call**：与柯丽一鸣"奖励=向智能体传达意图"、朱邦华"RLVR=可客观验证的 reward"同频；物理科学的 **reward hacking 是真实担忧**、病态含"跳过实验直接给答案"（00:24–00:27）。
+- **训练工程细节与 Karpathy 呼应**：不做预训练、从 open-weight（~$1B 算力等价、NVIDIA/Nemotron）起步叠 10T 科学 token（"广度带来深度"，通用模型胜过领域专用）；主张把 **RL 训练"因式分解"成并行专家模型再蒸馏回中心模型**（不同时间尺度各自训/生成）——与 Eric Jang"蒸馏高效"、姚顺宇软/硬蒸相通；并点名 **RL 的 MFU 仅 5–6%** 是最大浪费（00:28–00:33、01:18–01:21、01:37–01:39）。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。朱邦华从 RL infra 侧补充：DeepSeek V3 的 RLVR 突破是 NVIDIA 收购其 NexusFlow 的直接契机（[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) 00:35:41）。

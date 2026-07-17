@@ -42,6 +42,14 @@
 - **mech interp 从 LLM 迁移到生物学**：把 Anthropic 式可解释性工具用于蛋白质语言模型，在已知/未知蛋白间"连点"、揭示新机制——是"打开黑箱提取新科学知识"的具体实践（00:14–00:16）。
 - **闭环 vs 开环**（Elad Gil）：code/research 是闭环（迭代快），生物学是开环——CZI 的关键贡献是"闭上与真实生物学的回路"（00:54）。呼应 Grant Sanderson 的"可验证 + grindable"框架：生物学两者都缺，故必须靠 wet lab 硬造反馈。
 
+### Lila Sciences（美，neo-lab，2026-07）：科学即 token 生成器、实验室即 verifier
+来源：[RL with Verifiable Rewards, but the Verifier is a Lab](../videos/20260716-latent-space-lila-sciences.md)
+- **第三条路径**：不同于"推理模型做发现"（Adam/Noam）与 CZI 的"世界模型"，Lila 押注**"以自然/实验做 verifier 的 RLVR"是 bitter lesson 的终极版本**——把物理实验室建成"AI Science Factory = 可规模化 verifier"，产出"实验验证过的推理轨迹"（互联网上 order-of-zero 的数据），一展示给模型就见提升（00:06–00:07、01:22–01:23）。
+- **回应"数据即约束"**：与 CZI"生物数据不在互联网、必须造数据"完全同频，但给出更激进的框架——科学是**"下一个互联网级数据源"**（Ilya："我们只有一个互联网，它是化石燃料"），为数据加一根新 scaling 轴（00:05–00:08）。
+- **广度带来深度**：10T 科学推理 token 跨生命科学/化学/材料；通用模型常胜过领域专用模型（小分子化学迁移去推理 MOF 材料）——与 CZI"专一世界模型"路线形成方法论对立（Lila 押注通用推理 + tool call，CZI 押注自底向上表征）（00:31–00:33、01:18–01:23）。
+- **chain of thought 里实验室仪器就是 tool call、全英文可读**；"实验室即 data center、人在 API line 之下"（有时机械臂、有时人手）；病态含跳过实验直接给答案、物理科学的 reward hacking 是真实担忧（00:11–00:27）。
+- **实证 vs 门槛**：非铂族绿氢电催化剂"move 37"、in vivo CAR-T（≈5 年 biotech/6 个月）——但 Rafa 点名**材料没有 AlphaFold、缺 sim-to-real**（且 AlphaFold 恰训在实验而非仿真），Andy 点名 **RL 的 MFU 仅 5–6%**（00:17–00:49、01:35–01:39）。与 Grant Sanderson"可验证 + grindable"框架呼应：Lila 用实验室硬造"可验证"，用 96 孔板/pooled/快读出硬造"grindable"（把 MOF 测量提速 ~2500x）。
+
 ## 中美对照
 
-AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。
+AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy、CZI、Lila）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。Lila 另给出一条中美对照的尖锐判断——**"美国生物技术输给中国生物技术不是创新问题，是监管框架"**（发现已非约束，临床/审批才是；材料创新则很大程度由政府/国家安全驱动）（[Lila](../videos/20260716-latent-space-lila-sciences.md) 00:53–00:54）。

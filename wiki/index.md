@@ -37,6 +37,12 @@
 - [Mark Zuckerberg](people/mark-zuckerberg.md) — Meta CEO / CZI，用 AI 建生物学世界模型
 - [Matei Zaharia & Reynold Xin](people/databricks-founders.md) — Databricks 联创，Spark 作者，Agent Cloud / 数据基础设施
 - [柯丽一鸣（Kay Ke）](people/kay-ke.md) — Physical Intelligence 研究员，机器人 RL（美方机器人全景）
+- [Lip-Bu Tan（陈立武）](people/lip-bu-tan.md) — Intel CEO / 前 Cadence CEO / Walden 投资人，半导体供应链与代工
+- [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
+- [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
+- [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
+- [Gavriel Cohen](people/gavriel-cohen.md) — NanoClaw 作者，极简安全的开源个人 agent
+- [vLLM Omni 团队](people/vllm-omni-team.md) — 多模态/全模态推理引擎（中方 serving 基建）
 
 ## 主题
 
@@ -93,18 +99,24 @@
 
 ### 月球大叔
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
+- 2026-05-11 [vLLM Omni 团队：多模态/全模态推理引擎的 stage 抽象与 DiT 加速](videos/20260511-uncle-moon-vllm-omni.md)
 - 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 ### No Priors
+- 2026-05-21 [Andrew Feldman：Cerebras 630 亿 IPO、晶圆级芯片与快 AI](videos/20260521-no-priors-cerebras-feldman.md)
 - 2026-06-10 [Zuckerberg、Priscilla Chan、Alex Reeves：用 AI 建生物学世界模型（CZI Biohub）](videos/20260610-no-priors-zuckerberg-czi-biology.md)
+- 2026-06-18 [Lip-Bu Tan：重整半导体供应链、把 Intel 改造成 AI 公司](videos/20260618-no-priors-lip-bu-tan-intel.md)
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
 - 2026-06-24 [Databricks（Matei Zaharia & Reynold Xin）：Agent Cloud 与数据基础设施](videos/20260624-latent-space-databricks-agent-cloud.md)
 - 2026-06-25 [Mark Chen：AGI、o1、评估与 Scaling Laws](videos/20260625-latent-space-mark-chen.md)
+- 2026-06-29 [Gavriel Cohen（NanoClaw）：自主工作 agent 的蓝图、隔离安全与 LLM Wiki](videos/20260629-latent-space-nanoclaw.md)
+- 2026-07-08 [Akshat Bubna（Modal CTO）：从 Kubernetes 到 Agent Sandboxes](videos/20260708-latent-space-modal-agent-infra.md)
 - 2026-07-13 [Dan Biderman：AI 的记忆问题——为什么长上下文还不够](videos/20260713-latent-space-dan-biderman.md)
+- 2026-07-16 [Lila Sciences：RL with Verifiable Rewards，但 Verifier 是一整间实验室](videos/20260716-latent-space-lila-sciences.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
