@@ -37,7 +37,7 @@
 | 视频转录稿 | 44 |
 | 人物页 | 39 |
 | 主题页 | 13 |
-| 关注频道 | 8（活跃 8） |
+| 关注频道 | 9（活跃 8） |
 
 各频道已收录期数：
 
@@ -51,6 +51,7 @@
 | No Priors (Sarah Guo & Elad Gil) | 4 |
 | 月球大叔（Uncle Moon） | 4 |
 | a16z (Andreessen Horowitz) | 2 |
+| All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 0 |
 <!-- STATS:BLOCK:END -->
 
 
