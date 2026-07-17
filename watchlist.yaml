@@ -46,6 +46,12 @@ kols:
     min_minutes: 20
     lang: en
 
+  - slug: all-in
+    name: All-In Podcast (Chamath, Sacks, Friedberg, Calacanis)
+    channel: https://www.youtube.com/@allin/videos
+    min_minutes: 30
+    lang: en
+
   # ── 中国 ──────────────────────────────────────
   - slug: zhang-xiaojun
     name: 张小珺（商业访谈录）
