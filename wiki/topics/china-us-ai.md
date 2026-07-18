@@ -135,9 +135,19 @@
 
 - **"美国生物技术输给中国生物技术不是创新问题，是监管框架"**（发现已非约束、临床/审批才是）——这是本库首次从美方 AI-for-science 一线给出的中美生物技术对照，把竞争焦点从"谁的模型强"移到"谁的监管让成果更快到病人手里"（00:53–00:54）。材料创新则很大程度由政府/国家安全驱动（Lila 与英美政府有合作），呼应 Lip-Bu Tan 的产业政策叙事。
 
+### 开源今年"闭合 gap"、中国模型进入美方生产栈（Andrew Feldman / Cerebras，2026-07）
+来源：[开源赢麻、AGI 已至](../videos/20260710-all-in-cerebras-bfl-open-source.md)
+- Jason 从 openclaw 转 Kimi 后"分不出差别"、smart routing 后开源也会 reasoning 了——**开源与前沿的差距今年闭合**（"不会开法拉利去买菜"，难题用前沿、日常用开源）（00:16–00:17）。这把姚顺宇"纸面趋同"、Raschka & Lambert"开源是切入市场的手段"从美方产业侧再确认一次。
+- Cerebras 实际在**生产环境跑 GLM/Kimi/Qwen**（+ 闭源 + 主权自研模型）；Feldman 的焦虑不是"中国模型强"，而是**"美国缺本土开源模型"**（现只有 OSS 12B 或中国模型可选），呼吁给世界一个非中国的开源选择（00:18–00:20）。中国开源已成美方推理栈的默认组件——这比"承认中国实力"更进一步，是**用脚投票**。
+- **"若中国先有 Mythos 级/前沿模型"成为攻防节奏的时间变量**：Feldman 支持分阶段发布（政府红队、给 NSA 补洞窗口），[Onyx 的 Maxim Bar Kogan](../videos/20260528-no-priors-onyx-security.md) 则警告"若中国有 Mythos 级模型而你没让企业提早准备，回头看是巨大错误"——中美攻防竞速已成美方安全叙事的默认背景（详见 [LLM 安全](llm-security.md)）。
+
+### 中方开源社区的低门槛 onboarding（志鹏 / vLLM-Omni，2026-05）
+来源：[从 AI 零基础到 vLLM-Omni committer](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
+- 一位零 AI 基础的传统工程师靠跟看月球大叔直播、一年内成为 vLLM-Omni committer——展示中方开源推理社区的**人才涌入机制**：友好 reviewer 带新人、低门槛任务（改文档/小模型/layerwise 单卡跑通/租卡）、每周例会 + 录播、费曼学习法。这是"中国是 builder nation / 开源是文化产物"（Jensen）在**社区运营层**的具体注脚，也把中方叙事从"研究员/创业者"延伸到"草根贡献者"。
+
 ## 综合观察
 
-- 美方人物（Jensen、Karpathy、Raschka & Lambert）对中国 AI 的公开评价以承认实力 + 解释开源动机为主基调；开源被共同视为中国生态的加速器而非短板，Raschka & Lambert 进一步指出"美国大厂因安全不付费中国 API → 开源是切入市场的手段"这一具体机制，并证实中方一线（姚顺宇）"纸面趋同、无 winner-take-all"的判断。
+- 美方人物（Jensen、Karpathy、Raschka & Lambert、Feldman）对中国 AI 的公开评价以承认实力 + 解释开源动机为主基调；开源被共同视为中国生态的加速器而非短板，Raschka & Lambert 进一步指出"美国大厂因安全不付费中国 API → 开源是切入市场的手段"这一具体机制，并证实中方一线（姚顺宇）"纸面趋同、无 winner-take-all"的判断。
 - 中方一线视角（姚顺宇）与美方判断**相互印证又各有侧重**：Jensen 讲"华人研究者比例、builder nation、开源是文化产物"，姚从内部补上"算力劣势→蒸馏本领、C 端产品能力强于美国、字节被低估"等具体机制。
 - **一处张力**：Jensen 把开源当中国的战略资产；姚则区分蒸馏的"硬/软"，对硬蒸的评价相当负面（智力上愚蠢）——两者不冲突但视角不同，一个看生态加速、一个看单公司心态。
 - **价值捕获的分野**：姚顺宇的"中国强 C 端、美国强 enterprise"与美方 a16z（Evans/Sinofsky）几乎只谈企业软件价值捕获，构成两套商业文明的答案；而 Imas·Trammell 的"AI 像电力还是社交媒体"把全球价值分配系于"中国开源能否紧咬前沿 6–9 个月"。详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。

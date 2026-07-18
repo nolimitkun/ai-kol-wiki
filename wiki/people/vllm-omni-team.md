@@ -16,3 +16,4 @@
 ## 视频
 
 - [多模态/全模态推理引擎的 stage 抽象与 DiT 加速（月球大叔，2026-05-11）](../videos/20260511-uncle-moon-vllm-omni.md)
+- [志鹏：从 AI 零基础到 vLLM-Omni committer（月球大叔，2026-05-17）](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)——DiT 负责人 [志鹏](zhipeng.md) 的成长现身说法与贡献者指南

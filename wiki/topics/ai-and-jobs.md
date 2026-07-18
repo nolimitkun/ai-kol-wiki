@@ -100,6 +100,22 @@
 - **"人在 API line 之下"**：AI 设计实验、给指令，执行时"有时接机械臂、有时接人手"——把人的体力/部分脑力劳动放到 API 调用的下游（00:11–00:13）。这是"centralized technology / 价值向 taste 集中"在科学劳动上的具体形态：科学家上抽象阶梯（从"搬液体搬到得关节炎"到"提出问题"）。
 - **"零 FTE 虚拟创业"**：客户带明确问题、2–3 人 6 个月做完 ≈5 年 biotech 工作（一个 in vivo CAR-T）——与戴雨森"one person company"、广密"AR 爆发"同频，把创业的人力单位成本压到极低（00:49–00:52）。与 Cerebras/NanoClaw 的"少数强人放大产出"共同指向**同一趋势的两面：岗位数收缩，单人杠杆放大**。
 
+### AI 降低人类能动性、同质化思维（Danielle Perszyk / Amazon AGI Lab，2026-07）
+来源：[为什么 AI agent 其实"不懂你"](../videos/20260711-latent-space-perszyk-amazon-agi.md)
+- 换一个角度看"AI 与工作"：不是抢不抢岗位，而是**AI 正在降低人类能动性**——写作被拉向均值（意识阈值下从一个论点被切到相反论点）；用 AI 的个体科学家产出更多论文/经费，但**科学整体在收窄、思维被同质化**（模型都训在被压缩的互联网上）（00:34–00:37）。
+- 解法不是"别用 AI"，而是增加想法的多样性/规模/互联度——要**一个有不同偏见/视角的 AI 社会**；教育上，若 AI 被激励理解你的心智，就不会让你靠 offloading 蒙混（会自发苏格拉底式反问），指向牛津导师制 × Bloom 两西格玛的个性化教育（00:41–00:44）。与 [Andrew Feldman](../videos/20260710-all-in-cerebras-bfl-open-source.md)"该像亚里士多德教亚历山大那样一对一"同调。
+
+### 任务重排而非消失：语音客服 / 配音演员 / junior lawyer（All-In 双访谈，2026-07）
+来源：[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) · [Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md)
+- **junior lawyer 工作不消失但任务变了**：从"锁在数据室逐份读文件"变成"编排做这些活的 agent"；仍要 junior 上升为 partner，但路径不同（Legora，00:39–00:40）。与朱邦华"junior SWE 更难、资源集中到有 taste 的人"同构。
+- **配音演员从按小时工变授权收租**：ElevenLabs marketplace 已回馈 talent 超 $2200 万；语音 agent 让客服交互从"reactive 变 proactive"（Mati，00:19–00:24）。
+- **Andrew Feldman：错位 vs 丰饶**：会有像汽车取代马车般的错位（"造马车的人是坏交易"），但对账后是丰饶（无限能源/知识/教育）；当问题从智力问题变成**人的问题**（如何组织人、动机），领导者"给团队喷 WD40"（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:32–00:40）。
+
+### "编程在编两样东西"：什么被取代、什么没被取代（志鹏 / vLLM-Omni，2026-05）
+来源：[从 AI 零基础到 vLLM-Omni committer](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
+- 编程同时在编两样东西：① 实体的 code（AI coding 会取代）；② 脑海里对软件架构的**心智模型**（做设计决策，暂取代不了）——"人类还有存在价值，还没被 agent 取代"（16:15–17:18）。这是江鋆晨 **design taste**、朱邦华"taste/criticism"在一个**一年内自学入门者**口中的独立复现。
+- 工作没消失、是**工作模式剧烈迭代**，重心转向**写好 verifier（测试）**——"很多公司算子已 AI 生成，人花更多时间思考怎么写 verifier"（15:15–16:15、23:00–24:23）。呼应 Feldman"治理 agent"、Modal"AX≈DX"（见 [使用 LLM 的实践](using-llms-in-practice.md)）。
+
 ## 中美对照
 
-目前就业议题的中方视角来自姚顺宇（在美研究员）与朱邦华/江鋆晨（Infra 创业者）；其"centralized technology / 价值集中"判断与美方 Jensen 的乐观"抬升论"形成鲜明张力，是本主题最值得追踪的中美分歧。Imas & Trammell 从经济学给出第三种坐标——**资本份额是否趋 1、开源模型能否让全球普惠**——其中"开源落后前沿 6–9 个月"直接把中国的开源模型（GLM/DeepSeek/Kimi，见 [中美 AI 生态对照](china-us-ai.md)）放到了"AI 会否像电力一样普惠"的关键位置。国内 KOL 对 AI 就业冲击的**本土**论述待补充。
+目前就业议题的中方视角来自姚顺宇（在美研究员）、朱邦华/江鋆晨（Infra 创业者）与志鹏（开源贡献者）；其"centralized technology / 价值集中"判断与美方 Jensen 的乐观"抬升论"形成鲜明张力，是本主题最值得追踪的中美分歧。Imas & Trammell 从经济学给出第三种坐标——**资本份额是否趋 1、开源模型能否让全球普惠**——其中"开源落后前沿 6–9 个月"直接把中国的开源模型（GLM/DeepSeek/Kimi，见 [中美 AI 生态对照](china-us-ai.md)）放到了"AI 会否像电力一样普惠"的关键位置。国内 KOL 对 AI 就业冲击的**本土**论述待补充。

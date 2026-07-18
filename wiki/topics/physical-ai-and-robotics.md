@@ -60,6 +60,14 @@
 - **一个乐观 vs 谨慎的张力**：何小鹏认为机器人一旦软件追上会"规模化远超汽车、出现爆发时刻"；姚顺宇更强调软件泛化性差、时间尺度更长。二者不冲突——差别在于对"软件何时追上硬件"的时间判断。
 - **待观察**：物理 AI 的"ChatGPT 时刻"（何小鹏押 2027–2028）是否到来；运动控制的"全 AI 化"能否替代软件缝合。阳萌的"TAO模型"（VLA+世界模型双向循环）是否能在百万参数级端侧模型上实现。
 
+## 生成式视频模型收敛到"world-action model"（Robin Rombach / Black Forest Labs，2026-07）
+
+来源：[开源赢麻、Scorsese 的 AI 工具箱](../videos/20260710-all-in-cerebras-bfl-open-source.md)
+
+- **同一模型做图/视频/音频 + action prediction，最终可当机器人大脑**："要生成世界的视频，你必须理解世界"；视频预训练给出对物理/交互的**隐式理解**，直接产出 action prediction（00:42–00:44）。这从**生成侧**逼近 [Kay Ke（PI）](../videos/20260716-zhang-xiaojun-kay-ke-physical-intelligence.md) 从 **RL/控制侧**、阳萌的 **TAO（VLA + 世界模型双向循环）**同一个"世界模型 + 动作"目标——三条路线殊途同归到"多模态 world-action model"。
+- **机器人 in-context 是北极星**：目标是像 prompt LLM 一样在 context 里提示机器人"去拿这杯橙汁"；现状是不同硬件有不同 action 表征、需少量小时级微调（00:55–00:57）。与 Kay Ke"真机数据稀缺、跨本体迁移难"互补。
+- **latent diffusion 是底层算法**（把图/视频/音频压缩成高效表征再训 transformer）；Rombach 是其发明者、开源 Flux。为本库"物理 AI 的模型底座"补上生成式 diffusion 这一脉，与 [Genesis 的 3D 结构 diffusion](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md) 同属"diffusion 走出图像生成"的大趋势。
+
 ## 中美对照
 
 这曾是本库少数**中方素材强于美方**的主题（中国硬件/供应链优势被姚顺宇、何小鹏双双确认）。**柯丽一鸣（PI）加入后，美方视角大幅补齐**：她从 PI 一线给出美国机器人的学术族谱、公司格局与技术路线，并**从美方角度再次确认中国硬件统治力**——"很难想象一台机器人组装好后没有一个中国零件""美国人要追不知道该怎么追"，PI 公司群热议宇树春晚（[Kay Ke 访谈](../videos/20260716-zhang-xiaojun-kay-ke-physical-intelligence.md) 03:15–03:21）。于是中美对照在此形成难得的**双向确认**：中方（何小鹏/阳萌）说自己硬件强，美方（Kay）也承认追不上；而美方大脑/研究领先、论文开放，中国团队可 follow 但"随积累未必 match 得上"。何小鹏的"物理 AI vs 数字 AI"框架仍是对本库整体偏数字 AI 的结构性提醒。

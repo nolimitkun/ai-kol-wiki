@@ -138,6 +138,17 @@
   - **价值最终集中还是扩散**是最大未决问题：Imas·Trammell 的"电力 vs 社交媒体"把它系于"开源能否紧咬前沿 6–9 个月"——直接把中国开源模型（见 [中美对照](china-us-ai.md)）放到了决定 AI 普惠性的关键位置。
 - **待观察**：广告/电商（Evans 认为最可能被真正改造的万亿级 TAM）、专用垂直模型（Raschka & Lambert / Sinofsky）能否成为价值捕获的新落点。
 
+## 应用层公司 vs 前沿实验室：架构非规模、model-agnostic、窄模型（All-In 双访谈，2026-07）
+
+来源：[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) · [Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md)
+
+- **反复出现的紧张**：用前沿模型做产品、而前沿实验室（Anthropic/OpenAI）又想吃掉你的生意。四家应用层公司给出同构的护城河叙事——
+  - **ElevenLabs（语音，$600M ARR）**：护城河是"**架构而非规模**（得改变模型怎么运作 + 很具体的未标注数据）"+ 千人标注 + 垂直化 + 生态；对前沿实验室做 **model-agnostic** 平台，专注"交互/沟通这一层"；承认对手在蒸馏其数据（[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) 00:25–00:29）。
+  - **Legora（法律）**：法律服务 **$1 万亿/年**但软件只占约 4%（400 亿）；billable hour 被颠覆（企业把法务收回 in-house）；数据护城河**"要全不要 80%"**（litigator 需全部案例，是 power law 反面）；**不做通用法律智能模型、只做窄任务微调模型**；compliance 是货币（00:33–00:51）。呼应 [Genesis 的 narrow model 观](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md) 与 Sinofsky"上层是难复制的组织逻辑与私有数据"。
+  - **Cerebras**：纯 AI play、**$250 亿 backlog**、推理的 Moore's law；"快 AI 造新商业模式"延续其 Netflix 类比（详见 [AI 基础设施](ai-infrastructure.md)）（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:03–00:13）。
+  - **Black Forest Labs**：开源 Flux + 闭源双轨；生成式影视**重排成本结构**（一部"比特币电影"$3000 万 vs 传统 $1.5 亿、否则不会被 green-light）；开源 + IP 授权 + 粉丝二创商业化（00:50–01:01）。
+- **共同母题：垂直化 + model-agnostic + 窄模型**是应用层对抗前沿实验室的三件套；"独立第三方"逻辑（[Onyx 的安全买家心理](../videos/20260528-no-priors-onyx-security.md)：不信卖你产品的人认证产品）是同一叙事在安全领域的变体。这为本库"模型层商品化、价值去哪一层"的未决问题添了一批一线数据点：**价值捕获在"交互层/垂直数据护城河/合规与信任"，而非模型本身**。
+
 ## 中美对照
 
 美方讨论（Evans、Sinofsky、Raschka & Lambert）几乎全部围绕**enterprise / SaaS 的价值捕获**——因为美国的钱在企业软件。姚顺宇则指出中国的价值捕获逻辑在 **C 端**（字节被严重低估、美国没公司能在 C 端与之竞争）。因此"AI 商业化"在两国是**两套不同的价值捕获范式**：美国问"agent 如何重构企业软件栈的租值"，中国问"如何用 AI 把 C 端超级 app 的利润滚得更大"。而 Imas·Trammell 的"电力 vs 社交媒体"之问，其答案很大程度上取决于中国开源模型能否让前沿能力平民化——这让中美生态竞争直接决定了全球 AI 的价值分配形态。

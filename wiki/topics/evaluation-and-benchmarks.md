@@ -72,6 +72,14 @@
 - 组建了约 **1000 个科学 RL environment** 的测试套件（可 drop-in frontier model / 自家模型对比），会开源一个子集 + 部分训练数据；每个 close-ended 科学问题都有内部 benchmark（"科学预训练 + tool call 的模型碾压其他做法"）（00:21–00:22、01:21–01:22）。
 - 与本页 NLP 侧"benchmark 信息量枯竭"形成互补：Lila 的评估直接**在物理实验室里跑**（实验结果即 ground truth），但也带出机器人/物理侧同样的难题——测量本身可能被误读（点名 Berkeley lab 测量争议），"不能因为是 AI 就放松科学严谨性标准"。呼应 Kay Ke"物理世界连客观可复现 eval 都难建立"。
 
+## 药物发现的 eval 危机：RMSD<2Å 不够、要 1Å（Genesis Molecular AI，2026-06）
+
+来源：[最前沿的 diffusion 研究在药物发现](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)
+
+- **业界惯用 RMSD<2Å 太粗、且会误导**：2Å 下芳香环可翻转仍算"有效输出"，而且不像模糊图像你知道它模糊——**翻转的环看起来很正常**，med chemist 会当成真结构上当；氢键供受体窗口仅约 0.6Å，核心结合区必须**亚埃分辨率**（00:41–00:51）。"药物发现是分辨率的科学"。
+- **eval 的 provenance 决定它是否有用**：RMSD<2 源自 AI 之前的学术 docking 研究（学者写论文而非造药），被 AI 社区顺手沿用——类比 **SWE-bench**："Gemini 刷榜赢，但没人用它写代码"（00:55–00:58）。这为本页"benchmark 信息量枯竭"补上一个新机制：**benchmark 可能一开始就测错了东西**。
+- **eval 转型进行中**：PoseBusters（牛津，加物理有效性）、LDDT、OpenBind 正推动从"单一 RMSD"转向多指标；Genesis 在 OpenBind 的一个未见过的难 target（有柔性 loop 需诱导契合）上"每个 pose 基本都对"、远超公开模型——且强调"在合作方私有难 target 上差距更大"，因为**公司目标不是刷榜、是给做硬 target 的 pharma 创造价值**（01:08–01:12、01:37–01:42）。呼应 Noam"不控制 test-time compute 就误导"、Mark"一公开就失效"。
+
 ## 交叉观察
 
 - 三人共识：**当代 benchmark 的信息量在枯竭**——要么被打满（姚）、要么不控制 test-time compute 就误导（Noam）、要么一公开就失效（Mark）。三者互补地指出：真正的评估需要 test-time compute 维度 + 私有/新造 eval + 团队分离。

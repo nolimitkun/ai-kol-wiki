@@ -47,6 +47,13 @@
 - **Akshat Bubna（Modal）：AX≈DX**：给 agent 用的和给人用的体验高度一致（余弦相似度 ~0.9）；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI / 加 skill——**"agent 幻觉自己的功能"其实是产品反馈**（[Modal](../videos/20260708-latent-space-modal-agent-infra.md) 00:06–00:07、00:57–00:58）。与 Steinberger"每个 MCP 做成 CLI 都更好"同频。
 - **Gavriel Cohen（NanoClaw）：agent 管理有陡峭学习曲线**：最大误区是"扔个任务就走开等成品"，必须持续调 instruction/skill/context；个人 agent 的记忆用 **LLM Wiki 优于检索**（问"这周最该关注什么"没有语义搜索能答），痛点是造重复文件、需背景进程查重（**与本库 Lint 同构**）（[NanoClaw](../videos/20260629-latent-space-nanoclaw.md) 00:03–00:13）。
 
+## 语音口述、loop maxing、prompt 自检、human-in-the-loop 当媒介（2026-07）
+
+- **脚踏板 + Whisper Flow 把 LLM 从"打字"解放成"意识流口述"**（Mati / ElevenLabs）：按住踏板给一两分钟 stream of consciousness，"LLM 特别擅长把一大段意识流理成东西"；语音 agent 让人反而更愿打断、对 AI 更坦诚（[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) 00:11–00:15）。为本页"语音优先"补上具体硬件工作流。
+- **Andrew Feldman 的 prompt 收尾模板**：结尾固定加"**检查你的工作 + 告诉我我没考虑到什么 + 每次运行都反问我几个问题**"——这改变了 trend scouting 等任务的产出；配合"token maxing / loop maxing"（递归：问→学→再问，答案好很多）（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:27–00:32）。与 Karpathy"把输出当第一稿/查证"、NanoClaw"持续调 instruction"同一实践谱系。
+- **生成式模型当"媒介"而非"自动出片"**（Robin Rombach / BFL）：与 Scorsese 合作的用法是**human-in-the-loop 把脑中画面迭代成图像**（"语言是有损媒介、视觉更丰富"）、平行化 brainstorming/storyboard，而非一键生成整部电影（00:46–00:50）。呼应"人向设计/判断迁移"。
+- **写好 verifier 是关键技能**（志鹏 / vLLM-Omni）：code with AI 后，"实体 code 会被取代、重心转向写测试/verifier"；学习时"找一个不懂的人（或 agent）用费曼学习法讲懂"（[志鹏访谈](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 15:15–24:23）。与 Modal"agent 幻觉即产品反馈"、NanoClaw"agent 管理有学习曲线"同属"人机协作方法论"。
+
 ## 中美对照
 
 Karpathy 与姚顺宇都强调"把输出当第一稿/审查代码合理性"，但侧重不同：Karpathy 面向广义用户（心智模型、选模型、语音优先），姚面向前沿研究工作流（模型写 90% 代码、20–50× 实验加速、与 AI 协作能力作为招人标准）。两者共同印证 [AI 与就业](ai-and-jobs.md) 里"人向设计、判断、监督迁移"的趋势。

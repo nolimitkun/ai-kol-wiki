@@ -160,8 +160,16 @@
 - **投机解码真相**：开源 DFlash（block-based speculator），**提升 accept length 是乘法级 2–4x 提速**（改 kernel 只有几个百分点）、不降质量；上游贡献回 SGLang（00:17–00:22）。与罗福莉"MTP 被 verify、无幻觉"同属"用富裕算力做投机解码"。
 - **inference inflection**：GPU:CPU 从 8:1 摆回 ~1:1（agent 频繁 call out CPU）；capital-light 跨 17 家云建统一容量池 + 自建可靠性层，"compute strategy"团队对冲容量（类比航空对冲燃油）——与 Databricks Omnigent、[江鋆晨 disaggregation](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同属"agent 云 / 硬件组织形态"下注（00:24–00:47）。
 
+## 史无前例的 buildout、推理即算力、主权与开源（Andrew Feldman / Cerebras，2026-07）
+
+来源：[开源赢麻、AGI 已至](../videos/20260710-all-in-cerebras-bfl-open-source.md)（补 [No Priors 访谈](../videos/20260521-no-priors-cerebras-feldman.md)）
+
+- **buildout 的物理尺度**：数据中心未来几年用电将超过"地球过去 50 年"，单栋建筑用电超中型城市，遍布美/加/北欧/中东/中亚；买家"永不满足、在追赶昨天的需求"，Cerebras **$250 亿 backlog**（00:01–00:04）。
+- **推理即算力 + 推理的 Moore's law**：reasoning 是 inference、极耗 token，正好喂给快机器；Cerebras 打破 18 个月翻倍、未来 18 个月"远超 2x"（新架构还有大量优化空间，20 年老架构 GPU 只能靠更小制程）——为本页"推理是 infra 主战场"（朱邦华/江鋆晨/Modal）补上芯片侧的加速曲线（00:07–00:13）。
+- **主权是趋势、开源今年闭合 gap**：Cerebras 跑 GLM/Kimi/Qwen + OpenAI 闭源 + GSK/G42/MBZUAI 自研模型；美国需要更多**本土开源模型**（现只有 OSS 12B 或中国模型可选）；OpenAI/Amazon 自研芯片是"没人喜欢依赖"（x86 依赖 Intel、GPU 依赖少数超算的教训）（00:14–00:20）。与 Lip-Bu Tan 的产业政策叙事、下文中美对照直接相扣。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：中国算力劣势逼出蒸馏本领与硬件供应链优势（人形机器人硬件成熟便宜）；姚顺宇提供的 TPU/GPU 对照为"国产芯片路线是否构成劣势"提供了一个"超大规模下生态劣势可被工程化抵消"的参照点。**国产芯片的主动论述现有 [vLLM Omni 团队](../videos/20260511-uncle-moon-vllm-omni.md) 从推理框架侧补上一手素材**——昇腾/昆仑通过 hardware plugin 接入、不改核心逻辑，是"国产硬件生态靠软件框架适配抹平"的具体做法。Intel（[Lip-Bu Tan](../videos/20260618-no-priors-lip-bu-tan-intel.md)）则从美方供给侧强调"本土供应链韧性、不能只依赖一两个地理玩家、政府持股是基础设施"，与中方硬件叙事构成产业政策对照。
 
-**Infra 侧新增中方一手视角**：[朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（推理引擎/RL 框架）、[江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)（KV Cache 层）与 [vLLM Omni 团队](../videos/20260511-uncle-moon-vllm-omni.md)（多模态 serving）代表"中国背景学者以开源研究组挑战工业界 AI Infra"的一支力量——技术栈紧密相邻（SGLang/vLLM/LMCache/vLLM Omni），且都判断推理、而非训练，是 infra 的主战场。
+**Infra 侧新增中方一手视角**：[朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)（推理引擎/RL 框架）、[江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)（KV Cache 层）与 [vLLM Omni 团队](../videos/20260511-uncle-moon-vllm-omni.md)（多模态 serving）代表"中国背景学者以开源研究组挑战工业界 AI Infra"的一支力量——技术栈紧密相邻（SGLang/vLLM/LMCache/vLLM Omni），且都判断推理、而非训练，是 infra 的主战场。[志鹏](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 从贡献者侧补上一手 serving 工程碎片（diffusion 蒸馏减步、CFG parallel、layerwise/modelwise、五级测试、内部 fork 的 rebase 指数级变难→**接口层贡献开源、保留 proprietary modeling layer**），并展示了中方开源社区**低门槛 onboarding**（租卡/小模型/铁巴学习法）如何把零基础工程师一年内变成 committer。

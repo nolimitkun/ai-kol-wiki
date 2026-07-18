@@ -76,6 +76,16 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 - Modal 对 sandbox 层坚持**硬边界**、怀疑"LLM 中介的权限控制"（可外挂软 guardrail，但硬边界不能少，否则"有人就能 exfiltrate"）——对 swyx 抛的"LLM OS 内核就是个 LLM、软权限就够"的非共识观点明确保留（00:43–00:44）。
 - sandbox 出站网络控制（man-in-the-middle proxy 做 RL logging、注入凭证、控制 egress domain）是把 [NanoClaw 的 vault 代理](../videos/20260629-latent-space-nanoclaw.md) 思路做进基础设施层（00:27–00:29）。
 
+## AI 看管 AI：小守门模型监督 agent 动作（Maxim Bar Kogan / Onyx Security，2026-05）
+
+来源：[造 agent 去看管 agent](../videos/20260528-no-priors-onyx-security.md)
+
+- **押注 agent 动作**（而非旧 DLP 的"员工往 ChatGPT 粘什么"）：Claude Code/co-working/openclaw 类**不受限自主 agent**真被大企业采用（>50% 企业 agent 是自主编码 agent）却几乎无控制；已出现"agent 误发凭证/删库"的真实事故（00:01–00:09）。
+- **传统安全栈失灵**：自主 agent"我们希望它有我们的权限"→身份/权限安全失效；endpoint/API 安全**不知道 agent 在想什么**（同一动作删库在某任务是好事、在另一任务是灾难）——proxy+policy 引擎不够，难点不是看到数据而是**判断该不该做这个动作**（00:10–00:13）。这把 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md) 从"按 session 累积状态阻断组合"进一步推向"理解 agent 意图再判断"。
+- **小守门模型 + blitz chess 类比**：给每个 agent 配同等聪明的 agent 监控成本 dealbreaker；训"很小、几乎只会判断'该不该让更强 agent 来看'"的模型，像顶尖棋手多数靠直觉、关键局面才深算——高风险处狠花智能（00:14–00:18）。是"结构隔离"（[NanoClaw](../videos/20260629-latent-space-nanoclaw.md)）、"运行时状态策略"（Databricks）之外的第三条路线：**廉价直觉分诊 + 昂贵智能深查**。
+- **独立第三方 + 数据不对称护城河**：安全买家不信"卖你产品的人认证产品"；企业不愿给 Anthropic/OpenAI 存历史行为数据（怕被训练）却可给 Onyx——故能判断"是否偏离常态"，这是模型厂商没有的 context（00:32–00:36）。信 mech interp（"模型比我们聪明后反而更好破解"）（00:21–00:23），与 [Genesis 对结构模型的 mech interp 存疑](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)、[CZI 把 mech interp 迁移到蛋白质](../videos/20260610-no-priors-zuckerberg-czi-biology.md)构成同一工具的三种态度。
+- **Mythos（自动化漏洞挖掘）与分阶段发布**："10 年前觉得要 20–50 年、现在一下子全来了"；建议**假设这些模型总会来**、现在投基础控制；风险变量是"若中国先有 Mythos 级模型而企业没提早准备，回头看是巨大错误"——与 [Andrew Feldman 支持分阶段发布](../videos/20260710-all-in-cerebras-bfl-open-source.md)（PANW 用新模型"发现从不知道的 bug、停工打补丁 6 周"）同频（00:25–00:28）。
+
 ## 中美对照
 
-（待补充。姚顺宇 2026-05 谈及 Anthropic"以 AI 安全立身却训前沿模型"的张力，认为"一家公司制定法律只能管自己"，更可能有效的是**类似核武器的 Multi-party control 制衡**——见 [AI 实验室文化与组织](ai-lab-culture.md) 与 [中美 AI 生态对照](china-us-ai.md)。）
+（姚顺宇 2026-05 谈及 Anthropic"以 AI 安全立身却训前沿模型"的张力，认为"一家公司制定法律只能管自己"，更可能有效的是**类似核武器的 Multi-party control 制衡**——见 [AI 实验室文化与组织](ai-lab-culture.md) 与 [中美 AI 生态对照](china-us-ai.md)。）Onyx 与 Cerebras 从产业侧补上一条：**"中国是否先拥有 Mythos 级/前沿模型"被反复当成分阶段发布、防御准备的核心时间变量**——攻防节奏的中美竞争已成为安全叙事的默认背景。

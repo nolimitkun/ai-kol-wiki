@@ -50,6 +50,15 @@
 - **chain of thought 里实验室仪器就是 tool call、全英文可读**；"实验室即 data center、人在 API line 之下"（有时机械臂、有时人手）；病态含跳过实验直接给答案、物理科学的 reward hacking 是真实担忧（00:11–00:27）。
 - **实证 vs 门槛**：非铂族绿氢电催化剂"move 37"、in vivo CAR-T（≈5 年 biotech/6 个月）——但 Rafa 点名**材料没有 AlphaFold、缺 sim-to-real**（且 AlphaFold 恰训在实验而非仿真），Andy 点名 **RL 的 MFU 仅 5–6%**（00:17–00:49、01:35–01:39）。与 Grant Sanderson"可验证 + grindable"框架呼应：Lila 用实验室硬造"可验证"，用 96 孔板/pooled/快读出硬造"grindable"（把 MOF 测量提速 ~2500x）。
 
+### Genesis Molecular AI（美，小分子药物发现，2026-06）：diffusion 的最前沿在结构生物学
+来源：[最前沿的 diffusion 研究在药物发现](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)
+
+- **主题句**：当下最创新的 diffusion 研究发生在 **3D 结构预测**而非图像/视频生成——GAN（mode collapse）当年做不了蛋白复合物，diffusion 才是对的 primitive；如今图像/视频有些转回 AR，结构生物学反成"diffusion 的一根支柱"（00:00、01:06–01:08）。是继 Lila 之后的第四条 AI-for-science 路径：**把 LLM scaling 三段式搬到分子结构预测**。
+- **Pearl = 预训练/推理时/RL 三段式**：物理模拟造合成数据（PDB 只有约 20 万晶体结构、增长冰川速度）；推理时在"晶体结构表征"而非语言 token 上迭代（diffusion head 天然多步）、用物理引导 steer；RL 含"实验室 in-the-loop"（00:16–00:19、01:09–01:11）。与 [Lila](../videos/20260716-latent-space-lila-sciences.md)"实验室即 verifier"、[CZI](../videos/20260610-no-priors-zuckerberg-czi-biology.md)"世界模型 + wet lab 闭环"同属"数据即约束→用实验硬造数据"的大家族。
+- **结构≠药，AlphaFold 3 诺奖 ≠ 药物发现解决**：还要动态、要预测 30+ ADMET 性质，且药物性质常**反相关**（结合力↑→疏水↑→溶解度↓），多参数优化像打地鼠、常要找离群分子（00:35–00:37、01:19–01:21）。呼应 CZI"单静态结构不够"。
+- **药物发现是分辨率的科学**：业界惯用 RMSD<2Å 太粗（芳香环可翻转仍算有效、且看起来正常会误导），Genesis 推进到 **1Å 以下**（氢键窗口仅约 0.6Å）——详见 [评估与 Benchmark](evaluation-and-benchmarks.md) 的 eval 危机（00:41–00:58）。
+- 泼冷水"机器人自动化实验室"：合成/纯化/表征都不 trivial，高通量筛选到 denovo 的 R² 低得惊人、假阳性巨大——所以才盼 AI 预测比湿实验更干净；新颖化学恰恰是自动化难做的（01:15–01:21）。与 Lila"拔试管盖很难自动化"、CZI"闭环 vs 开环"同题。
+
 ## 中美对照
 
-AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy、CZI、Lila）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。Lila 另给出一条中美对照的尖锐判断——**"美国生物技术输给中国生物技术不是创新问题，是监管框架"**（发现已非约束，临床/审批才是；材料创新则很大程度由政府/国家安全驱动）（[Lila](../videos/20260716-latent-space-lila-sciences.md) 00:53–00:54）。
+AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy、CZI、Lila、Genesis）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。Lila 与 Genesis 给出同向的尖锐判断——Lila："**美国生物技术输给中国生物技术不是创新问题，是监管框架**"（发现已非约束，临床/审批才是）（[Lila](../videos/20260716-latent-space-lila-sciences.md) 00:53–00:54）；Genesis 从数据闭环角度印证：西方 pharma 依赖 CRO 致尖端湿实验能力退化，而中国 biotech（Insight）**自建极强 in-house 实验能力、数据产出极快**，是"设计-造-测-分析"闭环的关键（[Genesis](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md) 01:12–01:14）。

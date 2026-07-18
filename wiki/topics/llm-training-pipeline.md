@@ -124,6 +124,17 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 - **chain of thought 里实验室仪器就是 tool call**：与柯丽一鸣"奖励=向智能体传达意图"、朱邦华"RLVR=可客观验证的 reward"同频；物理科学的 **reward hacking 是真实担忧**、病态含"跳过实验直接给答案"（00:24–00:27）。
 - **训练工程细节与 Karpathy 呼应**：不做预训练、从 open-weight（~$1B 算力等价、NVIDIA/Nemotron）起步叠 10T 科学 token（"广度带来深度"，通用模型胜过领域专用）；主张把 **RL 训练"因式分解"成并行专家模型再蒸馏回中心模型**（不同时间尺度各自训/生成）——与 Eric Jang"蒸馏高效"、姚顺宇软/硬蒸相通；并点名 **RL 的 MFU 仅 5–6%** 是最大浪费（00:28–00:33、01:18–01:21、01:37–01:39）。
 
+## 把 scaling 三段式搬到分子结构预测（Genesis Molecular AI，2026-06）
+
+来源：[最前沿的 diffusion 研究在药物发现](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)
+
+Genesis 明确把 LLM 的"预训练 / 后训练(RL) / 推理时"三段式移植到 protein–small molecule 结构预测（Pearl 模型），是本页 scaling 主线在**非语言模态**上的一个平行样本：
+
+- **预训练 = 物理模拟造合成数据**：公开晶体结构库 PDB 只有约 20 万、增长冰川速度；小分子可用物理建模造更多训练数据（大蛋白太复杂、算力代价高）（00:15–00:16）。与 [Lila](../videos/20260716-latent-space-lila-sciences.md)"科学即 token 生成器"、[CZI](../videos/20260610-no-priors-zuckerberg-czi-biology.md)"数据即约束"同属"生物/化学数据不在互联网、必须造"。
+- **推理时 scaling = 在结构表征上"思考"**：不在语言 token 上，而在"内存里未物化的晶体结构表征"上多步迭代（diffusion head 天然多步）、用**物理引导**steer——把 LLM 的"thinking tokens"换成"thinking structures"（00:16–00:19）。
+- **RL 含"实验室 in-the-loop"**：先用物理反馈，最终"预测→合成→测量→回灌"；与中国 biotech 伙伴（Insight）组"设计-造-测-分析"闭环（01:09–01:14）。是本页 RLVR 主线（含 [Lila 的物理 verifier](../videos/20260716-latent-space-lila-sciences.md)）在药物发现上的落地。
+- **primitive 之辩**：2017–18 GAN（mode collapse）做不了蛋白复合物，diffusion 才对；如今图像/视频有些转回 AR，而结构生物学成"diffusion 的一根支柱"——**同一 primitive 在不同模态的命运相反**（00:00、01:06–01:08）。Sergey（原 Llama 2/3 预训练负责人）："LLM 架构本质还是 2017 transformer、有点无聊；我们的架构很不同、很有意思。"
+
 ## 中美对照
 
-见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。朱邦华从 RL infra 侧补充：DeepSeek V3 的 RLVR 突破是 NVIDIA 收购其 NexusFlow 的直接契机（[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) 00:35:41）。
+见 [中美 AI 生态对照](china-us-ai.md)：算力劣势下中国实验室的蒸馏（硬蒸/软蒸）与后训练路线；DeepSeek 被姚顺宇列为与 OpenAI/Anthropic 同期"想明白后训练怎么 scale up"的一方（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 02:12）。朱邦华从 RL infra 侧补充：DeepSeek V3 的 RLVR 突破是 NVIDIA 收购其 NexusFlow 的直接契机（[月球大叔访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) 00:35:41）。Genesis 从美方补上一条数据闭环视角：中国 biotech 自建极强 in-house 湿实验能力、数据产出极快，是"设计-造-测-分析"RL 闭环的关键（[Genesis](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md) 01:12–01:14）。

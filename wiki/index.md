@@ -43,6 +43,13 @@
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
 - [Gavriel Cohen](people/gavriel-cohen.md) — NanoClaw 作者，极简安全的开源个人 agent
 - [vLLM Omni 团队](people/vllm-omni-team.md) — 多模态/全模态推理引擎（中方 serving 基建）
+- [志鹏（Zhipeng）](people/zhipeng.md) — vLLM-Omni committer，一年从 AI 零基础到贡献者（中方开源草根视角）
+- [Danielle Perszyk](people/danielle-perszyk.md) — Amazon AGI Lab 认知科学家，"AI 该像什么"的认知科学视角
+- [Genesis Molecular AI（Evan Fineberg & Sergey Edunov）](people/genesis-molecular-ai.md) — 小分子药物发现基础模型（Pearl / co-folding）
+- [Maxim Bar Kogan](people/maxim-bar-kogan.md) — Onyx Security CEO，"AI 看管 AI" / agent 动作监督
+- [Mati Staniszewski](people/mati-staniszewski.md) — ElevenLabs CEO，语音 AI（应用层 vs 前沿实验室）
+- [Max（Legora）](people/legora-max.md) — 法律 AI，billable hour 颠覆 / 法律数据护城河
+- [Robin Rombach](people/robin-rombach.md) — Black Forest Labs CEO，latent diffusion / Flux，生成式→机器人
 
 ## 主题
 
@@ -101,10 +108,12 @@
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
 - 2026-05-11 [vLLM Omni 团队：多模态/全模态推理引擎的 stage 抽象与 DiT 加速](videos/20260511-uncle-moon-vllm-omni.md)
 - 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)
+- 2026-05-17 [志鹏：从 AI 零基础到 vLLM/vLLM-Omni Committer，只用了一年](videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 ### No Priors
 - 2026-05-21 [Andrew Feldman：Cerebras 630 亿 IPO、晶圆级芯片与快 AI](videos/20260521-no-priors-cerebras-feldman.md)
+- 2026-05-28 [Onyx Security（Maxim Bar Kogan）：造 agent 去看管 agent](videos/20260528-no-priors-onyx-security.md)
 - 2026-06-10 [Zuckerberg、Priscilla Chan、Alex Reeves：用 AI 建生物学世界模型（CZI Biohub）](videos/20260610-no-priors-zuckerberg-czi-biology.md)
 - 2026-06-18 [Lip-Bu Tan：重整半导体供应链、把 Intel 改造成 AI 公司](videos/20260618-no-priors-lip-bu-tan-intel.md)
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
@@ -116,7 +125,13 @@
 - 2026-06-29 [Gavriel Cohen（NanoClaw）：自主工作 agent 的蓝图、隔离安全与 LLM Wiki](videos/20260629-latent-space-nanoclaw.md)
 - 2026-07-08 [Akshat Bubna（Modal CTO）：从 Kubernetes 到 Agent Sandboxes](videos/20260708-latent-space-modal-agent-infra.md)
 - 2026-07-13 [Dan Biderman：AI 的记忆问题——为什么长上下文还不够](videos/20260713-latent-space-dan-biderman.md)
+- 2026-06-30 [Genesis Molecular AI：最前沿的 diffusion 研究在药物发现，不在图像生成](videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)
+- 2026-07-11 [Danielle Perszyk（Amazon AGI Lab）：为什么 AI agent 其实"不懂你"](videos/20260711-latent-space-perszyk-amazon-agi.md)
 - 2026-07-16 [Lila Sciences：RL with Verifiable Rewards，但 Verifier 是一整间实验室](videos/20260716-latent-space-lila-sciences.md)
+
+### All-In Podcast
+- 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
+- 2026-07-14 [AI 正在颠覆的万亿美元行业：语音（ElevenLabs）与法律（Legora）](videos/20260714-all-in-11labs-legora-voice-law.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
