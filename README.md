@@ -30,28 +30,28 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-07-17（每次 CI 构建刷新）。
+> 自动生成于 2026-07-18（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 44 |
-| 人物页 | 39 |
+| 视频转录稿 | 50 |
+| 人物页 | 46 |
 | 主题页 | 13 |
-| 关注频道 | 9（活跃 8） |
+| 关注频道 | 9（活跃 9） |
 
 各频道已收录期数：
 
 | 频道 | 期数 |
 |---|---|
+| Latent Space (swyx & Alessio) | 9 |
 | 张小珺（商业访谈录） | 9 |
-| Latent Space (swyx & Alessio) | 7 |
 | Lex Fridman | 7 |
 | Dwarkesh Patel | 6 |
 | Andrej Karpathy | 5 |
-| No Priors (Sarah Guo & Elad Gil) | 4 |
-| 月球大叔（Uncle Moon） | 4 |
+| No Priors (Sarah Guo & Elad Gil) | 5 |
+| 月球大叔（Uncle Moon） | 5 |
 | a16z (Andreessen Horowitz) | 2 |
-| All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 0 |
+| All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 2 |
 <!-- STATS:BLOCK:END -->
 
 
