@@ -38,6 +38,9 @@
 - [Matei Zaharia & Reynold Xin](people/databricks-founders.md) — Databricks 联创，Spark 作者，Agent Cloud / 数据基础设施
 - [柯丽一鸣（Kay Ke）](people/kay-ke.md) — Physical Intelligence 研究员，机器人 RL（美方机器人全景）
 - [Lip-Bu Tan（陈立武）](people/lip-bu-tan.md) — Intel CEO / 前 Cadence CEO / Walden 投资人，半导体供应链与代工
+- [Pat Gelsinger](people/pat-gelsinger.md) — 前 Intel CEO（34 年 Intel 生涯），Intel 衰败复盘、台湾能源风险、能源作为 AI 上限
+- [Anton Osika](people/anton-osika.md) — Lovable 联合创始人/CEO，vibe coding、多模型路由 + post-training
+- [All-In 主播团](people/all-in-hosts.md) — Chamath / Sacks / Friedberg / Calacanis + Brad Gerstner：token ROI、监管制度、主权 AI
 - [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
@@ -128,11 +131,16 @@
 - 2026-06-30 [Genesis Molecular AI：最前沿的 diffusion 研究在药物发现，不在图像生成](videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)
 - 2026-07-11 [Danielle Perszyk（Amazon AGI Lab）：为什么 AI agent 其实"不懂你"](videos/20260711-latent-space-perszyk-amazon-agi.md)
 - 2026-07-16 [Lila Sciences：RL with Verifiable Rewards，但 Verifier 是一整间实验室](videos/20260716-latent-space-lila-sciences.md)
+- 2026-07-10 [swyx：AI Engineer 大会、AGI 与"agent lab"（他反对模型路由）](videos/20260710-latent-space-swyx-agent-labs.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
 - 2026-07-14 [AI 正在颠覆的万亿美元行业：语音（ElevenLabs）与法律（Legora）](videos/20260714-all-in-11labs-legora-voice-law.md)
+- 2026-07-11 [OpenAI/Anthropic IPO、Token ROI 之辩、中国是否终结开源](videos/20260711-all-in-ipo-token-roi-china-open-source.md)
+- 2026-07-15 [前 Intel CEO 复盘失败 + Lovable CEO 谈 vibe coding 的真实兑现](videos/20260715-all-in-gelsinger-lovable.md)
+- 2026-07-18 [AI 行业能自我监管吗：Demis 的 SRO 提案、数据中心禁令、企业数据泄露](videos/20260718-all-in-sro-regulation-datacenters.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
 - 2026-07-07 [Software in the Age of Agents：headless 软件与例外处理](videos/20260707-a16z-software-in-age-of-agents.md)（Amble & Sinofsky）
+- 2026-05-29 [挑选 AI 赢家的新规则：规模、价值捕获与"我们不在泡沫里"](videos/20260529-a16z-picking-ai-winners.md)

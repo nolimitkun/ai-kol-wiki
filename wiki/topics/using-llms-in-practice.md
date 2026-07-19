@@ -57,3 +57,26 @@
 ## 中美对照
 
 Karpathy 与姚顺宇都强调"把输出当第一稿/审查代码合理性"，但侧重不同：Karpathy 面向广义用户（心智模型、选模型、语音优先），姚面向前沿研究工作流（模型写 90% 代码、20–50× 实验加速、与 AI 协作能力作为招人标准）。两者共同印证 [AI 与就业](ai-and-jobs.md) 里"人向设计、判断、监督迁移"的趋势。
+
+## token 治理：成本失控与组织行为学（2026-07）
+
+来源：[All-In / IPO、Token ROI 之辩](../videos/20260711-all-in-ipo-token-roi-china-open-source.md) · [All-In / SRO 与数据中心](../videos/20260718-all-in-sro-regulation-datacenters.md)
+
+- **规模的量级**：RAMP 称其客户过去一年 token 支出增长 **21 倍**（不是 21%）。[Chamath](../people/all-in-hosts.md) 自家 token 成本**每 45 天翻一倍**。
+- **病灶是激励错位，不是技术**（Jason + Chamath）：**工程师不与钱挂钩、CFO 才与钱挂钩**；工程师永远想用最新最强的，不会做这个权衡——"**就像你订差旅时根本看不到价格**，你说'给我商务舱'，差旅部门去处理"。RAMP CEO 的诊断补上另一半：AI 公司实际上给企业开了一个**挂账（tab）**，CFO 很难前瞻地看到谁在花什么，且新模型上线时费率常上调。
+- Chamath 自估：**98% 的 Fable 5 prompt 其实该跑在便宜模型上。**
+
+### 有效的优化手段（按杠杆排序）
+
+1. **harness 的选择**——Databricks 的 Ali 发现**同一个模型下，harness 不同能省约 2 倍成本**；他们用 GLM 5.2 时任务成本直接砍半。这是本批素材里最被低估的一条：**harness 可能比模型选择更重要**。
+2. **对 agent 本身做优化**——Jason 对自己的趋势发现 agent 做优化后 **token 用量降 80%**。
+3. **模型路由**——DoorDash 的做法是先用**内部编码基准**确认引入开放权重模型不降低代码质量，再让前沿模型做最难的活、把低层级工作下放（见 [评估与基准](evaluation-and-benchmarks.md)）。⚠️ 但路由本身是否是好战略存在分歧，见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。
+4. **观测性**——现在可以按小时、按任务、按模型查看 token 用量；RAMP 等已把 token 支出管理做成产品。
+
+### 成本骤降如何改变使用方式（Jason 的一手记录）
+token 成本降 95% 后（经 open router + Bittensor 子网跑 GLM 5.2），他的用法发生**质变而非量变**：agent 从**日跑改成小时跑**，再把一个 agent 拆成三个并行做不同事。"早上醒来 **14 个任务已经完成**，你会想：等一下，这完全是另一回事了。"
+
+**⚠️ 尚未解决的技术障碍**：Nikesh Arora 提出的"**model fungibility / headless**"（热插拔最便宜的可用模型）目前做不到——卡在**记忆、上下文、历史无法从模型里抽象出来**并可移植。这是模型商品化的真实技术门槛。
+
+### 落地组织形态：agentic pods / forward-deployed engineer
+Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**70%+ 的 PR 来自本地或云端 agent**、工程师建了 **200 个 agentic skill**；关键动作是把工程师**派驻进各职能部门**（法务、运营、市场、客服、HR、采购），与懂流程的部门负责人共事。**要点不是让 HR 的人自己 vibe code，而是"工程师 + 部门的系统架构者"配对去找 ROI**——与 [Legora 的 forward-deployed lawyer](../videos/20260714-all-in-11labs-legora-voice-law.md) 是同一模式在不同职能的复制。

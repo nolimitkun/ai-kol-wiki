@@ -89,3 +89,16 @@
 ## 中美对照
 
 姚顺宇提供了中方一线视角下"纸面趋同"的判断；中国模型（GLM/字节/DeepSeek/Kimi）"发得快也说明这道题对所有人都变简单了、knowhow 已无秘密"（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 03:06–03:08）。
+
+## 用内部基准决定模型路由（2026-07）
+
+来源：[All-In / IPO、Token ROI 之辩](../videos/20260711-all-in-ipo-token-roi-china-open-source.md) · [All-In / Lovable](../videos/20260715-all-in-gelsinger-lovable.md)
+
+评估在这批素材里出现的形态不是排行榜，而是**成本决策的依据**：
+
+- **DoorDash**：用**内部编码基准**确认引入开放权重模型**不降低代码质量**后，才让前沿模型（Fable）做最难的活、把低层级工作下放给 Kimi 2.6，并公开其基准。这是"私有 eval 作为采购/路由依据"的清晰样本。
+- **[Lovable](../people/anton-osika.md) 的错误驱动循环**：**盯前沿模型在自家场景下犯的错**（选错工具、建错集成），按**对客户的影响**排序，针对性构造数据集或做 RL。"每周百万个新产品，token 分布是巨大的信号。"——评估信号直接来自生产分布，而非公开基准。
+- **[Decagon](../videos/20260711-all-in-ipo-token-roi-china-open-source.md) 的成熟度判据**：**你确切知道要做什么**（有数据集、可 post-train）→ 开源小模型；**还不知道要做什么** → 最强通用前沿模型。这实际上是把"能否构造出有效 eval"当成了开闭源选择的判据。
+- **[Sacks 的信任边界配方](llm-security.md)**里，**私有 eval** 被列为企业保有 alpha 的第一要件——评估能力本身成了议价筹码。
+
+**一个反面观察**：[a16z 成长期](../people/a16z.md)注意到 benchmark 上各家在收敛，**但收入分布完全没收敛**（Brad Gerstner 同样指出这点）。这提示公开基准与实际经济价值之间的脱节正在扩大——与本页此前记录的"benchmark 饱和"问题同源，但后果更直接：**基准已不足以指导采购决策，企业必须自建 eval**。
