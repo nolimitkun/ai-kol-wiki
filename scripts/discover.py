@@ -18,6 +18,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 SEEN = ROOT / "sources" / "seen.txt"
+SKIPPED = ROOT / "sources" / "skipped.txt"
 
 
 def fetch_channel(kol: dict, n: int) -> subprocess.CompletedProcess | None:
@@ -40,11 +41,21 @@ def main() -> None:
     kols = yaml.safe_load((ROOT / "watchlist.yaml").read_text(encoding="utf-8"))["kols"]
     seen = set(SEEN.read_text().split()) if SEEN.exists() else set()
 
+    # skipped.txt：看过、故意不收录的候选（每行 `<id>  # 理由`）。
+    # 和 seen 分开记，这样「已摄取」和「主动放弃」不会混为一谈。
+    skipped: set[str] = set()
+    if SKIPPED.exists():
+        for line in SKIPPED.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                skipped.add(line.split("#")[0].strip())
+
     # 各频道相互独立、纯网络等待，并发抓取；map 保持原顺序输出。
     with ThreadPoolExecutor(max_workers=min(8, len(kols) or 1)) as ex:
         results = list(ex.map(lambda k: fetch_channel(k, args.n), kols))
 
     total = 0
+    total_skipped = 0
     for kol, r in zip(kols, results):
         print(f"\n## {kol['name']}  ({kol['slug']})")
         if r is None:
@@ -55,9 +66,13 @@ def main() -> None:
             continue
         min_sec = kol.get("min_minutes", 20) * 60
         found = 0
+        n_skipped = 0
         for line in r.stdout.strip().splitlines():
             vid, dur, title = (line.split("\t", 2) + ["", ""])[:3]
             if vid in seen:
+                continue
+            if vid in skipped:
+                n_skipped += 1
                 continue
             if dur not in ("NA", "") and float(dur) < min_sec:
                 continue
@@ -67,9 +82,14 @@ def main() -> None:
             found += 1
         if found == 0:
             print("  （没有新视频）")
+        if n_skipped:
+            # 明确报出被 skipped.txt 压掉的数量，避免「悄悄消失」
+            print(f"  （另有 {n_skipped} 个已在 skipped.txt 中，不再列出）")
         total += found
+        total_skipped += n_skipped
 
-    print(f"\n共 {total} 个候选新视频。")
+    tail = f"（另有 {total_skipped} 个在 skipped.txt 中被跳过）" if total_skipped else ""
+    print(f"\n共 {total} 个候选新视频。{tail}")
 
 
 if __name__ == "__main__":

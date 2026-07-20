@@ -16,7 +16,8 @@
 ```
 watchlist.yaml                 # 关注的 KOL / 频道名单（人来维护）
 sources/
-  seen.txt                     # 已摄取的视频 ID，一行一个
+  seen.txt                     # 已 fetch 的视频 ID，一行一个（fetch.py 自动追加）
+  skipped.txt                  # 已评估、主动决定不收录的视频 ID + 理由
   <kol-slug>/
     <YYYYMMDD>-<video-id>/
       transcript.md            # 带 frontmatter 的转录稿，含 [HH:MM:SS] 时间戳锚点
@@ -36,6 +37,13 @@ scripts/
 ### Discover（发现新视频）
 1. `uv run scripts/discover.py` — 列出 watchlist 各频道中未摄取、时长达标的新视频。
 2. 对每个值得收录的视频执行 Ingest。判断标准：实质性访谈/演讲/教程，跳过预告片、shorts、纯营销。
+3. **判定不收录的，写进 `sources/skipped.txt`**（`<video-id>  # 理由`），这样以后 discover 不再重复列出。
+   否则同一批老候选每天都会占满输出。discover 会报出被跳过的数量，不会悄悄隐藏。
+
+**seen.txt vs skipped.txt**：`seen.txt` = 已 fetch（转录稿已存档，fetch.py 自动写）；
+`skipped.txt` = 看过后主动放弃。两者分开，是因为 **fetch ≠ 已摄取**：
+若 fetch 之后才判定不收录，转录稿会留档但没有 wiki 页——这种情况必须显式写进
+`skipped.txt`，否则 `lint.py` 会一直把它报成「已摄取但没写 wiki 页」。
 
 ### Ingest（摄取一个视频）
 1. `uv run scripts/fetch.py <url> --kol <slug>` — 抓元数据和字幕，生成 `sources/.../transcript.md`。

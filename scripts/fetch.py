@@ -147,10 +147,13 @@ def write_transcript(dest: Path, info: dict, args_kol: str, upload: str,
     dest.mkdir(parents=True, exist_ok=True)
     (dest / "transcript.md").write_text(meta + "\n\n" + text + "\n", encoding="utf-8")
 
+    # seen.txt 只记「已 fetch」；重复 fetch 同一视频时不要重复追加
     seen = SOURCES / "seen.txt"
     seen.parent.mkdir(exist_ok=True)
-    with seen.open("a", encoding="utf-8") as f:
-        f.write(vid + "\n")
+    already = set(seen.read_text(encoding="utf-8").split()) if seen.exists() else set()
+    if vid not in already:
+        with seen.open("a", encoding="utf-8") as f:
+            f.write(vid + "\n")
 
     print(f"完成: {dest / 'transcript.md'}  （{len(text)} 字符）")
 

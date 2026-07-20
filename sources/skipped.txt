@@ -1,0 +1,46 @@
+# 已评估、决定不收录的候选视频。discover.py 不再列出，lint.py 不当作「漏写页」。
+#
+# 格式：<video-id>  # 理由
+#
+# 与 seen.txt 的区别：
+#   seen.txt    = 已 fetch，转录稿已存档（fetch.py 自动追加）
+#   skipped.txt = 看过标题/内容，主动判定不收录（人或 LLM 显式写入）
+# 一个视频可以只在 skipped.txt（从未 fetch），也可以两个都在
+# （fetch 后才判定不收录，转录稿留档但不建 wiki 页）。
+#
+# 要恢复某个视频：从本文件删掉对应行即可（若它也在 seen.txt，一并删掉）。
+
+# ── Karpathy 旧教程（2022-2023 神经网络课程系列） ─────────────
+# 本库聚焦 KOL 观点/预测，不收录纯代码教学；且已有 Intro to LLMs 作为代表。
+kCc8FmEb1nY  # Let's build GPT: from scratch
+t3YJ5hKiMQ0  # makemore Part 5: WaveNet
+q8SA3rM6ckI  # makemore Part 4: Backprop Ninja
+P6sfmUTpUmc  # makemore Part 3: Activations & Gradients
+TCH_1BHY58I  # makemore Part 2: MLP
+
+# ── 非 AI 主题 ────────────────────────────────────────────────
+OS1NZLgKM2c  # Dwarkesh: Sarah Paine 地缘政治
+sRKBGVFVYAw  # Dwarkesh: David Reich 考古/古基因
+H9rF1CSSh-w  # Lex: Jeff Kaplan 游戏设计
+1SJiTwbSI58  # Lex: Rick Beato 音乐
+Ml2zKHZtW8U  # 月球大叔: 年轻人如何创造财富（非 AI）
+yfafpyhB-8E  # a16z: Jake Paul 拳击/投资
+XROaLetSxg0  # a16z: The New Media Advantage 媒体
+oYK_MmZW9XI  # a16z: $1T Firm / PE 标签
+rghTqkclDqA  # a16z: Amjad Masad 迷因与公开建设（偏媒体叙事）
+XwfUzW32cIA  # a16z: Ben Horowitz 全球科技竞争（政治为主，AI 段落已被 07-11/18/19 覆盖）
+
+# ── 政治/商业占比过半，AI 实质内容已被其他期覆盖 ──────────────
+ihq_ngvKKmc  # All-In: Nate Silver 美国选举预测
+4j9RPGLENNI  # All-In: GameStop CEO 收购 eBay
+w8ah_tA0yfg  # All-In: Socialists Sweep NYC（AI memory crunch 段落已被覆盖）
+3Amlu4y94Ho  # All-In: World's First Trillionaire（AI 段落已被覆盖）
+8nj_0wZkbtA  # No Priors: Booking.com CEO（旅游业应用，AI 深度不足）
+5Xvbq_zvOQ4  # No Priors: Valar Atomics 核能（能源为主）
+RQE8OS392dU  # No Priors: We Need An Ecosystem in AI（泛论，无具体断言）
+xjlYpGaxIPA  # No Priors: Pax Silica 川普政府科技战略（政策为主）
+g5TWnUjbeFM  # No Priors: Amex GBT take private（并购交易）
+
+# ── fetch 后判定不收录（转录稿已留档，不建 wiki 页） ───────────
+wgdxSCsmS-Q  # All-In 2026-07-03 AI Sovereignty Wars：与 07-11/07-18 重叠度高、政治比重大
+             # 转录稿存于 sources/all-in/20260703-wgdxSCsmS-Q/

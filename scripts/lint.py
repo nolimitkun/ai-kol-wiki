@@ -19,22 +19,49 @@ WIKI = ROOT / "wiki"
 SOURCES = ROOT / "sources"
 
 
-def unwikied_sources() -> list[str]:
-    """已摄取但可能还没写 wiki 页的 source。
+def skipped_ids() -> set[str]:
+    """sources/skipped.txt 里「已评估、决定不收录」的 video id。
 
-    source 目录形如 sources/<kol>/<YYYYMMDD>-<id>/；video 页形如
-    wiki/videos/<YYYYMMDD>-<kol>-<slug>.md。两侧 kol 命名不完全一致
-    （如 lex-fridman → lex），因此只按日期做启发式匹配：某个 source 的
-    日期在 videos/ 里完全没有对应文件，则几乎肯定是「摄取了但没写页」。
+    格式每行 `<video-id>  # 理由`，`#` 开头的整行是注释。
     """
-    video_dates = {p.name[:8] for p in (WIKI / "videos").glob("*.md")
-                   if p.name[:8].isdigit()}
+    path = SOURCES / "skipped.txt"
+    if not path.exists():
+        return set()
+    ids = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        ids.add(line.split("#")[0].strip())
+    return ids
+
+
+def unwikied_sources() -> list[str]:
+    """已 fetch 但没写 wiki 页、且没被显式 skip 的 source。
+
+    source 目录形如 sources/<kol>/<YYYYMMDD>-<id>/；video 页里会用
+    `../../sources/<kol>/<YYYYMMDD>-<id>/transcript.md` 链回转录稿，
+    因此按这个**精确路径**匹配（早先按日期做启发式，同一天若有另一个
+    视频写了页，就会把真正漏写的那个掩盖掉）。
+
+    在 skipped.txt 里的是「看过、故意不收录」，不算漏写。
+    """
+    referenced: set[str] = set()
+    for md in (WIKI / "videos").glob("*.md"):
+        text = md.read_text(encoding="utf-8")
+        for m in re.finditer(r"sources/([^/\s)]+)/([^/\s)]+)", text):
+            referenced.add(f"{m.group(1)}/{m.group(2)}")
+
+    skipped = skipped_ids()
     missing = []
     for d in sorted(SOURCES.glob("*/*/")):
         if not (d / "transcript.md").exists():
             continue
-        date_part = d.name[:8]
-        if date_part.isdigit() and date_part not in video_dates:
+        # 目录名形如 <YYYYMMDD>-<video-id>，取 id 部分
+        vid = d.name.split("-", 1)[1] if "-" in d.name else d.name
+        if vid in skipped:
+            continue
+        if f"{d.parent.name}/{d.name}" not in referenced:
             missing.append(f"{d.parent.name}/{d.name}")
     return missing
 
