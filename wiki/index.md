@@ -53,6 +53,10 @@
 - [Mati Staniszewski](people/mati-staniszewski.md) — ElevenLabs CEO，语音 AI（应用层 vs 前沿实验室）
 - [Max（Legora）](people/legora-max.md) — 法律 AI，billable hour 颠覆 / 法律数据护城河
 - [Robin Rombach](people/robin-rombach.md) — Black Forest Labs CEO，latent diffusion / Flux，生成式→机器人
+- [Xaira（Bo Wang & Xi Chu）](people/xaira-team.md) — 虚拟细胞 / X-Cell，"因果模型需要因果数据"
+- [Applied Intuition（Qasar Younis & Peter Ludwig）](people/applied-intuition.md) — 物理 AI 横向供应商，Dana、实时性即护城河
+- [Mark Cuban](people/mark-cuban.md) — Broadcast.com 创始人，AI 泡沫、企业落地难、世界模型
+- [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 
 ## 主题
 
@@ -106,6 +110,7 @@
 - 2026-05-28 [何小鹏：机器人 IRON、"剪腿"风波、物理 AI 与在血海里游泳](videos/20260528-zhang-xiaojun-he-xiaopeng-robot.md)
 - 2026-06-08 [阳萌（安克创新）：消费电子死与生、第三类公司、端侧模型、产品方法](videos/20260608-zhang-xiaojun-yangmeng-anker.md)
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
+- 2026-07-22 [沈宇军（蚂蚁灵波）：机器人原生基础模型、大脑与本体的关系、数据 scale up](videos/20260722-zhang-xiaojun-shen-yujun-lingbo-embodied-native.md)
 
 ### 月球大叔
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
@@ -132,6 +137,7 @@
 - 2026-07-11 [Danielle Perszyk（Amazon AGI Lab）：为什么 AI agent 其实"不懂你"](videos/20260711-latent-space-perszyk-amazon-agi.md)
 - 2026-07-16 [Lila Sciences：RL with Verifiable Rewards，但 Verifier 是一整间实验室](videos/20260716-latent-space-lila-sciences.md)
 - 2026-07-10 [swyx：AI Engineer 大会、AGI 与"agent lab"（他反对模型路由）](videos/20260710-latent-space-swyx-agent-labs.md)
+- 2026-07-21 [Xaira：因果模型需要因果数据——X-Cell 虚拟细胞模型](videos/20260721-latent-space-xaira-xcell-virtual-cell.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -139,8 +145,10 @@
 - 2026-07-11 [OpenAI/Anthropic IPO、Token ROI 之辩、中国是否终结开源](videos/20260711-all-in-ipo-token-roi-china-open-source.md)
 - 2026-07-15 [前 Intel CEO 复盘失败 + Lovable CEO 谈 vibe coding 的真实兑现](videos/20260715-all-in-gelsinger-lovable.md)
 - 2026-07-18 [AI 行业能自我监管吗：Demis 的 SRO 提案、数据中心禁令、企业数据泄露](videos/20260718-all-in-sro-regulation-datacenters.md)
+- 2026-07-21 [Mark Cuban 谈 AI 泡沫：真正被抹掉的是谁](videos/20260721-all-in-mark-cuban-ai-bubble.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
 - 2026-07-07 [Software in the Age of Agents：headless 软件与例外处理](videos/20260707-a16z-software-in-age-of-agents.md)（Amble & Sinofsky）
 - 2026-05-29 [挑选 AI 赢家的新规则：规模、价值捕获与"我们不在泡沫里"](videos/20260529-a16z-picking-ai-winners.md)
+- 2026-07-21 [Applied Intuition：为什么物理 AI 是下一个前沿（Dana 发布）](videos/20260721-a16z-applied-intuition-physical-ai.md)

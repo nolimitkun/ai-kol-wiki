@@ -80,3 +80,28 @@ token 成本降 95% 后（经 open router + Bittensor 子网跑 GLM 5.2），他
 
 ### 落地组织形态：agentic pods / forward-deployed engineer
 Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**70%+ 的 PR 来自本地或云端 agent**、工程师建了 **200 个 agentic skill**；关键动作是把工程师**派驻进各职能部门**（法务、运营、市场、客服、HR、采购），与懂流程的部门负责人共事。**要点不是让 HR 的人自己 vibe code，而是"工程师 + 部门的系统架构者"配对去找 ROI**——与 [Legora 的 forward-deployed lawyer](../videos/20260714-all-in-11labs-legora-voice-law.md) 是同一模式在不同职能的复制。
+
+## 工具跳跃与 agent 漂移：一个机构的 AI-first 实录（Mark Cuban，2026-07）
+
+来源：[Mark Cuban 谈 AI 泡沫](../videos/20260721-all-in-mark-cuban-ai-bubble.md) 00:15–00:18
+
+本库此前对 agent 工具的记录多来自作者本人（[Peter Steinberger / OpenClaw](../people/peter-steinberger.md)、[Gavriel Cohen / NanoClaw](../people/gavriel-cohen.md)、[Anton Osika / Lovable](../people/anton-osika.md)）。Cuban 提供了一份**外部使用方的实测交叉验证**，包括本库首次出现的负面一手反馈：
+
+- **他的实验设计是取消成本约束以观察上限**："我就说，**token max it**。你们每人每月可以花几千美元，我不在乎，我只在乎收益。"
+- **观察到的工具跳跃路径**（人们在 **OpenClaw、Hermes agent、Claude Co-work、Perplexity Computer** 四者间来回）：
+  1. 从 **OpenClaw** 开始建 → **agent 开始坏、开始幻觉，太让人挫败**；
+  2. 转 **Claude Co-work** → "很好，但有点受限"；
+  3. 转 **Lovable** → 给风投机构建起了内网（"没有哪家风投会花 50 万美元、12 个月去建内网，你就会说算了扔 Notion、Google Sheets 里吧"）。
+- **agent 漂移是新记录的失效模式**：**"Agent 会腻，会漂移——因为底层大模型在变，它最初被编排的方式和大模型后来变成的样子对不上了。"** 结果是**要更多人来管这些东西**。实践含义：**编排不是一次性资产，它会随基座模型演进而衰减**，需要持续回归测试（见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。
+- **一个可复现的能力边界**：让模型"每周搜一次某人的投资、写报告、发邮件给我"——做不到。它会提议做个 agent，然后给你 JSON 或 slop 代码，"**于是你必须会编程才能改对**"。
+- **缺失的复利机制**："它应该从所有报错里学习，然后说'我看到你在这里有问题，前三次尝试都失败了，让我告诉你遇到同样问题的其他人里 97.6% 是怎么解决的'。**它连这个都不做。它就说：失败了。**"
+- 对输出准确性的实用态度（值得记）：一个 prompt 12 分钟生成虚构公司的专利 + 商业计划 + 授权清单——**"就算它是错的，那又怎样？历史上写过的每一份商业计划书都是错的。"**
+
+## 品味 > 代码，调试 > 编写（Xaira / Bo Wang，2026-07）
+
+来源：[Causal Models Need Causal Data](../videos/20260721-latent-space-xaira-xcell-virtual-cell.md) 01:21–01:23
+
+- **"在 agentic AI 时代人人都能写代码了，更重要的是对项目有正确的品味，这样你才不会漫无目的地烧 token。"**
+- 工作方式的位移，说得比本库此前任何一处都直白：**"我们过去花大量时间写代码、一点时间调试；现在让 agent 写大部分代码，我们把大部分时间花在调试上。"** 他的实验室在专门讨论"怎么发现 AI 犯的错"、"AI 在哪些地方特别好、哪些地方仍然受限"。
+- 学生如何培养品味（回应"思考过程都能外包给 LLM 之后怎么办"）：靠学术训练——"进入一个你一无所知的领域，毕业时成为这个题目上世界级的专家"；以及"**学一样东西最好的办法就是把它编出来**"（因为编的时候才知道论文里省略掉的细节藏在哪）。最后要靠与湿实验、临床团队的协作拿到**真实世界的反馈信号**来校准品味。
+- 这与 [志鹏"编程在编两样东西"](../people/zhipeng.md)、[Anton Osika"工程不再是瓶颈，问题变成该造什么"](../videos/20260715-all-in-gelsinger-lovable.md) 是同一位移的三个独立表述——分别来自中国开源社区、欧洲应用层、北美学术/生物科技。
