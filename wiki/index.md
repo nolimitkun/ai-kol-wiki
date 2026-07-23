@@ -57,6 +57,8 @@
 - [Applied Intuition（Qasar Younis & Peter Ludwig）](people/applied-intuition.md) — 物理 AI 横向供应商，Dana、实时性即护城河
 - [Mark Cuban](people/mark-cuban.md) — Broadcast.com 创始人，AI 泡沫、企业落地难、世界模型
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
+- [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
+- [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
 
 ## 主题
 
@@ -138,6 +140,7 @@
 - 2026-07-16 [Lila Sciences：RL with Verifiable Rewards，但 Verifier 是一整间实验室](videos/20260716-latent-space-lila-sciences.md)
 - 2026-07-10 [swyx：AI Engineer 大会、AGI 与"agent lab"（他反对模型路由）](videos/20260710-latent-space-swyx-agent-labs.md)
 - 2026-07-21 [Xaira：因果模型需要因果数据——X-Cell 虚拟细胞模型](videos/20260721-latent-space-xaira-xcell-virtual-cell.md)
+- 2026-07-22 [Poolside（Eiso Kant）：Model Factory、Laguna S、开源与 AGI 竞赛](videos/20260722-latent-space-poolside-eiso-kant.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -152,3 +155,4 @@
 - 2026-07-07 [Software in the Age of Agents：headless 软件与例外处理](videos/20260707-a16z-software-in-age-of-agents.md)（Amble & Sinofsky）
 - 2026-05-29 [挑选 AI 赢家的新规则：规模、价值捕获与"我们不在泡沫里"](videos/20260529-a16z-picking-ai-winners.md)
 - 2026-07-21 [Applied Intuition：为什么物理 AI 是下一个前沿（Dana 发布）](videos/20260721-a16z-applied-intuition-physical-ai.md)
+- 2026-07-22 [Travis Kalanick：从 Uber 到 Atoms——把物理世界数字化（industrial AI）](videos/20260722-a16z-travis-kalanick-atoms.md)

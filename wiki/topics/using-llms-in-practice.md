@@ -105,3 +105,14 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 - 工作方式的位移，说得比本库此前任何一处都直白：**"我们过去花大量时间写代码、一点时间调试；现在让 agent 写大部分代码，我们把大部分时间花在调试上。"** 他的实验室在专门讨论"怎么发现 AI 犯的错"、"AI 在哪些地方特别好、哪些地方仍然受限"。
 - 学生如何培养品味（回应"思考过程都能外包给 LLM 之后怎么办"）：靠学术训练——"进入一个你一无所知的领域，毕业时成为这个题目上世界级的专家"；以及"**学一样东西最好的办法就是把它编出来**"（因为编的时候才知道论文里省略掉的细节藏在哪）。最后要靠与湿实验、临床团队的协作拿到**真实世界的反馈信号**来校准品味。
 - 这与 [志鹏"编程在编两样东西"](../people/zhipeng.md)、[Anton Osika"工程不再是瓶颈，问题变成该造什么"](../videos/20260715-all-in-gelsinger-lovable.md) 是同一位移的三个独立表述——分别来自中国开源社区、欧洲应用层、北美学术/生物科技。
+
+## "MCP 和工具是愚蠢的"：让模型写代码而非编排工具（Eiso Kant / Poolside，2026-07）
+
+来源：[Poolside 访谈](../videos/20260722-latent-space-poolside-eiso-kant.md)
+
+这是本页 [Steinberger"MCP vs CLI/skills"](../people/peter-steinberger.md) 之争的一个更激进的模型公司版：
+
+- **强观点**："我支持 MCP 也支持 tools，但它们对我毫无道理。"复杂长任务里我们在模型和系统之间塞了一层 MCP/tool call；**应该给模型一个装好 binary 的虚拟机 + 一个可操作的 codebase + 一个写 memory 的文件夹，让它自己写代码（含 if/for/条件）去干活**——"Laguna S 已经大量这么做，前沿模型也越来越如此"。
+- **预测**："12 个月内不会再看到塞了 20–40 个工具的 system prompt。" 机制是：RL 训练里"**模型想自由**"，会用最高效的方式做事，而那不是调 50 个预设工具，是写小脚本（类似 code interpreter 的 EOF 写文件）。
+- **对使用者的含义**：给 agent **越少的 harness、越大的自由度**越好；Poolside 自家 harness 只有约 6 个工具（shell / shell kill / shell wait / write / fetch web / bash）。这与 [swyx"榨干单一模型"](../people/latent-space-hosts.md)、[NanoClaw/Steinberger 的极简 harness](../videos/20260629-latent-space-nanoclaw.md)同向：**能力越强，越该把编排还给模型自己**。
+- 但他也承认这仍是"个人 nitpick"——Poolside 依然支持 MCP/tools、这代还首次做了并行 tool calling（"很多人被训在这套上，会长期被支持"）。

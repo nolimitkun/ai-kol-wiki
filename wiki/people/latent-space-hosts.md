@@ -30,3 +30,4 @@
 | 2026-06-24 | [Agent Cloud：Databricks 押注 AI 的未来](../videos/20260624-latent-space-databricks-agent-cloud.md) | Matei Zaharia & Reynold Xin（Databricks） |
 | 2026-06-25 | [AGI、o1、评估与 Scaling Laws](../videos/20260625-latent-space-mark-chen.md) | Mark Chen（OpenAI CRO） |
 | 2026-07-13 | [AI 的记忆问题：为什么长上下文还不够](../videos/20260713-latent-space-dan-biderman.md) | Dan Biderman（Engram，记忆/持续学习） |
+| 2026-07-22 | [Model Factory、Laguna S、开源与 AGI 竞赛](../videos/20260722-latent-space-poolside-eiso-kant.md) | Eiso Kant（Poolside CEO） |

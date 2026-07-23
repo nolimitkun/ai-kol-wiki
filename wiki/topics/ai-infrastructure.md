@@ -230,3 +230,21 @@
 - [沈宇军（蚂蚁灵波）](../people/shen-yujun.md) 从模型架构侧给出了同一约束的中方版本：因为机器人不能像文生视频那样让用户等 10–30 秒，所以**必须单向（causal）建模**、必须用 **MoE** 稀疏激活（"14B dense 模型推理激活就是 14B，你后面加速做得再好，能加速的比例是固定的"），而**可以舍弃的是画质**（"有点马赛克没关系——因为我们还有摄像头"）。
 - 这条与 [阳萌的端侧分层模型](../people/yangmeng-steven.md)（百万参数感知器官 → 十亿参数大脑 → 万亿参数云端）、[Reiner Pope 的自底向上芯片设计](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 共同构成"**约束定义架构**"这一族——与数据中心侧"scale 定义架构"恰成对照。
 - 另一条被 Applied Intuition 点出的基础设施事实：物理 AI 的数据**不在互联网上，必须自采**（他们自称数百 PB、"地球上最大的采集车队之一"），而**采集权限的门槛是地缘政治而非技术**（韩国不许可测绘公司；他们摸清了在中东、拉美与政府打交道的路径）。
+
+## RL 的墙钟瓶颈：把 PD 解耦引入训练、低精度、算力政治（Eiso Kant / Poolside，2026-07）
+
+来源：[Poolside 访谈](../videos/20260722-latent-space-poolside-eiso-kant.md)
+
+本页此前的 prefill/decode 解耦（PD disaggregation）讨论都在**推理侧**（江鋆晨、Modal、Cerebras）。Poolside 把它接到了**训练侧**：
+
+- **RL 是 batch-size 受限的**：任务数有限（不像整个 web 可无限放大 batch），所以**不能像预训练那样堆 GPU 扩算力**；**RL 时间是当前最大的墙钟瓶颈**。而"竞赛是按日历时间算的，不是按 GPU 数"——所以给行业提速最大的杠杆之一就是提高 RL 的 wall-clock 效率。
+- **解法：把推理侧已成熟的 PD 解耦、异构硬件混搭引入 RL 训练**（GPU 做一段、Groq/LPU 类专用芯片做另一段）——这是把[江鋆晨"prefill vs decode 算力误区"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)、[Modal 的 inference inflection](../videos/20260708-latent-space-modal-agent-infra.md)从推理迁移到训练的一个明确方向。
+- **低精度训练**：Laguna S 用 FP8（新 run 里唯一非 FP8 的是 all-to-all）；最兴奋 ternary、**NVFP4（点名 Nematron 的 NVFP4 训练被低估）**；现在还在 10k H200（Hopper）集群、相对小，转 Blackwell 后上 NVFP4/低精度 RL。核心 bottleneck 归结为"MAC 瓶颈 + 网络瓶颈"，呼应 [Reiner Pope"最大化计算相对通信"](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)。
+- **算力政治**："Nvidia 比美国政府更有权力（算力分配 → TSMC → 下面）"；但 Eiso 认为 Nvidia 促进竞争、受监管，与"政府用监管禁止别人做基础模型"性质不同。模型能力与硬件世代强绑定——"Hopper 上能训的和 GB300 上能训的，差的是 1T 参数和 5–6T 参数的距离"。
+
+## 数据中心本质是制造问题：Travis Kalanick（2026-07）
+
+来源：[从 Uber 到 Atoms](../videos/20260722-a16z-travis-kalanick-atoms.md)
+
+- **"数据中心本质上很大程度是个制造问题"**（冷却、供电、自建电力），而**美国已经忘了怎么制造**——"要找会制造的人，你几乎只能从 Elon 那里挖"。这从"物理世界操盘手"角度，给本页"能源作为 AI 真实上限"与"史无前例 buildout"两节补了一条**制造能力/供应链约束**的注脚。
+- 政治阻力类比第二次工业革命（纽约州禁数据中心 vs 当年对 Carnegie/Ford 的敌意）——"制造业岗位回来了，但我们不想要"。与 [Pat Gelsinger"能源是 AI 上限"](../videos/20260715-all-in-gelsinger-lovable.md)、[Mark Cuban"数据中心变匹克球场"](../videos/20260721-all-in-mark-cuban-ai-bubble.md)构成同一议题的不同侧面。

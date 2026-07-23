@@ -44,6 +44,19 @@
 - **top-down 能 make bets 但依赖强技术 1 号位**（姚论 Anthropic）与 **OpenAI 珍视 bottom-up 冷硬证据推翻判断**（Mark）并非矛盾：两者都指向"研究品味 + 公信力驱动资源集中"，区别在创业公司（集中赌）与大公司（广布局）的打法差异——姚明确将其归为"startup vs 大公司"之别（02:03–02:04）。
 - 姚与 Mark 都认为**个人贡献在当代 LLM 里难以量化、更像集体/系统产物**（姚："都是集体的贡献"；Mark：失败 write-up 也计入集体知识）。
 
+## neo-lab 的工程文化：工厂化研究、agency、约束催生创新（Eiso Kant / Poolside，2026-07）
+
+来源：[Poolside 访谈](../videos/20260722-latent-space-poolside-eiso-kant.md)
+
+本页此前的样本多是大厂/头部实验室（Anthropic/OpenAI/Google）。Poolside 提供了一个**从零起步、不脱胎于任何大厂的 neo-lab** 组织样本，与罗福莉的"组织平权"中方版形成对照：
+
+- **"从零起步"反成资历优势**：没脱胎于已有实验室 → 没有湾区自由流动的信息 → 被迫从头写训练代码、自己解 optimizer bug（三周调 Adam epsilon）——"发现从头搞明白反而建立了更好的直觉，也养出了团队的韧性"。这与"英雄主义已过去"（姚顺宇）相反的一面：**小团队的从零 build 仍能养出独特能力**。
+- **Model Factory 是组织设计**：把"最强分布式系统工程师"从 day zero 编进研究流程（而非事后 retrofit），让工程师能低门槛跑实验——"一个原本做 agent 的工程师半年内成了正经 RL 研究员"。**工程平权 → 研究平权**，与罗福莉"环境比经验更重要"同构。
+- **招人第一看 agency**：AI 越强，能动性越是最重要品质，且一定在过去经历里被展示过；对齐高 agency 的人靠**共同目标 + 明确边界（lanes）**（"不设边界，每个人就变成探索算法、陷入抢资源的政治"——正是他对大公司研究文化的批评）。
+- **约束催生创新**：用相对少的算力/钱、买很少外部数据，反而逼出别人没有的能力。这与阳萌"约束是好事"、Lila"苦甜 scaling"同频。
+- **"分阶段是组织现象"**：mid-training 团队的存在制造了 mid-training 这个阶段——组织结构会固化本可连续的技术流程（详见 [LLM 训练管线](llm-training-pipeline.md)）。
+- 对读 [Travis Kalanick 的"let builders build"](../videos/20260722-a16z-travis-kalanick-atoms.md)：两人都强调"高 agency 的人 + 共同目标/文化边界"，只是 Travis 从多行业管理容量、Eiso 从单一模型公司聚焦切入。
+
 ## 中美对照
 
 见 [中美 AI 生态对照](china-us-ai.md)：姚顺宇认为 Anthropic 的 top-down 与 Google 的 bottom-up 是"startup vs 大公司"两套打法，各自成立。国内侧现由**罗福莉（小米 MemoVR）**补上一手样本——"无组、无层级、热爱驱动、环境比经验重要"的极致 flat-org，与硅谷三家均不同；广密则从投资视角给出 Anthropic(top-down)/OpenAI(bottom-up)/Google(体系化) 的三方画像。中方一线（罗福莉）与硅谷（Mark Chen）都强调**范式切换期的组织重构比堆算力更关键**。
