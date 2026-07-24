@@ -30,12 +30,12 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-07-23（每次 CI 构建刷新）。
+> 自动生成于 2026-07-24（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 62 |
-| 人物页 | 55 |
+| 视频转录稿 | 63 |
+| 人物页 | 56 |
 | 主题页 | 13 |
 | 关注频道 | 9（活跃 9） |
 
@@ -48,9 +48,9 @@
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 7 |
 | Lex Fridman | 7 |
 | Dwarkesh Patel | 6 |
+| No Priors (Sarah Guo & Elad Gil) | 6 |
 | a16z (Andreessen Horowitz) | 5 |
 | Andrej Karpathy | 5 |
-| No Priors (Sarah Guo & Elad Gil) | 5 |
 | 月球大叔（Uncle Moon） | 5 |
 <!-- STATS:BLOCK:END -->
 
