@@ -12,5 +12,9 @@
 
 | 日期 | 视频 | 嘉宾 |
 |---|---|---|
+| 2026-05-21 | [Cerebras 630 亿 IPO、晶圆级芯片与快 AI](../videos/20260521-no-priors-cerebras-feldman.md) | Andrew Feldman（Cerebras） |
+| 2026-05-28 | [造 agent 去看管 agent](../videos/20260528-no-priors-onyx-security.md) | Maxim Bar Kogan（Onyx Security） |
 | 2026-06-10 | [用 AI 建生物学世界模型（CZI Biohub）](../videos/20260610-no-priors-zuckerberg-czi-biology.md) | Mark Zuckerberg、Priscilla Chan、Alex Reeves |
+| 2026-06-18 | [重整半导体供应链、把 Intel 改造成 AI 公司](../videos/20260618-no-priors-lip-bu-tan-intel.md) | Lip-Bu Tan（Intel） |
 | 2026-06-26 | [超大规模 test-time compute 如何改变评估与安全](../videos/20260626-no-priors-noam-brown.md) | Noam Brown（OpenAI） |
+| 2026-07-23 | [DoorDash 的自动配送体验：Agentic Commerce 与 Dot 机器人](../videos/20260723-no-priors-doordash-autonomous-delivery.md) | Andy Fang & Stanley Tang（DoorDash） |

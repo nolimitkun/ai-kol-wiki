@@ -226,6 +226,16 @@
 - **落地难度本身就是价值捕获的位置**：因为 AI 难用，所以"任何懂 AI 的人都可以走进任何一家企业说'你们撞到的这些失败我能修'"；再加上 **agent 漂移**（底层模型演进导致既有编排失效）"**要更多人来管这些东西**"——这意味着**相当一部分价值会沉淀在集成/运维层，而不是模型层**。这条与本页"价值向上游转移"的主流叙事构成张力。
 - forward-deployed engineer 作为能力测量、以及"不是替代是反事实"的经济学口径，见 [AI 与就业](ai-and-jobs.md)。
 
+## incumbent 的数据护城河到底值不值钱：要看它对不对用例（DoorDash，2026-07）
+
+来源：[No Priors 访谈](../videos/20260723-no-priors-doordash-autonomous-delivery.md)
+
+本页此前的价值捕获多在"模型层 vs 应用层"。DoorDash 提供了**存量网络的数据资产**这一维度，且给出了一个判断"incumbent 数据优势是不是真优势"的标尺：
+
+- **护城河 = 用例相关的专有数据，而非"我有数据库"**：Dot 要解"最后 100 英尺"（机器人开到一个 GPS pin 前不知道是哪扇门/哪道闸），而 **"人类 Dasher 历史上把包裹放在哪"这份 drop-off 数据只存在于 DoorDash、Google Maps 里没有**（00:31–00:32）。Sarah Guo 顺势点破一个常见误判——"早年很多人对 incumbent 数据优势的理解太表面（'我有客户记录和数据库'），但**那跟你想让 agent 完成的用例往往没什么关系**"。
+- 这与 [Mark Cuban"窄数据集是魔法"](20260721-all-in-mark-cuban-ai-bubble.md)、[Legora"数据要全不要 80%"](20260714-all-in-11labs-legora-voice-law.md)、[Xaira"因果模型需要因果数据"](20260721-latent-space-xaira-xcell-virtual-cell.md) 是同一命题在物流场景的又一版本：**决定价值捕获的不是数据量，而是数据与要解决的因果/操作用例的对齐度**。
+- **agentic commerce 的分发权**：50% 新店下单、40% 更大杂货客单（见 [AI 与就业](ai-and-jobs.md) 与视频页）说明**对话式界面本身在重新分配需求**——这是 [戴雨森 agent marketplace](../people/dai-yusen.md)、[Steinberger"每个 app 都是很慢的 API"](20260212-lex-openclaw-steinberger.md) 判断在一个 30 亿单实体网络上的早期兑现："现在网上 agent 流量已超人类流量"，遂上线 DoorDash CLI 抢 agent-first 入口。
+
 ## 横向技术供应商：像芯片公司一样捕获价值（Applied Intuition，2026-07）
 
 来源：[为什么物理 AI 是下一个前沿](../videos/20260721-a16z-applied-intuition-physical-ai.md)

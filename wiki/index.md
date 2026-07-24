@@ -59,6 +59,7 @@
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
+- [DoorDash 创始人（Andy Fang & Stanley Tang）](people/doordash-founders.md) — agentic commerce、自研配送机器人 Dot、大规模实体网络的 AI 落地
 
 ## 主题
 
@@ -127,6 +128,7 @@
 - 2026-06-10 [Zuckerberg、Priscilla Chan、Alex Reeves：用 AI 建生物学世界模型（CZI Biohub）](videos/20260610-no-priors-zuckerberg-czi-biology.md)
 - 2026-06-18 [Lip-Bu Tan：重整半导体供应链、把 Intel 改造成 AI 公司](videos/20260618-no-priors-lip-bu-tan-intel.md)
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
+- 2026-07-23 [DoorDash（Andy Fang & Stanley Tang）：Agentic Commerce 与自研配送机器人 Dot](videos/20260723-no-priors-doordash-autonomous-delivery.md)
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
