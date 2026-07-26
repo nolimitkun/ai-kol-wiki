@@ -157,6 +157,10 @@ def main() -> None:
     ap.add_argument("--keep-audio", action="store_true",
                     help="保留本次下载的音频（默认用完删除；音频已 gitignore）")
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
+    ap.add_argument("--num-speakers", type=int,
+                    help="已知说话人数就写死（双人访谈填 2），聚类质量明显更好")
+    ap.add_argument("--max-speakers", type=int,
+                    help="拿不准人数时给个上限（如 3），比完全不约束好")
     args = ap.parse_args()
 
     targets = find_targets(args.kol, args.force)
@@ -190,7 +194,8 @@ def main() -> None:
             failed += 1
             continue
         try:
-            turns = fetch.diarize(audio, args.device)
+            turns = fetch.diarize(audio, args.device,
+                                  args.num_speakers, args.max_speakers)
         finally:
             if downloaded and not args.keep_audio:
                 audio.unlink(missing_ok=True)

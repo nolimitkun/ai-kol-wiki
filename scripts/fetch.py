@@ -256,8 +256,17 @@ def _to_wav16k(audio_path: Path, tmpdir: str) -> Path:
     return wav
 
 
-def diarize(audio_path: Path, device: str = "auto") -> list[tuple[float, float, str]]:
+def diarize(audio_path: Path, device: str = "auto",
+            num_speakers: int | None = None,
+            max_speakers: int | None = None) -> list[tuple[float, float, str]]:
     """用 pyannote 做说话人分离，返回 [(start, end, "SPEAKER_00"), ...]。
+
+    num_speakers / max_speakers 给聚类加约束。**只在确实知道人数时才给**：
+    实测（uncle-moon 20260517，32 分钟多人讨论）不约束得到 7 人、占比
+    54.7/30.3/9.1 + 4 个零头，看着像「2~3 个主讲 + 若干插话」；而强行
+    num_speakers=2 反而塌成 96.8%/3.2%、max_speakers=3 塌成 95%/2.6%/2.4%
+    ——即把所有人并成一个簇，比不约束差得多。
+    所以别拿它当默认「提质」开关：人数猜错会让结果更糟，宁可不约束。
 
     失败一律返回空列表（调用方退化为无标签转录稿）——分离是锦上添花，
     不该让整个摄取流程失败。
@@ -308,8 +317,13 @@ def diarize(audio_path: Path, device: str = "auto") -> list[tuple[float, float, 
 
         with tempfile.TemporaryDirectory() as td:
             wav = _to_wav16k(audio_path, td)
-            print("开始说话人分离，请耐心等待...")
-            output = pipeline(str(wav))
+            kw = {}
+            if num_speakers:
+                kw["num_speakers"] = num_speakers
+            elif max_speakers:
+                kw["max_speakers"] = max_speakers
+            print(f"开始说话人分离（{kw or '不约束人数'}），请耐心等待...")
+            output = pipeline(str(wav), **kw)
 
         # pyannote 4.x 返回 DiarizeOutput（分离结果在 .speaker_diarization），
         # 3.x 直接返回 Annotation——取属性取不到就说明是老版本，用它本身。
@@ -357,6 +371,10 @@ def main() -> None:
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
     ap.add_argument("--transcribe", action="store_true",
                     help="无字幕时下载音频并用 faster-whisper 转录，生成本地 transcript.md")
+    ap.add_argument("--num-speakers", type=int,
+                    help="配合 --diarize：已知说话人数就写死（双人访谈填 2），聚类更准")
+    ap.add_argument("--max-speakers", type=int,
+                    help="配合 --diarize：拿不准人数时给个上限")
     ap.add_argument("--diarize", action="store_true",
                     help="转录时附带说话人分离（需 --transcribe + pyannote.audio + HF_TOKEN + GPU）；"
                          "在转录稿里插入匿名 SPEAKER_XX 标签，访谈类建议开启")
@@ -429,7 +447,8 @@ def main() -> None:
             speakers = None
             subtitle = f"{transcribe_lang} (faster-whisper {args.whisper_model})"
             if args.diarize:
-                turns = diarize(audio_path, args.device)
+                turns = diarize(audio_path, args.device,
+                                args.num_speakers, args.max_speakers)
                 if turns:  # 分离失败时 turns 为空，退化为无标签转录稿
                     speakers = assign_speakers(segs, turns)
                     subtitle += f" + pyannote diarization ({len(set(speakers))} 说话人)"
