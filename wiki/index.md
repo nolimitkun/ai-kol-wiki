@@ -40,7 +40,7 @@
 - [Lip-Bu Tan（陈立武）](people/lip-bu-tan.md) — Intel CEO / 前 Cadence CEO / Walden 投资人，半导体供应链与代工
 - [Pat Gelsinger](people/pat-gelsinger.md) — 前 Intel CEO（34 年 Intel 生涯），Intel 衰败复盘、台湾能源风险、能源作为 AI 上限
 - [Anton Osika](people/anton-osika.md) — Lovable 联合创始人/CEO，vibe coding、多模型路由 + post-training
-- [All-In 主播团](people/all-in-hosts.md) — Chamath / Sacks / Friedberg / Calacanis + Brad Gerstner：token ROI、监管制度、主权 AI
+- [All-In 主播团](people/all-in-hosts.md) — Chamath / Sacks / Friedberg / Calacanis + Brad Gerstner：token ROI、监管制度、主权 AI、开源封杀之争与版权
 - [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
@@ -151,6 +151,7 @@
 - 2026-07-15 [前 Intel CEO 复盘失败 + Lovable CEO 谈 vibe coding 的真实兑现](videos/20260715-all-in-gelsinger-lovable.md)
 - 2026-07-18 [AI 行业能自我监管吗：Demis 的 SRO 提案、数据中心禁令、企业数据泄露](videos/20260718-all-in-sro-regulation-datacenters.md)
 - 2026-07-21 [Mark Cuban 谈 AI 泡沫：真正被抹掉的是谁](videos/20260721-all-in-mark-cuban-ai-bubble.md)
+- 2026-07-24 [封杀开源之争、Anthropic 15 亿美元和解、Google capex](videos/20260724-all-in-open-source-ban-anthropic-copyright.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
