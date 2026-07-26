@@ -16,14 +16,17 @@
     uv run --with pyannote.audio scripts/backfill_diarization.py --limit 1
     uv run --with pyannote.audio scripts/backfill_diarization.py --kol zhang-xiaojun
 
-默认只处理「whisper 转录且尚无 speakers.md」的目录。音频缺失时用 yt-dlp 重新下载
-（音频已在 .gitignore 里，不会进仓库）；默认处理完即删，用 --keep-audio 保留。
+默认处理所有尚无 speakers.md 的转录稿（不分是 whisper 转的还是有现成字幕的——
+有字幕不代表没有音频轨，见 find_targets 注释）。单人讲座类可用 --exclude-kol 排除。
+音频缺失时用 yt-dlp 重新下载（音频已在 .gitignore 里，不会进仓库），失败自动重试；
+默认处理完即删，用 --keep-audio 保留。
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
 import sys
+import time
 from datetime import date
 from pathlib import Path
 
@@ -50,14 +53,24 @@ def parse_frontmatter(path: Path) -> dict:
     return meta
 
 
-def find_targets(kol: str | None, force: bool) -> list[tuple[Path, dict]]:
-    """找出待处理目录：whisper 转录的，且（除非 --force）还没有 sidecar。"""
+def find_targets(kol: str | None, force: bool,
+                 exclude: set[str] | None = None) -> list[tuple[Path, dict]]:
+    """找出待处理目录：（除非 --force）还没有 sidecar 的都算。
+
+    **不按「是否 whisper 转录」筛选。** 早先这里只处理 whisper 转录稿，理由写的是
+    「有现成字幕的没有可分离的音频轨」——那是错的：有字幕只说明当初没必要下音频，
+    音频在 YouTube 上照样下得到（实测有字幕的视频仍有 4 个纯音频格式）。
+    这条错误的过滤把 54 期、95 小时挡在外面，而它们恰恰是多人对谈最密集的部分。
+    况且带字幕的转录稿时间戳来自 VTT，比 whisper 的切分更准，sidecar 的时间轴
+    反而对得更齐。
+    """
     out: list[tuple[Path, dict]] = []
     for tr in sorted(SOURCES.glob("*/*/transcript.md")):
         meta = parse_frontmatter(tr)
-        if "whisper" not in meta.get("subtitle", ""):
-            continue  # 有现成字幕的没有可分离的音频轨，跳过
-        if kol and meta.get("kol") != kol:
+        k = meta.get("kol")
+        if kol and k != kol:
+            continue
+        if exclude and k in exclude:
             continue
         if (tr.parent / SIDECAR).exists() and not force:
             continue
@@ -65,19 +78,33 @@ def find_targets(kol: str | None, force: bool) -> list[tuple[Path, dict]]:
     return out
 
 
-def ensure_audio(d: Path, url: str) -> tuple[Path | None, bool]:
-    """返回 (音频路径, 是否本次新下载)。已有 audio.* 就直接用。"""
+def ensure_audio(d: Path, url: str, attempts: int = 3) -> tuple[Path | None, bool]:
+    """返回 (音频路径, 是否本次新下载)。已有 audio.* 就直接用。
+
+    失败会重试：批量跑几十期时 YouTube 偶尔返回 403（限流），单次失败就放弃
+    会平白丢掉那一期——实测 10 期的批次里就撞上过一次，单独重试即成功。
+    """
     existing = [p for p in d.glob("audio.*") if p.suffix != ".md"]
     if existing:
         return existing[0], False
     if not url:
         return None, False
     print(f"  音频缺失，重新下载: {url}")
-    r = fetch.run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
-                   "-o", str(d / "audio.%(ext)s"), url], timeout=1800)
-    if r.returncode != 0:
-        print(f"  !! 音频下载失败:\n{r.stderr[-500:]}", file=sys.stderr)
-        return None, False
+    for i in range(1, attempts + 1):
+        r = fetch.run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
+                       "-o", str(d / "audio.%(ext)s"), url], timeout=1800)
+        if r.returncode == 0:
+            break
+        tail = (r.stderr or "").strip().splitlines()[-1:] or [""]
+        if i < attempts:
+            wait = i * 30
+            print(f"  下载失败（第 {i}/{attempts} 次）：{tail[0][:100]}\n"
+                  f"  {wait}s 后重试…")
+            time.sleep(wait)
+        else:
+            print(f"  !! 音频下载失败（已重试 {attempts} 次）:\n{r.stderr[-500:]}",
+                  file=sys.stderr)
+            return None, False
     got = [p for p in d.glob("audio.*") if p.suffix != ".md"]
     return (got[0], True) if got else (None, False)
 
@@ -152,6 +179,8 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true", help="只列出会处理哪些，不动手")
     ap.add_argument("--force", action="store_true", help="已有 speakers.md 也重做")
     ap.add_argument("--kol", help="只处理该 kol slug")
+    ap.add_argument("--exclude-kol", action="append", default=[],
+                    help="跳过该 kol（可重复）。如 karpathy 多为单人讲座，分离无意义")
     ap.add_argument("--limit", type=int, help="最多处理几个（建议先 --limit 1 验证）")
     ap.add_argument("--only", help="只处理路径含该子串的目录（如 video id），用于验证或重试单期")
     ap.add_argument("--keep-audio", action="store_true",
@@ -166,13 +195,13 @@ def main() -> None:
                     "pyannote/speaker-diarization-3.1（需另接受两个 gated 仓库条款）")
     args = ap.parse_args()
 
-    targets = find_targets(args.kol, args.force)
+    targets = find_targets(args.kol, args.force, set(args.exclude_kol))
     if args.only:
         targets = [(d, m) for d, m in targets if args.only in str(d)]
     if args.limit:
         targets = targets[:args.limit]
     if not targets:
-        print("没有需要处理的目录（whisper 转录且缺 speakers.md 的都已处理完）。")
+        print("没有需要处理的目录（都已有 speakers.md）。")
         return
 
     print(f"待处理 {len(targets)} 个：")
