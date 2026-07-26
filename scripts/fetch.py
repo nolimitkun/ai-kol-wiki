@@ -28,11 +28,12 @@
     pyannote.audio 仅 --diarize 需要（它拖 torch，故同样按需注入）。3.x / 4.x 都支持：
     4.x 把 use_auth_token 改名成 token、且返回 DiarizeOutput 而非 Annotation，
     diarize() 里对这两处做了版本自适应，故无需固定版本。首次使用还需：
-      1) 用同一个 HF 账号，把下面**三个** gated 仓库的条款都接受掉（缺一个就 403）：
+      1) 用同一个 HF 账号接受 gated 仓库条款（缺一个就 403，条款按**账号**生效，
+         换 token 不会带过去）：
+           https://hf.co/pyannote/speaker-diarization-community-1  （默认模型，必需）
+         若用 --model 切回 3.1，还需另外两个：
            https://hf.co/pyannote/speaker-diarization-3.1
-           https://hf.co/pyannote/segmentation-3.0            （pipeline 依赖）
-           https://hf.co/pyannote/speaker-diarization-community-1  （4.x 取 embedding 用）
-         注意条款是按**账号**接受的，换 token 不会带过去。
+           https://hf.co/pyannote/segmentation-3.0            （3.1 的 pipeline 依赖）
       2) 导出 HF_TOKEN=<你的 huggingface token>
     自查是否授权要**实测下载文件**（model_info 对 gated 仓库也会成功，会给出假绿灯）：
         hf_hub_download(repo_id=..., filename="config.yaml", token=...)
@@ -58,7 +59,11 @@ ZH_PREF = ["zh-Hans", "zh-CN", "zh-Hant", "zh-TW", "zh", "en-orig", "en", "en-US
 EN_PREF = ["en-orig", "en", "en-US", "en-GB", "zh-Hans", "zh-CN", "zh"]
 
 DEFAULT_WHISPER_MODEL = "large-v3-turbo"
-DIARIZATION_MODEL = "pyannote/speaker-diarization-3.1"
+# 默认用 community-1（pyannote 4.x 的新模型）而不是 3.1：实测两者在一期 84 分钟
+# 访谈上结果几乎相同（88.4/10.7 vs 88.5/10.6），但在 217 分钟那期 3.1 会把主持人
+# 并进嘉宾的簇（99.3/0.7，主持人只剩 94 秒碎片），community-1 则正确还原成
+# 88.5/11.1/0.4——与其余几期张小珺访谈的比例一致。3.1 仍可用 --model 指定。
+DIARIZATION_MODEL = "pyannote/speaker-diarization-community-1"
 
 
 def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProcess:
@@ -258,7 +263,8 @@ def _to_wav16k(audio_path: Path, tmpdir: str) -> Path:
 
 def diarize(audio_path: Path, device: str = "auto",
             num_speakers: int | None = None,
-            max_speakers: int | None = None) -> list[tuple[float, float, str]]:
+            max_speakers: int | None = None,
+            model: str | None = None) -> list[tuple[float, float, str]]:
     """用 pyannote 做说话人分离，返回 [(start, end, "SPEAKER_00"), ...]。
 
     num_speakers / max_speakers 给聚类加约束。**只在确实知道人数时才给**：
@@ -297,12 +303,13 @@ def diarize(audio_path: Path, device: str = "auto",
               "如确需 CPU 分离，请单独跑 pyannote。", file=sys.stderr)
         return []
 
-    print("加载 pyannote 说话人分离模型（首次会下载）...")
+    ckpt = model or DIARIZATION_MODEL
+    print(f"加载 pyannote 说话人分离模型 {ckpt}（首次会下载）...")
     # 整段（含结果解包）都包在 try 里：解包也可能因 pyannote 版本差异出错，
     # 放在外面会变成未捕获异常、直接中断摄取。
     try:
         try:
-            pipeline = Pipeline.from_pretrained(DIARIZATION_MODEL, token=token)
+            pipeline = Pipeline.from_pretrained(ckpt, token=token)
         except TypeError as e:
             # pyannote.audio < 4 用的是 use_auth_token；4.x 改名为 token。
             # 只在「签名对不上」时回退——别的 TypeError 是真出错了，
@@ -310,7 +317,7 @@ def diarize(audio_path: Path, device: str = "auto",
             if "unexpected keyword argument" not in str(e):
                 raise
             pipeline = Pipeline.from_pretrained(
-                DIARIZATION_MODEL, use_auth_token=token)
+                ckpt, use_auth_token=token)
         if pipeline is None:  # 条款未接受 / token 无权限时 pyannote 返回 None
             raise RuntimeError("模型加载返回 None——通常是未接受模型条款或 token 无权限")
         pipeline.to(torch.device("cuda"))
