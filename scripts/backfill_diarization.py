@@ -153,12 +153,15 @@ def main() -> None:
     ap.add_argument("--force", action="store_true", help="已有 speakers.md 也重做")
     ap.add_argument("--kol", help="只处理该 kol slug")
     ap.add_argument("--limit", type=int, help="最多处理几个（建议先 --limit 1 验证）")
+    ap.add_argument("--only", help="只处理路径含该子串的目录（如 video id），用于验证或重试单期")
     ap.add_argument("--keep-audio", action="store_true",
                     help="保留本次下载的音频（默认用完删除；音频已 gitignore）")
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
     args = ap.parse_args()
 
     targets = find_targets(args.kol, args.force)
+    if args.only:
+        targets = [(d, m) for d, m in targets if args.only in str(d)]
     if args.limit:
         targets = targets[:args.limit]
     if not targets:
