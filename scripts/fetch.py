@@ -12,6 +12,10 @@
     # GPU 转录（更快，需再注入 CUDA 运行库 wheel）:
     uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
         scripts/fetch.py <video-url> --kol <slug> --transcribe
+    # 再加说话人分离（访谈类强烈建议，需 pyannote + HF_TOKEN，见下）:
+    uv run --with faster-whisper --with pyannote.audio \
+        --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
+        scripts/fetch.py <video-url> --kol <slug> --transcribe --diarize
 
 依赖:
     yt-dlp 已声明为脚本内联依赖，uv run 会自动装好，无需系统预装。
@@ -21,6 +25,19 @@
     GPU：额外注入 nvidia-cublas-cu12 / nvidia-cudnn-cu12 两个 wheel 即可，脚本会
     自动把它们的 lib 目录塞进 LD_LIBRARY_PATH（re-exec 一次）。缺这两个 wheel 或
     无可用 GPU 时自动回退 CPU，无需改命令。
+    pyannote.audio 仅 --diarize 需要（它拖 torch，故同样按需注入）。3.x / 4.x 都支持：
+    4.x 把 use_auth_token 改名成 token、且返回 DiarizeOutput 而非 Annotation，
+    diarize() 里对这两处做了版本自适应，故无需固定版本。首次使用还需：
+      1) 用同一个 HF 账号接受 gated 仓库条款（缺一个就 403，条款按**账号**生效，
+         换 token 不会带过去）：
+           https://hf.co/pyannote/speaker-diarization-community-1  （默认模型，必需）
+         若用 --model 切回 3.1，还需另外两个：
+           https://hf.co/pyannote/speaker-diarization-3.1
+           https://hf.co/pyannote/segmentation-3.0            （3.1 的 pipeline 依赖）
+      2) 导出 HF_TOKEN=<你的 huggingface token>
+    自查是否授权要**实测下载文件**（model_info 对 gated 仓库也会成功，会给出假绿灯）：
+        hf_hub_download(repo_id=..., filename="config.yaml", token=...)
+    分离在 CPU 上极慢，无 GPU 时自动跳过（仍产出无说话人标签的转录稿）。
 """
 
 import argparse
@@ -42,6 +59,11 @@ ZH_PREF = ["zh-Hans", "zh-CN", "zh-Hant", "zh-TW", "zh", "en-orig", "en", "en-US
 EN_PREF = ["en-orig", "en", "en-US", "en-GB", "zh-Hans", "zh-CN", "zh"]
 
 DEFAULT_WHISPER_MODEL = "large-v3-turbo"
+# 默认用 community-1（pyannote 4.x 的新模型）而不是 3.1：实测两者在一期 84 分钟
+# 访谈上结果几乎相同（88.4/10.7 vs 88.5/10.6），但在 217 分钟那期 3.1 会把主持人
+# 并进嘉宾的簇（99.3/0.7，主持人只剩 94 秒碎片），community-1 则正确还原成
+# 88.5/11.1/0.4——与其余几期张小珺访谈的比例一致。3.1 仍可用 --model 指定。
+DIARIZATION_MODEL = "pyannote/speaker-diarization-community-1"
 
 
 def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProcess:
@@ -159,8 +181,11 @@ def write_transcript(dest: Path, info: dict, args_kol: str, upload: str,
 
 
 def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str,
-                            device: str = "auto") -> str:
-    """用 faster-whisper 转录音频，返回带 [HH:MM:SS] 时间戳锚点的纯文本。
+                            device: str = "auto") -> list:
+    """用 faster-whisper 转录音频，返回片段列表（每个含 .start/.end/.text）。
+
+    只做转录，不做排版——排版交给 format_segments()，这样说话人分离（diarize）
+    可以插在两者中间，而无需改动这里的 ASR 逻辑。
 
     faster-whisper（CTranslate2 后端）比原版 openai-whisper 快约 4 倍、省内存，
     且不依赖 torch。device="auto" 有 GPU 就用 GPU；但若 CUDA 运行库（cuBLAS/
@@ -191,20 +216,157 @@ def transcribe_with_whisper(audio_path: Path, model_name: str, lang: str,
         else:
             raise
 
-    # 格式化为带时间戳锚点的纯文本，与 parse_vtt 输出一致
-    anchor_every = 60
+    return segs
+
+
+def format_segments(segs: list, speakers: list[str] | None = None,
+                    anchor_every: int = 60) -> str:
+    """片段 → 带 [HH:MM:SS] 时间戳锚点的纯文本，与 parse_vtt 输出一致。
+
+    speakers 与 segs 一一对应时，在说话人变化处插入 `SPEAKER_XX:` 标签
+    （沿用匿名标签，映射到真人名字是 wiki 层的编辑判断，见 CLAUDE.md）。
+    """
     next_anchor = 0.0
+    last_speaker: str | None = None
     lines: list[str] = []
-    for seg in segs:
+    for i, seg in enumerate(segs):
         text = seg.text.strip()
         if not text:
             continue
         if seg.start >= next_anchor:
             lines.append(f"\n[{fmt_ts(seg.start)}]")
             next_anchor = seg.start + anchor_every
+        if speakers:
+            spk = speakers[i]
+            if spk and spk != last_speaker:
+                # 换人就另起一行，让说话轮次在纯文本里也一眼可见
+                lines.append(f"\n{spk}:")
+                last_speaker = spk
         lines.append(text)
 
     return " ".join(lines).replace(" \n", "\n").strip()
+
+
+def _to_wav16k(audio_path: Path, tmpdir: str) -> Path:
+    """转成 16kHz 单声道 wav 供 pyannote 使用。
+
+    原始音频常是 webm/opus，pyannote 的加载后端未必吃得下；而它内部本来就要
+    重采样到 16k 单声道，这里用 ffmpeg 先转一遍既稳妥也不损失有效信息。
+    """
+    wav = Path(tmpdir) / "diarize.wav"
+    r = run(["ffmpeg", "-nostdin", "-y", "-i", str(audio_path),
+             "-ac", "1", "-ar", "16000", str(wav)], timeout=1800)
+    if r.returncode != 0 or not wav.exists():
+        raise RuntimeError(f"ffmpeg 转 wav 失败:\n{r.stderr[-1000:]}")
+    return wav
+
+
+def diarize(audio_path: Path, device: str = "auto",
+            num_speakers: int | None = None,
+            max_speakers: int | None = None,
+            model: str | None = None) -> list[tuple[float, float, str]]:
+    """用 pyannote 做说话人分离，返回 [(start, end, "SPEAKER_00"), ...]。
+
+    num_speakers / max_speakers 给聚类加约束。**只在确实知道人数时才给**：
+    实测（uncle-moon 20260517，32 分钟多人讨论）不约束得到 7 人、占比
+    54.7/30.3/9.1 + 4 个零头，看着像「2~3 个主讲 + 若干插话」；而强行
+    num_speakers=2 反而塌成 96.8%/3.2%、max_speakers=3 塌成 95%/2.6%/2.4%
+    ——即把所有人并成一个簇，比不约束差得多。
+    所以别拿它当默认「提质」开关：人数猜错会让结果更糟，宁可不约束。
+
+    失败一律返回空列表（调用方退化为无标签转录稿）——分离是锦上添花，
+    不该让整个摄取流程失败。
+    """
+    try:
+        import torch
+        from pyannote.audio import Pipeline
+    except ImportError:
+        print("--diarize 需要 pyannote.audio，请用 --with 按需注入：\n"
+              "  uv run --with faster-whisper --with pyannote.audio ... --transcribe --diarize",
+              file=sys.stderr)
+        return []
+
+    token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
+    if not token:
+        print("--diarize 需要 HF_TOKEN 环境变量。首次使用请先：\n"
+              "  1) 用同一个 HF 账号接受这三个 gated 仓库的条款（缺一个就 403）：\n"
+              "       https://hf.co/pyannote/speaker-diarization-3.1\n"
+              "       https://hf.co/pyannote/segmentation-3.0\n"
+              "       https://hf.co/pyannote/speaker-diarization-community-1\n"
+              "  2) export HF_TOKEN=<huggingface token>\n"
+              "本次跳过说话人分离。", file=sys.stderr)
+        return []
+
+    use_cuda = torch.cuda.is_available() if device != "cpu" else False
+    if not use_cuda:
+        print("说话人分离在 CPU 上极慢（可能数小时），本次跳过。"
+              "如确需 CPU 分离，请单独跑 pyannote。", file=sys.stderr)
+        return []
+
+    ckpt = model or DIARIZATION_MODEL
+    print(f"加载 pyannote 说话人分离模型 {ckpt}（首次会下载）...")
+    # 整段（含结果解包）都包在 try 里：解包也可能因 pyannote 版本差异出错，
+    # 放在外面会变成未捕获异常、直接中断摄取。
+    try:
+        try:
+            pipeline = Pipeline.from_pretrained(ckpt, token=token)
+        except TypeError as e:
+            # pyannote.audio < 4 用的是 use_auth_token；4.x 改名为 token。
+            # 只在「签名对不上」时回退——别的 TypeError 是真出错了，
+            # 拿重试去掩盖只会让报错指向错误的方向。
+            if "unexpected keyword argument" not in str(e):
+                raise
+            pipeline = Pipeline.from_pretrained(
+                ckpt, use_auth_token=token)
+        if pipeline is None:  # 条款未接受 / token 无权限时 pyannote 返回 None
+            raise RuntimeError("模型加载返回 None——通常是未接受模型条款或 token 无权限")
+        pipeline.to(torch.device("cuda"))
+
+        with tempfile.TemporaryDirectory() as td:
+            wav = _to_wav16k(audio_path, td)
+            kw = {}
+            if num_speakers:
+                kw["num_speakers"] = num_speakers
+            elif max_speakers:
+                kw["max_speakers"] = max_speakers
+            print(f"开始说话人分离（{kw or '不约束人数'}），请耐心等待...")
+            output = pipeline(str(wav), **kw)
+
+        # pyannote 4.x 返回 DiarizeOutput（分离结果在 .speaker_diarization），
+        # 3.x 直接返回 Annotation——取属性取不到就说明是老版本，用它本身。
+        annotation = getattr(output, "speaker_diarization", output)
+        turns = [(t.start, t.end, spk)
+                 for t, _, spk in annotation.itertracks(yield_label=True)]
+    except Exception as e:  # 分离失败不该拖垮摄取
+        print(f"说话人分离失败（{e}），退化为无说话人标签的转录稿。", file=sys.stderr)
+        return []
+    n_spk = len({spk for _, _, spk in turns})
+    print(f"说话人分离完成：{n_spk} 位说话人 / {len(turns)} 段")
+    return turns
+
+
+def assign_speakers(segs: list, turns: list[tuple[float, float, str]]) -> list[str]:
+    """给每个转录片段配一个说话人：取与之重叠时长最大的 turn。
+
+    whisper 的切分和 pyannote 的切分互不对齐，重叠最大者是简单且稳健的归属方式。
+    完全无重叠的片段（如音乐、静默）沿用上一个说话人。
+    """
+    turns = sorted(turns)  # 下面按时序提前 break，先确保有序
+    speakers: list[str] = []
+    last = ""
+    for seg in segs:
+        best, best_overlap = "", 0.0
+        for start, end, spk in turns:
+            if end <= seg.start:
+                continue
+            if start >= seg.end:
+                break  # turns 按时间有序，后面的只会更晚
+            overlap = min(seg.end, end) - max(seg.start, start)
+            if overlap > best_overlap:
+                best, best_overlap = spk, overlap
+        speakers.append(best or last)
+        last = speakers[-1]
+    return speakers
 
 
 def main() -> None:
@@ -216,12 +378,23 @@ def main() -> None:
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
     ap.add_argument("--transcribe", action="store_true",
                     help="无字幕时下载音频并用 faster-whisper 转录，生成本地 transcript.md")
+    ap.add_argument("--num-speakers", type=int,
+                    help="配合 --diarize：已知说话人数就写死（双人访谈填 2），聚类更准")
+    ap.add_argument("--max-speakers", type=int,
+                    help="配合 --diarize：拿不准人数时给个上限")
+    ap.add_argument("--diarize", action="store_true",
+                    help="转录时附带说话人分离（需 --transcribe + pyannote.audio + HF_TOKEN + GPU）；"
+                         "在转录稿里插入匿名 SPEAKER_XX 标签，访谈类建议开启")
     ap.add_argument("--whisper-model", default=DEFAULT_WHISPER_MODEL,
                     help=f"faster-whisper 模型（默认 {DEFAULT_WHISPER_MODEL}）："
                          "tiny/base/small/medium/large-v3/large-v3-turbo")
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"],
                     help="faster-whisper 推理设备（默认 auto，GPU 不可用时自动回退 CPU）")
     args = ap.parse_args()
+
+    if args.diarize and not args.transcribe:
+        ap.error("--diarize 需配合 --transcribe 使用（只对本地转录的音频生效，"
+                 "已有字幕的视频没有可分离的音频轨）")
 
     # GPU 转录：若装了 nvidia 运行库 wheel，先把它们塞进 LD_LIBRARY_PATH 再干活
     if args.transcribe:
@@ -276,10 +449,18 @@ def main() -> None:
             # 确定转录语言
             transcribe_lang = orig if orig.startswith(("zh", "en")) else \
                 (args.lang[:2] if args.lang else "zh")
-            text = transcribe_with_whisper(audio_path, args.whisper_model,
+            segs = transcribe_with_whisper(audio_path, args.whisper_model,
                                            transcribe_lang, args.device)
-            write_transcript(dest, info, args.kol, upload, vid,
-                             f"{transcribe_lang} (faster-whisper {args.whisper_model})", text)
+            speakers = None
+            subtitle = f"{transcribe_lang} (faster-whisper {args.whisper_model})"
+            if args.diarize:
+                turns = diarize(audio_path, args.device,
+                                args.num_speakers, args.max_speakers)
+                if turns:  # 分离失败时 turns 为空，退化为无标签转录稿
+                    speakers = assign_speakers(segs, turns)
+                    subtitle += f" + pyannote diarization ({len(set(speakers))} 说话人)"
+            text = format_segments(segs, speakers)
+            write_transcript(dest, info, args.kol, upload, vid, subtitle, text)
             return
 
         # ── 纯下载音频路径 ──

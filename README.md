@@ -80,6 +80,11 @@ uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe
 uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
   scripts/fetch.py <url> --kol <slug> --transcribe
 
+# 访谈类：再加说话人分离（需 HF_TOKEN + GPU，转录稿会带 SPEAKER_XX 标签）
+uv run --with faster-whisper --with pyannote.audio \
+  --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 \
+  scripts/fetch.py <url> --kol <slug> --transcribe --diarize
+
 # Wiki 巡检
 uv run scripts/lint.py
 
