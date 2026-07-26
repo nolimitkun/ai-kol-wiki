@@ -25,7 +25,9 @@
     GPU：额外注入 nvidia-cublas-cu12 / nvidia-cudnn-cu12 两个 wheel 即可，脚本会
     自动把它们的 lib 目录塞进 LD_LIBRARY_PATH（re-exec 一次）。缺这两个 wheel 或
     无可用 GPU 时自动回退 CPU，无需改命令。
-    pyannote.audio 仅 --diarize 需要（它拖 torch，故同样按需注入）。首次使用还需：
+    pyannote.audio 仅 --diarize 需要（它拖 torch，故同样按需注入）。3.x / 4.x 都支持：
+    4.x 把 use_auth_token 改名成 token、且返回 DiarizeOutput 而非 Annotation，
+    diarize() 里对这两处做了版本自适应，故无需固定版本。首次使用还需：
       1) 在 https://hf.co/pyannote/speaker-diarization-3.1 接受模型条款
       2) 导出 HF_TOKEN=<你的 huggingface token>
     分离在 CPU 上极慢，无 GPU 时自动跳过（仍产出无说话人标签的转录稿）。
@@ -50,6 +52,7 @@ ZH_PREF = ["zh-Hans", "zh-CN", "zh-Hant", "zh-TW", "zh", "en-orig", "en", "en-US
 EN_PREF = ["en-orig", "en", "en-US", "en-GB", "zh-Hans", "zh-CN", "zh"]
 
 DEFAULT_WHISPER_MODEL = "large-v3-turbo"
+DIARIZATION_MODEL = "pyannote/speaker-diarization-3.1"
 
 
 def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProcess:
@@ -277,9 +280,19 @@ def diarize(audio_path: Path, device: str = "auto") -> list[tuple[float, float, 
         return []
 
     print("加载 pyannote 说话人分离模型（首次会下载）...")
+    # 整段（含结果解包）都包在 try 里：解包也可能因 pyannote 版本差异出错，
+    # 放在外面会变成未捕获异常、直接中断摄取。
     try:
-        pipeline = Pipeline.from_pretrained(
-            "pyannote/speaker-diarization-3.1", use_auth_token=token)
+        try:
+            pipeline = Pipeline.from_pretrained(DIARIZATION_MODEL, token=token)
+        except TypeError as e:
+            # pyannote.audio < 4 用的是 use_auth_token；4.x 改名为 token。
+            # 只在「签名对不上」时回退——别的 TypeError 是真出错了，
+            # 拿重试去掩盖只会让报错指向错误的方向。
+            if "unexpected keyword argument" not in str(e):
+                raise
+            pipeline = Pipeline.from_pretrained(
+                DIARIZATION_MODEL, use_auth_token=token)
         if pipeline is None:  # 条款未接受 / token 无权限时 pyannote 返回 None
             raise RuntimeError("模型加载返回 None——通常是未接受模型条款或 token 无权限")
         pipeline.to(torch.device("cuda"))
@@ -287,13 +300,16 @@ def diarize(audio_path: Path, device: str = "auto") -> list[tuple[float, float, 
         with tempfile.TemporaryDirectory() as td:
             wav = _to_wav16k(audio_path, td)
             print("开始说话人分离，请耐心等待...")
-            annotation = pipeline(str(wav))
+            output = pipeline(str(wav))
+
+        # pyannote 4.x 返回 DiarizeOutput（分离结果在 .speaker_diarization），
+        # 3.x 直接返回 Annotation——取属性取不到就说明是老版本，用它本身。
+        annotation = getattr(output, "speaker_diarization", output)
+        turns = [(t.start, t.end, spk)
+                 for t, _, spk in annotation.itertracks(yield_label=True)]
     except Exception as e:  # 分离失败不该拖垮摄取
         print(f"说话人分离失败（{e}），退化为无说话人标签的转录稿。", file=sys.stderr)
         return []
-
-    turns = [(t.start, t.end, spk)
-             for t, _, spk in annotation.itertracks(yield_label=True)]
     n_spk = len({spk for _, _, spk in turns})
     print(f"说话人分离完成：{n_spk} 位说话人 / {len(turns)} 段")
     return turns

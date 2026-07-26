@@ -198,8 +198,8 @@ def main() -> None:
             continue
 
         merged = merge_turns(turns)
-        model = "pyannote/speaker-diarization-3.1"
-        (d / SIDECAR).write_text(render_sidecar(meta, merged, model), encoding="utf-8")
+        (d / SIDECAR).write_text(
+            render_sidecar(meta, merged, fetch.DIARIZATION_MODEL), encoding="utf-8")
 
         after = hashlib.sha256(tr.read_bytes()).hexdigest()
         if before != after:  # 不该发生；真发生了要立刻知道
