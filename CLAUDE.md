@@ -53,7 +53,7 @@ scripts/
    - 若无字幕但有英文配音版：用 `--lang zh-Hans` 从配音版取中文字幕（张小珺频道常用）。
    - 若完全无字幕：用 `--transcribe` 一键下载音频 + faster-whisper 本地转录。模型体积大不进内联依赖，按需注入：`uv run --with faster-whisper scripts/fetch.py <url> --kol <slug> --transcribe`（首次会拉模型约 1.5GB；faster-whisper 基于 CTranslate2，不依赖 torch，比原版快约 4 倍，默认模型 large-v3-turbo）。
      - GPU 转录（本机有 RTX 5090，明显更快）：再注入两个 CUDA 运行库 wheel 即可，脚本会自动配好 LD_LIBRARY_PATH：`uv run --with faster-whisper --with nvidia-cublas-cu12 --with nvidia-cudnn-cu12 scripts/fetch.py <url> --kol <slug> --transcribe`。缺这两个 wheel 或无 GPU 时自动回退 CPU；也可用 `--device cpu` 强制。
-     - **访谈类建议再加 `--diarize` 做说话人分离**（多注入 `--with pyannote.audio`）：在转录稿里插入 `SPEAKER_00:` / `SPEAKER_01:` 标签，让"谁说的"有机械依据，而不是靠读内容猜。首次需到 https://hf.co/pyannote/speaker-diarization-3.1 接受模型条款并 `export HF_TOKEN=<token>`；无 GPU 或未配 token 时自动跳过，仍产出无标签转录稿。
+     - **访谈类建议再加 `--diarize` 做说话人分离**（多注入 `--with pyannote.audio`）：在转录稿里插入 `SPEAKER_00:` / `SPEAKER_01:` 标签，让"谁说的"有机械依据，而不是靠读内容猜。首次需用同一 HF 账号接受**三个** gated 仓库的条款（`speaker-diarization-3.1`、`segmentation-3.0`、`speaker-diarization-community-1`，缺一个就 403；条款按账号生效，换 token 不带过去），再 `export HF_TOKEN=<token>`；无 GPU 或未配 token 时自动跳过，仍产出无标签转录稿。
    - 旧方式 `--audio` 仍可用，仅下载音频不转录。
 2. **完整阅读**转录稿，提取：核心论点、事实性断言、预测、与他人观点的呼应或冲突。
    - 转录稿带 `SPEAKER_XX` 标签时，结合视频标题/简介/频道判断每个标签对应谁，在视频页开头记一次映射（如 `SPEAKER_00 = 张小珺（主持）`、`SPEAKER_01 = 姚顺宇`）。**匿名标签留在 `sources/` 不改**——认人是编辑判断，属于 wiki 层，符合"原始资料只增不改、勘误在 wiki 层处理"。

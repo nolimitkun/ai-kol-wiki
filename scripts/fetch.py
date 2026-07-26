@@ -28,8 +28,14 @@
     pyannote.audio 仅 --diarize 需要（它拖 torch，故同样按需注入）。3.x / 4.x 都支持：
     4.x 把 use_auth_token 改名成 token、且返回 DiarizeOutput 而非 Annotation，
     diarize() 里对这两处做了版本自适应，故无需固定版本。首次使用还需：
-      1) 在 https://hf.co/pyannote/speaker-diarization-3.1 接受模型条款
+      1) 用同一个 HF 账号，把下面**三个** gated 仓库的条款都接受掉（缺一个就 403）：
+           https://hf.co/pyannote/speaker-diarization-3.1
+           https://hf.co/pyannote/segmentation-3.0            （pipeline 依赖）
+           https://hf.co/pyannote/speaker-diarization-community-1  （4.x 取 embedding 用）
+         注意条款是按**账号**接受的，换 token 不会带过去。
       2) 导出 HF_TOKEN=<你的 huggingface token>
+    自查是否授权要**实测下载文件**（model_info 对 gated 仓库也会成功，会给出假绿灯）：
+        hf_hub_download(repo_id=..., filename="config.yaml", token=...)
     分离在 CPU 上极慢，无 GPU 时自动跳过（仍产出无说话人标签的转录稿）。
 """
 
@@ -268,7 +274,10 @@ def diarize(audio_path: Path, device: str = "auto") -> list[tuple[float, float, 
     token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
     if not token:
         print("--diarize 需要 HF_TOKEN 环境变量。首次使用请先：\n"
-              "  1) 到 https://hf.co/pyannote/speaker-diarization-3.1 接受模型条款\n"
+              "  1) 用同一个 HF 账号接受这三个 gated 仓库的条款（缺一个就 403）：\n"
+              "       https://hf.co/pyannote/speaker-diarization-3.1\n"
+              "       https://hf.co/pyannote/segmentation-3.0\n"
+              "       https://hf.co/pyannote/speaker-diarization-community-1\n"
               "  2) export HF_TOKEN=<huggingface token>\n"
               "本次跳过说话人分离。", file=sys.stderr)
         return []
