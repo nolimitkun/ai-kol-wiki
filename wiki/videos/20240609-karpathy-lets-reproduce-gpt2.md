@@ -18,7 +18,7 @@
 
 ### GPU 优化阶梯（1000ms → 90ms/step，约 11 倍）
 1. **降精度**：fp32 → tf32（一行代码，指令内部截断尾数，~3x）→ bf16 autocast（保留指数范围故无需 gradient scaler，这是它相对 fp16 的关键优势）（[01:23:11]–[01:47:34]）。
-2. **torch.compile**（~2.3x）：去掉 Python 解释器逐层调度 + kernel fusion 减少 HBM 往返——"深度学习负载多数是 memory-bound，tensor core 大部分时间在等数据"（01:48–[02:00:46]）。
+2. **torch.compile**（~2.3x）：去掉 Python 解释器逐层调度 + kernel fusion 减少 HBM 往返——"深度学习负载多数是 memory-bound，tensor core 大部分时间在等数据"（[01:47:34]–[02:00:46]）。
 3. **FlashAttention**：torch.compile 找不到的算法级重写——flops 更多反而快 7.6x，因为从不物化 T×T 注意力矩阵；"flops 不重要，内存访问模式才重要"（[02:00:46]–[02:06:54]）。
 4. **Nice numbers**："最蠢也最妙的优化"——把词表 50257 padding 到 50304（可被 128 整除），多算了反而快 4%（老版 PyTorch 上可达 30%），因为 CUDA kernel 按 2 的幂分块，丑数字触发低效边界处理（[02:06:54]–[02:14:02]）。
 
