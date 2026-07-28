@@ -1,5 +1,7 @@
 # vLLM Omni 团队
 
+> **主库视角见 [游凯超](you-kaichao.md)**（vLLM 核心维护者 / Inferact 首席科学家，2026-07）——他讲的是 vLLM 主库的起源、治理（四位"仁慈的独裁者"）、基金会+公司双层结构，以及模型与 infra 的 co-design。本页的 Omni 是从主库拆出的分支。
+
 **vLLM Omni** 是从 vLLM 主库拆出的独立开源项目，专做**多模态/全模态（omni）模型的推理与 serving**——不仅多模态输入（理解），更支持多模态输出（生成，含 TTS/文生图/文生视频）。由 **Roger**（发起人，自称"拉拉队/带货"）、**林月谦**（AR/TTS committer）、**志鹏**（DiT/diffusion 负责人）等在月球大叔频道分享。华为等国内同学参与，约 4000 stars。本库首个"多模态 serving 基建"的中方一线视角，与 [SGLang](banghua-zhu.md)、[LMCache/KV Cache](junchen-jiang.md) 同属月球大叔 infra 系列。
 
 > ⚠️ 无字幕本地 whisper 转录，专有名词已归一化，个别（DiT block 级缓存名、版本号）待官方确认。见[视频页](../videos/20260511-uncle-moon-vllm-omni.md)顶部说明。

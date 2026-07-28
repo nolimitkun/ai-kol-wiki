@@ -14,6 +14,13 @@
 - **"编程在编两样东西"**：① 实体 code（AI coding 会取代）；② 脑海里对软件架构的**心智模型**（做设计决策，暂取代不了）——"人类还有存在价值，还没被 agent 取代"；重心转向**写好 verifier（测试）**（15:15–17:18）。
 - 技术碎片：diffusion 蒸馏减步、world model 的 region-of-interest（小模型 identify 关键、强模型 detect）、CFG parallel、五级测试体系、内部 fork 的 rebase 指数级变难→**接口层贡献开源、保留 proprietary modeling layer**（详见[视频页](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)）。
 
+## ⚠️ 与游凯超的判断张力（2026-07 新增）
+
+两个月后，vLLM 主库的 BDFL [游凯超](you-kaichao.md) 给出了一个**方向相反的预测**（[视频](../videos/20260728-zhang-xiaojun-you-kaichao-vllm.md) 01:24–01:27）：coding agent 使**代码变得极其廉价**，"维护者花时间去看别人的 PR，不如自己让 coding agent 再写一遍"；因此**开源社区会更多掌握在机构和重要贡献者手中，个人贡献者的空间会收窄**，社区将分化为**维护者与用户**两部分。他还报告了 2026 年 5 月 vLLM 遭遇**培训机构刷垃圾 PR 给学员简历镀金**、不得不引入认证机制与拉黑机器人账号的事件。
+
+- 两条判断**相隔两个月、同出 vLLM 生态一线**，且并不逻辑互斥——志鹏描述的是**已发生的路径**，游凯超预测的是**未来的分布**。但它们对"现在该不该劝人从贡献开源入门"给出的实践指导是相反的。本库两条并存，不做裁决。详见 [开源基础设施与治理](../topics/open-source-infrastructure.md)。
+- **一处一致**：志鹏的"编程在编两样东西"（实体 code 会被取代，**架构心智模型**暂不会）与游凯超的"**AI 可以走完 90% 的路程，剩下 10% 画龙点睛的部分需要人来提前预判、顶层设计**"是同一判断的两种表述。
+
 ## 视频
 
 - [从 AI 零基础到 vLLM/vLLM-Omni Committer，只用了一年（月球大叔，2026-05-17）](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)

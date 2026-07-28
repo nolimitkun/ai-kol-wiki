@@ -24,6 +24,7 @@
 - **推理是主战场**：与 [朱邦华](banghua-zhu.md)"training infra 太一次性、模型绝大多数生命周期在推理"一致。
 - **taste 作为差异化**：与 [朱邦华](banghua-zhu.md) 的"招人看 taste/criticism"一致——江强调 AI 难替代的是 design taste（自己得知道什么设计好，才能 supervise AI）。
 - **OpenAI/Anthropic 未必一家独大**：以视频流市场（YouTube/Netflix 占大头但仍有很多提供商）类比 AI 模型市场，与 [朱邦华](banghua-zhu.md)"希望百花齐放"相近。
+- **与 [游凯超](you-kaichao.md)（vLLM，2026-07）**：江预测 KV Cache 成为继权重、prompt 之后的下一个数据层；游凯超则给出了 KV Cache 管理机制的来龙去脉——**PagedAttention 借鉴操作系统虚拟内存来管理自回归生成的中间状态**，但强调"**时至今日 vLLM 早就不是 PagedAttention 算法了**"。两人的"细腰协议"直觉高度一致：江的 **"OpenAI API 兼容格式 = AI 时代的 IPv4"** 与游的 **"推理引擎的职责是屏蔽模型与硬件的复杂性"** 是同一层抽象的两种表述。
 
 ## 已收录访谈
 

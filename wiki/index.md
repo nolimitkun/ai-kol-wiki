@@ -60,6 +60,7 @@
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
 - [DoorDash 创始人（Andy Fang & Stanley Tang）](people/doordash-founders.md) — agentic commerce、自研配送机器人 Dot、大规模实体网络的 AI 落地
+- [游凯超](people/you-kaichao.md) — vLLM 核心维护者 / Inferact 首席科学家，开源 Infra 治理、模型与 Infra co-design（中方开源基建主来源）
 
 ## 主题
 
@@ -76,6 +77,7 @@
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
+- [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏
 
 ## 视频
 
@@ -114,6 +116,7 @@
 - 2026-06-08 [阳萌（安克创新）：消费电子死与生、第三类公司、端侧模型、产品方法](videos/20260608-zhang-xiaojun-yangmeng-anker.md)
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
 - 2026-07-22 [沈宇军（蚂蚁灵波）：机器人原生基础模型、大脑与本体的关系、数据 scale up](videos/20260722-zhang-xiaojun-shen-yujun-lingbo-embodied-native.md)
+- 2026-07-28 [游凯超：开源 Infra、模型与 Infra 的 Co-design、"如果 vLLM 失败，我们会后悔一辈子"](videos/20260728-zhang-xiaojun-you-kaichao-vllm.md)
 
 ### 月球大叔
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
