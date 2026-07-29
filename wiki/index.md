@@ -61,6 +61,10 @@
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
 - [DoorDash 创始人（Andy Fang & Stanley Tang）](people/doordash-founders.md) — agentic commerce、自研配送机器人 Dot、大规模实体网络的 AI 落地
 - [游凯超](people/you-kaichao.md) — vLLM 核心维护者 / Inferact 首席科学家，开源 Infra 治理、模型与 Infra co-design（中方开源基建主来源）
+- [Fei-Fei Li（李飞飞）](people/fei-fei-li.md) — World Labs CEO / ImageNet 作者，空间智能与世界模型（美方具身主来源之一）
+- [Yunzhu Li](people/yunzhu-li.md) — SceniX 联创 / 哥大助理教授，real-to-sim-to-real、机器人评测瓶颈
+- [Akshay Nathan](people/akshay-nathan.md) — OpenAI 核心产品工程（productivity），ChatGPT Work / harness 合并 / 生产力度量
+- [孟子立（Zili Meng）](people/zili-meng.md) — 港科大助理教授 / WiCi 创始人，无线 GPU、用 Wi-Fi 替代 PCIe（中方网络系统视角）
 
 ## 主题
 
@@ -124,6 +128,7 @@
 - 2026-05-18 [朱邦华：SGLang、RLHF vs RLVR、被英伟达收购后二次创业](videos/20260518-uncle-moon-banghua-zhu-sglang.md)
 - 2026-05-17 [志鹏：从 AI 零基础到 vLLM/vLLM-Omni Committer，只用了一年](videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
+- 2026-07-28 [孟子立：15 岁上清华、23 岁当港科大教授，做"无线 GPU"WiCi](videos/20260728-uncle-moon-zili-meng-wici.md)
 
 ### No Priors
 - 2026-05-21 [Andrew Feldman：Cerebras 630 亿 IPO、晶圆级芯片与快 AI](videos/20260521-no-priors-cerebras-feldman.md)
@@ -146,6 +151,7 @@
 - 2026-07-10 [swyx：AI Engineer 大会、AGI 与"agent lab"（他反对模型路由）](videos/20260710-latent-space-swyx-agent-labs.md)
 - 2026-07-21 [Xaira：因果模型需要因果数据——X-Cell 虚拟细胞模型](videos/20260721-latent-space-xaira-xcell-virtual-cell.md)
 - 2026-07-22 [Poolside（Eiso Kant）：Model Factory、Laguna S、开源与 AGI 竞赛](videos/20260722-latent-space-poolside-eiso-kant.md)
+- 2026-07-28 [Akshay Nathan（OpenAI）：把 ChatGPT 做成"万物应用"、harness 合并与生产力度量](videos/20260728-latent-space-akshay-nathan-chatgpt-work.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -162,3 +168,4 @@
 - 2026-05-29 [挑选 AI 赢家的新规则：规模、价值捕获与"我们不在泡沫里"](videos/20260529-a16z-picking-ai-winners.md)
 - 2026-07-21 [Applied Intuition：为什么物理 AI 是下一个前沿（Dana 发布）](videos/20260721-a16z-applied-intuition-physical-ai.md)
 - 2026-07-22 [Travis Kalanick：从 Uber 到 Atoms——把物理世界数字化（industrial AI）](videos/20260722-a16z-travis-kalanick-atoms.md)
+- 2026-07-28 [Fei-Fei Li & Yunzhu Li：空间智能是下一个前沿——World Labs 收购 SceniX](videos/20260728-a16z-feifei-li-spatial-intelligence.md)

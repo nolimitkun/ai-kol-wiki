@@ -31,3 +31,6 @@
 | 2026-06-25 | [AGI、o1、评估与 Scaling Laws](../videos/20260625-latent-space-mark-chen.md) | Mark Chen（OpenAI CRO） |
 | 2026-07-13 | [AI 的记忆问题：为什么长上下文还不够](../videos/20260713-latent-space-dan-biderman.md) | Dan Biderman（Engram，记忆/持续学习） |
 | 2026-07-22 | [Model Factory、Laguna S、开源与 AGI 竞赛](../videos/20260722-latent-space-poolside-eiso-kant.md) | Eiso Kant（Poolside CEO） |
+| 2026-07-28 | [OpenAI 把 ChatGPT 做成"万物应用"](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md) | [Akshay Nathan](akshay-nathan.md)（OpenAI 核心产品工程） |
+
+> ⚠️ **swyx 反对模型路由的立场，与 2026-07-28 那期存在一处需要区分的表面冲突**：OpenAI 的 ChatGPT Work **由模型自己决定进 chat 模式还是 work 模式**。但这是**同厂商内的模式路由**，不是 swyx 反对的**跨厂商最小公分母路由**；而且它与 swyx 那句"人们不想选用哪版 AGI，他们只想让 AGI 替他们决定"方向一致。本库把两者记为**不同层的路由**，不视作立场翻转。

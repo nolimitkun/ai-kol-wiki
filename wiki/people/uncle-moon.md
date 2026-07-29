@@ -13,6 +13,11 @@
 | 2026-05-18 | [朱邦华（Banghua Zhu）](banghua-zhu.md) | SGLang、RLHF vs RLVR、二次创业 | [链接](../videos/20260518-uncle-moon-banghua-zhu-sglang.md) |
 | 2026-05-17 | [志鹏（Zhipeng）](zhipeng.md)（及 Roger/林月谦） | 从 AI 零基础到 vLLM-Omni committer、开源贡献者指南 | [链接](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) |
 | 2026-06-09 | [江鋆晨（Junchen Jiang）](junchen-jiang.md) | KV Cache / LMCache、大模型的记忆 | [链接](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) |
+| 2026-07-28 | [孟子立（Zili Meng）](zili-meng.md) | WiCi 无线 GPU、用 Wi-Fi 替代 PCIe、港科大教授兼创业 | [链接](../videos/20260728-uncle-moon-zili-meng-wici.md) |
+
+> ⚠️ **该频道对部分中文访谈提供英文配音/字幕**（`--lang zh-Hans` 取到的字幕轨内容为英文），孟子立那期即是。相应视频页的引号内为**英文原文的中译**，不是中文原话。
+
+> **频道内部形成的一处自我对照**：[朱邦华](banghua-zhu.md)（2026-05）说自己 **2022 年就看见了 AI 的崛起**；[孟子立](zili-meng.md)（2026-07）在同一节目上主动提起这句，并说"**很遗憾，我没看见**"——他 2022 年整年在 CMU 走完美国教职市场流程，试过 ChatGPT 仍未看出趋势，看到的是疫情期大厂裁员。两人同届同领域、判断相反，是本库中关于"时机判断力"最直接的一组一手对照。
 
 ## 相关
 

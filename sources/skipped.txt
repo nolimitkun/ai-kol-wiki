@@ -29,6 +29,10 @@ XROaLetSxg0  # a16z: The New Media Advantage 媒体
 oYK_MmZW9XI  # a16z: $1T Firm / PE 标签
 rghTqkclDqA  # a16z: Amjad Masad 迷因与公开建设（偏媒体叙事）
 XwfUzW32cIA  # a16z: Ben Horowitz 全球科技竞争（政治为主，AI 段落已被 07-11/18/19 覆盖）
+XyXBwO5jYpw  # Lex #499: Gary Gallagher 美国内战/林肯/格兰特（历史，无 AI 内容）
+
+# ── 重复上传（同一期的英文配音/翻译版） ─────────────────────
+ifniRXf467I  # 张小珺 #148 游凯超 vLLM 的英文标题版；中文原版 ffdR5fZTC5E 已于 2026-07-28 摄取
 
 # ── 政治/商业占比过半，AI 实质内容已被其他期覆盖 ──────────────
 ihq_ngvKKmc  # All-In: Nate Silver 美国选举预测
