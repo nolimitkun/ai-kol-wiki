@@ -30,12 +30,12 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-07-29（每次 CI 构建刷新）。
+> 自动生成于 2026-07-30（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 68 |
-| 人物页 | 61 |
+| 视频转录稿 | 69 |
+| 人物页 | 65 |
 | 主题页 | 14 |
 | 关注频道 | 9（活跃 9） |
 
@@ -45,7 +45,7 @@
 |---|---|
 | Latent Space (swyx & Alessio) | 13 |
 | 张小珺（商业访谈录） | 11 |
-| All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 8 |
+| All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 9 |
 | Lex Fridman | 7 |
 | a16z (Andreessen Horowitz) | 6 |
 | Dwarkesh Patel | 6 |
