@@ -61,3 +61,9 @@
 ## 相关
 
 - 主题落点：[物理 AI 与机器人](../topics/physical-ai-and-robotics.md)、[评估与 Benchmark](../topics/evaluation-and-benchmarks.md)、[AI 算力与基础设施](../topics/ai-infrastructure.md)。
+
+## 补充：人形降温论的第三条独立路径（2026-07-29）
+
+[Jonathan Hurst（Agility Robotics）](jonathan-hurst.md) 在 [Machina 那期](../videos/20260729-all-in-machina-robotics-four-ceos.md) 给出了与本页**进化论**（人体被优化的是非结构化环境）、[Yunzhu Li 的环境三段式](yunzhu-li.md)（先攻半结构化）**结论相同但理由不同**的第三条路径——**任务效率**：熄灯的自动分拣厂里"**做这些事的大概率是专用自动化，人形在那里不合理**"，人形真正有用的地方是"**走进人的环境、执行人的工作流**"（[01:01:39]）。
+⚠️ 特别值得记的是**说这话的人自己就在造人形**，因此这是人形派自己划的边界，而非外部质疑。
+⚠️ 反方向上，同集 [1X 的 Bernt Børnich](bernt-bornich.md) 给人形补了一条**本页论证不适用**的理由：他不主张人体形态最优，只主张它**与互联网视频这个现存数据分布对齐**（"我们的跨本体是人"）。**"进化未必最优"驳不倒"形态决定你能用哪些数据"。**

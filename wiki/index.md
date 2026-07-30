@@ -65,6 +65,10 @@
 - [Yunzhu Li](people/yunzhu-li.md) — SceniX 联创 / 哥大助理教授，real-to-sim-to-real、机器人评测瓶颈
 - [Akshay Nathan](people/akshay-nathan.md) — OpenAI 核心产品工程（productivity），ChatGPT Work / harness 合并 / 生产力度量
 - [孟子立（Zili Meng）](people/zili-meng.md) — 港科大助理教授 / WiCi 创始人，无线 GPU、用 Wi-Fi 替代 PCIe（中方网络系统视角）
+- [Bernt Børnich](people/bernt-bornich.md) — 1X 创始人兼 CEO，家用人形 Neo、"跨本体是人"、硬起飞赌 3 年
+- [Jonathan Hurst](people/jonathan-hurst.md) — Agility Robotics 联创 / Chief Robot Officer，Digit、反奇点"雪球论"、机器人价格非弹性
+- [Péter Fankhauser](people/peter-fankhauser.md) — ANYbotics 联创兼 CEO，四足巡检 ANYmal、"不是替人是超人"（欧洲已部署视角）
+- [Amanda McMaster](people/amanda-mcmaster.md) — Boston Dynamics 临时 CEO，Spot/Atlas 的部署经济学与对华强硬立场
 
 ## 主题
 
@@ -79,7 +83,7 @@
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
-- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认
+- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏
 
@@ -161,6 +165,7 @@
 - 2026-07-18 [AI 行业能自我监管吗：Demis 的 SRO 提案、数据中心禁令、企业数据泄露](videos/20260718-all-in-sro-regulation-datacenters.md)
 - 2026-07-21 [Mark Cuban 谈 AI 泡沫：真正被抹掉的是谁](videos/20260721-all-in-mark-cuban-ai-bubble.md)
 - 2026-07-24 [封杀开源之争、Anthropic 15 亿美元和解、Google capex](videos/20260724-all-in-open-source-ban-anthropic-copyright.md)
+- 2026-07-29 [1 美元/小时的机器人要来了：ANYbotics、1X、Boston Dynamics、Agility 四家负责人](videos/20260729-all-in-machina-robotics-four-ceos.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
