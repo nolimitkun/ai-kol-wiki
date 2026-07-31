@@ -21,7 +21,7 @@
 - [Alex Imas & Phil Trammell](people/imas-trammell.md) — AGI 经济学（DeepMind / Epoch）
 - [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
-- [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble 等
+- [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell 等
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 - [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
 - [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
@@ -69,6 +69,8 @@
 - [Jonathan Hurst](people/jonathan-hurst.md) — Agility Robotics 联创 / Chief Robot Officer，Digit、反奇点"雪球论"、机器人价格非弹性
 - [Péter Fankhauser](people/peter-fankhauser.md) — ANYbotics 联创兼 CEO，四足巡检 ANYmal、"不是替人是超人"（欧洲已部署视角）
 - [Amanda McMaster](people/amanda-mcmaster.md) — Boston Dynamics 临时 CEO，Spot/Atlas 的部署经济学与对华强硬立场
+- [Steijn Pelle & Frédéric Renken](people/lassie-founders.md) — Lassie 联创（前 Robinhood / Superhuman），SMB 垂直 agent、监管拐点、"模型不知道工作流"
+- [刘子鸣（Ziming Liu）](people/liu-ziming.md) — 清华 AI 学院 / 期智研究院 PI，KAN 一作，AI for AI、元模型、physics of AI（中方 neo lab 主来源）
 
 ## 主题
 
@@ -85,6 +87,7 @@
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
+- [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏
 
 ## 视频
@@ -125,6 +128,7 @@
 - 2026-06-13 [Lewis Hong（前SpaceX）：口述SpaceX开发史、太空与AI、人类文明扩张前奏](videos/20260613-zhang-xiaojun-spacex-lewis.md)
 - 2026-07-22 [沈宇军（蚂蚁灵波）：机器人原生基础模型、大脑与本体的关系、数据 scale up](videos/20260722-zhang-xiaojun-shen-yujun-lingbo-embodied-native.md)
 - 2026-07-28 [游凯超：开源 Infra、模型与 Infra 的 Co-design、"如果 vLLM 失败，我们会后悔一辈子"](videos/20260728-zhang-xiaojun-you-kaichao-vllm.md)
+- 2026-07-31 [刘子鸣：AI for AI、元模型、physics of AI 与中美 neo labs 资本狂潮](videos/20260731-zhang-xiaojun-liu-ziming-ai-for-ai.md)
 
 ### 月球大叔
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
@@ -174,3 +178,4 @@
 - 2026-07-21 [Applied Intuition：为什么物理 AI 是下一个前沿（Dana 发布）](videos/20260721-a16z-applied-intuition-physical-ai.md)
 - 2026-07-22 [Travis Kalanick：从 Uber 到 Atoms——把物理世界数字化（industrial AI）](videos/20260722-a16z-travis-kalanick-atoms.md)
 - 2026-07-28 [Fei-Fei Li & Yunzhu Li：空间智能是下一个前沿——World Labs 收购 SceniX](videos/20260728-a16z-feifei-li-spatial-intelligence.md)
+- 2026-07-30 [Lassie：把牙医诊所的行政工作交给 agent（Rampell & Moore 主持）](videos/20260730-a16z-lassie-healthcare-admin.md)

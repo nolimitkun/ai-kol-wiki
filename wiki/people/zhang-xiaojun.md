@@ -18,5 +18,6 @@
 | 2026-07-16 | [Physical Intelligence 内部视角与美国机器人全景](../videos/20260716-zhang-xiaojun-kay-ke-physical-intelligence.md) | 柯丽一鸣（Kay Ke，PI 研究员） |
 | 2026-07-22 | [机器人原生基础模型、大脑与本体的关系、数据 scale up](../videos/20260722-zhang-xiaojun-shen-yujun-lingbo-embodied-native.md) | 沈宇军（蚂蚁灵波首席科学家） |
 | 2026-07-28 | [开源 Infra、模型与 Infra 的 Co-design、"如果 vLLM 失败，我们会后悔一辈子"](../videos/20260728-zhang-xiaojun-you-kaichao-vllm.md) | 游凯超（vLLM 核心维护者 / Inferact 首席科学家） |
+| 2026-07-31 | [AI for AI：元模型、physics of AI 与中美 neo labs 资本狂潮](../videos/20260731-zhang-xiaojun-liu-ziming-ai-for-ai.md)（第 149 期） | [刘子鸣](liu-ziming.md)（清华 / 期智研究院，KAN 一作） |
 
 > ⚠️ 本表尚未回填全部已收录期数（广密、罗福莉、Freda、雨森、阳萌、Lewis Hong 等），完整清单见 index.md 的「张小珺·商业访谈录」一节。
