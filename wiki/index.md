@@ -71,6 +71,8 @@
 - [Amanda McMaster](people/amanda-mcmaster.md) — Boston Dynamics 临时 CEO，Spot/Atlas 的部署经济学与对华强硬立场
 - [Steijn Pelle & Frédéric Renken](people/lassie-founders.md) — Lassie 联创（前 Robinhood / Superhuman），SMB 垂直 agent、监管拐点、"模型不知道工作流"
 - [刘子鸣（Ziming Liu）](people/liu-ziming.md) — 清华 AI 学院 / 期智研究院 PI，KAN 一作，AI for AI、元模型、physics of AI（中方 neo lab 主来源）
+- [Melisa Tokmak](people/melisa-tokmak.md) — Netic 创始人兼 CEO（前 Scale AI），实体服务业 agent、机器人时间表看空、"实验室懒惰论"
+- [Jesse Zhang & Ashwin Sreenivas](people/decagon-founders.md) — Decagon 联创，90% 开源、业务逻辑靠上下文、"FDE 是陷阱"、Jevons 悖论
 
 ## 主题
 
@@ -145,6 +147,7 @@
 - 2026-06-18 [Lip-Bu Tan：重整半导体供应链、把 Intel 改造成 AI 公司](videos/20260618-no-priors-lip-bu-tan-intel.md)
 - 2026-06-26 [Noam Brown：超大规模 test-time compute 如何改变评估与安全](videos/20260626-no-priors-noam-brown.md)
 - 2026-07-23 [DoorDash（Andy Fang & Stanley Tang）：Agentic Commerce 与自研配送机器人 Dot](videos/20260723-no-priors-doordash-autonomous-delivery.md)
+- 2026-07-31 [Netic（Melisa Tokmak）：给"让世界运转的生意"造自主企业](videos/20260731-no-priors-netic-autonomous-enterprise.md)
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
@@ -170,6 +173,7 @@
 - 2026-07-21 [Mark Cuban 谈 AI 泡沫：真正被抹掉的是谁](videos/20260721-all-in-mark-cuban-ai-bubble.md)
 - 2026-07-24 [封杀开源之争、Anthropic 15 亿美元和解、Google capex](videos/20260724-all-in-open-source-ban-anthropic-copyright.md)
 - 2026-07-29 [1 美元/小时的机器人要来了：ANYbotics、1X、Boston Dynamics、Agility 四家负责人](videos/20260729-all-in-machina-robotics-four-ceos.md)
+- 2026-07-31 [芯片股崩盘、200 亿基金爆仓、"Pacing the Frontier"联署、Anthropic 碎书](videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
@@ -179,3 +183,4 @@
 - 2026-07-22 [Travis Kalanick：从 Uber 到 Atoms——把物理世界数字化（industrial AI）](videos/20260722-a16z-travis-kalanick-atoms.md)
 - 2026-07-28 [Fei-Fei Li & Yunzhu Li：空间智能是下一个前沿——World Labs 收购 SceniX](videos/20260728-a16z-feifei-li-spatial-intelligence.md)
 - 2026-07-30 [Lassie：把牙医诊所的行政工作交给 agent（Rampell & Moore 主持）](videos/20260730-a16z-lassie-healthcare-admin.md)
+- 2026-07-31 [Decagon 的企业 AI 应用打法：90% 开源、Duet、"杀死岗位不杀死职业"](videos/20260731-a16z-decagon-enterprise-ai-apps.md)
