@@ -73,6 +73,7 @@
 - [刘子鸣（Ziming Liu）](people/liu-ziming.md) — 清华 AI 学院 / 期智研究院 PI，KAN 一作，AI for AI、元模型、physics of AI（中方 neo lab 主来源）
 - [Melisa Tokmak](people/melisa-tokmak.md) — Netic 创始人兼 CEO（前 Scale AI），实体服务业 agent、机器人时间表看空、"实验室懒惰论"
 - [Jesse Zhang & Ashwin Sreenivas](people/decagon-founders.md) — Decagon 联创，90% 开源、业务逻辑靠上下文、"FDE 是陷阱"、Jevons 悖论
+- [Philip Kiely & Ali Taha](people/baseten-team.md) — Baseten 推理团队，推理工程报价单、量化误差抵消、唱空 mega kernel、GLM 自写 kernel
 
 ## 主题
 
@@ -163,6 +164,7 @@
 - 2026-07-21 [Xaira：因果模型需要因果数据——X-Cell 虚拟细胞模型](videos/20260721-latent-space-xaira-xcell-virtual-cell.md)
 - 2026-07-22 [Poolside（Eiso Kant）：Model Factory、Laguna S、开源与 AGI 竞赛](videos/20260722-latent-space-poolside-eiso-kant.md)
 - 2026-07-28 [Akshay Nathan（OpenAI）：把 ChatGPT 做成"万物应用"、harness 合并与生产力度量](videos/20260728-latent-space-akshay-nathan-chatgpt-work.md)
+- 2026-08-03 [Baseten（Philip Kiely & Ali Taha）：推理是新的训练——优化报价单、量化误差抵消、唱空 mega kernel](videos/20260803-latent-space-baseten-inference-engineering.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)

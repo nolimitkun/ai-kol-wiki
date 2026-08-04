@@ -32,5 +32,10 @@
 | 2026-07-13 | [AI 的记忆问题：为什么长上下文还不够](../videos/20260713-latent-space-dan-biderman.md) | Dan Biderman（Engram，记忆/持续学习） |
 | 2026-07-22 | [Model Factory、Laguna S、开源与 AGI 竞赛](../videos/20260722-latent-space-poolside-eiso-kant.md) | Eiso Kant（Poolside CEO） |
 | 2026-07-28 | [OpenAI 把 ChatGPT 做成"万物应用"](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md) | [Akshay Nathan](akshay-nathan.md)（OpenAI 核心产品工程） |
+| 2026-08-03 | [推理是新的训练：推理工程全景](../videos/20260803-latent-space-baseten-inference-engineering.md) | [Philip Kiely & Ali Taha](baseten-team.md)（Baseten） |
+
+> ⚠️ **swyx 的"推理 ASIC 是好赌注"立场在 2026-08-03 那期被现场压力测试，并被他自己收窄**。原立场（2026-07-10）是"**推理这件事大到理所当然会有专用 ASIC**，且押注架构不变是好赌注，因为存量 workload 不会迁移"。Baseten 的 Ali Taha 从**供给侧**给出反向论证：**Rubin 相比 Ampere/T4"基本上就是个 ASIC"**（systolic array、tensor core、TMA、tensor memory，指令形状几乎按当今模型 head 维度定制），即**专用性正被 GPU 自己吸收**；且若前沿实验室每年换架构，独立 ASIC 等于"**每年花 500 亿造新的、把去年的扔掉**"。
+> swyx 的回应把立场拆成了两半（[视频页](../videos/20260803-latent-space-baseten-inference-engineering.md) [01:06:41]–[01:07:41]）：**垂直整合的模型实验室自研 ASIC**（OpenAI–Broadcom）"完全说得通"，援引 Martin Casado 的算术"**5000 亿的训练拿 500 亿去做 ASIC 就很合理**"；而**独立 ASIC 公司**的价值在**互联与内存/硬件布局分配**而非算子——"**10 倍到 1000 倍更快的推理，真正的阻碍不是能在现有 GPU 设计里重排的那些东西**"，目标量级是**每秒 30 万 token**。
+> 另一方面，**Philip Kiely 的"模型寿命比想象的长"恰是 swyx 那条"存量 workload 不会迁移"的正面证据**："还有人在用 4o、我还看到 Llama 3 的工作负载。"**本库记为同一立场被拆细，不是翻转。**
 
 > ⚠️ **swyx 反对模型路由的立场，与 2026-07-28 那期存在一处需要区分的表面冲突**：OpenAI 的 ChatGPT Work **由模型自己决定进 chat 模式还是 work 模式**。但这是**同厂商内的模式路由**，不是 swyx 反对的**跨厂商最小公分母路由**；而且它与 swyx 那句"人们不想选用哪版 AGI，他们只想让 AGI 替他们决定"方向一致。本库把两者记为**不同层的路由**，不视作立场翻转。
