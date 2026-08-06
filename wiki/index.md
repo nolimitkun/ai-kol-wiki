@@ -74,6 +74,7 @@
 - [Melisa Tokmak](people/melisa-tokmak.md) — Netic 创始人兼 CEO（前 Scale AI），实体服务业 agent、机器人时间表看空、"实验室懒惰论"
 - [Jesse Zhang & Ashwin Sreenivas](people/decagon-founders.md) — Decagon 联创，90% 开源、业务逻辑靠上下文、"FDE 是陷阱"、Jevons 悖论
 - [Philip Kiely & Ali Taha](people/baseten-team.md) — Baseten 推理团队，推理工程报价单、量化误差抵消、唱空 mega kernel、GLM 自写 kernel
+- [Dino Mavrookas & Vibhav Altekar](people/saronic-founders.md) — Saronic 联创（前海豹六队 / 前 Anduril），造船产能 230:1、VLS 单位经济学、自主武器的政策阈值
 
 ## 主题
 
@@ -88,8 +89,8 @@
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"
-- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学
-- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise
+- [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案
+- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1
 - [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏
 
@@ -176,6 +177,7 @@
 - 2026-07-24 [封杀开源之争、Anthropic 15 亿美元和解、Google capex](videos/20260724-all-in-open-source-ban-anthropic-copyright.md)
 - 2026-07-29 [1 美元/小时的机器人要来了：ANYbotics、1X、Boston Dynamics、Agility 四家负责人](videos/20260729-all-in-machina-robotics-four-ceos.md)
 - 2026-07-31 [芯片股崩盘、200 亿基金爆仓、"Pacing the Frontier"联署、Anthropic 碎书](videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+- 2026-08-06 [Saronic：中国造船产能是美国的 230 倍——自主舰队、VLS 单位经济学、Port Alpha 首发](videos/20260806-all-in-saronic-shipbuilding.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
