@@ -223,3 +223,29 @@
   - ⚠️ **Corsair 单价不记为公司确认值**：主持人自问自答"大概一百万美元"，Dino 回 "Yeah" 后即转开话题。
   - ⚠️ **主持人前提与嘉宾陈述已切开**：西方有 AI 武器条约（Dino 没接，改谈 3000.09）、中国已量产武装机器狗、法德英基本已不造船、Brownsville 约 20 万人口——**均为 Jason 的断言**。
 - **更新**：index（人物 +1、视频 +1、两个主题页描述补词）；`all-in-hosts`（Jason 挑衅式提问模式在本期再现且这次产出了最有价值的回答 + 本库中他最接近倡导者而非提问者的一期 + 访谈表一行）；3 个主题页——**china-us-ai**（新增一整节：230:1 数据表 + "换掉度量衡"是第四种美方回应 + 主权 AI 的物理版本 + 与分子经济的接口）、**physical-ai-and-robotics**（武器化节新增第三种答案与三方稳定性对照表 + 新增"海上自主"整节：去掉人的收益、attritable mass、AI 实际位置、与 Tokmak 环境标准化论的反向边界点、co-design 迁移）、**ai-and-jobs**（新增蓝领反例整节：岗位往回造、机舱里的岗位位移、"neuroplastic"、以及"工作流已数字化"这个隐含前提在实体工业里还不成立）。
+
+## 2026-08-07 — 摄取 2 期：vLLM/Inferact（a16z）、No Priors 双主播自谈
+
+- `uv run scripts/discover.py` 列出 2 个候选（No Priors、a16z），两期均为实质性内容，全部摄取。两期恰好构成一组好对照：**同一天上线，一期讲开源推理底座的技术与政策，一期讲资本与时间表的定价错误。**
+- **新增视频页 2**：
+  1. [a16z / Simon Mo](videos/20260806-a16z-simon-mo-open-source-inference.md)——**本库第二次从 vLLM 一侧看竞争**（第一次是 2026-07-28 的游凯超）。同一项目的两位 BDFL、中美两个语境、问题意识完全不同：游凯超被问"开源社区靠什么撑住"，Simon Mo 被问"开放权重在中美政策战里站在哪一边"。三条事实交叉验证（生态位、伯克利谱系、Ion Stoica）。
+  2. [No Priors 双主播自谈](videos/20260806-no-priors-trillion-dollar-token-budgets.md)——**本库第一期无嘉宾的 No Priors**，也是第一次能把 Sarah Guo 与 Elad Gil 各自的立场分开记录。
+- **新增人物页 1**：[Simon Mo](people/simon-mo.md)。**a16z 页新增 Matt Bornstein 一节**（本库第一次记录这位基础设施侧 GP）。
+- **本次最该被单独引用的四条**：
+  1. ⚠️ **护栏误杀导致的用户流失，本库第一条一手证词**：Inferact / vLLM 的开发者**正从 Fable 5 撤退转用 Kimi K3**——理由不是能力也不是价格，是研究 GPU kernel 时"**连一个 invalid memory access 报错都触发红线**"，两小时任务归零。此前本库记录的"转向开源"动因只有成本、延迟、数据主权三种，**这是第四种，而且流失方向明确指向中国开放权重模型**。
+  2. ⚠️ **Sarah Guo 对 RSI 时间表的元判据**："**一群非常聪明、甚至非常有自知之明的研究科学家，在过去五年里每隔 18 个月都觉得 RSI 或 ASI 还有 18 个月。**"她同时给了替代瓶颈——**物理算力可获取性比算法可能性更是限制器**；Elad 由此推出"算力约束强制出一个寡头市场"。
+  3. ⚠️ **"环境蒸馏不了"**——Simon Mo 给蒸馏之争加了第三条轴（前两条是 Sacks 的权重 vs 输出、Friedberg 的评估输出而非过程）：**RL 环境没法被复制，也没法蒸馏模型在环境里是怎么学的**。Matt Bornstein 直接推到政策层："在白宫会很想说'把蒸馏关掉，所有问题就解决了'。"
+  4. **"投出去的 token 的回报率"**——Elad Gil 把 token 预算提成企业内部的资源分配指标，并由此论证 **"SaaS 之死被高估了"**（不是 SaaS 更好，是**替换它的机会成本太高**）。这是本库 token 经济学线此前缺席的一层。
+- **本次记录的两条新事实/事件**：
+  - **NVIDIA 发起的"开放权重与美国 AI 领导力"联署信**（Inferact、a16z、Meta、Amazon 及数十家公司）——⚠️ 本库此前只记录了对立的 **Pacing the Frontier**（Anthropic + OpenAI + 约 1300 名实验室员工）。**两封信的签署方结构差异本身就是信息。**
+  - **加州财富税与退出税、创业生态外迁**——本库此前的产业地理讨论都在制造业选址，这是第一条**资本与创始人本身迁移**的记录。⚠️ 转录稿对该法案是否已通过**自相矛盾**（"他们通过了" vs "假设它通过"），本库照录不裁决。
+- **两处需要长期跟踪的证据强度标注**：
+  - Simon 的"**能力上今天就没有大差距，差别在发行**"必须与 [Baseten 的分模态限定](videos/20260803-latent-space-baseten-inference-engineering.md)（视频侧是天壤之别且在逆转）和 [Ben Thompson 经 Sacks 转述的"我们仍领先 6 个月"](videos/20260724-all-in-open-source-ban-anthropic-copyright.md) 并读。⚠️ 一处耐人寻味的交叉：**Sacks 用"K3 只在前端编码 arena 突出"论证中国没追上，Simon 用同一事实论证 Moonshot 在 RL 环境构造上领先**——同一份证据，两种相反解读。
+  - Simon 的"接下来一年全部关于 RL 环境"作为 RSI 相关证词，**证据强度低于 Duet 与 GLM kernel 两条**（那两条是自家生产系统，这条是产业观察），已在页内明确标注。
+- **转录稿质量与认定问题（均已在视频页顶部完整标注）**：
+  - **两期都无说话人标签**，只有 `>>` 换人标记且多处缺失。No Priors 那期的归属依据三条自陈线索（Conviction/Embed = Sarah；"我 2010 年写过博客" + "我在 Google 做过移动搜索和广告" = Elad；"我从没在 Google 工作过" = Sarah）。a16z 那期主持人在结尾被称作 "Sean"，**未播报全名，不做认定**。
+  - **a16z 那期专名几乎全错，已列对照表**：`VLM/BLM/VRM/VM`=vLLM、`Infact`=Inferact、`Matt Bournestein`=Matt Bornstein、`Ian Stoke`=Ion Stoica、`Birch`=BERT、`Mist draw`=Mistral、`OAMA`=Ollama。
+  - ⚠️ **一处人名只做推断不做认定**：转录稿的 `the Jenning`（"移除 RoPE 的人正是 RoPE 的发明人"），按 RoPE 首作 + 现在 Moonshot 两条线索**最可能是苏剑林（Jianlin Su）**，但转录稿不支持确认。
+  - ⚠️ **No Priors 那期两处疑似转录错误已标注不认定**：`that aren't like in France` 在上下文里**很可能是 "inference"**；`Cambridge explosion` 应为 Cambrian explosion。另 `igopoly`/`alleg market` = oligopoly，`Jansen Pharmaceuticals` = Janssen（保罗·扬森）。
+  - ⚠️ **两处不做认定的转述**：Hugging Face 用中国开源模型遏制 OpenAI 测试模型攻击一事，**本库未核实其官方博客**，且与本库已记录的"沙箱逃逸事件"是否同源不做认定；核能数字（法国 70%、美国 18%、日本 25%）**未给来源，标注为待外部核实**。
+- **更新**：index（人物 +1、视频 +2、三个主题页描述补词）；`a16z`（新增 Matt Bornstein 一节 + 访谈表一行）；`no-priors-hosts`（**新增"两人各自的立场"整节**——本库第一次能分开记，含两处两人分歧：融资环境、以及 Elad "创始人太怕实验室"的跨期连续观察 + 访谈表一行）；6 个主题页——**open-source-infrastructure**（新增第十节：两侧交叉验证表 + "部署足迹不可替代"与游凯超"个人 context 不可替代"互补 + 许可证分层作为第三种融资机制 + 开源份额两层表述的收束）、**china-us-ai**（新增整节：环境蒸馏不了 + 能力/发行差距对照表 + 美方 VC 用国安逻辑论证中国实验室该有收入 + 护栏误杀把美方基建开发者推向中国模型 + 对立联署信记录）、**llm-security**（新增两节：护栏误杀的三要素拆解与"责任豁免缺失"的制度分析、以及扬森式监管俘获与"外部约束+内部指数=内部领先"这条新机制）、**ai-business-and-value-capture**（新增五节：速度 vs 规模、token 预算 ROI 与"SaaS 之死被高估"、退出决策框架、创始人不够野心的第二次表述、加州税与生态迁移）、**ai-and-jobs**（AGI 叙事的第四个样本 + Sarah 的贡献集中度方法论提醒）、**ai-lab-culture**（算力成本改写招聘 + 与罗福莉的中美对照表）、**ai-for-ai-and-auto-research**（RSI 时间表的元判据 + 竞争焦点移向 RL 环境）。
