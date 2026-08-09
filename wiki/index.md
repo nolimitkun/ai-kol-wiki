@@ -76,6 +76,7 @@
 - [Philip Kiely & Ali Taha](people/baseten-team.md) — Baseten 推理团队，推理工程报价单、量化误差抵消、唱空 mega kernel、GLM 自写 kernel
 - [Dino Mavrookas & Vibhav Altekar](people/saronic-founders.md) — Saronic 联创（前海豹六队 / 前 Anduril），造船产能 230:1、VLS 单位经济学、自主武器的政策阈值
 - [Simon Mo](people/simon-mo.md) — Inferact 联创 / vLLM 主维护者，推理引擎即操作系统层、护栏误杀、"环境蒸馏不了"（美方开源推理视角）
+- [Dylan（Truffle Security）与 "Fas"（Socket）](people/truffle-socket-founders.md) — 凭证泄漏与软件供应链，本库第一组防守方一线安全从业者（Black Hat 2026 现场）
 
 ## 主题
 
@@ -83,17 +84,17 @@
 - [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力
 - [LLM 实用方法论](topics/using-llms-in-practice.md) — 如何有效使用 LLM（Karpathy、Grant/Dwarkesh 的学习法）
 - [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）
-- [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）
+- [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
-- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"
+- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）
-- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU
+- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
-- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架
+- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案
-- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1
+- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口
 - [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系
-- [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏、许可证分层与部署足迹
+- [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏、许可证分层与部署足迹、包注册表的资助缺口
 
 ## 视频
 
@@ -180,6 +181,7 @@
 - 2026-07-29 [1 美元/小时的机器人要来了：ANYbotics、1X、Boston Dynamics、Agility 四家负责人](videos/20260729-all-in-machina-robotics-four-ceos.md)
 - 2026-07-31 [芯片股崩盘、200 亿基金爆仓、"Pacing the Frontier"联署、Anthropic 碎书](videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 - 2026-08-06 [Saronic：中国造船产能是美国的 230 倍——自主舰队、VLS 单位经济学、Port Alpha 首发](videos/20260806-all-in-saronic-shipbuilding.md)
+- 2026-08-08 [Google 的 AI 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI](videos/20260808-all-in-google-brain-drain-spacex-airtable.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
@@ -191,3 +193,4 @@
 - 2026-07-30 [Lassie：把牙医诊所的行政工作交给 agent（Rampell & Moore 主持）](videos/20260730-a16z-lassie-healthcare-admin.md)
 - 2026-07-31 [Decagon 的企业 AI 应用打法：90% 开源、Duet、"杀死岗位不杀死职业"](videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 - 2026-08-06 [开源如何成为 AI 的骨干：vLLM / Inferact（Simon Mo & Matt Bornstein）](videos/20260806-a16z-simon-mo-open-source-inference.md)
+- 2026-08-07 [AI 正在学会黑客攻击：Black Hat 现场的供应链与凭证视角（Truffle Security & Socket）](videos/20260807-a16z-ai-learning-to-hack.md)
