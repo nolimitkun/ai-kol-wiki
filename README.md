@@ -30,12 +30,12 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-08-09（每次 CI 构建刷新）。
+> 自动生成于 2026-08-10（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 80 |
-| 人物页 | 73 |
+| 视频转录稿 | 81 |
+| 人物页 | 74 |
 | 主题页 | 15 |
 | 关注频道 | 9（活跃 9） |
 
@@ -49,8 +49,8 @@
 | a16z (Andreessen Horowitz) | 10 |
 | No Priors (Sarah Guo & Elad Gil) | 8 |
 | Lex Fridman | 7 |
+| 月球大叔（Uncle Moon） | 7 |
 | Dwarkesh Patel | 6 |
-| 月球大叔（Uncle Moon） | 6 |
 | Andrej Karpathy | 5 |
 <!-- STATS:BLOCK:END -->
 
