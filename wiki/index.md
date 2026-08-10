@@ -77,22 +77,23 @@
 - [Dino Mavrookas & Vibhav Altekar](people/saronic-founders.md) — Saronic 联创（前海豹六队 / 前 Anduril），造船产能 230:1、VLS 单位经济学、自主武器的政策阈值
 - [Simon Mo](people/simon-mo.md) — Inferact 联创 / vLLM 主维护者，推理引擎即操作系统层、护栏误杀、"环境蒸馏不了"（美方开源推理视角）
 - [Dylan（Truffle Security）与 "Fas"（Socket）](people/truffle-socket-founders.md) — 凭证泄漏与软件供应链，本库第一组防守方一线安全从业者（Black Hat 2026 现场）
+- [李正韬（Todd Li）](people/todd-li.md) — Retell AI 联创兼 President，语音 AI 呼叫中心、"整个公司 vs 一个总监的团队"、企业落地与招聘薪酬
 
 ## 主题
 
 - [LLM 训练管线](topics/llm-training-pipeline.md) — 预训练 / SFT / RL、scaling laws（含 Jensen 的四阶段扩展）
 - [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力
 - [LLM 实用方法论](topics/using-llms-in-practice.md) — 如何有效使用 LLM（Karpathy、Grant/Dwarkesh 的学习法）
-- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）
+- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）
 - [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
 - [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突
-- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology
-- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖
+- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）
+- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案
-- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口
+- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户
 - [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏、许可证分层与部署足迹、包注册表的资助缺口
 
@@ -143,6 +144,7 @@
 - 2026-05-17 [志鹏：从 AI 零基础到 vLLM/vLLM-Omni Committer，只用了一年](videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 - 2026-07-28 [孟子立：15 岁上清华、23 岁当港科大教授，做"无线 GPU"WiCi](videos/20260728-uncle-moon-zili-meng-wici.md)
+- 2026-08-09 [李正韬（Retell AI）：两年做到 8000 万美元收入的语音 AI 呼叫中心](videos/20260809-uncle-moon-todd-li-retell-ai.md)
 
 ### No Priors
 - 2026-05-21 [Andrew Feldman：Cerebras 630 亿 IPO、晶圆级芯片与快 AI](videos/20260521-no-priors-cerebras-feldman.md)

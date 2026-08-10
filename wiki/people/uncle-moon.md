@@ -14,8 +14,13 @@
 | 2026-05-17 | [志鹏（Zhipeng）](zhipeng.md)（及 Roger/林月谦） | 从 AI 零基础到 vLLM-Omni committer、开源贡献者指南 | [链接](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) |
 | 2026-06-09 | [江鋆晨（Junchen Jiang）](junchen-jiang.md) | KV Cache / LMCache、大模型的记忆 | [链接](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) |
 | 2026-07-28 | [孟子立（Zili Meng）](zili-meng.md) | WiCi 无线 GPU、用 Wi-Fi 替代 PCIe、港科大教授兼创业 | [链接](../videos/20260728-uncle-moon-zili-meng-wici.md) |
+| 2026-08-09 | [李正韬（Todd Li）](todd-li.md) | Retell AI：语音 AI 呼叫中心、YC、企业落地、招聘与薪酬 | [链接](../videos/20260809-uncle-moon-todd-li-retell-ai.md) |
 
-> ⚠️ **该频道对部分中文访谈提供英文配音/字幕**（`--lang zh-Hans` 取到的字幕轨内容为英文），孟子立那期即是。相应视频页的引号内为**英文原文的中译**，不是中文原话。
+> ⚠️ **该频道对部分中文访谈提供英文配音/字幕**（字幕轨内容为英文），孟子立那期与李正韬那期均是。相应视频页的引号内为**英文原文的中译**，不是中文原话。李正韬那期的字幕轨直接标为 `en`（人工），且**全程无说话人标签、无 `>>` 换人标记**，归属按内容判断。
+
+> **频道选题的一次外扩**：前六期全部是 **AI infra / 系统研究者**（SGLang、vLLM、KV Cache、无线 GPU）；李正韬那期是频道内**第一期纯商业向的创业者访谈**（YC、企业销售、招聘与薪酬结构），技术含量低而组织与商业化含量高。本库因此把它主要落在 [AI 商业化与价值捕获](../topics/ai-business-and-value-capture.md) 与 [AI 与就业](../topics/ai-and-jobs.md)，而非 infra 条线。
+
+> **第二组频道内对照（时机 vs 能力）**：[孟子立](zili-meng.md) 说硬件创业"**起步早是我们唯一真正的优势**"；[李正韬](todd-li.md) 说"**新技术出现后机会窗口只有两三年，现在才进语音赛道的多半不会成功**"。两位在同一频道、相隔两周，都把**时机**排在能力之上，且都在做被巨头俯视的细分。
 
 > **频道内部形成的一处自我对照**：[朱邦华](banghua-zhu.md)（2026-05）说自己 **2022 年就看见了 AI 的崛起**；[孟子立](zili-meng.md)（2026-07）在同一节目上主动提起这句，并说"**很遗憾，我没看见**"——他 2022 年整年在 CMU 走完美国教职市场流程，试过 ChatGPT 仍未看出趋势，看到的是疫情期大厂裁员。两人同届同领域、判断相反，是本库中关于"时机判断力"最直接的一组一手对照。
 
