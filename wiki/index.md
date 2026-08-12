@@ -78,23 +78,26 @@
 - [Simon Mo](people/simon-mo.md) — Inferact 联创 / vLLM 主维护者，推理引擎即操作系统层、护栏误杀、"环境蒸馏不了"（美方开源推理视角）
 - [Dylan（Truffle Security）与 "Fas"（Socket）](people/truffle-socket-founders.md) — 凭证泄漏与软件供应链，本库第一组防守方一线安全从业者（Black Hat 2026 现场）
 - [李正韬（Todd Li）](people/todd-li.md) — Retell AI 联创兼 President，语音 AI 呼叫中心、"整个公司 vs 一个总监的团队"、企业落地与招聘薪酬
+- [Ryan Greenblatt](people/ryan-greenblatt.md) — Redwood Research 首席科学家，本库第一位 AI 安全一手来源：RSI 换算、sloppocalypse、2040 接管 35–40%
+- [Chai Discovery（Matt McPartlon & Neil Patil）](people/chai-discovery.md) — 蛋白质设计"中性软件工厂"，cryo-EM 0.33 埃、算力市场被 LLM 化、人才晦涩性
+- [Ali Massa（Kavak）](people/ali-massa.md) — 拉美二手车平台 AI 负责人，本库第一个买方自建 agent 公司：一客户一 agent、AI CEO、token 三层级
 
 ## 主题
 
 - [LLM 训练管线](topics/llm-training-pipeline.md) — 预训练 / SFT / RL、scaling laws（含 Jensen 的四阶段扩展）
-- [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力
+- [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力、性状跨代传递（"Gemini 抑郁"）
 - [LLM 实用方法论](topics/using-llms-in-practice.md) — 如何有效使用 LLM（Karpathy、Grant/Dwarkesh 的学习法）
-- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）
+- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）、测能力边缘上的任务、eval 是刹车（投入约 1:1）、自洽性指标被玩坏
 - [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
-- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）
-- [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）
+- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）、AI 自主恶意行为三起事件（傀儡账号 / 包管理器传纸条）、"对齐到谁"与受托人之争、责任落在终端用户
+- [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）、结构生物学四家对照、中性软件工厂、Eroom's law
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户
-- [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系
+- [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系、本库第一份正面 RSI 论证（换算链、产业爆炸、sloppocalypse）、自改进的组织
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏、许可证分层与部署足迹、包注册表的资助缺口
 
 ## 视频
@@ -113,6 +116,7 @@
 - 2026-06-16 [Ada Palmer：Machiavelli 被误读](videos/20260616-dwarkesh-ada-palmer-machiavelli.md)（思想史）
 - 2026-06-30 [Grant Sanderson：AI 反证数学猜想之后](videos/20260630-dwarkesh-grant-sanderson-ai-math.md)
 - 2026-07-10 [Adam Brown：第一性原理讲广义相对论](videos/20260710-dwarkesh-adam-brown-general-relativity.md)
+- 2026-08-11 [Ryan Greenblatt：AI 能自动化 AI 研究之后会发生什么](videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md)
 
 ### Lex Fridman Podcast
 - 2026-01-31 [#490 State of AI 2026：LLM、编码、Scaling、中国、Agent、GPU、AGI](videos/20260131-lex-state-of-ai-2026.md)（Raschka & Lambert）
@@ -171,6 +175,7 @@
 - 2026-07-22 [Poolside（Eiso Kant）：Model Factory、Laguna S、开源与 AGI 竞赛](videos/20260722-latent-space-poolside-eiso-kant.md)
 - 2026-07-28 [Akshay Nathan（OpenAI）：把 ChatGPT 做成"万物应用"、harness 合并与生产力度量](videos/20260728-latent-space-akshay-nathan-chatgpt-work.md)
 - 2026-08-03 [Baseten（Philip Kiely & Ali Taha）：推理是新的训练——优化报价单、量化误差抵消、唱空 mega kernel](videos/20260803-latent-space-baseten-inference-engineering.md)
+- 2026-08-11 [Chai Discovery：生物学正在变成软件——蛋白质设计的"中性软件工厂"](videos/20260811-latent-space-chai-discovery-protein-design.md)（"AI for science" 子系列，非 swyx / Alessio 主持）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -196,3 +201,4 @@
 - 2026-07-31 [Decagon 的企业 AI 应用打法：90% 开源、Duet、"杀死岗位不杀死职业"](videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 - 2026-08-06 [开源如何成为 AI 的骨干：vLLM / Inferact（Simon Mo & Matt Bornstein）](videos/20260806-a16z-simon-mo-open-source-inference.md)
 - 2026-08-07 [AI 正在学会黑客攻击：Black Hat 现场的供应链与凭证视角（Truffle Security & Socket）](videos/20260807-a16z-ai-learning-to-hack.md)
+- 2026-08-10 [Kavak 的打法：把一家公司围绕 AI 重建（Ali Massa）](videos/20260810-a16z-kavak-agentic-company.md)

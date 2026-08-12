@@ -33,6 +33,11 @@
 | 2026-07-22 | [Model Factory、Laguna S、开源与 AGI 竞赛](../videos/20260722-latent-space-poolside-eiso-kant.md) | Eiso Kant（Poolside CEO） |
 | 2026-07-28 | [OpenAI 把 ChatGPT 做成"万物应用"](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md) | [Akshay Nathan](akshay-nathan.md)（OpenAI 核心产品工程） |
 | 2026-08-03 | [推理是新的训练：推理工程全景](../videos/20260803-latent-space-baseten-inference-engineering.md) | [Philip Kiely & Ali Taha](baseten-team.md)（Baseten） |
+| 2026-08-11 | [生物学正在变成软件：蛋白质设计的"中性软件工厂"](../videos/20260811-latent-space-chai-discovery-protein-design.md) | [Matt McPartlon & Neil Patil](chai-discovery.md)（Chai Discovery）⚠️ **"AI for science" 子系列，非 swyx / Alessio 主持** |
+
+> ⚠️ **本频道存在一个由不同主持人运作的 "AI for science" 子系列**，本库 2026-08-11 首次明确记录。主持是 **Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honiki**（Mirror Omix CTO 兼联创）——**两位本身都是 AI-bio 创业者，而不是媒体人**。⚠️ 这对引用有直接影响：**这个子系列里的"主持人观点"是同行的技术判断，不是提问框架**。
+> 例如 Chai 那期里，主持人自己给出了两条本库照录的实质判断：① **抗体在进化上不可能有模板，所以 MSA 这个魔法在抗体上失效**（这条解释了为什么 AlphaFold 2 在抗体-抗原上只有约 11% 正确率）；② 对嘉宾"简单性偏好"的**正面反驳**——AlphaFold 2/3 之所以 work，**恰恰因为它们是数据效率极高的小模型、一层归纳偏置叠一层归纳偏置**，要超过它"你真的需要新的数据来源"。本库把第二条记为该期**未解决的分歧**。
+> 本库既有的 [Genesis Molecular AI](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md)、[Xaira](../videos/20260721-latent-space-xaira-xcell-virtual-cell.md)、[Lila Sciences](../videos/20260716-latent-space-lila-sciences.md) 三期在选题上同属这条线，⚠️ **但本库未回溯核实其主持人是否为同一组，暂不追认。**
 
 > ⚠️ **swyx 的"推理 ASIC 是好赌注"立场在 2026-08-03 那期被现场压力测试，并被他自己收窄**。原立场（2026-07-10）是"**推理这件事大到理所当然会有专用 ASIC**，且押注架构不变是好赌注，因为存量 workload 不会迁移"。Baseten 的 Ali Taha 从**供给侧**给出反向论证：**Rubin 相比 Ampere/T4"基本上就是个 ASIC"**（systolic array、tensor core、TMA、tensor memory，指令形状几乎按当今模型 head 维度定制），即**专用性正被 GPU 自己吸收**；且若前沿实验室每年换架构，独立 ASIC 等于"**每年花 500 亿造新的、把去年的扔掉**"。
 > swyx 的回应把立场拆成了两半（[视频页](../videos/20260803-latent-space-baseten-inference-engineering.md) [01:06:41]–[01:07:41]）：**垂直整合的模型实验室自研 ASIC**（OpenAI–Broadcom）"完全说得通"，援引 Martin Casado 的算术"**5000 亿的训练拿 500 亿去做 ASIC 就很合理**"；而**独立 ASIC 公司**的价值在**互联与内存/硬件布局分配**而非算子——"**10 倍到 1000 倍更快的推理，真正的阻碍不是能在现有 GPU 设计里重排的那些东西**"，目标量级是**每秒 30 万 token**。
