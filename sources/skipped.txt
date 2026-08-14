@@ -45,6 +45,7 @@ RQE8OS392dU  # No Priors: We Need An Ecosystem in AI（泛论，无具体断言�
 xjlYpGaxIPA  # No Priors: Pax Silica 川普政府科技战略（政策为主）
 g5TWnUjbeFM  # No Priors: Amex GBT take private（并购交易）
 l6USUAIKJls  # Lex #500 Khabib Nurmagomedov：MMA 选手访谈，与 AI 无关（未 fetch）
+_TcEfYlW4PA  # All-In: Rahm Emanuel 谈外交政策/中国/欧洲/移民/党内政治，通篇政治无 AI 内容（未 fetch）
 
 # ── fetch 后判定不收录（转录稿已留档，不建 wiki 页） ───────────
 wgdxSCsmS-Q  # All-In 2026-07-03 AI Sovereignty Wars：与 07-11/07-18 重叠度高、政治比重大

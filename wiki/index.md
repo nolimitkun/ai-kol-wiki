@@ -83,6 +83,7 @@
 - [刘洺堉（Ming-Yu Liu）](people/ming-yu-liu.md) — NVIDIA 研究副总裁 / Cosmos Lab，世界模型基座、action 作为 first class citizen、NVIDIA 组织文化（供给方内部视角）
 - [Garry Tan](people/garry-tan.md) — Y Combinator 总裁兼 CEO，markdown 即员工、token maxing、纯席位 SaaS 存疑、"20 年 white pill"
 - [Ali Massa（Kavak）](people/ali-massa.md) — 拉美二手车平台 AI 负责人，本库第一个买方自建 agent 公司：一客户一 agent、AI CEO、token 三层级
+- [Erik Allebest](people/erik-allebest.md) — Chess.com 联创兼 CEO，本库唯一的回溯样本：机器超人 30 年后的人类活动、重复不可外包、作弊检测的上界
 
 ## 主题
 
@@ -92,11 +93,11 @@
 - [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）、测能力边缘上的任务、eval 是刹车（投入约 1:1）、自洽性指标被玩坏
 - [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法、NVIDIA 的反向模式（不裁员/不赛马/mission is the boss）
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
-- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）、AI 自主恶意行为三起事件（傀儡账号 / 包管理器传纸条）、"对齐到谁"与受托人之争、责任落在终端用户
+- [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）、AI 自主恶意行为三起事件（傀儡账号 / 包管理器传纸条）、"对齐到谁"与受托人之争、责任落在终端用户、机器产出冒充人类产出的检测上界
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）、结构生物学四家对照、中性软件工厂、Eroom's law
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突
-- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）、协调层而非岗位被替代、"20 年 white pill"
-- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"
+- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）、协调层而非岗位被替代、"20 年 white pill"、机器超人 30 年后的国际象棋（本库唯一回溯样本）
+- [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"、go-to-market（lighthouse vs land grab、重新卖大软件的窗口）
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案、world foundation model 与 action 作为 first class citizen
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户、实习生作为 knowhow 的第三条扩散通道
 - [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系、本库第一份正面 RSI 论证（换算链、产业爆炸、sloppocalypse）、自改进的组织
@@ -162,6 +163,7 @@
 - 2026-07-23 [DoorDash（Andy Fang & Stanley Tang）：Agentic Commerce 与自研配送机器人 Dot](videos/20260723-no-priors-doordash-autonomous-delivery.md)
 - 2026-07-31 [Netic（Melisa Tokmak）：给"让世界运转的生意"造自主企业](videos/20260731-no-priors-netic-autonomous-enterprise.md)
 - 2026-08-06 [追逐万亿美元公司、创始人野心、Token 预算与监管俘获](videos/20260806-no-priors-trillion-dollar-token-budgets.md)（双主播自谈，无嘉宾）
+- 2026-08-13 [Chess.com（Erik Allebest）：机器超越人类之后——一个跑了 30 年的自然实验](videos/20260813-no-priors-chesscom-human-skill.md)（Sarah Guo 独立主持）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
@@ -206,3 +208,4 @@
 - 2026-08-07 [AI 正在学会黑客攻击：Black Hat 现场的供应链与凭证视角（Truffle Security & Socket）](videos/20260807-a16z-ai-learning-to-hack.md)
 - 2026-08-10 [Kavak 的打法：把一家公司围绕 AI 重建（Ali Massa）](videos/20260810-a16z-kavak-agentic-company.md)
 - 2026-08-12 [YC CEO 谈 AI 时代的创始人心理学（Garry Tan，Anish Acharya 主持）](videos/20260812-a16z-garry-tan-founder-psychology.md)
+- 2026-08-13 [Lighthouse 还是 Landgrab：AI 创业公司怎么选销售打法（Joe Schmidt & Andy McCall）](videos/20260813-a16z-lighthouse-or-landgrab-sales.md)
