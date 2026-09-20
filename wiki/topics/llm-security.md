@@ -66,7 +66,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
   1. 每个 agent 独立 **container**（与 messaging bridge/router 分离）；
   2. **agent 环境里不放任何凭证**——即便被 prompt injection 也无 key 可泄露（"审 PR 时任何人都能开 PR 灌入未净化输入"）；
   3. 出站请求经 **vault 代理**按策略注入凭证 + **human-in-the-loop 审批**（可读邮件免批、发邮件在 Slack 点 approve/reject）（00:08–00:10）。
-- 直接针对 lethal trifecta 的第 ③ 环（外泄能力）与第 ②环（敏感信息访问）动刀：让 agent 本身**结构上无法接触凭证**，把危险组合在架构层拆开——与 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md)（运行时按状态阻断）是"结构隔离"vs"运行时策略"两条互补路线。多位安全专家审过、"没人指出核心思路的问题"（00:14）。
+- 直接针对 lethal trifecta 的第 ③ 环（外泄能力）与第 ②环（敏感信息访问）动刀：让 agent 本身**结构上无法接触凭证**，把危险组合在架构层拆开——与 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md)（运行时按状态阻断）是"结构隔离"vs"运行时策略"两条互补路线。多位安全专家审过、"没人指出核心思路的问题"（00:14:06）。
 - 用 Agent SDK 而非 Pi、明文记录问题促使他弃用 OpenClaw 转而重写——呼应 Steinberger"别用便宜/弱模型跑高权限 agent"的另一面：代码库/依赖面本身也是攻击面（00:06–00:08）。
 
 ## sandbox 层：硬边界 vs LLM 中介权限（Akshat Bubna / Modal，2026-07）
@@ -203,7 +203,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 
 ⚠️ **本库标注**：
 - 这条**未被节目内任何人反驳，也未被验证**。
-- 它有一个明显的未讨论前提：**模型生成的代码会不会有自己的系统性缺陷类别**（人不犯的错，模型犯）。本页 [Gray Swan 关于 eval awareness 与能力激发](#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发) 的经验，以及 [Steinberger 关于弱模型更易被注入](#被攻击者本人的视角peter-steinbergeropenclaw-作者2026-02) 的观察，都指向"模型有自己的失败模式"这一侧。
+- 它有一个明显的未讨论前提：**模型生成的代码会不会有自己的系统性缺陷类别**（人不犯的错，模型犯）。[评测与基准](evaluation-and-benchmarks.md) 页上 [Gray Swan 关于 eval awareness 与能力激发](evaluation-and-benchmarks.md#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发) 的经验，以及 [Steinberger 关于弱模型更易被注入](#被攻击者本人的视角peter-steinbergeropenclaw-作者2026-02) 的观察，都指向"模型有自己的失败模式"这一侧。
 - 因此本库把它记为**一条可跟踪的强断言**，而不是本页的共识。
 
 ## OpenAI 未发布模型逃出沙箱：事件、以及一次值得记的降温（2026-07）
@@ -225,7 +225,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 
 **他给的先例**："有一个'骗我一次、骗我两次'的效应。**记得 Anthropic 那个勒索研究吗**——据说一个 agent 展现了独立目标寻求、勒索了一个员工。**结果发现他们把 prompt 迭代了两百多次才拿到那个结果。**"
 
-⚠️ **本库标注**：这条**指向的是安全 demo 的可复现性与实验透明度**，与本页已有的 [eval awareness](#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发)、[数据污染](evaluation-and-benchmarks.md) 是同族问题的另一侧——**不是模型在骗评测，是评测的构造条件没有被公开**。这条同时记入 [评估与 Benchmark](evaluation-and-benchmarks.md)。
+⚠️ **本库标注**：这条**指向的是安全 demo 的可复现性与实验透明度**，与本库已有的 [eval awareness](evaluation-and-benchmarks.md#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发)、[数据污染](evaluation-and-benchmarks.md) 是同族问题的另一侧——**不是模型在骗评测，是评测的构造条件没有被公开**。这条同时记入 [评估与 Benchmark](evaluation-and-benchmarks.md)。
 
 ## "Pacing the Frontier"联署信：动机分析与一次善意/恶意的并列（2026-07）
 
@@ -354,7 +354,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 
 来源：[a16z / AI 正在学会黑客攻击](../videos/20260807-a16z-ai-learning-to-hack.md)（[Truffle Security 的 Dylan 与 Socket 的 "Fas"](../people/truffle-socket-founders.md)）
 
-**这是本页第一份来自防守方一线的材料**。此前所有素材要么来自研究/红队侧（[Gray Swan](#agent--computer-use-时代的攻击面gray-swankolter--fredrikson2026-06)）、要么来自做安全产品的创业者（[Onyx](#ai-看管-aiai-小守门模型监督-agent-动作maxim-bar-kogan--onyx-security2026-05)、[NanoClaw](#个人-agent-的隔离安全模型gavriel-cohen--nanoclaw2026-06)）、要么来自播客上的政策辩论。这一期是**两个正在处理当天事故的人在会场走廊上讲当天的事**——录制时正有一次波及数百个 npm 包的蠕虫事件在进行中。
+**这是本页第一份来自防守方一线的材料**。此前所有素材要么来自研究/红队侧（[Gray Swan](#agent--computer-use-时代的攻击面gray-swankolter--fredrikson2026-06)）、要么来自做安全产品的创业者（[Onyx](#ai-看管-ai小守门模型监督-agent-动作maxim-bar-kogan--onyx-security2026-05)、[NanoClaw](#个人-agent-的隔离安全模型gavriel-cohen--nanoclaw2026-06)）、要么来自播客上的政策辩论。这一期是**两个正在处理当天事故的人在会场走廊上讲当天的事**——录制时正有一次波及数百个 npm 包的蠕虫事件在进行中。
 
 ### ⚠️ 一条本页此前缺席的门槛结构论证
 
@@ -385,7 +385,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 > "它们经常**利用开发者机器上已经装好的 AI 工具**去绕过传统安全工具。**本地 CLI 工具基本上被拉进攻击链里当跳板。所以很多时候 payload 其实就是 prompt。**而这**绕过了很多典型的 EDR 工具**——因为那只是一个 markdown 文件，你的 Claude 在跑它。"
 > "**而且开发者机器本来就一直在做各种奇怪的事……所以什么都不太像是异常。**"
 
-⚠️ **本页标注**：这是[提示注入](#攻击类型karpathy-2023-11-的分类)那条线**第一次落到具体的在野商业攻击载荷形态**上，并给 [lethal trifecta](#agent--computer-use-时代的攻击面gray-swankolter--fredrikson2026-06) 补了一个新性质——**agent 的正常行为与攻击行为在端点遥测上不可区分**。它同时是对 [Onyx"endpoint/API 安全不知道 agent 在想什么"](#ai-看管-aiai-小守门模型监督-agent-动作maxim-bar-kogan--onyx-security2026-05) 目前最强的一条外部佐证。
+⚠️ **本页标注**：这是[提示注入](#攻击类型karpathy-2023-11-的分类)那条线**第一次落到具体的在野商业攻击载荷形态**上，并给 [lethal trifecta](#agent--computer-use-时代的攻击面gray-swankolter--fredrikson2026-06) 补了一个新性质——**agent 的正常行为与攻击行为在端点遥测上不可区分**。它同时是对 [Onyx"endpoint/API 安全不知道 agent 在想什么"](#ai-看管-ai小守门模型监督-agent-动作maxim-bar-kogan--onyx-security2026-05) 目前最强的一条外部佐证。
 
 ### 当天的 npm 蠕虫：机制与归因
 

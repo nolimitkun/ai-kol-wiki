@@ -372,7 +372,7 @@
 
 ### 组织侧：团队不会因为 AI 变小
 
-"个人或小团队能完成过去需要更多人的事，**但同时要做的事也更多了，所以团队变得更有野心**"（[01:02:38]）。与本页 [Cuban 的"反事实"论](#不是替代是反事实mark-cuban2026-07)（支出不是从被替代的预算转移，而是从"从未存在的支出"里长出来）同向：**AI 的第一序效果是需求创造，不是成本压缩。**
+"个人或小团队能完成过去需要更多人的事，**但同时要做的事也更多了，所以团队变得更有野心**"（[01:02:38]）。与 [AI 与就业](ai-and-jobs.md) 页上 [Cuban 的"反事实"论](ai-and-jobs.md#不是替代是反事实mark-cuban2026-07)（支出不是从被替代的预算转移，而是从"从未存在的支出"里长出来）同向：**AI 的第一序效果是需求创造，不是成本压缩。**
 
 ## 硬件创业者的价值捕获：短期靠性能，长期靠生态（孟子立 / WiCi，中，2026-07）
 
@@ -521,7 +521,7 @@ Decagon 给的是第三种（[00:13:05]）：
 
 ## ⚠️ FDE 是陷阱：对本页"落地能力即护城河"的一次反驳（Decagon，2026-07）
 
-本页此前记录过 [Mark Cuban 把 FDE 数量当作能力测量](#forward-deployed-engineer-作为一个能力测量mark-cuban2026-07)（在 [AI 与就业](ai-and-jobs.md) 页）。[Ashwin Sreenivas](../people/decagon-founders.md)（前 Palantir deployment strategist）给了一条直接的反命题（[00:21:15]–[00:22:15]）：
+本库此前记录过 [Mark Cuban 把 FDE 数量当作能力测量](ai-and-jobs.md#forward-deployed-engineer-作为一个能力测量mark-cuban2026-07)（在 [AI 与就业](ai-and-jobs.md) 页）。[Ashwin Sreenivas](../people/decagon-founders.md)（前 Palantir deployment strategist）给了一条直接的反命题（[00:21:15]–[00:22:15]）：
 
 - **"我认为这（大量招 FDE）是个陷阱。"**
 - ⚠️ **但他承认 FDE 现在必要，理由是新的**：**"对 AI 产品，没人知道工作流是什么，因为没人用过这些东西。"** 所以 FDE 的真实职能是"**嵌进客户那里，在客户第一次学会这个工作流的同时，自己第一次学会这个工作流**"——"某种意义上他们是在**边看火车往哪开、边铺轨道**"。
@@ -585,7 +585,7 @@ Decagon 给的是第三种（[00:13:05]）：
 
 - **"我更常碰到的是一种想象力的失败**：想不出一个东西能比上一个时代最接近的对标市场大多少、好多少。**重新思考市场规模，在今天任何阶段都仍然是一项被严重低估的投资人技能。**"
 - ⚠️ **她给的具体机制，与本页的"按结果收费"线直接相关**：很多投资人"**在智识上承认了'AI 公司在交付服务的价值'，但他们的行动并不像真的相信它**"——看 Harvey 或 Abridge 时还是**按席位、按律师人头、按医生人头**算 TAM，"**而不去问：如果这家公司能按结果收费，它会长什么样？**"她的证据是编码域已经在按**消费量与价值**计价。
-  - 这与本页 [罗福莉"定价从成本转向价值"](#罗福莉中-research-lead2026-04定价从成本转向价值模型即产品)、[vLLM 按 token 而非工程师时间计费](#开源基础设施如何捕获价值按-token-计费而非卖工程师时间游凯超--vllm2026-07)是同一转向在**投资人估值侧**的表现。
+  - 这与本页 [罗福莉"定价从成本转向价值"](#罗福莉中方-research-lead2026-04定价从成本转向价值模型即产品)、[vLLM 按 token 而非工程师时间计费](#开源基础设施如何捕获价值按-token-计费而非卖工程师时间游凯超--vllm2026-07)是同一转向在**投资人估值侧**的表现。
 
 ### ⚠️ 两人真正的分歧：规模与速度被系统性混为一谈
 
@@ -717,7 +717,7 @@ Decagon 给的是第三种（[00:13:05]）：
 
 来源：[All-In / Google 人才外流、SpaceX 财报、Airtable](../videos/20260808-all-in-google-brain-drain-spacex-airtable.md)（[00:47:25]–[01:05:37]）
 
-本页与 [AI 与就业](ai-and-jobs.md) 此前的"SaaS 之死"讨论都停在**判断层**（[Freda 的软件冲击](../videos/20260518-zhang-xiaojun-freda-investment-2.md)、[Elad Gil 的"SaaS 之死被高估了"](#⚠️-投出去的-token-的回报率token-经济学缺失的那一层elad-gil2026-08)、[Sinofsky/Amble 的 headless 软件](../videos/20260707-a16z-software-in-age-of-agents.md)）。**这是第一个可以逐层拆开的完整退出案例。**
+本页与 [AI 与就业](ai-and-jobs.md) 此前的"SaaS 之死"讨论都停在**判断层**（[Freda 的软件冲击](../videos/20260518-zhang-xiaojun-freda-investment-2.md)、[Elad Gil 的"SaaS 之死被高估了"](#️-投出去的-token-的回报率token-经济学缺失的那一层elad-gil2026-08)、[Sinofsky/Amble 的 headless 软件](../videos/20260707-a16z-software-in-age-of-agents.md)）。**这是第一个可以逐层拆开的完整退出案例。**
 
 ### 事实
 
