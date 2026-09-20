@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["yt-dlp"]
+# dependencies = ["yt-dlp>=2026.8"]  # 必须与 fetch.py 同步钉住：旧版不认识 visionos，一律 403
 # ///
 """给已摄取的转录稿补做说话人分离，结果写成 **sidecar** 文件，不改转录稿本身。
 
@@ -84,6 +84,11 @@ def ensure_audio(d: Path, url: str, attempts: int = 3) -> tuple[Path | None, boo
 
     失败会重试：批量跑几十期时 YouTube 偶尔返回 403（限流），单次失败就放弃
     会平白丢掉那一期——实测 10 期的批次里就撞上过一次，单独重试即成功。
+
+    命令前缀必须走 fetch._ytdlp()：它带着 --js-runtimes node 和
+    player_client=visionos。少了这两样，YouTube 一律 403——而且是**重试也没用**
+    的那种 403，跟限流长得一模一样，极易误判。曾经这里写的是裸 yt-dlp，
+    26 期全部在第 1 次就 403。
     """
     existing = [p for p in d.glob("audio.*") if p.suffix != ".md"]
     if existing:
@@ -92,8 +97,9 @@ def ensure_audio(d: Path, url: str, attempts: int = 3) -> tuple[Path | None, boo
         return None, False
     print(f"  音频缺失，重新下载: {url}")
     for i in range(1, attempts + 1):
-        r = fetch.run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
-                       "-o", str(d / "audio.%(ext)s"), url], timeout=1800)
+        r = fetch.run(fetch._ytdlp() + ["--no-playlist", "-f", "bestaudio/best",
+                                       "-o", str(d / "audio.%(ext)s"), url],
+                      timeout=1800)
         if r.returncode == 0:
             break
         tail = (r.stderr or "").strip().splitlines()[-1:] or [""]
