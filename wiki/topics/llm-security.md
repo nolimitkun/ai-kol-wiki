@@ -66,7 +66,7 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
   1. 每个 agent 独立 **container**（与 messaging bridge/router 分离）；
   2. **agent 环境里不放任何凭证**——即便被 prompt injection 也无 key 可泄露（"审 PR 时任何人都能开 PR 灌入未净化输入"）；
   3. 出站请求经 **vault 代理**按策略注入凭证 + **human-in-the-loop 审批**（可读邮件免批、发邮件在 Slack 点 approve/reject）（00:08–00:10）。
-- 直接针对 lethal trifecta 的第 ③ 环（外泄能力）与第 ②环（敏感信息访问）动刀：让 agent 本身**结构上无法接触凭证**，把危险组合在架构层拆开——与 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md)（运行时按状态阻断）是"结构隔离"vs"运行时策略"两条互补路线。多位安全专家审过、"没人指出核心思路的问题"（00:14:06）。
+- 直接针对 lethal trifecta 的第 ③ 环（外泄能力）与第 ②环（敏感信息访问）动刀：让 agent 本身**结构上无法接触凭证**，把危险组合在架构层拆开——与 [Databricks 的 stateful policies](../videos/20260624-latent-space-databricks-agent-cloud.md)（运行时按状态阻断）是"结构隔离"vs"运行时策略"两条互补路线。多位安全专家审过、"没人指出核心思路的问题"（00:14）。
 - 用 Agent SDK 而非 Pi、明文记录问题促使他弃用 OpenClaw 转而重写——呼应 Steinberger"别用便宜/弱模型跑高权限 agent"的另一面：代码库/依赖面本身也是攻击面（00:06–00:08）。
 
 ## sandbox 层：硬边界 vs LLM 中介权限（Akshat Bubna / Modal，2026-07）

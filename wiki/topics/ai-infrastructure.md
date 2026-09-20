@@ -140,7 +140,7 @@
 
 - **瓶颈排序：电力→氦（helium）→内存→CPU/GPU**——扩产建 fab 要几年、成本会往客户传导涨价；"AI 冲击比互联网更大更深刻"（00:11–00:13）。与 Jensen"电力是首要瓶颈"一致，但补上**氦与内存短缺**两个少被提及的物理约束。
 - **先进封装成新瓶颈**：EMIB-T vs TSMC CoWoS、玻璃基板（好热绝缘、Intel ~1000 模组专利）、人造金刚石；摩尔定律撞物理墙后靠新材料（GaN/SiC/InP）——与 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的电路级"计算 vs 通信"是产业链上下游两端（00:15–00:19）。
-- **CPU 在 AI 里回潮**：训练 CPU:GPU 从 1:8 到 1:4 甚至 1:1，RL 与 agent 编排里 CPU 更好——与 [Modal](../videos/20260708-latent-space-modal-agent-infra.md)"inference inflection：GPU:CPU 摆回 1:1"、朱邦华"RL environments 让 CPU 变重要"三方独立同频（00:05:07）。
+- **CPU 在 AI 里回潮**：训练 CPU:GPU 从 1:8 到 1:4 甚至 1:1，RL 与 agent 编排里 CPU 更好——与 [Modal](../videos/20260708-latent-space-modal-agent-infra.md)"inference inflection：GPU:CPU 摆回 1:1"、朱邦华"RL environments 让 CPU 变重要"三方独立同频（00:05）。
 - **算力终局不押集中式**：看多 edge/client 算力（机器人/国防/家用），与 Jensen 的集中式"token 工厂"、Lewis Hong 的太空数据中心构成"算力放哪"的第三种下注；代工资本密集经济学详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)（00:41–00:44）。
 
 ## 晶圆级芯片与快推理（Andrew Feldman，美/Cerebras，2026-05）
