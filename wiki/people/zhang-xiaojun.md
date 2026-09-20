@@ -21,6 +21,7 @@
 | 2026-07-28 | [开源 Infra、模型与 Infra 的 Co-design、"如果 vLLM 失败，我们会后悔一辈子"](../videos/20260728-zhang-xiaojun-you-kaichao-vllm.md) | 游凯超（vLLM 核心维护者 / Inferact 首席科学家） |
 | 2026-07-31 | [AI for AI：元模型、physics of AI 与中美 neo labs 资本狂潮](../videos/20260731-zhang-xiaojun-liu-ziming-ai-for-ai.md)（第 149 期） | [刘子鸣](liu-ziming.md)（清华 / 期智研究院，KAN 一作） |
 | 2026-08-13 | [Cosmos 3、世界模型、武术、黄仁勋影响我的](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)（第 150 期，4 小时） | [刘洺堉](ming-yu-liu.md)（NVIDIA 研究副总裁 / Cosmos Lab） |
+| 2026-08-26 | [领读 Kimi K3 技术报告：线性注意力的前世今生、架构—Infra 协同设计](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)（第 152 期，124 分钟） | [孙宇涛](sun-yutao.md)（清华博士候选人 / 上海创智学院璞锐学者） |
 | 2026-09-03 | [产业史观：三阶段框架、会消亡的公司、"OpenAI/Anthropic 大概率不是原生时代大赢家"](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)（第 153 期，154 分钟） | [曾鸣](zeng-ming.md)（阿里前总参谋长 / 战略学者） |
 
 > ⚠️ 本表尚未回填全部已收录期数（广密、罗福莉、Freda、雨森、阳萌、Lewis Hong 等），完整清单见 index.md 的「张小珺·商业访谈录」一节。
