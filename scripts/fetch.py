@@ -121,6 +121,9 @@ def _ensure_cuda_libs(device: str) -> None:
         return  # 已在路径中
     os.environ["LD_LIBRARY_PATH"] = ":".join(lib_dirs + ([current] if current else []))
     os.environ["_FETCH_CUDA_REEXEC"] = "1"
+    # 记下注入了哪些目录：diarize_isolated() 要把它们从子进程环境里精确剥离，
+    # 否则 pyannote 那边的 torch 会撞上 CT2 的 cu12 cuDNN（见 _cudnn_conflict）。
+    os.environ["_FETCH_CUDA_DIRS"] = ":".join(lib_dirs)
     os.execv(sys.executable, [sys.executable, *sys.argv])
 
 
@@ -283,6 +286,102 @@ def _to_wav16k(audio_path: Path, tmpdir: str) -> Path:
     return wav
 
 
+def _cudnn_conflict() -> tuple[str, str] | None:
+    """检测环境里是否同时装了两个 CUDA 大版本的 cuDNN wheel。
+
+    背景（实测）：faster-whisper 的后端 CTranslate2 是按 **CUDA 12** 构建的，
+    需要 libcublas.so.12 和 cu12 版的 cuDNN 9；而 torch 2.14+cu130（pyannote
+    依赖）要的是 CUDA 13 与 cu13 版的 cuDNN 9。cuBLAS 两边 SONAME 不同
+    （.so.12 / .so.13）可以共存，**但两个 cuDNN wheel 都装进同一个
+    nvidia/cudnn/lib/ 且 SONAME 同为 libcudnn.so.9，只能活一个**——后装的
+    覆盖先装的。于是 torch 会跑在一个不是为它构建的 cuDNN 上。
+
+    cuDNN 9 大版本内 ABI 基本稳定，所以多数算子照常工作，**只在部分
+    graph API 路径上炸**，报 CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH。
+    正因为它依赖具体算子与负载，短音频复现不出来，长音频才撞上。
+
+    返回 (cu12 版本, cu13 版本) 或 None。
+    """
+    found: dict[str, str] = {}
+    try:
+        from importlib.metadata import distributions
+        for d in distributions():
+            name = (d.metadata["Name"] or "").lower()
+            if name.startswith("nvidia-cudnn-cu"):
+                found[name] = d.version
+    except Exception:
+        return None
+    if len(found) < 2:
+        return None
+    return tuple(f"{k}=={v}" for k, v in sorted(found.items()))[:2]
+
+
+def _env_without_injected_cuda() -> dict:
+    """子进程环境：剥掉 _ensure_cuda_libs 注入的 CUDA 目录。
+
+    这样 pyannote 侧的 torch 只会看到自己那套 cu13 运行库，
+    不会被 CT2 的 cu12 cuDNN 抢先。
+    """
+    env = dict(os.environ)
+    injected = [d for d in env.pop("_FETCH_CUDA_DIRS", "").split(":") if d]
+    env.pop("_FETCH_CUDA_REEXEC", None)
+    if injected:
+        keep = [d for d in env.get("LD_LIBRARY_PATH", "").split(":")
+                if d and d not in injected]
+        if keep:
+            env["LD_LIBRARY_PATH"] = ":".join(keep)
+        else:
+            env.pop("LD_LIBRARY_PATH", None)
+    return env
+
+
+def diarize_isolated(audio_path: Path, device: str = "auto",
+                     num_speakers: int | None = None,
+                     max_speakers: int | None = None,
+                     model: str | None = None) -> list[tuple[float, float, str]]:
+    """在**独立子进程**里做说话人分离，避开 cuDNN 冲突（见 _cudnn_conflict）。
+
+    只有检测到冲突、且能找到 uv 时才隔离；否则直接在本进程里跑 diarize()，
+    行为与以前完全一致。子进程用 `uv run --with pyannote.audio` 起一个
+    **不含 cu12 wheel** 的环境，于是 torch 用回自己那套 cu13 cuDNN。
+    失败一律回退到进程内执行，再失败就返回空列表（调用方退化为无标签转录稿）。
+    """
+    conflict = _cudnn_conflict()
+    uv = shutil.which("uv")
+    script = Path(__file__).resolve()
+    if not conflict or not uv:
+        return diarize(audio_path, device, num_speakers, max_speakers, model)
+
+    print(f"检测到 cuDNN 冲突（{conflict[0]} vs {conflict[1]}）："
+          f"转录需要 cu12、pyannote 的 torch 需要 cu13，而两者共用 libcudnn.so.9。\n"
+          f"→ 说话人分离改到独立子进程执行（不含 cu12 wheel）。", flush=True)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "turns.json"
+        cmd = [uv, "run", "--with", "pyannote.audio", str(script),
+               "--diarize-worker", str(audio_path), str(out), "--device", device]
+        if num_speakers:
+            cmd += ["--num-speakers", str(num_speakers)]
+        if max_speakers:
+            cmd += ["--max-speakers", str(max_speakers)]
+        if model:
+            cmd += ["--model", model]
+        try:
+            r = subprocess.run(cmd, env=_env_without_injected_cuda(), timeout=7200)
+        except Exception as e:
+            print(f"分离子进程启动失败（{e}），改在本进程内重试。", file=sys.stderr)
+            return diarize(audio_path, device, num_speakers, max_speakers, model)
+        if r.returncode != 0 or not out.is_file():
+            print("分离子进程未产出结果，改在本进程内重试。", file=sys.stderr)
+            return diarize(audio_path, device, num_speakers, max_speakers, model)
+        try:
+            return [(float(a), float(b), str(c)) for a, b, c in
+                    json.loads(out.read_text(encoding="utf-8"))]
+        except Exception as e:
+            print(f"分离结果解析失败（{e}）。", file=sys.stderr)
+            return []
+
+
 def diarize(audio_path: Path, device: str = "auto",
             num_speakers: int | None = None,
             max_speakers: int | None = None,
@@ -393,8 +492,8 @@ def assign_speakers(segs: list, turns: list[tuple[float, float, str]]) -> list[s
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("url")
-    ap.add_argument("--kol", required=True, help="watchlist 里的 slug，用作目录名")
+    ap.add_argument("url", nargs="?", help="视频 URL")
+    ap.add_argument("--kol", help="watchlist 里的 slug，用作目录名")
     ap.add_argument("--lang", help="强制字幕语言代码（如 zh-Hans），跳过自动选择；"
                                    "用于自动配音版原声轨道等特殊情况")
     ap.add_argument("--audio", action="store_true", help="无字幕时下载音频")
@@ -410,9 +509,28 @@ def main() -> None:
     ap.add_argument("--whisper-model", default=DEFAULT_WHISPER_MODEL,
                     help=f"faster-whisper 模型（默认 {DEFAULT_WHISPER_MODEL}）："
                          "tiny/base/small/medium/large-v3/large-v3-turbo")
+    ap.add_argument("--model", help="分离模型 checkpoint（默认 "
+                                    f"{DIARIZATION_MODEL}）")
+    ap.add_argument("--diarize-worker", nargs=2, metavar=("AUDIO", "OUT_JSON"),
+                    help=argparse.SUPPRESS)  # 内部用：在干净环境的子进程里只做分离
     ap.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"],
                     help="faster-whisper 推理设备（默认 auto，GPU 不可用时自动回退 CPU）")
     args = ap.parse_args()
+
+    # ── 内部 worker 模式：只做说话人分离，把结果写成 JSON ──
+    # 由 diarize_isolated() 在一个不含 cu12 wheel 的子环境里调起，
+    # 目的是让 pyannote 的 torch 用回自己那套 cu13 cuDNN。
+    if args.diarize_worker:
+        audio, out_json = args.diarize_worker
+        turns = diarize(Path(audio), args.device,
+                        args.num_speakers, args.max_speakers, args.model)
+        Path(out_json).write_text(json.dumps(turns), encoding="utf-8")
+        return
+
+    if not args.url:
+        ap.error("需要提供视频 URL")
+    if not args.kol:
+        ap.error("需要 --kol")
 
     if args.diarize and not args.transcribe:
         ap.error("--diarize 需配合 --transcribe 使用（只对本地转录的音频生效，"
@@ -476,8 +594,8 @@ def main() -> None:
             speakers = None
             subtitle = f"{transcribe_lang} (faster-whisper {args.whisper_model})"
             if args.diarize:
-                turns = diarize(audio_path, args.device,
-                                args.num_speakers, args.max_speakers)
+                turns = diarize_isolated(audio_path, args.device,
+                                         args.num_speakers, args.max_speakers)
                 if turns:  # 分离失败时 turns 为空，退化为无标签转录稿
                     speakers = assign_speakers(segs, turns)
                     subtitle += f" + pyannote diarization ({len(set(speakers))} 说话人)"

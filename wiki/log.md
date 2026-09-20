@@ -395,8 +395,8 @@
 
 ## 2026-09-20（三续）— 补摄取 2 期：Satya Nadella（All-In）、孙宇涛领读 Kimi K3（张小珺 152）
 
-- **限流已解**：上午被拦的两期今天晚些时候都取到了。⚠️ **本次 K3 那期带 `--diarize` 直接跑，但 GPU 分离失败**——`CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH`。原因清楚：`_ensure_cuda_libs` 为 faster-whisper（CTranslate2）把 `nvidia-cudnn-cu12` wheel 塞进 `LD_LIBRARY_PATH`，而 pyannote 自带 torch 有自己的 cuDNN，两者版本冲突。**脚本按设计优雅降级，产出了无标签转录稿**；随后用 `backfill_diarization.py` 补做成功——**因为它有自己的 main，不调用 `_ensure_cuda_libs`，LD_LIBRARY_PATH 干净**。
-  - ⚠️ **本库记一条待办**：**`fetch.py --transcribe --diarize` 在本机 GPU 路径上是走不通的**（CLAUDE.md 里那条一键命令），只能"先转录、再 backfill"两步走。**本次未改脚本**。
+- **限流已解**：上午被拦的两期今天晚些时候都取到了。⚠️ **本次 K3 那期带 `--diarize` 直接跑，但 GPU 分离失败**——`CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH`。⚠️ **这里当时给的原因是错的，当天稍后经排查更正，见下一条日志**——真正的原因不是 `LD_LIBRARY_PATH` 的加载顺序，而是**两个 cuDNN wheel 装进同一路径、SONAME 相同只能活一个**。**脚本按设计优雅降级，产出了无标签转录稿**；随后用 `backfill_diarization.py` 补做成功——**因为它有自己的 main，不调用 `_ensure_cuda_libs`，LD_LIBRARY_PATH 干净**。
+  - ⚠️ **本库记一条待办**：`fetch.py --transcribe --diarize` 当时在本机 GPU 路径上走不通，只能"先转录、再 backfill"两步走。**本次未改脚本**。（⚠️ **已于当天稍后修复，见下一条日志**。）
 - **Ingest 2 期**：
   - **All-In / [Satya Nadella](people/satya-nadella.md)（微软董事长兼 CEO，现场活动）——本库第一份超大规模云厂商一号位的材料。** 此前基础设施视角来自芯片侧、推理引擎侧或投资人侧，**买方与卖方之间的云这一层一直是别人口中的第三方**。
     - ⚠️ **它同时被本库另外两期直接指涉**：曾鸣判定微软"模型这块已经出局了"，而**本期主持人几乎原样问出"你没有前沿模型"**；Satya 的回应是 **MAI 模型"正在顺利地建"、从最底部爬坡、"不蒸馏任何东西"**。**本库不裁决，但指出两人用的是不同判据**——曾鸣问"能否成为原生应用阶段的大赢家"，Satya 答"我们有没有自己的模型能力与企业侧差异化"，**这两个问题可以同时是"是"和"否"**。
@@ -410,3 +410,41 @@
 - ⚠️ **一条跨期的观察，本库认为值得单独记**：**曾鸣从产业史推出"大模型没有太本质的创新了"，孙宇涛从架构内部数出了几乎同一句话**——但**路径完全独立**（一个数的是历史阶段，一个数的是每项改进的来源与代价）。而 **Brockman 与 Satya 都认为能力已经够用、瓶颈在别处**。**四期并读会看到"还能不能变强"和"变强还重不重要"是两个问题。** 四个页面已互相链接。
 - **更新**：index（人物 +2、视频 +2、主题页描述补词 6 处）；**新建人物页 2 个**（`satya-nadella`、`sun-yutao`）；`zhang-xiaojun`（访谈表 +1 行）；**8 个主题页**——llm-security、ai-business-and-value-capture、ai-infrastructure（两期各加一节）、china-us-ai（两期各加一节）、ai-and-jobs、using-llms-in-practice、llm-training-pipeline、ai-lab-culture、evaluation-and-benchmarks。
 - **巡检**：本次新建与修改的全部文件**0 处失效锚点**；全库仍为**38 处**历史遗留，未动。⚠️ 过程中自查出两处自己引入的错误并已修：一处把 `开源禁令的可执行性` 写成了同页锚点（实际标题在 `llm-security.md`），一处沿用了已被修正的 slug 规则。
+
+## 2026-09-20（四续）— 排查并修复 `CUDNN_STATUS_SUBLIBRARY_VERSION_MISMATCH`
+
+⚠️ **先更正上一条日志里的错误结论**：我当时把原因写成"`_ensure_cuda_libs` 注入 `LD_LIBRARY_PATH` 导致 torch 与 CT2 的 cuDNN 冲突"。**这个说法站不住**——按它复刻条件（污染环境 + 注入 `LD_LIBRARY_PATH` + 先 GPU 转录再跑真实 pyannote pipeline）**四组实验全部成功，复现不出来**。
+
+### 实际根因（有证据）
+
+两个 CUDA 大版本的运行库被同时装进一个环境：
+
+| 组件 | 需要 | 来源 |
+|---|---|---|
+| **CTranslate2**（faster-whisper 后端） | CUDA **12**：`libcublas.so.12` + cu12 版 cuDNN 9 | 只能靠 `--with nvidia-*-cu12` 注入 |
+| **torch 2.14.0+cu130**（pyannote 依赖） | CUDA **13**：`libcublas.so.13` + cu13 版 cuDNN 9（9.24） | torch 自己拉 |
+
+- **cuBLAS 两边 SONAME 不同**（`.so.12` / `.so.13`），可以共存。
+- ⚠️ **cuDNN 不行**：`nvidia-cudnn-cu12`（9.26.0.51）与 `nvidia-cudnn-cu13`（9.24.0.43）**都装进同一个 `nvidia/cudnn/lib/`、SONAME 同为 `libcudnn.so.9`，后装的覆盖先装的**。实测目录里活下来的是 cu12 的 9.26，而 `torch.backends.cudnn.version()` 自报期望 **92400（9.24）**——**torch 正跑在一个不是为它构建的 cuDNN 上**。
+- **为什么不可复现**：cuDNN 9 大版本内 ABI 基本稳定，多数算子照常工作，**只在部分 graph API 路径上炸**（报错里的 `CUDNN_BACKEND_TENSOR_DESCRIPTOR` / `cudnnFinalize` 正是 graph API）。**依赖具体算子与负载，30 秒切片碰不到，124 分钟那次碰上了。**
+- ⚠️ **同时更正另一个说法**：backfill 之所以"成功"，不是因为 `LD_LIBRARY_PATH` 干净，而是那个环境里**根本没有 cu12 wheel**——代价是 **`libcublas.so.12` 缺失，whisper 静默退回了 CPU**。也就是说**之前两次 backfill 的 whisper 重跑都是 CPU 跑的**。两条路都不理想：一条 GPU 转录但分离随机炸，一条分离稳但转录退化到 CPU。
+
+### 修复：进程隔离（`scripts/fetch.py`，+123/−4）
+
+**让两套运行库不共处一个进程**：转录留在 cu12 环境走 GPU，**分离改到独立子进程、用不含 cu12 wheel 的环境**，torch 于是用回自己那套 cu13 cuDNN。
+
+- 新增 **`_cudnn_conflict()`**：检测是否同时装了两个 `nvidia-cudnn-cu*`。
+- 新增 **`_env_without_injected_cuda()`**：从子进程环境里**精确剥离** `_ensure_cuda_libs` 注入的目录（后者现在把注入路径记进 `_FETCH_CUDA_DIRS`）。
+- 新增 **`diarize_isolated()`**：**只在检测到冲突且能找到 `uv` 时**才隔离，用 `uv run --with pyannote.audio` 起子进程；**否则原样在进程内跑 `diarize()`，行为与以前完全一致**。
+- 新增隐藏开关 **`--diarize-worker AUDIO OUT_JSON`**（`argparse.SUPPRESS`），子进程只做分离、结果写 JSON。为此 `url` 与 `--kol` 改为后置校验（普通模式的报错行为不变）。
+- **三层兜底**：子进程起不来 / 无产出 → 回退进程内执行；再失败 → 返回空列表，**退化为无标签转录稿，绝不让摄取流程失败**。
+
+### 验证
+
+- ✅ **污染环境下走子进程**：正确检测到冲突、`LD_LIBRARY_PATH` 剥离后为空、拿回 6 轮次结果，**无回退**。
+- ✅ **修复前的同一路径**确实会走回退（这条是在修 `--kol` 必填之前测到的，也顺带证明了兜底有效）。
+- ✅ **干净环境不触发隔离**（`_cudnn_conflict()` 返回 `None`），走原有进程内路径。
+- ✅ **worker 模式单独可跑**，产出 JSON。
+- ✅ **`--help` 不暴露内部开关**；普通模式缺 URL / 缺 `--kol` 的报错行为不变。
+
+⚠️ **仍未解决的一条**：这只是让两者不互相污染，**没有消除"环境里装着两个 cuDNN"这个事实**。更彻底的做法是把转录与分离彻底拆成两个 uv 环境（或把 torch 换成 cu12 构建），**本次没做**——当前方案的好处是**对调用方零改动**，CLAUDE.md 里那条一键命令现在可以正常用了。
