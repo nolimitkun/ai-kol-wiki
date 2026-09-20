@@ -7,6 +7,12 @@
 
 > **说话人认定依据**：自动字幕**只有 `>>` 换行符，没有姓名标签**。嘉宾身份由开场主持词确定。主持方**四人中有三人能由正文点名定位**：**Sacks**（[00:30:31] 被点名"Sax I want to let you get in here"）、**David Friedberg**（[00:11:11] Satya 称"A great question, David"）、**Chamath**（[00:24:24]、[00:33:33] Satya 两次提到"Chamath 的问题/观点"）、**Jason**（[00:27:29] 提到"Jason's question"）。⚠️ **但逐句归属仍不可靠**——提问常由多人接力，本页除上述可定位处外**一律写"主持人"**。
 
+> **2026-09-20 补：机械分离结果（[speakers.md](../../sources/all-in/20260915-hdcsTeCFE0I/speakers.md)）**。分离聚出 7 个标签，初看偏多，但占比结构与本期形态**完全吻合**：**SPEAKER_01 占 74.5%**（嘉宾主导的 37 分钟访谈，即 Satya），其后是**四个量级相当的主持声音**（8.1% / 7.2% / 4.8% / 4.7%），再加两个可忽略的零头（0.5% / 0.2%）。即 **1 嘉宾 + 4 主持 + 2 碎片**，正是 All-In 的班底，并非异常。
+>
+> **一处得到机械佐证**：[00:11:11] Satya 说"A great question, David"，而该锚点前 SPEAKER_00 连续说了 58 秒（00:10:29–00:11:27）、随后 SPEAKER_01 接过去讲了 174 秒——**SPEAKER_00 大概率是 David Friedberg**。
+>
+> ⚠️ **其余三处点名（Sacks / Chamath / Jason）机械证据不足以定人**：这些点名都出自 Satya 之口，被点的人说话在其前后，而锚点是约 60 秒一块，块内位置无法确定。本页维持原策略——除上述可定位处外**一律写"主持人"**。
+
 > **自动字幕专名对照表**：`Scott Nadella`/`Satia`→Satya Nadella、`coot`→CoT（chain of thought，主持人当场复述确认）、`hugging phase`→Hugging Face、`Daario`→Dario、`Dwaresh`→Dwarkesh、`Postgress`→Postgres、`interrupt`（多处）→interop、`Quinsey`→Quincy（华盛顿州）、`longunning`→long-running、`asset test`→acid test。
 >
 > ⚠️ **以下几处本库不裁决**：
