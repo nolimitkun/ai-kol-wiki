@@ -86,22 +86,24 @@
 - [Erik Allebest](people/erik-allebest.md) — Chess.com 联创兼 CEO，本库唯一的回溯样本：机器超人 30 年后的人类活动、重复不可外包、作弊检测的上界
 - [Greg Brockman](people/greg-brockman.md) — OpenAI 联创兼总裁，本库第一份前沿实验室领导层材料："AGI 是光谱不是时间点"、defender window、defense factory、"不是我们被许诺的 AI"
 - [曾鸣](people/zeng-ming.md) — 阿里前总参谋长 / 战略学者，本库第一份商业史学者视角：三阶段论、模型公司=AI 云、科层制衰亡、岗位→任务、看十年想三年干一年
+- [Satya Nadella](people/satya-nadella.md) — 微软董事长兼 CEO，本库第一份超大规模云厂商一号位材料：扩散优先于放缓、insider risk、capability overhang、开源制衡与应用层毛利、7–8% GDP 门槛
+- [孙宇涛](people/sun-yutao.md) — 清华博士候选人 / RetNet 与 YOCO 作者，本库技术密度最高的一期：线性注意力演进史、推理开销三分法、两个矩阵连乘的定律、"忒修斯之船"
 
 ## 主题
 
-- [LLM 训练管线](topics/llm-training-pipeline.md) — 预训练 / SFT / RL、scaling laws（含 Jensen 的四阶段扩展）、多模态融合与双塔架构、迭代速度 > 算法
+- [LLM 训练管线](topics/llm-training-pipeline.md) — 预训练 / SFT / RL、scaling laws（含 Jensen 的四阶段扩展）、多模态融合与双塔架构、迭代速度 > 算法、线性注意力演进史（RetNet→KDA）与架构—Infra 协同设计、两个矩阵连乘的定律、NoPE
 - [LLM 心理学与认知短板](topics/llm-psychology.md) — 幻觉、工作记忆、token 思考、瑞士奶酪能力、性状跨代传递（"Gemini 抑郁"）
 - [LLM 实用方法论](topics/using-llms-in-practice.md) — 如何有效使用 LLM（Karpathy、Grant/Dwarkesh 的学习法）、"markdown 即员工"与 skillify、token maxing、"跟不上 AI 的处理速度"与人的节奏
-- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）、测能力边缘上的任务、eval 是刹车（投入约 1:1）、自洽性指标被玩坏、"AGI 是光谱不是时间点"与判据迁移（24 小时相干运行）
-- [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法、NVIDIA 的反向模式（不裁员/不赛马/mission is the boss）、科层制衰亡与岗位→任务、New Lab vs New New Lab、全员合伙人、战略生成
+- [评估与 Benchmark](topics/evaluation-and-benchmarks.md) — test-time compute、bench maxing、纸面趋同（Noam、Mark、姚顺宇）、评估权在买方（企业 RFP）、测能力边缘上的任务、eval 是刹车（投入约 1:1）、自洽性指标被玩坏、"AGI 是光谱不是时间点"与判据迁移（24 小时相干运行）、"有效 vs 无效的 scaling"、能力定义论
+- [AI 实验室文化与组织](topics/ai-lab-culture.md) — top-down vs bottom-up、make bets、集体主义（姚顺宇、Mark）、Google 人才外流的四种读法、NVIDIA 的反向模式（不裁员/不赛马/mission is the boss）、科层制衰亡与岗位→任务、New Lab vs New New Lab、全员合伙人、战略生成、"模型内科"与一条关于"不科学"的定义
 - [LLM OS 与新计算范式](topics/llm-os.md) — LLM 作为操作系统内核的世界观
 - [LLM 安全](topics/llm-security.md) — 越狱、提示注入、数据投毒、安全评估的 test-time compute 缺口、护栏误杀与"只看风险不看收益"、供应链与凭证（payload 即 prompt）、AI 自主恶意行为三起事件（傀儡账号 / 包管理器传纸条）、"对齐到谁"与受托人之争、责任落在终端用户、机器产出冒充人类产出的检测上界、当事方一侧的 Hugging Face 叙述（defender window / defense factory / P0 饱和）
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）、结构生物学四家对照、中性软件工厂、Eroom's law、1 万 agent 解 Navier–Stokes（自述未核实）
-- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突
-- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）、协调层而非岗位被替代、"20 年 white pill"、机器超人 30 年后的国际象棋（本库唯一回溯样本）、前沿实验室领导层的立场（"人的价值不在任务"）、创造力时代与"老登"现象的经验贬值机制
+- [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突、云厂商的资本配置（kit 占 60%、不为一两个客户建）、K3 与 DeepSeek 的 overlap/PP 路线分野
+- [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）、协调层而非岗位被替代、"20 年 white pill"、机器超人 30 年后的国际象棋（本库唯一回溯样本）、前沿实验室领导层的立场（"人的价值不在任务"）、创造力时代与"老登"现象的经验贬值机制、"三天工作制但只增长两个半百分点"的风险与 7–8% GDP 门槛
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"、go-to-market（lighthouse vs land grab、重新卖大软件的窗口）、三阶段论与"模型公司=AI 云"（寡头+强监管、ARR 增长幻觉、边际成本定价）
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案、world foundation model 与 action 作为 first class citizen、机器人应类比"电器"而非"汽车"
-- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户、实习生作为 knowhow 的第三条扩散通道、"美国 AI 情绪全球最低"与人口结构归因、中国收敛慢源于先发期缺失、字节能成 AI 云但 2C 不确定
+- [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户、实习生作为 knowhow 的第三条扩散通道、"美国 AI 情绪全球最低"与人口结构归因、中国收敛慢源于先发期缺失、字节能成 AI 云但 2C 不确定、K3 与 V4 的上限 vs 性价比分化、风险不分国界的对称性论证
 - [AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md) — 用 AI 加速 AI 研究本身：元模型、physics of AI、neo labs、与 RSI 的关系、本库第一份正面 RSI 论证（换算链、产业爆炸、sloppocalypse）、自改进的组织
 - [开源基础设施与治理](topics/open-source-infrastructure.md) — 公共软件底座由谁维护、靠什么撑住：伯克利谱系、基金会+公司双层结构、AI slop 与个人贡献者的黄昏、许可证分层与部署足迹、包注册表的资助缺口
 
@@ -146,6 +148,7 @@
 - 2026-07-28 [游凯超：开源 Infra、模型与 Infra 的 Co-design、"如果 vLLM 失败，我们会后悔一辈子"](videos/20260728-zhang-xiaojun-you-kaichao-vllm.md)
 - 2026-07-31 [刘子鸣：AI for AI、元模型、physics of AI 与中美 neo labs 资本狂潮](videos/20260731-zhang-xiaojun-liu-ziming-ai-for-ai.md)
 - 2026-08-13 [刘洺堉（NVIDIA 研究 VP）：Cosmos 3、世界模型、武术、黄仁勋影响我的（第 150 期，4 小时）](videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+- 2026-08-26 [孙宇涛：领读 Kimi K3 技术报告——线性注意力的前世今生、架构—Infra 协同设计（第 152 期，124 分钟）](videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 - 2026-09-03 [曾鸣：产业史观、三阶段框架、会消亡的公司、"OpenAI/Anthropic 大概率不是原生时代大赢家"（第 153 期，154 分钟）](videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
 
 ### 月球大叔
@@ -197,6 +200,7 @@
 - 2026-07-31 [芯片股崩盘、200 亿基金爆仓、"Pacing the Frontier"联署、Anthropic 碎书](videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 - 2026-08-06 [Saronic：中国造船产能是美国的 230 倍——自主舰队、VLS 单位经济学、Port Alpha 首发](videos/20260806-all-in-saronic-shipbuilding.md)
 - 2026-08-08 [Google 的 AI 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI](videos/20260808-all-in-google-brain-drain-spacex-airtable.md)
+- 2026-09-15 [Satya Nadella：放缓之争、微软的牌与"谁赢 AI"（现场活动）](videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
