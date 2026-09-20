@@ -31,7 +31,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import fetch  # 复用 diarize() / fmt_ts() / run()，避免逻辑二次实现
+import fetch  # 复用 diarize_isolated() / fmt_ts() / run()，避免逻辑二次实现
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "sources"
@@ -226,8 +226,13 @@ def main() -> None:
             failed += 1
             continue
         try:
-            turns = fetch.diarize(audio, args.device,
-                                  args.num_speakers, args.max_speakers, args.model)
+            # 走 diarize_isolated 而非 diarize：本脚本通常在干净环境里跑（torch 自带
+            # cu13 cuDNN，没冲突，它会直接落到进程内执行）；但若有人顺手注入了
+            # --with nvidia-cudnn-cu12，两个 wheel 会抢同一个 libcudnn.so.9，
+            # 于是 torch 撞上不是为它构建的那份。隔离版会自动识别并改用子进程。
+            turns = fetch.diarize_isolated(audio, args.device,
+                                           args.num_speakers, args.max_speakers,
+                                           args.model)
         finally:
             if downloaded and not args.keep_audio:
                 audio.unlink(missing_ok=True)
