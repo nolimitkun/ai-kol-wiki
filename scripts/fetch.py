@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["yt-dlp"]
+# dependencies = ["yt-dlp>=2026.8"]
 # ///
 """摄取单个视频：抓元数据 + 字幕，生成 sources/<kol>/<date>-<id>/transcript.md
 
@@ -45,6 +45,7 @@ import importlib.util
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -71,6 +72,27 @@ def run(cmd: list[str], timeout: int | None = None) -> subprocess.CompletedProce
         return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired:
         sys.exit(f"命令超时（{timeout}s）: {' '.join(cmd[:2])} …")
+
+
+def _ytdlp() -> list[str]:
+    """yt-dlp 的公共命令前缀。
+
+    YouTube 已弃用没有 JS runtime 的提取路径：缺 runtime 时元数据和字幕照常
+    能取，但**音频/视频流会 403**——也就是 --transcribe / --audio 这两条路
+    整条断掉，而有字幕的视频完全看不出问题。yt-dlp 默认只启用 deno，本机
+    一般只有 node，故检测到就显式指定。没有 node 时保持原样（不报错，仍可
+    走字幕路径）。
+
+    另：内联依赖对 yt-dlp 设了版本下限。uv 会缓存脚本的解析结果，本机一度停在
+    2026.07.04——该版本不认识下面固定的 visionos 客户端，默认列表落到
+    android_vr，媒体 URL 直接 403。没有下限时这种回退是静默的。
+    """
+    cmd = ["yt-dlp"]
+    if shutil.which("node"):
+        cmd += ["--js-runtimes", "node"]
+    cmd += ["--extractor-args", "youtube:player_client=visionos,default"]
+    return cmd
+
 
 
 def _ensure_cuda_libs(device: str) -> None:
@@ -401,7 +423,7 @@ def main() -> None:
         _ensure_cuda_libs(args.device)
 
     print(f"抓取元数据: {args.url}")
-    r = run(["yt-dlp", "-J", "--no-playlist", args.url], timeout=120)
+    r = run(_ytdlp() + ["-J", "--no-playlist", args.url], timeout=120)
     if r.returncode != 0:
         sys.exit(f"yt-dlp 失败:\n{r.stderr[-2000:]}")
     info = json.loads(r.stdout)
@@ -437,8 +459,8 @@ def main() -> None:
             print(f"下载音频...")
             # 直接取原生音频流，不转码成 mp3：whisper 内部会用 ffmpeg 解码，
             # 省一次有损重编码（更快、也更准）。
-            r2 = run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
-                      "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
+            r2 = run(_ytdlp() + ["--no-playlist", "-f", "bestaudio/best",
+                                 "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
             if r2.returncode != 0:
                 sys.exit(f"音频下载失败:\n{r2.stderr[-2000:]}")
             audio_files = [p for p in dest.glob("audio.*") if p.suffix != ".md"]
@@ -467,8 +489,8 @@ def main() -> None:
         print("没有可用字幕。", file=sys.stderr)
         if args.audio:
             dest.mkdir(parents=True, exist_ok=True)
-            run(["yt-dlp", "--no-playlist", "-f", "bestaudio/best",
-                 "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
+            run(_ytdlp() + ["--no-playlist", "-f", "bestaudio/best",
+                            "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
             sys.exit(f"音频已下载到 {dest}，请安排转录（如 whisper）。")
         sys.exit("可加 --audio 下载音频后用 whisper 转录。")
 
@@ -476,10 +498,10 @@ def main() -> None:
     kind = "自动" if auto else "人工"
     print(f"下载字幕: {lang}（{kind}）")
     with tempfile.TemporaryDirectory() as tmp:
-        cmd = ["yt-dlp", "--no-playlist", "--skip-download",
-               "--sub-langs", lang, "--sub-format", "vtt",
-               "--write-auto-subs" if auto else "--write-subs",
-               "-o", f"{tmp}/sub", args.url]
+        cmd = _ytdlp() + ["--no-playlist", "--skip-download",
+                          "--sub-langs", lang, "--sub-format", "vtt",
+                          "--write-auto-subs" if auto else "--write-subs",
+                          "-o", f"{tmp}/sub", args.url]
         r = run(cmd, timeout=300)
         vtts = list(Path(tmp).glob("*.vtt"))
         if not vtts:
