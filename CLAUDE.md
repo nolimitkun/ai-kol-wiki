@@ -59,16 +59,21 @@ scripts/
    - 转录稿带 `SPEAKER_XX` 标签时，结合视频标题/简介/频道判断每个标签对应谁，在视频页开头记一次映射（如 `SPEAKER_00 = 张小珺（主持）`、`SPEAKER_01 = 姚顺宇`）。**匿名标签留在 `sources/` 不改**——认人是编辑判断，属于 wiki 层，符合"原始资料只增不改、勘误在 wiki 层处理"。
    - 分离结果并非完美（抢话、串场会错配）。标签是证据不是判决：与内容明显矛盾时以内容为准，并在视频页注明存疑。
    - 同目录若有 `speakers.md`（补做分离的 sidecar），把它和转录稿对照着读：轮次表给出各时间段的说话人，说话占比低的通常是主持人。
-
-### Backfill（给旧转录稿补分离）
-`uv run --with pyannote.audio scripts/backfill_diarization.py --dry-run` 先看范围，去掉 `--dry-run` 执行。
-只**新增** `speakers.md`，`transcript.md` 逐字节不动（脚本用 sha256 前后比对做硬保证）——
-因为补做分离要重跑 whisper 取片段级时间轴，而重跑会让切分漂移，
-重写转录稿会使 wiki 里已有的 `[HH:MM:SS]` 引用失准。只增不改，旧引用全部继续有效。
-音频缺失会自动重下（`.gitignore` 已排除音频，不进仓库），默认用完即删。
 3. 创建 `wiki/videos/` 页；更新或创建相关 `wiki/people/` 和 `wiki/topics/` 页。
 4. 维护交叉链接（相对路径 Markdown 链接）；更新 `wiki/index.md`。
 5. 在 `wiki/log.md` 追加一行操作记录。
+
+### Backfill（给旧转录稿补分离）
+`uv run --with pyannote.audio scripts/backfill_diarization.py --dry-run` 先看范围，去掉 `--dry-run` 执行。
+只**新增** `speakers.md`（pyannote 的说话占比 + 轮次表），`transcript.md` 逐字节不动
+（脚本用 sha256 前后比对做硬保证）。
+
+**脚本本身不跑 whisper**，只做分离：要把 `SPEAKER_XX` 标签嵌回转录稿正文才需要
+重跑 whisper 取片段级时间轴，而重跑会让切分漂移，使 wiki 里已有的 `[HH:MM:SS]`
+引用失准。所以这里只出 sidecar——只增不改，旧引用全部继续有效。
+sidecar 怎么和转录稿对照着读，见上面 Ingest 第 2 步。
+
+音频缺失会自动重下（`.gitignore` 已排除音频，不进仓库），默认用完即删。
 
 ### Query（查询）
 从 `wiki/index.md` 出发定位相关页面，综合回答并**引用来源**（视频页 + 时间戳）。

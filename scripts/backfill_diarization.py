@@ -5,11 +5,12 @@
 """给已摄取的转录稿补做说话人分离，结果写成 **sidecar** 文件，不改转录稿本身。
 
 为什么是 sidecar 而不是重写 transcript.md：
-    分离需要片段级时间轴，而存档的转录稿只保留了每 60 秒一个锚点，补做就得重跑
-    whisper——而 whisper 的切分在不同运行/不同模型间会漂移，重写会让 wiki 里已有的
-    [HH:MM:SS] 引用失准。加之 CLAUDE.md 规定 sources/ 只增不改。
-    所以这里只**新增** speakers.md（增，不是改），transcript.md 逐字节不动，
-    已有引用全部继续有效。
+    本脚本**只跑 pyannote，不跑 whisper**，产出的是纯时间轴上的说话人轮次表。
+    要把 SPEAKER_XX 标签嵌回转录稿正文才需要片段级对齐，而存档的转录稿只留了
+    每 60 秒一个锚点，那就得重跑 whisper——whisper 的切分在不同运行/不同模型间
+    会漂移，重写会让 wiki 里已有的 [HH:MM:SS] 引用失准。加之 CLAUDE.md 规定
+    sources/ 只增不改。所以这里只**新增** speakers.md（增，不是改），
+    transcript.md 逐字节不动，已有引用全部继续有效。
 
 用法（需 pyannote + HF_TOKEN + GPU，见 fetch.py 文档）:
     uv run scripts/backfill_diarization.py --dry-run          # 先看会处理哪些
