@@ -20,39 +20,39 @@
 
 来源：[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md)
 
-- **模型写 90% 的代码**（"不保守就是 99%–100%"）：人最重要的工作变成设计逻辑、给合理 context（如指一个 reference 文件）、审查代码是否真的合理（00:38–00:40）。
-- **实验/实现 idea 的效率比一年半前提升 20–50 倍**：可同时开好几个 idea 并行试，模型还能帮监控实验；但工作时间反而更长、密度更高——"越试越想试"（00:40–00:42）。
-- 遇到看不懂的文件不再去约人、等几小时，"问一下 Gemini，5 秒告诉你结果就接着干"（00:41）。
-- 判断人是否"靠谱"的面试题：**24 小时从 0 到 1 做一个 RL 项目 + 1 小时讨论**——考察能否有效利用 AI，以及是否真理解 AI 做了什么（全盘扔给 AI 会在讨论中露馅）（03:31–03:33）。
+- **模型写 90% 的代码**（"不保守就是 99%–100%"）：人最重要的工作变成设计逻辑、给合理 context（如指一个 reference 文件）、审查代码是否真的合理（00:38:49–00:40:50）。
+- **实验/实现 idea 的效率比一年半前提升 20–50 倍**：可同时开好几个 idea 并行试，模型还能帮监控实验；但工作时间反而更长、密度更高——"越试越想试"（00:40:50–00:42:50）。
+- 遇到看不懂的文件不再去约人、等几小时，"问一下 Gemini，5 秒告诉你结果就接着干"（00:41:50）。
+- 判断人是否"靠谱"的面试题：**24 小时从 0 到 1 做一个 RL 项目 + 1 小时讨论**——考察能否有效利用 AI，以及是否真理解 AI 做了什么（全盘扔给 AI 会在讨论中露馅）（03:31:10–03:33:11）。
 
 ## Peter Steinberger（美/奥，OpenClaw 作者，2026-02）：agentic engineering 方法论
 
 来源：[OpenClaw 访谈](../videos/20260212-lex-openclaw-steinberger.md)
 
-- **"Vibe coding 是蔑称"**，他做 agentic engineering；**agentic 曲线/陷阱**：新手短 prompt → 中期过度复杂化（8 agent 编排、18 个 slash 命令）→ 精通后回归短 prompt。全自动 orchestrator = 回到 70 年代瀑布模型，丢掉 style 与 human touch（01:04–01:05、01:19–01:21）。
-- **对 agent 的共情是核心技能**：agent 每个 session 从零开始探索你的代码库，要指路、要"take your time"；世界级程序员骂 LLM，恰因编程太强妨碍其共情一个冷启动的系统（01:05–01:07、01:17–01:18）。**代码库应为 agent 优化**：别跟 agent 起的名字较劲——那是权重里最自然的名字，下次搜索它找的就是它（01:12–01:13）。
-- 工作流细节：并行 4–10 agent；**语音输入为主**（与 Karpathy "别打字了"一致，他一度说话说到失声）；从不 revert、永远 commit main（"refactor 现在很便宜"）；每个 feature 合并后问"现在有什么可以 refactor 的"、"如果重来你会怎么做"；PR 审核第一问是"你理解这个 PR 的意图吗"而非看实现（01:13–01:16、01:35–01:37）。
-- **模型手感论**：Opus 角色扮演强、动手快偏 trial-and-error（"有点太美国"），Codex 默认读更多代码、可跑 6 小时（"是德国人"）；差异在 post-training 目标而非原始智能，换模型给自己一周适应期；"模型变笨了"多半是你的项目在长 slop（01:39–01:47）。
-- **MCP vs CLI/skills**：CLI 可组合（接 `jq` 过滤、写成脚本）、零 context 污染；MCP 返回大 blob 必须整个进 context、需训练适配。skills = "一句话描述 → 按需加载"，与 CLI 天然互补；例外是需要状态的 Playwright（02:38–02:42）。
+- **"Vibe coding 是蔑称"**，他做 agentic engineering；**agentic 曲线/陷阱**：新手短 prompt → 中期过度复杂化（8 agent 编排、18 个 slash 命令）→ 精通后回归短 prompt。全自动 orchestrator = 回到 70 年代瀑布模型，丢掉 style 与 human touch（01:04:56–01:05:57、01:19:29–01:21:32）。
+- **对 agent 的共情是核心技能**：agent 每个 session 从零开始探索你的代码库，要指路、要"take your time"；世界级程序员骂 LLM，恰因编程太强妨碍其共情一个冷启动的系统（01:05:57–01:07:59、01:17:19–01:18:20）。**代码库应为 agent 优化**：别跟 agent 起的名字较劲——那是权重里最自然的名字，下次搜索它找的就是它（01:12:04–01:13:09）。
+- 工作流细节：并行 4–10 agent；**语音输入为主**（与 Karpathy "别打字了"一致，他一度说话说到失声）；从不 revert、永远 commit main（"refactor 现在很便宜"）；每个 feature 合并后问"现在有什么可以 refactor 的"、"如果重来你会怎么做"；PR 审核第一问是"你理解这个 PR 的意图吗"而非看实现（01:13:09–01:16:17、01:35:58–01:37:00）。
+- **模型手感论**：Opus 角色扮演强、动手快偏 trial-and-error（"有点太美国"），Codex 默认读更多代码、可跑 6 小时（"是德国人"）；差异在 post-training 目标而非原始智能，换模型给自己一周适应期；"模型变笨了"多半是你的项目在长 slop（01:39:04–01:47:20）。
+- **MCP vs CLI/skills**：CLI 可组合（接 `jq` 过滤、写成脚本）、零 context 污染；MCP 返回大 blob 必须整个进 context、需训练适配。skills = "一句话描述 → 按需加载"，与 CLI 天然互补；例外是需要状态的 Playwright（02:38:59–02:42:08）。
 
 ## Noam Brown（美，OpenAI，2026-06）：日常已可信任
 
 来源：[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md)
 
-- 已日常用模型做税务建议、买房 paperwork——"某种程度上比信任人类专家还多"；提醒 2022–23 觉得不可信而弃用的人重新评估（00:30–00:31）。
+- 已日常用模型做税务建议、买房 paperwork——"某种程度上比信任人类专家还多"；提醒 2022–23 觉得不可信而弃用的人重新评估（00:30:18–00:31:18）。
 
 ## Agent 时代的用法演进：治理 agent、AX、agent 管理学习曲线（2026-05–07）
 
-- **Andrew Feldman（Cerebras）："从 10x 到 100x 但非人人适用"**：少数有"完美心智"的人把编码转成**治理 agent**——同时跑 8–10 个 agent、专设 QA agent、主动补足模型冗长/删注释的弱点；token 花费从 <$1K/人月 到 $25–30K（[Cerebras](../videos/20260521-no-priors-cerebras-feldman.md) 00:12–00:13）。为 Steinberger"agentic engineering"补上"多 agent 治理"的具体工作方式。
-- **Akshat Bubna（Modal）：AX≈DX**：给 agent 用的和给人用的体验高度一致（余弦相似度 ~0.9）；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI / 加 skill——**"agent 幻觉自己的功能"其实是产品反馈**（[Modal](../videos/20260708-latent-space-modal-agent-infra.md) 00:06–00:07、00:57–00:58）。与 Steinberger"每个 MCP 做成 CLI 都更好"同频。
-- **Gavriel Cohen（NanoClaw）：agent 管理有陡峭学习曲线**：最大误区是"扔个任务就走开等成品"，必须持续调 instruction/skill/context；个人 agent 的记忆用 **LLM Wiki 优于检索**（问"这周最该关注什么"没有语义搜索能答），痛点是造重复文件、需背景进程查重（**与本库 Lint 同构**）（[NanoClaw](../videos/20260629-latent-space-nanoclaw.md) 00:03–00:13）。
+- **Andrew Feldman（Cerebras）："从 10x 到 100x 但非人人适用"**：少数有"完美心智"的人把编码转成**治理 agent**——同时跑 8–10 个 agent、专设 QA agent、主动补足模型冗长/删注释的弱点；token 花费从 <$1K/人月 到 $25–30K（[Cerebras](../videos/20260521-no-priors-cerebras-feldman.md) 00:12:05–00:13:05）。为 Steinberger"agentic engineering"补上"多 agent 治理"的具体工作方式。
+- **Akshat Bubna（Modal）：AX≈DX**：给 agent 用的和给人用的体验高度一致（余弦相似度 ~0.9）；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI / 加 skill——**"agent 幻觉自己的功能"其实是产品反馈**（[Modal](../videos/20260708-latent-space-modal-agent-infra.md) 00:06:08–00:07:10、00:57:42–00:58:42）。与 Steinberger"每个 MCP 做成 CLI 都更好"同频。
+- **Gavriel Cohen（NanoClaw）：agent 管理有陡峭学习曲线**：最大误区是"扔个任务就走开等成品"，必须持续调 instruction/skill/context；个人 agent 的记忆用 **LLM Wiki 优于检索**（问"这周最该关注什么"没有语义搜索能答），痛点是造重复文件、需背景进程查重（**与本库 Lint 同构**）（[NanoClaw](../videos/20260629-latent-space-nanoclaw.md) 00:03:04–00:13:09）。
 
 ## 语音口述、loop maxing、prompt 自检、human-in-the-loop 当媒介（2026-07）
 
-- **脚踏板 + Whisper Flow 把 LLM 从"打字"解放成"意识流口述"**（Mati / ElevenLabs）：按住踏板给一两分钟 stream of consciousness，"LLM 特别擅长把一大段意识流理成东西"；语音 agent 让人反而更愿打断、对 AI 更坦诚（[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) 00:11–00:15）。为本页"语音优先"补上具体硬件工作流。
-- **Andrew Feldman 的 prompt 收尾模板**：结尾固定加"**检查你的工作 + 告诉我我没考虑到什么 + 每次运行都反问我几个问题**"——这改变了 trend scouting 等任务的产出；配合"token maxing / loop maxing"（递归：问→学→再问，答案好很多）（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:27–00:32）。与 Karpathy"把输出当第一稿/查证"、NanoClaw"持续调 instruction"同一实践谱系。
-- **生成式模型当"媒介"而非"自动出片"**（Robin Rombach / BFL）：与 Scorsese 合作的用法是**human-in-the-loop 把脑中画面迭代成图像**（"语言是有损媒介、视觉更丰富"）、平行化 brainstorming/storyboard，而非一键生成整部电影（00:46–00:50）。呼应"人向设计/判断迁移"。
-- **写好 verifier 是关键技能**（志鹏 / vLLM-Omni）：code with AI 后，"实体 code 会被取代、重心转向写测试/verifier"；学习时"找一个不懂的人（或 agent）用费曼学习法讲懂"（[志鹏访谈](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 15:15–24:23）。与 Modal"agent 幻觉即产品反馈"、NanoClaw"agent 管理有学习曲线"同属"人机协作方法论"。
+- **脚踏板 + Whisper Flow 把 LLM 从"打字"解放成"意识流口述"**（Mati / ElevenLabs）：按住踏板给一两分钟 stream of consciousness，"LLM 特别擅长把一大段意识流理成东西"；语音 agent 让人反而更愿打断、对 AI 更坦诚（[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) 00:11:09–00:15:14）。为本页"语音优先"补上具体硬件工作流。
+- **Andrew Feldman 的 prompt 收尾模板**：结尾固定加"**检查你的工作 + 告诉我我没考虑到什么 + 每次运行都反问我几个问题**"——这改变了 trend scouting 等任务的产出；配合"token maxing / loop maxing"（递归：问→学→再问，答案好很多）（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:27:21–00:32:23）。与 Karpathy"把输出当第一稿/查证"、NanoClaw"持续调 instruction"同一实践谱系。
+- **生成式模型当"媒介"而非"自动出片"**（Robin Rombach / BFL）：与 Scorsese 合作的用法是**human-in-the-loop 把脑中画面迭代成图像**（"语言是有损媒介、视觉更丰富"）、平行化 brainstorming/storyboard，而非一键生成整部电影（00:46:33–00:50:39）。呼应"人向设计/判断迁移"。
+- **写好 verifier 是关键技能**（志鹏 / vLLM-Omni）：code with AI 后，"实体 code 会被取代、重心转向写测试/verifier"；学习时"找一个不懂的人（或 agent）用费曼学习法讲懂"（[志鹏访谈](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 00:15:15–00:24:23）。与 Modal"agent 幻觉即产品反馈"、NanoClaw"agent 管理有学习曲线"同属"人机协作方法论"。
 
 ## 中美对照
 
@@ -70,7 +70,7 @@ Karpathy 与姚顺宇都强调"把输出当第一稿/审查代码合理性"，�
 
 1. **harness 的选择**——Databricks 的 Ali 发现**同一个模型下，harness 不同能省约 2 倍成本**；他们用 GLM 5.2 时任务成本直接砍半。这是本批素材里最被低估的一条：**harness 可能比模型选择更重要**。
 2. **对 agent 本身做优化**——Jason 对自己的趋势发现 agent 做优化后 **token 用量降 80%**。
-3. **模型路由**——DoorDash 的做法是先用**内部编码基准**确认引入开放权重模型不降低代码质量，再让前沿模型做最难的活、把低层级工作下放（见 [评估与基准](evaluation-and-benchmarks.md)）。⚠️ 但路由本身是否是好战略存在分歧，见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。**创始人一手口径**（[No Priors 访谈](../videos/20260723-no-priors-doordash-autonomous-delivery.md) 00:39–00:44）：**6 月支出比 1 月涨约 20 倍**（"20x 不是 20%"），靠治理 **flatline**；年初是"实验、放手让人跑"，现在到"一算 ROI、砍浪费"阶段——目标是"把便宜任务下放开放权重模型，拿到 **Fable 级智能却付更少**"。增长最快的席位反而在**非技术岗**（分析师、运营、客户经理的 QBR 自动化）。与 Chamath"98% 的 prompt 该跑便宜模型"、RAMP"21 倍"是同一现象的当事人版本。
+3. **模型路由**——DoorDash 的做法是先用**内部编码基准**确认引入开放权重模型不降低代码质量，再让前沿模型做最难的活、把低层级工作下放（见 [评估与基准](evaluation-and-benchmarks.md)）。⚠️ 但路由本身是否是好战略存在分歧，见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。**创始人一手口径**（[No Priors 访谈](../videos/20260723-no-priors-doordash-autonomous-delivery.md) 00:39:25–00:44:28）：**6 月支出比 1 月涨约 20 倍**（"20x 不是 20%"），靠治理 **flatline**；年初是"实验、放手让人跑"，现在到"一算 ROI、砍浪费"阶段——目标是"把便宜任务下放开放权重模型，拿到 **Fable 级智能却付更少**"。增长最快的席位反而在**非技术岗**（分析师、运营、客户经理的 QBR 自动化）。与 Chamath"98% 的 prompt 该跑便宜模型"、RAMP"21 倍"是同一现象的当事人版本。
 4. **观测性**——现在可以按小时、按任务、按模型查看 token 用量；RAMP 等已把 token 支出管理做成产品。
 
 ### 成本骤降如何改变使用方式（Jason 的一手记录）
@@ -83,7 +83,7 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## 工具跳跃与 agent 漂移：一个机构的 AI-first 实录（Mark Cuban，2026-07）
 
-来源：[Mark Cuban 谈 AI 泡沫](../videos/20260721-all-in-mark-cuban-ai-bubble.md) 00:15–00:18
+来源：[Mark Cuban 谈 AI 泡沫](../videos/20260721-all-in-mark-cuban-ai-bubble.md) 00:15:08–00:18:10
 
 本库此前对 agent 工具的记录多来自作者本人（[Peter Steinberger / OpenClaw](../people/peter-steinberger.md)、[Gavriel Cohen / NanoClaw](../people/gavriel-cohen.md)、[Anton Osika / Lovable](../people/anton-osika.md)）。Cuban 提供了一份**外部使用方的实测交叉验证**，包括本库首次出现的负面一手反馈：
 
@@ -99,7 +99,7 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## 品味 > 代码，调试 > 编写（Xaira / Bo Wang，2026-07）
 
-来源：[Causal Models Need Causal Data](../videos/20260721-latent-space-xaira-xcell-virtual-cell.md) 01:21–01:23
+来源：[Causal Models Need Causal Data](../videos/20260721-latent-space-xaira-xcell-virtual-cell.md) 01:21:26–01:23:31
 
 - **"在 agentic AI 时代人人都能写代码了，更重要的是对项目有正确的品味，这样你才不会漫无目的地烧 token。"**
 - 工作方式的位移，说得比本库此前任何一处都直白：**"我们过去花大量时间写代码、一点时间调试；现在让 agent 写大部分代码，我们把大部分时间花在调试上。"** 他的实验室在专门讨论"怎么发现 AI 犯的错"、"AI 在哪些地方特别好、哪些地方仍然受限"。
