@@ -52,3 +52,8 @@ wgdxSCsmS-Q  # All-In 2026-07-03 AI Sovereignty Wars：与 07-11/07-18 重叠度
              # 转录稿存于 sources/all-in/20260703-wgdxSCsmS-Q/
 Cj_kb9nlAlE  # 张小珺第 150 期中文原版：无字幕，与 zawGTDLtWFY（英文配音版）同一期
              # 已从配音版取 zh-Hans 人工字幕摄取，wiki 页见 videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md
+
+# ── 重复上传（续） ──────────────────────────────────────────────
+E7qB_p1D0Xk  # 张小珺第 153 期曾鸣的英文标题版：upload_date 与时长（9258s/154min）
+             # 均与中文原版 69iJSe2n3ls 完全一致，已于 2026-09-03 摄取
+             # wiki 页见 videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md

@@ -88,6 +88,11 @@
 - [曾鸣](people/zeng-ming.md) — 阿里前总参谋长 / 战略学者，本库第一份商业史学者视角：三阶段论、模型公司=AI 云、科层制衰亡、岗位→任务、看十年想三年干一年
 - [Satya Nadella](people/satya-nadella.md) — 微软董事长兼 CEO，本库第一份超大规模云厂商一号位材料：扩散优先于放缓、insider risk、capability overhang、开源制衡与应用层毛利、7–8% GDP 门槛
 - [孙宇涛](people/sun-yutao.md) — 清华博士候选人 / RetNet 与 YOCO 作者，本库技术密度最高的一期：线性注意力演进史、推理开销三分法、两个矩阵连乘的定律、"忒修斯之船"
+- [Dylan Patel](people/dylan-patel.md) — SemiAnalysis 创始人，本库唯一把芯片/数据中心/电力/信贷/实验室单位经济学串成一条链的人：算力集中、$10–15M→$100M/MW、50/10/40 预算拆分、"有效人口每年 10 倍"
+- [肖志斌](people/xiao-zhibin.md) — ZFlow AI 创始人兼 CEO，本库第一位芯片架构师：制程降的是功耗不是速度、SRAM 停止微缩、软件能追回 2–3 倍（但对方也能）、"下一代最伟大的芯片公司是 AI native 的"
+- [徐天音](people/tianyin-xu.md) — UIUC 终身教授（系统方向），本库第一位学术界系统研究者：形式化验证五年→五小时、"把 agent 当用户系统一定挂"、SREGym、把 ROC 翻出来复用
+- [苏廷浩](people/su-tinghao.md) — 2009 年生、17 岁高二学生，论文被 ICML 2026 接收，本库第一位"AI 原住民"本人：3 万元 / 0.05B、学习意义感的塌陷、"AI 最后替代的是 AI 研究者"
+- [OpenAI 数学团队](people/openai-math-team.md) — 两位转行的执业数学家，本库第一份实验室内部的 AI 做数学材料：球填充 LP 界、非 sofic 群、"AI 的证明为什么都很短"
 
 ## 主题
 
@@ -124,6 +129,7 @@
 - 2026-06-30 [Grant Sanderson：AI 反证数学猜想之后](videos/20260630-dwarkesh-grant-sanderson-ai-math.md)
 - 2026-07-10 [Adam Brown：第一性原理讲广义相对论](videos/20260710-dwarkesh-adam-brown-general-relativity.md)
 - 2026-08-11 [Ryan Greenblatt：AI 能自动化 AI 研究之后会发生什么](videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md)
+- 2026-08-25 [Dylan Patel：两家实验室很快会控制世界上大部分"劳动力"——算力集中、单位经济学、$11T capex 与第二次沃尔克冲击](videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
 
 ### Lex Fridman Podcast
 - 2026-01-31 [#490 State of AI 2026：LLM、编码、Scaling、中国、Agent、GPU、AGI](videos/20260131-lex-state-of-ai-2026.md)（Raschka & Lambert）
@@ -149,6 +155,7 @@
 - 2026-07-31 [刘子鸣：AI for AI、元模型、physics of AI 与中美 neo labs 资本狂潮](videos/20260731-zhang-xiaojun-liu-ziming-ai-for-ai.md)
 - 2026-08-13 [刘洺堉（NVIDIA 研究 VP）：Cosmos 3、世界模型、武术、黄仁勋影响我的（第 150 期，4 小时）](videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
 - 2026-08-26 [孙宇涛：领读 Kimi K3 技术报告——线性注意力的前世今生、架构—Infra 协同设计（第 152 期，124 分钟）](videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
+- 2026-08-19 [苏廷浩：17 岁高二学生的 ICML 论文——三万块、0.05B 模型，以及"AI 让我们失去了一部分意义感"（第 151 期，70 分钟）](videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
 - 2026-09-03 [曾鸣：产业史观、三阶段框架、会消亡的公司、"OpenAI/Anthropic 大概率不是原生时代大赢家"（第 153 期，154 分钟）](videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
 
 ### 月球大叔
@@ -159,6 +166,8 @@
 - 2026-06-09 [江鋆晨：KV Cache 是大模型的记忆、是"未来的石油"](videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 - 2026-07-28 [孟子立：15 岁上清华、23 岁当港科大教授，做"无线 GPU"WiCi](videos/20260728-uncle-moon-zili-meng-wici.md)
 - 2026-08-09 [李正韬（Retell AI）：两年做到 8000 万美元收入的语音 AI 呼叫中心](videos/20260809-uncle-moon-todd-li-retell-ai.md)
+- 2026-08-22 [徐天音（UIUC）：Agent 时代的系统——形式化验证从五年压到五小时、"把 agent 当用户系统一定挂"](videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
+- 2026-09-07 [肖志斌：AI 芯片、制程降的是功耗、SRAM 停止微缩、Groq/Cerebras/SambaNova、英伟达的执行力](videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
 
 ### No Priors
 - 2026-05-21 [Andrew Feldman：Cerebras 630 亿 IPO、晶圆级芯片与快 AI](videos/20260521-no-priors-cerebras-feldman.md)
@@ -216,4 +225,6 @@
 - 2026-08-10 [Kavak 的打法：把一家公司围绕 AI 重建（Ali Massa）](videos/20260810-a16z-kavak-agentic-company.md)
 - 2026-08-12 [YC CEO 谈 AI 时代的创始人心理学（Garry Tan，Anish Acharya 主持）](videos/20260812-a16z-garry-tan-founder-psychology.md)
 - 2026-08-13 [Lighthouse 还是 Landgrab：AI 创业公司怎么选销售打法（Joe Schmidt & Andy McCall）](videos/20260813-a16z-lighthouse-or-landgrab-sales.md)
+- 2026-09-04 [World Labs 的 Atlas：把"新视角预测"当作与 next token prediction 等价的原语（Fei-Fei Li、Justin Johnson、Ben Mildenhall）](videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)
+- 2026-09-08 [OpenAI 的两位数学家谈 Astra 的数学结果：球填充、非 sofic 群，以及"AI 的证明为什么都很短"](videos/20260908-a16z-openai-math-reasoning-astra.md)
 - 2026-09-14 [OpenAI 总裁谈"跨进 AGI 时代"意味着什么（Greg Brockman，Ben Horowitz & Erik Torenberg 主持）](videos/20260914-a16z-greg-brockman-agi-era.md)
