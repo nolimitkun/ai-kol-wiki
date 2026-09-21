@@ -5,6 +5,11 @@
 - **转录稿**: [sources/karpathy/20231123-zjkBMFhNj_g](../../sources/karpathy/20231123-zjkBMFhNj_g/transcript.md)
 - **性质**: 面向大众的 LLM 入门演讲（"busy person's intro"），原为 Scale AI 活动演讲的重录版
 
+> **说话人映射**（转录稿中为匿名标签，此处认人属 wiki 层编辑判断）：
+> 单人讲座，分离结果就是 **1 位说话人 = Karpathy 本人（100%）**，无第二人。
+> [speakers.md](../../sources/karpathy/20231123-zjkBMFhNj_g/speakers.md) 因此不含额外信息，
+> 仅作基线存档。
+
 ## 概要
 
 Karpathy 用一小时讲清 LLM 是什么、怎么训练、能力如何演进（工具使用、多模态）、

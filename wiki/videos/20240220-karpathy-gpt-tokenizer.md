@@ -5,6 +5,11 @@
 - **转录稿**: [sources/karpathy/20240220-zduSFxRajkE](../../sources/karpathy/20240220-zduSFxRajkE/transcript.md)
 - **性质**: Zero to Hero 系列：从零实现 BPE tokenizer（产物为 minbpe 仓库），并系统解释 tokenization 引发的各种 LLM 怪象
 
+> **说话人映射**（转录稿中为匿名标签，此处认人属 wiki 层编辑判断）：
+> 单人讲座，**SPEAKER_00 = Karpathy 本人（100%）**。分离报出的 SPEAKER_01 合计仅 **2 秒**，
+> 是碎片，**判为伪影、非真实第二人**。[speakers.md](../../sources/karpathy/20240220-zduSFxRajkE/speakers.md)
+> 不含额外信息，仅作基线存档。
+
 ## 概要
 
 开场即立论："tokenization 是我在 LLM 工作中最不喜欢的部分，但 LLM 的大量怪异行为最终都能追溯到它。"

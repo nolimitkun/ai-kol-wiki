@@ -5,6 +5,11 @@
 - **转录稿**: [sources/karpathy/20240609-l8pRSuU81PU](../../sources/karpathy/20240609-l8pRSuU81PU/transcript.md)
 - **性质**: Zero to Hero 系列的实战篇：从零写代码完整复现 GPT-2 124M 预训练（产物为 build-nanogpt 仓库）
 
+> **说话人映射**（转录稿中为匿名标签，此处认人属 wiki 层编辑判断）：
+> 单人讲座，**SPEAKER_00 = Karpathy 本人（100%）**。分离报出的 SPEAKER_01 合计仅 **6 秒**（241 分钟里），
+> 是碎片，**判为伪影、非真实第二人**。[speakers.md](../../sources/karpathy/20240609-l8pRSuU81PU/speakers.md)
+> 不含额外信息，仅作基线存档。
+
 ## 概要
 
 四小时从空文件写到完整预训练：实现模型 → 榨干 GPU（11 倍加速）→ 照抄 GPT-3 超参 →

@@ -5,6 +5,11 @@
 - **转录稿**: [sources/karpathy/20250205-7xTGNNLPyMI](../../sources/karpathy/20250205-7xTGNNLPyMI/transcript.md)
 - **性质**: 大众向 LLM 全景课，是 2023 年 [Intro to LLMs](20231123-karpathy-intro-to-llms.md) 的大幅扩充版，覆盖完整训练管线与"LLM 心理学"
 
+> **说话人映射**（转录稿中为匿名标签，此处认人属 wiki 层编辑判断）：
+> 单人讲座，**SPEAKER_00 = Karpathy 本人（100%）**。分离报出的 SPEAKER_01 合计仅 **2 秒**，
+> 是碎片，**判为伪影、非真实第二人**。[speakers.md](../../sources/karpathy/20250205-7xTGNNLPyMI/speakers.md)
+> 不含额外信息，仅作基线存档。
+
 ## 概要
 
 从下载互联网到 RLHF，完整走一遍 ChatGPT 类模型的制造流程，并系统阐述由此产生的认知特性：

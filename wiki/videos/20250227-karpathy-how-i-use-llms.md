@@ -5,6 +5,20 @@
 - **转录稿**: [sources/karpathy/20250227-EWvNQjAaOHw](../../sources/karpathy/20250227-EWvNQjAaOHw/transcript.md)
 - **性质**: 大众向系列第二集（前作为 [Deep Dive into LLMs](20250205-karpathy-deep-dive-into-llms.md)），实用层面：他本人如何在生活和工作中使用各家 LLM 应用
 
+> **说话人映射**（转录稿中为匿名标签，此处认人属 wiki 层编辑判断）：
+> 单人讲座，**SPEAKER_00 = Karpathy 本人（96.4%）**。但分离另报出 4 个标签，
+> 其中**两个是他在演示中播放的 TTS 合成语音，不是真人**：
+>
+> | 标签 | 时段 | 时长 | 判定 |
+> |---|---|---|---|
+> | **SPEAKER_04** | 01:26:35–01:32:01 | 2 分 11 秒 | **ChatGPT 高级语音模式的合成语音**——对应他让模型扮海盗、学狐狸叫那段（[01:30:15]、[01:31:15]） |
+> | **SPEAKER_03** | 01:34:11–01:37:02 | 1 分 54 秒 | **Grok 语音模式的合成语音**——他在 [01:33:18] 明说 "grok.com also offers advanced voice mode"，随后是 Romantic 人格演示 |
+> | SPEAKER_01 / SPEAKER_02 | 散落 | 各 14 秒 | 全是 1 秒级碎片，**判为伪影** |
+>
+> **一个可复用的副产品**：pyannote 会把 **TTS 合成音当成独立说话人**。所以在这类演示型讲座里，
+> 非主讲标签可以当作"**演示片段在哪**"的机械索引——这是本期 sidecar 唯一但确实有用的信息量，
+> 另外 4 期单人讲座则没有。见 [speakers.md](../../sources/karpathy/20250227-EWvNQjAaOHw/speakers.md)。
+
 ## 概要
 
 Karpathy 以自己的真实使用场景为例，系统过了一遍 2025 年初 LLM 应用生态的全部功能层：
