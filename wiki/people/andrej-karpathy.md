@@ -6,14 +6,14 @@
 
 ## 核心立场与观点
 
-- **LLM = 互联网的有损压缩**：预训练是把数十 TB 文本压进参数；"预测下一个词"这个简单目标足以逼出世界知识。（[Intro to LLMs](../videos/20231123-karpathy-intro-to-llms.md) 00:04, 00:07）
-- **LLM 是经验性造物，不是工程品**：不像汽车那样每个零件可理解，只能靠评测度量行为；对可解释性持审慎态度。（同上 00:13）
-- **LLM OS 世界观**：他最具标志性的框架——LLM 是新计算范式的内核进程，context window 是 RAM，工具是外设；闭源/开源之争类比 Windows vs Linux。（同上 00:42–00:45）
-- **看好的方向**：scaling laws 尚未饱和；工具使用与多模态是能力主轴；System 2 慢思考和窄域自我改进是下一步。（同上 00:25–00:40）
+- **LLM = 互联网的有损压缩**：预训练是把数十 TB 文本压进参数；"预测下一个词"这个简单目标足以逼出世界知识。（[Intro to LLMs](../videos/20231123-karpathy-intro-to-llms.md) 00:04:01, 00:07:05）
+- **LLM 是经验性造物，不是工程品**：不像汽车那样每个零件可理解，只能靠评测度量行为；对可解释性持审慎态度。（同上 00:13:11）
+- **LLM OS 世界观**：他最具标志性的框架——LLM 是新计算范式的内核进程，context window 是 RAM，工具是外设；闭源/开源之争类比 Windows vs Linux。（同上 00:42:28–00:45:30）
+- **看好的方向**：scaling laws 尚未饱和；工具使用与多模态是能力主轴；System 2 慢思考和窄域自我改进是下一步。（同上 00:25:18–00:40:27）
 
 - **实用主义使用观**：LLM 输出永远是第一稿；"LLM Council" 多模型交叉；语音优先；不独自读书；vibe coding（他自认造的词）。（[How I use LLMs](../videos/20250227-karpathy-how-i-use-llms.md)）
 - **"LLM 心理学"框架**：ChatGPT 是"标注员的模拟器"；参数是模糊回忆、context 是工作记忆；模型需要 token 来思考；瑞士奶酪式能力。（[Deep Dive into LLMs](../videos/20250205-karpathy-deep-dive-into-llms.md)）
-- **RLHF is not RL**：奖励模型可被博弈，RLHF 只是微调；可验证域的 RL 才有 AlphaGo 式超越人类的潜力。（同上 02:48–03:06）
+- **RLHF is not RL**：奖励模型可被博弈，RLHF 只是微调；可验证域的 RL 才有 AlphaGo 式超越人类的潜力。（同上 02:48:06–03:06:23）
 
 ## 已收录视频
 
