@@ -4,13 +4,13 @@
 
 ## 核心观点
 
-- **self-provisioning runtime**：把硬件/扩缩容配置写进代码 decorator（与代码 collocate），而非读几百个无类型 Kubernetes YAML（[Modal 访谈](../videos/20260708-latent-space-modal-agent-infra.md) 00:04–00:06）。
-- **AX≈DX（余弦相似度约 0.9）**：把 SDK 团队从"开发者体验"改成"agent 体验"；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI；代码变黑箱后 observability 更重要（00:06–00:07、00:57–00:58）。
-- **sandbox 是 agent 的完美原语**：2023 年 5 月就做、去年才爆；RL rollout 极 bursty（要 10 万个 sandbox），agent 本身反而不 bursty（00:10–00:15、00:27–00:29）。
-- **投机解码真相**：开源 DFlash（block-based speculator），提升 accept length 是乘法级 2–4x 提速（改 kernel 只有几个百分点）、不降质量（00:17–00:19）。
-- **inference inflection**：AI workload 里 GPU:CPU 从 8:1 摆回约 1:1，agent 频繁 call out CPU，limiting factor 来回摆、必须 collocate（00:24–00:25）。
-- **capital-light 超级云**：跨 17 家云建统一容量池 + 自建可靠性层；"compute strategy"团队做容量对冲（类比航空对冲燃油）；对 harness/meta-harness 不持立场——"只要消耗更多 infra 都看多"（00:38–00:40、00:45–00:47）。
-- 对 sandbox 层坚持**硬边界**、怀疑 LLM 中介权限；对 swyx"LLM OS 内核就是个 LLM"的非共识观点持保留（00:43–00:44）。
+- **self-provisioning runtime**：把硬件/扩缩容配置写进代码 decorator（与代码 collocate），而非读几百个无类型 Kubernetes YAML（[Modal 访谈](../videos/20260708-latent-space-modal-agent-infra.md) 00:04:06–00:06:08）。
+- **AX≈DX（余弦相似度约 0.9）**：把 SDK 团队从"开发者体验"改成"agent 体验"；建 modal bench 找 agent 做不到的事，agent 反复幻觉某功能就把它做成真 CLI；代码变黑箱后 observability 更重要（00:06:08–00:07:10、00:57:42–00:58:42）。
+- **sandbox 是 agent 的完美原语**：2023 年 5 月就做、去年才爆；RL rollout 极 bursty（要 10 万个 sandbox），agent 本身反而不 bursty（00:10:12–00:15:14、00:27:21–00:29:23）。
+- **投机解码真相**：开源 DFlash（block-based speculator），提升 accept length 是乘法级 2–4x 提速（改 kernel 只有几个百分点）、不降质量（00:17:15–00:19:15）。
+- **inference inflection**：AI workload 里 GPU:CPU 从 8:1 摆回约 1:1，agent 频繁 call out CPU，limiting factor 来回摆、必须 collocate（00:24:19–00:25:20）。
+- **capital-light 超级云**：跨 17 家云建统一容量池 + 自建可靠性层；"compute strategy"团队做容量对冲（类比航空对冲燃油）；对 harness/meta-harness 不持立场——"只要消耗更多 infra 都看多"（00:38:30–00:40:30、00:45:35–00:47:37）。
+- 对 sandbox 层坚持**硬边界**、怀疑 LLM 中介权限；对 swyx"LLM OS 内核就是个 LLM"的非共识观点持保留（00:43:32–00:44:34）。
 
 ## 视频
 

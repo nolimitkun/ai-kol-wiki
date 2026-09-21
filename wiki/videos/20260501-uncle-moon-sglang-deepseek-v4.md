@@ -39,7 +39,7 @@ DeepSeek V4 的注意力机制相比前代大改，给推理和训练框架都�
 - **做 MLSys 若只盯 profiling、天天补代码小窟窿，不算 research**：应站在更高处问"过去几个月补的几十个窟窿有无共性、能否用一套框架的精巧 API 端出来"——"system research 需要一定的抽象与美感；当你决定把它做得更美，你就开始做 system research"（[00:59:40]–[01:01:44]）。
 - **存储、通信、计算三要素的优雅平衡**：每代新硬件的架构改变都会打破旧平衡，需要新算法/新设计——而类似问题在过去几十年（如文件系统设计）已有人处理过（[01:01:44]–[01:02:46]）。
 - **数据管理是被低估的新方向**：很多问题正从"算力压榨"转向"数据存储/管理"（agent 的持续记忆、Dreams vs Memory，引 Anthropic 文章）；"做数据库/传统后端的人不是没出路，反而机会更大"（[01:02:46]–[01:03:47]）。与 [江鋆晨"KV Cache 是下一个数据层"](20260609-uncle-moon-junchen-jiang-kvcache.md) 精确同频。
-- 新手入门 SGLang：从 `good first issue` 起步（万诚第一个 PR 修了大输入下 MoE kernel 的 illegal memory access，逐步扩到专家并行、投机解码）；推荐 **mini-SGLang** 项目（命名/scheduler 比正式版更清晰）+ Karpathy 的底层课（01:55–01:00:41）。
+- 新手入门 SGLang：从 `good first issue` 起步（万诚第一个 PR 修了大输入下 MoE kernel 的 illegal memory access，逐步扩到专家并行、投机解码）；推荐 **mini-SGLang** 项目（命名/scheduler 比正式版更清晰）+ Karpathy 的底层课（[00:58:39]–[01:00:41]）。
 
 ## 相关主题
 

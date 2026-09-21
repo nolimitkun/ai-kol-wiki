@@ -37,7 +37,7 @@ AlphaGo 的核心突破：用神经网络（value + policy 双头）把 Go 那�
 
 ### 抢先 vs 追赶、Bitter Lesson 的暂时性
 - **抢先做成一件事所需算力，远大于追赶所需**：AlphaGo Zero 当年是算力曲线上的巨大异常（3E23 FLOPS），而今 $10K 即可复现——和 LLM 里"别人做出来后可用蒸馏等捷径追赶"是同一个故事（[01:55:16]–[01:56:18]）。呼应 [姚顺宇](../people/yao-shunyu.md) 的中国实验室蒸馏追赶论。
-- **compute multiplier 是暂时的、且不叠加**：KataGo 的诸多算法技巧在 Blackwell GPU 上大多不再重要；好想法之间常有"诡异的负交互"（传闻某些 lab 训练失败正因两个各自不错的想法凑一起坏了），故需要**自上而下的统一技术愿景**（[02:31:03]–[02:32:03]、02:54）。呼应 [AI 实验室文化与组织](../topics/ai-lab-culture.md) 里的 top-down 讨论。
+- **compute multiplier 是暂时的、且不叠加**：KataGo 的诸多算法技巧在 Blackwell GPU 上大多不再重要；好想法之间常有"诡异的负交互"（传闻某些 lab 训练失败正因两个各自不错的想法凑一起坏了），故需要**自上而下的统一技术愿景**（[02:31:03]–[02:32:03]）。呼应 [AI 实验室文化与组织](../topics/ai-lab-culture.md) 里的 top-down 讨论。
 - Google/DeepMind 的**游戏基因**（Atari/Go/StarCraft）大概率对做 LLM 有正迁移，但也可能把它们绑在旧范式上；TPU 的长期投入是"短期无用、长期制胜"的赌注——"连人类都难判断最优研究策略"（[02:33:07]–[02:35:14]）。接 [中美 AI 生态对照](../topics/china-us-ai.md) 的 TPU vs GPU。
 
 ## 相关主题

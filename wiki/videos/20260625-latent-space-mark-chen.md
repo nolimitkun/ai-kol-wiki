@@ -30,12 +30,12 @@ OpenAI 首席研究官谈 scaling laws 信念、pre-training 未死、reasoning/
 - research taste 有点被高估但可培养，**最好的机制是 replication**（完整复现你敬佩的论文、逼近其训练曲线）；trader 背景有用是因为交易"unhackable"、注重细节（[00:02:03]–[00:04:04]、[00:15:13]–[00:16:13]）。
 - 高层 research roadmap 应稳定（给人 grounding），但 implementation/排序/资源分配随时间变；compute 分配是强制重估的节点（[00:12:09]–[00:13:10]）。
 - 每 1–2 月过约 **300 个项目**；做法是聚焦——每个 org 3–5 个大 bet 进主 roadmap，用 directive compute allocation + flexible pools，不微观管理 manager（[00:14:12]–[00:15:13]）。
-- **高风险 bet 是 OpenAI 的 alpha**：有些不会 pan out，但失败的 write-up 也很重要（能让别人少走弯路）；肯冒险者"只要偶尔命中一次就值得"（[00:34:23]–[00:36:25]、00:46–00:48）。
+- **高风险 bet 是 OpenAI 的 alpha**：有些不会 pan out，但失败的 write-up 也很重要（能让别人少走弯路）；肯冒险者"只要偶尔命中一次就值得"（[00:34:23]–[00:36:25]）。
 
 ### Vibe researcher 与多模态
-- 工作正快速转向 **orchestration-focused**：研究员出 idea、模型做执行；三年 roadmap 终点是模型端到端做研究——但"教模型 taste 很难"，所以现在仍需研究员出 idea（[00:32:20]–[00:33:22]、00:45–00:46）。
+- 工作正快速转向 **orchestration-focused**：研究员出 idea、模型做执行；三年 roadmap 终点是模型端到端做研究——但"教模型 taste 很难"，所以现在仍需研究员出 idea（[00:32:20]–[00:33:22]）。
 - 倾向**单一多模态模型**（图像/音频/视频/文本），因为维护一套 infra stack 的优势不可低估（[00:31:19]–[00:32:20]）。
-- 被高估/低估：若还持"pre-training is dead"观点，那 pre-training 被低估；把研究 primitive 连到真实 agentic use case 的"产品/端到端思考"也被低估（[00:37:25]–[00:38:26]、00:49–00:50）。
+- 被高估/低估：若还持"pre-training is dead"观点，那 pre-training 被低估；把研究 primitive 连到真实 agentic use case 的"产品/端到端思考"也被低估（[00:37:25]–[00:38:26]）。
 
 ## 相关主题
 

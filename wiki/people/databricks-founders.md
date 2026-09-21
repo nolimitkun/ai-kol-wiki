@@ -7,12 +7,12 @@
 
 ## 核心观点
 
-- **"把数据放到对的地方，然后糊一层 AGI，魔法就出来了"**——但没有对的数据不行；很多传统软件会用这套新范式重写（[Agent Cloud 访谈](../videos/20260624-latent-space-databricks-agent-cloud.md) 00:00）。
-- **Omnigent = 跨 harness 的公共 API + agent cloud**：把 Claude Code/Codex/Cursor 等统一到一套 session API，开源以吃网络效应；类比网络协议（IP layer）而非 OS（00:04–00:16）。
-- **Agent 安全要 contextual/stateful policies**：超越 yes/no 允许列表，按 session 累积风险状态决策，更安全且更好用（Unity Catalog 数据治理经验平移，00:19–00:22）。
-- **L-TAP = HTAP done right**：只统一存储层（列式转码）而非塌缩 query 引擎；**Dream Engine** 用 ML 模型（非 LLM）+ 十年 trace 从零重建数据库引擎（00:32–00:50）。
-- **agent 让 SQL 方言统一不再是问题**："agent 在 Postgres/Spark SQL 都很流利"（00:52）。
-- 组织：不用请示直接原型、增量演进、over-fit 少数客户；胜过 Snowflake 靠"从一开始开放格式 + AI plus data"（00:36–00:57）。
+- **"把数据放到对的地方，然后糊一层 AGI，魔法就出来了"**——但没有对的数据不行；很多传统软件会用这套新范式重写（[Agent Cloud 访谈](../videos/20260624-latent-space-databricks-agent-cloud.md) 00:00:00）。
+- **Omnigent = 跨 harness 的公共 API + agent cloud**：把 Claude Code/Codex/Cursor 等统一到一套 session API，开源以吃网络效应；类比网络协议（IP layer）而非 OS（00:04:03–00:16:07）。
+- **Agent 安全要 contextual/stateful policies**：超越 yes/no 允许列表，按 session 累积风险状态决策，更安全且更好用（Unity Catalog 数据治理经验平移，00:19:07–00:22:07）。
+- **L-TAP = HTAP done right**：只统一存储层（列式转码）而非塌缩 query 引擎；**Dream Engine** 用 ML 模型（非 LLM）+ 十年 trace 从零重建数据库引擎（00:32:12–00:50:20）。
+- **agent 让 SQL 方言统一不再是问题**："agent 在 Postgres/Spark SQL 都很流利"（00:52:21）。
+- 组织：不用请示直接原型、增量演进、over-fit 少数客户；胜过 Snowflake 靠"从一开始开放格式 + AI plus data"（00:36:13–00:57:25）。
 
 ## 交叉
 

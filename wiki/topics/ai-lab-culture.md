@@ -16,7 +16,7 @@
 
 来源：[Latent Space 访谈](../videos/20260625-latent-space-mark-chen.md)
 
-- **高风险 bet 是 OpenAI 的 alpha**：有些不会 pan out，但失败的 write-up 也重要（让别人少走弯路）；肯冒险者"偶尔命中一次就值得"（00:34:23–00:36:25、00:46–00:48）。
+- **高风险 bet 是 OpenAI 的 alpha**：有些不会 pan out，但失败的 write-up 也重要（让别人少走弯路）；肯冒险者"偶尔命中一次就值得"（00:34:23–00:36:25）。
 - 既有 top-down steering（研究 manager 多是过往最强研究者，说话有分量），也珍视 bottom-up（研究员拿冷硬证据推翻既有判断）；reasoning/o1 就是靠 Yakub、Ilya 的 conviction 推动全公司（00:11:08–00:12:09、00:10:08–00:11:08）。
 - 高层 roadmap 稳定、implementation 随时间变；每 1–2 月过约 300 项目，聚焦每 org 3–5 个大 bet + directive compute allocation + flexible pools（00:12:09–00:15:13）。
 
