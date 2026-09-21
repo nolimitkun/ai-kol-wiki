@@ -19,36 +19,36 @@
 
 来源：[Dwarkesh 芯片设计课](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)
 
-- 为本页提供最底层的电路视角：**"最大化计算相对通信"贯穿全栈**——ALU 位宽（乘法器门数随位宽**平方**增长，是低精度算术有效的唯一根本原因）、Tensor Core/systolic array（把矩阵乘外层循环烧进硬件、权重驻留，否则 7/8 面积耗在寄存器堆搬运）、直到跨芯片推理的 batch 权衡（00:14–00:37）。与 Karpathy "flops 不重要、内存访问模式才重要" 是同一原理的上下两层。
-- **"GPU 是一大堆微型 TPU 平铺"**：TPU 粗粒度（超大 MXU）摊销搬运成本但 vector↔matrix 带宽受限，GPU 细粒度灵活但单元固定开销大；MatX 押注 splittable systolic array 兼得两者（01:15–01:20）——为本页姚顺宇的 TPU/GPU 使用方对照补上设计方视角。
-- TPU 用 **scratchpad（软件显式管理）替代 cache（硬件自动）**换确定性延迟（01:04–01:07）；大脑低时钟类比在硅上不成立——降频只线性省开关能耗，不带来能效跃升（01:12–01:15）。
+- 为本页提供最底层的电路视角：**"最大化计算相对通信"贯穿全栈**——ALU 位宽（乘法器门数随位宽**平方**增长，是低精度算术有效的唯一根本原因）、Tensor Core/systolic array（把矩阵乘外层循环烧进硬件、权重驻留，否则 7/8 面积耗在寄存器堆搬运）、直到跨芯片推理的 batch 权衡（00:14:44–00:37:06）。与 Karpathy "flops 不重要、内存访问模式才重要" 是同一原理的上下两层。
+- **"GPU 是一大堆微型 TPU 平铺"**：TPU 粗粒度（超大 MXU）摊销搬运成本但 vector↔matrix 带宽受限，GPU 细粒度灵活但单元固定开销大；MatX 押注 splittable systolic array 兼得两者（01:15:29–01:19:55）——为本页姚顺宇的 TPU/GPU 使用方对照补上设计方视角。
+- TPU 用 **scratchpad（软件显式管理）替代 cache（硬件自动）**换确定性延迟（01:04:54–01:07:04）；大脑低时钟类比在硅上不成立——降频只线性省开关能耗，不带来能效跃升（01:12:18–01:15:29）。
 
 ## TPU vs GPU（姚顺宇，Google DeepMind，2026-05）
 
 来源：[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md)
 
 - 大规模商用下**无绝对优劣**。设计理念差异：GPU（Hopper/H 系列）一个 pod 内约 8 卡两两 NVLink 高速互联；**TPU 抛弃两两互联、采 3D Torus 拓扑**，尽量多卡放一个架子，编译器/sharding 写得好则等效更大存储 + 减少通信 bound。
-- TPU 劣势：小 scale 更固定、通用性弱、无开源生态——但"大规模自用时生态不是问题，跑几十万张卡的集群，搭基础设施不是多大的事"（03:20–03:23）。
+- TPU 劣势：小 scale 更固定、通用性弱、无开源生态——但"大规模自用时生态不是问题，跑几十万张卡的集群，搭基础设施不是多大的事"（03:20:59–03:23:02）。
 - 这与 Jensen 从 NVIDIA 侧强调的 NVLink-72/install-base 生态形成对照：姚从使用方视角认为在超大规模下 TPU 的封闭生态不构成实质劣势。
 
 ## test-time compute 的经济性（Noam Brown，OpenAI，2026-06）
 
-- 模型能力成为"投入金钱的函数"，把**推理时算力**变成基础设施的一等成本项；评估长任务"可能要跑一年"，与算力/时间预算直接冲突（[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md) 00:12–00:16）。呼应 Jensen"token 工厂 / tokens-per-sec-per-watt"的世界观。
+- 模型能力成为"投入金钱的函数"，把**推理时算力**变成基础设施的一等成本项；评估长任务"可能要跑一年"，与算力/时间预算直接冲突（[No Priors 访谈](../videos/20260626-no-priors-noam-brown.md) 00:12:06–00:16:06）。呼应 Jensen"token 工厂 / tokens-per-sec-per-watt"的世界观。
 
 ## 算力需求的经济学：Moore 定律"价值减半"与机会成本反转（Imas & Trammell，2026-06）
 
 来源：[Dwarkesh 访谈](../videos/20260604-dwarkesh-imas-trammell.md)
 
-- Moore 定律的悲观解读："每 18 个月**计算的价值**减半——我们消耗算力用途的速度快到刚好维持摩尔定律"；Chad Jones 的结论是经济中付给算力（晶体管）的份额一直在下降（00:13–00:15）。
-- 但可能出现拐点：**H100 租金比三年前更高**——模型越聪明，算力的机会成本越高，即"资本用途的新品类（increasing variety）不断出现"让需求不饱和；若持续，付给算力的经济份额会持续上升（00:14–00:16）。这为 Jensen"token 工厂 / 每年 token 成本降一个数量级"提供了一个需求侧的经济学镜像：**供给侧成本在降，但用途在爆炸**。
+- Moore 定律的悲观解读："每 18 个月**计算的价值**减半——我们消耗算力用途的速度快到刚好维持摩尔定律"；Chad Jones 的结论是经济中付给算力（晶体管）的份额一直在下降（00:13:47–00:15:57）。
+- 但可能出现拐点：**H100 租金比三年前更高**——模型越聪明，算力的机会成本越高，即"资本用途的新品类（increasing variety）不断出现"让需求不饱和；若持续，付给算力的经济份额会持续上升（00:14:54–00:16:59）。这为 Jensen"token 工厂 / 每年 token 成本降一个数量级"提供了一个需求侧的经济学镜像：**供给侧成本在降，但用途在爆炸**。
 
 ## capex 的物理上限与"模型只相关 3–9 个月"（Benedict Evans，前 a16z，2026-06）
 
 来源：[a16z 访谈](../videos/20260608-a16z-benedict-evans-ai-economics.md)
 
-- 微软/Meta/Google 今年 capex 均超营收 **50%**（电信才 15–20%），四大指引约 **7000 亿美元/年**——与油气（7000 亿–1 万亿）同量级，"很多钱但非天量"（00:48–00:49）。
-- 但存在硬顶："**不可能一年花 10 万亿美元在 AI 基础设施上，因为世界上没有 10 万亿可花**"；1.5 万亿只能借、不可持续 → 增长终将放缓（00:49）。
-- 贯穿其分析的一条线：**模型只在 3–9 个月内相关，却要花数十亿造，还得永远追下一个**——这放大了基础设施投资相对回报窗口的不匹配（00:50）。与 Jensen"token 工厂/每年成本降一个数量级"是供给侧乐观，与本节 Imas·Trammell 的需求侧"用途爆炸让算力份额上升"共同构成 capex 是否可持续的两面。价值捕获视角详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。
+- 微软/Meta/Google 今年 capex 均超营收 **50%**（电信才 15–20%），四大指引约 **7000 亿美元/年**——与油气（7000 亿–1 万亿）同量级，"很多钱但非天量"（00:48:25–00:49:26）。
+- 但存在硬顶："**不可能一年花 10 万亿美元在 AI 基础设施上，因为世界上没有 10 万亿可花**"；1.5 万亿只能借、不可持续 → 增长终将放缓（00:49:26）。
+- 贯穿其分析的一条线：**模型只在 3–9 个月内相关，却要花数十亿造，还得永远追下一个**——这放大了基础设施投资相对回报窗口的不匹配（00:50:27）。与 Jensen"token 工厂/每年成本降一个数量级"是供给侧乐观，与本节 Imas·Trammell 的需求侧"用途爆炸让算力份额上升"共同构成 capex 是否可持续的两面。价值捕获视角详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)。
 
 ## 端侧AI芯片：从冯诺依曼到存算一体（阳萌，中/安克，2026-06）
 
@@ -83,11 +83,11 @@
 
 一线框架工程的具体案例，把 [朱邦华](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)"新架构逼出 infra 优化"落到 DeepSeek V4：
 
-- **V4 混合稀疏注意力**：SWA（sliding window）+ Compress-4（每 4 token 压 1，hierarchical top-k 选最有影响力的）+ Compress-128（每 128 压 1，全注意力），框架要维护五类 KV cache 状态——用 **shadow radix cache**（虚拟地址映射物理状态）管理（00:04–00:09）。KV cache 大幅压缩（100 万 token < 10GB），打开 offload 到 CPU 的空间（验证 3× 上下文性能，00:20）。与本页 [罗福莉](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md) 的 hybrid attention 独立同频："系统约束使混合稀疏是大势所趋"。
-- **kernel 级优化**：把 KV 压缩的 5 次内存读取里的 3 个计算融成一个算子；**lightning topk** 把长上下文 topk 从 100μs 优化到 15μs（V4 有 60 层，累计影响巨大）（00:09–00:12）。但"算子融合并非总有效"——两算子须能沿同一维度切分（00:47）。
-- **并行**：长上下文用 CP（单机内快）、跨机用 PP；V4 注意力不天然支持 TP（kernel 要求头数是 64 倍数，用 padding）；已支持 PD 分离（00:12–00:19）。
-- **RL 训练（Miles）比推理难 day-0 支持**：无标准 baseline、要 backward、debug 成本大；精度是最耗时环节（CP 下 KV gradient 因 compress attention 稀疏、reduction 复杂使 BF16 不够，需换 FP32）；借鉴 DeepSeek deterministic ops 消除 KL loss spike（00:22–00:35）。详见 [LLM 训练管线](llm-training-pipeline.md)。
-- 月球大叔总结的方法论："做 MLSys 别只补代码小窟窿，要抽象出框架——system research 需要美感"；**数据管理是被低估的新方向**（agent 持续记忆、Dreams vs Memory），与 [江鋆晨"KV Cache 是下一个数据层"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同频（01:00–01:04）。
+- **V4 混合稀疏注意力**：SWA（sliding window）+ Compress-4（每 4 token 压 1，hierarchical top-k 选最有影响力的）+ Compress-128（每 128 压 1，全注意力），框架要维护五类 KV cache 状态——用 **shadow radix cache**（虚拟地址映射物理状态）管理（00:04:06–00:09:16）。KV cache 大幅压缩（100 万 token < 10GB），打开 offload 到 CPU 的空间（验证 3× 上下文性能，00:20:48）。与本页 [罗福莉](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md) 的 hybrid attention 独立同频："系统约束使混合稀疏是大势所趋"。
+- **kernel 级优化**：把 KV 压缩的 5 次内存读取里的 3 个计算融成一个算子；**lightning topk** 把长上下文 topk 从 100μs 优化到 15μs（V4 有 60 层，累计影响巨大）（00:09:16–00:12:29）。但"算子融合并非总有效"——两算子须能沿同一维度切分（00:47:22）。
+- **并行**：长上下文用 CP（单机内快）、跨机用 PP；V4 注意力不天然支持 TP（kernel 要求头数是 64 倍数，用 padding）；已支持 PD 分离（00:12:29–00:19:47）。
+- **RL 训练（Miles）比推理难 day-0 支持**：无标准 baseline、要 backward、debug 成本大；精度是最耗时环节（CP 下 KV gradient 因 compress attention 稀疏、reduction 复杂使 BF16 不够，需换 FP32）；借鉴 DeepSeek deterministic ops 消除 KL loss spike（00:22:50–00:35:59）。详见 [LLM 训练管线](llm-training-pipeline.md)。
+- 月球大叔总结的方法论："做 MLSys 别只补代码小窟窿，要抽象出框架——system research 需要美感"；**数据管理是被低估的新方向**（agent 持续记忆、Dreams vs Memory），与 [江鋆晨"KV Cache 是下一个数据层"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同频（01:00:41–01:04:48）。
 
 ## KV Cache 作为独立数据层（江鋆晨，中/TensorMesh·LMCache，2026-06）
 
@@ -103,9 +103,9 @@
 
 来源：[Latent Space 访谈](../videos/20260624-latent-space-databricks-agent-cloud.md)
 
-- **Omnigent = 跨 harness 的公共 API + agent cloud**：把 Claude Code/Codex/Cursor 等所有 harness 映射到一套 session API（收 message/file、吐 streaming/tool-call 流），上层做协作/安全/成本控制；开源以吃"众人写 integration"的网络效应（发布首周末 ~400 merge）。Zaharia 明确类比**网络协议（IP layer）而非 OS/数据库**——与 [江鋆晨"OpenAI API = IPv4 细腰"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 是同一"稳定接口层"直觉的两个落点（00:04–00:16）。
-- **agent cloud / 不关机 sandbox**：从 lakebase 架构去掉数据库即得；需本地持久化（库不每次重装）——解决"开车还得盯 Codex session"的荒诞（00:07–00:17）。
-- **"把数据放到对的地方，糊一层 AGI"**：**L-TAP** 只统一存储层（Postgres 页用空闲 CPU 转码成列式 parquet，无 CDC 管道），让 agent 实时 reason 业务数据、强 10 倍；**Dream Engine** 用 **ML 模型（非 LLM）+ 十年 trace** 从零重建数据库引擎、运行时 dispatch 最优数据结构（00:32–00:50）。这是"数据层 vs 计算层"权衡的又一形态，与本页 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV Cache 数据层、[Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的芯片级搬运税同属"计算 vs 通信/数据"主线。
+- **Omnigent = 跨 harness 的公共 API + agent cloud**：把 Claude Code/Codex/Cursor 等所有 harness 映射到一套 session API（收 message/file、吐 streaming/tool-call 流），上层做协作/安全/成本控制；开源以吃"众人写 integration"的网络效应（发布首周末 ~400 merge）。Zaharia 明确类比**网络协议（IP layer）而非 OS/数据库**——与 [江鋆晨"OpenAI API = IPv4 细腰"](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 是同一"稳定接口层"直觉的两个落点（00:04:03–00:16:07）。
+- **agent cloud / 不关机 sandbox**：从 lakebase 架构去掉数据库即得；需本地持久化（库不每次重装）——解决"开车还得盯 Codex session"的荒诞（00:07:06–00:17:07）。
+- **"把数据放到对的地方，糊一层 AGI"**：**L-TAP** 只统一存储层（Postgres 页用空闲 CPU 转码成列式 parquet，无 CDC 管道），让 agent 实时 reason 业务数据、强 10 倍；**Dream Engine** 用 **ML 模型（非 LLM）+ 十年 trace** 从零重建数据库引擎、运行时 dispatch 最优数据结构（00:32:12–00:50:20）。这是"数据层 vs 计算层"权衡的又一形态，与本页 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV Cache 数据层、[Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的芯片级搬运税同属"计算 vs 通信/数据"主线。
 
 ## 面向 Agent 的架构与 RL Infra（罗福莉，小米 MemoVR，2026-04）
 
@@ -129,44 +129,44 @@
 
 来源：[月球大叔访谈](../videos/20260511-uncle-moon-vllm-omni.md)
 
-- **把 PD 分离推广成通用 "stage" 抽象**：LLM 的 prefill/decode 只是两个 stage；多模态里一个 stage 可能是多模态 encode/生成，stage 间要传的不只 KV cache，还有 embedding/metadata，**方向可双向、可跳 stage**（00:03–00:04）。这是把 [SGLang·Miles](../videos/20260501-uncle-moon-sglang-deepseek-v4.md)/[LMCache](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV-transfer 思路推到多模态的自然延伸。
-- **omni connector + 控制面/数据面解耦**：单卡走 shared memory、多卡自动走 **Mooncake**；轻控制信息与重 payload 分开传；chunkwise 异步流式把**首包延迟从近 10 秒降到 <1 秒、RTF<1**（00:28–00:33）。
-- **DiT 加速**（AR 复用 vLLM、Diffusion 从头写）：TeaCache（layer 级跳步）+ block 级缓存；并行 USP+Ring Attention（正交）、HSDP、VAE patching、CFG parallel（最稳）；实测显卡算力过剩、diffusion 可 continuous batching；边缘设备做 module/layer-wise CPU offload（00:41–00:57）。
-- **国产硬件插件**：CUDA/ROCm + **华为昇腾 MPU、百度昆仑**，新硬件接入不改核心 AR/Diffusion 逻辑——直接回应下方中美对照里"国产芯片主动论述待补"的缺口（00:24–00:25）。
+- **把 PD 分离推广成通用 "stage" 抽象**：LLM 的 prefill/decode 只是两个 stage；多模态里一个 stage 可能是多模态 encode/生成，stage 间要传的不只 KV cache，还有 embedding/metadata，**方向可双向、可跳 stage**（00:03:02–00:04:04）。这是把 [SGLang·Miles](../videos/20260501-uncle-moon-sglang-deepseek-v4.md)/[LMCache](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 的 KV-transfer 思路推到多模态的自然延伸。
+- **omni connector + 控制面/数据面解耦**：单卡走 shared memory、多卡自动走 **Mooncake**；轻控制信息与重 payload 分开传；chunkwise 异步流式把**首包延迟从近 10 秒降到 <1 秒、RTF<1**（00:28:38–00:33:47）。
+- **DiT 加速**（AR 复用 vLLM、Diffusion 从头写）：TeaCache（layer 级跳步）+ block 级缓存；并行 USP+Ring Attention（正交）、HSDP、VAE patching、CFG parallel（最稳）；实测显卡算力过剩、diffusion 可 continuous batching；边缘设备做 module/layer-wise CPU offload（00:41:08–00:57:38）。
+- **国产硬件插件**：CUDA/ROCm + **华为昇腾 MPU、百度昆仑**，新硬件接入不改核心 AR/Diffusion 逻辑——直接回应下方中美对照里"国产芯片主动论述待补"的缺口（00:24:27–00:25:30）。
 
 ## 半导体供应链与代工：Intel 的重整（Lip-Bu Tan，美/Intel，2026-06）
 
 来源：[No Priors 访谈](../videos/20260618-no-priors-lip-bu-tan-intel.md)
 
-- **瓶颈排序：电力→氦（helium）→内存→CPU/GPU**——扩产建 fab 要几年、成本会往客户传导涨价；"AI 冲击比互联网更大更深刻"（00:11–00:13）。与 Jensen"电力是首要瓶颈"一致，但补上**氦与内存短缺**两个少被提及的物理约束。
-- **先进封装成新瓶颈**：EMIB-T vs TSMC CoWoS、玻璃基板（好热绝缘、Intel ~1000 模组专利）、人造金刚石；摩尔定律撞物理墙后靠新材料（GaN/SiC/InP）——与 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的电路级"计算 vs 通信"是产业链上下游两端（00:15–00:19）。
-- **CPU 在 AI 里回潮**：训练 CPU:GPU 从 1:8 到 1:4 甚至 1:1，RL 与 agent 编排里 CPU 更好——与 [Modal](../videos/20260708-latent-space-modal-agent-infra.md)"inference inflection：GPU:CPU 摆回 1:1"、朱邦华"RL environments 让 CPU 变重要"三方独立同频（00:05）。
-- **算力终局不押集中式**：看多 edge/client 算力（机器人/国防/家用），与 Jensen 的集中式"token 工厂"、Lewis Hong 的太空数据中心构成"算力放哪"的第三种下注；代工资本密集经济学详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)（00:41–00:44）。
+- **瓶颈排序：电力→氦（helium）→内存→CPU/GPU**——扩产建 fab 要几年、成本会往客户传导涨价；"AI 冲击比互联网更大更深刻"（00:11:07–00:13:09）。与 Jensen"电力是首要瓶颈"一致，但补上**氦与内存短缺**两个少被提及的物理约束。
+- **先进封装成新瓶颈**：EMIB-T vs TSMC CoWoS、玻璃基板（好热绝缘、Intel ~1000 模组专利）、人造金刚石；摩尔定律撞物理墙后靠新材料（GaN/SiC/InP）——与 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md) 的电路级"计算 vs 通信"是产业链上下游两端（00:15:10–00:19:10）。
+- **CPU 在 AI 里回潮**：训练 CPU:GPU 从 1:8 到 1:4 甚至 1:1，RL 与 agent 编排里 CPU 更好——与 [Modal](../videos/20260708-latent-space-modal-agent-infra.md)"inference inflection：GPU:CPU 摆回 1:1"、朱邦华"RL environments 让 CPU 变重要"三方独立同频（00:05:01）。
+- **算力终局不押集中式**：看多 edge/client 算力（机器人/国防/家用），与 Jensen 的集中式"token 工厂"、Lewis Hong 的太空数据中心构成"算力放哪"的第三种下注；代工资本密集经济学详见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)（00:41:20–00:44:20）。
 
 ## 晶圆级芯片与快推理（Andrew Feldman，美/Cerebras，2026-05）
 
 来源：[No Priors 访谈](../videos/20260521-no-priors-cerebras-feldman.md)
 
-- **"要根本性更好，架构就必须不同"**：造 46,000mm²"餐盘大小"晶圆级芯片（别人造"邮票大小"），推理比 GPU 快 15–20x；对 GPU 小改不可能快 20 倍（00:02–00:07）。为本页 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)"GPU 是一堆微型 TPU"、姚顺宇 TPU/GPU 对照补上"整片晶圆"这一极端设计点。
-- **供给侧的爬坡真相**：造不出来烧了两年、每月 800 万美元；跨越 chasm 靠超算→主权基金 G42 十亿订单 battle test→OpenAI 200 亿单；制造能力今年 10x（"硬件史上最快之一"）（00:07–00:24）。与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)"硬件（Cerebras/Groq/LPU）多优化 decode"形成互证——Feldman 正是从 decode 侧"快"切入。
+- **"要根本性更好，架构就必须不同"**：造 46,000mm²"餐盘大小"晶圆级芯片（别人造"邮票大小"），推理比 GPU 快 15–20x；对 GPU 小改不可能快 20 倍（00:02:00–00:07:05）。为本页 [Reiner Pope](../videos/20260522-dwarkesh-reiner-pope-chip-design.md)"GPU 是一堆微型 TPU"、姚顺宇 TPU/GPU 对照补上"整片晶圆"这一极端设计点。
+- **供给侧的爬坡真相**：造不出来烧了两年、每月 800 万美元；跨越 chasm 靠超算→主权基金 G42 十亿订单 battle test→OpenAI 200 亿单；制造能力今年 10x（"硬件史上最快之一"）（00:07:05–00:24:11）。与 [江鋆晨](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)"硬件（Cerebras/Groq/LPU）多优化 decode"形成互证——Feldman 正是从 decode 侧"快"切入。
 - 呼应本页 Imas·Trammell 的需求侧："2025 年模型聪明到有用后需求爆炸"，"慢推理的市场是零"。
 
 ## Agent 云 / sandbox / 弹性推理（Akshat Bubna，美/Modal，2026-07）
 
 来源：[Latent Space 访谈](../videos/20260708-latent-space-modal-agent-infra.md)
 
-- **self-provisioning runtime**：把硬件/扩缩容写进代码 decorator（与代码 collocate），而非读几百个无类型 Kubernetes YAML；SDK 团队从"开发者体验"转向"agent 体验（AX≈DX，余弦相似度 ~0.9）"（00:04–00:07）。
-- **sandbox 是 agent 的完美原语**：2023 年 5 月就做、去年才爆；**RL rollout 极 bursty（要 10 万个 sandbox）**、agent 本身反而不 bursty——与罗福莉"RL infra 必须容错"、朱邦华"RL environments 是新瓶颈"从 sandbox 供给侧对接（00:10–00:15、00:27–00:29）。
-- **投机解码真相**：开源 DFlash（block-based speculator），**提升 accept length 是乘法级 2–4x 提速**（改 kernel 只有几个百分点）、不降质量；上游贡献回 SGLang（00:17–00:22）。与罗福莉"MTP 被 verify、无幻觉"同属"用富裕算力做投机解码"。
-- **inference inflection**：GPU:CPU 从 8:1 摆回 ~1:1（agent 频繁 call out CPU）；capital-light 跨 17 家云建统一容量池 + 自建可靠性层，"compute strategy"团队对冲容量（类比航空对冲燃油）——与 Databricks Omnigent、[江鋆晨 disaggregation](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同属"agent 云 / 硬件组织形态"下注（00:24–00:47）。
+- **self-provisioning runtime**：把硬件/扩缩容写进代码 decorator（与代码 collocate），而非读几百个无类型 Kubernetes YAML；SDK 团队从"开发者体验"转向"agent 体验（AX≈DX，余弦相似度 ~0.9）"（00:04:06–00:07:10）。
+- **sandbox 是 agent 的完美原语**：2023 年 5 月就做、去年才爆；**RL rollout 极 bursty（要 10 万个 sandbox）**、agent 本身反而不 bursty——与罗福莉"RL infra 必须容错"、朱邦华"RL environments 是新瓶颈"从 sandbox 供给侧对接（00:10:12–00:15:14、00:27:21–00:29:23）。
+- **投机解码真相**：开源 DFlash（block-based speculator），**提升 accept length 是乘法级 2–4x 提速**（改 kernel 只有几个百分点）、不降质量；上游贡献回 SGLang（00:17:15–00:22:18）。与罗福莉"MTP 被 verify、无幻觉"同属"用富裕算力做投机解码"。
+- **inference inflection**：GPU:CPU 从 8:1 摆回 ~1:1（agent 频繁 call out CPU）；capital-light 跨 17 家云建统一容量池 + 自建可靠性层，"compute strategy"团队对冲容量（类比航空对冲燃油）——与 Databricks Omnigent、[江鋆晨 disaggregation](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) 同属"agent 云 / 硬件组织形态"下注（00:24:19–00:47:37）。
 
 ## 史无前例的 buildout、推理即算力、主权与开源（Andrew Feldman / Cerebras，2026-07）
 
 来源：[开源赢麻、AGI 已至](../videos/20260710-all-in-cerebras-bfl-open-source.md)（补 [No Priors 访谈](../videos/20260521-no-priors-cerebras-feldman.md)）
 
-- **buildout 的物理尺度**：数据中心未来几年用电将超过"地球过去 50 年"，单栋建筑用电超中型城市，遍布美/加/北欧/中东/中亚；买家"永不满足、在追赶昨天的需求"，Cerebras **$250 亿 backlog**（00:01–00:04）。
-- **推理即算力 + 推理的 Moore's law**：reasoning 是 inference、极耗 token，正好喂给快机器；Cerebras 打破 18 个月翻倍、未来 18 个月"远超 2x"（新架构还有大量优化空间，20 年老架构 GPU 只能靠更小制程）——为本页"推理是 infra 主战场"（朱邦华/江鋆晨/Modal）补上芯片侧的加速曲线（00:07–00:13）。
-- **主权是趋势、开源今年闭合 gap**：Cerebras 跑 GLM/Kimi/Qwen + OpenAI 闭源 + GSK/G42/MBZUAI 自研模型；美国需要更多**本土开源模型**（现只有 OSS 12B 或中国模型可选）；OpenAI/Amazon 自研芯片是"没人喜欢依赖"（x86 依赖 Intel、GPU 依赖少数超算的教训）（00:14–00:20）。与 Lip-Bu Tan 的产业政策叙事、下文中美对照直接相扣。
+- **buildout 的物理尺度**：数据中心未来几年用电将超过"地球过去 50 年"，单栋建筑用电超中型城市，遍布美/加/北欧/中东/中亚；买家"永不满足、在追赶昨天的需求"，Cerebras **$250 亿 backlog**（00:01:00–00:04:02）。
+- **推理即算力 + 推理的 Moore's law**：reasoning 是 inference、极耗 token，正好喂给快机器；Cerebras 打破 18 个月翻倍、未来 18 个月"远超 2x"（新架构还有大量优化空间，20 年老架构 GPU 只能靠更小制程）——为本页"推理是 infra 主战场"（朱邦华/江鋆晨/Modal）补上芯片侧的加速曲线（00:07:03–00:13:06）。
+- **主权是趋势、开源今年闭合 gap**：Cerebras 跑 GLM/Kimi/Qwen + OpenAI 闭源 + GSK/G42/MBZUAI 自研模型；美国需要更多**本土开源模型**（现只有 OSS 12B 或中国模型可选）；OpenAI/Amazon 自研芯片是"没人喜欢依赖"（x86 依赖 Intel、GPU 依赖少数超算的教训）（00:14:07–00:20:12）。与 Lip-Bu Tan 的产业政策叙事、下文中美对照直接相扣。
 
 ## 中美对照
 
@@ -207,7 +207,7 @@
 
 本库此前积累的主流论证是"**能源是天然的防泡沫上限**"——[Gelsinger](../people/pat-gelsinger.md)（"没人会在没有能源的情况下买 GPU、建数据中心，所以你对能有多泡沫有个上界，我从中得到不少安慰"）与 [a16z 成长期](../videos/20260529-a16z-picking-ai-winners.md)（"供给受限而非需求受限，所以不是泡沫"）是同一论证的两个版本。
 
-[Mark Cuban](../people/mark-cuban.md) 用**同一个能源事实**得出了**相反方向的风险读数**（[视频页](../videos/20260721-all-in-mark-cuban-ai-bubble.md) 00:02–00:03）：
+[Mark Cuban](../people/mark-cuban.md) 用**同一个能源事实**得出了**相反方向的风险读数**（[视频页](../videos/20260721-all-in-mark-cuban-ai-bubble.md) 00:02:02–00:03:02）：
 
 > **"如果 AI 上出现一条能大幅降低电力需求的性价比曲线，会有很多数据中心被改造成匹克球场。"**
 
@@ -251,7 +251,7 @@
 
 ## 碎片化对基础设施层最有利，以及"五个九"的成本阶梯（All-In，2026-07）
 
-来源：[All-In #282](../videos/20260724-all-in-open-source-ban-anthropic-copyright.md) 01:06–01:15
+来源：[All-In #282](../videos/20260724-all-in-open-source-ban-anthropic-copyright.md) 01:06:46–01:15:50
 
 本页的"价值沉降到基础设施"论点第一次在**公开市场财报**上被检验：
 
@@ -262,7 +262,7 @@
 
 ### "五个九"的成本阶梯：本页少见的进入壁垒量化
 
-Chamath 在回答"Apple 该不该做云"时给出（01:14–01:15）：
+Chamath 在回答"Apple 该不该做云"时给出（01:14:49–01:15:50）：
 
 | 可用性 | 大致成本量级 |
 |---|---|
@@ -288,7 +288,7 @@ Chamath 在回答"Apple 该不该做云"时给出（01:14–01:15）：
 
 ### ⚠️ 对本页"token 工厂"框架的一条重要限定
 
-游凯超接受"token 即电力"的类比，但给了它一条边界（[00:01]–[00:02]，⚠️ 仅存于片头预告，完整论证不在上传版正文中）：
+游凯超接受"token 即电力"的类比，但给了它一条边界（[00:01:01]–[00:02:02]，⚠️ 仅存于片头预告，完整论证不在上传版正文中）：
 
 > "大家把 token 和电做类比的时候，可能会觉得电它是比较通用的、可以调制的，**但是 token 它是没有办法去做调制的**——你没有办法把一个 DeepSeek 模型的 token 转化为一个 Kimi 的 token，**这个 token 它是带着模型的烙印的**。"
 
@@ -324,7 +324,7 @@ Chamath 在回答"Apple 该不该做云"时给出（01:14–01:15）：
 - **投机解码的现状**（⚠️ 方法名 "DSpark" / 路线名 "DFlash" 均为转录音，官方名待核）：EAGLE / MTP 系猜得短（3–5 个 token）但接收率高；DFlash 系一次猜 16 个但错得也多、验证阶段浪费算力；DSpark 的改进是**先用置信度估计哪几个猜测大概率准，只验证前若干个**。vLLM 与 NVIDIA 刚发布的 DFlash 支持"**可以对某些模型达到每秒上千 token**"。
 - 他对创新性的判断很克制（"在算法上并不能算很 novel"，腾讯混元、上海交大已有同思路工作），但随即给出本节的收束——也是整个 co-design 论的落点：
   > "**创新性是一回事，能不能把这个创新的想法扎实地做出来又是另一回事。**……**有没有一个好的推理引擎上的实现，是决定一个投机解码算法能不能大规模使用的关键。**"
-- ⚠️ 他把 DeepSeek 的 infra 功底归因于**幻方量化时期对性能的极致压榨**，但该判断仅存于片头预告（[00:01]），完整论证不在上传版正文中。
+- ⚠️ 他把 DeepSeek 的 infra 功底归因于**幻方量化时期对性能的极致压榨**，但该判断仅存于片头预告（[00:01:01]），完整论证不在上传版正文中。
 
 > 治理与商业化侧（基金会 + 公司双层结构、AI slop、开源基建为何撑不住工程）见 [开源基础设施与治理](open-source-infrastructure.md)。
 
