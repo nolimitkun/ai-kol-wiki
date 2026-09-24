@@ -15,6 +15,10 @@ confidence: high
 > 张小珺商业访谈录第141期。Freda（段），Altimeter Capital 合伙人，硅谷科技基金横跨一二级市场。投资案例：OpenAI、Anthropic、字节跳动、英伟达、Snowflake、Robinhood。
 > 84分钟。前半段硬核投资分析，后半段谈焦虑与人的连接。whisper medium 转录。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260518-MjTfhm5N8x8/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Freda 段（嘉宾，88.4%）**、**SPEAKER_01 = 张小珺（主持，10.7%）**。
+> 依据：SPEAKER_01 开场自报"Hello大家好,我是小俊 今天是我们的系列节目……第二集"（[00:00:00]，92%）。SPEAKER_00（46 秒）为碎片。
+
 ## 核心观点
 
 ### 1. Token 经济学

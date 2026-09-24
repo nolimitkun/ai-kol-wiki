@@ -15,6 +15,11 @@ confidence: high
 > 张小珺商业访谈录第142期。戴雨森，真格基金管理合伙人。139分钟。whisper medium 转录。
 > 第1集（124期）曾预言"2026=Year of R（Return/Research/Reality）"，本次复盘打脸并深入讨论 AI 投资、Harness、组织变革、创业方向。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260527-XEhf371Aeso/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = 戴雨森（嘉宾，91.5%）**、**SPEAKER_01 = 张小珺（主持，7.6%）**。
+> 依据：SPEAKER_01 开场自报"Hello 大家好 我是小俊 今天是我们的系列节目 戴宇森的创投观察第二集"（[00:00:00]，79%）。
+> SPEAKER_00（67 秒，73 段）为碎片，含片尾旁白。
+
 ## 核心观点
 
 ### 1. 复盘：什么对了，什么错了

@@ -15,6 +15,13 @@ confidence: high
 > 张小珺商业访谈录第144期，英文版《Anker / Steven Yang: Consumer Electronics Death & Birth, The Third Category, Product Philosophy》，218分钟。
 > 访谈风格：深入、结构清晰，阳萌展现了极强的抽象思考能力（INTP），问答质量高。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260608-kBsqirnWTpI/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 与 SPEAKER_01 都是阳萌**（同一人被拆成两个标签，合计 90.4%），**SPEAKER_02 = 张小珺（主持，9.6%）**。
+> 依据：SPEAKER_02 开场自报"哈喽大家好 我是小珺……今天我们的嘉宾 是安克创新的创始人兼CEO阳萌"（[00:00:01]，100%）；
+> 主持说"hello Steven 给观众朋友们打个招呼"后，"hello 小珺好 我是安克创新的创始人叫阳萌"落在 **SPEAKER_01**（[00:01:02] 块，70%）；
+> 而 SPEAKER_01 的 826 轮里有 623 轮紧接在 SPEAKER_00 之后，两者内容都是以"我们公司"口吻讲安克（如 [00:46:35] 块内爱普生 CEO 来访，100%）——
+> 是阳萌接着自己说被换了标签。页头只有一位嘉宾，也与此一致。读 sidecar 占比表时应把 00 与 01 合并看。
+
 ## 人物背景
 
 - 1982年生，长沙雅礼中学 → 北大计算机系 → UT Austin 机器学习博士肄业 → Google 5年（获 Founders' Award）
