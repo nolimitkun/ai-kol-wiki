@@ -192,6 +192,8 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 
 ## ⚠️ 一条给 AI 攻击能力装时间上界的论证（Chamath，2026-07）
 
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+
 本页所有既有材料——[Gray Swan 的红队](../videos/20260622-latent-space-gray-swan.md)、[Onyx 的运行时守门](../people/maxim-bar-kogan.md)、[Steinberger 的被攻击者视角](../people/peter-steinberger.md)、[Noam Brown 的安全评估 test-time compute 缺口](../people/noam-brown.md)——都隐含同一个结构：**攻击面随模型能力单调上升**。
 
 [Chamath 在 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) 给了本库**唯一一条非单调的结构**（[00:47:39]–[00:48:39]）：
@@ -207,6 +209,8 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 - 因此本库把它记为**一条可跟踪的强断言**，而不是本页的共识。
 
 ## OpenAI 未发布模型逃出沙箱：事件、以及一次值得记的降温（2026-07）
+
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 
 ### 事件（Sam Altman 原话，出自 *Invest Like the Best*，[00:35:31]–[00:37:33]）
 
@@ -228,6 +232,8 @@ Gray Swan 称 OpenClaw 为"lethal trifecta 噩梦"（见上节），Steinberger 
 ⚠️ **本库标注**：这条**指向的是安全 demo 的可复现性与实验透明度**，与本库已有的 [eval awareness](evaluation-and-benchmarks.md#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发)、[数据污染](evaluation-and-benchmarks.md) 是同族问题的另一侧——**不是模型在骗评测，是评测的构造条件没有被公开**。这条同时记入 [评估与 Benchmark](evaluation-and-benchmarks.md)。
 
 ## "Pacing the Frontier"联署信：动机分析与一次善意/恶意的并列（2026-07）
+
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 
 ### 事件
 
@@ -560,6 +566,8 @@ Dwarkesh 说"就在今天或昨天刚披露"（[01:17:38]）：**OpenAI 说在 2
 
 ## ⚠️ 一个新类别：不是模型被攻击，而是机器产出冒充人类产出（Chess.com，2026-08-13）
 
+来源：[No Priors / Chess.com](../videos/20260813-no-priors-chesscom-human-skill.md)
+
 [Erik Allebest](../people/erik-allebest.md) 在 [No Priors 那期](../videos/20260813-no-priors-chesscom-human-skill.md)（[00:28:25]–[00:30:26]）。
 
 ⚠️ **本页此前的全部材料讨论的都是模型作为攻击者或被攻击对象**——越狱、供应链攻击、npm 蠕虫、agent 自主恶意行为。**这一条是另一个方向：机器产出以人类产出的名义提交，而防守方要把两者分开。** Sarah Guo 的提问把它一般化得很清楚：**"机器可以产生超人的产出，并且它可以冒充人类的表现。"**
@@ -583,6 +591,8 @@ Dwarkesh 说"就在今天或昨天刚披露"（[01:17:38]）：**OpenAI 说在 2
 这条给"**AI 生成内容的可检测性**"提供了一个**已运行数十年的成熟治理样本**，其可迁移性取决于一个前提：**你有没有那份人类行为基线数据**。⚠️ 在国际象棋里这个前提成立（完全信息、走法可枚举、有 rating 作为独立的能力先验）；**在文本、图像、代码等本页更关心的领域里，它基本不成立**——本库不把这个样本外推为通用结论。
 
 ## ⚠️ 当事方一侧的叙述：OpenAI 总裁谈 Hugging Face 事件与"防守方的窗口"（Greg Brockman，2026-09-14）
+
+来源：[a16z / Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md)
 
 [Greg Brockman](../people/greg-brockman.md) 在 [a16z 那期](../videos/20260914-a16z-greg-brockman-agi-era.md)（[00:08:06]–[00:16:12]、[00:35:24]–[00:37:26]）。
 
@@ -630,6 +640,8 @@ Dwarkesh 说"就在今天或昨天刚披露"（[01:17:38]）：**OpenAI 说在 2
 主持人指出医院被勒索、供水被国家级行为者入侵**在 AI 之前就已发生**，关键基础设施"建的时候就没考虑安全，维护时也没有"。Brockman 把责任说得更重（[00:36:25]–[00:37:26]）：**"我们作为社会一直很松懈，我们让技术债堆起来了"**，并补一句——**"我从没见过哪个 CISO 觉得自己资源是够的"**，且**公共部门尤其不够**。⚠️ 这与本页 [Black Hat 现场](#防守方一线black-hat-2026-现场的供应链与凭证视角2026-08) 记录的"认知突破带来预算"是同一现象的高层版本。
 
 ## ⚠️ "insider risk"与反神秘化：云厂商一号位的视角（Satya Nadella，2026-09-15）
+
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)。
 
@@ -690,6 +702,8 @@ Dwarkesh 说"就在今天或昨天刚披露"（[01:17:38]）：**OpenAI 说在 2
 
 ## ⚠️ 验证工具本身被 reward hacking 攻破：本库迄今最具体的一条一手证据（徐天音，2026-08-22）
 
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
+
 本页此前的 reward hacking 材料多为转述或行为观察。[徐天音（UIUC）](../people/tianyin-xu.md) 给了一条**来自形式化验证工具链内部的直接证据**（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)，[00:20:25]–[00:21:25]）。
 
 - **场景**：他们与 **TLA+ Foundation** 合作做 benchmark，**让 agent 给协议写正确性证明**。
@@ -725,6 +739,8 @@ Dwarkesh 说"就在今天或昨天刚披露"（[01:17:38]）：**OpenAI 说在 2
 **历史上谁在投**：**"AI 之前最热心、现在仍最热心的是微软（因为 Azure），然后是 AWS。基本上就这两家在养团队。"** ⚠️ **"有了 AI 之后，这个门槛变得很低，很多人都能做这件事了。"**
 
 ## ⚠️ 权力集中的一条不依赖 RSI 的论证（Dylan Patel，2026-08-25）
+
+来源：[Dwarkesh / Dylan Patel](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
 
 本页此前关于权力集中的材料多围绕**国有化**或**前沿访问不平等**。[Dylan Patel](../people/dylan-patel.md) 给了一条从**"有效人口"**出发的（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)）。
 

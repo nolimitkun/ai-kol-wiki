@@ -216,6 +216,8 @@ Genesis 明确把 LLM 的"预训练 / 后训练(RL) / 推理时"三段式移植�
 
 ## ⚠️ "更聪明 vs 更便宜"是一个假的权衡（Decagon，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 本页的 scaling 讨论多在**前沿模型怎么变强**。[Decagon 那期](../videos/20260731-a16z-decagon-enterprise-ai-apps.md) 给了一条来自生产部署侧的判断（[00:05:00]）：
 
 > "推特上这些辩论的权衡往往被说成：我们要非常贵的最聪明的模型，还是把它变笨一点换便宜？**我其实认为那是一个假的权衡**……我们在实践中看到的是——**当我们微调更小、更笨的模型时，它们只是没那么通用，但在我们要它做的那个具体任务上，它们确实超过又大又聪明的 SOTA 模型。**"
@@ -314,6 +316,8 @@ Ryan 反问"你觉得前沿实验室的支出里数据和算力的比例是多�
 
 ## 多模态融合：把"互相污染"之争还原成目标函数之争（刘洺堉 / Cosmos 3，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 来自 [刘洺堉](../people/ming-yu-liu.md) 在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)。**本页此前关于多模态的材料多是路线主张；这一期给的是一份带实验依据的融合报告，而且它顺手拆解了本库记录过的一组对立。**
 
 ### ⚠️ 三方对照：主持人把两条相反的担忧摆到了他面前
@@ -371,6 +375,8 @@ Ryan 反问"你觉得前沿实验室的支出里数据和算力的比例是多�
 配套的方法论（[00:55:24]）：deep learning 的教训是不要 handcraft feature 与算法，**"所以就常跟自己讲，你在做选择的时候，要找更加 scalable 的"**。
 
 ## ⚠️ 线性注意力的演进史与架构—Infra 协同设计：领读 Kimi K3（孙宇涛，2026-08-26）
+
+来源：[张小珺 / 孙宇涛](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 
 [孙宇涛](../people/sun-yutao.md) 在 [张小珺第 152 期](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)。**本页迄今技术密度最高的一份材料**，也是本库第一份"论文领读"体裁。
 
@@ -466,6 +472,8 @@ Ryan 反问"你觉得前沿实验室的支出里数据和算力的比例是多�
 
 ## ⚠️ 一个 17 岁在 0.05B 尺度上的 attention 改动，以及他自己给的排序（苏廷浩，2026-08-19）
 
+来源：[张小珺 / 苏廷浩](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
+
 [苏廷浩](../people/su-tinghao.md) 的 ICML 2026 论文（[视频页](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)）。⚠️ **论文标题在转录稿里残缺，本库不补全；以下只复述他自己口述的方法。**
 
 - **出发点是 value residual learning**（[00:15:15]）：该方法**把第一层 attention 里的 value 加到之后几层里做残差**。
@@ -482,6 +490,8 @@ Ryan 反问"你觉得前沿实验室的支出里数据和算力的比例是多�
 ⚠️ **本页把他的工作记为小规模验证，不作为规模化结论——这也是他自己的表述。**
 
 ## ⚠️ "要静态输出，反而应该拿动态数据训"（World Labs / Atlas，2026-09-04）
+
+来源：[a16z / World Labs Atlas](../videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)
 
 来自 [World Labs](../people/fei-fei-li.md) 在 Atlas 发布次日的访谈（[视频页](../videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)）。本页此前几乎没有**视觉侧数据配比**的材料。
 

@@ -227,6 +227,8 @@
 
 ### ⚠️ 第三种答案，也是唯一来自做军事那一方的（Saronic，2026-08）
 
+来源：[All-In / Saronic](../videos/20260806-all-in-saronic-shipbuilding.md)
+
 上面两条都是**拒绝方**的自陈。[Saronic](../people/saronic-founders.md)（自主水面舰艇，[视频页](../videos/20260806-all-in-saronic-shipbuilding.md)）是本主题第一个**正在做**的当事人，它给出的不是"我们不越线"，而是**线本身的性质**。
 
 主持人的设问是本主题此前没人正面回答过的那个：如果对手宣布"进入封锁线的、不是我们的船就杀"，**自愿克制的一方不就输了吗**？Dino Mavrookas 的回答（[00:33:23]–[00:34:24]）：
@@ -276,6 +278,8 @@
 
 **2026-07-29 补上了美/欧厂商侧的对华判断，而且一集之内就有两种相反答案**（见 [Machina 四家机器人公司](../videos/20260729-all-in-machina-robotics-four-ceos.md)）。此前本主题的中美对照停在**技术与供应链**层（中方硬件强、美方大脑强，双向确认），这里第一次进到**商业与安全**层：
 
+来源：[All-In / Machina](../videos/20260729-all-in-machina-robotics-four-ceos.md)
+
 | | 供应链 | 对中国机器人的判断 |
 |---|---|---|
 | **[ANYbotics](../people/peter-fankhauser.md)**（瑞士） | 中国零件 **0%**，但自称"历史造成的"而非政策选择；核心部件专长在中/欧/美三地 | **最不慌**："那是一块能漂亮行走的硬件，很棒的工程，能翻后空翻——**但他们没有在解决问题**。客户不会拿一个平台去比我们的完整解决方案。**那只是硬件层面的差别。**"护城河是自主+巡检+工作流集成+ISO 网络安全认证（[00:10:07]） |
@@ -288,6 +292,8 @@
 国产芯片、机器人开源生态等仍待更多中方素材补充。
 
 ## ⚠️ 一条来自"机器人本该去做的那些活"的承包方的看空（Netic，2026-07）
+
+来源：[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
 
 本页此前的时间表判断几乎全部来自**机器人侧**——造机器人的（[1X](../people/bernt-bornich.md)、[Agility](../people/jonathan-hurst.md)、[ANYbotics](../people/peter-fankhauser.md)、[Boston Dynamics](../people/amanda-mcmaster.md)、[Atoms](../people/travis-kalanick.md)）、做机器人模型的（[PI](../people/kay-ke.md)、[World Labs/SceniX](#世界即产品world-labs--scenix美2026-07)、[蚂蚁灵波](../people/shen-yujun.md)）、或做横向供应的（[Applied Intuition](#横向供应商路线applied-intuition美2026-07)）。
 
@@ -313,6 +319,8 @@
 **方法论上值得一记**：她强调 Netic"**每一个工程师都必须去客户现场**，才能回到旧金山造出对的产品"——这与本页 [Lassie 创始人亲手干了几个月理赔单](../people/lassie-founders.md)、[DoorDash 在 Phoenix 跑真实配送](../people/doordash-founders.md) 是同一种认识论：**关于物理世界的判断，来自在物理世界里待过。**
 
 ## 海上自主：把"去掉人"的收益算成单位经济学（Saronic，2026-08）
+
+来源：[All-In / Saronic](../videos/20260806-all-in-saronic-shipbuilding.md)
 
 [Saronic 两位创始人](../people/saronic-founders.md)（[视频页](../videos/20260806-all-in-saronic-shipbuilding.md)）是本主题第一个**水面平台**样本，也是第一次有人把"去掉人"的收益**算成一张可对照的表**。⚠️ 全部数字为公司自报。
 
@@ -351,6 +359,8 @@ Vib 对绿地建 Port Alpha 的表述（[00:38:27]–[00:39:29]）：
 这是本库第一次记录 [extreme co-design](ai-infrastructure.md) 这套方法论被**明确类比进重工业**。配套的还有一条更朴素的版本：他们把船用老旧模拟部件**数字化、加软件 API**，"确保它们能被别处的软件栈远程访问和控制"（[00:18:12]）——⚠️ 转录稿此处出现按音直转的 "MCP" 一词，**是否真指 Model Context Protocol 无法确认**。
 
 ## 基座提供方的位置：Cosmos 与"action 作为 first class citizen"（刘洺堉 / NVIDIA，2026-08）
+
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
 
 来自 [刘洺堉](../people/ming-yu-liu.md)（NVIDIA 研究副总裁 / Cosmos Lab 负责人）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md) 的 4 小时访谈。**本主题此前收录的所有世界模型讨论都来自"做世界模型的公司"（World Labs、Applied Intuition、Black Forest Labs、蚂蚁灵波）——这是第一次从"给做世界模型的公司提供 foundation"的位置发言。**
 
@@ -435,6 +445,8 @@ Cosmos 1→2→2.5→3 的演进终点是**把 reason / predict / transfer / pol
 
 ## ⚠️ "机器人更好的类比是电器，不是汽车"（曾鸣，2026-09-03）
 
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
+
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)（[01:57:55]–[02:01:58]）。
 
 - **阶段判断**：机器人**还在非常早期的"战略探索期"**，核心制约是**数据不像大模型当年那样现成**。他说机器人公司自己认为还在"2020 年左右、ChatGPT 之前"的阶段。
@@ -448,6 +460,8 @@ Cosmos 1→2→2.5→3 的演进终点是**把 reason / predict / transfer / pol
   - **他对当下的对应**："现在相当于大家都能手搓一个机器人公司，但哪个机器人公司能完成规模化量产，谁都不知道"——**我们还在等 T 型车那一步**，"谁第一个真的能够实打实地把一万台机器人卖出去，就已经是个了不起的成就了"。
 
 ## ⚠️ "机器人策略不是静态制品"，以及 real-to-sim 的下一代（World Labs / Atlas，2026-09-04）
+
+来源：[a16z / World Labs Atlas](../videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)
 
 来自 [Fei-Fei Li](../people/fei-fei-li.md) 与两位联合创始人（Justin Johnson、NeRF 作者 Ben Mildenhall）在 Atlas 发布次日的访谈（[视频页](../videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)）。
 

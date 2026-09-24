@@ -35,7 +35,7 @@
 来源：[广密·全球大模型季报第 9 集](../videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)
 
 - **Anthropic = 战略/专注/文化的胜利**：top-down、all-in coding、放弃 C 端与多模态、"模型即应用/数据即模型"、招 underdog、防泄密最严（00:22:24–00:28:27）。
-- **OpenAI = bottom-up、可能出下个范式但不够聚焦**：SAM（VC 出身）容易摊大饼/FOMO、文化 value 0→1 不 value 1→100"没人做脏活"、"ChatGPT 很成功但没有灵魂"（00:41:37–00:44:37）。
+- **OpenAI = bottom-up、可能出下个范式但不够聚焦**：SAM（VC 出身）容易摊大饼/FOMO、文化 value 0→1 不 value 1→100"没人做脏活"、"ChatGPT 很成功但没有灵魂"（[00:41:37]–[00:43:37]）。
 - **Google = 体系化的第三代职业经理人**："像一台机器，换一两个人没影响"，但 PM 文化弱、误判 coding（00:49:42–00:50:42）。
 - 这为姚顺宇/Mark Chen 的"top-down vs bottom-up"提供了投资侧的第三方交叉印证。
 
@@ -158,6 +158,8 @@
 
 ## ⚠️ NVIDIA 的组织模式：不裁员、不赛马、mission is the boss（刘洺堉，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 来自 [刘洺堉](../people/ming-yu-liu.md)（NVIDIA 研究副总裁，在职十年）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md) 的一手叙述。**本页此前收录的都是 AI 实验室（OpenAI / Anthropic / GDM / neo labs）与中方模型团队的文化，NVIDIA 作为算力供给方的研究组织是个空缺**——而它的模式与前面几家几乎全部相反。
 
 ### 四条制度特征
@@ -209,6 +211,8 @@
 
 ## ⚠️ "科层制管理的这种公司制度会衰亡"：一条制度史论证（曾鸣，2026-09-03）
 
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
+
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)。⚠️ 他在书与访谈里**刻意通篇不用"公司"这个词**（[01:07:06]）。
 
 > **本页此前的组织材料几乎都是"某家实验室怎么运作"的经验描述**（Anthropic 的聚焦、NVIDIA 的反向模式、Google 人才外流）。**这一条是第一次有人从制度史给出"为什么组织形态必须换"的论证**，而不是比较哪家做得好。
@@ -255,6 +259,8 @@
 - ⚠️ **本页必须标注**：以上包含**一条个人观感**与**若干条转述的第三方评价**，**全部无法核实**。本库记录为曾鸣的判断，不作为事实。**与本页既有的"Anthropic 组织优势"材料并读时，应注意两者证据类型不同。**
 
 ## ⚠️ "模型内科"与一条关于"不科学"的定义（孙宇涛谈 Kimi，2026-08-26）
+
+来源：[张小珺 / 孙宇涛](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 
 [孙宇涛](../people/sun-yutao.md) 在 [张小珺第 152 期](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)（[01:56:25]–[02:00:26]）。⚠️ **他是外部研究者而非 Kimi 员工**，本页记为**同行观察**。
 

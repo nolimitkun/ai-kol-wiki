@@ -44,7 +44,7 @@
 
 ### Benedict Evans & Steven Sinofsky（美，a16z，2026-06/07）
 - **任务 vs 工作**（Evans）：会计师 50 年前后做的**任务**几乎全变了，但对客户而言**工作**没变——"LLM 擅长任何你能描述、且想要'任何人都会给的那种答案'的事；不擅长你说不清为什么这么做、且想要与众不同答案的事"（[a16z 访谈](../videos/20260608-a16z-benedict-evans-ai-economics.md) 00:46:23–00:47:24）。这与 Jensen"工作的目的 ≠ 完成工作的任务"几乎是同一论点的两种措辞。
-- **消费者剩余会被竞争抹平**（Evans）：DCF 从一周变 10 秒，你只会多做 50 个而非多收钱；生产力提升"变成竞争必需品然后被抹平"（00:53:29–00:54:30）。
+- **消费者剩余会被竞争抹平**（Evans）：DCF 从一周变 10 秒，你只会多做 50 个而非多收钱；生产力提升"变成竞争必需品然后被抹平"（[a16z / Benedict Evans](../videos/20260608-a16z-benedict-evans-ai-economics.md) [00:53:29]–[00:54:30]）。
 - **生产力永远创造新工作**（Sinofsky）："人们忘了生产力会催生新场景"——自动化最枯燥一环后全新的东西冒出来（Amazon 免了退货客服，后台多出一整套优化分析）；**长尾不会变短、只会以新形态变长**；合同不会变少、只会更长更复杂催生更多诉讼（[Software in the Age of Agents](../videos/20260707-a16z-software-in-age-of-agents.md) 00:35:25–00:39:27）。他明确反对"n 人 + m 软件的固定馅饼"心态——"AI 的所有负面情绪都来自把待做的工作当成固定的东西"。**放射科案例**在此被当作"创新与需求都不静态"的证据（爱用 AI 却闹短缺），与 Jensen 的用法一致。
 
 ### Peter Steinberger（美/奥，OpenClaw 作者，2026-02）：编程变织毛衣、程序员是 builder
@@ -92,7 +92,7 @@
 来源：[朱邦华访谈](../videos/20260518-uncle-moon-banghua-zhu-sglang.md)、[江鋆晨访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md)
 
 - **coding agent 的两个影响**（朱邦华）：junior SWE / CS 应届更难找工作；资源更 concentrate 到"真正强、有 taste"的顶尖 system engineer / researcher，agent 无限放大他们的能力——百人维护的复杂 software 未来可能是"十个最强、最有 taste 的人"的 effort（01:31:43–01:33:46）。这是姚顺宇"centralized technology / 价值集中"在工程岗位上的具体版本。
-- **差异化 = taste / criticism，而非工程量**：朱邦华招人核心看"能不能对 code/research 看到就浑身难受、想重写"（以 Linus 对 Linux 的 gatekeeping 为范）——只有你自己知道什么是好 code，才能 supervise agent 写出超过其默认水平的 code（01:39:56–01:41:57）。江鋆晨表述为 **design taste**：AI 能替代写代码，难替代"知道什么设计更好维护/更持久"的判断；若你的设计完全依赖 AI，你自己都没法维护、也卖不出去（02:13:57–02:14:57）。
+- **差异化 = taste / criticism，而非工程量**：朱邦华招人核心看"能不能对 code/research 看到就浑身难受、想重写"（以 Linus 对 Linux 的 gatekeeping 为范）——只有你自己知道什么是好 code，才能 supervise agent 写出超过其默认水平的 code（01:39:56–01:41:57）。江鋆晨表述为 **design taste**：AI 能替代写代码，难替代"知道什么设计更好维护/更持久"的判断；若你的设计完全依赖 AI，你自己都没法维护、也卖不出去（[江鋆晨访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) [02:12:57]–[02:13:57]）。
 - 两人对 CS 学生的建议一致偏"向上走"：做新范式的模型/研究、去工业界前沿或 startup 充电、做对自己最有挑战的事——而非做"AI 已能替代的 basic 工程"。
 
 ### Lila Sciences（美，neo-lab，2026-07）：人在 API line 之下、零 FTE 创业
@@ -103,7 +103,7 @@
 ### AI 降低人类能动性、同质化思维（Danielle Perszyk / Amazon AGI Lab，2026-07）
 来源：[为什么 AI agent 其实"不懂你"](../videos/20260711-latent-space-perszyk-amazon-agi.md)
 - 换一个角度看"AI 与工作"：不是抢不抢岗位，而是**AI 正在降低人类能动性**——写作被拉向均值（意识阈值下从一个论点被切到相反论点）；用 AI 的个体科学家产出更多论文/经费，但**科学整体在收窄、思维被同质化**（模型都训在被压缩的互联网上）（00:34:21–00:37:22）。
-- 解法不是"别用 AI"，而是增加想法的多样性/规模/互联度——要**一个有不同偏见/视角的 AI 社会**；教育上，若 AI 被激励理解你的心智，就不会让你靠 offloading 蒙混（会自发苏格拉底式反问），指向牛津导师制 × Bloom 两西格玛的个性化教育（00:41:29–00:44:32）。与 [Andrew Feldman](../videos/20260710-all-in-cerebras-bfl-open-source.md)"该像亚里士多德教亚历山大那样一对一"同调。
+- 解法不是"别用 AI"，而是增加想法的多样性/规模/互联度——要**一个有不同偏见/视角的 AI 社会**；教育上，若 AI 被激励理解你的心智，就不会让你靠 offloading 蒙混（会自发苏格拉底式反问），指向牛津导师制 × Bloom 两西格玛的个性化教育（[00:41:23]–[00:44:24]）。与 [Andrew Feldman](../videos/20260710-all-in-cerebras-bfl-open-source.md)"该像亚里士多德教亚历山大那样一对一"同调。
 
 ### 任务重排而非消失：语音客服 / 配音演员 / junior lawyer（All-In 双访谈，2026-07）
 来源：[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) · [Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -251,6 +251,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 
 ## Jevons 悖论在客服里的具体机制（Decagon / a16z，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 本页此前记录过多条"生产力创造新工作"的抽象论断（[Sinofsky](../people/a16z.md)、[DoorDash](../people/doordash-founders.md)、[Rampell 的市场失灵框架](../people/a16z.md)）。[Decagon 那期](../videos/20260731-a16z-decagon-enterprise-ai-apps.md) 给的是**目前最具体的一份带机制的证据**。
 
 ### 需求侧的前提
@@ -279,6 +281,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 
 ## "AI 不该只用来砍成本"：来自卖方的同日第二条证据（Netic / No Priors，2026-07）
 
+来源：[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
+
 [Melisa Tokmak](../people/melisa-tokmak.md) 卖的是同一类东西（企业与客户之间的 agent），面对的是私募股权持有的实体服务企业，她的观察是**买方的默认框架就是砍成本**（[00:30:26]）：
 
 > "第一次对话**总是**非常聚焦在砍成本上……**我不是来给你砍成本的**。当然那也在以某种方式发生，但我真正感兴趣的是**你要怎么赚到全新的收入**。……**如果我们只把 AI 用来砍成本，那会挺可悲的。**"
@@ -286,6 +290,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 **与 Decagon 那条的关系**：Decagon 描述的是**买方自己发现了扩张路径**；Tokmak 描述的是**卖方必须先把买方的框架掰过来**——"你得给他们看有形的例子，否则它仍然聚焦在怎么改善底线、砍掉一些成本"。两条合起来说明：**Jevons 式扩张不是自动的，取决于买方是否被说服去重新划定服务边界。**
 
 ## 服务边界的下移：被自动化的还包括"此前不配被服务的客户"（Decagon，2026-07）
+
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 
 本页已有的六个象限讨论的都是**任务**。Decagon 给了一个**客户分层**的维度（[01:03:36]–[01:04:36]）：
 
@@ -297,6 +303,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 
 ## ⚠️ "一人独角兽"的博弈论反驳（Decagon，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 本页此前记录过 [罗福莉的 one person company](../people/luo-fuli.md)、[Lila Sciences 的零 FTE 创业](../people/lila-sciences.md)。Decagon 给了一条**结构性的反驳**（[00:53:33]）：
 
 - **反例**：**"所有 AI 编码创业公司都在疯狂招人"**——"他们大概是这些模型**最老练的用户**。"
@@ -307,6 +315,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 即：**生产率提升在竞争性市场里不会兑现成裁员，会兑现成产出扩张**——这是本页"生产力创造新工作"命题的**博弈论形式**，与 Sinofsky 的"长尾变长"是同一结论的不同证明路径。
 
 ## ⚠️ AGI 叙事对从业者行为的影响：三个同日样本（2026-07-31）
+
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)、[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
 
 本页此前讨论的是 AI **实际**替代了什么。2026-07-31 同一天出现了三个关于 **AGI 叙事本身如何改变人的选择**的样本，值得单独记：
 
@@ -322,6 +332,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 
 ## 实体服务业的劳动力供给：为什么"回路里不能有人"（Netic，2026-07）
 
+来源：[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
+
 [Melisa Tokmak](../people/melisa-tokmak.md) 给了本页此前缺失的一份**供给侧不稳定的具体画面**（[No Priors 00:04:09]–[00:05:10]）：
 
 - 这些公司"**恰恰因为要不停往人身上投钱才能谈增长，所以长不动**"；它们是 EBITDA 生意、常由 PE 持有，必须在意利润率。
@@ -332,6 +344,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 这也是 [Rampell 的"incumbent 名叫 Betty，她两周前辞职了"](../people/a16z.md) 在运营层的展开：**在位者是人，而人的可得性本身就是这门生意的瓶颈。**
 
 ## 蓝领这一侧的反例：把岗位往回造，而不是往外裁（Saronic，2026-08）
+
+来源：[All-In / Saronic](../videos/20260806-all-in-saronic-shipbuilding.md)
 
 本页绝大部分材料讨论的是**白领岗位被压缩**（客服、理赔、法务、放射科），少数几条讨论**服务业劳动力供给不足**（[Netic](#实体服务业的劳动力供给为什么回路里不能有人netic2026-07)）。[Saronic](../people/saronic-founders.md)（[视频页](../videos/20260806-all-in-saronic-shipbuilding.md)）是本页第一个**在自动化的同时大规模增加蓝领岗位**的样本——⚠️ 全部为公司自报。
 
@@ -497,6 +511,8 @@ Cuban 提出了一个把"AI 会不会取代工作"变成**可观测指标**的�
 
 ## ⚠️ "中层应该是 agent"，以及 API line 会消失（Garry Tan / Anish Acharya，2026-08）
 
+来源：[a16z / Garry Tan](../videos/20260812-a16z-garry-tan-founder-psychology.md)
+
 来自 [Garry Tan](../people/garry-tan.md) 在 [a16z 那期](../videos/20260812-a16z-garry-tan-founder-psychology.md)。本页此前的材料集中在**岗位是否被替代**；**这一期给的是另一个象限：岗位数量之外，被替代的是"协调"这个动作本身**。
 
 ### 论证的物理起点：7±2
@@ -546,6 +562,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 
 ## ⚠️ 本页第一份回溯性证据：机器超人 30 年之后的国际象棋（Chess.com，2026-08-13）
 
+来源：[No Priors / Chess.com](../videos/20260813-no-priors-chesscom-human-skill.md)
+
 [Erik Allebest](../people/erik-allebest.md) 在 [No Priors 那期](../videos/20260813-no-priors-chesscom-human-skill.md)（Sarah Guo 主持）。
 
 ⚠️ **先说它在本页的位置**：本页此前的**全部**材料——[Imas & Trammell 的经济学推演](../videos/20260604-dwarkesh-imas-trammell.md)、[Jensen Huang 的放射科](#jensen-huang美2026-03)、[Decagon 的 Jevons 悖论](#jevons-悖论在客服里的具体机制decagon--a16z2026-07)、[Machina 的第四第五象限](#第四第五象限被自动化的是本来就没人做的任务machina-四家机器人公司2026-07)——**都是关于未来的推断**。国际象棋是**唯一一项"机器全面超越人类已达 30 年、且有完整参与度数据"的人类技能活动**，而 Chess.com 掌握着那份数据。
@@ -583,6 +601,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 
 ## ⚠️ 前沿实验室领导层的就业立场：一条克制的、带认识论前提的表述（Greg Brockman，2026-09-14）
 
+来源：[a16z / Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md)
+
 [Greg Brockman](../people/greg-brockman.md) 在 [a16z 那期](../videos/20260914-a16z-greg-brockman-agi-era.md)（[00:24:17]–[00:28:18]）。
 
 > ⚠️ **本页把这条记为"立场表述"，不是证据。** 它既没有 [Imas & Trammell 的经济学建模](../videos/20260604-dwarkesh-imas-trammell.md) 那样的机制，也没有 [Chess.com 那份回溯数据](#️-本页第一份回溯性证据机器超人-30-年之后的国际象棋chesscom2026-08-13) 那样的历史材料。它的价值在于**说话人的位置**——这是本页第一次记录**造模型的那一方的领导层**怎么回答这个问题。
@@ -612,6 +632,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 - **犁与 1870 年**（[00:27:17]–[00:28:18]）：犁让大量人类劳动失业、催生卢德运动，**但没人想回到 1870 年**——"说我们现在不想进入未来，有点短视"；同时承认"**速度快得让人非常害怕**"。
 
 ## ⚠️ "AI 时代 = 创造力时代"，以及"老登"现象的经验贬值机制（曾鸣，2026-09-03）
+
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
 
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)。
 
@@ -652,6 +674,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 
 ## ⚠️ "三天工作制但还是只增长两个半百分点"的风险，以及一条可证伪的 GDP 门槛（Satya Nadella，2026-09-15）
 
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
+
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)（[00:18:16]–[00:22:24]）。
 
 ### 他承认质疑成立
@@ -685,6 +709,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 
 ## ⚠️ 被谈论的那一代自己开口：学习动机的结构性塌陷（苏廷浩，2026-08-19）
 
+来源：[张小珺 / 苏廷浩](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
+
 本页此前关于年轻人的材料**全部来自成年从业者的转述或推测**。[苏廷浩](../people/su-tinghao.md)（2009 年生，17 岁，论文被 ICML 2026 接收）是本库第一份来自**当事一代本人**的材料（[视频页](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)）。
 
 ⚠️ **他谈的不是失业，是学习本身失去理由。** 机制他说得很干净（[00:36:24]–[00:38:25]）：
@@ -702,6 +728,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 > **与 [Greg Brockman 说"如果 AI 做掉苦活，年轻人反而能更快成长"](../videos/20260914-a16z-greg-brockman-agi-era.md) 构成直接对照，且方向相反**：Brockman 谈的是**职场新人的成长路径**，苏廷浩谈的是**学习本身的意义结构**。本库认为两条不互相反驳，但引用任一条时应知道另一条存在。
 
 ## ⚠️ "应届生怎么成为那个能指导 agent 的人"：一条学术界给出的、自认无解的问题（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 [徐天音（UIUC）](../people/tianyin-xu.md) 的论证链条（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)）：
 
@@ -724,6 +752,8 @@ Garry 没有反对，接着讲了 API line。**本库标注归属，因为这条
 月球大叔的补充：**"对一个已经 100 分的人来说变成 10000，对一个 1 分的人来说变成 100——差距反而更大了。"** 他同时说明**研究的本质没变**：**"好的研究者仍然是好的研究者。陶哲轩仍然是陶哲轩——不是说谁用了 AI 就立刻比陶哲轩更强。"**
 
 ## ⚠️ 芯片行业的薪资史，被用来推 AI 行业的薪资未来（肖志斌，2026-09-07）
+
+来源：[月球大叔 / 肖志斌](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
 
 [肖志斌](../people/xiao-zhibin.md) 给了一条本页此前没有的论证形式——**从另一个行业的成本结构史反推**（[视频页](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)，[01:50:38]–[01:53:38]）。
 

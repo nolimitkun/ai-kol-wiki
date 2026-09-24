@@ -385,6 +385,8 @@ vLLM 诞生在美国，沟通用 Slack、以英文为主。游凯超回国后从
 
 ## ⚠️ "中国用开源删掉模型层价值"打穿的是美国的财政模型（Friedberg，2026-07）
 
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+
 这是 [Friedberg 的"分子经济"论](#分子经济friedberg-版的中国长期棋2026-07) 的**第二段**，落点从产业转到了**主权信用**（[2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) [00:20:15]–[00:21:18]）。
 
 ### 前置的宏观链条（[00:15:10]–[00:19:15]）
@@ -434,6 +436,8 @@ vLLM 诞生在美国，沟通用 Slack、以英文为主。游凯超回国后从
 这与本页 [孟子立关于 2018 年贸易战改写个体路径](#个体决策层的证据2018-年贸易战怎样改写了一届人的路径孟子立2026-07) 是同一现象的两端：**人才流动的历史事实，使"技术从哪来"这个问题在个体层面上无法按国界切开。**
 
 ## ⚠️ 换一个度量衡：总吨、船台与 230:1（Saronic，2026-08）
+
+来源：[All-In / Saronic](../videos/20260806-all-in-saronic-shipbuilding.md)
 
 本页此前所有的中美对照都在**模型层**（能力差距、蒸馏、开源流向）、**芯片层**（[Lip-Bu Tan / Andrew Feldman](../people/lip-bu-tan.md)）、**机器人硬件层**（[柯丽一鸣](../people/kay-ke.md) / [何小鹏](../people/he-xiaopeng.md) / [阳萌](../people/yangmeng-steven.md) 三方确认的中国硬件统治力）。[Saronic 两位创始人](../people/saronic-founders.md)（[视频页](../videos/20260806-all-in-saronic-shipbuilding.md)）第一次把度量单位换成**总吨**。
 
@@ -595,6 +599,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 
 ## ⚠️ 一条新的结构性差异：实习生与 knowhow 的扩散（刘洺堉 / NVIDIA，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 来自 [刘洺堉](../people/ming-yu-liu.md)（NVIDIA 研究副总裁）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)（[03:14:07]–[03:15:09]）。**本页此前的中美对照集中在模型能力、开源流向、算力管制与产业配套；这是第一条以"知识如何在人之间流动"为标的的对照。**
 
 他的观察分两句：
@@ -635,9 +641,11 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 
 ### 对中国模型的评价
 
-（[03:14:07]）**"非常的 impressive"**，逐一点名 **DeepSeek、千问、豆包、MiniMax、Kimi、MiMo、混元、智谱**。⚠️ 他在讲模型能力收敛时（[01:13:45]）也把中国公司与美国前沿并列——"**GLM、Kimi、Seed、阿里、混元、DeepSeek、MiniMax 这些公司都不断的在做突破，那慢慢的就是大家的模型的能力都会差不多**"。他还说 **Kimi 与 MiMo 都算比较晚出来的**，但落后两三年的新公司**仍然有机会**，因为"算力慢慢就会起来"（[03:20:11]）。
+（[03:14:07]）**"非常的 impressive"**，逐一点名 **DeepSeek、千问、豆包、MiniMax、Kimi、MiMo、混元、智谱**。⚠️ 他在讲模型能力收敛时（[01:13:45]–[01:14:45]）也把中国公司与美国前沿并列——"**GLM、Kimi、Seed、阿里、混元、DeepSeek、MiniMax 这些公司都不断的在做突破，那慢慢的就是大家的模型的能力都会差不多**"。他还说 **Kimi 与 MiMo 都算比较晚出来的**，但落后两三年的新公司**仍然有机会**，因为"算力慢慢就会起来"（[03:20:11]）。
 
 ## ⚠️ "美国的 AI 情绪是全球最低的"：本页第一条人口结构归因（Greg Brockman，2026-09-14）
+
+来源：[a16z / Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md)
 
 [Greg Brockman](../people/greg-brockman.md) 在 [a16z 那期](../videos/20260914-a16z-greg-brockman-agi-era.md)（[00:29:18]–[00:33:21]）。
 
@@ -649,6 +657,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 - ⚠️ **主持人（Ben Horowitz）一侧的产业政策论证，本库与嘉宾观点分开记**（[00:33:21]–[00:34:24]）：禁数据中心会把它们赶到海外——"**这就是 80 年代硅发生过的事**"；数据中心创造蓝领制造业岗位（称 Switch 一家就以工会合同雇约 **45,000** 人）；主张"**要求它是一个行为良好的数据中心**"而非禁掉。收尾是一句立场鲜明的话：不能"**跳出 AI 这盘棋，让中国或者别的谁来定它是什么样**"。⚠️ **本库照录，并标注这是主持方而非嘉宾的表述，且 a16z 在数据中心与相关基础设施上有投资敞口。**
 
 ## ⚠️ "中国为什么每轮收敛都特别慢"：一条先发期缺失的机制（曾鸣，2026-09-03）
+
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
 
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)（[02:14:09]–[02:15:09]）。
 
@@ -672,6 +682,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 - **应用公司要不要自研模型**（[02:15:09]–[02:16:13]）：他认为小红书一类公司**做模型是为了补齐基础能力、为真正做应用时发力**，**"不觉得这两家公司愿意参加大模型作为基础设施的 API 工厂这样的竞争"**；理由是下一阶段**模型与应用技术的边界不清楚**，"如果这一代断代太厉害，下一代不一定接得住"。⚠️ 他自己把这条标为**开放讨论**。
 
 ## ⚠️ "如果要出问题，它会在所有地方同时出问题"：一条对称性论证（Satya Nadella，2026-09-15）
+
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)（[00:30:31]–[00:32:32]）。
 
@@ -701,6 +713,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 
 ## ⚠️ K3 与 DeepSeek V4 的定位分化：上限 vs 性价比（孙宇涛，2026-08-26）
 
+来源：[张小珺 / 孙宇涛](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
+
 [孙宇涛](../people/sun-yutao.md) 在 [张小珺第 152 期](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)（[01:58:25]–[01:59:25]）。
 
 - **他给的分化**：**DeepSeek 更强调性价比**——同时有 1.2T 与一个更小的 size，"它们其实 Flash 的模型做得还是挺好的"；而**Kimi 目前的主要精力是提升开源模型能力的上限**，性价比**不是首要考虑条件**。
@@ -725,6 +739,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 
 ## ⚠️ 美方供应链分析师的量化份额：中国"低于 10%"，2028 起拐点（Dylan Patel，2026-08-25）
 
+来源：[Dwarkesh / Dylan Patel](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
+
 本页此前缺一份**美方供应链侧的量化材料**。[Dylan Patel（SemiAnalysis）](../people/dylan-patel.md) 给了一组（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)）。⚠️ **全部为他/SemiAnalysis 的口径，本库无法独立核实。**
 
 - **份额的历史与现状**（[00:35:02]）：**2022 年美国占世界新增算力 45–50%、中国 30–35%**；**今天美国 70%，中国"低于 10%"**。
@@ -744,6 +760,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 - **时间窗是关键**：**"如果起飞没有你暗示的那么快、而是要更久，那中国最终会在半导体侧大幅追上，而那在某个时点就是算力。"**
 
 ## ⚠️ "软件能追回多少制程差距"：本库迄今最严格的一次限定（肖志斌，2026-09-07）
+
+来源：[月球大叔 / 肖志斌](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
 
 [月球大叔](../people/uncle-moon.md) 直接问了一个本页的核心问题（[00:58:54]）：**一边是 2nm/5nm 芯片跑大模型，另一边只能用 7nm/12nm，软件层面能追回多少？** [肖志斌](../people/xiao-zhibin.md) 的回答分三段（[视频页](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)）。
 
@@ -770,6 +788,8 @@ Saronic 的回应是第四种，也是唯一**正面接受制造业才是战场*
 ⚠️ **一条跨地缘政治的观察**（[00:31:34]–[00:32:35]）：RISC-V 圈子里美国的 SiFive、台湾的 Andes、国内阿里系出来的一批创始人彼此多是校友朋友——**"即使在中美地缘政治这么紧张的情况下，大家在开源这一块的合作还是非常多的。"**
 
 ## ⚠️ 一条来自 17 岁的、带明确国族情感的模型偏好（苏廷浩，2026-08-19）
+
+来源：[张小珺 / 苏廷浩](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
 
 本页的材料此前全是**产业、技术或政策论证**。[苏廷浩](../people/su-tinghao.md)（2009 年生，论文被 ICML 2026 接收）给了一条**完全不同层次**的（[视频页](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)）：
 

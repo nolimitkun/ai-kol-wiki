@@ -13,7 +13,7 @@
 - 游凯超的推论：**"实验室的 5 年周期和工业界的需求周期一旦共振，就会诞生一些重要的项目。"** 他 2023 年正是据此判断 vLLM 是下一个，并主动申请去伯克利。
 - **副产物：这套机制也决定了项目不能挂靠学校**——实验室按设计就该 5 年关停，"**所以实验室不是一个具备这样资格的实体**"（[01:04:41]）。
 
-**谁适合维护开源项目**（一条很具体的人力经验，[00:41:01]–[00:43:02]）：低年级博士生急着开新方向发论文；博士后期急着找工作；**最合适的是博士中后期、无毕业压力、又对开源有兴趣的人**。这实际上意味着开源基建的核心人力供给来自一个**极窄且不稳定的时间窗口**——这也直接通向下一节的问题。
+**谁适合维护开源项目**（一条很具体的人力经验，[00:40:59]–[00:42:01]）：低年级博士生急着开新方向发论文；博士后期急着找工作；**最合适的是博士中后期、无毕业压力、又对开源有兴趣的人**。这实际上意味着开源基建的核心人力供给来自一个**极窄且不稳定的时间窗口**——这也直接通向下一节的问题。
 
 ## 二、开源社区撑不住工程：三个具体约束
 
@@ -110,6 +110,8 @@ vLLM 的解法是**两件事同时做，且顺序是先捐后开**：
 
 ## 九、⚠️ 一条与"开源正在赢"叙事相反的机制（Decagon，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 本库关于开源模型份额的记录长期在两条线上拉扯：一条是 [Jason 的"OpenRouter 上开源份额已超 50%、自托管是不入账的暗 token"](../videos/20260724-all-in-open-source-ban-anthropic-copyright.md)，另一条是 [Sacks 的"心有余而力不足"](../people/all-in-hosts.md)（企业**想**多元化但大多**没有技术能力**建 token 路由中间件）。
 
 [Decagon 那期](../videos/20260731-a16z-decagon-enterprise-ai-apps.md) 给了**第三种解释，而且是一条机制而非一个数字**（[00:08:02]）：
@@ -173,7 +175,7 @@ vLLM 的解法是**两件事同时做，且顺序是先捐后开**：
 
 | 事实 | 游凯超（2026-07） | Simon Mo（2026-08） |
 |---|---|---|
-| 生态位 | "每一个模型的发布背后都跟着 vLLM 的支持，每一个芯片厂商都会主动来靠近 vLLM"（[01:40:26]） | 支持 **1000+ 模型架构**、**day zero model release**；NVIDIA/AMD/Google/Amazon/Intel 的新芯片确保 vLLM 能跑，"**很多情况下拿它当 benchmark**"（[00:08:03]） |
+| 生态位 | "每一个模型的发布背后都跟着 vLLM 的支持，每一个芯片厂商都会主动来靠近 vLLM"（[游凯超访谈](../videos/20260728-zhang-xiaojun-you-kaichao-vllm.md) [01:41:28]） | 支持 **1000+ 模型架构**、**day zero model release**；NVIDIA/AMD/Google/Amazon/Intel 的新芯片确保 vLLM 能跑，"**很多情况下拿它当 benchmark**"（[00:08:03]） |
 | 伯克利谱系 | AMP Lab → RISELab → Sky Computing Lab，David Patterson 的"5 年关停论" | "**我们来自 UC Berkeley，有很长的开源软件与系统研究传统**……开源是你能遇到最多使命一致的人的地方"（[00:31:21]） |
 | Ion Stoica | "Linux 需要 Red Hat、Kubernetes 需要 Google、PyTorch 需要 Meta、Spark 需要 Databricks" | "**一直是开源优先**：我们需要造的东西尽量在开源里造，而我们能交付的价值是把最后一公里做完"（[00:36:22]） |
 
@@ -271,6 +273,8 @@ Fas 的回答分两半：
 
 ## ⚠️ 芯片厂商侧的开源动机：生态成功即自己成功（刘洺堉 / NVIDIA Cosmos，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 来自 [刘洺堉](../people/ming-yu-liu.md) 在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)。**本页此前的开源动机来自三类主体：社区维护者（vLLM）、模型公司（DeepSeek、Baseten 讨论的那批）、以及以开源换分发的应用公司。芯片/算力供给方是个空缺。**
 
 ### 开源了什么
@@ -306,6 +310,8 @@ Fas 的回答分两半：
 
 ## ⚠️ 开源是一个位置函数，不是一个立场（肖志斌，2026-09-07）
 
+来源：[月球大叔 / 肖志斌](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
+
 本页此前的开源论证多来自**参与者**（[Simon Mo](../people/simon-mo.md)、[游凯超](../people/you-kaichao.md)、[Eiso Kant](../people/eiso-kant.md)）。[肖志斌](../people/xiao-zhibin.md)（20 余年芯片架构师）刻意**不按价值判断回答**（[视频页](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)，[01:21:11]–[01:23:13]）。
 
 - **硬件侧**（[01:20:08]）：**硬件很少开源**，RISC-V 这种开源 IP/指令集**比较少见**；大量 IP（SerDes 等）**都要 license**。
@@ -324,6 +330,8 @@ Fas 的回答分两半：
 ⚠️ **一条普及性事实**（[00:31:34]）：**英伟达自己的 GPU 芯片里很多控制器/处理器大量使用 RISC-V。**
 
 ## ⚠️ "AI 知道一个成熟开源项目哪些地方 tricky"：把项目历史当作先验（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 [徐天音](../people/tianyin-xu.md) 在讲他们如何用 AI 给系统建形式模型时，给了一条本页此前没有的用法（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)，[01:13:55]）。
 

@@ -160,7 +160,7 @@
   1. **对 hybrid attention 来说，跨层共享 index 是 non-trivial 的**——full attention 层之间隔着很多线性注意力层，**"这种 index share 是否有效、加速比是否足够高，其实是相当可疑的"**。
   2. **sparse attention 基本没法 from scratch 训练**——现在一般是 **post-train 从 full attention 转化**；⚠️ **而如果用了 MLA，这件事会更难**。
 - **他的定性**：**"留一个接口，之后再做也行。"**
-- **hybrid 本身的 trade-off**（[01:07:16]）：就是**调线性与全注意力的比例**——比例越大加速比越高，而 **3:1 是实验上比较 work 的方案**。
+- **hybrid 本身的 trade-off**（[01:06:58]）：就是**调线性与全注意力的比例**——比例越大加速比越高，而 **3:1 是实验上比较 work 的方案**。
 
 ### 八、预训练：learning rate schedule、长上下文与低精度时机
 

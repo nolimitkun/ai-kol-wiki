@@ -440,6 +440,8 @@
 
 ## 应用层到底在做什么：三条被同日反驳的流行说法（Decagon / Netic，2026-07-31）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)、[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
+
 2026 年上半年最流行的叙事，被 [Decagon 那期](../videos/20260731-a16z-decagon-enterprise-ai-apps.md) 的主持人原样摆到了桌面上（[00:15:07]）：
 
 > "**这个叙事主导了 2026 年上半年——Anthropic、OpenAI 是最后的创业公司，它们会通吃一切；应用层不过是套着 FDE 的薄 UI。**"
@@ -495,6 +497,8 @@
 
 ## ⚠️ 横向 vs 垂直：同一天的直接对立（2026-07-31）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)、[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
+
 两家都在做"企业与其客户之间的那一层 agent"，赌注相反，且各自给了理由。本库并列不裁决，作为一条可跟踪的分歧。
 
 | | [Decagon](../people/decagon-founders.md) | [Netic](../people/melisa-tokmak.md) |
@@ -505,6 +509,8 @@
 | **共同点** | 都认为**模型不是瓶颈**，护城河在模型之外的那一层 | 同上 |
 
 ## ⚠️ 每次对话的 token 数在上升：对 token 经济学的第三种解释（Decagon，2026-07）
+
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 
 本页已有两种读法：[Chamath 的"token 成本每 45 天翻倍、下游生产力最多 +5%"](#前沿-vs-廉价钱到底流向谁2026-07-集中辩论)（token 增长 = ROI 恶化），以及他在 [2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) 给出的机制版本——**AI 编码有大量返工**："第一版相当糟糕，第二版也糟糕，但它更快、更自动化……**它不是'量两次剪一次'的动力学，是相反的**"，因此"**没有人在问这个增量 token 的必要性是什么**"。
 
@@ -520,6 +526,8 @@ Decagon 给的是第三种（[00:13:05]）：
 **三条并列的意义**：Chamath 认为增量 token 是**会被挤掉的浪费**（因此威胁前沿实验室收入曲线的持久性）；Decagon 认为是**买质量**（因此 token 量本身不是 ROI 信号）。⚠️ 两者**都可能对**——它们说的可能是不同工作负载（编码 agent 的返工 vs 客服对话的多次校验）。本库标为需要跟踪的一组。
 
 ## ⚠️ FDE 是陷阱：对本页"落地能力即护城河"的一次反驳（Decagon，2026-07）
+
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 
 本库此前记录过 [Mark Cuban 把 FDE 数量当作能力测量](ai-and-jobs.md#forward-deployed-engineer-作为一个能力测量mark-cuban2026-07)（在 [AI 与就业](ai-and-jobs.md) 页）。[Ashwin Sreenivas](../people/decagon-founders.md)（前 Palantir deployment strategist）给了一条直接的反命题（[00:21:15]–[00:22:15]）：
 
@@ -551,6 +559,8 @@ Decagon 给的是第三种（[00:13:05]）：
 
 ## 民主化 concierge：成本跌破人工后，服务边界向下扩张（Decagon，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 ⚠️（[01:03:36]–[01:04:36]）这是本页 [Lassie"定价锚在劳动预算"](#垂直-agent-的护城河本体论--集成--监管时点lassie2026-07) 与 [Hurst"机器人价格由人类劳动力设定"](../people/jonathan-hurst.md) 的**另一半**：
 
 > "如果你去一家你每年花 10 万美元的商家，你会得到最个性化的对待……但如果你只花 10 美元，**他们做不出经济账。这不是缺乏意愿，只是单位经济学不支持。**"
@@ -559,6 +569,8 @@ Decagon 给的是第三种（[00:13:05]）：
 **结构含义**：那两条讲的是**价格锚在人工上**（所以毛利来自劳动预算而非成本加成）；这条讲的是**成本跌破人工后，此前不经济的客户段被纳入服务范围**——**市场扩张而非份额转移**。这与 [Alex Rampell 的"工作的体量比工作所依附的信息存储大好几个数量级"](#软件从来没干过活市场为什么突然大了两个数量级alex-rampell--a16z2026-07) 是同一命题在客户维度上的表述。
 
 ## 不做 rollup 的结构性理由（Netic，2026-07）
+
+来源：[No Priors / Netic](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
 
 本页此前多次提到 AI rollup（[Mark Cuban 那期](#泡沫的损失落在谁头上mark-cuban2026-07)、Long Lake 等）。[Melisa Tokmak](../people/melisa-tokmak.md) 给了本库第一条**来自被认为该做 rollup 的赛道里、选择不做的人的完整理由**（[No Priors 00:06:12]–[00:10:15]）：
 
@@ -940,6 +952,8 @@ Decagon 给的是第三种（[00:13:05]）：
 
 ## ⚠️ 供给方内部的商品化判断：来自 NVIDIA 研究 VP（刘洺堉，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 [刘洺堉](../people/ming-yu-liu.md)（NVIDIA 研究副总裁 / Cosmos 负责人）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)。**本页的"模型商品化"命题此前由分析师（Benedict Evans）、投资人（Freda、广密、David）与应用层创业者提出——这是第一次由算力供给方内部的研究负责人正面表述，而且他说自己"早期就这么认为"。**
 
 ### 两条核心判断
@@ -986,6 +1000,8 @@ Decagon 给的是第三种（[00:13:05]）：
 
 ## ⚠️ 纯席位 SaaS 的定价范式失效：来自 YC CEO（Garry Tan，2026-08）
 
+来源：[a16z / Garry Tan](../videos/20260812-a16z-garry-tan-founder-psychology.md)
+
 [Garry Tan](../people/garry-tan.md) 在 [a16z 那期](../videos/20260812-a16z-garry-tan-founder-psychology.md)（Anish Acharya 主持）。**这是本页第一条来自早期投资一方的定价范式判断**——此前 SaaS 商业模式的讨论都来自分析师与企业软件老兵。
 
 - **核心表述**（[00:15:06]）：**"纯按席位计费的 SaaS，不完全清楚它 5 到 10 年后还存不存在。作为楔子完全没问题，但如果你 2026 年在做这个，你最好指望它能跳到某种数据或网络效应的护城河上。"**
@@ -1005,6 +1021,8 @@ Decagon 给的是第三种（[00:13:05]）：
 （[00:42:19]）**"我猜明年，2027，会是 harness wars。"** 机制是成本：今天前沿模型的纯算力"两三年后大概是 50 或 100 块钱"，那时会有**一场争夺十亿消费者的战争**，"**浏览器大战会重开**"。⚠️ 无量化依据，记为可跟踪的预测。
 
 ## ⚠️ 价值怎么被卖出去：本页第一条 go-to-market 材料（a16z，2026-08-13）
+
+来源：[a16z / Lighthouse or Landgrab](../videos/20260813-a16z-lighthouse-or-landgrab-sales.md)
 
 [Joe Schmidt 与 Andy McCall](../people/a16z.md) 在 [Lighthouse 还是 Landgrab 那期](../videos/20260813-a16z-lighthouse-or-landgrab-sales.md)（Elena Burger 主持）。**本页此前所有材料讨论的都是价值在哪里产生、被谁捕获；这是第一条讨论"它实际怎么被卖出去"的。**
 
@@ -1048,6 +1066,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 
 ## ⚠️ 生成成本趋零之后，什么反而增值：一个非企业软件的落点（Chess.com，2026-08-13）
 
+来源：[No Priors / Chess.com](../videos/20260813-no-priors-chesscom-human-skill.md)
+
 [Erik Allebest](../people/erik-allebest.md) 在 [No Priors 那期](../videos/20260813-no-priors-chesscom-human-skill.md)（[00:31:26]–[00:32:27]）。本页此前的价值捕获材料几乎全在企业软件，这条来自消费侧。
 
 - **他的前提直接把 AI 放进去**：**"你可以给 AI 一个 prompt，明天就有一万个新桌游。"**
@@ -1057,6 +1077,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 - ⚠️ **它与本页主线的关系**：这是 [Benedict Evans 价值上移论](#benedict-evans美独立分析师前-a16z2026-06) 在消费侧的一个版本——**生成成本趋零后，价值转移到不能被生成的东西**，此处是**共享历史与共同体验**。⚠️ **这是一条主张不是证据**，且提出者是这条主张的直接受益方。
 
 ## ⚠️ 商业史学者的三阶段框架：模型公司是"AI 云"，大概率不是终局赢家（曾鸣，2026-09-03）
+
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
 
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)。
 
@@ -1098,6 +1120,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 - ⚠️ **与同期收录的 [Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md) 正面对撞**：Brockman 说"**我们现在在 AGI 时代**"、瓶颈是分发与安全；曾鸣说"**我们连浏览器都还没出现**"、瓶颈是**还没找到足够大的应用场景**。两人**对模型能力的判断并不冲突**（都认为智能已够用），**冲突在于"这意味着产业到哪了"**——而且曾鸣的框架**直接预测了 Brockman 所在公司的结局**。**本库并列不裁决。**
 
 ## ⚠️ "权利金全流向模型层说不通"：开源制衡与应用层毛利（Satya Nadella，2026-09-15）
+
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)。**本页第一条来自超大规模云厂商一号位的价值捕获判断。**
 
@@ -1150,6 +1174,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 
 ## ⚠️ 四层价值分配，以及一条"安慰变成集中的理由"的反转（Dylan Patel，2026-08-25）
 
+来源：[Dwarkesh / Dylan Patel](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
+
 [Dylan Patel（SemiAnalysis）](../people/dylan-patel.md) 给了本页一份**完整的分层回答**（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)，[00:19:29]–[00:20:30]）：
 
 - **终端用户**捕获最多——"所以他们才肯为模型付这么多钱"。
@@ -1179,6 +1205,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 
 ## ⚠️ AI infra 公司的一条供给侧规律，以及数据库加速的历史佐证（肖志斌，2026-09-07）
 
+来源：[月球大叔 / 肖志斌](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
+
 [肖志斌](../people/xiao-zhibin.md) 在介绍自己公司之后，**主动给这条商业模式做了负面诊断**（[视频页](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)，[01:43:35]–[01:47:35]）。本页认为这比产品介绍更值得记。
 
 > ⚠️ **"要么你带着客户——客户需要你、信任你；要么你带着资源——你有 GPU resource。必须要靠一头，要不然很难。纯粹做 infra 或 optimization 的公司，很难占住这个位置。"**
@@ -1190,6 +1218,8 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
 ⚠️ **他与主持人在"缺什么"上不一致**（[01:47:35]）：他说**很多 AI infra 公司缺的不是优化工程师，缺的是资源**；月球大叔当场不同意——**"我觉得也缺工程师，现在这种复杂程度，毕业生搞不了"**，合格人选要么是工业界多年懂底层 GPU 与架构的，要么是深度参与 SGLang/vLLM 社区的。**本页把两条并列。**
 
 ### ⚠️ 一条与本页"AI 时代评价标准"相关的补充（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 [徐天音](../people/tianyin-xu.md) 从学术侧给了一个同向的观察（[00:22:26]–[00:23:26]）：
 
@@ -1278,4 +1308,4 @@ Joe Schmidt 的论证（[00:32:12]–[00:34:12]）是本节最该被反复引用
   > **"我们内部有一个极强的模型，外部拿不到，它能解不可思议的数学问题——而且不只是千禧难题，很多未解问题的解都是从这个模型里出来的。"**
   ⚠️ **他用了 "unfair advantage（不公平的优势）" 这个词，并说 "We don't have a good answer."**
 
-⚠️ **本页标注**：这条与 [Cerebras 的产能分配](../videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)（[00:12:03]，**产能全部售罄、大部分给 OpenAI，而 OpenAI 又把相当一部分留给内部用**）**是同一现象在供给侧的显影**——**不只是模型质量滞后，连承载它的硬件产能也优先内供**。
+⚠️ **本页标注**：这条与 Cerebras 的产能分配（[Latent Space / Cerebras](../videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md) [00:12:03]，**产能全部售罄、大部分给 OpenAI，而 OpenAI 又把相当一部分留给内部用**）**是同一现象在供给侧的显影**——**不只是模型质量滞后，连承载它的硬件产能也优先内供**。

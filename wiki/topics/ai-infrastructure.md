@@ -63,9 +63,9 @@
 
 来源：[张小珺访谈](../videos/20260613-zhang-xiaojun-spacex-lewis.md)
 
-- **地球瓶颈**（[01:15:19]）：美国电网仅三大区域（东岸/西岸/德州），大部分设施30年以上，AI之前已有25-40%缺口；数据中心permit周期极长、电难以available。
-- **太空优势**（[01:17:21]）：(1) 真空中信号传输比任何光纤快一倍；(2) 无尽太阳能，转换效率比地面高10%+；(3) 无permit限制，唯瓶颈是自己的发射能力。
-- **xAI并入SpaceX的逻辑**：不是偶然——用Starlink的低轨"数据高速公路"+太空数据中心解决算力瓶颈。（[01:19:23]："2014年马斯克就买了X.com域名"——Lewis暗示所有公司构成统一大计划。）
+- **地球瓶颈**（[00:15:19]）：美国电网仅三大区域（东岸/西岸/德州），大部分设施30年以上，AI之前已有25-40%缺口；数据中心permit周期极长、电难以available。
+- **太空优势**（[00:17:21]）：(1) 真空中信号传输比任何光纤快一倍；(2) 无尽太阳能，转换效率比地面高10%+；(3) 无permit限制，唯瓶颈是自己的发射能力。
+- **xAI并入SpaceX的逻辑**：不是偶然——用Starlink的低轨"数据高速公路"+太空数据中心解决算力瓶颈。（[00:19:23]："2014年马斯克就买了X.com域名"——Lewis暗示所有公司构成统一大计划。）
 - 与Jensen Huang"太空数据中心属远期"的判断形成对照：Jensen从制度视角（合约/六个九）认为地面先吃存量电力，Lewis从物理+工程视角认为太空是确定性方向。
 
 ## 推理引擎与 RL 训练 Infra（朱邦华，中/SGLang 母公司，2026-05）
@@ -97,7 +97,7 @@
 - **LMCache**：把 KV Cache 层与推理引擎/存储/GPU/运行环境**解耦**（不与模型解耦），做成工业界事实标准；当前可见价值 = 存下 KV Cache 避免重复计算（读长程序时 90%+ input 是那段程序，存下即跳过 90% 重算）（01:24:23–01:29:28）。类比 Spark"踩着工业界实体出来"。
 - **prefill vs decode 的算力误区（反直觉）**：硬件（Cerebras/Groq/LPU）多优化 decode（用户可见"一个字一个字蹦"），但 **~90% 算力其实花在 prefill/处理 input**——agent 的 input（几十万~几百万 token）远长于 output，且"任何 output 都会变成以后的 input"（01:31:30–01:34:32）。这是对"算力大头在生成"这一直觉的直接纠偏。
 - **OpenAI API 兼容格式 = AI 时代的 IPv4**：网络的"细腰"是 IP layer，其上创新极难（IPv6 更好却输给 IPv4 的既成事实）；AI 生态里 OpenAI API Compatible 的 query format 已是所有应用/模型/推理商承认的稳定接口，**KV Cache 有望成为下一个这样的标准层**（02:04:50–02:08:54）。
-- **硬件"IBM 化" vs disaggregation**：厂商把处理器/网络/存储 bundle 成大型机（走 IBM 老路）以最大化 margin；但历史上大型机没成数据中心主流，真正胜出的是"把便宜部件用聪明方法连起来"；**disaggregation 做到极致**（每块特殊化、可替换）可能带来颠覆性新 infra（02:08:54–02:12:56）。这与本页 [阳萌](../videos/20260608-zhang-xiaojun-yangmeng-anker.md) 的存算一体、[Jensen](../videos/20260323-lex-jensen-huang-nvidia.md) 的 extreme co-design 构成"硬件组织形态"的三种下注方向。
+- **硬件"IBM 化" vs disaggregation**：厂商把处理器/网络/存储 bundle 成大型机（走 IBM 老路）以最大化 margin；但历史上大型机没成数据中心主流，真正胜出的是"把便宜部件用聪明方法连起来"；**disaggregation 做到极致**（每块特殊化、可替换）可能带来颠覆性新 infra（[江鋆晨访谈](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) [02:08:54]–[02:11:56]）。这与本页 [阳萌](../videos/20260608-zhang-xiaojun-yangmeng-anker.md) 的存算一体、[Jensen](../videos/20260323-lex-jensen-huang-nvidia.md) 的 extreme co-design 构成"硬件组织形态"的三种下注方向。
 
 ## Agent Cloud 与统一存储层（Matei Zaharia & Reynold Xin，美/Databricks，2026-06）
 
@@ -123,7 +123,7 @@
 
 - **最领先的三五家模型 = 世界最重要的技术基础设施 = global GDP 的操作系统**，重要性将超过今天的 Google（01:04:51–01:06:53）。详见 [LLM OS](llm-os.md)。
 - **算力是 Anthropic 冲 1000 亿 AR 的最大瓶颈**（此前低估需求、算力规划保守）；**Google worst case"TPU 都能变成另一个英伟达"**（00:29:28、00:49:42）。
-- **推理需求即将爆发几倍到十倍**（罗福莉同判断），"大部分卡点在存储"，低成本推理是关键命题（广密 01:16:12 / 罗福莉 02:30:21）。
+- **推理需求即将爆发几倍到十倍**（罗福莉同判断），"大部分卡点在存储"，低成本推理是关键命题（[广密季报](../videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md) [01:16:12]）（[罗福莉访谈](../videos/20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md) [02:30:21]）。
 
 ## 多模态/全模态 serving：stage 抽象与 DiT 加速（vLLM Omni 团队，中，2026-05）
 
@@ -369,6 +369,8 @@ Chamath 在回答"Apple 该不该做云"时给出（01:14:49–01:15:50）：
 
 ## ⚠️ 算力稀缺会不会抬高进入壁垒：一条与本页主线相反的论证（Dwarkesh 经 Sacks 转述，2026-07）
 
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+
 本页与 [AI 商业化与价值捕获](ai-business-and-value-capture.md) 的主流叙事是**商品化**——[Chamath 的"商品化周期被压缩到几年"](ai-business-and-value-capture.md)、[Eiso Kant 的开源必胜](../people/eiso-kant.md)、[Benedict Evans 的价值上移](#capex-的物理上限与模型只相关-39-个月benedict-evans前-a16z2026-06)。
 
 [2026-07-31 那期](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) Sacks 转述了 [Dwarkesh Patel](../people/dwarkesh-patel.md) 一篇博客的论证，方向相反（[00:43:35]、[00:57:47]）：
@@ -391,6 +393,8 @@ Chamath 在回答"Apple 该不该做云"时给出（01:14:49–01:15:50）：
 **四条互不相容，本库并列不裁决。**
 
 ## 能源：一条"已经发生但没被计入"的读数（Chamath，2026-07）
+
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 
 （[00:23:19]–[00:26:20]）本页已有的能源讨论集中在**缺口**（[Pat Gelsinger 的"能源是 AI 上限"](#能源作为-ai-的真实上限2026-07-三方汇合)、behind-the-meter 与许可）。Chamath 加的是**供给侧已经发生的替换**：
 
@@ -613,6 +617,8 @@ Neil（[01:05:35]–[01:07:36]）：设计一个分子不是一次模型调用�
 
 ## ⚠️ 超大规模云厂商一号位的资本配置与"不为一两个客户建"（Satya Nadella，2026-09-15）
 
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
+
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)。**本页第一份来自云厂商一号位的材料**——此前本页的视角来自芯片侧、推理引擎侧或投资人侧。
 
 ### 资产分两类，节奏也分两类
@@ -658,6 +664,8 @@ Neil（[01:05:35]–[01:07:36]）：设计一个分子不是一次模型调用�
 他要的是**行业之外的人来讲**——"如果你去 Quincy，他们会告诉你谢天谢地有这个数据中心"。对主持人"这是一块新肌肉"的定性，他重复认可了两次。
 
 ## ⚠️ 架构决定 Infra：K3 与 DeepSeek 的路线分野（孙宇涛，2026-08-26）
+
+来源：[张小珺 / 孙宇涛](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 
 [孙宇涛](../people/sun-yutao.md) 在 [张小珺第 152 期](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)。
 
@@ -732,6 +740,8 @@ Neil（[01:05:35]–[01:07:36]）：设计一个分子不是一次模型调用�
 
 ## ⚠️ 价格轴：从 $10–15M/MW 到 $100M/MW，以及算力预算的内部拆分（Dylan Patel，2026-08-25）
 
+来源：[Dwarkesh / Dylan Patel](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
+
 本页此前只有**工程轴**（芯片、能效、推理引擎）与**总量轴**（GW、capex），缺一条**价格轴**。[Dylan Patel（SemiAnalysis）](../people/dylan-patel.md) 补上了它（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)）。
 
 - **基础成本**：每兆瓦约 **$10M / $13M / $15M**（[00:02:03]）。
@@ -748,6 +758,8 @@ Neil（[01:05:35]–[01:07:36]）：设计一个分子不是一次模型调用�
 ⚠️ **他的非共识判断**（[00:30:51]）：**实验室会把推理的算力占比往下压，而不是往上抬**——"标准看法是大部分算力会去推理，而我认为大部分会去训练的 forward pass"。**他自己承认这是对激励结构的推演，不是观察到的决策**（[00:31:55]）。
 
 ## ⚠️ 硬件底层的三条事实：制程降的是功耗、SRAM 停止微缩、验证比设计更费人（肖志斌，2026-09-07）
+
+来源：[月球大叔 / 肖志斌](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)
 
 来自本库第一位**芯片架构师**视角（[肖志斌](../people/xiao-zhibin.md)，[视频页](../videos/20260907-uncle-moon-xiao-zhibin-ai-chips.md)）。本页此前多处把制程当性能代名词，这三条是直接的修正。
 
@@ -768,6 +780,8 @@ Neil（[01:05:35]–[01:07:36]）：设计一个分子不是一次模型调用�
 ⚠️ **本库并列不裁决**，但指出一点：**他并不否认定制推理芯片会有**（workload 固定后必然出现），**他的论点是护城河不在架构而在产能与迭代速度**。
 
 ## ⚠️ Agent 作为用户：系统要重新设计，以及可靠性第一次能拿到资源（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 本页此前的系统侧来源全是从业者。[徐天音（UIUC）](../people/tianyin-xu.md) 是第一位学术界系统研究者（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)）。
 

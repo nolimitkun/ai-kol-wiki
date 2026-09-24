@@ -51,7 +51,7 @@
 
 - **脚踏板 + Whisper Flow 把 LLM 从"打字"解放成"意识流口述"**（Mati / ElevenLabs）：按住踏板给一两分钟 stream of consciousness，"LLM 特别擅长把一大段意识流理成东西"；语音 agent 让人反而更愿打断、对 AI 更坦诚（[语音与法律](../videos/20260714-all-in-11labs-legora-voice-law.md) 00:11:09–00:15:14）。为本页"语音优先"补上具体硬件工作流。
 - **Andrew Feldman 的 prompt 收尾模板**：结尾固定加"**检查你的工作 + 告诉我我没考虑到什么 + 每次运行都反问我几个问题**"——这改变了 trend scouting 等任务的产出；配合"token maxing / loop maxing"（递归：问→学→再问，答案好很多）（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:27:21–00:32:23）。与 Karpathy"把输出当第一稿/查证"、NanoClaw"持续调 instruction"同一实践谱系。
-- **生成式模型当"媒介"而非"自动出片"**（Robin Rombach / BFL）：与 Scorsese 合作的用法是**human-in-the-loop 把脑中画面迭代成图像**（"语言是有损媒介、视觉更丰富"）、平行化 brainstorming/storyboard，而非一键生成整部电影（00:46:33–00:50:39）。呼应"人向设计/判断迁移"。
+- **生成式模型当"媒介"而非"自动出片"**（Robin Rombach / BFL）：与 Scorsese 合作的用法是**human-in-the-loop 把脑中画面迭代成图像**（"语言是有损媒介、视觉更丰富"）、平行化 brainstorming/storyboard，而非一键生成整部电影（[Cerebras 与 BFL](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:46:33–00:50:39）。呼应"人向设计/判断迁移"。
 - **写好 verifier 是关键技能**（志鹏 / vLLM-Omni）：code with AI 后，"实体 code 会被取代、重心转向写测试/verifier"；学习时"找一个不懂的人（或 agent）用费曼学习法讲懂"（[志鹏访谈](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 00:15:15–00:24:23）。与 Modal"agent 幻觉即产品反馈"、NanoClaw"agent 管理有学习曲线"同属"人机协作方法论"。
 
 ## 中美对照
@@ -160,6 +160,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## ⚠️ 会变的东西不能烧进权重：微调与上下文的分工判据（Decagon，2026-07）
 
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
+
 本页此前的 agent 实践多在**怎么用**这一层。[Decagon 那期](../videos/20260731-a16z-decagon-enterprise-ai-apps.md) 给了一条**该把知识放在哪一层**的工程判据（[00:17:10]–[00:18:11]）：
 
 > "我不是在为行为做微调，我是在**教 AI 我自己的流程**。而那件事**不是通过微调发生的，是在上下文里发生的**——因为**如果你把它微调进去，每次你改流程都得把它逆转回来，这说不通**。"
@@ -201,6 +203,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## token 治理的新机制：产品默认全量监听（Jason Calacanis，2026-07）
 
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+
 本页 [token 治理](#token-治理成本失控与组织行为学2026-07) 一节记录的失控机制都是**人用得多**（RAMP 21 倍、DoorDash 20 倍、Chamath 45 天翻倍）。[2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) 有一个**机制不同**的样本（[00:27:20]）：
 
 > "我们装了 Slack 里的模型集成……**它会持续监听你放进去的每一个频道的 Slack**。突然我们上周多了 **1000 美元**的额外账单，**我不知道会这样**。他们给每个人两三千块让你在公司里打开它。**它监听每一条进来的消息、放进它的数据库，基本上不告诉你，然后开始未经许可地插进讨论里。**"
@@ -210,6 +214,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 ⚠️ **为什么值得单独记**：这不是"员工用得多"，是**产品的默认行为就是全量摄入**，且**厂商用补贴推动开启**。治理手段因此也不同——不是路由或用量看板，而是**把被动触发改成显式调用**。这条同时与本页 [Mark Cuban 的 agent 漂移](#工具跳跃与-agent-漂移一个机构的-ai-first-实录mark-cuban2026-07) 相关：默认监听的 agent 会**在没人要求的情况下改变自己的行为边界**。
 
 ## "一个 markdown 文件就是一名员工"：YC CEO 的 skillify 循环（Garry Tan，2026-08）
+
+来源：[a16z / Garry Tan](../videos/20260812-a16z-garry-tan-founder-psychology.md)
 
 来自 [Garry Tan](../people/garry-tan.md) 在 [a16z 那期](../videos/20260812-a16z-garry-tan-founder-psychology.md)。本页此前关于个人 agent 的材料来自工具作者（[Peter Steinberger](../people/peter-steinberger.md)）与部署方（Gavriel Cohen）；**这是第一次由 YC CEO 从"这该成为组织默认形态"的角度表述**。
 
@@ -251,6 +257,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## ⚠️ "过程没有捷径，捷径在工具里"：用 AI 学习的边界（Chess.com，2026-08-13）
 
+来源：[No Priors / Chess.com](../videos/20260813-no-priors-chesscom-human-skill.md)
+
 [Erik Allebest](../people/erik-allebest.md) 在 [No Priors 那期](../videos/20260813-no-priors-chesscom-human-skill.md)。**本页此前的材料几乎全是"怎么用 AI 干活"，这是第一条系统讲"怎么用 AI 学东西、以及它学不动什么"的。** 收录它的理由是提出者手上有一份罕见的凭据：**Chess.com 记录着数亿人在每个水平段犯错与进步的完整轨迹。**
 
 ### 能加速的那一侧
@@ -276,6 +284,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## ⚠️ "AI 太快，反而把人弄得极为疲惫"（曾鸣，2026-09-03）
 
+来源：[张小珺 / 曾鸣](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
+
 [曾鸣](../people/zeng-ming.md) 在 [张小珺第 153 期](../videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)（[02:28:29]–[02:29:30]）。
 
 > **"因为 AI 的工具如此高效率，把你自己弄得极为疲惫——因为你根本跟不上它的处理速度。"**
@@ -285,6 +295,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 - **本库标注**：这条与 [Garry Tan 的 token maxing](../videos/20260812-a16z-garry-tan-founder-psychology.md) **不构成反驳**——一个讲**买到能力提前量的代价是钱**，一个讲**跟上机器节奏的代价是人**。**并列记录。**
 
 ## ⚠️ "模型 + harness"：coding agent 何时变得真正可用（Satya Nadella，2026-09-15）
+
+来源：[All-In / Satya Nadella](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 
 [Satya Nadella](../people/satya-nadella.md) 在 [All-In 那期](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)（[00:12:11]）。
 
@@ -297,6 +309,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## ⚠️ "以前要做伟大的事需要知道两件事，现在只需要知道一件"（苏廷浩，2026-08-19）
 
+来源：[张小珺 / 苏廷浩](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
+
 17 岁的 [苏廷浩](../people/su-tinghao.md) 在快问快答里自选的"必须知道的知识点"（[视频页](../videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)，[00:47:26]、[01:01:29]）：
 
 > **以前你想做一件伟大的事情，你得知道两件事：伟大的事情长什么样，以及伟大的事情怎么做。现在有了 AI，只需要知道它长什么样，让 AI 去做。**
@@ -308,6 +322,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 
 ## ⚠️ "把 PDF 丢进模型拿证明策略，比读引言快得多"（OpenAI 数学团队，2026-09-08）
 
+来源：[a16z / OpenAI 的两位数学家](../videos/20260908-a16z-openai-math-reasoning-astra.md)
+
 [两位 OpenAI 数学家](../people/openai-math-team.md) 给了两条极具体的专业用法（[视频页](../videos/20260908-a16z-openai-math-reasoning-astra.md)）。
 
 - **文献定位**（[00:03:02]）：其中一位把一个 Erdős 网站上标着 open 的问题丢进 GPT-5，**五分钟后它找到了文献**——而他和几个朋友**已经为此花了几小时，还不确定问题是否够得着**。他们随后又找到**十来个类似案例**。
@@ -316,6 +332,8 @@ Uber CTO 的做法被本批素材当作范式：99% 工程师用 AI 工具、**7
 - **访问门槛的变化**（[01:03:56]）：**"如果你在做某件需要一点数学的事，你突然不需要去找到这个题目的世界级专家才能把它用进自己的工作。"**
 
 ## ⚠️ 任务规约的成本："告诉它怎么做"与"给一个模糊的 spec"差多少（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 [徐天音](../people/tianyin-xu.md) 的表述（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)）：
 

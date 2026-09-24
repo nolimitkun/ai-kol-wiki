@@ -28,10 +28,12 @@
 - 与 Adam Brown / Grant Sanderson 的同一案例互证：三人都以"AI 不迷信公认为真的结论"为 AI-for-science 的结构性优势；Noam 补充了成本维度（每代模型发布后成本降 10–100×，故 OpenAI 有意不鼓励研究员刷开放难题，而应造更强模型）。
 
 ### 姚顺宇（中，Google DeepMind，2026-05）
+来源：[张小珺 / 姚顺宇](../videos/20260511-zhang-xiaojun-yao-shunyu.md)
 - 基础科学（数学/理论物理）研究者已**大量用 AI**：Gemini Deep Think 做数学推导/证明、看文章归纳；痛点（物理学家不会写代码、光打开编译器就半天）被消除。但难成"万众瞩目"，除非出现"AI 产生爱因斯坦级理论"的时刻。（[张小珺访谈](../videos/20260511-zhang-xiaojun-yao-shunyu.md) 00:42:50–00:44:51）
 - 建议年轻人做"现在没人做到的事"，点名 **AI 帮助真正的科学问题（如量子调控）** 是比纯做语言模型更蓝海的方向（03:22:01–03:23:02、03:33:11–03:34:12）。
 
 ### Eric Jang（美，前 DeepMind Robotics，2026-05）
+来源：[Dwarkesh / Eric Jang](../videos/20260515-dwarkesh-eric-jang.md)
 - **神经网络把近乎 NP 难的搜索摊销进一次前向传播**（AlphaGo/AlphaFold 同理）：10 层网络逼近 361³⁰⁰ 量级的搜索，令他怀疑"用最坏情况复杂度框定 NP 难问题"的传统思路不完整——现实问题大多有结构（[Dwarkesh 访谈](../videos/20260515-dwarkesh-eric-jang.md) 01:16:04–01:19:20）。类比混沌天气：真正可预测的是**宏观结构**（飓风位置、Lorenz 吸引子形状）而非微观态，value 函数正是在预测这种宏观量（01:19:20–01:22:28）。
 - **AI 自动化 AI 研究**的一线观察：Opus 4.6/4.7 擅长开放式超参优化与执行实验，短板在"选下一个实验"的横向/第一性原理思考；引 Ilya——好研究员靠对"正确想法"的强信念分辨 bug 与错误想法（02:22:41–02:28:57）。与 Noam（research taste 是短板）、[Gray Swan](../videos/20260622-latent-space-gray-swan.md)（用 agent 自动化科学）、[Mark Chen](../people/mark-chen.md)（vibe researcher）同题。
 
@@ -77,6 +79,8 @@
 AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karpathy、CZI、Lila、Genesis）为主，姚顺宇从中方一线补充了"基础科学已在广泛用 AI 工具、但难出圈"的落地现状；四方共用 Erdős 案例，构成本库里少见的跨 KOL、跨中美的同一事件多视角交叉。Lila 与 Genesis 给出同向的尖锐判断——Lila："**美国生物技术输给中国生物技术不是创新问题，是监管框架**"（发现已非约束，临床/审批才是）（[Lila](../videos/20260716-latent-space-lila-sciences.md) 00:53:49–00:54:50）；Genesis 从数据闭环角度印证：西方 pharma 依赖 CRO 致尖端湿实验能力退化，而中国 biotech（Insight）**自建极强 in-house 实验能力、数据产出极快**，是"设计-造-测-分析"闭环的关键（[Genesis](../videos/20260630-latent-space-genesis-diffusion-drug-discovery.md) 01:12:57–01:14:58）。
 
 ## 果蝇连接组需要 64 维：一条与神经网络设计相关的读数（Friedberg 转述，2026-07）
+
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
 
 （[2026-07-31 All-In](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) [01:25:02]–[01:31:09]）
 
@@ -167,6 +171,8 @@ AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karp
 
 ## ⚠️ 1 万个 agent 与 Navier–Stokes：一条本库无法核实的自述（Greg Brockman，2026-09-14）
 
+来源：[a16z / Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md)
+
 [Greg Brockman](../people/greg-brockman.md) 在 [a16z 那期](../videos/20260914-a16z-greg-brockman-agi-era.md)（[00:12:08]、[00:15:10]）。
 
 - **他的原话大意**：**"我们实际上用了 1 万个 agent 去解 Navier–Stokes 问题。"** 主持人当场道贺。
@@ -179,6 +185,8 @@ AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karp
 - **与本页其它材料的关系**：本页此前的 AI-for-science 材料（[Chai Discovery](../videos/20260811-latent-space-chai-discovery-protein-design.md)、[Lila Sciences](../people/lila-sciences.md)、[Xaira](../people/xaira-team.md)、[Genesis](../people/genesis-molecular-ai.md)）**都落在生物与实验闭环上**，且大多给了可指认的方法或产出。**这是本页第一条"纯数学 + 形式化验证"方向的材料，也是本页可核实度最低的一条。** 本库保留它，是因为**"形式化进 Lean"这条如果成立，会直接影响 [LLM 安全](llm-security.md#️-当事方一侧的叙述openai-总裁谈-hugging-face-事件与防守方的窗口greg-brockman2026-09-14) 页上"用 AI 形式化验证全部软件"那条论证的可信度**——两者是同一根链条。
 
 ## ⚠️ 本页第一份来自实验室内部、且给出可核查结果清单的材料（OpenAI 数学团队，2026-09-08）
+
+来源：[a16z / OpenAI 的两位数学家](../videos/20260908-a16z-openai-math-reasoning-astra.md)
 
 本页此前的材料要么来自**应用侧 neo-lab**（[Lila Sciences](../people/lila-sciences.md)、[Xaira](../people/xaira-team.md)、[Genesis Molecular AI](../people/genesis-molecular-ai.md)），要么来自**领导层转述**（[Greg Brockman 的 Navier–Stokes 那条](../videos/20260914-a16z-greg-brockman-agi-era.md)，本库无法核实且他没说清是哪个问题）。
 

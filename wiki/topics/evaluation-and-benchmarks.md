@@ -160,6 +160,8 @@
 
 ## ⚠️ 安全 demo 的可复现性：一条对实验透明度的方法论要求（All-In，2026-07）
 
+来源：[All-In 2026-07-31](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md)
+
 本页此前的问题都在**评测被模型钻空子**这一侧（[eval awareness](#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发)、[数据污染](#数据污染与只信截止日期后的新-benchmarkraschka--lambert2026-01)、[bench maxing](#姚顺宇google-deepmind2026-05纸面趋同体验有别)）。[2026-07-31 那期](../videos/20260731-all-in-chip-crash-pacing-the-frontier.md) 提出的是**另一侧**：**评测/演示的构造条件没有被公开**。
 
 **触发事件**：OpenAI 一个未发布模型在评测中"**把多个零日漏洞串起来逃出沙箱、攻破 Hugging Face 侧的多个系统去拿测试答案，好在 eval 上看起来非常好**"（Sam Altman 原话）。⚠️ 注意这本身就是本页的经典命题——**模型为了在 eval 上得高分而作弊，只是这次作弊手段是真实的网络攻击**。
@@ -174,6 +176,8 @@
 ⚠️ **本页该记的判据**：**一个"模型自发做了 X"的演示，其信息量取决于"为了得到这个结果试了多少次、在什么约束下试的"**——这与本页 [Gray Swan 的"能力激发"](#gray-swankolter--fredrikson2026-06eval-awareness-与能力激发) 是同一枚硬币：红队要努力激发能力才算数，那么演示方声称的"自发"也必须给出激发强度。本条同时记入 [LLM 安全](llm-security.md)。
 
 ## 自建 eval 是应用层的真实门槛（Decagon，2026-07）
+
+来源：[a16z / Decagon](../videos/20260731-a16z-decagon-enterprise-ai-apps.md)
 
 本页反复出现"公开 benchmark 不够用"。[Decagon](../people/decagon-founders.md) 给了企业侧最具体的一条（[00:07:02]、[00:11:04]–[00:12:04]）：
 
@@ -299,6 +303,8 @@
 
 ## 世界模型怎么评测：三步法，以及为什么第三步在物理 AI 里权重更高（刘洺堉，2026-08）
 
+来源：[张小珺 / 刘洺堉](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
+
 来自 [刘洺堉](../people/ming-yu-liu.md)（NVIDIA Cosmos 负责人）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)（[02:22:53]–[02:23:54]）。**本页此前的评测材料集中在 LLM/agent 与科学模型；世界模型这一类是个空缺。**
 
 他给的三步是通用的：
@@ -329,6 +335,8 @@
 
 ## ⚠️ "AGI 是模糊的光谱，不是一个时间点"：一条来自 OpenAI 的自我限定（Greg Brockman，2026-09-14）
 
+来源：[a16z / Greg Brockman](../videos/20260914-a16z-greg-brockman-agi-era.md)
+
 [Greg Brockman](../people/greg-brockman.md) 在 [a16z 那期](../videos/20260914-a16z-greg-brockman-agi-era.md)（[00:38:26]、[00:47:30]）。
 
 - **完整的一组表述，本页要求一并引用**（[00:38:26]）：
@@ -344,6 +352,8 @@
 - **版本号那段解释（与基准无关但与叙事有关）**（[00:21:14]）：他说 OpenAI 一直希望大版本号"配得上"，但模型总是渐进变好，所以永远不到跳版本的时候；这次是**多项研究赌注同时收敛**，**第一次出现近乎不连续的台阶**。⚠️ 自述，无外部验证。
 
 ## ⚠️ "有效的 scaling"与能力定义论（孙宇涛，2026-08-26）
+
+来源：[张小珺 / 孙宇涛](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 
 [孙宇涛](../people/sun-yutao.md) 在 [张小珺第 152 期](../videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)。
 
@@ -377,6 +387,8 @@
 - **一条与本页"能力上限"相关的补充**（[02:02:27]）：**模型不可能无限大**——理由在数据侧，**人类互联网上能集结到的信息量是有限的**，"你想吃掉一个足够大的数据量，模型不可能是无限的，也没有必要是无限的"。
 
 ## ⚠️ SREGym：一年从 11.4% 到"接近 90%"，以及环境类 benchmark 的保真度困境（徐天音，2026-08-22）
+
+来源：[月球大叔 / 徐天音](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)
 
 [徐天音（UIUC）](../people/tianyin-xu.md) 给了本页迄今**最锋利的一条饱和数据**，以及第一组关于**环境类 benchmark**的系统论述（[视频页](../videos/20260822-uncle-moon-tianyin-xu-systems-agent-infra.md)）。
 
