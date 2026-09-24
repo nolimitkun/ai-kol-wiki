@@ -7,6 +7,10 @@
 
 > **说话人认定依据**：转录稿是自动字幕，只有 `>>` 换行符没有姓名标签。**嘉宾与主持的身份来自视频简介**（"Anish Acharya is joined by Garry Tan, President and CEO of Y Combinator"），且正文自陈可交叉验证：讲 2003 年微软 Windows Mobile 的是嘉宾（[00:00:00]–[00:01:00]），"我们刚庆祝了 7000 人来旧金山……我们每年的 Startup School"（[00:12:05]）也只能是 YC 一方。⚠️ **本页凡引用主持人观点处会写明"Anish"**，其余默认为 Garry Tan。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260812-fsTtKywmWlU/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Garry Tan（嘉宾，75.3%）**、**SPEAKER_01 = Anish Acharya（主持，24.7%）**。
+> 依据：SPEAKER_00 以第一人称谈自己做的 gstack 与浏览器 QA 回路（[00:25:08]，100%）；SPEAKER_01 为追问方（[00:33:13] 块内"one of the other implications of what you're describing is…"，95%）。
+
 ## 概要
 
 这是本库第一次收录 **YC 现任 CEO 的完整长谈**——此前 YC 只作为别人口中的背景出现。全程围绕一个主题：**AI 把创业的经济学改写之后，创始人该怎么想、怎么组织自己**。

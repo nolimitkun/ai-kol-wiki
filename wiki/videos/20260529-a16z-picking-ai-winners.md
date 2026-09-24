@@ -9,6 +9,11 @@
 
 > ⚠️ 转录稿中嘉宾仅以 "David" 出现，未播报全名。按 a16z 成长期业务与访谈内容判断很可能是 **David George**，但本库未能从转录稿证实，故不建立独立人物页，暂记于 [a16z 频道页](../people/a16z.md)。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260529-AiM9mZCmVPY/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = David（a16z 成长期合伙人，73.8%）**、**SPEAKER_00 = 主持（英国 LP，25.4%）**。
+> 依据：SPEAKER_00 多次以 LP 自称——"from an LP perspective"（[00:22:11] 块，92%）、"investing in VC funds for 34 years"（[00:31:15] 块，82%），
+> 并点名"keen to get your thoughts on, David"（[00:29:14] 块）。SPEAKER_01（15 秒）为碎片。
+
 ## 概要
 
 嘉宾把过去 12 个月的"先验更新"归为两块：**规模（scale）**与**价值捕获（value capture）**。规模上他变得更乐观；价值捕获上他变得更不确定。全篇最反复的一个词是"**我们的先验一直在变**"——"我想不起职业生涯里有哪个时候我改变看法的速度有这么快，这是好事，但也让人谦卑"。

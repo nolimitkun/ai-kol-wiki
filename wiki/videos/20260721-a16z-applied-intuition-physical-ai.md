@@ -7,6 +7,16 @@
 
 > 本库第一次从**横向技术供应商**视角讲物理 AI——不是 Tesla/Waymo 那种垂直整合，也不是 [Physical Intelligence](20260716-zhang-xiaojun-kay-ke-physical-intelligence.md) 那种通用机器人基础模型，而是"我们像芯片公司一样，把智能卖给运行实体经济的人"。给出了本库迄今**最具体的一组自动驾驶时间表**，以及一条被反复低估的结构性论点：**物理 AI 的真正瓶颈是实时性约束，而这恰恰就是护城河**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260721-56XgWH9ch0U/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_03 | 67.3% | **Qasar Younis** | "full disclosure General Motors is a customer and I went to the General Motors Institute"（[00:20:13] 块）、"my years at General Motors"（[00:21:14] 块，100%）——与其 GMI 出身一致；并以第三人称提"I called Peter…"（[00:19:13] 块） |
+> | SPEAKER_02 | 13.6% | **Peter Ludwig**（较可信） | 排除法 + 内容：以公司口吻讲"We're a technology provider"（[00:13:09]，80%）、世界模型光谱到神经仿真（[01:03:41]，93%）；**无点名作答佐证** |
+> | SPEAKER_00 | 13.1% | 主持 | 念"Qasar, Peter, welcome to the a16z podcast"（[00:01:01]，100%） |
+> | SPEAKER_01 / SPEAKER_04 | 3.8% / 2.3% | 主持方，未能确认 | 均为 30 秒以内的短轮次；页头记本期有两位以上主持，姓名未播报 |
+>
+> ⚠️ 本页正文中不少条目以"Applied Intuition 认为"合并记述两位创始人；需要区分时以本表为准。
+
 ## 概要
 
 Applied Intuition：**"我们把智能装到机器上"**——汽车、卡车、坦克、无人机。1000+ 工程师（83% 是工程），18 个办公室，累计融资约 10 亿美元且"还全在银行里"。使命是"给十亿台机器装上智能"。**汽车只占业务约 30%，70% 已经是非汽车**（国防、建筑、采矿、农业、港口）。

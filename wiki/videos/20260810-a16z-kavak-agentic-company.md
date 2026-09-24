@@ -17,6 +17,13 @@
 >
 > **嘉宾姓名 "Ali Massa" 来自自动字幕，本库未核实拼写。**
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260810-n34CIw3gk1k/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Ali Massa（嘉宾，83.9%）**；SPEAKER_01（5.7%）与 SPEAKER_00（10.4%）是两位主持。
+> 依据：SPEAKER_01 念开场"Today we have Ali Massa, the head of AI at Kavak… Thank you, Ali, for being with us today"（[00:01:03]，67–100%）；
+> SPEAKER_02 以第一人称讲加入 Kavak 的经过（[00:02:06] 块，100%）。
+> 关于页头提到的 "Gabe"：说出"as Gabe said"的是 **SPEAKER_00**（00:13:17–00:14:04 这一轮），所以 SPEAKER_00 不是 Gabe；
+> Gabe 较可能是开场的 SPEAKER_01——**推定，未确认**。SPEAKER_01 的若干块纯度低于 50%，混有嘉宾发言。
+
 ## 概要
 
 这是本库**第一份"传统实体企业把自己整个重建成 agent 公司"的一手内部叙述**——而且不是试点、不是 pilot，是**已经跑到 96% 交互与 95% 交易由 agent 完成**的规模。Kavak 是拉美的二手车市场（买车、翻新、卖车、放贷），为此还自建了金融科技、物流和一套 Carfax——嘉宾说这些基础设施在拉美"根本不存在"，只能垂直自建（[00:02:06]–[00:03:06]）。

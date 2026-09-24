@@ -14,6 +14,16 @@
 >
 > 本页是本库第一份来自**已在收钱的垂直 agent 公司**的部署侧一手材料（此前最接近的是 [DoorDash](20260723-no-priors-doordash-autonomous-delivery.md) 与 [Applied Intuition](20260721-a16z-applied-intuition-physical-ai.md)，但那是平台与供应商视角）。最值得记的不是 agent 本身，而是**两条"模型能力不是瓶颈"的证据**：模型不知道这份工作怎么做（工作流不在互联网上），以及**联邦法规先把纸质支票赶走，AI 才有东西可自动化**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260730-Fpg_8aiBxx4/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 两位创始人 + 两位主持，靠**互相第三人称提及**逐个排除：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_03 | 45.6% | **Steijn Pelle** | "And by the way, Frederick worked at Superhuman on…"（[00:04:02] 块，100%）、"to Alex's point"（[00:15:10] 块，100%）——既不是 Frédéric 也不是 Alex，又以创始人口吻谈"we've built this agent"（[00:56:41]） |
+> | SPEAKER_01 | 16.0% | **Frédéric Renken** | 排除法；高纯度块以创始人口吻谈"spending the time in offices doing the work ourselves"（[00:18:11]，100%） |
+> | SPEAKER_02 | 30.5% | **Alex Rampell（主持）** | "guarded by Stein and Frederick"（[00:09:06] 块）、"make sure that Frederick didn't commit any crime"（[00:10:07] 块，均 100%）——不是两位创始人；又以"ChatGPT 之前/之后"的分界做宏观评点（[00:45:32]） |
+> | SPEAKER_00 | 7.9% | **Olivia Moore（主持）** | 点名发问"So, Stein, this whole company started…"（[00:01:00] 块，82%），并说"which Alex, I would say you were…"（[00:07:04] 块，100%），所以不是 Alex |
+
 ## 概要
 
 Lassie 做的是美国牙科诊所的行政自动化——保险理赔申报、患者账单、保险回款对账。公司 **2020 年创立**（[00:05:03]），起点是 Steijn 在自己牙医 Dr. Quan 那里看到的场景：一位 **Yelp 上评分第一的医生，每月花 200 小时在文书工作上**，手工提交理赔单（[00:02:00]）。两位创始人此前分别在 Robinhood 做增长/推荐、在 Superhuman 做产品（[00:04:02]），却**先跑去客户办公室里亲手干了几个月这份活**——Dr. Quan 让 Steijn"坐在这儿干"，宾州 Scranton 的 Dr. Shah 直接把财务权限全给了他（[00:05:03]）。

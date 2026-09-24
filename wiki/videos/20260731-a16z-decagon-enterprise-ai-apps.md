@@ -15,6 +15,16 @@
 >
 > ⚠️ **利益相关**：主持方 a16z 是 Decagon 投资人（自陈"三年前开始合作"）。本页按"X 认为"记录，公司自报数字无第三方来源。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260731-cO1f2wOxSH4/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 42.0% | **Jesse Zhang（CEO）** | 排除法（另一位联创为 SPEAKER_03） |
+> | SPEAKER_03 | 37.3% | **Ashwin Sreenivas（CTO）** | "prove every single thing that Jesse just talked about"（[00:33:16] 块，100%），所以不是 Jesse；高纯度块讲派驻团队如何进入企业（[00:24:16]） |
+> | SPEAKER_00 | 15.2% | **主持** | 点名"Jesse, I'm going to actually u[se]…"（[00:01:00] 块，91%）；"you both are very very technical but also go to market animals"（[00:37:18]，100%） |
+> | SPEAKER_01 | 5.5% | 主持方（第二位或同一人被拆分），未能确认 | "…almost exactly three years ago, and you guys landed on this idea"（[00:23:15]，80%），投资人口吻 |
+>
+> 页头已注明转录稿从未播报主持人姓名。
+
 ## 核心观点
 
 ### 一、开源之路：为什么走、走到哪、以及一条反直觉的份额观察

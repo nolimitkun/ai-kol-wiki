@@ -23,6 +23,13 @@
 >
 > 另有两处需要单独标注：`fable doesn't have zero data retention policy`（[00:18:12]）与 `retreating from using Fable 5`（[00:33:22]）中的 **Fable** 按上下文指 Anthropic 的模型，**照录不改**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260806-78-6dUROziQ/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 56.3% | **Simon Mo** | "We're from UC Berkeley, a long tradition of open sour[ce]"（[00:30:21] 块，92%） |
+> | SPEAKER_01 | 27.5% | **Matt Bornstein（a16z）** | 排除法；高纯度块是投资人视角的评点（[00:07:03] 开源被拖进关键路径、[00:42:31] "empirically it works incredibly well but… theorists have no idea"，均 100%） |
+> | SPEAKER_00 | 16.2% | **主持（结尾被称作 "Sean"）** | "today we're here with Simon Mo… We're also joined by Matt Bornstein… Simon, Matt, thank you so much for joining us"（[00:01:01]，100%） |
+
 ## 概要
 
 本期是本库**第二次**从 vLLM 一侧看这场竞争——第一次是 [游凯超那期](20260728-zhang-xiaojun-you-kaichao-vllm.md)（中方维护者、中文播客、治理与组织学视角）。这一次是**同一个项目的另一位 BDFL、在美方风投频道、面向美国政策语境**。两期合读的价值极高：几乎所有事实基座重合（伯克利谱系、Ion Stoica、基金会+公司、模型发布日 day-zero 支持、芯片厂商主动靠拢），但**问题意识完全不同**——游凯超被问的是"开源社区靠什么撑住"，Simon Mo 被问的是"**开源权重在中美政策战里站在哪一边**"。

@@ -6,6 +6,15 @@
 - **转录稿**: [sources/a16z/20260807-RtNrvPBkwfA](../../sources/a16z/20260807-RtNrvPBkwfA/transcript.md)
 - **录制场合**：**Black Hat 2026 现场**（拉斯维加斯），录制当天正有一次 npm 蠕虫事件在进行中
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260807-RtNrvPBkwfA/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 43.1% | **Feross（Socket）** | "About half of our team at Socket are maintainers"（[00:15:08] 块，91%） |
+> | SPEAKER_01 | 34.4% | **Dylan（Truffle Security）** | 以自家工具口吻谈"They used Truffle Hog for a wide range of…"（[00:11:04] 块，91%） |
+> | SPEAKER_03 | 22.2% | **Joel（主持）** | "We've got Fas and Dylan here from Truffle and Socket"（[00:00:00]，100%）；多次点名"I think Dylan, three months ago…"（[00:01:01] 块） |
+>
+> SPEAKER_00（4 秒）为碎片。
+
 ## 说话人与专名校正
 
 转录稿**没有 SPEAKER 标签**，只有 `>>` 换人标记，且多处缺失。三人对话，按自陈线索归属：

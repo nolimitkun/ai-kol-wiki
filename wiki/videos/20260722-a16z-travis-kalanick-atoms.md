@@ -5,6 +5,15 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=z6gH_v0buUc) · 92 分钟（自动字幕）
 - **转录稿**: [sources/a16z/20260722-z6gH_v0buUc](../../sources/a16z/20260722-z6gH_v0buUc/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260722-z6gH_v0buUc/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_01 | 67.1% | **Travis Kalanick** | 以第一人称谈 Uber 旧事与 Atoms："Emil and I would meet up with Mark and Ben"（[00:11:08] 块，83%）、"I did a vision letter when we launched Atoms"（[01:16:58] 块，100%） |
+> | SPEAKER_02 | 27.0% | **Ben Horowitz**（较可信） | 以 a16z 创始人口吻说"when we started the firm, we were the upst[arts]…"（[00:18:13] 块，53%）；以投资方口吻谈尽调——"when we looked at it, we're like there's a…"（[00:50:40] 块，100%）、"which we went through when we were understanding the business"（[01:14:58] 块，92%）。节目内**无人直呼其名**，属推定 |
+> | SPEAKER_00 | 5.9% | **"I'm Back" 播客主持** | 念"relationship with Travis and Ben. So, I want to read a quote from Travis from your launch post"（[00:01:01] 块，91–100%） |
+>
+> 页头"与 Ben Horowitz 同台"得到分离与内容的支持（对照：[Greg Brockman 那期](20260914-a16z-greg-brockman-agi-era.md) 的 Ben Horowitz 认定曾被撤回，本期不同）。
+
 ## 概要
 
 Travis Kalanick 走出 8 年隐身、宣布 **Atoms**（"industrial AI / 物理自动化改造行业"）的"复出"访谈，与 Ben Horowitz 同台（a16z 领投）。对本库有价值的不是 Uber 融资旧事（占前 15 分钟），而是一套**"把物理世界当计算机"的框架**——Atoms-based computer：制造=CPU、地产=存储、运输物流=网络，用 TCP/路由等 CS 框架管理原子。落到实处是三块：**云厨房（食物机器人 + 自动配送"自主卷饼"）、采矿自动化（Pronto）、重型运输自动驾驶**。这是本库[物理 AI 与机器人](../topics/physical-ai-and-robotics.md)主题里第一个"非人形、横向、工业改造"的美方操盘手样本，与 Applied Intuition、何小鹏形成三角对照。

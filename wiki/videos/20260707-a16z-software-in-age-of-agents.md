@@ -4,6 +4,13 @@
 - **嘉宾**：[Sema Amble](../people/a16z.md)（a16z 企业软件合伙人）、[Steven Sinofsky](../people/a16z.md)（a16z board partner，前微软 Windows/Office 负责人）
 - **转录稿**：[sources](../../sources/a16z/20260707-Mxs4erDxOEE/transcript.md)（en-orig 自动字幕）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260707-Mxs4erDxOEE/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_00 | 56.3% | **Steven Sinofsky** | "Well, I mean Sema co-wrote a post…"（[00:15:08] 块，之后 100%），所以不是 Seema；高纯度块是微软时期的一手旧事（[00:58:45] 电梯里省电、[00:13:07] 块内谈取代 Outlook） |
+> | SPEAKER_02 | 32.9% | **Seema Amble** | 主持问"So, Sema, can you just walk me…"后由此标签作答（[00:01:00] 块）；高纯度块讲 CRM/Salesforce 作为销售执行机制（[00:28:21]、[00:52:40]） |
+> | SPEAKER_01 | 10.8% | **主持** | "Welcome to the a16z podcast. I'm here with Sema Amble… and Steven Sinofsky"（[00:01:00]，100%）；姓名未自报 |
+
 ## 概要
 
 从 Salesforce "headless 360" 发布切入，讨论 **agent 时代的企业软件**：当 agent 而非人来访问系统，UI 是否还重要？软件的护城河（stickiness）来自哪里？为什么"vibe code 一个 SAP"是严重低估？Sinofsky 以四十年企业软件经验反复强调一个反直觉主题——**企业里所有有趣的事都是例外处理（exception handling）**，而例外没写在任何字段里、只在人的脑子里；以及**生产力永远创造新工作**，长尾不会变短、只会以新形态变长。这是对 [Benedict Evans](20260608-a16z-benedict-evans-ai-economics.md) 宏观"价值上移"命题的**微观补充**：价值确实在上层，但上层是难以复制的组织逻辑，不是模型。

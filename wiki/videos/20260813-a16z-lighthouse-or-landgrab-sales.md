@@ -19,6 +19,13 @@
 > | `applied to tuition`（[00:36:13]） | **Applied Intuition**，本库已有 [人物页](../people/applied-intuition.md) |
 > | `Pylon`、`Further AI`、`ELD mandate`、`ACV` | 照录，判断为正确 |
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260813-aakZLqxRQfo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 44.6% | **Joe Schmidt** | 主持说"Joe, tell us about the piece…"后由此标签作答（[00:01:01] 块，61%）；"what Andy just said is actually…"（[00:12:04] 块，100%），所以不是 Andy |
+> | SPEAKER_01 | 47.0% | **Andy McCall** | "[the companies] I worked for, both Meraki and Samsara, we started with land grab"（[00:27:12] 块，83%）；高纯度块讲 Meraki 2012 年被 Cisco 收购、2006 年创立（[00:19:08]，100%） |
+> | SPEAKER_00 | 8.4% | **Elena Burger（主持）** | "Joe Schmidt just wrote a piece… Joe, tell us about the piece"（[00:01:01]，100%）；"And Andy, we'll get into your back[ground]"（[00:05:02] 块） |
+
 ## 概要
 
 本库此前的 AI 落地材料几乎全在讲**产品与部署**——[Decagon](20260731-a16z-decagon-enterprise-ai-apps.md) 讲护城河、[Retell AI](20260809-uncle-moon-todd-li-retell-ai.md) 讲最后一公里、[Kavak](20260810-a16z-kavak-agentic-company.md) 讲买方怎么拆自己的组织。**这一期讲的是这些产品怎么被卖出去**，是本库第一份**企业 AI go-to-market 打法**的系统材料，而且提供方是一位有两轮完整周期经验的销售组织建设者（Meraki、Samsara）。

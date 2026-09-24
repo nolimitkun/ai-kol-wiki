@@ -9,6 +9,13 @@
 
 > 本库第一份来自 **World Labs** 一线的表达，也是"世界模型"路线里最偏**工程可交付**的一份：不做机器人本体、不做机器人大脑，做**机器人学习和评测所在的那个世界**。最值得记的一条是 Yunzhu Li 对**机器人评测**的论证——评测在机器人领域被系统性低估，而它才是真正卡住迭代速度的东西。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260728--tabaM5l3s0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_00 | 35.8% | **Fei-Fei Li** | 主持请她"give an overview of what World Labs does"后由此标签作答（[00:01:01] 块，之后 100%）；"As you know, Martin, we're building a base m[odel]"（[00:10:08] 块，90%） |
+> | SPEAKER_02 | 45.2% | **Yunzhu Li** | "So, I'm Yunzhu. I'm currently co-fo[under]…"之后由此标签作答（[00:03:03] 块，71%）；"in partner together with World Labs"（[00:35:28]，100%）——以合作方而非 World Labs 自己人的口吻 |
+> | SPEAKER_01 | 19.0% | **Martin Casado（主持）** | 排除法；两位嘉宾都以"Martin, …"向此方发言（[00:10:08]、[00:34:27] 块） |
+
 ## 概要
 
 World Labs 成立两年，Fei-Fei Li 强调"**应该直接承认它就是一家前沿模型实验室**"，目标是**空间智能（spatial intelligence）**：让 AI 能生成、理解、推理并**在空间中行动**——物理的或虚拟的皆可；通向它的手段是**大世界模型**（[00:01:01]）。其已公开发布的基座模型代号 **Marble**：输入一张图、几张图或一段文字，输出一个**几何一致**的三维世界（高斯泼溅或 mesh 表示）（[00:06:06]）。

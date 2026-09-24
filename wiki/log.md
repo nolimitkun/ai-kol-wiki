@@ -1014,3 +1014,14 @@ Baseten："like Ali said that's noise"）。
 Gray Swan、Databricks 两期分离只给出一个主持标签，是否两位都在场也无法确定。
 
 一处容易弄反的：`swyx-agent-labs` 那期 **swyx 是嘉宾**，主持是 Matthew Berman。
+
+## 2026-09-24 — 视频页补说话人映射（五）：a16z 13 期
+
+a16z 主持多、常不播报姓名，本批大量依赖**互相第三人称提及**做排除（Lassie 四人全靠这个定下来）。
+
+**核实了一个页头断言**：Travis Kalanick 那期页头写"与 Ben Horowitz 同台"。鉴于 [Greg Brockman 那期]
+的 Ben Horowitz 认定此前被撤回过，这次专门查了：节目内无人直呼其名，但 SPEAKER_02 以 a16z 创始人口吻说
+"when we started the firm"、以投资方口吻谈尽调（"when we looked at it"，100%）——**支持**页头，记为"较可信（推定）"。
+
+Kavak 那期页头提到的 "Gabe"：说出"as Gabe said"的是 SPEAKER_00，所以它不是 Gabe；Gabe 较可能是开场主持，标为推定。
+Applied Intuition：Qasar 靠"I went to the General Motors Institute"定下；Peter Ludwig 只有排除法 + 内容，已注明无点名佐证。

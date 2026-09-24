@@ -4,6 +4,11 @@
 - **嘉宾**：[Benedict Evans](../people/a16z.md)（前 a16z 合伙人，独立科技分析师，年度演示 *AI Eats the World* 作者）
 - **转录稿**：[sources](../../sources/a16z/20260608-ktl8mNiWqMM/transcript.md)（en-orig 自动字幕）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/a16z/20260608-ktl8mNiWqMM/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Benedict Evans（嘉宾，91.9%）**、**SPEAKER_00 = 主持（8.0%）**。
+> 依据：SPEAKER_00 念开场"Benedict. Welcome back to the a16z podcast"（[00:00:00]）；本期基本是 Evans 独白式长答（最长一轮 379 秒）。
+> 主持姓名页头未记、节目内未自报。
+
 ## 概要
 
 Evans 以其一贯的"历史类比 + 拒绝预测"风格，系统论证一条核心命题：**基础模型很可能沦为商品（commodity），价值会向上游（应用/工作流层）转移**。他反复用移动数据（cellular data）产业作镜子——技术宏大、投资巨量、改变所有人的生活，却几乎没赚到钱，因为价值都被上层拿走了。这为本库补上了**商业化 / 价值捕获**这一此前空缺的视角，且与 [Imas & Trammell](20260604-dwarkesh-imas-trammell.md) 的"AI 是电力还是社交媒体"经济学问题直接互补。
