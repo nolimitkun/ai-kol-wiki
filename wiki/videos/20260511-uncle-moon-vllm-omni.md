@@ -5,6 +5,19 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=SK1HUqXDBp0) · 69 分钟（无字幕→RTX 5090 faster-whisper large-v3-turbo 转录）
 - **转录稿**: [sources/uncle-moon/20260511-SK1HUqXDBp0](../../sources/uncle-moon/20260511-SK1HUqXDBp0/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/uncle-moon/20260511-SK1HUqXDBp0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 多人直播（团队三人 + 主持 + 念观众提问），8 个标签里 5 个有实质时长：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 41.0% | **志鹏** | 回答了全部 diffusion 相关提问；[00:45:15] 块内（100%）自述"我主要会讲一些这种分布式的部署 然后针对diffusion模型的一些特性"，与页头"志鹏（DiT/diffusion）"一致 |
+> | SPEAKER_06 | 32.9% | **林月谦** | [00:15:14] 块内"我是林月谦 然后也是VM Omni的这个committer"；[00:33:47] 块内（100%）"我是TTS方面的这个负责的这个同学" |
+> | SPEAKER_03 | 19.2% | **Roger**（较可信） | 00:00:00–00:07:44 一整轮 7 分 44 秒的项目开场，其中把月谦、志鹏介绍为"我们这边"的人；随后有人"问一下 Roger"，此标签作答"其实我可以说一下当时那个原因"（[00:12:08]，77%） |
+> | SPEAKER_07 | 3.2% | **念观众提问的主持方** | 00:38–00:45 反复"下一个问题是……"；节目内未自报，推定为月球大叔，**未确认** |
+> | SPEAKER_01 | 2.8% | 提问者，未能确认 | "问一下 Roger"一问出自此标签（[00:10:07]） |
+>
+> SPEAKER_00/04/05 各 10–13 秒，为碎片，判为伪影。
+
 ## 概要
 
 「与 vLLM 团队畅聊多模态（上）」。**vLLM Omni** 是从 vLLM 主库拆出的独立开源项目，专做**多模态/全模态（omni）模型的推理与 serving**：不仅支持多模态输入（理解），更支持多模态输出（生成，含 TTS/文生图/文生视频）。核心贡献是把 PD（prefill/decode）分离推广成通用的 **stage 抽象**，用一套框架管理 Qwen-Omni、Bagel、混元、小米 MemoAudio、Mistral Voxtro TTS 等 30+ 端到端模型。是本库首个专注"多模态 serving 基建"的中方一线素材。

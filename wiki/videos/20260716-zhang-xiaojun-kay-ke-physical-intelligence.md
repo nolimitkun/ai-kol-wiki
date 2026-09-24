@@ -7,6 +7,10 @@
 
 > PI（做"机器人大脑"的硅谷明星创业公司）一线 RL 研究员的 4 小时长谈，系统梳理**美国机器人的叙事、学术族谱、公司格局与技术路线**——本库首个成体系的美方机器人视角，与中方的 [何小鹏](20260528-zhang-xiaojun-he-xiaopeng-robot.md)（产业操盘手）、[阳萌](20260608-zhang-xiaojun-yangmeng-anker.md)（硬件/端侧）、[Eric Jang](20260515-dwarkesh-eric-jang.md)（RL）构成互补。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260716-dPXZrTw-Hgk/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = 柯丽一鸣（嘉宾，88.5%）**、**SPEAKER_00 = 张小珺（主持，11.5%）**。
+> 依据：SPEAKER_00 在 [00:00:00] 开场自报"哈喽大家好 我是小珺 今天我们的嘉宾……柯丽一鸣"。
+
 ## 概要
 
 从美国机器人 50 年学术史（CMU 传统派 vs 机器学习派）讲到当下公司格局（PI/Skild/Figure/1X/Tesla/Google/NVIDIA 的不同 bet），再到 PI 的三篇主线论文（π0 能力 / π0.5 泛化 / π*0.6 表现）与 RL 的本质（探索、归因、奖励设计）、数据之争（真机 vs 仿真）、评估难题，最后落到中美机器人对照（中国硬件/供应链统治力 vs 美国大脑/研究领先）。

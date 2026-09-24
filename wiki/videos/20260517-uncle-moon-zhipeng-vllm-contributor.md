@@ -7,6 +7,17 @@
 
 > 一期"开源 onboarding 现身说法"：一位**零 AI 基础**的传统软件工程师，靠跟看月球大叔的 vLLM 直播，一年内成长为 [vLLM-Omni](../people/vllm-omni-team.md) 的 committer。既是个人成长叙事，也是一份**多模态推理开源社区的贡献者指南**，落点 [中美 AI](../topics/china-us-ai.md)（中方开源社区的人才涌入）与 [AI 与就业](../topics/ai-and-jobs.md)（AI coding 下"编程在编两样东西"）。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/uncle-moon/20260517-cnFFhnDyIU0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 连麦直播 Q&A：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_04 | 54.6% | **志鹏** | 被问"智鹏老师之前有什么infra经验吗"后，此标签（100%）作答"就是在去年4月份的时候……我是当时完全第一次接触这玩意"（[00:05:13]）；随后自述去找 Roger 做 Bagel 的经历（[00:10:15]、[00:11:15]，均 100%） |
+> | SPEAKER_06 | 9.1% | **念观众提问的主持方** | "第一个问题是……""下一个问题是……""这个可能要请教一下志鹏吧"；节目内未自报，推定为月球大叔，**未确认** |
+> | SPEAKER_05 | 30.4% | **未能确认** | 以第三人称提到 Roger（[00:26:26] 块内"之前Roger强调很多遍"），**所以不是 Roger**；也说"就像志鹏老师说的"，所以不是志鹏。开场由它发问（[00:00:00]），又有大段技术观点（[00:28:32] 块内谈企业 fork 后 rebase 最难）——可能是月球大叔本人，也可能是在场的林月谦，节目内无法区分 |
+>
+> SPEAKER_00–03 各 12–36 秒，为碎片，判为伪影。
+
 ## 概要
 
 直播 Q&A 形式。志鹏复盘自己 2025 年 4 月从"连 vLLM 都没听说过"起步，跟看月球大叔直播 → 改文档 → 抢 issue → 做第一个多模态模型支持（字节 Teres，一个多月、约 1000 行 PR，由莫子峰和 Ceres 逐条 review）→ 做了七八个多模态模型 → 参与 Diffusion Worker/Runner/scheduler/Omni Connector 重构后成为 committer。中间穿插大量**新手贡献建议**（小卡起步、租卡、别碰量化、找"铁巴"用费曼学习法、写好 verifier）与**多模态 serving 技术碎片**（diffusion 蒸馏减步、world model、CFG parallel、layerwise/modelwise、单元 vs 端到端测试、内部 fork 的 rebase 之痛）。

@@ -9,6 +9,11 @@
 
 > ⚠️ 转录说明：whisper 对专有名词有误识，本页已归一化——SGLang（转录作"SG浪/Asceland"）、vLLM（"VRM"）、LMSYS（"Almsys"）、Chatbot Arena / LMArena（"Chairball Arena"，现为约 15 亿美元公司）、Vicuna、NexusFlow、Starling、John Schulman（"张舒曼"）。**SGLang 背后的商业公司**名称在转录中反复含糊（"Redisark/RealisArc/relius arc"等），本页统一记作"SGLang 母公司"，其具体英文名以官方为准。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/uncle-moon/20260518-VoAaX02cHFE/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = 朱邦华（嘉宾，73.0%）**、**SPEAKER_01 = 月球大叔（主持，27.0%）**。
+> 依据：SPEAKER_00 的高纯度块是一手技术细节（[00:32:37] critic 从 reward function 初始化后 loss 从个位数起步）；
+> SPEAKER_01 全程为追问/复述方（[01:06:19]"所以说你的判断标准其实就是资源的丰富与否……对吗"）。未见错配。
+
 ## 概要
 
 覆盖：SGLang 母公司在做什么（把 frontier lab 级 AI Infra 民主化）、RLHF vs RLVR 科普、Chatbot Arena / LMSYS / Vicuna 起源史、PPO 调参的工程暗坑、强化学习环境（RL environments）为何成为新瓶颈、中美 Infra 与开源/闭源模型差距、DeepSeek V4 的架构创新与 SGLang 优化、Thinking Machines 交互模型、被 NVIDIA 收购前后、"卡养人"、持续学习拐点、以及给年轻人的"勇于放弃"建议。

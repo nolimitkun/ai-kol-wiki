@@ -9,6 +9,11 @@
 
 > ⚠️ 转录说明：whisper 对英文术语/专有名词误识极多，本页已归一化——**OpenClaw**（转录作"OpenCloud/OpenCore/open call"等）、Claude Code（"Cloud Code/Clark Code/Qi-code"）、Claude Opus 4.6（"Cloud 4.6 Ops/靠 4.6/OPPA4.6"）、Claude Sonnet（"Sunnet/Sunlight"）、**MemoVR**（小米模型家族 Flash/Pro/Omni/TTS，转录作"Memo VR/Vimoveal/MIMO/Mirror VR"）、MLA（"MIA/MMA"）、MTP（Multi-Token Prediction）、hybrid attention / sliding window（"hybrid tension/弗尔腾讯/塞林温德"）、DeepSeek V2/V3（"Deep Seeker/Deepsig"）、Qwen（"Q1"）、LLaMA（"NAMA/LAMA"）、o1/R1（"O1/R1/OER1"）、梁文锋（"梁志青城"）、RVQ、browsecomp/swebench（"Broscomps/思维Bench"）。几处含糊：模型架构的效率设计目标（转录反复作"non-conference/non-connected"，本页记作"面向长上下文/推理效率的高效架构目标"，原词以官方为准）；"ET 模型 / 一体"指 **1T（万亿）参数量级**；"CoreganMath"疑为某数学 reasoning 项目/基准，保留原样。她口中"非常有战略眼光的老板/天使投资人"指小米创始人（雷军），本页按其原话记作"老板"。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260424-vG1RBqn1sG4/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = 罗福莉（嘉宾，88.5%）**、**SPEAKER_01 = 张小珺（主持，11.1%）**。
+> 依据：SPEAKER_01 在 [00:00:00] 开场自报"大家好,我是小俊……我访谈了人工智能研究员罗福利"。
+> SPEAKER_00（55 秒，88 段，最长 21 秒）为散落碎片，判为伪影。
+
 ## 概要
 
 覆盖：春节期间被 OpenClaw 点燃的三天经历、"智能体框架 = 人与模型之间的中间层"、群体智能与自学习、后训练范式从 Chat 前移到 Agent、卡的分配比例（研究:预训练:后训练 = 3:1:1）、组织平权（百人团队无组、无层级、热爱驱动、环境比经验更重要）、MemoVR 家族（Flash/Pro/Omni/TTS）的架构决策（hybrid attention 取代 MLA、MTP、1T 参数入场券、全模态离散化）、定价逻辑从成本转向价值、开源加速 AGI、2022–2026 大模型发展史复盘（LLaMA/Qwen/DeepSeek/o1-R1）、中美差距、以及 AGI 时间表（两年内）。

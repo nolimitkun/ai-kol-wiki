@@ -9,6 +9,11 @@
 
 > ⚠️ 转录说明：本页已归一化专有名词——KV Cache（转录作"cdcatch/KB cache"）、LMCache、CacheBlend/CacheGen、TensorMesh（"Tencent Mesh"）、vLLM、SGLang、Ion Stoica（"一样"）、Hui Zhang / 张辉、刘斌、姚期智。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/uncle-moon/20260609-yWTVEG9UIHo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = 江鋆晨（嘉宾，81.5%）**、**SPEAKER_00 = 月球大叔（主持，18.5%）**。
+> 依据：SPEAKER_01 的高纯度块是嘉宾本人的判断与建议（[02:19:04] 对读 PhD、当老师的建议）；
+> SPEAKER_00 为回应/追问方（[01:02:10]"哎呦这个我之前其实 我是真没这样想过"）。未见错配。
+
 ## 概要
 
 覆盖：存储涨价与 KV Cache 的关系、清华姚班与 CMU 求学、导师 Hui Zhang 与 Ion Stoica、"工业界染缸"论、做教授 = 提出问题而非解决问题、"高阶 CS 课就是历史课"、视频流媒体研究与 CDN、KV Cache = 大模型的记忆 = 给大模型看的视频、LMCache 如何从"太超前"变成开源事实标准、TensorMesh 公司与 slogan、prefill vs decode 的算力误区、OpenAI API 兼容格式 = AI 时代的 IPv4、硬件"IBM 化" vs disaggregation、以及给不同年龄段的职业建议。

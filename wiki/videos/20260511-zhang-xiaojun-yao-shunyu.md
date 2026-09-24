@@ -7,6 +7,10 @@
 
 > 中方长视频里罕见的、由一线前沿模型研究员给出的技术+组织双重内部视角。姚顺宇学理论物理出身，先后在 Anthropic（做大规模 RL、参与 Claude 3.7）和 Gemini（ML coding、long horizon）训模型，因此本期是**中美三大实验室（Anthropic / OpenAI / Google DeepMind）横向对照**的第一手材料。本库据此把 [中美 AI 生态对照](../topics/china-us-ai.md) 与 [AI 实验室文化与组织](../topics/ai-lab-culture.md) 两个主题大幅补全。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260511-ttkd0t5qTD4/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = 姚顺宇（嘉宾，83.9%）**、**SPEAKER_00 = 张小珺（主持，16.1%）**。
+> 依据：SPEAKER_00 在 [00:00:09] 开场自报"大家好 我是小珺 今天我们的嘉宾是……姚顺宇"。两人轮次分明，未见错配。
+
 ## 概要
 
 覆盖当前 AI 阶段判断、模型同质化与差异化、预训练 Scaling Law 是否到头、coding 为何最快、程序员命运、中美模型差距与蒸馏、字节/豆包、机器人、三大实验室的组织文化对照、TPU vs GPU、个人成长（物理→AI）、以及"个人英雄主义已过去"的世界观。

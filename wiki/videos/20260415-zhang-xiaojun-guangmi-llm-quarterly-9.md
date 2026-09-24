@@ -9,6 +9,13 @@
 
 > ⚠️ 转录说明：whisper 对英文专有名词误识较多，本页已归一化——Anthropic（转录作"Answerp/Anthorpey"）、OpenAI（"OpenEye/OPANI/OpenApp/openire"）、Gemini（"Gemina/Gemney"）、Claude Code / Codex / Cursor / Manus、Jared Kaplan（"Jerry 的 Kaplan"）、Dario、多模态（"多莫泰"）、预训练（"于训练"）、reasoning model（"residing/Resident Model"）、SWE 软件工程（"Suite"）、Magnificent 7（"MAG7/mac7"）、硅谷（"灰谷/微谷"）。两处"Mizos/Misos 跟 Spar 的"疑为 Anthropic / OpenAI 即将发布的下一代模型代号，转录含糊，本页记作"两家即将发布的新模型"，具体以官方为准。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/zhang-xiaojun/20260415-u1Lzp-7Ybn8/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_03 = 广密（嘉宾，84.7%）**、**SPEAKER_02 = 张小珺（主持，13.8%）**。
+> 依据：SPEAKER_02 在 [00:02:03] 说"过去三年呢 我和广密一直在用季报的形式……"，并在后段负责提问。
+> **SPEAKER_01 也是张小珺**——它只有一段 48 秒的连续轮次（00:00:06–00:00:53），正是片头旁白
+> "大家好,我是小俊 今天给大家带来的是全球大模型季报的第九集"（[00:00:00]）。旁白单独录制、声学条件不同，
+> 被分成了另一标签，**不是第三个人**。SPEAKER_00（23 秒，13 段）为秒级碎片，判为伪影。
+
 ## 概要
 
 覆盖：过去一季度最关键转折（Anthropic Opus 4.5→4.6）、Coding 为何是 AGI 主线加速器、AR 爆发与"追求 token usage 而非 DAU"、两条 AGI 路线（C 端流量 vs 高价值任务）、硅谷御三家（Anthropic / OpenAI / Google）战略—组织—文化逐一点评、挑战者（META TBD、XAI）、Cursor 等"壳公司"的窗口、模型即新一代操作系统、Harness Engineering、国内玉三家（Kimi / Minimax / 智谱 / 豆包）、白领通缩与失业窗口、以及投资终局判断。

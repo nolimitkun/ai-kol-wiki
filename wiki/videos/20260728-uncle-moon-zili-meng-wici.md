@@ -9,6 +9,11 @@
 
 > 本库第一份**"网络系统"视角的 AI infra 素材**——此前的中方 infra 主来源（[朱邦华/SGLang](../people/banghua-zhu.md)、[江鋆晨/LMCache](../people/junchen-jiang.md)、[游凯超/vLLM](../people/you-kaichao.md)）讲的都是数据中心里的推理引擎，这期讲的是**把 GPU 从设备里搬出去、用 Wi-Fi 当 PCIe 用**。两条最值得记的：**WiCi 实际上是在重新定义一种"CPU 与 GPU 之间是弱链路"的计算机体系结构**；以及**为什么非文本本地数据会成为端侧算力的下一个需求来源**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/uncle-moon/20260728-c-MnSFGTSN8/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = 孟子立（嘉宾，70.6%）**、**SPEAKER_00 = 月球大叔（主持，29.4%）**。
+> 依据：SPEAKER_01 的高纯度块是嘉宾一手经历（[00:42:20] 向 SIGCOMM 提案不再投论文；[01:12:35] WiCi 用 ODM 不自造硬件）；
+> SPEAKER_00 为复述/点评方（[00:23:11]"You compared the options and realized that staying at Tsinghua…"）。
+
 ## 核心观点
 
 ### WiCi：把 PCIe 换成 Wi-Fi
