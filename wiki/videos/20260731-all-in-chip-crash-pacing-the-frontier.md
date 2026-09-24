@@ -16,6 +16,18 @@
 >
 > ⚠️ **利益相关极重**：Sacks 曾任政府 AI 相关职务；Chamath 经营 8090（卖企业开源落地）；Jason 经营 Founder University 并自陈其组合公司大量用开源。本页按"X 认为"记录。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260731-ViqYWhLimGg/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_06 | 32.5% | **Jason Calacanis** | 开场"All right, everybody. Welcome back to the number one podcast…"（[00:00:00]，100%）；"All right, Freeberg. The Sultan of Science…"（[01:24:02] 块，100%） |
+> | SPEAKER_04 | 31.7% | **David Friedberg** | 上一句点名后由此标签接话；人物页 Friedberg 的引用 9 条落在此标签（其余为 Jason 插话的混合块） |
+> | SPEAKER_02 | 22.9% | **David Sacks** | "Pacing the Frontier 联署信五条动机"一段的收尾块（[00:41:35]，71%） |
+> | SPEAKER_05 | 11.2% | **Chamath Palihapitiya** | "running 8090 when I see our engi[neers]"（[00:45:38] 块，72%）；"安全漏洞是人写代码的暂时性人工制品"（[00:47:39]，94%） |
+>
+> SPEAKER_00/01/03 合计约 2 分钟，为碎片。本期有 7 个标签，但实际是四人。
+>
+> 本期 [All-In 主播团页](../people/all-in-hosts.md) 里按人归属的引用，按锚点定位后与上表标签**逐条一致（0 冲突）**。
+
 ## 核心观点
 
 ### 一、爆仓：Leopold Aschenbrenner 的 200 亿基金被强平

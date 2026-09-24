@@ -5,6 +5,19 @@
 - **转录稿**: [sources/all-in/20260729-TqNiSTeNtb0](../../sources/all-in/20260729-TqNiSTeNtb0/transcript.md)
 - **结构**: 四场独立访谈串烧，无主播合议段。分段见下。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260729-TqNiSTeNtb0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 本页"说话人与姓名校正"一节原写"转录稿没有 SPEAKER 标签，归属按内容判断"——现已补做分离，按该节的时间段表逐段核对：
+>
+> | 标签 | 占比 | 认定 | 依据：该段内的占比 |
+> |---|---|---|---|
+> | SPEAKER_03 | 44.9% | **Jason Calacanis** | 四段中各占 31–49%，是唯一贯穿全场的标签 |
+> | SPEAKER_04 | 10.6% | **Péter Fankhauser（ANYbotics）** | [00:01:00]–[00:14:12] 段内 51% |
+> | SPEAKER_02 | 18.1% | **Bernt Børnich（1X）** | [00:14:12]–[00:32:23] 段内 66% |
+> | SPEAKER_00 | 9.3% | **Amanda McMaster（Boston Dynamics）** | [00:33:23]–[00:46:30] 段内 46% |
+> | SPEAKER_01 | 17.1% | **Jonathan Hurst（Agility）** | [00:46:30]–[01:07:43] 段内 53% |
+>
+> 四段之间标签互不串场（每段非 Jason 的第二标签占比 ≤3%），印证该节"误配风险低"的判断。
+
 ## 说话人与姓名校正
 
 转录稿**只有 `>>` 换人标记，没有 SPEAKER 标签**，归属按内容判断（四场之间边界清晰，每场只有 Jason + 一位嘉宾，误配风险低）。

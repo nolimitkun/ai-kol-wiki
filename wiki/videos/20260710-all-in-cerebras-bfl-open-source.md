@@ -7,6 +7,13 @@
 
 > 两段访谈：Cerebras 的 Andrew Feldman 谈 AI 大基建、推理即算力、开源与主权、分阶段发布、递归/loop maxing 与丰饶叙事；Black Forest Labs 的 Robin Rombach 谈 latent diffusion → 多模态 → action prediction → 机器人，以及与 Scorsese 的合作、生成式影视与 IP。Feldman 的另一维度补充见其[人物页](../people/andrew-feldman.md)（已收录 [No Priors 访谈](20260521-no-priors-cerebras-feldman.md)）。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260710-Y7p4rUCdqi0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 43.3% | **Jason Calacanis** | 开场"Andrew Feldman is back"（[00:00:00]，100%）；中场介绍"Robin Rombach is the co-founder and CEO of Black Forest Labs"（[00:40:28] 块，100%） |
+> | SPEAKER_01 | 36.5% | **Andrew Feldman** | "do you have a way Andrew that you think about…"之后由此标签作答（[00:31:23] 块，94%） |
+> | SPEAKER_00 | 20.2% | **Robin Rombach** | "Tell us about the business of Black Forest Labs"之后由此标签作答（[00:40:28] 块，76%）；只出现在后半场 |
+
 ## 核心观点
 
 ### Andrew Feldman / Cerebras：基建、推理与 Moore's law

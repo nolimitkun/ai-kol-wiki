@@ -1,11 +1,25 @@
 # Google 的 AI 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI（All-In，2026-08-08）
 
-- **主播**: [Jason Calacanis](../people/all-in-hosts.md)（主持）、[David Friedberg](../people/all-in-hosts.md)、[David Sacks](../people/all-in-hosts.md)（中途加入）、[Brad Gerstner](../people/all-in-hosts.md)（Altimeter，常客）
+- **主播**: [Jason Calacanis](../people/all-in-hosts.md)（主持）、[David Friedberg](../people/all-in-hosts.md)、[David Sacks](../people/all-in-hosts.md)（开场约 1 分钟迟到入场）、[Brad Gerstner](../people/all-in-hosts.md)（Altimeter，常客）
 - **缺席**: **Chamath Palihapitiya 全程不在**（"在路上"），本期只以表情包形式出现
 - **来源**: [YouTube](https://www.youtube.com/watch?v=muRIXCDw-k0) · 75 分钟（en-orig 自动字幕）
 - **转录稿**: [sources/all-in/20260808-muRIXCDw-k0](../../sources/all-in/20260808-muRIXCDw-k0/transcript.md)
 - **录制日期**：**2026-08-06**（Jason 开场自报"今天是 8 月 6 日"），发布 2026-08-08
 - **广告 / 非内容段**（引用时跳过）: [00:00:00]–[00:02:00]（寒暄与表情包）、[00:45:24]–[00:47:25]（All-In Summit）、[01:13:40]–[01:14:42]（片尾）
+
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260808-muRIXCDw-k0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 页头说"两个 David 是本期最大的归属风险"——分离可以把两人分开：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_05 | 29.7% | **Jason Calacanis** | 开场"All right, everybody. Welcome back to your favorite podcast"（[00:00:00]，100%） |
+> | SPEAKER_03 | 14.5% | **David Friedberg** | Jason 以"Freeberg, this is your alma mater. What are your thoughts here?"结束一轮（[00:03:00] 块）后，00:03:42–00:05:10 由此标签作答 |
+> | SPEAKER_01 | 30.7% | **David Sacks** | 开场约 1 分钟时迟到入场（"Oh, there he is. He made it. >> Hey guys"，[00:01:00] 块，00:01:02 起为此标签）；"So Sax, your thoughts here"（[00:09:03] 块）后 00:09:54–00:12:31 由此标签作答 |
+> | SPEAKER_04 | 23.9% | **Brad Gerstner** | "Brad what's your take on this"（[00:07:02] 块）后由此标签作答（100%） |
+> | SPEAKER_02 | 0.9% | **片头/片尾曲** | 只出现在前 10 分钟与 70–80 分钟，恰为主题曲歌词（"Rainman David… let your winners ride"） |
+>
+> ⚠️ 两处更正页头：①Sacks 不是"中途加入"，是**开场约 1 分钟迟到**；②本页各节按人归属的引用，按锚点逐条核对后**未发现两个 David 互相错记**。
+> SPEAKER_00（9 秒）为碎片。
 
 ## 说话人与专名校正
 

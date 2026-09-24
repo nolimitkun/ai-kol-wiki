@@ -6,6 +6,13 @@
 - **转录稿**: [sources/all-in/20260806-jfxHHglA5Eo](../../sources/all-in/20260806-jfxHHglA5Eo/transcript.md)
 - **广告段**（引用时跳过）: [00:00:00]–[00:01:01]、[00:20:14]–[00:21:14]
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260806-jfxHHglA5Eo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 31.9% | **Jason Calacanis** | "Welcome to the program Dino Mavukus… and your co-founder here Vib"（[00:00:00]，75–82%）；"I got to start there, Dino. Tell us about the mission"（[00:01:01] 块，100%） |
+> | SPEAKER_00 | 49.6% | **Dino Mavrookas（CEO）** | "…and then I'll let Vib go through what we're doing"（[00:05:05] 块，100%） |
+> | SPEAKER_01 | 18.5% | **Vibhav "Vib" Altekar（CTO）** | "to Dino's point"（[00:25:19] 块）、"as Dino mentioned"（[00:30:23] 块，均 100%） |
+
 ## 说话人与专名校正
 
 转录稿**只有 `>>` 换人标记，没有 SPEAKER 标签**。三人对话，归属按自陈线索区分：海豹突击队经历、产能/预算/合同数字、Port Alpha 发布 → **Dino**；供应链、垂直整合、软件栈、招聘 → **Vib**（主持人多次以 "Vib" 点名引出）。少数段落归属不确定处本页写"嘉宾"。

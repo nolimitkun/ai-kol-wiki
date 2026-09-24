@@ -6,6 +6,18 @@
 
 > 本库首个系统性的 **AI 监管制度设计**讨论。Demis Hassabis 提出仿 FINRA 的**行业自律组织（SRO）**，Sacks 给出他愿意接受的**五个条件**——这是本页最有引用价值的部分。另两条线：数据中心的政治阻力（纽约州全美首个禁令）与 **AI 隐私的脆弱性**（xAI 代码库泄露事件）。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260718-9IMwRIei-Xc/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_05 | 23.7% | **Jason Calacanis** | 开场"All right, everybody. Welcome back to the world's greatest…"（[00:00:00]，100%）；多次"Freeberg, your thoughts on…" |
+> | SPEAKER_01 | 31.3% | **David Sacks** | SRO 五条件的陈述块（[00:08:07]，88%；[00:11:12]，100%），与人物页归属一致 |
+> | SPEAKER_03 | 23.8% | **Chamath Palihapitiya** | "what we do for large enterprises at 8090"（[00:45:28] 块，100%） |
+> | SPEAKER_04 | 19.5% | **David Friedberg** | 排除法；Jason 说"David Freeberg is here. How you doing"后接话（[00:01:00] 块） |
+>
+> SPEAKER_02（62 秒）与 SPEAKER_00（45 秒）为碎片。
+>
+> 本期 [All-In 主播团页](../people/all-in-hosts.md) 里按人归属的引用，按锚点定位后与上表标签**逐条一致（0 冲突）**。
+
 ## 概要
 
 **SRO 提案**：Demis Hassabis 撰文呼吁建立美国主导的国际 AI 标准机构，模仿 FINRA（金融业自律组织）——**联邦监督、业界出资、由独立技术专家运行**；前沿实验室在发布前 30 天提交模型；先自愿后强制；按网络安全、国家安全、生物威胁等高风险领域评估；基准每季度更新；必要时该机构可协调放缓开发。公开表态支持的包括 Elon、Sam Altman、Anthropic 的 Jack Clark、Sundar、Satya、Jack Dorsey。

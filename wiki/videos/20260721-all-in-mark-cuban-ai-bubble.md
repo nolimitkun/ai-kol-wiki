@@ -8,6 +8,13 @@
 
 > Cuban 的价值在于他站在**上一场泡沫的幸存者**位置上，给出的判断既不是"没有泡沫"也不是"要崩了"，而是一个更精确的问题：**这次泡沫的损失落在谁头上**。答案是 VC / 基金 / PE，不是散户。配合他在自家风投机构做 AI-first 改造的一手观察（工具跳跃、agent 漂移），这是本库里"从企业落地反推 AI 能力上限"最具体的一份材料。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260721-OY2Sjbjd_VE/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Mark Cuban（嘉宾，60.5%）**、**SPEAKER_01 = Jason Calacanis（主持，39.5%）**。
+> 依据（轮次边界精确）：00:00:00–00:00:13 SPEAKER_01 发问"You and I live through a couple of bubbles… Are you concerned about a bubble?"，
+> 00:00:13–00:00:29 SPEAKER_00 作答"It's not the traditional dot bubble"；00:00:50–00:01:22 的 AppLovin 口播是 SPEAKER_01。
+> 另据 [Mark Cuban 人物页](../people/mark-cuban.md) 的 33 处引用：强主导（≥75%）的块 9 个落在 SPEAKER_00、3 个落在 SPEAKER_01。
+> ⚠️ 片尾"There's your 45 minutes with Mark Cuban"一句按插值落在 SPEAKER_00，但它正处换人边界，插值不可靠，不作依据。
+
 ## 核心观点
 
 ### 这不是 2000 年那种泡沫

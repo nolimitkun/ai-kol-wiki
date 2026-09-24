@@ -7,6 +7,13 @@
 
 > 两段独立访谈。Gelsinger 给出本库迄今最内部视角的 **Intel 衰败复盘**——核心论点是"**技术公司必须由技术人领导**"，并附上一条极具体的地缘警告：**台湾能源储备不足三周**。Osika 则提供了"vibe coding 从原型走到生产"的一线证据，以及一个反直觉的组织观察：**工程不再是瓶颈后，同一问题让两拨人各做一版是好事**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260715--ILKiOU5iAQ/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_00 | 37.4% | **Jason Calacanis** | 贯穿两场；"Thanks so much, Pat… He's the founder of Lovable"（[00:24:16] 块，100%） |
+> | SPEAKER_01 | 34.6% | **Pat Gelsinger** | "I joined when I was 18. I went through puberty at Intel"（[00:01:02] 块，100%）、"I had a project at Intel, Larrabee"（[00:10:07] 块）；只出现在前半场 |
+> | SPEAKER_02 | 28.0% | **Anton Osika（Lovable）** | 只出现在 20 分钟之后，即 Lovable 那场 |
+
 ## 概要
 
 **Pat Gelsinger**：18 岁进 Intel，在 Grove/Moore/Noyce 手下长大。他把衰败归因于**从技术人治理转向财务人治理**——"如果领导者是生意人，他提拔的就是生意人"。回来之前的五六年，Intel 给股东发了 **1000 亿美元**（分红+回购），却十年没建新厂、不买 EUV 光刻机。他复盘了三次错过：Apple 自研芯片、NVIDIA 的 CUDA 软件栈、TSMC 的代工模式。对 AI buildout 他是**长期乐观者**（"这是几十年的建设，不是几年"），但认为**能源容量本身就是防泡沫的上限**。

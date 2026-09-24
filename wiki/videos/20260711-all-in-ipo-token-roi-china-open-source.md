@@ -6,6 +6,20 @@
 
 > 本库迄今关于 **"前沿模型 vs 开源/廉价模型，钱到底流向谁"** 最集中的一次多方辩论。Chamath 持怀疑（ROI 未证、成本翻倍、主权化），Brad Gerstner 与 Sacks 持"前沿仍在扩大领先"（钱包份额反而上升）。双方都拿出了具体数据点，分歧点清晰可证伪，是本页的主要价值。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260711-PHL1j2ti420/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> （本期 Friedberg 休假，开场"Freeberg is on a little vacay"）
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_05 | 34.2% | **Jason Calacanis** | 开场"All right, everybody. Welcome back… bestie Brad is here"（[00:00:00]，100%） |
+> | SPEAKER_02 | 34.5% | **Brad Gerstner** | 其"前沿仍在扩大领先"主论点所在块（[00:27:22]，95%）；谈 Invest America 落地"talking with both the White House and Treasury"（[00:57:47] 块，88%） |
+> | SPEAKER_03 | 11.9% | **Chamath Palihapitiya** | "I sat down with my CTO today"（[00:05:03] 块，83%），即人物页"token 成本每 45 天翻倍"那条 |
+> | SPEAKER_01 | 18.4% | **David Sacks** | 排除法（本期四人） |
+>
+> SPEAKER_04（62 秒）与 SPEAKER_00（35 秒）为碎片，多在片头片尾。
+>
+> 本期 [All-In 主播团页](../people/all-in-hosts.md) 里按人归属的引用，按锚点定位后与上表标签**逐条一致（0 冲突）**。
+
 ## 概要
 
 三条线：**(1) 三大 IPO**（SpaceX 已上市、Anthropic 与 OpenAI 待上市）；**(2) token 支出的 ROI 反噬**是否会到来；**(3) 中国可能限制其顶级模型出海** 与主权 AI 浪潮。

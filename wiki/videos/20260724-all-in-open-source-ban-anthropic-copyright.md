@@ -9,6 +9,18 @@
 >
 > ⚠️ **利益相关极重**：Sacks 曾任政府 AI 相关职务并自陈参与"winning the AI race"报告；Chamath 经营 8090（卖企业开源落地），并在本期直接口播促销。四人在节目中被追问 cap table 时均称"没有直接持仓"。本页按"X 认为"记录。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260724-wcV0SRPFK9s/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_05 | 30.8% | **Jason Calacanis** | 开场"All right, everybody. Welcome back. Episode 282…"（[00:00:00]，100%）；人物页 Jason 的 6 条引用全部落在此标签 |
+> | SPEAKER_02 | 31.1% | **David Sacks** | "反封杀开源的三段论"所在块（[00:04:00]，98%） |
+> | SPEAKER_03 | 19.4% | **David Friedberg** | Jason"Now, Freeberg, you had… three points to make"之后的长段（[00:20:04] 块，79%）；人物页 Friedberg 的引用 6/8 落在此标签 |
+> | SPEAKER_04 | 17.6% | **Chamath Palihapitiya** | Google ROIC 32% 那段问答（[01:09:47] 块，83%）及其后"500 个模型遍地开花"（92%） |
+>
+> SPEAKER_01（101 秒，49 段，多在片尾）与 SPEAKER_00（11 秒）为碎片。
+>
+> 本期 [All-In 主播团页](../people/all-in-hosts.md) 里按人归属的引用，按锚点定位后与上表标签**逐条一致（0 冲突）**。
+
 ## 核心观点
 
 ### 一、事件线：白宫是否会封杀中国开源模型

@@ -7,6 +7,13 @@
 
 > 两段"AI 颠覆万亿美元传统行业"的应用层公司访谈：ElevenLabs（语音，$600M ARR）与 Legora（法律，连续 7 季度 QoQ +50%）。共同母题：**架构而非规模、垂直化、独立于前沿模型（model-agnostic）**，以及一个反复出现的紧张——用前沿模型做产品、而前沿实验室又想吃掉你的生意。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/all-in/20260714-J0bce9WQJ-g/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 40.9% | **Jason Calacanis** | 贯穿两场；收尾 Mati 那场"Let's give it up for Mati from 11 Labs"（[00:30:22] 块） |
+> | SPEAKER_01 | 34.7% | **Mati Staniszewski（ElevenLabs）** | 几乎只出现在前 30 分钟，即 ElevenLabs 那场 |
+> | SPEAKER_00 | 24.4% | **Max（Legora）** | 只出现在 30–55 分钟；"the data that Legora sits on top of…"（[00:40:31] 块，91–100%） |
+
 ## 概要
 
 **ElevenLabs（Mati Staniszewski）**：2022 年起做能"听起来像人"的语音，20 个月到 $100M ARR，如今 $600M、600 人。研究+产品双引擎，小团队按行业（电信/金融/医疗）垂直编队、**每个团队都嵌工程师**。语音 agent 让人反而更愿意打断/更坦诚（催款场景），"whisper 办公室"与踏板（Whisper Flow）改变人机交互。护城河是**架构不是规模** + 千人级音频标注 + 垂直化 + 生态；安全侧做溯源/双层审核/AI 检测；声音 marketplace 已回馈 talent 超 $2200 万，含 James Earl Jones/Darth Vader、Matthew McConaughey、ALS 失声者恢复声音。
