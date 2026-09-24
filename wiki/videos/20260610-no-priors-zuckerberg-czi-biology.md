@@ -7,6 +7,19 @@
 
 > CZI（Chan Zuckerberg Initiative）把 Biohub 定为主要慈善事业、投入 5 亿美元做"虚拟生物学"：用 AI 自底向上（蛋白质→细胞→系统）建生物学世界模型，全部开源。标题梗："本世纪内治愈所有疾病"——十年前诺奖得主当面嘲笑，如今 Zuckerberg 觉得"这个时间表太保守了"。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260610-u8cYwaLzN-k/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 三位嘉宾 + 两位主持，嘉宾之间靠**互相以第三人称提及**排除：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_03 | 33.8% | **Mark Zuckerberg** | 以 CZI 内部口吻谈"prior to Alex leading the effort"（[00:52:48] 块，100%）、"Priscilla was talking about this"（[00:38:37] 块）——是内部人，又不是 Alex、Priscilla |
+> | SPEAKER_01 | 26.4% | **Priscilla Chan** | "our work… that Alex is driving now"（[00:06:08] 块）、"strategy we're driving now and Alex at the helm"（[00:54:49] 块，均 100%）；高纯度块是疾病机制、受体靶点与药物设计（[00:22:25]、[00:33:33]），与其医生背景一致；00:07:39–00:08:26 讲 cellxgene 的来历 |
+> | SPEAKER_04 | 21.7% | **Alex Rives** | 00:08:27 主持问"Alex, you… started at Meta FAIR… What was the pitch from Mark and Priscilla?"（[00:08:11] 块），00:08:43–00:09:45 由此标签作答；"as Priscilla and Mark were saying"（[00:13:13] 块，100%）；高纯度块是蛋白设计与结构预测 SOTA（[00:29:30]） |
+> | SPEAKER_02 | 8.2% | 主持之一 | 开场"Today on No Priors, we're joined by Mark Zuckerberg, Priscilla Chan, and Alex Reeves"（[00:01:05]，100%） |
+> | SPEAKER_00 | 9.9% | 主持之一 | 上述向 Alex 发问的一轮 |
+>
+> 两位主持中谁是 Sarah、谁是 Elad，节目内**无法区分**。
+
 ## 概要
 
 CZI 十年演化史（从资助单细胞测序方法 → Human Cell Atlas → cellxgene → 虚拟生物学）；frontier AI × frontier biology 双前沿必须耦合的方法论；一周前发布的 ESM Fold（11 亿蛋白质折叠、涌现出蛋白质设计能力、mech interp 打开黑箱）；为什么做开源非营利而非创业公司；个体化医疗愿景与临床研究范式变革。

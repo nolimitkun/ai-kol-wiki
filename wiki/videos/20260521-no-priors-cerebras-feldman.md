@@ -5,6 +5,14 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=jeop9wfb9jU) · 31 分钟
 - **转录稿**: [sources/no-priors/20260521-jeop9wfb9jU](../../sources/no-priors/20260521-jeop9wfb9jU/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260521-jeop9wfb9jU/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Andrew Feldman（嘉宾，77.7%）**；SPEAKER_01（11.8%）与 SPEAKER_00（10.5%）是两位主持。
+> 依据：SPEAKER_01 念开场"Today in No Priors, we have Andrew Feldman"与"So, Andrew, thank you…"（[00:00:00]）；
+> SPEAKER_00 念片尾"Find us on Twitter at No Priors Pod"（[00:30:16]，100%）。
+> **Sarah / Elad 各是哪个标签，证据很弱**：唯一线索是 Feldman 在回答 SPEAKER_00 于 00:11:09 的提问时称呼"Sarah"
+> （[00:12:05] 块内"company, Sarah, one of my co-founders…"），故 SPEAKER_00 较可能是 Sarah、SPEAKER_01 是 Elad——**存疑，勿据此引用**。
+> 本期两位主持标签都只有 30 秒以内的短轮次，分离质量一般。
+
 ## 概要
 
 Cerebras 刚上市、市值约 600–630 亿美元。Feldman 复盘晶圆级（wafer-scale）押注的十年孤独期、为何"快"在 2025 前无人关心、G42 主权基金如何帮其跨越 chasm、与 OpenAI 24 天签下 200 亿美元大单、以及"快 AI"会像 Netflix 一样催生全新商业模式。

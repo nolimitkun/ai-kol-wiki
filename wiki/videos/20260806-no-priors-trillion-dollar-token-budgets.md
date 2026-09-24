@@ -10,6 +10,11 @@
 >
 > ⚠️ 两处**疑似转录错误**已标注但不做认定：[00:07:02] 的 `that aren't like in France` 在上下文（后接"也许是供应链、能源类技术"）里**很可能是 "inference"**；[00:03:02] 的 `Cambridge explosion` 应为 **Cambrian explosion（寒武纪大爆发）**。另 [00:19:11] 的 `igopoly`、[00:20:11] 的 `alleg market` 均为 **oligopoly**；[00:34:16] 的 `Jansen from Jansen Pharmaceuticals` 指 **Janssen（保罗·扬森）**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260806-6l8oAO_LBx4/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Sarah Guo（34.5%）**、**SPEAKER_01 = Elad Gil（65.5%）**——双主播自谈，无嘉宾。
+> 依据：SPEAKER_00 念开场"Hi listeners, welcome back to No Priors. Today is…"（[00:00:00]，86%），与页头"Sarah 在开场明说"一致；
+> SPEAKER_00 在 [00:28:12] 块内向对方发问"Can I ask you a very different question…"，本期以 Elad 陈述、Sarah 追问为主。
+
 ## 概要
 
 一期没有嘉宾、密度却很高的对谈。它的价值不在任何单一论点，而在于**两位投资人把 2026 年夏天几条互相牵扯的线放在一张桌子上**：万亿美元公司的数量上限 → 创始人该不该卖 → 实验室内部"18 个月后码农被取代"的信念 → 该信念的二阶效应（燃尽、婚姻、职业选择）→ 算力稀缺把研究员变成幂律 → **token 预算的 ROI** → 加州财富税与生态外迁 → 安全监管的单边化与监管俘获。

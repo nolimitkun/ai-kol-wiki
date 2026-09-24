@@ -5,6 +5,10 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=AZrU6y3pUcU) · 36 分钟
 - **转录稿**: [sources/no-priors/20260626-AZrU6y3pUcU](../../sources/no-priors/20260626-AZrU6y3pUcU/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260626-AZrU6y3pUcU/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Noam Brown（嘉宾，76.2%）**、**SPEAKER_00 = Sarah Guo（主持，23.8%）**。
+> 依据：SPEAKER_00 开场自报"Hi listeners, I'm Sarah Goa and welcome back to No Priors"（[00:00:00]，100%）。
+
 ## 概要
 
 围绕 Noam Brown 新写的一篇文章展开：test-time（推理时）compute 大规模化后，现有 benchmark 评估方式、安全评估框架、以及对递归自我改进（RSI）的判断都需要重估。

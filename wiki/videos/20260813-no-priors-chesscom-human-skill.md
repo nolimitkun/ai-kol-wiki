@@ -19,6 +19,10 @@
 > | `Tanzine`（[00:16:17]，General Atlantic 一方的人名） | ⚠️ **拼写未核实，本库不做认定** |
 > | CTO `Josh`（[00:40:33]） | 只出现名、未播报姓氏，⚠️ 本库不做认定 |
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260813-hplb9IHWuw0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Erik Allebest（嘉宾，79.1%）**、**SPEAKER_00 = Sarah Guo（主持，20.9%）**。
+> 依据：SPEAKER_00 念开场"Hi listeners, welcome back to No Priors. Today I'm here with Eric Alabest…"与"Welcome, Eric"（[00:01:05]），本期只有 Sarah。
+
 ## 概要
 
 ⚠️ **先说本页为什么值得收录，因为它表面上不是一期 AI 访谈。**

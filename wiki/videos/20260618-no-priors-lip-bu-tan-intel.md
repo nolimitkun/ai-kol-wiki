@@ -5,6 +5,11 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=asCgCv2XB4s) · 45 分钟
 - **转录稿**: [sources/no-priors/20260618-asCgCv2XB4s](../../sources/no-priors/20260618-asCgCv2XB4s/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260618-asCgCv2XB4s/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Lip-Bu Tan（嘉宾，75.9%）**、**SPEAKER_00 = Sarah Guo（主持，14.0%）**、**SPEAKER_01 = Elad Gil（主持，10.1%）**。
+> 依据：SPEAKER_00 念开场"Hi listeners, welcome back to No Priors. Today [Elad] and I are…"（[00:01:00]，100%，转录作"Today a lot and I"）——
+> 说"Elad and I"的只能是 Sarah，另一主持标签即 Elad。
+
 ## 概要
 
 66 岁的 Lip-Bu Tan 就任 Intel CEO 14 个月后的复盘：如何"救 Intel"、美国政府成为大股东、Jensen Huang / SoftBank 注资强化资产负债表、代工（foundry）该不该继续、与马斯克 Terafab 合作、以及作为半导体投资人如何看 AI 驱动的全球供应链重构。核心叙事是"crawl → walk → run"的分阶段改造，把 Intel 从"老旧的电子表格公司"变成 AI 原生公司。

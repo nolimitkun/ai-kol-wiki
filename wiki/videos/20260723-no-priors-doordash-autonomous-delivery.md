@@ -7,6 +7,13 @@
 
 > 本库第一份从**大规模实体商业网络内部**看 AI 落地的一手材料。DoorDash 一年做 30 多亿单配送、9 百万 Dasher、40 多个国家，两位创始人给出三条主线：① **agentic commerce**（Ask DoorDash）如何真实改变消费行为；② **DoorDash Dot**——一台自研的、介于人行道机器人与 robotaxi 之间的自动配送车，以及"**做自动化的生意需要的远不止自动化**"的规模化教训；③ 公司内部的 **AI enablement**（Metis 收购、Dashbench、支出 20 倍暴涨后被压平、开放权重模型路由）。这为本库此前多处只是"提到 DoorDash"（[Dashbench 路由](../topics/evaluation-and-benchmarks.md)、[token 治理](../topics/using-llms-in-practice.md)、[Applied Intuition"那些人去跑 DoorDash 了"](20260721-a16z-applied-intuition-physical-ai.md)）补上了当事人自述。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260723-vNpcg_Ma-FA/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_01 | 54.0% | **Stanley Tang** | 主持问"Stanley, you guys are doing…"（[00:06:09] 块）后由此标签讲机器人项目的起源（[00:07:10] 块，100%）；同块又说"like Andy said"，所以不是 Andy |
+> | SPEAKER_02 | 27.8% | **Andy Fang** | "you know Stanley and I talk about this all the time"（[00:04:08] 块，100%）；高纯度块是 agentic 下单与 Tasks 产品（[00:20:16]、[00:47:30]），与其 AI/agentic commerce 分工一致 |
+> | SPEAKER_00 | 18.2% | **Sarah Guo（主持）** | 开场"Hi listeners, welcome back to No Priors. Today I'm here with Andy Fang and Stanley Ting"（[00:00:05]，100%） |
+
 ## 概要
 
 DoorDash 把自己看成一个**本地商业的操作系统 / 生态**，而不只是外卖网络。两位创始人反复强调同一个方法论——**一切都从实验开始、从用例往回倒推**（这也是 2013 年 paloalto.com 八份 PDF 菜单 + 一个 Google Voice 号码起家的故事）：先搞清楚要解决的客户问题，再倒推该建什么技术，而不是"先把技术造出来再找问题"。这条方法论既解释了 Ask DoorDash，也解释了他们为什么最终决定自研 Dot。

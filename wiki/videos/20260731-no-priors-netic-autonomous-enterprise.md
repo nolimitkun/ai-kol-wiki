@@ -11,6 +11,11 @@
 >
 > ⚠️ **利益相关**：主问者自陈是 Netic 投资人。本页按"X 认为"记录，公司自报数字（70%、6 亿美元）均无第三方来源。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260731-wWbX3NL6_Uo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Melisa Tokmak（嘉宾，81.5%）**、**SPEAKER_00 = Elad Gil（主持，16.9%）**。
+> 依据：SPEAKER_00 念开场"Today in No Priors we're joined by Melissa…"与"Welcome to No Priors, Melissa"（[00:00:05]，100%），
+> 与页头"本期由 Elad Gil 主问"一致。SPEAKER_01（33 秒）为碎片。
+
 ## 概要
 
 Netic 做的是"**运转着这个世界的数百万实体生意**"的 AI：它**坐在企业与它的终端客户之间**，从理解客户需求、匹配业务运营规则、一直到调度服务与劳动力，全部在 Netic 上发生（[00:00:05]–[00:01:05]）。目标客户不是小店，而是**年收入十亿美元级别的家庭服务/健康/酒店/汽车/宠物企业**，其中很多由私募股权持有。

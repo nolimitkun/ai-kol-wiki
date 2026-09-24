@@ -986,3 +986,16 @@ Lex 与 Dwarkesh 都有固定开场句（"The following is a conversation with�
 这正是补分离的价值所在：原先认人靠"这页是 Eric 的访谈"，内容本身读不出是谁在白板上讲。
 
 顺带核实：`people/dwarkesh-patel` 里"他自己在 RSI 上的立场"一节所引的 [02:11:19]，该块 97% 为主持标签，归属无误。
+
+## 2026-09-24 — 视频页补说话人映射（三）：No Priors 9 期
+
+主持靠开场句认：Sarah 有自报（"I'm Sarah Goa and welcome back"）或"Today Elad and I are…"；单主持期直接对上。
+多嘉宾期靠**互相以第三人称提及**排除——CZI 那期三位嘉宾：说"prior to Alex leading the effort"又说
+"Priscilla was talking about this"的只能是 Zuckerberg；说"that Alex is driving now"的是 Priscilla；
+被主持点名"Alex, you… started at Meta FAIR"后作答、又说"as Priscilla and Mark were saying"的是 Alex。
+
+**如实记下认不出的**：CZI 那期两位主持、Feldman 那期两位主持，Sarah/Elad 对应哪个标签节目内无法确定
+（Feldman 那期只有一处弱线索，已标"存疑，勿据此引用"）。
+
+流程上的一次拦截：CZI 映射初稿引用了点名工具的**插值时刻**（≈00:53:01 等）当作锚点，
+写盘前的锚点校验拒绝了它，页面未被写入。已改用真实块锚点，并让工具同时打印所在块锚点，避免再混淆。

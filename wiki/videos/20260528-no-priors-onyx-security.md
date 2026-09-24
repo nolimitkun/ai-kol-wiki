@@ -7,6 +7,10 @@
 
 > 一家以色列安全创业公司做"**AI 看管 AI**"：用小而专的模型监督自主 agent 的动作，判断哪些动作可疑到需要更强的 agent 介入。本库首个"agent 安全/治理"公司视角，与 [Gray Swan](../people/gray-swan-founders.md)（对抗鲁棒性）、[Databricks](../people/databricks-founders.md)（有状态安全策略）互补，落点 [LLM 安全](../topics/llm-security.md)。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/no-priors/20260528-QDsbFLEt9ro/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Maxim Bar Kogan（嘉宾，79.8%）**、**SPEAKER_00 = Elad Gil（主持，20.2%）**。
+> 依据：SPEAKER_00 念开场"Hi listeners, welcome back to No Priors. Today I'm here with…"与"Welcome, Maxim"（[00:00:00]、[00:01:00]）；本期只有 Elad 一位主持。
+
 ## 概要
 
 Maxim 把赌注押在 **agent 动作（agent actions）** 而非"员工往 ChatGPT 里粘什么"（两年前的 DLP 叙事）。转折点是 AutoGPT 让人看到"模型够强时能做任何人在电脑上能做的事"；如今 Claude Code / co-working / openclaw 这类**很不受限的自主 agent**真的被大企业采用（>50% 的企业 agent 是自主编码 agent，且增长最快），却几乎不带任何控制。Onyx 的两件事：训练能监督其他 agent 的模型 + 产品化为"secure control plane"。关键工程约束是成本/延迟/可靠性——不能给每个 agent 都配一个同等聪明的 agent 看着。
