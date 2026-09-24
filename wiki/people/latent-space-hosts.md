@@ -34,6 +34,15 @@
 | 2026-07-28 | [OpenAI 把 ChatGPT 做成"万物应用"](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md) | [Akshay Nathan](akshay-nathan.md)（OpenAI 核心产品工程） |
 | 2026-08-03 | [推理是新的训练：推理工程全景](../videos/20260803-latent-space-baseten-inference-engineering.md) | [Philip Kiely & Ali Taha](baseten-team.md)（Baseten） |
 | 2026-08-11 | [生物学正在变成软件：蛋白质设计的"中性软件工厂"](../videos/20260811-latent-space-chai-discovery-protein-design.md) | [Matt McPartlon & Neil Patil](chai-discovery.md)（Chai Discovery）⚠️ **"AI for science" 子系列，非 swyx / Alessio 主持** |
+| 2026-08-26 | [物理一出现 Transformer 就撞墙：神经算子与 FourCastNet](../videos/20260826-latent-space-anandkumar-neural-operators.md) | [Anima Anandkumar](anima-anandkumar.md)（Caltech）⚠️ **"AI for science" 子系列** |
+| 2026-09-02 | [推理前沿：从 100 到 10000 tokens/秒](../videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md) | [Sean Lie](sean-lie.md)（Cerebras CTO，录于 Hot Chips 次日） |
+| 2026-09-18 | [从 302 个神经元的线虫到硬件感知架构搜索](../videos/20260918-latent-space-liquid-ai-ramin-hasani.md) | [Ramin Hasani](ramin-hasani.md)（Liquid AI CEO；swyx + 新任 head of editorial Richard） |
+
+> ⚠️ **2026-08-26 那期确认了 "AI for science" 子系列的主持人身份**：字幕里两人各自自报家门——**Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honakee**（Miraomics CTO 兼创始人，做空间转录组）。⚠️ 这与本库 2026-08-11 首次记录的那一组（`RJ Honiki` / `Mirror Omix`）**应为同一组人，只是自动字幕拼写不同**；本库两处拼写都保留，**不做统一认定**。
+>
+> ⚠️ **这一期也把该子系列的范围从生物/化学扩到了连续介质物理**（天气、气候、等离子体、材料、流体）。⚠️ 值得单记的是**主持人的技术判断再次进入实质论证**——[00:45:01] 由主持人提出的 AlphaFold 类比（**蛋白质结构之所以是生物学里少数几个大胜，正因为它受物理强约束**），与嘉宾的"物理世界更宽容"合起来，构成了本库 [AI for science 页](../topics/ai-for-science.md) 目前最统一的一条横向判据。
+>
+> ⚠️ **频道的另一条记录**：2026-09-18 那期出现了一位**新任 head of editorial（Richard，远程连线）**，本库首次记录。
 
 > ⚠️ **本频道存在一个由不同主持人运作的 "AI for science" 子系列**，本库 2026-08-11 首次明确记录。主持是 **Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honiki**（Mirror Omix CTO 兼联创）——**两位本身都是 AI-bio 创业者，而不是媒体人**。⚠️ 这对引用有直接影响：**这个子系列里的"主持人观点"是同行的技术判断，不是提问框架**。
 > 例如 Chai 那期里，主持人自己给出了两条本库照录的实质判断：① **抗体在进化上不可能有模板，所以 MSA 这个魔法在抗体上失效**（这条解释了为什么 AlphaFold 2 在抗体-抗原上只有约 11% 正确率）；② 对嘉宾"简单性偏好"的**正面反驳**——AlphaFold 2/3 之所以 work，**恰恰因为它们是数据效率极高的小模型、一层归纳偏置叠一层归纳偏置**，要超过它"你真的需要新的数据来源"。本库把第二条记为该期**未解决的分歧**。

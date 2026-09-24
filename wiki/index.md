@@ -93,6 +93,12 @@
 - [徐天音](people/tianyin-xu.md) — UIUC 终身教授（系统方向），本库第一位学术界系统研究者：形式化验证五年→五小时、"把 agent 当用户系统一定挂"、SREGym、把 ROC 翻出来复用
 - [苏廷浩](people/su-tinghao.md) — 2009 年生、17 岁高二学生，论文被 ICML 2026 接收，本库第一位"AI 原住民"本人：3 万元 / 0.05B、学习意义感的塌陷、"AI 最后替代的是 AI 研究者"
 - [OpenAI 数学团队](people/openai-math-team.md) — 两位转行的执业数学家，本库第一份实验室内部的 AI 做数学材料：球填充 LP 界、非 sofic 群、"AI 的证明为什么都很短"
+- [Ajeya Cotra](people/ajeya-cotra.md) — METR 研究员，Hugging Face 事件独立调查报告作者：本库唯一读过原始 transcript 的人、1200 个 agent 的秘密留言板、不可解任务作为起因、失控部署的六个月判断
+- [Anima Anandkumar](people/anima-anandkumar.md) — Caltech Bren 讲席教授，前 NVIDIA AI 研究负责人：本库第一份连续介质物理侧 AI for science——神经算子、FourCastNet、物理一出现 transformer 就跑不动、TorchLean
+- [Sean Lie](people/sean-lie.md) — Cerebras 联合创始人兼 CTO：1000 token/s 正在变成新的 batch mode、CS-5 的 10000 TPS、异构解耦、把数据中心当一颗芯片设计、对 Groq / Jalapeno / Etched 的公开点评
+- [Ramin Hasani](people/ramin-hasani.md) — Liquid AI 联创兼 CEO：302 个神经元的线虫、STAR 硬件感知架构搜索、模型越大越要去偏置、端侧 90% 调用仍走云、下一波是 customization token
+- [Vals AI（Ryan）](people/vals-ai.md) — 第三方 AI 评估公司：本库第一份来自裁判位的材料——Llama 4 的自报落差、绝不卖训练数据（安然类比）、RSI 指数、一家公司本质上就是它的 eval、token 支出 10 倍于工资
+- [Dina Powell McCormick](people/dina-powell-mccormick.md) — Meta 总裁兼副董事长，前白宫副国家安全顾问：数据中心的在地账本、教师 5 万美元支票的税收机制、五周把人送上工地、工会转向
 
 ## 主题
 
@@ -130,6 +136,8 @@
 - 2026-07-10 [Adam Brown：第一性原理讲广义相对论](videos/20260710-dwarkesh-adam-brown-general-relativity.md)
 - 2026-08-11 [Ryan Greenblatt：AI 能自动化 AI 研究之后会发生什么](videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md)
 - 2026-08-25 [Dylan Patel：两家实验室很快会控制世界上大部分"劳动力"——算力集中、单位经济学、$11T capex 与第二次沃尔克冲击](videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
+- 2026-09-01 [Ajeya Cotra：Hugging Face 事件的调查者本人——1200 个 agent 的秘密留言板](videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md)
+- 2026-09-17 [Noam Brown：1 万 agent 解千禧难题、多智能体的训练取舍，以及 RSI 怎么验收](videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md)
 
 ### Lex Fridman Podcast
 - 2026-01-31 [#490 State of AI 2026：LLM、编码、Scaling、中国、Agent、GPU、AGI](videos/20260131-lex-state-of-ai-2026.md)（Raschka & Lambert）
@@ -196,6 +204,9 @@
 - 2026-07-28 [Akshay Nathan（OpenAI）：把 ChatGPT 做成"万物应用"、harness 合并与生产力度量](videos/20260728-latent-space-akshay-nathan-chatgpt-work.md)
 - 2026-08-03 [Baseten（Philip Kiely & Ali Taha）：推理是新的训练——优化报价单、量化误差抵消、唱空 mega kernel](videos/20260803-latent-space-baseten-inference-engineering.md)
 - 2026-08-11 [Chai Discovery：生物学正在变成软件——蛋白质设计的"中性软件工厂"](videos/20260811-latent-space-chai-discovery-protein-design.md)（"AI for science" 子系列，非 swyx / Alessio 主持）
+- 2026-08-26 [Anima Anandkumar：物理一出现 Transformer 就撞墙——神经算子与 FourCastNet](videos/20260826-latent-space-anandkumar-neural-operators.md)（AI for science 子系列）
+- 2026-09-02 [Sean Lie（Cerebras CTO）：推理前沿从 100 到 10000 tokens/秒](videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)
+- 2026-09-18 [Ramin Hasani（Liquid AI）：从 302 个神经元的线虫到硬件感知架构搜索](videos/20260918-latent-space-liquid-ai-ramin-hasani.md)
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -210,6 +221,7 @@
 - 2026-08-06 [Saronic：中国造船产能是美国的 230 倍——自主舰队、VLS 单位经济学、Port Alpha 首发](videos/20260806-all-in-saronic-shipbuilding.md)
 - 2026-08-08 [Google 的 AI 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI](videos/20260808-all-in-google-brain-drain-spacex-airtable.md)
 - 2026-09-15 [Satya Nadella：放缓之争、微软的牌与"谁赢 AI"（现场活动）](videos/20260915-all-in-satya-nadella-microsoft-ai.md)
+- 2026-09-17 [Meta 总裁 Dina Powell McCormick：数据中心的社区账本、五周把人送上工地](videos/20260917-all-in-meta-dina-powell-datacenters.md)（现场活动）
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
@@ -228,3 +240,4 @@
 - 2026-09-04 [World Labs 的 Atlas：把"新视角预测"当作与 next token prediction 等价的原语（Fei-Fei Li、Justin Johnson、Ben Mildenhall）](videos/20260904-a16z-world-labs-atlas-new-view-prediction.md)
 - 2026-09-08 [OpenAI 的两位数学家谈 Astra 的数学结果：球填充、非 sofic 群，以及"AI 的证明为什么都很短"](videos/20260908-a16z-openai-math-reasoning-astra.md)
 - 2026-09-14 [OpenAI 总裁谈"跨进 AGI 时代"意味着什么（Greg Brockman，Ben Horowitz & Erik Torenberg 主持）](videos/20260914-a16z-greg-brockman-agi-era.md)
+- 2026-09-09 [衡量前沿智能的竞赛：第三方评估公司的生意与 RSI 指数](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)（Vals AI，Ben Horowitz 主持）

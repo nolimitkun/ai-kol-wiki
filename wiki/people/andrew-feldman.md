@@ -23,3 +23,7 @@
 
 - [Cerebras 630 亿 IPO、晶圆级与快 AI（No Priors，2026-05-21）](../videos/20260521-no-priors-cerebras-feldman.md)
 - [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱（All-In，2026-07-10）](../videos/20260710-all-in-cerebras-bfl-open-source.md)
+
+> ⚠️ **同公司 CTO 的材料见 [Sean Lie](sean-lie.md)（Latent Space，2026-09-02）。** 两人分工互补、观点一致：Feldman 讲**商业论证**（IPO、快推理造新商业模式、开源与主权），Sean Lie 讲**架构与竞争格局**（Nexus 平台、CS-5 的 10000 TPS、异构解耦、对 Groq / Jalapeno / Etched 的公开点评）。
+>
+> ⚠️ **一处值得对照**：Feldman 在 2026-07 说「美国需要更多本土开源模型（现只有 OSS 12B 或中国模型）」；Sean Lie 在 2026-09 把同一判断量化为 **「开源模型市场 95% 到 100% 是中国的」**，并补了本库此前少有的第二层——**支撑这些中国模型的硬件基础设施也在背后建起来**。
