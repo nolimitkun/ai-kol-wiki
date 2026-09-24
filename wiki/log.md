@@ -999,3 +999,18 @@ Lex 与 Dwarkesh 都有固定开场句（"The following is a conversation with�
 
 流程上的一次拦截：CZI 映射初稿引用了点名工具的**插值时刻**（≈00:53:01 等）当作锚点，
 写盘前的锚点校验拒绝了它，页面未被写入。已改用真实块锚点，并让工具同时打印所在块锚点，避免再混淆。
+
+## 2026-09-24 — 视频页补说话人映射（四）：Latent Space 15 期
+
+**最强的一期证据：Xaira**。转录稿自带字幕说话人名（`[Bo Wang]` 等），按字符位置插值到时刻后与分离标签交叉核对，
+四个名字各自有 83–96% 落在同一个标签上。这也是对插值方法本身的一次外部验证。
+
+开场逐个自我介绍的几期（Genesis、Chai、Lila）靠"I'm X"之后的接话标签定人，精确到 100%；
+多嘉宾期靠互相第三人称提及排除（Gray Swan："Matt can elaborate on this"；Databricks："I was telling Matei"；
+Baseten："like Ali said that's noise"）。
+
+**认不出的照实写**：swyx 与 Alessio（或 Vibhu）同场时，两人各对应哪个标签节目内无法确定——
+2026 年的 Latent Space 开场改成了片头口播，不再有旧版"This is Alessio…"这种自报句。共 6 期如此标注。
+Gray Swan、Databricks 两期分离只给出一个主持标签，是否两位都在场也无法确定。
+
+一处容易弄反的：`swyx-agent-labs` 那期 **swyx 是嘉宾**，主持是 Matthew Berman。

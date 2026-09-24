@@ -7,6 +7,15 @@
 
 > 借 Data + AI Summit（10 万人）发布多款产品，重点两个：**Omnigent**（开源 agent 编排/"meta-harness" + agent cloud）与 **L-TAP / Dream Engine**（统一存储的 HTAP + 从零重写的数据库引擎）。Spark 两位作者的系统设计视角。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260624-Yp_u1NpbkJg/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_00 | 44.3% | **Matei Zaharia** | "I remember Reynold saying…"（[00:08:06] 块），所以不是 Reynold；高纯度块谈内部 Google Drive MCP server、专用模型胜过通用模型（[00:21:07]、[01:01:27]） |
+> | SPEAKER_02 | 33.0% | **Reynold Xin** | "I was telling Matei, 'Hey, it just happened…'"（[00:07:06] 块，83%）、"And Matei is like spent far more time…"（[00:54:22] 块，85%），所以不是 Matei；高纯度块讲"HTAP done right"与数据库引擎范式（[00:33:12]、[00:47:18]） |
+> | SPEAKER_01 | 22.8% | **主持** | 念片头口播与"Now let's get into it. Matei Zaharia from Databricks…"（[00:01:01]，100%）；收尾"I hope this isn't the last time we chat"（[01:08:31]，100%） |
+>
+> 本期只有一个主持标签，是 swyx 还是 Alessio 节目内无法确定。
+
 ## 概要
 
 一句话世界观："**把数据放到对的地方，然后在上面糊一层 AGI，魔法就出来了**"——但没有对的数据就不行。围绕这个判断，Databricks 做了 Omnigent（把 Claude Code/Codex/Cursor 等所有 harness 统一到一套 API，加上协作、安全、成本控制层）与 L-TAP（统一 OLTP/OLAP 存储层，让 agent 能实时 reason 业务数据）。中段是两个开源 vs 专有、增量演进、over-fit 少数客户的产品哲学复盘。

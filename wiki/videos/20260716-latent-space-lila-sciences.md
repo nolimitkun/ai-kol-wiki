@@ -5,6 +5,14 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=2wIxPWK6nCs) · 101 分钟（人工字幕）
 - **转录稿**: [sources/latent-space/20260716-2wIxPWK6nCs](../../sources/latent-space/20260716-2wIxPWK6nCs/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260716-2wIxPWK6nCs/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 50.8% | **Andy Beam（CTO）** | "I'm Andy. I'm the chief technology officer…"之后由此标签作答（[00:01:00] 块，之后 100%） |
+> | SPEAKER_00 | 28.8% | **Rafa Gómez-Bombarelli（物理科学 CSO）** | 排除法；高纯度块是材料化学一手讲解（[00:36:11] 显示器要最纯的红绿蓝、[01:12:14] 等气体吸附后看压差，均 100%） |
+> | SPEAKER_03 | 11.1% | **Brandon（主持）** | "Welcome to Latent Space Science. I'm Brandon. I'm here with my co-host…"（[00:00:00]，70%）；[01:24:29] 向嘉宾问母公司 Flagship 的 IPO 记录（98%） |
+> | SPEAKER_01 | 9.2% | **RJ（主持）** | 排除法，另一位主持 |
+
 ## 概要
 
 本库迄今最系统的一期"AI for science"素材。Lila 的核心命题：**互联网数据已被"压榨"殆尽（Ilya："我们只有一个互联网，它是化石燃料"），下一个互联网级数据源是科学本身**——用"跑科学方法、以自然/实验做 verifier"来做大规模 post-training。他们把物理实验室建成"AI Science Factory"（科学工厂）= 大规模 verifier，产出"实验验证过的推理轨迹"这种互联网上"约等于零"的数据。横跨生命科学、化学、材料，不只是 tech bio。

@@ -7,6 +7,13 @@
 
 > 边做韩式豆腐汤边聊的轻松格式（灵感来自 Zuckerberg "带汤挖人"的传闻），但研究内容扎实。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260625-fpAthTtha8c/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Mark Chen（嘉宾，58.5%）**、**SPEAKER_01 = 主持（37.0%，边做菜边访谈）**。
+> 依据：SPEAKER_01 说"…Mark Chen. Welcome, Mark."（[00:00:02]，87%），并负责做菜（[00:27:18] 块内"So, I'll first do it on my pan"）；
+> SPEAKER_00 反复以"our models""our bets at OpenAI"自称（[00:14:12]、[00:16:13] 块，80–100%）。
+> SPEAKER_02（4.5%，155 段、最长 20 秒）高度碎片化，可能是第二位主持或在场厨师，**未能确认**。
+> 主持是 swyx 还是 Alessio 节目内无法确定。
+
 ## 概要
 
 OpenAI 首席研究官谈 scaling laws 信念、pre-training 未死、reasoning/o1 这个 bet 的由来、评估危机与 bench maxing、研究品味与组织方法、以及"vibe researcher"的未来。

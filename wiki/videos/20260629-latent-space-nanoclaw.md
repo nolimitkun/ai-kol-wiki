@@ -5,6 +5,10 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=hLUGXO5DSpo) · 23 分钟
 - **转录稿**: [sources/latent-space/20260629-hLUGXO5DSpo](../../sources/latent-space/20260629-hLUGXO5DSpo/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260629-hLUGXO5DSpo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Gavriel Cohen（嘉宾，78.8%）**、**SPEAKER_01 = swyx（主持，21.2%）**。
+> 依据：本期只有 swyx 一位主持（页头）；SPEAKER_00 的高纯度块是 NanoClaw 一手设计与客户落地（[00:08:06] 改用 Agent SDK、[00:17:10] 帮客户对接 IT/安全团队，均 100%）。
+
 ## 概要
 
 NanoClaw 是 [OpenClaw](20260212-lex-openclaw-steinberger.md) 之后又一个爆红的开源个人 agent，主打**极简代码库 + 隐私/安全**。Gavriel 讲了新加坡外长在 Facebook 晒自己的 NanoClaw setup（Raspberry Pi + Karpathy LLM Wiki + Nemon 记忆系统）如何点醒他"企业引入 agent 的正确起点是先给每个人一个个人 agent"、NanoClaw 相对 OpenClaw 的安全隔离设计、以及公司化后为企业做部署的方向。**这期与本库直接相关——外长的 setup 正是 Karpathy 的 [LLM Wiki 模式](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)（也即本库范式）。**

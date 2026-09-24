@@ -4,6 +4,12 @@
 - **嘉宾**：[Dan Biderman](../people/latent-space-hosts.md)（Engram 联合创始人兼 CEO，前 Mosaic、Stanford Chris Ré / Scott Linderman 组）
 - **转录稿**：[sources](../../sources/latent-space/20260713-jhpmMTus5a0/transcript.md)（en-orig 自动字幕；边做饭边访谈）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260713-jhpmMTus5a0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Dan Biderman（嘉宾，80.4%）**、**SPEAKER_01 = 主持（18.6%，Latent Space Cooking 系列）**。
+> 依据：SPEAKER_01 念开场"Hey guys, welcome to the Latent Space Cooking…"（[00:00:00]，之后 89%）；
+> SPEAKER_02 的高纯度块是嘉宾的技术论述（[00:23:17] 长上下文的 GPU 显存占用"是个系统问题"，100%）——做菜指令也多落在此标签，本期是嘉宾掌勺。
+> 主持是谁页头未记，节目内也未自报。SPEAKER_00（31 秒）为碎片。
+
 ## 概要
 
 在轻松的"做饭"格式下，Biderman 系统讲述 **记忆 / 持续学习（continual learning）/ 上下文腐烂（context rot）** 这一前沿问题——本库此前几乎未覆盖的技术方向。核心命题：把"持续学习"与"记忆"看作**长上下文问题的伪装**；仅靠把上下文窗口做长（哪怕 1000 万 token）也不够，因为模型读得越多越"困惑"。Engram 的下注是用**训练的魔法**把知识压进权重（"cartridges"），与文本表示（RAG / wiki）互补。为 [LLM OS 与新计算范式](../topics/llm-os.md) 的"context window = RAM / 内存管理"命题接上了一条 2026 年的工程主线。

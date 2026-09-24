@@ -7,6 +7,18 @@
 
 > 本库第三块系统性 AI-for-science 素材（前两块是 [Genesis Molecular AI](20260630-latent-space-genesis-diffusion-drug-discovery.md) 的小分子结构预测和 [Lila Sciences](20260716-latent-space-lila-sciences.md) 的"实验室即 verifier"）。核心命题一句话：**要预测"如果我干预了会怎样"，就必须用干预产生的数据来训练——观测数据在原理上就欠定**。这是本库里对"数据质量 > 架构"这条经验规律最干净的一次实证。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260721-2AdS-2uuH80/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 本期转录稿自带字幕说话人名（`[Bo Wang]` `[Xi Chu]` `[RJ]` `[Brandon]`），可以**直接交叉核对**——本库证据最强的一期：
+>
+> | 标签 | 占比 | 认定 | 字幕名落在此标签的比例 |
+> |---|---|---|---|
+> | SPEAKER_03 | 40.1% | **Bo Wang** | 95% |
+> | SPEAKER_02 | 39.3% | **Xi Chu** | 96% |
+> | SPEAKER_00 | 12.3% | **RJ Honicky（主持）** | 88%（另有 [00:00:00] 块"Hi, I'm RJ Honicky, CTO of MiraOmics"，100%） |
+> | SPEAKER_01 | 8.3% | **Brandon Anderson（主持）** | 83% |
+>
+> （核对方法：按字符位置把每段带名字幕插值到时刻，再看该时刻的分离标签。）
+
 ## 概要
 
 Xaira 是 AI 原生药物发现公司（联创之一是 David Baker），有三条 AI 平台线：**蛋白设计**（Baker 实验室血统）、**虚拟细胞 / 生物学基础模型**（本期主题，即 X-Cell）、**患者表征模型**（刚起步）。Bo 强调三者不是各干各的，而是要互相接口：设计虚拟细胞模型时就要看"能不能找到更适合蛋白工程模型下手的靶点"。

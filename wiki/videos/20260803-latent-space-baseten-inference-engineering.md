@@ -11,6 +11,16 @@
 
 > 本库第一份**系统性的推理工程一手材料**。此前 infra 条线的一手视角来自推理引擎维护者（[游凯超/vLLM](20260728-zhang-xiaojun-you-kaichao-vllm.md)、[朱邦华/SGLang](20260518-uncle-moon-banghua-zhu-sglang.md)）、数据层（[江鋆晨/KV Cache](20260609-uncle-moon-junchen-jiang-kvcache.md)）与芯片设计（[Reiner Pope](20260522-dwarkesh-reiner-pope-chip-design.md)），**独缺"以推理为生意的服务商"这一层**——从量化到投机解码到 PD 分离的具体收益倍数、代价与工时，本期第一次被逐项报价。最锋利的三条：**Ali 公开唱空 mega kernel**、**量化误差可以互相抵消所以"量化更多反而更准"**、以及 **GLM 5.2 在为自己写 GPU kernel**。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260803-7PSXtru6mmY/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 41.0% | **Philip Kiely** | "like Ali said that's noise"（[00:30:16] 块，100%），所以不是 Ali；Ali 说"I will take what Philip said one step further"前的发言方也是此标签（[01:01:38] 块） |
+> | SPEAKER_00 | 34.3% | **Ali Taha** | 主持说"Ali, you should…"（[00:17:11] 块）、"Ali you're pretty big in video…"（[01:13:45] 块）后都由此标签作答（76–83%） |
+> | SPEAKER_03 | 16.6% | **主持** | "we're here in the studio with Philip… as well as Ali. Welcome."（[00:01:02]，100%） |
+> | SPEAKER_01 | 8.1% | **主持** | 向 Ali 发问的一方（[01:13:45] 块，100%） |
+>
+> 两位主持是 swyx 还是 Alessio，节目内无法确定。
+
 ## 概要
 
 开场就是一道压力测试题：**一个 20 万 token 的请求进来会经过什么**（[00:02:02]）。Philip 的拆解构成了全期的路线图（[00:03:02]–[00:04:03]）：先做 **cache-aware routing**（找有空闲 prefill worker、且已有部分 KV 缓存的副本），命中则跳过大部分 prefill；未命中则送进**已做 PD 分离**（prefill/decode 拆在两组 GPU 上）的 prefill 组生成 KV cache 与首 token，再交给 decode 组逐 token 生成；前面还挂着一个**假定你在写代码**的投机解码 draft 模型——"如果我猜错了、你其实是让我总结哈利波特全集，那就会慢"。

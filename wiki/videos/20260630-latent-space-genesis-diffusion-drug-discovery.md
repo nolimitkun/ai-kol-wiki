@@ -7,6 +7,18 @@
 
 > 本库第二块系统性"AI for science"素材（与 [Lila Sciences](20260716-latent-space-lila-sciences.md) 并置）：一家做**小分子药物发现**基础模型的公司，主题句是"**当下最创新的 diffusion 研究发生在 3D 结构预测，而不是图像/视频生成**"。核心贡献是把 LLM 的 scaling 三段式（预训练/后训练/推理时）搬到分子结构预测，并把精度基准从"业界惯用的 RMSD<2Å"推进到 **1Å 以下**——因为药物发现本质是"分辨率的科学"。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260630-YQWXxnkK4dw/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 两位嘉宾 + 两位主持，**开场逐个自我介绍**，接话标签清楚：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 58.1% | **Evan Feinberg（CEO）** | "Hey, I'm Evan. I'm the founder and CEO"之后由此标签作答（[00:01:03] 块，之后 100%）；多次以第三人称提 Sergey（"Sergey is being humble"，[00:20:24] 块） |
+> | SPEAKER_04 | 17.6% | **Sergey Edunov（CTO）** | "Hi, I'm Sergey. I studied physics"之后由此标签作答（[00:01:03] 块，之后 100%）；Evan 说"Maybe Sergey wants to give some more…"后接话（[00:12:17] 块，82%） |
+> | SPEAKER_01 | 10.7% | **RJ Haniki（主持）** | 开场"I'm joined by my co-host Brandon Anderson"（[00:00:00]，100%） |
+> | SPEAKER_03 | 13.2% | **Brandon Anderson（主持）** | 排除法 + 嘉宾回应"I totally agree, Brandon"（[00:04:05] 块）、"And by the way, Brandon…"（[00:11:15] 块）之前的发问方均为此标签 |
+>
+> SPEAKER_00（20 秒）为碎片。
+
 ## 概要
 
 Genesis 做 **protein–small molecule（蛋白-小分子）结合**的结构预测，这是十年来最抵抗 ML 的子领域。主力模型 **Pearl** 是 co-folding（类比 AlphaFold 3 / Boltz / OpenFold 3，但专注小分子）。他们用三招对应 LLM scaling：① 预训练侧用**物理模拟造合成数据**（因公开晶体结构库 PDB 只有约 20 万个、增长极慢）；② **推理时 scaling**——模型不在语言 token 上"思考"，而在"晶体结构表征"上迭代（diffusion head 本就是多步迭代），并用**物理引导（physics-based guidance）**steer 输出；③ RL（含"实验室 in-the-loop"）。与 [Insilico/Insight] 类 CRO 伙伴组"设计-合成-测试-分析"闭环。反复强调 AlphaFold 3 拿诺奖 ≠ 药物发现被解决。

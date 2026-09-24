@@ -5,6 +5,13 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=UwxxlTNPjWo) · 59 分钟
 - **转录稿**: [sources/latent-space/20260708-UwxxlTNPjWo](../../sources/latent-space/20260708-UwxxlTNPjWo/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260708-UwxxlTNPjWo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Akshat Bubna（嘉宾，57.2%）**；**SPEAKER_01（34.3%）与 SPEAKER_00（8.5%）是两位主持**（swyx 与 Vibhu）。
+> 依据：SPEAKER_02 的高纯度块是 Modal 一手设计（[00:28:23] sandbox 是一组容器、可挂 sidecar，100%）；
+> SPEAKER_01 是向嘉宾发问与评点的一方（[00:43:32] 块内"you do talk about compute storage networking"、[00:46:35] 块内"Do you [have] any opinions on like the meta harnesses?"）；
+> SPEAKER_00 同为提问方（[00:21:17] 块内"what's the delta that you guys provide"）。
+> **两位主持各对应哪个标签，节目内无法确定。**
+
 ## 概要
 
 Modal 是一家"从零为 AI 应用重造原语"的 capital-light 云平台（不自建数据中心，跑在 17 家 NeoCloud 之上）。Akshat 复盘起源（为解决 Kubernetes 对 bursty/自定义镜像/GPU workload 的糟糕体验）、2023 年 5 月就做了 sandbox、如何把 SDK 团队从"开发者体验（DX）"改成"**agent 体验（AX）**"，以及弹性推理、投机解码、多节点训练、auto research 等具体产品。

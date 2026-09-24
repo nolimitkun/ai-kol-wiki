@@ -5,6 +5,12 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=9_0hs2sxHHo) · 116 分钟（自动字幕）
 - **转录稿**: [sources/latent-space/20260722-9_0hs2sxHHo](../../sources/latent-space/20260722-9_0hs2sxHHo/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260722-9_0hs2sxHHo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Eiso Kant（嘉宾，82.0%）**；**SPEAKER_01（9.8%）与 SPEAKER_00（8.2%）是两位主持**（swyx 与 Alessio）。
+> 依据：SPEAKER_02 的高纯度块是 Poolside 一手信息（[00:56:30] 模型总参数与 8B 激活、[01:54:09] 招聘，均 100%）；
+> SPEAKER_01 念片头口播（[00:01:01]，89%）；SPEAKER_00 为提问方（[01:43:03] 块内"I'm just going to ramble for a bit, I'll come to a question at the end"）。
+> **两位主持各对应哪个标签，节目内无法确定。**
+
 ## 概要
 
 本库首个成体系的 **"neo-lab / 西方开源前沿实验室"内部工程视角**。Poolside 三年前从零起步（不脱胎于任何已有大厂）、从头写训练代码、押注"RL 是 LLM 能力最大驱动"（当时非共识），2026 年初从"抢先做到 AGI"转向**开源**，理由是"我宁愿活在有 100 家基础模型公司的世界，而不是 5 家——哪怕我是那 5 家之一"。核心干货有两块：(1) **Model Factory**——把模型训练做成 SpaceX 式的端到端工厂，5–8 周从预训练到发布；(2) **Laguna S**（118B 总/8B 激活）证明**"行为比原始智能更能压榨小模型"**，进而支撑一个关于模型商品化/开源能赢的论证。此外有大量对 RL 前移、MCP/工具"愚蠢论"、监管、算力政治的强观点。

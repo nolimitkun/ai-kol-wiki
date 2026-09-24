@@ -7,6 +7,15 @@
 
 > 注：这不是传统"用 AI 做网络安全"的话题，而是**把模型本身当作不可信实体**、研究其固有攻击面。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260622-j8BAficRjEc/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_00 | 47.5% | **Zico Kolter** | 以第三人称介绍搭档"Matt been faculty at Carnegie Mellon…"（[00:03:02] 块，之后 100% 为此标签），又说"Matt can elaborate on this"（[00:27:23] 块，100%） |
+> | SPEAKER_02 | 33.7% | **Matt Fredrikson** | 排除法：另一位嘉宾；高纯度块是 prompt injection 与 agent 上线前测试（[00:31:26]、[00:57:44]） |
+> | SPEAKER_01 | 18.8% | **主持** | 念片头口播与"we're in a studio with Gray Swan, Matt, and Zico. Welcome"（[00:01:01]，100%） |
+>
+> 本期分离只给出**一个**主持标签；页头记 swyx & Alessio，是否两位都在场、此标签是谁，节目内无法确定。
+
 ## 概要
 
 两位在 CMU 深耕对抗机器学习十余年的研究者（Zico Kolter 亦任 OpenAI 董事）谈他们的 AI 安全公司 Gray Swan：自动化红队、防御性过滤模型、以及 agent/computer use 时代的新攻击面（indirect prompt injection、lethal trifecta、agent identity）。

@@ -7,6 +7,12 @@
 
 > 本库首次收录 swyx 作为**被访者**而非主播的完整立场表达。三条主线：**推理专用芯片的赌注为何安全**、**pdoom 要挂在时间尺度上**、以及他给应用层创业者的两字答案——**"agent lab"**。最后一段对"model-agnostic / 模型路由"的**反向论证**，与本库已收录的多位应用层 CEO 立场正面冲突，是本期最有价值的分歧点。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260710-bIOCKXcxloQ/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 本期 **swyx 是嘉宾**，主持为 Matthew Berman：**SPEAKER_00 = swyx（73.6%）**、**SPEAKER_01 = Matthew Berman（26.4%）**。
+> 依据：SPEAKER_00 的高纯度块是 swyx 本人的立论（[00:18:10]"I call this a sour lesson"、[00:23:16]"I am the AI layer for lawyers"式的 agent lab 定位，均 100%）；
+> SPEAKER_01 为发问方（[00:11:04] 块内"…has been very hands-on deciding what models are publicly available… Like, do you…"）。
+> SPEAKER_01 的若干块纯度仅 54–67%，混有 swyx 的回答，引用时以内容为准。
+
 ## 概要
 
 swyx 复盘 AI Engineer 大会的起源（他看到前端/云/数据工程都专业化成独立领域，判断 AI 必然重演，买下 AI.engineer 域名；Karpathy 背书后起势），并谈及大会的定位价值——**让各前沿实验室在中立场地同台竞争**，这是 dev day / Code with Claude 给不了的。随后进入芯片、AGI 时间线、对齐与创业建议。

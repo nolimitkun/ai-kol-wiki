@@ -22,6 +22,16 @@
 > | `SAS` | **SaaS** |
 > | `epidote prediction` | **epitope prediction** |
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260811-Qp5xklyJySI/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> 开场**逐个自我介绍**，接话标签清楚：
+>
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_03 | 40.6% | **Matt McPartlon（研究侧）** | "I'm Matt McPartland. I'm one of the…"（[00:01:00] 块，之后 100%）；高纯度块讲 pair representation 上的 attention（[01:04:35]） |
+> | SPEAKER_00 | 37.2% | **Neil Patil（平台/产品）** | "And I'm Neil Patiel. I help lead a pl[atform]…"之后由此标签作答（[00:02:00] 块，之后 100%）；高纯度块讲合作方与命中率（[00:44:26]、[01:32:46]） |
+> | SPEAKER_01 | 10.8% | **Brandon（主持）** | "I'm Brandon. I build RNA therapeutics…"（[00:01:00] 块，之后 100%） |
+> | SPEAKER_02 | 11.4% | **RJ Honiki（主持）** | 排除法 |
+
 ## 概要
 
 这是本库 [AI 与科学发现](../topics/ai-for-science.md) 条线上**第四家结构生物学方向的公司**——前三家是 [Genesis Molecular AI](20260630-latent-space-genesis-diffusion-drug-discovery.md)（小分子 co-folding）、[Xaira](20260721-latent-space-xaira-xcell-virtual-cell.md)（虚拟细胞）、[Lila Sciences](20260716-latent-space-lila-sciences.md)（实验室即 verifier）。**Chai 的位置与三家都不同，而且这个差异是本期最该被记住的东西**：

@@ -7,6 +7,11 @@
 
 > 一位认知科学家从"人类智能是集体的、社会的"出发，系统批评当前 AI 的"自动化/任务优化"主导范式，主张 AI 的计算级目标应是**对齐表征（aligning representations）**而非把某个任务刷到最优。本库首个成体系的"认知科学视角 AI 哲学"素材，与 [Amazon AGI Lab](../people/danielle-perszyk.md)（perception agents / Nova Act）路线互为表里。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260711-K796MYUgt0k/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Danielle Perszyk（嘉宾，67.2%）**、**SPEAKER_00 = swyx（主持，32.8%）**。
+> 依据：开场"…from Amazon AGI lab. Welcome. >> Hi Swyx, it's so good to see you"（[00:00:03]）；
+> SPEAKER_01 的高纯度块是认知科学视角（[00:22:14] 感知只取环境噪声的极小部分、[00:41:23] 要度量人机交互本身，均 100%）。
+
 ## 概要
 
 Perszyk 从"人类智能是集体智能（collective brain）、从互动中涌现"的人类学观点切入，指出行业当前被"聊天机器人 + 编码 agent + 回合制批处理"这一**局部吸引子（local attractor）**困住，只在为"造 AI 的工程师"造 AI。她提出 AI 要真正泛化并增强人类，计算级（David Marr 三层里的 computational level）的目标应是**持续推断他心、对齐表征**，由此可推导出实时互动、社会化世界模型、情节记忆、多智能体涌现文化等一系列能力。反面证据：当前 AI 正在**降低人类能动性**（写作被拉向均值、科学整体在收窄）。

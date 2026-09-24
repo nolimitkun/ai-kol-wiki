@@ -9,6 +9,12 @@
 
 > 本库第一份来自 **OpenAI 产品侧**（而非研究侧）的系统表达。价值不在爆料，而在两条产品判断：**为什么 Codex 的 harness 会反过来吃掉 ChatGPT 的 harness**，以及**AI 时代生产力为什么变得无法测量**。最后一句"**混淆 motion 与 progress**"是本期最锋利的一条。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/latent-space/20260728-gKhW6vL4V9A/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Akshay Nathan（嘉宾，62.4%）**；**SPEAKER_02（22.5%）与 SPEAKER_00（15.1%）是两位主持**（swyx 与 Vibhu）。
+> 依据：SPEAKER_01 的高纯度块是 OpenAI 内部一手信息（[00:26:12] 这次发布里的 Sites、[00:38:23] 内部评审流程，均 100%）；
+> SPEAKER_02 的块是主持的延伸评点（[00:28:14]"That gets into auto research…"）。
+> **两位主持各对应哪个标签，节目内无法确定**；SPEAKER_00 的 [00:53:30] 块（100%）谈个人如何用 sub-agent，归属存疑。
+
 ## 概要
 
 Akshay 领导的团队叫 **productivity**（而非 enterprise 或 work），因为**个人生产力也算**（[00:09:04]）。本期围绕一个月前发布的 **ChatGPT Work** 展开：它把 Codex 的能力与 ChatGPT 的分发合并成所谓的"超级应用"，发布时同日上线新模型，已公布 **1000 万用户**（[00:42:26]、[00:43:26]）。
