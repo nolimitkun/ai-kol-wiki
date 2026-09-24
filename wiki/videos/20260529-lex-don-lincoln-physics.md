@@ -6,6 +6,11 @@
 - **转录稿**: [sources/lex-fridman/20260529-1M3Vdl6DRkU](../../sources/lex-fridman/20260529-1M3Vdl6DRkU/transcript.md)
 - **性质**: 物理科普访谈，**非 AI 主题**（全篇无 AI 相关讨论；收录以保持频道完整性，摘要从简）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260529-1M3Vdl6DRkU/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Don Lincoln（嘉宾，83.4%）**、**SPEAKER_01 = Lex Fridman（主持，16.6%）**。
+> 依据：SPEAKER_01 念片头"The following is a conversation with Don Lincoln, a particle physicist at Fermilab"（[00:00:00]，100%）；
+> SPEAKER_00 的高纯度块是嘉宾一手讲解与自述（[01:24:38]、[02:51:06]"I was crazy. I worked long hours"）。
+
 ## 概要
 
 Fermilab 粒子物理学家 Don Lincoln 以"物理学史即统一史"为主线的科普长谈：

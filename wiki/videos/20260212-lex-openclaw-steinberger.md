@@ -7,6 +7,16 @@
 
 > OpenClaw（曾名 WA-Relay → Clawdus → ClawdBot → MoltBot）：开源个人 AI agent，跑在自己电脑上、通过 WhatsApp/Telegram/Discord 等聊天软件交互，可换任意模型。GitHub 历史上涨星最快的仓库（180k+ stars）。Lex 称其为继 2022 ChatGPT 时刻、2025 DeepSeek 时刻之后的"2026 OpenClaw 时刻"。中方视角对照：[罗福莉](../people/luo-fuli.md)称 OpenClaw 是"划时代 agent 框架"（[罗福莉访谈](20260424-zhang-xiaojun-luo-fuli-agent-paradigm.md)）。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260212-YFjfBk8HI5o/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_02 | 55.0% | **Peter Steinberger** | [02:10:19] 块内"I started PSPDFKit, and ran it for 13 years"（100%）；[02:13:26] 块内"When I built my company, money was never the driving…" |
+> | SPEAKER_01 | 16.6% | **也是 Peter**（同一人被拆成两个标签） | 高纯度块全是他的一手构建经历：[01:19:29]"I started out, I built a very minimal version"、[01:23:34]"I built on Caffeine, JSON5"（均 100%）；且其 463 轮里有 300 轮紧接在 SPEAKER_02 之后——是 Peter 接着自己说，被换了标签 |
+> | SPEAKER_03 | 25.7% | **Lex Fridman（主持）** | 片头"The following is a conversation with Peter Steinberger"（[00:01:00]）、"This is a Lex Fridman podcast"（[00:05:03]）、片尾"Thanks for listening"（[03:15:04]）；对谈中也用此标签，如"Somebody tweeted at you, 'Peter, make OpenClaw easy…'"（[01:58:53]） |
+> | SPEAKER_00 | 2.8% | 伪影 | 199 段、最长 16 秒，纯度均低，是交叠处的碎片 |
+>
+> ⚠️ 所以本期 Peter 实际占比约 **71.6%**（02+01），读 sidecar 的占比表时要合并看。
+
 ## 概要
 
 Steinberger 讲述 OpenClaw 从"一小时原型"（WhatsApp 接 Claude Code CLI）到互联网风暴的全过程：改名闹剧与 crypto 骚扰、MoltBook 恐慌、自修改软件、agentic engineering 方法论、MCP vs CLI/skills 之争、个人 agent 即操作系统、80% 的 app 将消失、程序员之死与"builder"身份重构。访谈末尾透露正在 Meta 与 OpenAI 之间二选一（条件：项目保持开源，类似 Chrome/Chromium 模式）。

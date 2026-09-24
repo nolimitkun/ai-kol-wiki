@@ -6,6 +6,12 @@
 - **转录稿**: [sources/dwarkesh/20260710-QbdbAhaJoCQ](../../sources/dwarkesh/20260710-QbdbAhaJoCQ/transcript.md)
 - **性质**: 白板物理课——从第一性原理讲广义相对论；结尾转入 AI 与理论物理的讨论
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260710-QbdbAhaJoCQ/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Adam Brown（嘉宾，92.3%）**、**SPEAKER_01 = Dwarkesh Patel（主持，7.7%）**。
+> 依据：SPEAKER_00 的高纯度块是白板推导（[00:47:12]"So far, everything we've written down on the board is Newtonian"）；
+> SPEAKER_01 的 [00:46:05] 块（100%）是主持人口播（Crusoe 微调产品），也是本库引用的"用自己访谈稿微调提问生成器"实验的出处。
+> 本期是白板课形式，主持占比仅 7.7% 属正常。
+
 ## 概要
 
 Adam Brown 用 90 分钟把广义相对论讲给普通听众：从"没有东西比光快，引力也不例外"的口号出发，

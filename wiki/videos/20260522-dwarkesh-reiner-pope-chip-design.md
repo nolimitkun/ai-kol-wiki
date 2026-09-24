@@ -7,6 +7,11 @@
 
 > 白板教学式硬课（前作谈数据中心内部，本期进到芯片内部）：从 AND/OR 逻辑门一路搭到 systolic array、时钟、FPGA、GPU vs TPU。与 Karpathy 的"from scratch"系列同一路数，但对象是硅片。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260522-oIk3R-sMX5o/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Reiner Pope（嘉宾，73.9%）**、**SPEAKER_02 = Dwarkesh Patel（主持，25.0%）**。
+> 依据：SPEAKER_02 的 [00:38:07] 块（100%）是主持人口播"It lets me group responses by question, add notes, and record my scores"；
+> SPEAKER_01 的高纯度块是芯片设计的一手讲解（[00:31:49] 脉动阵列按列做点积）。SPEAKER_00（49 秒）为碎片。
+
 ## 概要
 
 用"手算一次 4-bit 乘加"推导出 AI 芯片的全部核心权衡：**计算相对通信最大化**这一条原则贯穿从 ALU 位宽到 systolic array 到数据中心的每一层。中段进入时钟/流水线寄存器、FPGA 原理与高频交易用例，尾段对比 CPU/GPU/TPU 架构哲学与大脑。

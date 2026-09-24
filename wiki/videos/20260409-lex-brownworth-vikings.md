@@ -6,6 +6,13 @@
 - **转录稿**: [sources/lex-fridman/20260409-iKx3gAODybU](../../sources/lex-fridman/20260409-iKx3gAODybU/transcript.md)
 - **性质**: 历史访谈，**非 AI 主题**（全篇仅 1 处 AI 顺带提及；收录以保持频道完整性，摘要从简）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260409-iKx3gAODybU/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Lars Brownworth（嘉宾，61.7%）**、**SPEAKER_01 = Lex Fridman（主持，38.3%）**。
+> 依据：SPEAKER_01 念片头"The following is a conversation with Lars Brownworth"与"And now, dear friends, here's Lars Brownworth"
+> （[00:01:03]、[00:02:03]）、中插后"back to my conversation with Lars Brownworth"（[01:06:07]）及片尾（[02:01:35]）；
+> SPEAKER_00 的高纯度块是作者一手经历（[00:46:29]"I was reading about the Dark Ages at the time"）。
+> 主持占比偏高（38%），看起来是因为 Lex 本期常复述史实再交给嘉宾确认（如 [00:38:13] Great Heathen Army 一段）。
+
 ## 概要
 
 维京时代通史（793 年 Lindisfarne 突袭 – 1066 年）：长船每天 70–120 英里的机动性优势如何制造"来自海上的不可想象的威胁"；

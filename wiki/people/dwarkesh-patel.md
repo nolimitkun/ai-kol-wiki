@@ -8,6 +8,7 @@
 
 - 深度准备型访谈者，常以"AI 能否复现 X"的思想实验推动嘉宾（如问 Adam Brown：几百万个并行 Einstein-LLM 能否做出大发现）。
 - 自己动手做 AI 实验并公开结果：用自己访谈转录稿微调"提问生成器"，盲评中本人问题仍以 2/3 胜出（[Adam Brown 期](../videos/20260710-dwarkesh-adam-brown-general-relativity.md) 00:46:05）；写过"样本效率是否真的在提升"的博客，用 nanoGPT speedrun 的损失曲线估算出每年 2–5 倍。
+- **bits per FLOP 框架（他自己的，常被误记到嘉宾名下）**：学习速度 = 每 FLOP 样本数 × 每样本比特数；长程 RL 同时压低两者，所以大部分训练时间耗在"低通过率区"。在 [Eric Jang 期](../videos/20260515-dwarkesh-eric-jang.md) 他以"I wrote a blog post a few months ago about…"引出并在白板上讲了约 5 分钟（[02:11:10] 起），说话人分离证实这段主要是他在说。本库原先把它记在 Eric Jang 名下，2026-09-24 据分离结果更正。
 
 ## 已收录访谈
 

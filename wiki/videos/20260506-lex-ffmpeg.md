@@ -6,6 +6,13 @@
 - **转录稿**: [sources/lex-fridman/20260506-nepKKz-MzFM](../../sources/lex-fridman/20260506-nepKKz-MzFM/transcript.md)
 - **性质**: 开源软件/工程文化访谈，含多段与 AI 直接相关的讨论
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260506-nepKKz-MzFM/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_01 | 53.2% | **Jean-Baptiste Kempf（JB）** | 高纯度块全是 VLC 一手工程：[02:03:06] 为 iOS 构建需混用多版本 Xcode；[03:53:23]"the way we compile VLC……we compile on boxes that are offline"（均 100%） |
+> | SPEAKER_02 | 22.9% | **Kieran Kunhya** | [02:05:07] 讲解 scalar assembly 与 add 指令（100%），与页头「资深 codec 工程师」身份一致；[04:00:37]"C will be like Latin" |
+> | SPEAKER_00 | 24.0% | **Lex Fridman（主持）** | [00:10:18]"So JB, you're the lead developer behind the legendary VLC player. Kieran, …"；[04:17:07] 收尾致谢（均 100%） |
+
 ## 概要
 
 FFmpeg 是互联网视频的隐形骨干（YouTube/Netflix/Chrome/Discord 全都依赖），由志愿者维护，

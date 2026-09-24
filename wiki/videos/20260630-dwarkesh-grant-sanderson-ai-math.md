@@ -6,6 +6,11 @@
 - **转录稿**: [sources/dwarkesh/20260630-TfyPshgMbug](../../sources/dwarkesh/20260630-TfyPshgMbug/transcript.md)
 - **背景事件**: AI 反证了 unit distance conjecture、以人类可理解的思路解决了 Erdős 问题 1196（2026 年）；Grant 正在制作"AI 与数学"纪录片系列
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260630-TfyPshgMbug/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Grant Sanderson（嘉宾，67.0%）**、**SPEAKER_01 = Dwarkesh Patel（主持，32.5%）**。
+> 依据：SPEAKER_01 念开场"……Sanderson, who runs 3Blue1Brown"（[00:00:00]，100%）并在 [01:15:25] 块内"All right, Grant, I'll do the plug…"；
+> SPEAKER_02 以第一人称谈自己的频道（[01:18:27] 块内"Here's one from 3Blue1Brown. I'm like…"，100%）。SPEAKER_00（28 秒）为碎片。
+
 ## 概要
 
 以"AI 已经能连接不同领域做出新数学发现"为起点，讨论下一个里程碑是什么（出猜想、造定义）、

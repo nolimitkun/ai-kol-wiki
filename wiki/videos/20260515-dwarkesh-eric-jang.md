@@ -7,6 +7,16 @@
 
 > 这是一期"黑板课"式深度技术访谈：Eric 在 sabbatical 期间用约 $10K 租用算力从零重建了一个强 Go bot（AutoGo），借此系统对比 AlphaGo 的 MCTS self-play 与今天 LLM 的 RL，为"AI 自动化 AI 研究"提供一线观察。转录稿前 3/4 是 AlphaGo/MCTS 的逐步推导，本页聚焦其可迁移的判断。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260515-X_ZVSPcZhtw/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_03 = Eric Jang（嘉宾，77.7%）**、**SPEAKER_02 = Dwarkesh Patel（主持，21.3%）**。
+> 依据：SPEAKER_02 念开场介绍"……vice president of AI at 1X Technologies"（[00:00:00]，100%）；
+> SPEAKER_03 的高纯度块是嘉宾一手经历（[01:55:16] 块内"I spent maybe the first $4K doing…"，自述重建 AlphaGo 的花费）。
+> SPEAKER_00/01 合计 94 秒、最长 30 秒，为碎片，判为伪影。
+>
+> ⚠️ **本期主持人不只是提问**：他有两段自己上白板讲解——00:17:52–00:19:33 讲 MCTS 的 Q 值与探索项，
+> 02:11:51 起讲他自己博客里的 **bits per FLOP 框架**（[02:11:10] 块内"I wrote a blog post a few months ago about…"）。
+> 后者本页原先记在 Eric 名下，已据此更正（见下文该条）。
+
 ## 概要
 
 AlphaGo 的核心突破：用神经网络（value + policy 双头）把 Go 那棵 361³⁰⁰ 量级、被认为本世纪不可解的搜索树同时在**深度**（value 函数截断到底搜索）与**广度**（policy 剪枝）上压到可解。**MCTS 作为 policy 的"改进算子"**：搜索出比当前策略更好的动作分布，再把它蒸馏回 policy 网络（"把 TPU pod 的算力压进一次前向传播"）。Eric 由此反观 LLM 的 RL，指出两者在样本效率上的巨大差异。
@@ -15,7 +25,7 @@ AlphaGo 的核心突破：用神经网络（value + policy 双头）把 Go 那�
 
 ### 为什么 LLM 的 RL 效率极低（本期最有价值的对比）
 - **MCTS 给每一步都提供监督目标**（低方差）；LLM 的 policy-gradient RL 则是把整条获胜轨迹的所有 token 一起上调——Karpathy 所谓"**用吸管吸取监督信号**（sucking supervision through a straw）"，一整局只有极少数"真正更好的"动作是有效信号，其余是噪声（[01:24:36]–[01:27:58]、[01:45:50]–[01:46:50]）。
-- **bits per FLOP 框架**：学习速度 = 每 FLOP 样本数 × 每样本比特数。① 长程 RL 让**每 FLOP 样本数下降**（要展开两天的工作才拿到一个信号）；② 每样本比特数也远逊于监督学习——未训练模型要在 10 万词表里靠瞎猜撞到 "blue" 约 10 万次才有一次信号，而绝大部分训练时间耗在"低通过率区"几乎学不到东西（[02:12:10]–[02:17:29]）。
+- **bits per FLOP 框架（Dwarkesh 提出）**：学习速度 = 每 FLOP 样本数 × 每样本比特数。① 长程 RL 让**每 FLOP 样本数下降**（要展开两天的工作才拿到一个信号）；② 每样本比特数也远逊于监督学习——未训练模型要在 10 万词表里靠瞎猜撞到 "blue" 约 10 万次才有一次信号，而绝大部分训练时间耗在"低通过率区"几乎学不到东西（[02:12:10]–[02:17:29]）。——⚠️ **此框架是主持人 Dwarkesh 本人提出的，不是 Eric Jang 的观点**：他在 [02:11:10] 块内自述 "This might be totally wrong, but I wrote a blog post a few months ago about…"，说话人分离显示引用区间内 Dwarkesh 说了约 338 秒、Eric 约 48 秒（Eric 为回应方）。
 - **AlphaGo 的优雅在于永远不用从 0% 成功率起步、不用解探索难题**：全程是"在改进后的标签上做监督学习"，训练稳定、无需复杂的 on-policy 分布式基础设施（[02:19:33]–[02:21:40]）。
 - **软标签/蒸馏为何高效**：AlphaGo 训 policy 去模仿 MCTS 的**整个分布**而非单一动作，soft target 的熵远高于 one-hot，每样本携带的信息多得多——这也解释了蒸馏的威力（[02:18:30]–[02:19:33]）。呼应 [姚顺宇](../people/yao-shunyu.md) 关于"软蒸/硬蒸"的讨论（见 [中美 AI 生态对照](../topics/china-us-ai.md)）。
 

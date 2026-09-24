@@ -6,6 +6,11 @@
 - **转录稿**: [sources/dwarkesh/20260616-U1FrhkLQnCI](../../sources/dwarkesh/20260616-U1FrhkLQnCI/transcript.md)
 - **性质**: 思想史/文艺复兴史访谈，**非 AI 主题**（收录以保持 Dwarkesh 频道完整性）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260616-U1FrhkLQnCI/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Ada Palmer（嘉宾，84.2%）**、**SPEAKER_02 = Dwarkesh Patel（主持，15.0%）**。
+> 依据：SPEAKER_02 念开场"……at the University of Chicago. Today, I want to talk…"（[00:00:00]，75%）；
+> SPEAKER_00 多次以第一人称讲自己的书被盗印（[01:51:14]、[01:54:22] 块内"They printed my book"，均 100%）。SPEAKER_01（58 秒）为碎片。
+
 ## 概要
 
 Ada Palmer 重构《君主论》的历史语境：教皇国的结构性不稳定（每约十年一位不可预测的新君主）+

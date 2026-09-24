@@ -6,6 +6,11 @@
 - **转录稿**: [sources/lex-fridman/20260630-pv1TUJSEM2k](../../sources/lex-fridman/20260630-pv1TUJSEM2k/transcript.md)
 - **性质**: 历史访谈，**非 AI 主题**（收录以保持频道完整性，摘要从简）
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260630-pv1TUJSEM2k/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_00 = Anthony Kaldellis（嘉宾，72.2%）**、**SPEAKER_01 = Lex Fridman（主持，27.8%）**。
+> 依据：SPEAKER_01 念片头"The following is a conversation with Anthony Kaldellis"与"And now, dear friends, here's Anthony Kaldellis"（[00:01:03]），
+> [00:09:12] 那段 410/476/527 年表也是他为听众做的铺垫；SPEAKER_00 的高纯度块是嘉宾本人估算（[01:54:55] 君士坦丁堡贵族家户人数）。
+
 ## 概要
 
 Kaldellis 的核心翻案主张："拜占庭帝国"是后世史学家的政治性发明——它在法律与文化意义上就是罗马帝国的直接延续，

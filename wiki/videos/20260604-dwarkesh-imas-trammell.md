@@ -7,6 +7,15 @@
 
 > 本库首个严肃的**经济学**视角。两位经济学家用劳动份额、需求弹性、稀缺性来推演 AGI 世界里工资、再分配与"什么会稀缺"，并反复强调经济学家预测能力之差、"需要一个数据的曼哈顿计划"。
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260604-Jj-kBHzUohs/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> | 标签 | 占比 | 认定 | 依据 |
+> |---|---|---|---|
+> | SPEAKER_03 | 40.5% | **Dwarkesh Patel（主持）** | 开场介绍两位嘉宾"……Google DeepMind and Professor of Economics at the University of Chicago, and Phil Trammell……Head of Economics at Epoch"（[00:00:00]，100%）；多次点名"Phil, you made this point…"（[00:07:26]） |
+> | SPEAKER_00 | 39.0% | **Alex Imas** | [00:16:59] 块内"experiments that we ran involved an art print"（100%），与其实验经济学家身份一致；[00:11:38] 块内对 Phil 说"Phil, I liked your analogy to…"，所以不是 Trammell |
+> | SPEAKER_02 | 19.9% | **Phil Trammell** | 紧接"Phil, I liked your analogy"之后作答（[00:12:41]，100%）；[00:57:39] 块内"total utilitarian philanthropy. When I think about why…"（100%） |
+>
+> SPEAKER_01（28 秒）为碎片。主持占比高达 40%，本期是三方讨论而非一问一答。
+
 ## 概要
 
 标题即核心悖论：随着 AI 把越来越多商品完全自动化、变得极便宜，其边际效用下降，AI/资本占经济的份额**可能反而变小**；但若资本能不断创造"新品类"（increasing variety）让人永不满足，资本份额也可能趋近 1。他们主张放弃点预测、改用**情景规划 + 预测市场**，并指出哪一种情景成真取决于哪一维度的"稀缺"。

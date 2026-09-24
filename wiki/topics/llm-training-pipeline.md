@@ -69,7 +69,7 @@ Jensen Huang 2026-03 的扩展表述：**四条 scaling laws**——预训练（
 来源：[Dwarkesh 访谈](../videos/20260515-dwarkesh-eric-jang.md)
 
 - 从零重建 AlphaGo 后反观 LLM RL：**MCTS 给每一步提供监督目标**（低方差），而 LLM 的 policy-gradient RL 是把整条获胜轨迹所有 token 一起上调——即 Karpathy 的"**用吸管吸取监督信号**"，一局里真正有效的信号极少（01:24:36–01:27:58、01:45:50–01:46:50）。
-- **bits per FLOP 框架**：学习速度 = 每 FLOP 样本数 × 每样本比特数。长程 RL 让前者下降（要展开数天工作才得一个信号），后者也远逊监督学习（未训练模型要在 10 万词表里瞎猜约 10 万次才撞对一次），故绝大部分训练时间耗在"低通过率区"几乎不学习（02:12:10–02:17:29）。这为"RL 阶段只能跑几百步 / 需良好初始化"提供了量化解释，接续 Karpathy 的"RLHF is not RL"。
+- **bits per FLOP 框架（主持人 Dwarkesh 提出，非 Eric）**：学习速度 = 每 FLOP 样本数 × 每样本比特数。长程 RL 让前者下降（要展开数天工作才得一个信号），后者也远逊监督学习（未训练模型要在 10 万词表里瞎猜约 10 万次才撞对一次），故绝大部分训练时间耗在"低通过率区"几乎不学习（02:12:10–02:17:29）。这为"RL 阶段只能跑几百步 / 需良好初始化"提供了量化解释，接续 Karpathy 的"RLHF is not RL"。——归属依据见[视频页](../videos/20260515-dwarkesh-eric-jang.md)的说话人映射。
 - **AlphaGo 优雅在于永不从 0% 成功率起步、不解探索难题**：全程"在改进标签上做监督学习"，训练稳定、无需 on-policy 分布式基础设施；且训 policy 模仿 MCTS 的**整个分布**（软标签熵高）——正是**蒸馏高效**的原因（02:18:30–02:21:40）。与 [姚顺宇](../people/yao-shunyu.md) 的软蒸/硬蒸、[中美 AI 生态对照](china-us-ai.md) 相通。
 - **前向搜索为何难迁移 LLM**：语言动作空间过大，几乎不会两次采样同一子节点，PUCT 探索启发式失效；但"前向模拟未来估价值"可能以别的形态回归（01:44:50–01:49:58）。
 - 另可对照 Andy Jones《Scaling Scaling Laws with Board Games》(2021)：**搜索算力可换训练算力**，提前预示了 test-time compute（见 [评估与 Benchmark](evaluation-and-benchmarks.md)）。

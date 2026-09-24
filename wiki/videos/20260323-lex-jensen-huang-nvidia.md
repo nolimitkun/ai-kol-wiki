@@ -5,6 +5,12 @@
 - **来源**: [YouTube](https://www.youtube.com/watch?v=vif8NQcjVf0) · 146 分钟
 - **转录稿**: [sources/lex-fridman/20260323-vif8NQcjVf0](../../sources/lex-fridman/20260323-vif8NQcjVf0/transcript.md)
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/lex-fridman/20260323-vif8NQcjVf0/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_02 = Jensen Huang（嘉宾，76.7%）**、**SPEAKER_00 = Lex Fridman（主持，22.4%）**。
+> 依据：SPEAKER_02 的高纯度块是一手经营细节（[01:11:11] 晶圆排产随客户变动）；SPEAKER_00 为主持的感慨与追问
+> （[01:00:56]"these systems are just truly, truly marvels of engineering"）。
+> SPEAKER_01（73 秒，89 段，最长 12 秒）为碎片，判为伪影。
+
 ## 概要
 
 覆盖 NVIDIA 的 extreme co-design 方法论、CUDA 的存亡赌注史、四条 scaling laws、

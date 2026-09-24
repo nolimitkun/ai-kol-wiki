@@ -10,6 +10,13 @@
 > 1. **本期含三段广告口播**（Antithesis [00:46:33]–[00:47:36]、Jane Street [01:07:26]–[01:08:26]、Cursor/Grok [01:34:17]–[01:35:17]），**内容与访谈无关，本库不作为观点记录**。⚠️ 但广告里出现了一条可能被误引的说法——"**Grok 4.5 是 SpaceX 和 Cursor 一起训练的第一个模型**"（[01:34:17]）——这是**广告文案，不是嘉宾或主持人的判断**，本库仅在此标注一次。
 > 2. **本期反复出现 Mythos / Sol / Fable 等模型代号**，且 **Mythos 与 Fable 都被以指向 Anthropic 的方式使用**（[00:48:36] 说 Mythos 是 Anthropic 内部二月可用、六月才发布；[01:03:21] 说"Mythos 被封禁、或者说 Fable 被封禁"）。**本库照录代号，不做归属认定。**
 
+> **说话人映射**（据补做分离的 [speakers.md](../../sources/dwarkesh/20260811--RXD4bTuFTo/speakers.md)；转录稿本身无标签，此处认人属 wiki 层编辑判断）：
+> **SPEAKER_01 = Ryan Greenblatt（嘉宾，61.0%）**、**SPEAKER_00 = Dwarkesh Patel（主持，39.0%）**。
+> 依据：SPEAKER_00 念开场"Today I'm chatting with Ryan Gre[enblatt]……chief scientist at Redwood Research"（[00:00:00]），
+> 并多次点名"this might be troubling, Ryan"（[01:09:27]）、"fighting words, Ryan"（[01:31:12]，均 100%）。
+> 主持占比高达 39%：本期他大段陈述自己的立场（如 [01:04:24] 块内"I'm very worried about such a world where…"），
+> 见 [Dwarkesh 人物页](../people/dwarkesh-patel.md) 关于他本人 RSI 立场的一节——那一节的归属与分离结果一致。
+
 ## 概要
 
 这是本库**关于递归自我改进（RSI）与 AI 接管风险的第一份系统性长论证**，而且形式上很特别：**Dwarkesh 自陈历史上一直对这件事持怀疑态度**，全程在逐条压力测试，最后在片尾给出了一份**明确的、分项的立场更新**（[02:08:14]–[02:09:17]）。本库此前的 RSI 材料要么是产业观察（[Decagon 的 Duet](20260731-a16z-decagon-enterprise-ai-apps.md)、[Baseten 的 GLM 自写 kernel](20260803-latent-space-baseten-inference-engineering.md)、[Simon Mo 的 RL 环境判断](20260806-a16z-simon-mo-open-source-inference.md)），要么是**对时间表的证伪框架**（[Sarah Guo](20260806-no-priors-trillion-dollar-token-budgets.md)）。**这一期是正面论证本身。**

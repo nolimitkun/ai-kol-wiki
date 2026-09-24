@@ -969,3 +969,20 @@ zhipeng 那期 SPEAKER_05 以第三人称提到 Roger 与志鹏，排除了这�
 
 sglang 那期有一处反直觉：主持说"第一节由陈阳老师介绍"，但陈阳只讲了约 10 秒，长讲解是万诚——
 本页正文本来就把推理侧内容归给万诚，与分离一致，无需改动。
+
+## 2026-09-24 — 视频页补说话人映射（二）：Lex 7 期 + Dwarkesh 7 期；更正一处观点归属
+
+Lex 与 Dwarkesh 都有固定开场句（"The following is a conversation with…"／"Today I'm chatting with…"），
+认主持几乎都能落到 100% 纯度的自报块上；多嘉宾期靠点名作答区分（"Phil, I liked your analogy"→ 下一轮是 Trammell）。
+
+**新模式：同一人被拆成两个标签**（Lex × Peter Steinberger）。SPEAKER_01 的高纯度块全是 Peter 的一手构建经历，
+且其 463 轮里 300 轮紧接在 SPEAKER_02（Peter）之后——是他接着自己说被换了标签。所以本期 Peter 实际约 71.6%。
+与第一批"张小珺片头旁白被分成独立标签"方向相同：**标签数 ≠ 人数，两个方向都会错**。
+
+**更正一处观点归属：bits per FLOP 框架是 Dwarkesh 的，不是 Eric Jang 的。**
+视频页与 `topics/llm-training-pipeline` 都把它列在 Eric Jang 的观点下。分离显示引用区间 [02:12:10]–[02:17:29]
+里主持标签说了约 338 秒、Eric 约 48 秒，且主持以"This might be totally wrong, but I wrote a blog post a few months ago about…"
+（[02:11:10]）引出。两处已标注"Dwarkesh 提出"，并补进 `people/dwarkesh-patel` 的立场列表。
+这正是补分离的价值所在：原先认人靠"这页是 Eric 的访谈"，内容本身读不出是谁在白板上讲。
+
+顺带核实：`people/dwarkesh-patel` 里"他自己在 RSI 上的立场"一节所引的 [02:11:19]，该块 97% 为主持标签，归属无误。
