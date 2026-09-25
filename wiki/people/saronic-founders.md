@@ -1,4 +1,5 @@
 # Dino Mavrookas & Vibhav Altekar（Saronic 联合创始人）
+来源：[All-In 2026-08-06](../videos/20260806-all-in-saronic-shipbuilding.md)
 
 美国自主水面舰艇公司 **Saronic** 的两位联合创始人。公司**约 4 年历史**（自陈，故约 2022 年创立），累计**私募融资 25 亿美元**，总部在**奥斯汀**，已运营路易斯安那 Franklin 的 **Gulf Craft** 船厂（100 英亩）。
 

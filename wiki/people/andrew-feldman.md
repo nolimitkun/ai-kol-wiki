@@ -3,6 +3,7 @@
 **Cerebras 联合创始人/CEO**。2026 年带 Cerebras 上市，市值约 600–630 亿美元（"唯一纯 AI play"）。第五次创业、自称"职业 David"专打 Goliath（对标 NVIDIA）。以**晶圆级（wafer-scale）芯片**做超快推理（比 GPU 快 15–20x），是本库 AI 芯片赛道的美方创业公司视角（与 [Reiner Pope](reiner-pope.md)/MatX、[Lip-Bu Tan](lip-bu-tan.md)/Intel 并置）。
 
 ## 核心观点
+来源：[No Priors 2026-05-21](../videos/20260521-no-priors-cerebras-feldman.md)
 
 - **"要根本性更好，架构就必须不同"**：造"餐盘大小"（46,000mm²）晶圆级芯片而非"邮票大小"；对 GPU 小改不可能快 20 倍。100% 反共识、"完全押对"（[Cerebras 访谈](../videos/20260521-no-priors-cerebras-feldman.md) 00:02:00–00:07:05）。
 - **"慢推理的市场是零"**：领先市场 2–3 年、"快在新奇玩具阶段无人买单"；2025 年模型"聪明到有用、每天用于工作"后需求爆炸——"慢搜索/拨号上网/慢推理的市场都是零"（00:04:01）。
@@ -12,6 +13,7 @@
 - **创业与放弃**：先列"要赢需哪些假设成立"、全负就停，警惕"再试一个"滑坡；上市是"从企业青春期毕业到成年"、降资本成本（00:16:06–00:23:11）。
 
 ### 补充（All-In，2026-07-10）
+来源：[All-In 2026-07-10](../videos/20260710-all-in-cerebras-bfl-open-source.md)
 
 - **史无前例的 buildout + $250 亿 backlog**：数据中心未来几年用电将超过"地球过去 50 年"，单栋建筑用电超中型城市；买家"永不满足、在追赶昨天的需求"（[All-In](../videos/20260710-all-in-cerebras-bfl-open-source.md) 00:01:00–00:04:02）。
 - **推理即算力 + 推理的 Moore's law**：reasoning 是 inference、极耗 token，正好喂给快机器；打破 18 个月翻倍，未来 18 个月"远超 2x"（新架构还有大量优化空间）（00:07:03–00:13:06）。

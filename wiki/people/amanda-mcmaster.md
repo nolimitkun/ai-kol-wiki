@@ -1,4 +1,5 @@
 # Amanda McMaster（Boston Dynamics 临时 CEO）
+来源：[All-In 2026-07-29](../videos/20260729-all-in-machina-robotics-four-ceos.md)
 
 - **身份**: Boston Dynamics **临时 CEO（interim）**；产品为四足 **Spot** 与人形 **Atlas**；公司现属现代汽车集团（Hyundai）
 - **国别/视角**: 美国（总部 Waltham, MA；考虑增设西海岸据点）

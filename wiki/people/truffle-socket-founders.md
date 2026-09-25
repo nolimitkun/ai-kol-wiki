@@ -1,4 +1,5 @@
 # Dylan（Truffle Security）与 "Fas"（Socket）
+来源：[a16z 2026-08-07](../videos/20260807-a16z-ai-learning-to-hack.md)
 
 > 本库**第一组防守方一线的安全从业者**。此前 [LLM 安全](../topics/llm-security.md) 页上的材料来自研究/红队侧（[Gray Swan](gray-swan-founders.md)）、安全产品创业者（[Onyx](maxim-bar-kogan.md)、[NanoClaw](gavriel-cohen.md)）或播客上的政策辩论；这两位是**在事故发生当天、在 Black Hat 会场走廊上讲当天的事**。
 

@@ -1,4 +1,5 @@
 # Sean Lie
+来源：[Latent Space 2026-09-02](../videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)
 
 - **背景**: **Cerebras 联合创始人兼 CTO**，晶圆级（wafer-scale）架构的主设计者。自陈"在这个行业待了很久"，20 年前就在参加 Hot Chips。
 - **本库收录起点**: 2026-09-02 Latent Space 访谈（44 分钟，英文自动字幕，录于 Hot Chips 次日、Cerebras 总部）

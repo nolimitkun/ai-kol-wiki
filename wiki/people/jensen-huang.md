@@ -4,6 +4,7 @@
 - **出现于**: [Lex Fridman Podcast](lex-fridman.md)；⚠️ **另有一份来自内部的间接材料**——[刘洺堉](ming-yu-liu.md)（NVIDIA 研究副总裁，在职十年）在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md) 用约三分之一篇幅讲他的管理方式，见下"下属视角"。
 
 ## 核心立场与观点
+来源：[Lex 2026-03-23](../videos/20260323-lex-jensen-huang-nvidia.md)
 
 - **Install base 定义架构**：CUDA 护城河的本质不是技术而是安装基础 × 执行速度 × 开发者信任（x86 vs RISC 的教训）。（[Lex #494](../videos/20260323-lex-jensen-huang-nvidia.md) 00:11:23–00:13:23、01:15:20）
 - **四条 scaling laws**：预训练（合成数据续命）→ 后训练 → test-time（"思考很难，推理必然算力密集"）→ agentic；"智能只随算力 scale"。（同上 00:22:47–00:28:57）
@@ -22,6 +23,7 @@
 | 2026-03-23 | [NVIDIA - The $4 Trillion Company](../videos/20260323-lex-jensen-huang-nvidia.md) | co-design、CUDA 史、scaling、电力、中国、就业 |
 
 ## ⚠️ 下属视角：一位在职十年的研究 VP 眼中的 Jensen（2026-08）
+来源：[张小珺 2026-08-13](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)
 
 来自 [刘洺堉](ming-yu-liu.md) 在 [张小珺第 150 期](../videos/20260813-zhang-xiaojun-ming-yu-liu-cosmos-world-model.md)。**本页此前全部依赖 Jensen 自述（Lex #494）；这是第一份来自 NVIDIA 内部、由直接被他管理的人给出的描述。**
 

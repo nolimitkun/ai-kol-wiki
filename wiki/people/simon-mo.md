@@ -1,4 +1,5 @@
 # Simon Mo
+来源：[a16z 2026-08-06](../videos/20260806-a16z-simon-mo-open-source-inference.md)
 
 - **背景**: **Inferact 联合创始人**、**vLLM 主维护者之一**（4 位 BDFL 之一）。UC Berkeley 出身（Sky Computing Lab 谱系），此前在 Anyscale / Ray 生态。Inferact 的另一位联合创始人兼顾问是 **Ion Stoica**（Databricks / Anyscale 联创）。
 - **本库中的位置**：他是 [游凯超](you-kaichao.md) 之外的**第二位 vLLM 一线视角**，也是本库中**唯一从美方政策语境谈开放权重的推理层从业者**。两人合起来构成同一项目的中美两侧记录。

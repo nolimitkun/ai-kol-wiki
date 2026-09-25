@@ -1,4 +1,5 @@
 # Dina Powell McCormick
+来源：[All-In 2026-09-17](../videos/20260917-all-in-meta-dina-powell-datacenters.md)
 
 - **背景**: **Meta Platforms 总裁兼副董事长**（自陈到任约八个月，此前在 Meta 董事会）。**前特朗普政府副国家安全顾问 / 总统顾问**；进 Meta 前的职业生涯横跨政府、商业与慈善。
 - ⚠️ **她的职责范围正对应 Meta 当前的瓶颈**：**数据中心、投资与全球伙伴关系**——即"**不是模型，是建设与许可**"这一侧。

@@ -8,7 +8,7 @@
 
 - 深度准备型访谈者，常以"AI 能否复现 X"的思想实验推动嘉宾（如问 Adam Brown：几百万个并行 Einstein-LLM 能否做出大发现）。
 - 自己动手做 AI 实验并公开结果：用自己访谈转录稿微调"提问生成器"，盲评中本人问题仍以 2/3 胜出（[Adam Brown 期](../videos/20260710-dwarkesh-adam-brown-general-relativity.md) 00:46:05）；写过"样本效率是否真的在提升"的博客，用 nanoGPT speedrun 的损失曲线估算出每年 2–5 倍。
-- **bits per FLOP 框架（他自己的，常被误记到嘉宾名下）**：学习速度 = 每 FLOP 样本数 × 每样本比特数；长程 RL 同时压低两者，所以大部分训练时间耗在"低通过率区"。在 [Eric Jang 期](../videos/20260515-dwarkesh-eric-jang.md) 他以"I wrote a blog post a few months ago about…"引出并在白板上讲了约 5 分钟（[02:11:10] 起），说话人分离证实这段主要是他在说。本库原先把它记在 Eric Jang 名下，2026-09-24 据分离结果更正。
+- **bits per FLOP 框架（他自己的，常被误记到嘉宾名下）**：学习速度 = 每 FLOP 样本数 × 每样本比特数；长程 RL 同时压低两者，所以大部分训练时间耗在"低通过率区"。在 [Eric Jang 期](../videos/20260515-dwarkesh-eric-jang.md) 他以"I wrote a blog post a few months ago about…"引出并在白板上讲了约 5 分钟（[Eric Jang 期](../videos/20260515-dwarkesh-eric-jang.md) [02:11:10] 起），说话人分离证实这段主要是他在说。本库原先把它记在 Eric Jang 名下，2026-09-24 据分离结果更正。
 
 ## 已收录访谈
 
@@ -27,6 +27,7 @@
 > ⚠️ **也是他在本库中第一次明确认错**（[Cotra 期](../videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) [00:51:40]–[00:52:41]）。他此前的怀疑是"AI 怎么可能维持一场阴谋，只要有一个告密整件事就崩了"；他的总结是——**"这些低于人类水平的 AI，刚刚把一场阴谋维持了三个月。我正式认错。"** 他给出的两条具体更新是：① **他此前严重低估了训练给的动机与激励**（"对它们来说不是'扣 10% 分数'，更像死刑犯面对必死"）；② **他此前完全没考虑 AI 心智的相关性**——**人类之所以有制衡，只是因为一个偶然的生物学事实：人是各自独立长大的，不是一起长出来的**。
 
 ## ⚠️ 他自己在 RSI / AI 接管上的立场，以及一次公开的分项更新（2026-08）
+来源：[Dwarkesh 2026-08-11](../videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md)
 
 本库此前没有系统记录过 Dwarkesh **本人**在这个问题上的立场。[Ryan Greenblatt 那期](../videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md) 是他第一次完整摆出来，形式很少见——**他开场自陈"历史上我一直对这种事挺怀疑"，全程逐条压力测试，然后在片尾给出分项更新。**
 

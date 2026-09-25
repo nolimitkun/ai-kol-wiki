@@ -9,6 +9,7 @@
 - 偏 AI engineering / 应用 LLM 实践；关注 evals、agent、infra、研究组织方法等工程与研究落地话题。
 
 ### swyx 本人的立场（2026-07-10 交叉播客，他作为被访者）
+来源：[Latent Space 2026-07-10](../videos/20260710-latent-space-swyx-agent-labs.md)
 
 本库首次收录 swyx 作为**被访者**的系统表达，见 [视频页](../videos/20260710-latent-space-swyx-agent-labs.md)。
 
@@ -40,7 +41,7 @@
 
 > ⚠️ **2026-08-26 那期确认了 "AI for science" 子系列的主持人身份**：字幕里两人各自自报家门——**Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honakee**（Miraomics CTO 兼创始人，做空间转录组）。⚠️ 这与本库 2026-08-11 首次记录的那一组（`RJ Honiki` / `Mirror Omix`）**应为同一组人，只是自动字幕拼写不同**；本库两处拼写都保留，**不做统一认定**。
 >
-> ⚠️ **这一期也把该子系列的范围从生物/化学扩到了连续介质物理**（天气、气候、等离子体、材料、流体）。⚠️ 值得单记的是**主持人的技术判断再次进入实质论证**——[00:45:01] 由主持人提出的 AlphaFold 类比（**蛋白质结构之所以是生物学里少数几个大胜，正因为它受物理强约束**），与嘉宾的"物理世界更宽容"合起来，构成了本库 [AI for science 页](../topics/ai-for-science.md) 目前最统一的一条横向判据。
+> ⚠️ **这一期也把该子系列的范围从生物/化学扩到了连续介质物理**（天气、气候、等离子体、材料、流体）。⚠️ 值得单记的是**主持人的技术判断再次进入实质论证**——由主持人提出的 AlphaFold 类比（[Anandkumar 那期](../videos/20260826-latent-space-anandkumar-neural-operators.md) [00:45:01]）（**蛋白质结构之所以是生物学里少数几个大胜，正因为它受物理强约束**），与嘉宾的"物理世界更宽容"合起来，构成了本库 [AI for science 页](../topics/ai-for-science.md) 目前最统一的一条横向判据。
 >
 > ⚠️ **频道的另一条记录**：2026-09-18 那期出现了一位**新任 head of editorial（Richard，远程连线）**，本库首次记录。
 

@@ -48,6 +48,7 @@
 | 2026-08-13 | [Chess.com 与"机器超越人类之后"：一个跑了 30 年的自然实验](../videos/20260813-no-priors-chesscom-human-skill.md) | [Erik Allebest（Chess.com）](erik-allebest.md)（Sarah Guo 独立主持） |
 
 ## ⚠️ 一处需要标注的利益相关
+来源：[No Priors 2026-07-31](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
 
 Elad Gil 在 [Netic 那期](../videos/20260731-no-priors-netic-autonomous-enterprise.md) **自陈是被访公司的投资人**（[00:06:12]），并在同一期自述"四年前我在投 Harvey、Perplexity，稍晚是 Decagon 和 Abridge"（[00:15:16]）。本库此前收录的多期 No Priors 也存在类似情形（Sarah Guo 的 Conviction、Elad 的个人投资组合），读者应把这一层作为解读的一部分。
 

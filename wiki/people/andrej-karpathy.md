@@ -5,6 +5,7 @@
 - **watchlist slug**: `karpathy`
 
 ## 核心立场与观点
+来源：[Karpathy 2023-11-23](../videos/20231123-karpathy-intro-to-llms.md)、[Karpathy 2025-02-05](../videos/20250205-karpathy-deep-dive-into-llms.md)
 
 - **LLM = 互联网的有损压缩**：预训练是把数十 TB 文本压进参数；"预测下一个词"这个简单目标足以逼出世界知识。（[Intro to LLMs](../videos/20231123-karpathy-intro-to-llms.md) 00:04:01, 00:07:05）
 - **LLM 是经验性造物，不是工程品**：不像汽车那样每个零件可理解，只能靠评测度量行为；对可解释性持审慎态度。（同上 00:13:11）

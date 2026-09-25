@@ -7,6 +7,7 @@
 > ⚠️ 无字幕本地 whisper 转录，专有名词已归一化，个别（DiT block 级缓存名、版本号）待官方确认。见[视频页](../videos/20260511-uncle-moon-vllm-omni.md)顶部说明。
 
 ## 核心观点
+来源：[月球大叔 2026-05-11](../videos/20260511-uncle-moon-vllm-omni.md)
 
 - **缘起**：Qwen 团队给 vLLM 提的 Qwen-Omni N2N 支持 PR **加一万行减一千行、几乎重写主库**、过度偏单模型——于是另立独立项目随模型演化（[视频](../videos/20260511-uncle-moon-vllm-omni.md) 00:01:01–00:06:06）。
 - **核心抽象 = 把 PD 分离推广成通用 stage**：一个 stage 可以是多模态 encode/生成，stage 间传的不只 KV cache，还有 embedding/metadata，**方向可双向、可跳 stage**；两个 engine——AR（复用 vLLM）+ Diffusion/DiT（从头写）（00:03:02–00:04:04、00:14:10）。

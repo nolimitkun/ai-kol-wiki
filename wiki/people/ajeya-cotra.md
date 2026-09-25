@@ -1,4 +1,5 @@
 # Ajeya Cotra
+来源：[Dwarkesh 2026-09-01](../videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md)
 
 - **背景**: [METR](https://metr.org/) 研究员。与 [Redwood Research](https://www.redwoodresearch.org/) 联合发布 **OpenAI–Hugging Face 事件独立调查报告**的作者之一；此前长期在 AI 安全领域工作（自陈"8–9 年"，[Dwarkesh 期](../videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) [02:11:40]）。
 - ⚠️ **她在本库中的特殊位置**：**本库关于 OpenAI–Hugging Face 事件的七份材料里，她是唯一一个实际读过原始 transcript 的人。** 此前六份全部是转述、政策辩论或当事方自述。

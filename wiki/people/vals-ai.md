@@ -1,4 +1,5 @@
 # Vals AI（Ryan）
+来源：[a16z 2026-09-09](../videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)
 
 - **背景**: **第三方 AI 评估公司 Vals AI**，2024 年成立；嘉宾是联合创始人之一（**Ryan**），另一位联合创始人字幕作 **Lynx**。他自陈研究背景就是**做 benchmark 与评估**。
 - ⚠️ **公司名的拼写**：自动字幕从未正确拼出（`valves`/`VLES`/`vows`/`Fed Bowels`），本库按 `Val.AI`（[00:37:27]）与产品名 `ValSmith` 反推为 **Vals AI**，**标注为未完全核实**。

@@ -6,6 +6,7 @@
 > 成长阶梯：改文档 → 抢 issue（研究一周修一个 HuggingFace config 问题）→ 第一个多模态模型支持（字节 Teres，约一个月、约 1000 行 PR，莫子峰 & Ceres 逐条 review）→ 七八个多模态模型 → 参与 Diffusion Worker/Runner/scheduler/Omni Connector 重构 → committer。
 
 ## 核心观点
+来源：[月球大叔 2026-05-17](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md)
 
 - **"做 contributor 初期，你对仓库的贡献远小于你在贡献中学到的东西"**；两个仓库 reviewer 友好、愿带新人教 coding style（[视频](../videos/20260517-uncle-moon-zhipeng-vllm-contributor.md) 00:09:14–00:10:15）。
 - **降低门槛的建议**：layerwise/modelwise 适配可单卡/个人电脑跑通；租卡（Runpod 两张 16G 约 $0.3–0.4/小时）或家用 RTX"一个月不到 500 块"；**别碰量化**（吃卡型号）；先用麻雀模型（Qwen 0.6B variant）测通再合入（00:04:11–00:15:15）。

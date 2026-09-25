@@ -1,4 +1,5 @@
 # Akshay Nathan
+来源：[Latent Space 2026-07-28](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md)
 
 - **背景**: OpenAI 核心产品工程负责人，带 **productivity** 团队（ChatGPT Work / Codex）。2023 年加入 OpenAI（当时公司约 500 人），此前做消费金融科技、创业做 AI 自动化测试（**在 LLM 与视觉 LLM 之前**）、在 Airtable 做 no-code。做过 ChatGPT Enterprise（[视频页](../videos/20260728-latent-space-akshay-nathan-chatgpt-work.md) [00:01:01]–[00:04:02]）。
 - **本库定位**: 第一份来自 **OpenAI 产品侧**（而非研究侧）的系统表达。价值集中在两处：**harness 合并的产品论证**，以及**AI 时代生产力为什么变得无法测量**。

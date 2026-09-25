@@ -1,4 +1,5 @@
 # Ramin Hasani
+来源：[Latent Space 2026-09-18](../videos/20260918-latent-space-liquid-ai-ramin-hasani.md)
 
 - **背景**: **Liquid AI 联合创始人兼 CEO**。约 12 年前在**维也纳工业大学（TU Wien）**读博时与现任 CTO Mathias 开始把连续时间数学带进机器学习；2017 年起在 MIT 与 **Daniela Rus**、**Alexander Amini** 等人共同推进。
 - **代表工作**: **liquid time-constant neural networks**（受线虫神经系统启发的连续时间网络）、**STAR**（硬件感知的架构搜索）、**LFM（Liquid Foundation Model）** 系列、**LEAP** 开发者平台。

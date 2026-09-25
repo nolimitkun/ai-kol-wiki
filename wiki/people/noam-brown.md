@@ -1,4 +1,5 @@
 # Noam Brown
+来源：[Dwarkesh 2026-09-17](../videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md)
 
 - **背景**: OpenAI 研究员，AI 推理（reasoning）/ test-time compute 方向的奠基人之一（早年以扑克 AI Libratus/Pluribus 出名，被 Sarah Guo 称为"reasoning 教父之一"）。
 - **来源出处**: [No Priors 访谈（2026-06）](../videos/20260626-no-priors-noam-brown.md)、[Dwarkesh 访谈（2026-09-17）](../videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md)
