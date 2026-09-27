@@ -99,6 +99,8 @@
 - [Ramin Hasani](people/ramin-hasani.md) — Liquid AI 联创兼 CEO：302 个神经元的线虫、STAR 硬件感知架构搜索、模型越大越要去偏置、端侧 90% 调用仍走云、下一波是 customization token
 - [Vals AI（Ryan）](people/vals-ai.md) — 第三方 AI 评估公司：本库第一份来自裁判位的材料——Llama 4 的自报落差、绝不卖训练数据（安然类比）、RSI 指数、一家公司本质上就是它的 eval、token 支出 10 倍于工资
 - [Dina Powell McCormick](people/dina-powell-mccormick.md) — Meta 总裁兼副董事长，前白宫副国家安全顾问：数据中心的在地账本、教师 5 万美元支票的税收机制、五周把人送上工地、工会转向
+- [Alex Atallah & Anjney Midha](people/openrouter-atallah-midha.md) — OpenRouter CEO / a16z GP：本库第一份来自模型路由中间层的材料——"checkpoint 做完然后一片寂静"、Google 的隐形分发优势、3 个月一轮的替代摆动、agentic fraud 与 10 万亿 token 流
+- [Anastasis Germanidis](people/anastasis-germanidis.md) — Runway 联创兼 CTO：scaling 视频预测就够了、Physics IQ、界面世界模型与神经操作系统、第三人称视频是机器人最大数据源、lucid dream test
 
 ## 主题
 
@@ -207,6 +209,8 @@
 - 2026-08-26 [Anima Anandkumar：物理一出现 Transformer 就撞墙——神经算子与 FourCastNet](videos/20260826-latent-space-anandkumar-neural-operators.md)（AI for science 子系列）
 - 2026-09-02 [Sean Lie（Cerebras CTO）：推理前沿从 100 到 10000 tokens/秒](videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)
 - 2026-09-18 [Ramin Hasani（Liquid AI）：从 302 个神经元的线虫到硬件感知架构搜索](videos/20260918-latent-space-liquid-ai-ramin-hasani.md)
+- 2026-09-25 [OpenRouter × Stripe：分发是模型实验室最被低估的短板、10 万亿 token 经济的安全命题](videos/20260925-latent-space-openrouter-stripe-token-economy.md)（Alex Atallah & Anjney Midha）
+- 2026-09-25 [Runway：把视频预测推到世界模型、界面世界模型与神经操作系统、第三人称视频与机器人](videos/20260925-latent-space-runway-world-models.md)（Anastasis Germanidis）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -222,6 +226,7 @@
 - 2026-08-08 [Google 的 AI 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI](videos/20260808-all-in-google-brain-drain-spacex-airtable.md)
 - 2026-09-15 [Satya Nadella：放缓之争、微软的牌与"谁赢 AI"（现场活动）](videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 - 2026-09-17 [Meta 总裁 Dina Powell McCormick：数据中心的社区账本、五周把人送上工地](videos/20260917-all-in-meta-dina-powell-datacenters.md)（现场活动）
+- 2026-09-26 [第 290 期：Anthropic IPO 的风险因子、12 周内 token 用量 80/20 翻转、"别再叫自己 lab"](videos/20260926-all-in-anthropic-ipo-open-source-flip.md)
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
@@ -241,3 +246,4 @@
 - 2026-09-08 [OpenAI 的两位数学家谈 Astra 的数学结果：球填充、非 sofic 群，以及"AI 的证明为什么都很短"](videos/20260908-a16z-openai-math-reasoning-astra.md)
 - 2026-09-14 [OpenAI 总裁谈"跨进 AGI 时代"意味着什么（Greg Brockman，Ben Horowitz & Erik Torenberg 主持）](videos/20260914-a16z-greg-brockman-agi-era.md)
 - 2026-09-09 [衡量前沿智能的竞赛：第三方评估公司的生意与 RSI 指数](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)（Vals AI，Ben Horowitz 主持）
+- 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）

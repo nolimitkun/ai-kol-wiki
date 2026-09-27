@@ -1090,3 +1090,34 @@ lint 新增的时间戳核验遗留的 24 个人物页、610 处"没有声明信
 **复核新旧读法的分歧**：新声明覆盖的引用里，有 14 处与旧的"此前最近链接"读法指向不同视频（vals-ai→Satya、sean-lie→Feldman、noam-brown→Ajeya Cotra 等）。逐处在两期转录稿里查关键词，14 处全部是新声明那期含对应内容、旧读法那期没有——旧读法在这些地方被交叉引用劫持了。
 
 结果：`uv run scripts/lint.py` → ✅ 无问题。
+
+## 2026-09-27 — 摄取 4 期（All-In 290、a16z、Latent Space ×2）
+
+`discover.py` 报出 34 个候选（latent-space 9 / a16z 9 / all-in 5 显示在前 10 条窗口内，张小珺与月球大叔无新视频）。逐条查 upload_date 后确认这是 **09-04 到 09-26 累积的积压，不是单日新增**。本次按"新 + AI 实质内容"取四期，其余留作后续；另把 5 个通篇非 AI 的候选写进 `skipped.txt`（嘻哈产业史、生物黑客、加州政治、NASA、政府欺诈调查），避免每天重复占满输出。
+
+**四期均有英文自动字幕，走 fetch.py 默认路径，未用 whisper。** 清理了一个遗留物：`sources/latent-space/20260925-fGRd5gYhztg/` 里有 09-25 那次中断留下的 100MB `audio.webm`（未进 seen.txt、未生成转录稿），已删除后重新正常 fetch。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [All-In 290（09-26）](videos/20260926-all-in-anthropic-ipo-open-source-flip.md) | **12 周内 token 用量 80/20 翻转**这个具体时间序列；Chamath 的**折现判据**（"可被开源替代的任务占比 >60–70% 就得给收入打折"）；Friedberg 的十天开源发布清单；Sacks 的"仓鼠轮"与对 alignment 研究纲领的方法论质疑；agent 对 App Store 30% 抽成的冲击；Friedberg 对 Anthropic 湿实验室的技术澄清（BSL-1/2、酶发现） |
+| [a16z（09-26）](videos/20260926-a16z-outside-the-labs-security-regulation.md) | "先有事故再有政策"的论证模板；**agent swarm 的安全模型 = 内部人变成软件**；Casado 的"访问控制不缺技术缺可用性"；对 Noam Brown 热信道说法的**正面辩护**；Sinofsky 的"欧洲会 GDPR 化 AI"预测与 CVE 式披露要求；**决策引擎模型与概率式编程的复活**、"创新中心已经移动到模型之外" |
+| [OpenRouter × Stripe（09-25）](videos/20260925-latent-space-openrouter-stripe-token-economy.md) | 本库第一份来自**路由中间层**的材料：跨实验室一致的"checkpoint 做完然后一片寂静"、Google 的隐形分发优势、**3 个月一轮的替代摆动节律**、fusion 2024 失败 / 2026 成立的机制解释、**agentic fraud 与 10 万亿 token 流**、LMArena 与 OpenRouter 的最高期望客户之分 |
+| [Runway（09-25）](videos/20260925-latent-space-runway-world-models.md) | 本库唯一一份**"scaling 视频预测本身就够了"的正面辩护**（Physics IQ 作为可查证据）；**界面世界模型 / 神经操作系统**；**第三人称视频是机器人最大数据源**（比 egocentric 多三个数量级）；**lucid dream test 与"失败样本不够"这个评估瓶颈**；跨模态迁移与 AlphaFold 对照；视频模型榜单上的中美差距 |
+
+### 说话人认定
+
+四期**全部只有 `>>` 换行符、无姓名标签**。各页页首都写了认定依据：All-In 按 Jason 的点名 + 自述佐证（8090、生命科学研发组织）；a16z 按不可替代的履历细节（Lawrence Livermore 核武项目 / Windows XP 的 UAC / Box 的文件权限视角）；OpenRouter 按自述（Discord 平台负责人 / window AI 作者）。**抢话处一律不逐句区分，并在页面上写明。** 四页都附了自动字幕专名对照表，拼写未核实的照录并标 ⚠️。
+
+### 交叉链接
+
+**新建人物页 2 个**：[Alex Atallah & Anjney Midha](people/openrouter-atallah-midha.md)、[Anastasis Germanidis](people/anastasis-germanidis.md)。
+**更新人物页 3 个**：all-in-hosts（新增 2026-09-26 四人立场 + 收录表一行）、a16z（Casado 首次作为表达者而非提问者、Sinofsky 的监管机制论与概率式编程、新增外部嘉宾 Aaron Levie）、latent-space-hosts（收录表两行）。
+**更新主题页 10 个**：ai-business-and-value-capture、llm-security、open-source-infrastructure、physical-ai-and-robotics、llm-os、china-us-ai、ai-lab-culture、llm-psychology、ai-for-science、evaluation-and-benchmarks。
+
+⚠️ **本次新增的两处跨期直接对话，值得单记**：
+- **a16z 对 [Noam Brown 那期](videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md) 的接续**——被安全圈嘲讽的"热信道渗出"说法，在这里被一位有涉密系统经验的人正面辩护，并带出一串真实 covert channel 清单。本库把它记为 **x-risk 社区与安全社区的一次桥接**。
+- **All-In 与 a16z 同周同题**——两期讨论的是同一批事件（Dario 的 "pacing the frontier"、"10% 灭绝概率"、Bernie Sanders 禁令），但一边谈政治与估值、一边谈"要监管什么得先有具体失败模式"。两页互相链接。
+
+⚠️ **本次未核实、只照录的内容**：Friedberg 十天清单里的全部型号与数字（口述，含一处单位存疑的 KV cache 数）、Vercel 那张 80/20 图表本身、OpenRouter 与 Runway 的全部自报规模数字、习在白宫讲话的转述、Sacks 的"中国皇帝禁造船"史学叙事（本库标注为有争议）。
