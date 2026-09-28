@@ -1121,3 +1121,46 @@ lint 新增的时间戳核验遗留的 24 个人物页、610 处"没有声明信
 - **All-In 与 a16z 同周同题**——两期讨论的是同一批事件（Dario 的 "pacing the frontier"、"10% 灭绝概率"、Bernie Sanders 禁令），但一边谈政治与估值、一边谈"要监管什么得先有具体失败模式"。两页互相链接。
 
 ⚠️ **本次未核实、只照录的内容**：Friedberg 十天清单里的全部型号与数字（口述，含一处单位存疑的 KV cache 数）、Vercel 那张 80/20 图表本身、OpenRouter 与 Runway 的全部自报规模数字、习在白宫讲话的转述、Sacks 的"中国皇帝禁造船"史学叙事（本库标注为有争议）。
+
+## 2026-09-28 — 摄取 6 期（Dwarkesh RSI 圆桌、Latent Space ×2、No Priors ×2、a16z）
+
+`discover.py` 报出 **25 个候选**（另有 16 个已在 skipped.txt）。逐条看过后：**本次取 6 期**，另把 **5 个非 AI / AI 深度不足的写进 `skipped.txt`**（Sarah Paine 军事史、Lex 精神病学史、Valar 核能、Max Hodak 神经接口、Eon 云备份）。**其余 14 个留作后续，未跳过。**
+
+**六期全部有英文字幕（Dwarkesh 那期是人工字幕），走 fetch.py 默认路径，未用 whisper。**
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [Dwarkesh 三人辩 RSI（09-11）](videos/20260911-dwarkesh-rsi-debate-schulman-millidge-oneill.md) | 本库**第一份"RSI 怀疑派与加速派同桌对峙"**，也是第一次四人圆桌：**"对齐是最后一份工作"**；**RL 有效是因为信噪比而非 bits 多、mid-training 已到最终 checkpoint 的 80%**；**累积型 vs 非稳态任务（"RSI 恰好比当律师助理更容易"）**；**环境创造依赖的不对称性正在用完**；**"连整个世界都没在给你那些 bits"**；**视野泛化而非横向泛化（EdgeBench 每三个月翻倍）**；**持续学习在微观层面全线崩塌**；**路由服务数据 = 完美 prompt 分布**；三人相差 2–3 倍的时间线 |
+| [Richard Socher（Latent Space，09-14）](videos/20260914-latent-space-richard-socher-recursive-self-improvement.md) | 本库**第一位专门为 RSI 创业的受访者**，且他自己区分 auto research ≠ RSI：**nanochat / CUDA kernel 的第一批战果与两条自我限定**；**harness 里的 30 个 bug 污染全部研究**；**秒表式奖励作弊**；**"人类中心的智能定义给基准设了上界"**；**十个智能空间与"上界"方法论**；**开源即软实力**；decaNLP 被拒的具体代价 |
+| [Ali Ghodsi × Martin Casado（a16z，09-18）](videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md) | **RSI 的四个外部可观测判据**；**"自催化 ≠ RSI，其中大概只有 1% 真的是 RSI"**；**CVE 武器化从年 → 月 → 小时**；**"模型够聪明但缺 context"与 ontology 即离线索引（Google 反向索引类比）**；**harness 换一下差 2 倍成本**；**开源按美元 5%、按 token 超 60%**；**第一条"有规模公司迁到 GLM"的采用侧轶事**；**eval 做成产品却没人用**；Neon/Lakebase 的"agent 作为新 persona" |
+| [Rene Haas（No Priors，09-03）](videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md) | 本库**第一份 CPU / IP 侧材料**：**"token 工厂之外的那些卡车就是 CPU"**；**AI 吃掉的是验证不是设计（80–90% 工程师日用）**；**"不可用且不可测 → 不可训练 → 对 AI 没用"**；**供应紧张还有三到五年、下一个瓶颈是数据中心本身**；**泡沫的两种含义之分**；电工工会那条就业线索 |
+| [Stefano Ermon（No Priors，09-18）](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md) | 本库**第一份非自回归路线材料**：**自回归推理串行且极度 memory bound**、**"更并行的方案最终会赢"**；**RL rollout 是推理瓶颈所以推理 scaling 自动利好后训练**；**扩散 LLM 把客户从 Cerebras 定制芯片换回 GPU**；**"vLLM / SGLang 上跑不了扩散 LLM"因此服务引擎即护城河**；扩散更可控的结构性理由 |
+| [Accelerated Understanding（Latent Space，09-04）](videos/20260904-latent-space-accelerated-understanding-trillion-token-context.md) | **1 万亿训练 / 5 万亿推理上下文**的工程细节（FSDP 失效、22 TB、层放不进一个节点）；**多物理真的有迁移收益（同尺寸多领域 > 单领域独占全部参数）**；**物理反馈是稠密的 vs 语言的稀疏反馈**；**课程工程 vs "把互联网打乱了喂"**；**与视频式世界模型的明确划界（固定分辨率）** |
+
+### 说话人认定
+
+**六期全部只有 `>>` 或无任何标签**，各页页首都写了认定依据。最难的是 **Dwarkesh 那期（四人圆桌）**——本库只在有机械依据时点名（开场介绍、"我记得 OpenAI 早期"、"2012 年我还在上小学"、"这正是 Charlie 刚说的"、"我基本同意 Charlie 和 Beren"），**其余一律写"一位嘉宾"**，时间线里"5–10 年"和"2 年"那两位**未能确认**。a16z 那期的第二位主持人**推定为 Sarah Wang 但未证实**，页面已加限定。
+
+✅ **一处靠本库自身记录解决的认定**：[01:05:19] 说"我和普林斯顿学生 Jerry Han 做了这个调查"的是 **Dwarkesh 本人**——依据不在转录稿里，而在 [他的人物页](people/dwarkesh-patel.md)：2026-08-11 那期他自陈正在做这个实验，本库当时记成了一条可跟踪项目。
+
+### ✅ 一条被跟踪一个月的项目出结果了
+
+**数据 vs 架构的分离实验**（本库 2026-08-11 记为"结果尚未产出"）：⚠️ **数据约 12.0 倍算力效率增益、架构约 3.7 倍**，方向站在 Dwarkesh 那一侧；但**只累出 33 倍**（对不上 Epoch 的每年 3 倍 → 2000 倍），且 **Beren Millidge 当场给出根本性反驳：架构不是乘法增益，而是解锁旧架构到不了的区间**。本库在 [Dwarkesh 人物页](people/dwarkesh-patel.md) 与 [训练管线页](topics/llm-training-pipeline.md) 记为**"证据部分支持、争议未结"**。
+
+### 交叉链接
+
+**新建人物页 7 个**：[John Schulman](people/john-schulman.md)、[Beren Millidge](people/beren-millidge.md)、[Charlie O'Neill](people/charlie-oneill.md)、[Richard Socher](people/richard-socher.md)、[Stefano Ermon](people/stefano-ermon.md)、[Rene Haas](people/rene-haas.md)、[Ali Ghodsi](people/ali-ghodsi.md)。
+**更新人物页 5 个**：[dwarkesh-patel](people/dwarkesh-patel.md)（新增 09-11 一行 + Jerry Han 项目结果）、[latent-space-hosts](people/latent-space-hosts.md)（两行）、[no-priors-hosts](people/no-priors-hosts.md)（两行）、[a16z](people/a16z.md)（Casado 的 pacing 论证原始版本 + 自催化术语纠正 + 收录表一行）、[anima-anandkumar](people/anima-anandkumar.md)（整节 09-04 更新：那堵墙她自己给了答案）。
+**更新主题页 11 个**：ai-for-ai-and-auto-research、llm-training-pipeline、evaluation-and-benchmarks、china-us-ai、llm-security、ai-infrastructure、open-source-infrastructure、ai-business-and-value-capture、using-llms-in-practice、ai-and-jobs、ai-for-science、physical-ai-and-robotics。
+
+### ⚠️ 本次新增的三组跨期直接对话，值得单记
+
+- **RSI 三连变四连**：09-11（三位在训模型的人拆技术前提）、09-14（Socher 在卖 RSI 并已放出战果）、09-18（Ghodsi 给四条外部判据 / Casado 给术语纠正），再加上此前的 09-17（Noam Brown）。⚠️ **四份材料互相点名，而分歧焦点很干净：auto research 的成功能不能外推成 RSI。** [Charlie O'Neill 的"不对称性正在用完"正好解释了 Socher 的战果为什么集中在 kernel 与超参这类任务上。](people/charlie-oneill.md)
+- **transformer 的默认地位同周被两条路线从两侧攻击**：**Ermon 攻推理负载的形状（扩散）**，**Anandkumar 攻上下文与分辨率（neural operator）**——⚠️ 而 **Rene Haas 的全部供应链判断恰恰建在"只要 transformer 还是 AI 的能量单位"这个前提上**。三页互相链接。
+- **"单一栽培"这个词被用在两个相反的诉求上**：Schulman 担心**大家都从 Claude 蒸导致风格趋同**；Socher 欢迎**不同社会把 AI 对齐到不同价值以避免"对齐的单一栽培"**。本库并列记录。
+
+### ⚠️ 本次未核实、只照录的内容
+
+Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两天"）与 you.com 的 finance search 基准；Ermon 的 Mercury 对标（haiku / flash / mini、nano 档）与 20–30% 延迟敏感用例估计；Haas 的 98.5% 毛利率、80–90% 工程师日用率、员工地域分布；Ghodsi 的训练成本 50–100 亿 / 复现 1/20、每 6 个月降到 1/10、开源 5%/60%、Decagon 90%、Neon 90%、harness 2 倍；Accelerated Understanding 的全部上下文与参数量级；主持人转述的"OpenAI 自演化 kernel 砍 80% 成本"。**各视频页均附了自动字幕专名对照表，拼写未核实的照录并标 ⚠️。**

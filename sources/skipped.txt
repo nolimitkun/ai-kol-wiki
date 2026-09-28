@@ -64,3 +64,10 @@ HKZdte6exaw  # a16z: How the Internet Turned Biohacking Into a Cultural Obsessio
 VF90rBzl26E  # All-In: Steve Hilton & Spencer Pratt 谈加州政治、油价、选票（通篇州政治）
 VTF6p0U98ek  # All-In: Jared Isaacman 谈 NASA 与太空探索（航天政策为主）
 SwBCPBNe_60  # All-In: Nick Shirley 揭政府欺诈、起诉加州（调查报道/政治）
+
+# ── 2026-09-28 巡检：非 AI 主题 / AI 深度不足 ──────────────────
+f6cjAEr08qk  # Dwarkesh: Sarah Paine 谈"怎么打赢一场战争"（军事史，无 AI；同频道 Sarah Paine 另一期已在上面）
+s7d2d8FhevU  # Lex #502: 精神病学、精神病院、ECT、脑白质切除、弗洛伊德与荣格（医学史，无 AI 内容）
+2Jj1SxI3r7Q  # No Priors: Valar Atomics（核能为主；同公司另一期 5Xvbq_zvOQ4 已按同理由跳过）
+7HXqMepjvy8  # No Priors: Max Hodak 谈恢复视力与重构大脑（神经接口/生物工程为主，AI 深度不足）
+YscDZpVF4CQ  # No Priors: Eon（云备份/遗留数据基础设施，AI 深度不足）

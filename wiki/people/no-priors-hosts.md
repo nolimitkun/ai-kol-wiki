@@ -46,6 +46,8 @@
 | 2026-07-31 | [Netic：给"让世界运转的生意"造自主企业](../videos/20260731-no-priors-netic-autonomous-enterprise.md) | [Melisa Tokmak（Netic）](melisa-tokmak.md)（Elad Gil 主问） |
 | 2026-08-06 | [追逐万亿美元公司、创始人野心、Token 预算与监管俘获](../videos/20260806-no-priors-trillion-dollar-token-budgets.md) | **无嘉宾**（双主播自谈） |
 | 2026-08-13 | [Chess.com 与"机器超越人类之后"：一个跑了 30 年的自然实验](../videos/20260813-no-priors-chesscom-human-skill.md) | [Erik Allebest（Chess.com）](erik-allebest.md)（Sarah Guo 独立主持） |
+| 2026-09-03 | [token 工厂之外的那些卡车、供应链还要紧三到五年](../videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md) | [Rene Haas](rene-haas.md)（Arm CEO / SoftBank Group International；双主持） |
+| 2026-09-18 | [扩散模型为什么会赢下推理](../videos/20260918-no-priors-stefano-ermon-diffusion-inference.md) | [Stefano Ermon](stefano-ermon.md)（Inception CEO / 斯坦福；Sarah Guo 独立主持） |
 
 ## ⚠️ 一处需要标注的利益相关
 来源：[No Priors 2026-07-31](../videos/20260731-no-priors-netic-autonomous-enterprise.md)

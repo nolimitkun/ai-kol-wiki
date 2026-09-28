@@ -37,6 +37,8 @@
 | 2026-08-11 | [生物学正在变成软件：蛋白质设计的"中性软件工厂"](../videos/20260811-latent-space-chai-discovery-protein-design.md) | [Matt McPartlon & Neil Patil](chai-discovery.md)（Chai Discovery）⚠️ **"AI for science" 子系列，非 swyx / Alessio 主持** |
 | 2026-08-26 | [物理一出现 Transformer 就撞墙：神经算子与 FourCastNet](../videos/20260826-latent-space-anandkumar-neural-operators.md) | [Anima Anandkumar](anima-anandkumar.md)（Caltech）⚠️ **"AI for science" 子系列** |
 | 2026-09-02 | [推理前沿：从 100 到 10000 tokens/秒](../videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md) | [Sean Lie](sean-lie.md)（Cerebras CTO，录于 Hot Chips 次日） |
+| 2026-09-04 | [一万亿 token 上下文，以及物理世界的"一个模型"](../videos/20260904-latent-space-accelerated-understanding-trillion-token-context.md) | [Anima Anandkumar](anima-anandkumar.md) & Benedikt Jenik（Accelerated Understanding）⚠️ **"AI for science" 子系列，RJ + Brandon 主持；是 08-26 那期的续集** |
+| 2026-09-14 | [Eureka 机器、auto research 的第一批战果，以及"智能的上界"](../videos/20260914-latent-space-richard-socher-recursive-self-improvement.md) | [Richard Socher](richard-socher.md)（Recursive / you.com；swyx + Vibhu） |
 | 2026-09-18 | [从 302 个神经元的线虫到硬件感知架构搜索](../videos/20260918-latent-space-liquid-ai-ramin-hasani.md) | [Ramin Hasani](ramin-hasani.md)（Liquid AI CEO；swyx + 新任 head of editorial Richard） |
 | 2026-09-25 | [OpenRouter × Stripe：分发短板与 10 万亿 token 经济](../videos/20260925-latent-space-openrouter-stripe-token-economy.md) | [Alex Atallah & Anjney Midha](openrouter-atallah-midha.md)（OpenRouter CEO / a16z GP；swyx 主持，录于 Midha 家中） |
 | 2026-09-25 | [Runway：世界模型、机器人与神经操作系统](../videos/20260925-latent-space-runway-world-models.md) | [Anastasis Germanidis](anastasis-germanidis.md)（Runway 联合创始人兼 CTO；swyx + Vibhu） |

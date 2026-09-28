@@ -101,6 +101,13 @@
 - [Dina Powell McCormick](people/dina-powell-mccormick.md) — Meta 总裁兼副董事长，前白宫副国家安全顾问：数据中心的在地账本、教师 5 万美元支票的税收机制、五周把人送上工地、工会转向
 - [Alex Atallah & Anjney Midha](people/openrouter-atallah-midha.md) — OpenRouter CEO / a16z GP：本库第一份来自模型路由中间层的材料——"checkpoint 做完然后一片寂静"、Google 的隐形分发优势、3 个月一轮的替代摆动、agentic fraud 与 10 万亿 token 流
 - [Anastasis Germanidis](people/anastasis-germanidis.md) — Runway 联创兼 CTO：scaling 视频预测就够了、Physics IQ、界面世界模型与神经操作系统、第三人称视频是机器人最大数据源、lucid dream test
+- [John Schulman](people/john-schulman.md) — Thinking Machines 首席科学家、OpenAI 联创（RLHF）：对齐是最后一份工作、环境的难度轴 vs 真实性轴、蒸馏对抗集中化、从 Claude 蒸出来的单一栽培
+- [Beren Millidge](people/beren-millidge.md) — Zyphra CTO：RL 有效是因为信噪比而非 bits 多、mid-training 已到 80%、架构不是乘法增益而是解锁新区间、路由服务数据给了完美 prompt 分布
+- [Charlie O'Neill](people/charlie-oneill.md) — Baseten 模型训练负责人：累积型 vs 非稳态任务（"RSI 恰好比当律师助理更容易"）、环境的不对称性正在用完、视野泛化而非横向泛化、Cursor 在线 REINFORCE 的实现细节
+- [Richard Socher](people/richard-socher.md) — Recursive 联创 / you.com CEO，GloVe & decaNLP 作者：auto research ≠ RSI、nanochat 与 kernel 的第一批战果、harness 里的 30 个 bug、人类中心的定义给基准设了上界、十个智能空间
+- [Stefano Ermon](people/stefano-ermon.md) — Inception CEO / 斯坦福，扩散模型奠基者之一：自回归推理串行且 memory bound、"更并行的方案最终会赢"、扩散 LLM 换掉定制芯片、服务引擎即护城河
+- [Rene Haas](people/rene-haas.md) — Arm CEO / SoftBank Group International：token 工厂之外的那些卡车、AI 吃掉的是验证不是设计、"不可测就不可训练"、供应链紧张还有三到五年、下一个瓶颈是数据中心本身
+- [Ali Ghodsi](people/ali-ghodsi.md) — Databricks 联创兼 CEO：RSI 的四个判据、pacing 的公地悲剧辩护、CVE 武器化从年到小时、"模型够聪明但缺 context"、ontology 即离线索引、harness 差 2 倍成本
 
 ## 主题
 
@@ -139,6 +146,7 @@
 - 2026-08-11 [Ryan Greenblatt：AI 能自动化 AI 研究之后会发生什么](videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md)
 - 2026-08-25 [Dylan Patel：两家实验室很快会控制世界上大部分"劳动力"——算力集中、单位经济学、$11T capex 与第二次沃尔克冲击](videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
 - 2026-09-01 [Ajeya Cotra：Hugging Face 事件的调查者本人——1200 个 agent 的秘密留言板](videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md)
+- 2026-09-11 [三位研究者辩 RSI：bits 从哪来、环境阶梯多难爬、以及三人相差 2–3 倍的时间线](videos/20260911-dwarkesh-rsi-debate-schulman-millidge-oneill.md)（John Schulman、Beren Millidge、Charlie O'Neill；四人圆桌）
 - 2026-09-17 [Noam Brown：1 万 agent 解千禧难题、多智能体的训练取舍，以及 RSI 怎么验收](videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md)
 
 ### Lex Fridman Podcast
@@ -189,6 +197,8 @@
 - 2026-07-31 [Netic（Melisa Tokmak）：给"让世界运转的生意"造自主企业](videos/20260731-no-priors-netic-autonomous-enterprise.md)
 - 2026-08-06 [追逐万亿美元公司、创始人野心、Token 预算与监管俘获](videos/20260806-no-priors-trillion-dollar-token-budgets.md)（双主播自谈，无嘉宾）
 - 2026-08-13 [Chess.com（Erik Allebest）：机器超越人类之后——一个跑了 30 年的自然实验](videos/20260813-no-priors-chesscom-human-skill.md)（Sarah Guo 独立主持）
+- 2026-09-03 [Rene Haas（Arm CEO）：token 工厂之外的那些卡车、AI 吃掉的是验证、供应链还要紧三到五年](videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md)
+- 2026-09-18 [Stefano Ermon（Inception）：扩散模型为什么会赢下推理](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md)（Sarah Guo 独立主持）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
@@ -208,6 +218,8 @@
 - 2026-08-11 [Chai Discovery：生物学正在变成软件——蛋白质设计的"中性软件工厂"](videos/20260811-latent-space-chai-discovery-protein-design.md)（"AI for science" 子系列，非 swyx / Alessio 主持）
 - 2026-08-26 [Anima Anandkumar：物理一出现 Transformer 就撞墙——神经算子与 FourCastNet](videos/20260826-latent-space-anandkumar-neural-operators.md)（AI for science 子系列）
 - 2026-09-02 [Sean Lie（Cerebras CTO）：推理前沿从 100 到 10000 tokens/秒](videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)
+- 2026-09-04 [Accelerated Understanding：一万亿 token 上下文、物理世界的"一个模型"、稠密的物理反馈](videos/20260904-latent-space-accelerated-understanding-trillion-token-context.md)（Anima Anandkumar & Benedikt Jenik；AI for science 子系列）
+- 2026-09-14 [Richard Socher：Eureka 机器、auto research 的第一批战果、智能的上界](videos/20260914-latent-space-richard-socher-recursive-self-improvement.md)
 - 2026-09-18 [Ramin Hasani（Liquid AI）：从 302 个神经元的线虫到硬件感知架构搜索](videos/20260918-latent-space-liquid-ai-ramin-hasani.md)
 - 2026-09-25 [OpenRouter × Stripe：分发是模型实验室最被低估的短板、10 万亿 token 经济的安全命题](videos/20260925-latent-space-openrouter-stripe-token-economy.md)（Alex Atallah & Anjney Midha）
 - 2026-09-25 [Runway：把视频预测推到世界模型、界面世界模型与神经操作系统、第三人称视频与机器人](videos/20260925-latent-space-runway-world-models.md)（Anastasis Germanidis）
@@ -246,4 +258,5 @@
 - 2026-09-08 [OpenAI 的两位数学家谈 Astra 的数学结果：球填充、非 sofic 群，以及"AI 的证明为什么都很短"](videos/20260908-a16z-openai-math-reasoning-astra.md)
 - 2026-09-14 [OpenAI 总裁谈"跨进 AGI 时代"意味着什么（Greg Brockman，Ben Horowitz & Erik Torenberg 主持）](videos/20260914-a16z-greg-brockman-agi-era.md)
 - 2026-09-09 [衡量前沿智能的竞赛：第三方评估公司的生意与 RSI 指数](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)（Vals AI，Ben Horowitz 主持）
+- 2026-09-18 [AI 公司为什么会想减速？RSI 的四个判据、自催化 ≠ RSI、ontology 即离线索引](videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md)（Ali Ghodsi × Martin Casado）
 - 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）

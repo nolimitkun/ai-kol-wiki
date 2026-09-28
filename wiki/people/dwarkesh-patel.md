@@ -20,6 +20,7 @@
 | 2026-07-10 | [General relativity from first principles](../videos/20260710-dwarkesh-adam-brown-general-relativity.md) | Adam Brown |
 | 2026-08-11 | [AI 能自动化 AI 研究之后会发生什么](../videos/20260811-dwarkesh-ryan-greenblatt-recursive-self-improvement.md) | [Ryan Greenblatt](ryan-greenblatt.md)（Redwood Research） |
 | 2026-09-01 | [Hugging Face 事件的调查者本人：1200 个 agent 的秘密留言板](../videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) | [Ajeya Cotra](ajeya-cotra.md)（METR） |
+| 2026-09-11 | [三位研究者辩 RSI：距离递归自我改进还有多远](../videos/20260911-dwarkesh-rsi-debate-schulman-millidge-oneill.md) | [John Schulman](john-schulman.md)（Thinking Machines）、[Beren Millidge](beren-millidge.md)（Zyphra）、[Charlie O'Neill](charlie-oneill.md)（Baseten）⚠️ **四人圆桌，本库首次** |
 | 2026-09-17 | [1 万 agent 解千禧难题、多智能体的训练取舍，以及 RSI 怎么验收](../videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md) | [Noam Brown](noam-brown.md)（OpenAI） |
 
 > ⚠️ **2026-09 的这两期构成本库唯一一组"同一主持人、相隔 16 天、同一事件的两侧"的材料**：Ajeya Cotra 是 **Hugging Face 事件的外部调查者**，Noam Brown 是 **OpenAI 内部做多智能体的人**。应当一起读。
@@ -34,7 +35,8 @@
 **他在本期贡献的、值得单独引用的三条追问**（不是嘉宾的观点，是他的）：
 
 1. ⚠️ **"数据产业才是关键驱动"**：GPT-3 到现在真正的变化是建起了一个**几百亿美元的数据产业**，把各学科专家判断编码成 RL 环境和 SFT 轨迹。他还给了市场价格证据——**据 Business Insider，Google 为 Mechanize 付了将近 20 亿美元**。⚠️ 本库记为**与嘉宾未解决的分歧**。
-   - 他正在与本科生 **Jerry Han** 做一个分离实验：**用 2019 至今各代算法配方训 2026 年的数据，再用当前最好的配方训 2019–2026 各年的数据文件**。⚠️ 结果尚未产出，**这是一条可跟踪的项目**。
+   - 他正在与本科生 **Jerry Han** 做一个分离实验：**用 2019 至今各代算法配方训 2026 年的数据，再用当前最好的配方训 2019–2026 各年的数据文件**。
+   - ✅ **2026-09-11 更新：这条项目出结果了**（[三人辩 RSI 那期](../videos/20260911-dwarkesh-rsi-debate-schulman-millidge-oneill.md) [01:05:19]–[01:07:26]）。他把全部配方 × 全部数据集两两配对跑完，结论是 ⚠️ **数据约 12.0 倍算力效率增益、架构约 3.7 倍**——**方向站在他那一侧**。但有三条限定必须一起记：① **实验在极小规模上做的，他自己明确提醒了**；② **累出来只有 33 倍，而 Epoch 一类"每年 3 倍"的估计七年该有 2000 倍以上，少掉的约 100 倍他归给尺度依赖与 post-training**；③ ⚠️ **[Beren Millidge](beren-millidge.md) 当场给出根本性反驳：架构不是乘法式增益，而是解锁新区间**——"没有 GQA，百万上下文贵到不可能，于是你根本用不上那批数据"，**在 2K 上下文上测架构，架构什么都没解锁，数据自然看起来更重要**。**本库记为"证据部分支持、争议未结"。**
 2. ⚠️ **数学的类比有上限**："即便在数学里，我们还没看到很惊艳的**新理论**——看到很多可验证的具体结果（比如给猜想找反例），**但没看到'想出拓扑学'那种级别的东西**。"配套的一条："**到 2030 年低垂的果子都会被摘完**，scaling laws 在数学史上大概相当于笛卡尔发现直角坐标系。"
 3. ⚠️ **"对齐到谁？"——他从用户主权而非安全角度批评 Claude 宪法**。他的对照是律师：美国法律体系认定"每个人都有真正为其客户最佳利益工作的律师"时运转得最好。**"我把 Claude 宪法读成非常明确地不做我的守护天使。"** 他的落点是资产/权利层面的：在一个 AI 全面超过人类的世界里，"**我们做资本的好管家、更清楚地投票、理解这个世界正在发生什么——所有这些能力都会由 AI 中介**"。
    - 配套的一条制度主张：**如果采用他想要的那种宪法，就不该追究 AI 公司对模型所犯罪行的责任，"也许我们该追究终端用户的责任"。**
