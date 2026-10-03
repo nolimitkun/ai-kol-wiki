@@ -1194,3 +1194,31 @@ Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两�
 ⚠️ **一处与本库既有判断正面相反，已并列记录不作裁决**：DHH 认为 **agent 的 PR 质量已超过中位人类贡献者**、拒绝 agent 的 PR 心理成本低，所以"此刻是开源维护史上最好的时候"；[游凯超（vLLM）](people/you-kaichao.md)认为 **AI slop 打破了开源的基本假设**。本库在 [open-source-infrastructure](topics/open-source-infrastructure.md) 里加了一张"为什么两边会得出相反结论"的角色对照表（单人 omakase 发行版 vs 多方协作的生产级推理引擎），并注明这是本库的读法、不是任何一方的话。
 
 ⚠️ **本次未核实、只照录的内容**：六模型横评的全部时间与美元成本（$550 / $46 / $55 / $23、45 分钟 / 1.5 小时 / 2 小时 45 分、9.6x 与 46x 加速、86 ms → 2 ms）；"Opus 5 的 system prompt 缩小 80%"（转述 Boris）；Shopify 的 Mikhail 关于"agent 审过的 PR 引发更少生产事故"的内部统计；他对 Fable 发布争议的解读；"某在训模型通过包管理器给自己发烟信号"的事件；Claude 拒译其移民文章与 Kimi K2.5 回答 1989 的对照；Linux 内核 AI 贡献量的抛物线曲线；Omarchy 的全部安装时间与体积数字（45 秒纪录、42 分钟 / 1 小时 35 分对照组、7.5 GB → 5.85 GB、1000+ PR、330 插件）；他引用的丹麦移民财政统计（非 AI 部分，本库只在视频页备索、不在其它页引用）。模型名（Fable / Sol / Luna / Opus 5 / Grok 4.6 / Kimi K3 / DeepSeek V4）与工具名（Herdr、Voxtype、mise、Fireworks 等）按字幕照录。
+
+## 2026-10-03 — 摄取 No Priors / Brian Armstrong（第二期）
+
+同日第二期，按发布日期取次旧的一期（2026-09-10，45 分钟，英文自动字幕，走 fetch.py 默认路径）。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [No Priors / Brian Armstrong（09-10）](videos/20260910-no-priors-brian-armstrong-agentic-finance.md) | 本库第一份来自**支付/交易所一侧**的 agent 经济材料：**给 agent 开无 KYC 的自托管账户**（"不要让 AI 成为 unbanked"）、与人类身份绑定的资金隔离子账户、**x402**（已捐入 Linux Foundation）；⚠️ **卡组织 30 美分固定费挡死 agent 微支付**＋**76% 的 agentic 交易低于 30 美分**这条金额分布；**这些钱主要买"向另一个专才 agent 取源数据"**（形态即一次 tool call）；⚠️ 企业侧的 **brain（按团队/仓库/个人分层、纠正必须写回、one-shot PR 接受率上升）**与内部 harness **Toshi 能自己付钱**；**CEO 自己派 10 个 agent 并行发功能**；"**被消灭的是任务，不是人**"对"公司会变小"的正面反驳；New Limit 的**模型选实验 → 池化筛选 → 动物模型 → 临床**与"打元问题而非症状" |
+
+### 说话人认定
+
+自动字幕，只有 `>>` 换轮标记、无姓名标签。**本期单主持**：开场独白与结尾致谢（[00:00:00]、[00:44:18]）均为 **Elad Gil**（Sarah Guo 未出场），长段陈述与一切第一人称的 Coinbase / New Limit 内部事实为 Armstrong。⚠️ 片头对 New Limit 的介绍是主持人的话、不是 Armstrong 自述，页面上已注明。
+
+### 交叉链接
+
+**新建人物页 1 个**：[Brian Armstrong](people/brian-armstrong.md)。
+**更新人物页 1 个**：no-priors-hosts（收录表加一行，标注 Elad 独立主持）。
+**更新主题页 5 个**：ai-business-and-value-capture、using-llms-in-practice、ai-for-ai-and-auto-research、ai-and-jobs、ai-for-science。
+
+⚠️ **本次最需要分清的一处是术语**：Armstrong **自己用了 "recursive self-improvement" 这个词**，但他说的是**工程流程/组织的自改进**（brain + 纠正写回 ⇒ 一次成功的 PR 接受率上升），**模型权重完全不动**。本库在 [ai-for-ai-and-auto-research](topics/ai-for-ai-and-auto-research.md) 里把它单列为"第三种用法"，并写明**为什么它不能作为实验室侧 RSI 的证据**（改进载体不同、饱和点不同：这条机制的上限是"把人类评审里的隐性知识抽干"）。与此前 Kavak 的"把自改进的对象从模型换成组织"同类。
+
+⚠️ **本次新增的两组跨期张力**：
+- **大公司能不能吃到这轮生产率**——同日摄取的 [DHH](videos/20260826-lex-dhh-agentic-programming-omarchy.md) 认为 **10x–100x 只在"人直接对 agent、中间没有人类中介"时出现**，因此大组织结构性地拿不到；Armstrong（在管一家数千人上市公司）预期**既有人员整体加速、公司不会变小**。两页互相链接，不作裁决。
+- **并行的两种形态**——DHH 是**资深程序员手动开 16 个线程**；Coinbase 这边是**把"计划—分派—选便宜模型"也交给模型**，人只在终点 review。
+
+⚠️ **本次未核实、只照录的内容**：76% 低于 30 美分、"一秒内一美分内"的稳定币性能口径、内部 10 万合规案例训练的小模型跑赢前沿模型、88% 收入来自非比特币交易、预测市场约 1 亿美元收入年化与季度环比 100%+、全球 40 亿人无券商账户、crypto 占全球 GDP 约 0.5% / 7 亿人持有 / 月活 5000 万–1 亿、New Limit 的全部进度与市场估计（人源化小鼠、非人灵长类、I 期明年、ALD 约 200 亿美元、皮肤约万亿美元、实验室 50–60 人）、Pew 的 80% 胚胎编辑支持率。**另注一处利益相关**：主持人 Elad Gil 是活跃投资人并参加过 Armstrong 办的晚宴；Armstrong 在谈自家公司及自己投资的 Prospera 与 Preventative。

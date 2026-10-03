@@ -108,6 +108,7 @@
 - [Stefano Ermon](people/stefano-ermon.md) — Inception CEO / 斯坦福，扩散模型奠基者之一：自回归推理串行且 memory bound、"更并行的方案最终会赢"、扩散 LLM 换掉定制芯片、服务引擎即护城河
 - [Rene Haas](people/rene-haas.md) — Arm CEO / SoftBank Group International：token 工厂之外的那些卡车、AI 吃掉的是验证不是设计、"不可测就不可训练"、供应链紧张还有三到五年、下一个瓶颈是数据中心本身
 - [Ali Ghodsi](people/ali-ghodsi.md) — Databricks 联创兼 CEO：RSI 的四个判据、pacing 的公地悲剧辩护、CVE 武器化从年到小时、"模型够聪明但缺 context"、ontology 即离线索引、harness 差 2 倍成本
+- [Brian Armstrong](people/brian-armstrong.md) — Coinbase 联创兼 CEO / New Limit 联创：给 AI 开账户（无 KYC 的自托管钱包）、x402、76% 的 agent 交易低于 30 美分、按团队/仓库/个人建 brain 且纠正必须写回、"被消灭的是任务不是人"、表观遗传重编程
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 
 ## 主题
@@ -200,6 +201,7 @@
 - 2026-08-06 [追逐万亿美元公司、创始人野心、Token 预算与监管俘获](videos/20260806-no-priors-trillion-dollar-token-budgets.md)（双主播自谈，无嘉宾）
 - 2026-08-13 [Chess.com（Erik Allebest）：机器超越人类之后——一个跑了 30 年的自然实验](videos/20260813-no-priors-chesscom-human-skill.md)（Sarah Guo 独立主持）
 - 2026-09-03 [Rene Haas（Arm CEO）：token 工厂之外的那些卡车、AI 吃掉的是验证、供应链还要紧三到五年](videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md)
+- 2026-09-10 [Brian Armstrong（Coinbase）：给 AI 开银行账户——agentic finance、x402 与公司内部的"brain"](videos/20260910-no-priors-brian-armstrong-agentic-finance.md)（Elad Gil 独立主持）
 - 2026-09-18 [Stefano Ermon（Inception）：扩散模型为什么会赢下推理](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md)（Sarah Guo 独立主持）
 
 ### Latent Space
