@@ -108,6 +108,7 @@
 - [Stefano Ermon](people/stefano-ermon.md) — Inception CEO / 斯坦福，扩散模型奠基者之一：自回归推理串行且 memory bound、"更并行的方案最终会赢"、扩散 LLM 换掉定制芯片、服务引擎即护城河
 - [Rene Haas](people/rene-haas.md) — Arm CEO / SoftBank Group International：token 工厂之外的那些卡车、AI 吃掉的是验证不是设计、"不可测就不可训练"、供应链紧张还有三到五年、下一个瓶颈是数据中心本身
 - [Ali Ghodsi](people/ali-ghodsi.md) — Databricks 联创兼 CEO：RSI 的四个判据、pacing 的公地悲剧辩护、CVE 武器化从年到小时、"模型够聪明但缺 context"、ontology 即离线索引、harness 差 2 倍成本
+- [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 
 ## 主题
 
@@ -157,6 +158,7 @@
 - 2026-05-06 [#496 FFmpeg 与开源](videos/20260506-lex-ffmpeg.md)
 - 2026-05-29 [#497 Don Lincoln：物理学之谜](videos/20260529-lex-don-lincoln-physics.md)（物理）
 - 2026-06-30 [#498 罗马帝国与拜占庭](videos/20260630-lex-kaldellis-roman-empire.md)（历史）
+- 2026-08-26 [#501 DHH：从手工雕琢 Ruby 到 100% agent 写码，以及"可塑操作系统"](videos/20260826-lex-dhh-agentic-programming-omarchy.md)
 
 ### 张小珺·商业访谈录
 - 2026-04-15 [广密·全球大模型季报第 9 集：Coding 是 AGI 第二幕、御三家真相、模型即 OS](videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)

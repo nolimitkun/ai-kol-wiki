@@ -1164,3 +1164,33 @@ lint 新增的时间戳核验遗留的 24 个人物页、610 处"没有声明信
 ### ⚠️ 本次未核实、只照录的内容
 
 Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两天"）与 you.com 的 finance search 基准；Ermon 的 Mercury 对标（haiku / flash / mini、nano 档）与 20–30% 延迟敏感用例估计；Haas 的 98.5% 毛利率、80–90% 工程师日用率、员工地域分布；Ghodsi 的训练成本 50–100 亿 / 复现 1/20、每 6 个月降到 1/10、开源 5%/60%、Decagon 90%、Neon 90%、harness 2 倍；Accelerated Understanding 的全部上下文与参数量级；主持人转述的"OpenAI 自演化 kernel 砍 80% 成本"。**各视频页均附了自动字幕专名对照表，拼写未核实的照录并标 ⚠️。**
+
+## 2026-10-03 — 摄取 Lex #501（DHH），并跳过 2 个非 AI 候选
+
+`discover.py` 报出 **25 个候选**（另有 17 个已在 skipped.txt）。逐条查 upload_date 后确认这是 **08-26 到 10-03 累积的积压**（latent-space 7 / a16z 9 / all-in 4 / no-priors 3 / dwarkesh 1 / lex 1）。本次按"发布日期从旧到新"取，**最旧的一期就是 Lex #501（2026-08-26，316 分钟）**。
+
+同时把 **2 个候选写进 `skipped.txt`**：Dwarkesh × Si Sheppard（西班牙征服者灭两大帝国，军事史无 AI）、All-In × Jake Paul & The Chainsmokers（名人投资/拳击/音乐，AI 仅泡沫一段）。其余 22 个留作后续，未跳过。
+
+**本期有 YouTube 人工英文字幕，走 fetch.py 默认路径，未用 whisper。** 转录稿 293k 字符 / 318 个锚点。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [Lex #501 / DHH（08-26）](videos/20260826-lex-dhh-agentic-programming-omarchy.md) | **带日期的 agentic 三阶段划分**（分界点定在 2025-11-24 Opus 4.5）；**"代码之美的经济回报在衰减"及其会过期的限定（token 稀缺）**；"瓶颈是人类带宽不是实现"＋"10x 只在无人类中介时出现"；**Linux 的历史性翻转**（配置文件/CLI/晦涩报错从缺点变成 agent 的必需）与**可塑操作系统**；**一次六模型同题横评**（Python→Rust 整库移植，附时间与美元成本）；**"开源维护此刻是史上最好的时候"**（与本库既有判断正面相反）；"没有积累——离开一年两周就能追上"；**"现在的编程语言是英语"** |
+
+### 说话人认定
+
+人工英文字幕，**无 `SPEAKER_XX` 标签，只有 `-` 换轮标记**。两人分工极清晰（Lex 提问/转场，DHH 长段陈述），且 DHH 的自述（Rails、37signals、丹麦、赛车、Omarchy）不可替代，故**按内容认人**，并在视频页页首写明依据与片头独白锚点。
+
+### 交叉链接
+
+**新建人物页 1 个**：[DHH](people/dhh.md)。
+**更新人物页 1 个**：lex-fridman（收录表加一行）。
+**更新主题页 7 个**：using-llms-in-practice、ai-and-jobs、llm-os、open-source-infrastructure、llm-security、llm-psychology、evaluation-and-benchmarks、ai-business-and-value-capture。
+
+⚠️ **本次最值得单记的是一组逐项对照**：DHH 与 [Peter Steinberger](people/peter-steinberger.md) 是本库两个最接近的样本（**二十年手艺人在 2026 年初转向 agentic engineering**），但在**七项上系统性分歧**：输入方式（打字 vs 语音）、并行度（16 线程 vs 4–10 agent）、对 MCP（笨重但仍需要 vs 已死）、代码之美（回报衰减但 token 稀缺期仍值得 vs 为 agent 优化代码库）、商业化去向（**不需要钱、拒绝被收购的设想 vs 在 Meta 与 OpenAI 之间二选一**）、对 Anthropic（有保留但继续用 vs 对封号不满）、术语（讨厌 agentic 也不认为该叫 programming vs 自称 agentic engineering）。视频页里做了表。
+
+⚠️ **一处与本库既有判断正面相反，已并列记录不作裁决**：DHH 认为 **agent 的 PR 质量已超过中位人类贡献者**、拒绝 agent 的 PR 心理成本低，所以"此刻是开源维护史上最好的时候"；[游凯超（vLLM）](people/you-kaichao.md)认为 **AI slop 打破了开源的基本假设**。本库在 [open-source-infrastructure](topics/open-source-infrastructure.md) 里加了一张"为什么两边会得出相反结论"的角色对照表（单人 omakase 发行版 vs 多方协作的生产级推理引擎），并注明这是本库的读法、不是任何一方的话。
+
+⚠️ **本次未核实、只照录的内容**：六模型横评的全部时间与美元成本（$550 / $46 / $55 / $23、45 分钟 / 1.5 小时 / 2 小时 45 分、9.6x 与 46x 加速、86 ms → 2 ms）；"Opus 5 的 system prompt 缩小 80%"（转述 Boris）；Shopify 的 Mikhail 关于"agent 审过的 PR 引发更少生产事故"的内部统计；他对 Fable 发布争议的解读；"某在训模型通过包管理器给自己发烟信号"的事件；Claude 拒译其移民文章与 Kimi K2.5 回答 1989 的对照；Linux 内核 AI 贡献量的抛物线曲线；Omarchy 的全部安装时间与体积数字（45 秒纪录、42 分钟 / 1 小时 35 分对照组、7.5 GB → 5.85 GB、1000+ PR、330 插件）；他引用的丹麦移民财政统计（非 AI 部分，本库只在视频页备索、不在其它页引用）。模型名（Fable / Sol / Luna / Opus 5 / Grok 4.6 / Kimi K3 / DeepSeek V4）与工具名（Herdr、Voxtype、mise、Fireworks 等）按字幕照录。
