@@ -1248,3 +1248,29 @@ Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两�
 ⚠️ **与本库 RLVR 主线的正面冲突**：Noam Brown、Schulman、Charlie O'Neill 等材料都在讨论**如何把 RLVR / 环境做得更好**；Almeida 说"**凡落进 RLVR 这一类的按定义就是基准**"、"**对我们这个形状零才是最优的 RLVR 量**"，并据此反驳 pacing the frontier 的前提。分歧不在结论而在**任务定义**，两页互相链接。
 
 ⚠️ **本次未核实、只照录的内容**：发布一周内每天 1 万亿 token、发布视频 36–38M 观看（及其给出的 74M/57M 对照）、"uptime 的 9 比 Anthropic 多"、InstructGPT 上线后"立刻拿到当时 LLM 市场份额的一半"、"我们的 cognitive core 比任何人的都更不 jagged"、"如果 TypeSafe 消失别人要一两年才追上"、Discord 10 万人、"模型版本间差异比 string 模型连调两次还小"、Boris 式转述之外的全部内部史（"政变"、"OpenAI 更擅长追赶"）、以及**主持人关于 pacing 推动"更多是政治定位、指向 2028 年大选"的私下转述**（他自己限定为"只是那个房间的讨论"）。模型与术语名（Jev / Jev 1.13.0 / RLCD / nool / score / choice / "KV cache rules everything around me"）按字幕照录。
+
+## 2026-10-03 — 摄取 Latent Space / John Platt（第四期，本晚最后一期）
+
+同日第四期（2026-09-22，121 分钟，英文自动字幕，走 fetch.py 默认路径）。**本晚按"最多 4 期"的上限收尾，`discover.py` 报出的其余 19 个候选留给之后几晚**（latent-space 5 / a16z 9 / all-in 2 / no-priors 2 / lex 0 / dwarkesh 0）。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [Latent Space / John Platt（09-22）](videos/20260922-latent-space-john-platt-era-scorable-tasks.md) | 本库第一份**大厂通用 AI-for-science 系统的一手工程描述**：**scorable task 映射**（"我想要一段代码使某个分数最大"）；**ERA 的内部结构**——专用 harness + Monte Carlo 树搜索 + **UCB 乐观选点**（估"变异后的 95 分位"而非贪心）+ 候选重组，**默认一次 10 个叶子因为并行太多会失去交叉学习**；⚠️ **为什么进化式代码搜索这次才成立**（"代码空间里的随机变异一文不值，就像 DNA"——这次内循环本身是有世界知识的 AI）；⚠️ **"在 Gemini 2.0 上这件事会是不可能的"**这条能力代际依赖；**predictive vs descriptive model**（牛顿的苹果与行星）；**天气 vs 气候**作为"问题是否封闭/数据是否覆盖"的通用判据；**Goodhart 对每个排行榜单独生效** + **人类自己 reward hack 的实例**（contrail 竞赛里被利用的半像素标签误差）；**ERA 解掉了卡他们两年的 contrail 反事实问题**；**FireSat**（50–80 颗中波红外低轨卫星、15–20 分钟、5 米级）；**taste 与 rigor 的两极分化**与**"过拟合到生产力"**＋ 20% 时间；**"能接受 JSON blob 的通用实验室"**这条需求侧提法 |
+
+### 说话人认定
+
+自动字幕，只有 `>>` 换轮标记、无姓名标签。本期是**该频道 AI for science 子系列的双主持**（片头"My co-host R.J."，[00:01:00]）——本库此前已记录**这两位主持本身是 AI-bio 创业者**，所以**页面上明确标注"主持人的技术判断是同行意见、不是提问框架"**（本期有两处被照录：生物里"永远先跑简单基线、很多问题抗拒任何超出简单基线的东西"，以及"还原论形状才可信、黑箱说'细胞就是这么工作的'我没法检查"）。所有第一人称的 Google / Caltech / ERA 内部事实为 Platt。
+
+### 交叉链接
+
+**新建人物页 1 个**：[John Platt](people/john-platt.md)。
+**更新人物页 1 个**：latent-space-hosts（收录表加一行，标注子系列）。
+**更新主题页 5 个**：ai-for-science、ai-for-ai-and-auto-research、evaluation-and-benchmarks、ai-and-jobs、physical-ai-and-robotics。
+
+⚠️ **本次对本库 auto-research 争论最有用的一条是能力边界**：Platt 说 ERA **不会从零发现一种全新的物理模型**（"如果它不知道 Clebsch–Gordan 系数那就没办法"），**但极擅长把论文里的方法迁移到你的问题上、甚至逆向重建一篇论文**。本库把它记为比"AI 会不会做科研"更可操作的提法——**能力定位在迁移与组合，而不是发现新原语**；而**真实战果（卡两年的 contrail 反事实模型）恰好落在"搜混杂因子的组合"这类工作上**，与 [Charlie O'Neill 的"累积型 vs 非稳态任务"](people/charlie-oneill.md) 判据一致。
+
+⚠️ **另一条值得单记的是"并行度有上限"**：ERA 默认只开 10 个叶子，理由是**并行太多就失去交叉学习**（"同时跑一千个，第 1 个看不到第 2 到 10 个在干什么"）。这与 [Noam Brown 的 1 万 agent 蜂群](videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md) 以及同日摄取的 [DHH 的 16 线程饱和点](videos/20260826-lex-dhh-agentic-programming-omarchy.md)、[Coinbase 的"一次派 10 个 agent"](videos/20260910-no-priors-brian-armstrong-agentic-finance.md) 构成本库第一组**关于"并行度为什么有上限"的横向材料**——三处给的理由都不同（交叉学习 / 人的处理带宽 / 任务可分解性）。
+
+⚠️ **本次未核实、只照录的内容**：contrails 占人为暖化约 1%、欧洲局部约 1 W/m² 与全球约 3 W/m²、1 万比 1 的凝结比、下降两个 flight level 的成本判断、2100 年 CO2 不确定性约 300 ppm、FireSat 的全部参数（50–80 颗、15–20 分钟、5 米/50 米、需制冷）、WHO 的每年约 30 万例野火烟雾超额死亡、CDC 竞赛成绩、"ERA + Antigravity 预印本尚未公开"、聚变"三年而不是三十年"的时间判断、Vera Rubin 天文台"六周 11000 颗小行星"、以及他的全部科学史回忆（1982 年费曼课、VAX 11/750 与 80 MB 硬盘、NeurIPS 源自 Snowbird、"我造了 convolutional net 这个词"、技术奥斯卡的 20 年时滞、量子路线图与 NISQ 判断）。专名拼写按字幕照录并在页末列了对照表（Michael Brenner、Rothermel、Lawson 判据、Preskill、Neven 等）。
