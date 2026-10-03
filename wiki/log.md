@@ -1222,3 +1222,29 @@ Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两�
 - **并行的两种形态**——DHH 是**资深程序员手动开 16 个线程**；Coinbase 这边是**把"计划—分派—选便宜模型"也交给模型**，人只在终点 review。
 
 ⚠️ **本次未核实、只照录的内容**：76% 低于 30 美分、"一秒内一美分内"的稳定币性能口径、内部 10 万合规案例训练的小模型跑赢前沿模型、88% 收入来自非比特币交易、预测市场约 1 亿美元收入年化与季度环比 100%+、全球 40 亿人无券商账户、crypto 占全球 GDP 约 0.5% / 7 亿人持有 / 月活 5000 万–1 亿、New Limit 的全部进度与市场估计（人源化小鼠、非人灵长类、I 期明年、ALD 约 200 亿美元、皮肤约万亿美元、实验室 50–60 人）、Pew 的 80% 胚胎编辑支持率。**另注一处利益相关**：主持人 Elad Gil 是活跃投资人并参加过 Armstrong 办的晚宴；Armstrong 在谈自家公司及自己投资的 Prospera 与 Preventative。
+
+## 2026-10-03 — 摄取 Latent Space / TypeSafe（第三期）
+
+同日第三期（2026-09-21，142 分钟，英文自动字幕，走 fetch.py 默认路径）。另把 Bill Gurley 那期（09-19，38 分钟）**fetch 后判定不收录**并写进 `skipped.txt`——他开场即明说"I'm not going to talk about AI"，全篇讲 COVID 起源与机构性根因分析失败，仅 3 处提到 AI。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [Latent Space / TypeSafe（09-21）](videos/20260921-latent-space-typesafe-jev-system-one-models.md) | 本库第一份主张"**根本不该把模型做成给人用的东西**"的材料：**消费者应该是代码**（system one 模型 / machine native）；⚠️ **RLHF 的 mode dropping**，以及由此解释"**LeCun 那张错误累积图为什么经验上不成立**"；**三个北极星的对照**（RLHF=取悦人类 / RLVR=优化基准"按定义就是基准" / RLCD=程序化可靠）；**"refusal 是一个 type error"** 与 capability vs safety alignment 的区分；**一家模型厂商公开拒绝公开基准**（附"当年每个实验室都有团队收集长得像 MMLU 的数据"）；**robustness>determinism** 及其 nonce 测法；**"部署后不改模型但不承诺 LTS"** 这条可事后检验的承诺；**三个 API 原语**（choice/score/nool）映射到编程原语；**"system message 就是恶心的全局变量"**；**"KV cache 的暴政"**（解释路由难、sub-agent 不 work、compaction 难）；**对 pacing the frontier 的前提级反驳**；**"大多数 neolab 是垃圾"**；**TFP +3% 作为北极星**与"反向 SaaS 末日" |
+
+### 说话人认定
+
+自动字幕，只有 `>>` 换轮标记、无姓名标签。**单主持（swyx）**：提问、"我们之前有一期和 Hugging Face 的 Clementine 聊过"、"我把 Jev 扔给一堆东西试过"等为主持人；所有第一人称的 TypeSafe / OpenAI 内部事实（InstructGPT、与 Sam 的对话、co-founder Eric 与 Sasha）为嘉宾。⚠️ **字幕把嘉宾名识别成 "Diego"**，页面统一写作 Diogo Almeida；多处脏话被静音/漏词，引用均为意译。⚠️ 另有一处（"政变"/"安全派接管了公司"）**字幕里两人表述交错、归属不完全清楚，页面上已注明只照录**。
+
+### 交叉链接
+
+**新建人物页 1 个**：[Diogo Almeida](people/diogo-almeida.md)。
+**更新人物页 1 个**：latent-space-hosts（收录表加一行）。
+**更新主题页 6 个**：llm-training-pipeline、evaluation-and-benchmarks、using-llms-in-practice、llm-security、ai-lab-culture、ai-business-and-value-capture。
+
+⚠️ **本次最重要的一处并列（已在 using-llms-in-practice 里做成表）**：**同日摄取的 DHH 与 Almeida 给出了几乎相反的使用建议**——DHH 说"**尽可能含糊**，先把东西变出来再去用它"，Almeida 说"**拆到最小语义单元**，每个都带阈值"。本库的读法是：两条都在各自位置上成立（**人在驾驶的 coding agent vs 跑在生产依赖里的决策**），**冲突只在被错位套用时出现**——把"尽可能含糊"用在后台依赖上会得到随机坏掉的软件，把"拆到最小语义单元"用在探索式开发上会退回瀑布式规格。
+
+⚠️ **与本库 RLVR 主线的正面冲突**：Noam Brown、Schulman、Charlie O'Neill 等材料都在讨论**如何把 RLVR / 环境做得更好**；Almeida 说"**凡落进 RLVR 这一类的按定义就是基准**"、"**对我们这个形状零才是最优的 RLVR 量**"，并据此反驳 pacing the frontier 的前提。分歧不在结论而在**任务定义**，两页互相链接。
+
+⚠️ **本次未核实、只照录的内容**：发布一周内每天 1 万亿 token、发布视频 36–38M 观看（及其给出的 74M/57M 对照）、"uptime 的 9 比 Anthropic 多"、InstructGPT 上线后"立刻拿到当时 LLM 市场份额的一半"、"我们的 cognitive core 比任何人的都更不 jagged"、"如果 TypeSafe 消失别人要一两年才追上"、Discord 10 万人、"模型版本间差异比 string 模型连调两次还小"、Boris 式转述之外的全部内部史（"政变"、"OpenAI 更擅长追赶"）、以及**主持人关于 pacing 推动"更多是政治定位、指向 2028 年大选"的私下转述**（他自己限定为"只是那个房间的讨论"）。模型与术语名（Jev / Jev 1.13.0 / RLCD / nool / score / choice / "KV cache rules everything around me"）按字幕照录。

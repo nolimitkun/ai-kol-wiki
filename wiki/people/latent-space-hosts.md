@@ -41,6 +41,7 @@
 | 2026-09-14 | [Eureka 机器、auto research 的第一批战果，以及"智能的上界"](../videos/20260914-latent-space-richard-socher-recursive-self-improvement.md) | [Richard Socher](richard-socher.md)（Recursive / you.com；swyx + Vibhu） |
 | 2026-09-18 | [从 302 个神经元的线虫到硬件感知架构搜索](../videos/20260918-latent-space-liquid-ai-ramin-hasani.md) | [Ramin Hasani](ramin-hasani.md)（Liquid AI CEO；swyx + 新任 head of editorial Richard） |
 | 2026-09-25 | [OpenRouter × Stripe：分发短板与 10 万亿 token 经济](../videos/20260925-latent-space-openrouter-stripe-token-economy.md) | [Alex Atallah & Anjney Midha](openrouter-atallah-midha.md)（OpenRouter CEO / a16z GP；swyx 主持，录于 Midha 家中） |
+| 2026-09-21 | [TypeSafe / Jev：让代码而不是人来消费模型](../videos/20260921-latent-space-typesafe-jev-system-one-models.md) | [Diogo Almeida](diogo-almeida.md)（TypeSafe 联创兼 CEO，前 OpenAI；swyx 独立主持） |
 | 2026-09-25 | [Runway：世界模型、机器人与神经操作系统](../videos/20260925-latent-space-runway-world-models.md) | [Anastasis Germanidis](anastasis-germanidis.md)（Runway 联合创始人兼 CTO；swyx + Vibhu） |
 
 > ⚠️ **2026-08-26 那期确认了 "AI for science" 子系列的主持人身份**：字幕里两人各自自报家门——**Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honakee**（Miraomics CTO 兼创始人，做空间转录组）。⚠️ 这与本库 2026-08-11 首次记录的那一组（`RJ Honiki` / `Mirror Omix`）**应为同一组人，只是自动字幕拼写不同**；本库两处拼写都保留，**不做统一认定**。

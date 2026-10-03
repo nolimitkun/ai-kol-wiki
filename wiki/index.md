@@ -109,6 +109,7 @@
 - [Rene Haas](people/rene-haas.md) — Arm CEO / SoftBank Group International：token 工厂之外的那些卡车、AI 吃掉的是验证不是设计、"不可测就不可训练"、供应链紧张还有三到五年、下一个瓶颈是数据中心本身
 - [Ali Ghodsi](people/ali-ghodsi.md) — Databricks 联创兼 CEO：RSI 的四个判据、pacing 的公地悲剧辩护、CVE 武器化从年到小时、"模型够聪明但缺 context"、ontology 即离线索引、harness 差 2 倍成本
 - [Brian Armstrong](people/brian-armstrong.md) — Coinbase 联创兼 CEO / New Limit 联创：给 AI 开账户（无 KYC 的自托管钱包）、x402、76% 的 agent 交易低于 30 美分、按团队/仓库/个人建 brain 且纠正必须写回、"被消灭的是任务不是人"、表观遗传重编程
+- [Diogo Almeida](people/diogo-almeida.md) — TypeSafe 联创兼 CEO（前 OpenAI / InstructGPT）：让代码而不是人来消费模型、RLHF 的 mode dropping、三个北极星（RLHF/RLVR/RLCD）、反公开基准、robustness>determinism、"KV cache 的暴政"、对 pacing the frontier 的前提级反驳
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 
 ## 主题
@@ -226,6 +227,7 @@
 - 2026-09-14 [Richard Socher：Eureka 机器、auto research 的第一批战果、智能的上界](videos/20260914-latent-space-richard-socher-recursive-self-improvement.md)
 - 2026-09-18 [Ramin Hasani（Liquid AI）：从 302 个神经元的线虫到硬件感知架构搜索](videos/20260918-latent-space-liquid-ai-ramin-hasani.md)
 - 2026-09-25 [OpenRouter × Stripe：分发是模型实验室最被低估的短板、10 万亿 token 经济的安全命题](videos/20260925-latent-space-openrouter-stripe-token-economy.md)（Alex Atallah & Anjney Midha）
+- 2026-09-21 [TypeSafe / Jev（Diogo Almeida）：让代码而不是人来消费模型——system one 模型、RLCD 与"反公开基准"](videos/20260921-latent-space-typesafe-jev-system-one-models.md)
 - 2026-09-25 [Runway：把视频预测推到世界模型、界面世界模型与神经操作系统、第三人称视频与机器人](videos/20260925-latent-space-runway-world-models.md)（Anastasis Germanidis）
 
 ### All-In Podcast
