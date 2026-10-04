@@ -30,13 +30,13 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-10-03（每次 CI 构建刷新）。
+> 自动生成于 2026-10-04（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 120 |
-| 人物页 | 108 |
-| 主题页 | 15 |
+| 视频转录稿 | 121 |
+| 人物页 | 109 |
+| 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
 
 各频道已收录期数：
@@ -44,7 +44,7 @@
 | 频道 | 期数 |
 |---|---|
 | Latent Space (swyx & Alessio) | 24 |
-| a16z (Andreessen Horowitz) | 19 |
+| a16z (Andreessen Horowitz) | 20 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 16 |
 | 张小珺（商业访谈录） | 16 |
 | No Priors (Sarah Guo & Elad Gil) | 12 |
