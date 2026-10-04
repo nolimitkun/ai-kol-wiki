@@ -1343,3 +1343,39 @@ Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两�
 - **与 [John Platt](people/john-platt.md)（相隔一天、同一子系列）两组对照**：① **方法同形但 verifier 不同**——两边都是"序列/代码 + 一个分数再迭代"，但 **Platt 的分数由代码当场算出，Eric 的分数由湿实验室产生**，所以后者受物理世界限速（接上 [Lila 的"实验室即 verifier"](videos/20260716-latent-space-lila-sciences.md)），本库由此给"AI 能不能做科研"加了一条可操作分界：⚠️ **问分数是谁算的**。② **对领域专长的态度相反**——Platt 说"领域专长通向 taste"，Eric 要"仍然是 dreamer 的领域专家"，理由是"**专业知识越多越悲观**"，而这条是他从 **Evo 被几乎所有斯坦福科学家否决**的经历反推来的。
 
 ⚠️ **本次未核实、只照录的内容**：Omni 的全部 benchmark 结果（均为自家 blog 自报，未见第三方复核；去重防泄漏亦为自述）；**RNA aptamer 的 chain-of-thought 结果——他本人明确说湿实验室验证仍在进行中**；全部数字（编码区 1.5–2%、多数疾病在非编码区、每年约 200 万人死于细菌感染、噬菌体基因组约 6,000 碱基对、人类转录本约 3K）；微软 paraphrase 工作（转述）；"DNA 合成公司的检测大概不是 AI 的"（他自己标为"我会很强烈地假设"）；⚠️ **Greg Brockman 从 OpenAI 休息四个月帮 Evo2、凌晨三点 Slack 调 bug**（转述；本库已收录的 [Brockman 本人那期](videos/20260914-a16z-greg-brockman-agi-era.md) 未提及此事）；"一位公司顾问亲身见过并参与退役国家级生物武器设施"（转述，无姓名无细节）；Evo 上 *Science* 封面与 TED、NVIDIA 支持 Evo2、第一个 checkpoint 在 ProteinGym 上的竞争力；"Fable 对生物相关输入几乎一律拒绝"（RJ 的使用体验，本库不验证模型行为）。
+
+## 2026-10-04 — 摄取 a16z / Amjad Masad（第三期）：HA 系列第二集，且它质疑第一集
+
+同晚第三期（2026-09-23，47 分钟，英文自动字幕，走 `fetch.py` 默认路径）。⚠️ **这是本晚第一期 [HA 发布](videos/20260922-a16z-horowitz-andreessen-academy.md) 的续集、相隔一天**——同一个 Horowitz Andreessen Academy 系列，Gagan Biyani 从被访者变成共同提问者。
+
+⚠️ **标题变更已记录**：`discover.py` 当晚列出的是 "Why Your Weirdest Interests Might Lead to Your Best Ideas"，抓取时已改为 "What Young People Should Learn in the AI Era"（同一视频 ID）。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [a16z / Amjad Masad（09-23）](videos/20260923-a16z-amjad-masad-heretics-premature-optimization.md) | ⚠️ **"创业本身常常是过早优化"**——本库对当下"青少年创业"风向**第一条来自受益方的批评**，而且给了机制（**嫉妒成了动机 → 对一个自己根本不感兴趣的想法做预先承诺**）、反面判据（**"引力"：几乎是"我想我不得不做它"**；他自述"我主动试着不要创办 Replit"）与制度批评（pre-idea 的百万美元**类比音乐产业锁住年轻艺人的合约**）；⚠️ **"自驾公司"**——holacracy / Medium / GitHub 无经理制"全都壮观地炸了，**但我认为那是个技术问题**"，agent 当组织胶水、科层变成后台隐形的东西；⚠️ **一条可追溯的好奇心链路**（下棋 → 发现 LLM 下棋会幻觉走法 → **第一次自己训模型** → "AI 有能力做 ML" → Replit 的一条新产品线）；⚠️ **"取消评分也是为了泄掉对抗"**（Gagan 答"怎么处理麻烦制造者"：没有分数考试，**要去对抗的那个重量本来就该小很多**）；⚠️ **信任的带数字机制**（非营利口头承诺到账率 20–50% vs 硅谷 75–100%，而机制是**可以提前六周行动，所以支票更值钱**）；⚠️ **把黑客小孩导流到网络安全而不是监狱**；⚠️ **德性伦理 vs 奇点下的后果主义**这段双向交换；**"硅谷也是单一文化，哪怕是最激进的文化"**；以及**对 Dwarkesh 公共表达方式的点名批评** |
+
+### 说话人认定
+
+自动字幕，只有 `>>` 换轮标记、无姓名标签；三人身份取自视频简介。归属依据：**Amjad**（Replit 内部、"我主动试着不要创办 Replit"、"我 2025 年因为说别学编程被 cancel"）、**Gagan**（"我上的是 UC Berkeley，go Bears"、"一学期打三份工"、"二十多年了"、"**学院的核心信条之一**"）、**Erik Torenberg**（主持格式、"我小时候痴迷篮球"、现场造词）。⚠️ **一处交叉确认**：[00:19:13] 有人说"**to your point Gagan**"，既确认 Gagan 在场、也确认说话者不是他。
+
+页末列了转写对照表（`Rap lit` → Replit、`vi coding` → vibe coding、`Joe Lehman` → Joe Liemandt、`arc AGI` → ARC-AGI、`Dave`（Roblox）→ David Baszucki 等；⚠️ `meta maxing` 按视频简介记作 "Meta Retard Maxing"，`technopositivism` 与 "bounty program in the RC" **本库不认定**）。
+
+### 交叉链接
+
+**新建人物页 1 个**：[Amjad Masad](people/amjad-masad.md)。
+**更新主题页 4 个**：[AI 与教育](topics/ai-and-education.md)（新增一大节）、[LLM 安全](topics/llm-security.md)（攻击侧人才管道）、[AI 与就业](topics/ai-and-jobs.md)（自驾公司）、[AI for AI / Auto Research](topics/ai-for-ai-and-auto-research.md)（附一张证据等级对照表）。
+**更新人物页 1 个**：[a16z](people/a16z.md)（收录表加一行 + 对 HA 系列判断的一次上调）。
+
+⚠️ **本次最值得记的是对 HA 系列判断的上调**。第一集本库标为"**发布会而非分析**"，并把全部"大学不适配"的判断记为立场。**第二集改变了这个读法**：⚠️ **Amjad 批评的不是大学，而是替代路径本身**——而**他本人的公司既是"降低创业与编程门槛"的主要受益方，又是 HA 的合作方**（[00:43:25] 交代"可能在 Replit 实习、可能被你投资"）。**本库因此认为这一集是该系列里最不像宣传的一集。**
+
+⚠️ **另外三处值得单记**：
+
+1. ⚠️ **"自驾公司"是本库"协调层被替代"这一族里唯一可证伪的版本**。[Garry Tan](videos/20260812-a16z-garry-tan-founder-psychology.md) 与 [曾鸣](topics/ai-and-jobs.md) 给的都是前瞻判断；Amjad 加了**历史证据 + 一条归因**（旧的扁平组织实验失败是因为缺执行胶水），**于是它预测的是那些旧实验现在会成功**——如果 agent 普及后扁平组织仍然失败，这条归因就错了。⚠️ 目前只有一个自述样本（Replit 自己），且他主动说"我对这件事还没有成形的想法"。
+2. ⚠️ **"下棋 → AI 能做 ML"这条链路被收进 auto research 页时，本库附了一张证据等级对照表**。他的依据是**自己第一次训模型的经历**，然后直接产品化；这与 [Platt 实际解掉卡两年的问题](videos/20260922-latent-space-john-platt-era-scorable-tasks.md)、[Socher 连 harness 里的 30 个 bug 一起报](people/richard-socher.md)、[O'Neill 的可判别判据](people/charlie-oneill.md) 不在同一层级。**记为方向判断与产品意图，不是能力证据。**但它有一条别处没有的信息：⚠️ **"任何人都能当 ML 研究者"已经被一家应用层公司当产品线在做**——该页此前的材料全来自实验室/研究者/neo-lab，**这是第一条来自开发者工具层的扩散信号**。
+3. ⚠️ **"取消评分也是为了泄掉对抗"补上了第一集没说出的设计意图**。第一集把"push 转 pull"讲成动机设计；这一集 Gagan 答"怎么处理麻烦制造者"时给出了另一半——**把叛逆当成约束强度的函数**，"**我们没有分数，我们没有考试，要去对抗的那个重量本来就该小很多**"。
+
+⚠️ **一条与本库收录对象直接相关、但只照录的内容**：Amjad **点名批评了 [Dwarkesh](people/dwarkesh-patel.md) 的公共表达方式**——"**Bernie Sanders 读了 Dwarkesh 的博文。而我批评过 Dwarkesh 用的那种语言……那篇博文在我看来并没有在他们心里创造出更多理解**"。⚠️ **他没有指明是哪篇文章，本库也未核实 Bernie Sanders 读过它。** 本库记它是因为这是**第一次有人批评本库收录对象的表达方式、而且批评的不是观点而是对非专业读者的实际效果**。
+
+⚠️ **本次未核实、只照录的内容**：信任那组数字（非营利 20–50%、硅谷 75–100%，Gagan 的估计，无来源）；"**VC 给斯坦福学生 pre-idea 一百万美元**"（他自己说"我听说"）；"一个小孩因黑进政府系统被判约两年、在 Roblox 上学的黑客技术"（转述，无姓名无出处）；Bernie Sanders 与 Dwarkesh 那条；Sequoia 关于 SBF 的博文已删、可在 archive.org 找到（本库未查）；与 Roblox 创始人谈过沙箱构想；Replit 的全部内部事实（会议室命名、"自驾公司"的运营变化、即将推出的 ML 产品线）；他的个人回忆（乔布斯旁听书法那段为广为流传的叙述、他只做转述；自己学校"缺满六次被禁"；hackthissite.org；2025 年被 cancel）；《The City and the Stars》的情节（他未报作者，**本库未核对原作细节**）；"ARC-AGI 分数都上去了但模型下棋会幻觉走法"（他的使用观察，本库不验证模型行为）；Gagan 的个人经历（UC Berkeley、一学期三份工、难民营与亿万富翁的家）。

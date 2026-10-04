@@ -113,6 +113,7 @@
 - [Diogo Almeida](people/diogo-almeida.md) — TypeSafe 联创兼 CEO（前 OpenAI / InstructGPT）：让代码而不是人来消费模型、RLHF 的 mode dropping、三个北极星（RLHF/RLVR/RLCD）、反公开基准、robustness>determinism、"KV cache 的暴政"、对 pacing the frontier 的前提级反驳
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 - [Gagan Biyani](people/gagan-biyani.md) — Horowitz Andreessen Academy 联合创始人兼 CEO（Udemy 联创 / Maven 创始人）：本库第一个"办学校的人"——bundle 论、burning-desire 客户、osmosis + 强制依赖、把求知欲改写成产出
+- [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义
 - [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
 
 ## 主题
@@ -272,4 +273,5 @@
 - 2026-09-09 [衡量前沿智能的竞赛：第三方评估公司的生意与 RSI 指数](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)（Vals AI，Ben Horowitz 主持）
 - 2026-09-18 [AI 公司为什么会想减速？RSI 的四个判据、自催化 ≠ RSI、ontology 即离线索引](videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md)（Ali Ghodsi × Martin Casado）
 - 2026-09-22 [Horowitz Andreessen Academy：为什么教育必须变（Ben Horowitz & Gagan Biyani）](videos/20260922-a16z-horowitz-andreessen-academy.md) ⚠️ 发布会而非分析
+- 2026-09-23 [Amjad Masad（Replit CEO）：年轻人的用处是当异端，而"创业本身常常是过早优化"](videos/20260923-a16z-amjad-masad-heretics-premature-optimization.md)（HA 系列第二集；⚠️ 构成第一集的内部质疑）
 - 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）
