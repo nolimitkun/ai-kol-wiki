@@ -34,8 +34,8 @@
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 121 |
-| 人物页 | 109 |
+| 视频转录稿 | 122 |
+| 人物页 | 110 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
 
@@ -43,7 +43,7 @@
 
 | 频道 | 期数 |
 |---|---|
-| Latent Space (swyx & Alessio) | 24 |
+| Latent Space (swyx & Alessio) | 25 |
 | a16z (Andreessen Horowitz) | 20 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 16 |
 | 张小珺（商业访谈录） | 16 |
