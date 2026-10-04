@@ -113,6 +113,7 @@
 - [Diogo Almeida](people/diogo-almeida.md) — TypeSafe 联创兼 CEO（前 OpenAI / InstructGPT）：让代码而不是人来消费模型、RLHF 的 mode dropping、三个北极星（RLHF/RLVR/RLCD）、反公开基准、robustness>determinism、"KV cache 的暴政"、对 pacing the frontier 的前提级反驳
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 - [Gagan Biyani](people/gagan-biyani.md) — Horowitz Andreessen Academy 联合创始人兼 CEO（Udemy 联创 / Maven 创始人）：本库第一个"办学校的人"——bundle 论、burning-desire 客户、osmosis + 强制依赖、把求知欲改写成产出
+- [Michael Lee](people/michael-lee.md) — Sequence Holdings 联创兼 CEO（前 Lone Pine / Apollo）：⚠️ 本库第一个"所有权侧"的声音——AI 影响的三分法、"给人类流水线上每个人发一台小机器"、三个选项全坏掉（尤其"你卖不给一条还不存在的流水线"）、"每家公司都有一个被歌颂的角色"、控股公司 vs 基金与"一年一笔"、organizational physics、"被监管是特性不是 bug"
 - [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义
 - [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
 
@@ -209,6 +210,7 @@
 - 2026-09-03 [Rene Haas（Arm CEO）：token 工厂之外的那些卡车、AI 吃掉的是验证、供应链还要紧三到五年](videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md)
 - 2026-09-10 [Brian Armstrong（Coinbase）：给 AI 开银行账户——agentic finance、x402 与公司内部的"brain"](videos/20260910-no-priors-brian-armstrong-agentic-finance.md)（Elad Gil 独立主持）
 - 2026-09-18 [Stefano Ermon（Inception）：扩散模型为什么会赢下推理](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md)（Sarah Guo 独立主持）
+- 2026-09-24 [Michael Lee（Sequence Holdings）：买下在位者再"重新创办"它，以及"你不可能把产品卖给一条还不存在的人类流水线"](videos/20260924-no-priors-michael-lee-refounding-incumbents.md)（Sarah Guo 独立主持；⚠️ 她的 Conviction 是该公司投资方）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）

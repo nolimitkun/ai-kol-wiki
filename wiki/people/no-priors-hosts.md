@@ -49,6 +49,13 @@
 | 2026-09-03 | [token 工厂之外的那些卡车、供应链还要紧三到五年](../videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md) | [Rene Haas](rene-haas.md)（Arm CEO / SoftBank Group International；双主持） |
 | 2026-09-10 | [给 AI 开银行账户：agentic finance、x402 与公司内部的"brain"](../videos/20260910-no-priors-brian-armstrong-agentic-finance.md) | [Brian Armstrong](brian-armstrong.md)（Coinbase CEO / New Limit；Elad Gil 独立主持） |
 | 2026-09-18 | [扩散模型为什么会赢下推理](../videos/20260918-no-priors-stefano-ermon-diffusion-inference.md) | [Stefano Ermon](stefano-ermon.md)（Inception CEO / 斯坦福；Sarah Guo 独立主持） |
+| 2026-09-24 | [买下在位者再"重新创办"它](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md) | [Michael Lee](michael-lee.md)（Sequence Holdings CEO；Sarah Guo 独立主持）⚠️ **她的 Conviction 是该公司首轮投资方** |
+
+> **来源：[No Priors / Michael Lee](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md)**
+>
+> ⚠️ **2026-09-24 那期是本页利益相关最重的一次，而且是本库收录的最重的一次**。在 [Netic 那期](../videos/20260731-no-priors-netic-autonomous-enterprise.md) Elad Gil 只是**自陈是被访公司的投资人**；而在这一期，Sarah Guo 自述 **Conviction 写了 Sequence 的第一笔投资**（[00:13:06]）、并说 ⚠️ **"我希望能持有 Sequence 的股权一辈子"**（[00:27:11]）。
+>
+> ⚠️ **本库因此不把那期当中立访谈，而是记为"投资人访谈自己的被投"**。值得注意的是她并没有只捧场——她在同一期里报出了自己当初的两处疑虑：**听到"要去买一家银行"时"可能表现出了些轻微的惊恐"**并提醒"**银行传统上不是受欢迎的私募股权板块是有原因的**"（[00:13:06]）；以及 ⚠️ **"我当初对 roll-up 这个想法是将信将疑的"**，并把难点拆成技术 / 变革管理 / 实际运营公司 / 承保 / 做交易五块，判断是"**这确实是巨大生意改变并赢下行业的方式，但它比人们想的难得多，而且在规模上更好做**"（[00:30:13]）。**本库把这两处记为该期里仅有的对冲。**
 
 ## ⚠️ 一处需要标注的利益相关
 来源：[No Priors 2026-07-31](../videos/20260731-no-priors-netic-autonomous-enterprise.md)
