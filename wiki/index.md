@@ -112,6 +112,7 @@
 - [John Platt](people/john-platt.md) — Google Fellow / Google Research 应用科学负责人（Platt scaling、SMO 作者）：ERA 把科学问题映射成"可打分任务"、UCB 树搜索 + 模型当变异算子、"在 Gemini 2.0 上不可能"、predictive vs descriptive、天气 vs 气候的数据丰裕度判据、contrails 与 FireSat、"过拟合到生产力"
 - [Diogo Almeida](people/diogo-almeida.md) — TypeSafe 联创兼 CEO（前 OpenAI / InstructGPT）：让代码而不是人来消费模型、RLHF 的 mode dropping、三个北极星（RLHF/RLVR/RLCD）、反公开基准、robustness>determinism、"KV cache 的暴政"、对 pacing the frontier 的前提级反驳
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
+- [Gagan Biyani](people/gagan-biyani.md) — Horowitz Andreessen Academy 联合创始人兼 CEO（Udemy 联创 / Maven 创始人）：本库第一个"办学校的人"——bundle 论、burning-desire 客户、osmosis + 强制依赖、把求知欲改写成产出
 
 ## 主题
 
@@ -125,6 +126,7 @@
 - [AI 与科学发现](topics/ai-for-science.md) — AI 做数学/物理的现状与门槛（Brown、Sanderson、Karpathy、Noam、姚顺宇）、结构生物学四家对照、中性软件工厂、Eroom's law、1 万 agent 解 Navier–Stokes（自述未核实）
 - [AI 算力与基础设施](topics/ai-infrastructure.md) — extreme co-design、电力、供应链、token 工厂、TPU vs GPU、$/watt 与循环融资、渠道冲突、云厂商的资本配置（kit 占 60%、不为一两个客户建）、K3 与 DeepSeek 的 overlap/PP 路线分野
 - [AI 与就业](topics/ai-and-jobs.md) — 放射科医生案例、策展人转型、编码民主化、centralized technology、雇主侧招聘流程被重写（不考 LeetCode、work trial）、协调层而非岗位被替代、"20 年 white pill"、机器超人 30 年后的国际象棋（本库唯一回溯样本）、前沿实验室领导层的立场（"人的价值不在任务"）、创造力时代与"老登"现象的经验贬值机制、"三天工作制但只增长两个半百分点"的风险与 7–8% GDP 门槛
+- [AI 与教育](topics/ai-and-education.md) — 从就业页分出：现行系统为什么不适配（"为一个即将不存在的世界造的"、"下一场最大的冲突"）、初级岗位消失后 taste 怎么获得（徐天音的无解断层 × Platt 的"训练 vs 发挥"）、三种考试策略（blue book 退回 / 别担心作弊的学生 / 把题提到 AI 之上）、一对一导师制的收敛、HA 的机构级处方、以及本库唯一一份"AI 原住民"本人的材料
 - [AI 商业化与价值捕获](topics/ai-business-and-value-capture.md) — 模型商品化、价值向上游转移、capex 上限、"电力还是社交媒体"、万亿公司的速度 vs 规模、token 预算 ROI、退出决策框架、两层市场结构、Airtable 解剖、"整个公司 vs 一个总监的团队"、go-to-market（lighthouse vs land grab、重新卖大软件的窗口）、三阶段论与"模型公司=AI 云"（寡头+强监管、ARR 增长幻觉、边际成本定价）
 - [物理 AI 与机器人](topics/physical-ai-and-robotics.md) — 具身智能、自动驾驶、人形机器人：美国机器人族谱/PI 三论文、物理 AI vs 数字 AI、中美双向确认、已部署机器人的单位经济学、海上自主与武器化的三种答案、world foundation model 与 action 作为 first class citizen、机器人应类比"电器"而非"汽车"
 - [中美 AI 生态对照](topics/china-us-ai.md) — 本库核心主题：模型差距、蒸馏、字节/豆包、C 端 vs enterprise、造船总吨 230:1、训练数据出口、中国消费电子成为美国 AI 公司的客户、实习生作为 knowhow 的第三条扩散通道、"美国 AI 情绪全球最低"与人口结构归因、中国收敛慢源于先发期缺失、字节能成 AI 云但 2C 不确定、K3 与 V4 的上限 vs 性价比分化、风险不分国界的对称性论证
@@ -267,4 +269,5 @@
 - 2026-09-14 [OpenAI 总裁谈"跨进 AGI 时代"意味着什么（Greg Brockman，Ben Horowitz & Erik Torenberg 主持）](videos/20260914-a16z-greg-brockman-agi-era.md)
 - 2026-09-09 [衡量前沿智能的竞赛：第三方评估公司的生意与 RSI 指数](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md)（Vals AI，Ben Horowitz 主持）
 - 2026-09-18 [AI 公司为什么会想减速？RSI 的四个判据、自催化 ≠ RSI、ontology 即离线索引](videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md)（Ali Ghodsi × Martin Casado）
+- 2026-09-22 [Horowitz Andreessen Academy：为什么教育必须变（Ben Horowitz & Gagan Biyani）](videos/20260922-a16z-horowitz-andreessen-academy.md) ⚠️ 发布会而非分析
 - 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）
