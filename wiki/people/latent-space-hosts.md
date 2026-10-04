@@ -44,6 +44,16 @@
 | 2026-09-22 | [ERA：把科学问题映射成"可打分任务"](../videos/20260922-latent-space-john-platt-era-scorable-tasks.md) | [John Platt](john-platt.md)（Google Fellow；**AI for science 子系列**，Brandon + R.J.） |
 | 2026-09-21 | [TypeSafe / Jev：让代码而不是人来消费模型](../videos/20260921-latent-space-typesafe-jev-system-one-models.md) | [Diogo Almeida](diogo-almeida.md)（TypeSafe 联创兼 CEO，前 OpenAI；swyx 独立主持） |
 | 2026-09-25 | [Runway：世界模型、机器人与神经操作系统](../videos/20260925-latent-space-runway-world-models.md) | [Anastasis Germanidis](anastasis-germanidis.md)（Runway 联合创始人兼 CTO；swyx + Vibhu） |
+| 2026-09-23 | [生物安全是一场军备竞赛](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) | [Eric Nguyen](eric-nguyen.md)（Radical Numerics CEO、Evo 一作；**AI for science 子系列**，Brandon + RJ） |
+
+> ⚠️ **2026-09-23 那期是本库里"主持人即同行"这条性质最有产出的一次**。[Eric Nguyen 那期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) 里**本页最硬的三条反驳全部来自主持方**，而且每一条嘉宾都没有驳回、而是把自己的目标往下调：
+>
+> - **RJ（做空间转录组）用领域知识质疑一条结果的来源**（[Eric Nguyen 那期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) [00:37:14]）：RNA"**以缺少好的共进化数据而出名**"，哺乳动物 RNA 通常没有进化压力——**那这个能力从哪来？**嘉宾的回答是"**说实话我不确定。我们也很意外。**"
+> - ⚠️ **RJ 还替听众还原了实验来路，并给出本页认为必须一起引用的限定**（[同期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) [00:45:25]）：那个"DNA 版 chain of thought"的数据集其实是 SELEX 式的定向进化实验——"**关键是做筛选的其实是实验的生物学本身。**"
+> - ⚠️ **RJ 对"类比网络安全"的拆解**（[同期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) [01:24:33]）："**我们的基因组是固定的，对吧？所以你没法给一个人打补丁。**"
+> - **Brandon 的 steelman**（[同期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) [01:22:28]）："**如果你在前沿，那你是在同时推进攻击和防守的前沿**……那长期来看它其实没什么意义。"——**这条在本期没有被回答。**
+>
+> 本库据此再次确认：⚠️ **引用这个子系列时，"主持人说"应当与"嘉宾说"同等对待，而不是当成提问框架。**
 
 > ⚠️ **2026-08-26 那期确认了 "AI for science" 子系列的主持人身份**：字幕里两人各自自报家门——**Brandon**（Atomic AI，做 RNA 疗法）与 **RJ Honakee**（Miraomics CTO 兼创始人，做空间转录组）。⚠️ 这与本库 2026-08-11 首次记录的那一组（`RJ Honiki` / `Mirror Omix`）**应为同一组人，只是自动字幕拼写不同**；本库两处拼写都保留，**不做统一认定**。
 >

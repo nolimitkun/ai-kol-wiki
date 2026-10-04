@@ -113,6 +113,7 @@
 - [Diogo Almeida](people/diogo-almeida.md) — TypeSafe 联创兼 CEO（前 OpenAI / InstructGPT）：让代码而不是人来消费模型、RLHF 的 mode dropping、三个北极星（RLHF/RLVR/RLCD）、反公开基准、robustness>determinism、"KV cache 的暴政"、对 pacing the frontier 的前提级反驳
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 - [Gagan Biyani](people/gagan-biyani.md) — Horowitz Andreessen Academy 联合创始人兼 CEO（Udemy 联创 / Maven 创始人）：本库第一个"办学校的人"——bundle 论、burning-desire 客户、osmosis + 强制依赖、把求知欲改写成产出
+- [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
 
 ## 主题
 
@@ -233,6 +234,7 @@
 - 2026-09-22 [John Platt（Google Fellow）：ERA——把科学问题映射成"可打分任务"，以及它为什么在 Gemini 2.0 上不可能](videos/20260922-latent-space-john-platt-era-scorable-tasks.md)（AI for science 子系列）
 - 2026-09-21 [TypeSafe / Jev（Diogo Almeida）：让代码而不是人来消费模型——system one 模型、RLCD 与"反公开基准"](videos/20260921-latent-space-typesafe-jev-system-one-models.md)
 - 2026-09-25 [Runway：把视频预测推到世界模型、界面世界模型与神经操作系统、第三人称视频与机器人](videos/20260925-latent-space-runway-world-models.md)（Anastasis Germanidis）
+- 2026-09-23 [Eric Nguyen（Radical Numerics）：生物安全是一场军备竞赛，而防守方"远远落后"——dual mandate、生物防御四支柱、"同功能不同拼写"、"你没法给一个人打补丁"](videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md)（AI for science 子系列）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
