@@ -57,6 +57,7 @@
 - [Applied Intuition（Qasar Younis & Peter Ludwig）](people/applied-intuition.md) — 物理 AI 横向供应商，Dana、实时性即护城河
 - [Mark Cuban](people/mark-cuban.md) — Broadcast.com 创始人，AI 泡沫、企业落地难、世界模型
 - [Daniel Ek](people/daniel-ek.md) — Spotify 执行董事长 / Neko Health 联合创始人，应用侧经营者：部署侧算力差作为攻防判据、对 pacing 不站队、"AI 做召回、人做判决"
+- [David Pawlan](people/david-pawlan.md) — Assistant Benchmark 创建者，122 个消费 agent 的横评者：cost saver 胜过 time saver、proactivity 是护城河、"这一波就是 Open Claw 的复刻"
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
@@ -280,3 +281,4 @@
 - 2026-09-23 [Amjad Masad（Replit CEO）：年轻人的用处是当异端，而"创业本身常常是过早优化"](videos/20260923-a16z-amjad-masad-heretics-premature-optimization.md)（HA 系列第二集；⚠️ 构成第一集的内部质疑）
 - 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）
 - 2026-09-28 [TypeSafe / Jev（Diogo Almeida）："自动化到底在哪儿？"——smart software、prod not god 与反向 SaaS 末日](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)（Ben Horowitz & Martin Casado；⚠️ 与 [09-21 那期](videos/20260921-latent-space-typesafe-jev-system-one-models.md) 同一嘉宾、不同对象）
+- 2026-09-29 [我们把这一波个人 AI agent 全试了一遍：省钱胜过省时、proactivity 才是护城河](videos/20260929-a16z-personal-agents-assistant-bench.md)（David Pawlan / Assistant Benchmark；Anish Acharya 主持）

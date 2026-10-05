@@ -1499,3 +1499,45 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 - [topics/open-source-infrastructure.md](topics/open-source-infrastructure.md)：新增买方侧开源动机
 - [topics/ai-for-science.md](topics/ai-for-science.md)：新增交付侧的 AI 诊断分工
 - [index.md](index.md)
+
+## 2026-10-05 — 摄取 a16z / 个人 agent 横评（第三期）：本库第一份系统横评
+
+同晚第三期（2026-09-29，50 分钟，英文自动字幕，走 `fetch.py` 默认路径）。⚠️ **主持与嘉宾的身份取自视频简介**：a16z 普通合伙人 [Anish Acharya](people/a16z.md) × Assistant Benchmark 创建者 [David Pawlan](people/david-pawlan.md)。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [a16z / Assistant Benchmark](videos/20260929-a16z-personal-agents-assistant-bench.md) | **122 个消费 agent 的横评口径与收费结构**；**"普通人不在乎效率提高 10%"与 cost saver 论**；**proactivity 的授权边界表**；**"这一波就是 Open Claw 的复刻"**；**narrow startups 讲完整**；**每用户每天 20 美元**；**供给受限 vs 需求受限的重排**；**消费侧界面之争（iMessage 的特权位置、麦克风隐喻）** |
+
+⚠️ **本库此前关于消费级 agent 的材料只有零散的个人使用报告**（[Jason 在 All-In 09-26 的实测](videos/20260926-all-in-anthropic-ipo-open-source-flip.md)、[OpenClaw 那期](videos/20260212-lex-openclaw-steinberger.md)）。**这是第一份系统横评**——所以本次新建了 [people/david-pawlan.md](people/david-pawlan.md)，把"看过全部之后的祛魅"记为一个独立视角。
+
+### ⚠️ 本次的时效性处理
+
+主持人开场说"过去几周发生了太多事"，嘉宾说"这个领域在过去四周里爆炸了"。⚠️ **页内几乎所有产品事实都是录制当周的状态、本库未核实、极可能已经过时。** 处理方式是**在视频页顶部单设一条时效性声明，把整页定位成时间切片而不是现状**；专名对照段也标明"录制当周的状态"。⚠️ **自动字幕对产品名识别很差**（Muse→"Mews"、嘉宾名 Pawlan→"Poland"），已按上下文与视频简介还原；**无法还原的三处（"Meowth"、"Multibook"、"Bong Chayng"）本库不展开、不解释。**
+
+### ⚠️ 本次最有价值的四处
+
+1. ⚠️ **"普通人根本不在乎效率提高 10%"（[00:10:07]）是本次最可被后续检验的论题。** 起点是转述的 Ben Thompson——"**消费者要的是花掉时间，不是省下时间**"；嘉宾的解法是**那就别卖效率，卖回收到的现金**（cost saver 而非 time saver），例子是 HSA 报销、机票降价退差、以及把 bot 接到洒水系统省了一半水费。⚠️ **但本库在视频页标注了一处两人都没展开的张力：这等于把这一波消费 agent 的价值主张定成金融性的而不是能力性的，而金融性的主张有上限（能被追回的钱是有限的）——两人都没讨论这个上限。**
+
+2. ⚠️ **授权边界那张表是目前关于 agent 自主权最可直接落地的一条判据**（[00:26:17]）：**你这边不需要任何动作的，可以主动做**（起草邮件、要回机票积分）；**需要你改变行动、且直接影响你的，必须先要授权**（替你换保险）。后果不对称——"**只要你越过一次，你就立刻失去用户的全部信任**"。⚠️ **本库同时记下主持人的反向意见**（[00:27:17]）："**很多魔力恰恰来自擅自做主；如果你没在 X 上看到人们发'agent 干了这个'，那反而说明推得不够狠**"——**一条是留存视角，一条是增长视角，本库并列不裁决，但指出它们争的是同一个旋钮。**
+
+3. ⚠️ **"这一波基本就是 Open Claw 的复刻，只是预配置好了"（[00:28:17]）——而说这话的人测了 26 个产品。** 他说产品化增加的价值是 **"你不用自己配置、不会每 7 小时弹报错、界面很简单"**，不是能力。⚠️ **本库把这条与同一晚摄取的 [Almeida 可靠性四层](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md) 做了交叉标注：一个在模型侧、一个在产品侧，结论形状相同——这一轮真正稀缺的是可靠性，不是能力。** 它也把 [OpenClaw 那期](videos/20260212-lex-openclaw-steinberger.md)（2026-02）的线接上了。
+
+4. ⚠️ **本库给这份基准补了一条它自己没说的局限**：它测的是**一次性提示下的单次任务完成**，所以**结构上测不到本期自己认定的那条护城河——proactivity**。⚠️ **"最能主动的 agent 赢"与"发同一条提示词比结果"这两件事互相够不着，而这期没有人指出这一点。** 这条写进了 [评估与基准](topics/evaluation-and-benchmarks.md)。
+
+### ⚠️ 两处本库标注的样本偏差与未核实
+
+- **用例排序（日常杂务 > agent 编排 > 开发 > 旅行）来自 7、8 个群聊共 1200 多人**，⚠️ **嘉宾自己主动标注了偏差**（"这些群聊都是科技 Twitter 的人"）。本库把这条警告**前置**到表格上方：**"agent 编排"和"开发"排到第 2、3 位几乎必然是这个偏差的产物。**
+- ⚠️ **"每用户每天 20 美元"为 Acharya 口述的 a16z 内部估算，本库未核实**；本库另在主题页标注了他给的两条出路互相削弱（成本真塌下来则免费更可行，那条"1000 美元的 agent"反而更难出现）。
+- **一处存疑事实本库只记怀疑不记事件**（[00:27:17]）：网传某 agent 值机时幻觉中间名导致登不上机，⚠️ **主持人当场自己怀疑真实性**，本库照录这个怀疑。
+
+### 更新的页面
+
+- 新建 [videos/20260929-a16z-personal-agents-assistant-bench.md](videos/20260929-a16z-personal-agents-assistant-bench.md)、[people/david-pawlan.md](people/david-pawlan.md)
+- [people/a16z.md](people/a16z.md)：Anish Acharya 首次以主要表达者出场，新增 narrow startups 完整版、"把人格下推成能力"、成本口径、预订市场结构分析、两条转述（Ben Thompson / Near）；访谈表新增一行
+- [topics/using-llms-in-practice.md](topics/using-llms-in-practice.md)：新增消费侧授权边界表、界面原则、群聊三种做法与"Open Claw 复刻论"
+- [topics/ai-business-and-value-capture.md](topics/ai-business-and-value-capture.md)：新增单位经济、narrow startups、Amazon/Shopify 的机制、供给受限 vs 需求受限
+- [topics/evaluation-and-benchmarks.md](topics/evaluation-and-benchmarks.md)：新增消费向基准的口径与它测不到的东西
+- [topics/llm-os.md](topics/llm-os.md)：新增终端表面之争与麦克风隐喻
+- [index.md](index.md)
