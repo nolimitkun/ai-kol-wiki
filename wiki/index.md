@@ -58,6 +58,7 @@
 - [Mark Cuban](people/mark-cuban.md) — Broadcast.com 创始人，AI 泡沫、企业落地难、世界模型
 - [Daniel Ek](people/daniel-ek.md) — Spotify 执行董事长 / Neko Health 联合创始人，应用侧经营者：部署侧算力差作为攻防判据、对 pacing 不站队、"AI 做召回、人做判决"
 - [David Pawlan](people/david-pawlan.md) — Assistant Benchmark 创建者，122 个消费 agent 的横评者：cost saver 胜过 time saver、proactivity 是护城河、"这一波就是 Open Claw 的复刻"
+- [Thariq Shihipar](people/thariq-shihipar.md) — Anthropic Claude Code 团队，可变软件与 harness 苦涩教训、probes 看意图 vs auto mode 看权限、防守侧的 pacing 技术论证
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
@@ -239,6 +240,7 @@
 - 2026-09-22 [John Platt（Google Fellow）：ERA——把科学问题映射成"可打分任务"，以及它为什么在 Gemini 2.0 上不可能](videos/20260922-latent-space-john-platt-era-scorable-tasks.md)（AI for science 子系列）
 - 2026-09-21 [TypeSafe / Jev（Diogo Almeida）：让代码而不是人来消费模型——system one 模型、RLCD 与"反公开基准"](videos/20260921-latent-space-typesafe-jev-system-one-models.md)
 - 2026-09-25 [Runway：把视频预测推到世界模型、界面世界模型与神经操作系统、第三人称视频与机器人](videos/20260925-latent-space-runway-world-models.md)（Anastasis Germanidis）
+- 2026-09-29 [Claude Code 的未来：可变软件、harness 的苦涩教训，以及一次来自防守侧的 pacing 技术论证](videos/20260929-latent-space-thariq-claude-code-mods-pacing.md)（Thariq Shihipar / Anthropic；⚠️ 与 [METR 那份调查](videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) 有一处实质不一致，已标注）
 - 2026-09-23 [Eric Nguyen（Radical Numerics）：生物安全是一场军备竞赛，而防守方"远远落后"——dual mandate、生物防御四支柱、"同功能不同拼写"、"你没法给一个人打补丁"](videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md)（AI for science 子系列）
 
 ### All-In Podcast
