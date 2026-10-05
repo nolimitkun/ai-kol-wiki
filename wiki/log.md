@@ -1413,3 +1413,44 @@ Socher 的全部战果数字（0.937 bits-per-byte、kernel 榜位、"不到两�
 ⚠️ **另记两处本库不裁决的张力**：① **"被监管是特性不是 bug"与本库既有材料方向相反**——此前的监管材料大多把监管当阻力或成本，他把它当**数据质量与流程确定性的来源**；② **"refound（重新创办）"是他整套论点的核心词，而他把它的最佳范例给了一家从未被收购过的公司**（2017 年见到的黄仁勋，"不断想出办法去重新创办他的生意"）。另外本库也记下他最后那个反转：⚠️ **一个私募与公开市场出身的人，给出了最纯粹的风投态度**——"想法很便宜，执行非常难……押注非凡的人是唯一重要的事"，主持人的回应是"**这不就是最纯粹的风投态度吗？**"
 
 ⚠️ **本次未核实、只照录的内容**：全部实施数字（94%、30→11 天、Q2 翻倍、标准不变、"一人退休 + 一人转前台"）；交易本身（Baldwin 私有化 **77 亿美元**、自称"**迄今最大的 AI take-private**"、与 Dell 家族办公室共同控制、BankSouth 那笔需 Fed 与 OCC 批准）；行业数字（保费每年两万亿美元以上、经纪总留存率约 90%、"保险业自有史以来在承保上几乎没赚到钱"）；Atlas 的全部描述与"**一亿美元以上公司**"这个口径（⚠️ **他未说明是收入、EBITDA 还是别的，对一笔 77 亿美元的私有化而言含义不明，本库照录不解释**）；他对 Palantir / Accenture / McKinsey / Blackstone 的刻画（含"Alex Karp 会讨厌我这么描述"）；Baldwin 一方的事实（Trevor Baldwin 早期端到端推 Anthropic、跑在单一实例的 Applied Epic）；他的个人回忆（2017 年加入 Lone Pine 即覆盖 AI、2017 年见到黄仁勋、冷启动与第一个客户的来龙去脉、"Elon 和 Jensen 讲的痛苦极其真实"）。
+
+## 2026-10-05 — 摄取 a16z / Diogo Almeida（第一期）：同一嘉宾一周内的第二份材料
+
+`discover.py` 报出 **14 个候选**（a16z 7 / latent-space 4 / all-in 2 / no-priors 1）。⚠️ **新增 1 条 `skipped.txt`**：`-ywZlfznTa4`（a16z 介绍自家新产品 **Cosign** 的发布访谈——职业声誉网络、对标 LinkedIn/X，AI 仅作"信息泛滥让人类背书更值钱"的背景）。剩余 13 个按发布日期从旧到新取 4 期，**本期是第一期**（2026-09-28，42 分钟，英文自动字幕，走 `fetch.py` 默认路径）。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [a16z / TypeSafe（Diogo Almeida）](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md) | **smart software 对 just-in-time software 的区分**；**"我不在 RSI 路上，但 OpenAI 定义的 AGI 极其做得到"**；**drive-thru canary**；**对"这是数据问题"的正面拒绝**；**可靠性四层**；**反向 SaaS 末日的完整论证**；**"10 行 PR"**；**他最早一段来路（Kaggle → Isabelle Guyon → Jeremy Howard → Google Brain）** |
+
+⚠️ **这是本库第一次在同一周内拿到同一位嘉宾的两份一手材料**（[Latent Space 09-21](videos/20260921-latent-space-typesafe-jev-system-one-models.md) 与本期 a16z 09-28）。两期**立场完全一致、内容几乎不重叠**，原因是**对象不同**：前者对工程师讲模型设计（RLCD、mode dropping、三个 API 原语、KV cache 暴政），后者对两位风投讲软件为什么停滞。**本次的处理方式是：视频页只记新增，重合处指回 09-21 页，并在页尾放一张两期对照表。**
+
+### ⚠️ 本次最有价值的四处
+
+1. ⚠️ **"smart software ≠ just-in-time software" 是本库目前对 coding agent 价值上界最锋利的一条区分**（[00:03:05]）。他**称赞** Garry Tan 等人"just-in-time software"这个描述——"了不起的描述"——然后给出断点：**"但它和软件有着同样的表达力。"** 所以他要的不是自动化软件工程，而是**扩大软件本身能做的事**。[Casado](people/a16z.md) 把它翻译成更狠的版本（[00:04:08]）：**"那代码就是人本来会写的东西……和十年前的代码长得一样。"** 并给了一个数字（[00:33:19]）：⚠️ **"大公司的平均 PR 大概是 10 行，我们真的做过这个研究"**——⚠️ **本库未核实这项研究，并在主题页标注了它的口径边界：它能支持"coding agent 吃掉的那块本来就不大"，不能支持"coding agent 没价值"（Almeida 自己就说爱用）。**
+
+2. ⚠️ **他把 RSI 与"OpenAI 定义的 AGI"拆开，而且两句出自同一段**（[00:19:15]–[00:20:15]）：**"我不认为我们走在 RSI 的路上——现在不认为，当时也不认为"**；**"但 OpenAI 定义的那个 AGI 极其做得到。"** ⚠️ **本库记为目前"否认 RSI"这一侧最硬的一条来源**，因为他自述推动过 InstructGPT 的部署、并**真以为那个模型可能就是 AGI**（[00:18:14]："而当它不是的时候，我整个世界崩塌了"）。⚠️ **但本库同时标注它不能回答什么**：他只说"出于一些细致的理由"，**没有给出技术论证，这期也没人追问**——在本库里他最接近论证的版本仍在 09-21 那期（"pacing 预设了所有人都要做更多 RLVR，而对我们这个形状零才是最优"）。这条与 [Casado 的"自催化 ≠ RSI"](people/a16z.md) 同向但来源不同：一个是投资人观察，一个是**研究者的第一人称否认**。
+
+3. ⚠️ **本期唯一一次真正交锋，是本库里长尾问题第一次被正面回答**（[00:21:15]–[00:23:17]）。Casado 提出**真实世界是重尾的、我们没有那个分布的数据**，Almeida 的回答是 **"我不完全买数据这个论证"**——长尾当然存在，**但"在我这个 canary 的情形里，我们不需要自动化那条长尾"**，该不该自动化是个 **ROI 决策**。⚠️ **这条与 [Sinofsky 的"企业里所有有趣的事都是例外处理"](people/a16z.md) 是同一现象的正反两面，本库并列不裁决。** Casado 随后用自己的实证把长尾讲具体了（[00:24:18]）：客服公司自称自动回答 95% 的工单，**按唯一性重算只有 50% 左右，"剩下的全是改密码"**。
+
+4. ⚠️ **概率式编程在两天内被 a16z 的两位合伙人独立讲了两遍**：[Sinofsky 在 09-26](videos/20260926-a16z-outside-the-labs-security-regulation.md) 说"CS 里最酷的位置将会是概率式编程"，[Casado 在本期](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)（[00:35:20]）说"它基本上在 70 年代就死掉了"，而 Almeida 说"**会有一整个概率式编程的时代被打开**"。**本库在两边都做了交叉标注。**
+
+### ⚠️ 本次的说话人认定与其局限
+
+自动字幕，只有 `>>` 换轮标记、**无姓名标签**，三人均为男声，**没有 diarization 可依**。嘉宾一侧无歧义（所有第一人称 TypeSafe / OpenAI / Kaggle 事实）；⚠️ **两位主持之间的分配是本页唯一的不确定来源**：Casado 的认定依据是**网络与系统母语**（"TCP——我的语言"、概率式编程史、重尾/低维流形、mainframe 到 client-server、"我们真做过这个研究"），Horowitz 的依据是**商业与人物框架**（"prod not god"、"是什么炼成了一个 Diogo"、SaaS 估值与分发、就业乐观）。⚠️ **少数无法判定的插话一律写作"主持人之一"，不强行归人**——包括那句"这是 80 年代的东西，我们那时候管它叫 4GL"。
+
+### 其它未核实、只照录的内容
+
+"10 行 PR"的 a16z 内部研究；客服 95%/50% 那组数字；**他说 OpenAI 从 2020 年就在试图自动化客服**；RLHF 泛化的时间点（2021 年 Q4）与"吃袜子"那个反作弊查询；**Isabelle Guyon 是 SVM 共同发明人**（他自己说"不是 100% 确定是不是第一作者"）；他的履历链路（Jeremy Howard 的创业公司 → Google Brain → 退休 → OpenAI）与 2017 年那场演讲的题目。
+
+### 更新的页面
+
+- 新建 [videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)
+- [people/diogo-almeida.md](people/diogo-almeida.md)：新增"对风投讲的那一版"整节 + 来路小节前置他更早的一段（Kaggle / Guyon / Howard）
+- [people/a16z.md](people/a16z.md)：Casado 新增 6 条（含他与嘉宾的交锋）、Horowitz 新增"提问即观察"整节、访谈表新增一行
+- [topics/ai-business-and-value-capture.md](topics/ai-business-and-value-capture.md)：新增"反向 SaaS 末日的完整论证与 10 行 PR"，并把本页关于"应用层会不会被吃掉"的四种立场并列
+- [topics/using-llms-in-practice.md](topics/using-llms-in-practice.md)：新增 smart software 区分、coding agent 语法/架构分工、**可靠性四层表**、"擦肩而过的两条船"
+- [topics/ai-for-ai-and-auto-research.md](topics/ai-for-ai-and-auto-research.md)：新增"把 RSI 与 OpenAI 定义的 AGI 拆开"
+- [topics/evaluation-and-benchmarks.md](topics/evaluation-and-benchmarks.md)：新增"我们一直在优化裁判"、drive-thru canary、"吃袜子"的污染检查
+- [index.md](index.md)、[sources/skipped.txt](../sources/skipped.txt)（+1 条）

@@ -82,3 +82,8 @@ A4Q7zAayW20  # All-In Summit / Bill Gurley "Searching for Feynman"：主题是 C
              # "I'm not going to talk about AI"；全篇仅 3 处提到 AI（拿 P(doom) 作比、
              # 用 chatbot 核对 DEFUSE 文件），无 AI 实质内容。
              # 转录稿存于 sources/all-in/20260919-A4Q7zAayW20/
+
+# ── 2026-10-05 巡检：自家产品发布 / AI 深度不足 ──────────────────
+-ywZlfznTa4  # a16z: Josh Elman / Olivia Moore / David Booth 介绍 Cosign（a16z 自家新产品
+             # 发布访谈，主题是职业声誉网络与人才发现，对标 LinkedIn/X；AI 仅作
+             # "信息泛滥让人类背书更值钱"的背景，无 AI 实质内容）

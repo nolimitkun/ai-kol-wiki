@@ -277,3 +277,4 @@
 - 2026-09-22 [Horowitz Andreessen Academy：为什么教育必须变（Ben Horowitz & Gagan Biyani）](videos/20260922-a16z-horowitz-andreessen-academy.md) ⚠️ 发布会而非分析
 - 2026-09-23 [Amjad Masad（Replit CEO）：年轻人的用处是当异端，而"创业本身常常是过早优化"](videos/20260923-a16z-amjad-masad-heretics-premature-optimization.md)（HA 系列第二集；⚠️ 构成第一集的内部质疑）
 - 2026-09-26 [为什么下一批突破可能来自实验室之外：安全、监管与"创新中心已经移动了"](videos/20260926-a16z-outside-the-labs-security-regulation.md)（Aaron Levie、Martin Casado、Steven Sinofsky）
+- 2026-09-28 [TypeSafe / Jev（Diogo Almeida）："自动化到底在哪儿？"——smart software、prod not god 与反向 SaaS 末日](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)（Ben Horowitz & Martin Casado；⚠️ 与 [09-21 那期](videos/20260921-latent-space-typesafe-jev-system-one-models.md) 同一嘉宾、不同对象）
