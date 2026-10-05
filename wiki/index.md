@@ -56,6 +56,7 @@
 - [Xaira（Bo Wang & Xi Chu）](people/xaira-team.md) — 虚拟细胞 / X-Cell，"因果模型需要因果数据"
 - [Applied Intuition（Qasar Younis & Peter Ludwig）](people/applied-intuition.md) — 物理 AI 横向供应商，Dana、实时性即护城河
 - [Mark Cuban](people/mark-cuban.md) — Broadcast.com 创始人，AI 泡沫、企业落地难、世界模型
+- [Daniel Ek](people/daniel-ek.md) — Spotify 执行董事长 / Neko Health 联合创始人，应用侧经营者：部署侧算力差作为攻防判据、对 pacing 不站队、"AI 做召回、人做判决"
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
@@ -254,6 +255,7 @@
 - 2026-09-15 [Satya Nadella：放缓之争、微软的牌与"谁赢 AI"（现场活动）](videos/20260915-all-in-satya-nadella-microsoft-ai.md)
 - 2026-09-17 [Meta 总裁 Dina Powell McCormick：数据中心的社区账本、五周把人送上工地](videos/20260917-all-in-meta-dina-powell-datacenters.md)（现场活动）
 - 2026-09-26 [第 290 期：Anthropic IPO 的风险因子、12 周内 token 用量 80/20 翻转、"别再叫自己 lab"](videos/20260926-all-in-anthropic-ipo-open-source-flip.md)
+- 2026-09-28 [Daniel Ek：Neko 的预防式体检、"行业没把好处讲出来"，以及把算力当监管度量](videos/20260928-all-in-daniel-ek-neko-compute-as-regulatory-metric.md)（⚠️ 采访期，AI 内容仅约 8 分钟）
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)

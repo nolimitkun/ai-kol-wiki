@@ -230,6 +230,7 @@
 | 2026-08-06 | [Saronic：中国造船产能是美国的 230 倍](../videos/20260806-all-in-saronic-shipbuilding.md) | 总吨这个新度量衡、VLS 单位经济学、成本加成 vs 固定总价、自主武器的政策阈值、Port Alpha 首发（Jason 单人主持） |
 | 2026-08-08 | [Google 人才外流、SpaceX 首份财报、Airtable 跌掉 90%、美国数据在喂中国 AI](../videos/20260808-all-in-google-brain-drain-spacex-airtable.md) | 双寡头与两层市场、渠道冲突、$/watt 与 3000 亿融资问题、承接方只有三家、Airtable 解剖与"AI 让维护模式变便宜"、训练数据出口之争（Chamath 缺席） |
 | 2026-09-17 | [Meta 总裁谈数据中心：社区账本、五周把人送上工地](../videos/20260917-all-in-meta-dina-powell-datacenters.md) | 数据中心民调 -80、教师 5 万美元支票的税收机制、自付发电与电网升级、America's Workforce Academy、工会转向、儿童时长协议、Chamath 的"把停留时长当奖励函数"RSI 论证（现场活动） |
+| 2026-09-28 | [Daniel Ek：Neko 的预防式体检、"行业没把好处讲出来"、把算力当监管度量](../videos/20260928-all-in-daniel-ek-neko-compute-as-regulatory-metric.md)（嘉宾 [Daniel Ek](daniel-ek.md)） | ⚠️ **采访期，AI 内容仅约 8 分钟**：对 pacing 明确不站队、开闭源会并存、Spotify 同时用前沿与自微调模型、**部署侧算力差作为攻防判据**（被主持人当场用 teraflop 阈值与 Cray 先例修正）、Neko 的"AI 做召回、人做判决"分工（Jason + Friedberg，Chamath 与 Sacks 缺席） |
 | 2026-09-26 | [第 290 期：Anthropic IPO 风险因子、12 周内 token 用量 80/20 翻转](../videos/20260926-all-in-anthropic-ipo-open-source-flip.md) | labs vs corporations 与产品责任、Friedberg 的十天开源清单、Chamath 的折现判据、Sacks 的仓鼠轮与 alignment 质疑、Bernie Sanders 禁令法案、Muse/Grokbot 与 App Store 抽成、Anthropic 湿实验室的技术澄清 |
 
 > 来源：[All-In 2026-09-17](../videos/20260917-all-in-meta-dina-powell-datacenters.md)
