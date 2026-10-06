@@ -1658,3 +1658,39 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 - [topics/using-llms-in-practice.md](topics/using-llms-in-practice.md)：新增压缩三种做法、缓存与预热的 fan-out 模式、让 agent 测自己写的软件
 - [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增"成本先速度后"的推理排序与被拒答的 Cerebras 问题、缓存从优化变成带时长的承诺
 - [index.md](index.md)
+
+## 2026-10-06 — 摄取 a16z / Barrett Lyon（第三期）：本库第一个公网协议层的声音，以及一节本库拒绝跟随的断言
+
+本晚第三期（2026-10-01，45 分钟，英文自动字幕，走 `fetch.py` 默认路径）。⚠️ **嘉宾、主持与公司名全部取自视频简介**：a16z 的 Joel de la Garza × **DoxxNet 创始人 [Barrett Lyon](people/barrett-lyon.md)**（Prolexic 创始人、Opte 作者）。自动字幕把人名拼成 "Barrett Lion"、公司拼成 "docs / docset"、Prolexic 拼成 "Perlexic"、Vint Cerf 拼成 "Event Surf"，视频页列了还原规则。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [a16z / DoxxNet 与"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md) | ⚠️ **本库第一份公网协议层材料**：协议层停滞、**CGNAT 是"整个互联网最大的污点"**、mesh/P2P 复活；⚠️ **"网络不做身份"与把限制放错层的连带损害**（法国焦土封网 + geo 误判的半径）；**"加密通讯其实是发给服务器"**；**治理即信任**（FBI 蜜罐 App、"如果你没有在付钱，你就是那个产品"、美国 + 瑞士双实体）；⚠️ **12 人 / 26 个全球站点 / 没有系统管理员**，而理由是 blast radius 不是省钱；**追踪聚合 + "倒进 LLM 说跟我讲讲这个人"**；⚠️ **数据中心舆论被操纵（本库记为立场、无证据）** |
+
+### ⚠️ 本次最有价值的三处
+
+1. ⚠️ **"网络不做身份"给了本库一条可复用的判据。** "**它手里有把锤子，它就会去锤钉子。而一个 IP 地址不是你的驾照。**"配上法国那个案例（运营商焦土封国 + Google/Cisco 把它误判成法国 → "你现在也成了那条政策的一部分"），和 [Sinofsky 预测的"欧洲会让每次 agent 碰第三方都弹同意框"](videos/20260926-a16z-outside-the-labs-security-regulation.md) 是**同一机制在两层的两次出现**。本库由此在 [LLM 安全](topics/llm-security.md) 收口为：**监管会落在它能执行的那一层，而不是正确的那一层——所以连带损害的半径才是真正要预测的东西。**
+2. ⚠️ **"12 人、没有系统管理员"这条，本库记的是它缺的另一半。** 他的论证是"**我们没有一千个员工能访问这张网络，所以 blast radius 非常小**"，主持人背书"**最灾难性的网络攻击总是带着内部威胁的角度**"。**本库的处理：这是把内部威胁换了形状，不是消掉**——换成了"一套能改全网配置的自动化系统被攻破或被诱导"，而那正是 [Thariq 的 wiki 事故漏洞链](videos/20260929-latent-space-thariq-claude-code-mods-pacing.md)、[Casado 的"访问控制不缺技术缺可用性"](videos/20260926-a16z-outside-the-labs-security-regulation.md)、[Onyx 的"AI 看管 AI"](people/maxim-bar-kogan.md) 的主题。⚠️ **值得记的是人选：提出"内部威胁最致命"的正是 a16z 的安全侧合伙人，而他三个月前在 Black Hat 那期就说过"agent 与秘密的交互是蛮荒西部式的未解问题"——同一个人，两期之间没把这两条接上。** ✅ 但他这条里**自有金属 + 不外送运维上下文**那一半是真实收益，本库记了。
+3. ✅ **又补上一个悬置的名字**：[people/a16z.md](people/a16z.md) 里那位"只以 Joel 出现"的安全侧主持人确认是 **Joel de la Garza**。**本晚第二个这样的确认**（另一个是 David George）。
+
+### ⚠️ 本次最重要的一处判断：数据中心那一节，本库收录但明确不跟随
+
+[00:24:16]–[00:28:20] 两人断言**反数据中心舆论是被商业利益操纵的**，具体包括"**耗水说法源自一句完全编造出来的引言**"、"**我去过 20 多个数据中心、没见过抗议者**"、"**网上的噪音视频是配音造假**"。⚠️ **两人全程没有给出任何证据**，而紧接在"把追踪数据倒进 LLM 就能做有效靶向"之后——**这是从"能力存在"跳到"已经发生"**。
+
+**本库的处理**：视频页、人物页与 [AI 基础设施](topics/ai-infrastructure.md) 都用**逐条表格**记录，机制部分（闭环冷却 + 补水 + 蒸发）标为与既有材料不冲突，无出处的断言标为不采用，"带来就业与基础设施"标为方向一致。⚠️ **并记下一处不对称：最有动机否认反对声量的一方（Meta）给出的是 [-80 的民调](videos/20260917-all-in-meta-dina-powell-datacenters.md)，而这两位给出的是"我没看见抗议者"。** 本库在这条线上的立场不变。
+
+### ⚠️ 其它限定
+
+- **结构限定**：45 分钟里约一半是人物故事（开场 6 分钟的迫降、结尾 9 分钟的 MoMA / 书 / Burning Man）。**技术与观点集中在 [00:07:05]–[00:32:22]**，视频页把这条前置，引用请用这一段的锚点。前后两段只在"来路"一节列事实。
+- **公司数据全部自述**：196 个域、26 站点、12 人、20 GB 点对点、post-quantum、三到四层加密——**本库一条都没核实**；而 a16z 是其上一家公司的投资方（主持人开场即承认）。
+- ⚠️ **他对加密通讯那条批评的范围被明确限定了**：他批的是**传输拓扑与元数据**，不是端到端加密的密码学强度；而**他的方案把问题从"信不信 Meta"换成了"信不信 DoxxNet"**，他对此的回答是公司治理。
+
+### 更新
+
+- 新建 [videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)、[people/barrett-lyon.md](people/barrett-lyon.md)
+- ✅ [people/a16z.md](people/a16z.md)：**"Joel"改名为 Joel de la Garza**，新增他这一期的提问贡献与两处本库标注的缺口；访谈表加一行
+- [topics/llm-security.md](topics/llm-security.md)：新增"把运维换成 agent 是换形状不是消掉"、"网络不做身份与放错层的连带损害"、"追踪聚合 + 便宜智能"三节
+- [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增协议层一节（含 CGNAT、mesh、"不是你的设备就没法下策略"），以及数据中心舆论那一节的逐条处理表
+- [index.md](index.md)
