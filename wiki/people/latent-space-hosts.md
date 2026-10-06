@@ -46,6 +46,7 @@
 | 2026-09-25 | [Runway：世界模型、机器人与神经操作系统](../videos/20260925-latent-space-runway-world-models.md) | [Anastasis Germanidis](anastasis-germanidis.md)（Runway 联合创始人兼 CTO；swyx + Vibhu） |
 | 2026-09-23 | [生物安全是一场军备竞赛](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) | [Eric Nguyen](eric-nguyen.md)（Radical Numerics CEO、Evo 一作；**AI for science 子系列**，Brandon + RJ） |
 | 2026-09-29 | [可变软件、harness 的苦涩教训与来自防守侧的 pacing 论证](../videos/20260929-latent-space-thariq-claude-code-mods-pacing.md) | [Thariq Shihipar](thariq-shihipar.md)（Anthropic，Claude Code 团队；swyx + Vibhu） |
+| 2026-09-30 | [OpenAI Dev Day 现场：computer use 已经比普通人快，以及 Decisions API](../videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md) | [Ari Weinstein](ari-weinstein.md) + [Nikunj Handa](nikunj-handa.md)（OpenAI；**Dev Day 现场加场、两段**，⚠️ 主播姓名未在转录稿中播报） |
 
 > ⚠️ **2026-09-23 那期是本库里"主持人即同行"这条性质最有产出的一次**。[Eric Nguyen 那期](../videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md) 里**本页最硬的三条反驳全部来自主持方**，而且每一条嘉宾都没有驳回、而是把自己的目标往下调：
 >

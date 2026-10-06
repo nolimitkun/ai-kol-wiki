@@ -1622,3 +1622,39 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 - [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增 capex 2026 口径快照、40bps 那条及本库对它的限定、"capex 就是别人的订单簿"
 - [topics/ai-business-and-value-capture.md](topics/ai-business-and-value-capture.md)：新增三层采用拆分、幂律用户与两组口径冲突、"把客户的活干完"的单位、公开软件分叉的全市场收口、Amazon/Muse 的正和负和两种账、消费侧两数与时长指标失效、私募三数
 - [index.md](index.md)
+
+## 2026-10-06 — 摄取 Latent Space / OpenAI Dev Day（第二期）：computer use 的第一份一手材料，以及"四周抄完一个产品形态"
+
+本晚第二期（2026-09-30，40 分钟，英文自动字幕，走 `fetch.py` 默认路径）。**OpenAI Dev Day 当天 keynote 后的现场加场，两段两位嘉宾**：[Ari Weinstein](people/ari-weinstein.md)（computer use agents 产品与工程负责人，前 Apple Shortcuts / Sky 创始人）与 [Nikunj Handa](people/nikunj-handa.md)（API 团队产品负责人，前 Stripe）。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [Latent Space / OpenAI Dev Day 现场](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md) | ⚠️ **computer use 的第一份一手机制材料**：写 JavaScript 而非逐动作、accessibility 树 / Playwright / 截图按任务切换、"scrolling 地狱"的消失；⚠️ **瓶颈已从模型转到网页加载**（"等 doordash.com 自己加载"），下一阶段提速落在"等待的统计学"；⚠️ **agent 测试自己写的软件**，否则"你现在就是 agent 的 QA"；⚠️ **Decisions API 是 Jev 启发、四周做出、没训新模型**（同一批 Luna 权重 + 结构化输出约束 + 推理栈优化 + 并行批处理）；⚠️ **校准没被复制**；**12 小时缓存保证与预热**；**压缩三种做法 + "大的 coding agent 都手动做"**；⚠️ **"抽象层该放在哪"这个他自己承认没想清楚的问题**；**成本先速度后的推理工作排序（Luna 降价 80%）** |
+
+### ⚠️ 本次最重要的三处
+
+1. ⚠️ **本库第一次拿到"前沿实验室按一家创业公司的产品形态做了个对应物"的当事方自述，而且节奏是四周。** [09-21 Diogo Almeida 在同一个播客上第一次系统讲 Jev](videos/20260921-latent-space-typesafe-jev-system-one-models.md)，**九天后同一个播客上坐着做了对应物的那一方**。Nikunj 的说法是致意 + 归因 hacker 文化（"四周前这东西完全不存在"）；⚠️ **"第一家克隆并采用这个的前沿实验室"这句评价出自主持人，不出自 OpenAI，本库保留了这个区分。** 已在 [people/diogo-almeida.md](people/diogo-almeida.md) 开新小节记录，并对照 [OpenRouter 的"3 个月一轮替代摆动"](videos/20260925-latent-space-openrouter-stripe-token-economy.md)——这次是四周。
+2. ⚠️ **但对应物缺的恰好是实质，而且这条可被下一个版本直接检验。** 主持人当场指出"关掉 reasoning + 结构化输出 ≠ Jev，里头有一个 confidence"，并接上"RLHF 会把模型坍缩到你想听的答案而不是真实置信度"；**Nikunj 的回答是坦白："也许这些就会是我们要靠未来某个模型版本去爬坡的关键领域。"** 本库的记法是**复制了接口与速度，没复制校准**，并在 [topics/evaluation-and-benchmarks.md](topics/evaluation-and-benchmarks.md) 写明了检验方式。
+3. ⚠️ **computer use 的技术路线有一处本库认为比任何数字都重要、而全期无人点出的张力。** 它的论证起点是"所有软件都是为人设计的，所以 agent 能用同一套软件"，**但三条技术变化（写代码、读 accessibility 树、直接访问 DOM）合起来是在从"像素 + 鼠标"退回到"结构化表示 + 代码"**——真正被利用的不是人的界面，而是**人的界面底下那层本来给辅助技术用的结构**。已记入 [topics/llm-os.md](topics/llm-os.md)。
+
+### ⚠️ 本次标注的五条限定
+
+- ⚠️ **"现在 computer use 在完成任务上大概在多数情况下已经比普通人快了"是一条不可复现的声明**：没有任务集、没有测量方法、没有"普通人"的定义。本库据此在 [评估与基准](topics/evaluation-and-benchmarks.md) 补了一条通用判据：**凡"比人快/比人强"的声明必须同时给出任务集与 harness 配置。**
+- ⚠️ **他自己给的限定比主持人追的问更有价值**：度量跑在"harness 的不同排列与配置"上，而"生产产品有更多安全检查，按手头任务的需要分别配置"——**benchmark 配置 ≠ 生产配置，而差距大小没给。**
+- ⚠️ **两处暗示"对外数字与一般开发者可得之物有差距"的地方主持人都没追**：上面那条，以及 **12 小时缓存窗口"是为其中一个用户上的"**（本库不猜是谁）。
+- ⚠️ **一个被明确拒答的问题照录**：5.3 spark 明确归功 Cerebras，而 UltraFast 与 Cerebras 的关系"不确认也不否认"，主持人还补了"你们自己也有硅"——**Nikunj 没有回应**。记为公开未确认。
+- ⚠️ **一处他自己内部的落差照录**："付款这类有后果的动作之前要征求用户同意"与"几万美元的东西我直接丢给 computer use 梭哈"**出自同一段对话**，主持人没有追。
+- ⚠️ **术语警告**：自动字幕把产品名大面积拼错（Codex / ChatGPT / Jev / GPT Live / GPT-6.1 Soul），视频页开头列了还原规则；**凡本库无法确定的（如 keynote 上被称作 "Tijall" 的人）一律没有还原。**
+
+### 更新
+
+- 新建 [videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)、[people/ari-weinstein.md](people/ari-weinstein.md)、[people/nikunj-handa.md](people/nikunj-handa.md)
+- [people/diogo-almeida.md](people/diogo-almeida.md)：新增"OpenAI 在九天内做了一个 Jev 的对应物"小节
+- [people/latent-space-hosts.md](people/latent-space-hosts.md)：访谈表新增一行
+- [topics/llm-os.md](topics/llm-os.md)：新增 computer use 作为"通用手"（技术路线、"结构化表示而非像素"的张力、平台锁定机制、瓶颈转移、闭合 SDLC、信任曲线的落差）
+- [topics/evaluation-and-benchmarks.md](topics/evaluation-and-benchmarks.md)：新增"校准才是实质"与"对外数字 vs 生产配置"两节
+- [topics/using-llms-in-practice.md](topics/using-llms-in-practice.md)：新增压缩三种做法、缓存与预热的 fan-out 模式、让 agent 测自己写的软件
+- [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增"成本先速度后"的推理排序与被拒答的 Cerebras 问题、缓存从优化变成带时长的承诺
+- [index.md](index.md)

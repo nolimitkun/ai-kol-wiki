@@ -81,6 +81,20 @@ TypeSafe 联合创始人兼 CEO（2026-09 发布首个模型 **Jev**）。此前
 - **与 [OpenRouter](openrouter-atallah-midha.md) 的接口**：他观察到 ⚠️ **Claude Code 与 Codex 是围绕"单模型世界"建的，而开源 coding agent 因为能混搭而兴奋**（[01:40:15]）——这与路由层记录的"3 个月一轮的替代摆动"是同一现象的两侧。
 - **与 [Brian Armstrong](brian-armstrong.md) 的接口**（同次摄取）：Armstrong 说 agent 之间的微支付主要买"**向另一个专才 agent 取源数据**"；Almeida 的"dark data"与"verify everything"用例族正是这种**被代码调用的廉价智能**的供给侧。
 
+## ⚠️ 2026-09-30：OpenAI 在九天内做了一个 Jev 的对应物
+
+> 他本人不在场。以下全部来自 [OpenAI API 团队产品负责人 Nikunj Handa 的一手叙述](../videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)（Latent Space，OpenAI Dev Day 现场）。
+
+- **事实**：OpenAI 在 Dev Day 发布 **Decisions API**，而 Nikunj 明确说它 **"是 Jev 启发的"**、**"四周前这东西完全不存在"**（[Latent Space 09-30](../videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md) [00:24:20]–[00:25:20]）。他给了 Diogo 与 Jev 团队正面致意：**"他们真的启发了市场上一整个板块。Jev 一出来，所有人都疯了。我们的用户在找我们，但我们内部团队也在说：我们需要一个快得多的分类系统。"**
+- ⚠️ **"第一家克隆并采用这个的前沿实验室"这句评价出自主持人，不出自 OpenAI**；Nikunj 没有否认，但他自己的说法是把动因归给 **hacker 文化**。本页保留这个区分。
+- ⚠️ **本库认为这是他的"模型公司正一路往上挤进应用层"这条风险的第一个具体实例**，而且节奏比本库任何既有材料都快：**[09-21](../videos/20260921-latent-space-typesafe-jev-system-one-models.md) 他在同一个播客上第一次系统讲 Jev，九天后同一个播客上坐着做了对应物的那一方。** 参照 [OpenRouter 记录的"3 个月一轮替代摆动"](openrouter-atallah-midha.md)——**这一次是四周。**
+- ⚠️ **但对应物还不是替代品，而缺的正是他这条路线的实质**（[Latent Space 09-30](../videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md) [00:28:25]–[00:30:27]）：
+  - **实现上没训新模型**——"**纯粹建在同一批 Luna 权重之上**"，靠**结构化输出约束 + 推理栈优化 + 多问题并行批处理**；白送的优势是**从 Luna 免费拿到视觉，而 Jev 没有视觉**。
+  - ⚠️ **而主持人当场指出"关掉 reasoning + 结构化输出 ≠ Jev，里头有一个 confidence"**，并接上 **RLHF 会把模型坍缩到"你想听的答案"而不是真实置信度**这条线；**Nikunj 的回答是坦白："也许这些就会是我们要靠未来某个模型版本去爬坡的关键领域。"**
+  - **本库的记法**：**第一版复制了接口与速度，没有复制校准。**这给了他一条**可被下一个版本直接检验的护城河判据**——详见 [评估与基准](../topics/evaluation-and-benchmarks.md)。
+- **架构猜测仍未证实**（[Latent Space 09-30](../videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md) [00:30:27]–[00:31:28]）：外界对 Jev 的两种猜测是**扩散而非自回归**、以及**mech interp 式地从中间层读激活直接输出**；Nikunj 既不确认也不反驳，只说两种都有过公开 demo（**Gemini / Gemma diffusion 的 Jev 风格输出**、**从中间层拉 interp**），"**这全是猜测**"。主持人另称 ⚠️ **"过去两周大概出了 100 个 Jev 克隆"**（本库未核实），并给了一条有用的区分：**"API 谁都能做出来，挺 trivial 的。难的是速度，然后是准确率，然后是其它校准特性。"**
+- ⚠️ **另一处与他正面相关、但他不在场的材料**：[Ari Weinstein 的"computer use 让 agent 能测试自己写的软件"](ari-weinstein.md)，正好是在补他 ["10 行 PR"质疑](../videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md) 里那个被抽走的监督环（他的原话是"**不管你用多少 AI coding agent，软件本身并没有变好……甚至可以说在变差，因为监督变少了**"）。**本库并列不裁决**，但注意 **Ari 补的是"能跑"这一层，不是他担心的"设计质量"那一层。**
+
 ## 视频
 
 | 日期 | 主题 |
