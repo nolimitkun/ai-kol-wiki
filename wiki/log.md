@@ -1589,3 +1589,36 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 ### ⚠️ 本晚总结
 
 4 期全部完成并逐期推送。⚠️ **本晚最有意思的结构性收获不是单期内容，而是两组跨期对撞**：① **Almeida（a16z 09-28）× Thariq（Latent Space 09-29）就"沙箱能不能封完"正面相对**；② **Almeida 的可靠性四层 × Pawlan 的"这一波就是 Open Claw 的复刻"——一个在模型侧、一个在产品侧，结论形状相同：这一轮真正稀缺的是可靠性，不是能力。** 两组都已在相关页面交叉标注。
+
+## 2026-10-06 — 摄取 a16z / State of Markets（第一期）：一份演示注解，本库第一次拿到企业采用的三层拆分
+
+本晚第一期（2026-09-30，52 分钟，英文自动字幕，走 `fetch.py` 默认路径）。⚠️ **四人姓名取自视频简介**：[David George](people/a16z.md)（主持）、Sarah Wang、Alex Immerman、Santiago Rodriguez，均为 a16z Growth 团队。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [a16z / State of Markets 25 张图](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md) | ⚠️ **69%/30%/2%：企业采用第一次被拆成"部署 / 可量化 / 被长期追踪"三层**；**"不是泡沫"的估值结构论证（倍数降 20%）**；**capex 的 2026 口径快照（7800 亿→1 万亿、占 GDP 超铁路）**；**数据中心每增 10% 容量电价降 40bps 这条反直觉数据**；**"hyperscaler 的 capex 就是别人的订单簿"**；**power user 8 倍幂律与 AI 支出/人力支出 1% vs 10%**；**"把增量 AI 投入放在哪"当试纸**；**时长指标正在失效**；**公开软件分叉的全市场口径（只 30% 增长 20%+）**；**私募三数（2.4 万亿、tender 参与率 58%、二级折价归零）** |
+
+⚠️ **这一期的性质要先说清楚：它不是访谈，是一份 a16z 自家年度演示的口头注解。** 没有对立面、没有被追问，全期唯一接近内部分歧的只有 Amazon 封锁 Muse 一事上的"正和 vs 负和"，而它以"两者都可能为真"收场。**数据全部自报、几乎每个被点名的公司都是被投方**，视频页开头把这条利益相关前置了。
+
+### ⚠️ 本次最有价值的三处
+
+1. ⚠️ **69%/30%/2% 给了本库一条可复用的判据。** 此前本库关于企业采用的材料几乎都停在"采用率"这一个标量上（[Satya 的 capability overhang](topics/ai-business-and-value-capture.md)、[Elad Gil 的三阶段](topics/ai-business-and-value-capture.md)、[Vals 的 token 支出对比](topics/ai-business-and-value-capture.md)），而 69% 与 2% 差了一到两个数量级——**以后讨论"企业采用到哪儿了"必须先问是哪一层的数**，否则两个数会被当成矛盾数据。
+2. ⚠️ **九天内三方落到同一结论，而本库同时标了它的折扣。** "今天的机会就是把能力做成可靠服务"（投资人侧，09-30）× [Almeida 的反向 SaaS 末日 / 可靠性四层](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)（模型侧，09-28）× [Pawlan 的"这一波就是 Open Claw 的复刻"](videos/20260929-a16z-personal-agents-assistant-bench.md)（横评侧，09-29）——形状相同：**这一轮稀缺的是可靠性不是能力**。⚠️ **但三份材料都出自 a16z 频道，所以这是同一频道三次表述，不是三个独立信源，视频页与主题页都标了这一点。**
+3. ⚠️ **本库第一次把两组口径的冲突明确并列而不合并**：a16z 说"整家公司层面 AI 支出占人力支出最高 10%"，[Vals](videos/20260909-a16z-vals-ai-measuring-frontier-intelligence.md) 说"token 支出 10 倍于工资"——**差了一个数量级以上且方向相反**，因为一个是单项目口径、一个是全公司口径。主题页记了"引用任一方必须带这个限定"。
+
+### ⚠️ 本次标注的四条限定
+
+- ⚠️ **"倍数不高"这个论据的分母部分依赖还没发生的预测**：他们自己承认 free cash flow 在 buildout 期被压低、恢复要等 2028 年起的共识预测（[00:10:11]）——全期无人把这个循环点出来，视频页与 [people/a16z.md](people/a16z.md) 都补了这条。
+- ⚠️ **那条 40bps 不构成独立验证**：a16z 举的唯一实例就是 [Dina Powell 讲 Meta 路易斯安那站点](videos/20260917-all-in-meta-dina-powell-datacenters.md)，两份材料同源。[AI 基础设施](topics/ai-infrastructure.md) 一节给了本库的收口形状：摊薄固定成本的机制理论上成立，但与"居民账单实际涨了"并不互斥，取决于容量增长与输电投资的时序——而这一期没讨论时序。
+- ⚠️ **归属大面积不可确定**：自动字幕只有 `>>` 换轮、四人同台。视频页只在有转录稿内证时指认个人（"to use DG's language"排除 David、"你说得对 Santi，我确实喜欢微笑留存曲线"定位 Alex 与 Santi、"Sarah, you did this great conversation with Ali Ghodsi"排除 Sarah），其余一律记为"a16z 成长团队"；新建的三人小节开头也挂了同样的归属警告。
+- ⚠️ **口径互不可比**：69%/30%/2% 来自一份企业调查、8 倍幂律来自 Yipit、2% 家庭付费来自另一份"近期调查"、40bps 来自"一项美国研究"——视频页末尾明确写了并列不等于可互相校准。
+
+### 更新
+
+- 新建 [videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)
+- ✅ [people/a16z.md](people/a16z.md)：**"David（a16z 成长期投资负责人）"改名为 David George**——此前因转录稿只播了名而悬置的身份确认，这一期他自己开场报了全名（[00:01:01]），简介也列了四人姓名；同时新增 Sarah Wang / Alex Immerman / Santiago Rodriguez 小节（带归属警告），并在访谈表加一行
+- [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增 capex 2026 口径快照、40bps 那条及本库对它的限定、"capex 就是别人的订单簿"
+- [topics/ai-business-and-value-capture.md](topics/ai-business-and-value-capture.md)：新增三层采用拆分、幂律用户与两组口径冲突、"把客户的活干完"的单位、公开软件分叉的全市场收口、Amazon/Muse 的正和负和两种账、消费侧两数与时长指标失效、私募三数
+- [index.md](index.md)
