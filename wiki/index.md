@@ -62,6 +62,7 @@
 - [Ari Weinstein](people/ari-weinstein.md) — OpenAI computer use agents 产品与工程负责人（前 Apple Shortcuts / Sky 创始人）：写 JavaScript 而非逐动作、accessibility 树作为 LLM 界面、瓶颈转到网页加载、agent 测自己写的软件
 - [Nikunj Handa](people/nikunj-handa.md) — OpenAI API 团队产品负责人（前 Stripe）：Decisions API 是 Jev 启发且没训新模型、校准尚未复制、12 小时缓存保证与预热、压缩三种做法、"抽象层该放在哪"
 - [Barrett Lyon](people/barrett-lyon.md) — DoxxNet 创始人 / Prolexic 创始人 / Opte 作者（本库第一个公网协议层的声音）：协议层停滞、CGNAT 是最大污点、"网络不做身份"、治理即信任、12 人 26 站点无系统管理员
+- [Walter Goodwin](people/walter-goodwin.md) — Fractile 创始人兼 CEO，全栈快推理芯片：带宽的 scaling law（flops 百万倍 vs 带宽 40 倍）、SRAM→高带宽 DRAM 的公开转向、芯片产业链的交接点、"自研芯片的主要功能是议价"、前沿实验室在芯片层押重注是不理性的
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
 - [Travis Kalanick](people/travis-kalanick.md) — Atoms/Uber 创始人，industrial AI、物理世界即计算机（非人形工业自动化）
@@ -290,3 +291,4 @@
 - 2026-09-29 [我们把这一波个人 AI agent 全试了一遍：省钱胜过省时、proactivity 才是护城河](videos/20260929-a16z-personal-agents-assistant-bench.md)（David Pawlan / Assistant Benchmark；Anish Acharya 主持）
 - 2026-09-30 [25 张图讲 2026 的市场：不是泡沫因为倍数在降、而企业 AI 被长期追踪的只有 2%](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)（David George、Sarah Wang、Alex Immerman、Santiago Rodriguez / a16z Growth；⚠️ 演示注解而非访谈，数据全部自报）
 - 2026-10-01 [用 12 个人、26 个站点造一张平行互联网：DoxxNet，以及"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)（Barrett Lyon / DoxxNet；Joel de la Garza 主持；⚠️ 约一半时长是人物故事，数据中心那一节本库记为立场而非事实）
+- 2026-10-02 [带宽的 scaling law：20 年里 flops 涨了百万倍，内存带宽只涨了 40 倍](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（Walter Goodwin / Fractile；Sarah Guo 独立主持；⚠️ 创始人访谈，技术声明全部自述）

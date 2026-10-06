@@ -50,6 +50,7 @@
 | 2026-09-10 | [给 AI 开银行账户：agentic finance、x402 与公司内部的"brain"](../videos/20260910-no-priors-brian-armstrong-agentic-finance.md) | [Brian Armstrong](brian-armstrong.md)（Coinbase CEO / New Limit；Elad Gil 独立主持） |
 | 2026-09-18 | [扩散模型为什么会赢下推理](../videos/20260918-no-priors-stefano-ermon-diffusion-inference.md) | [Stefano Ermon](stefano-ermon.md)（Inception CEO / 斯坦福；Sarah Guo 独立主持） |
 | 2026-09-24 | [买下在位者再"重新创办"它](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md) | [Michael Lee](michael-lee.md)（Sequence Holdings CEO；Sarah Guo 独立主持）⚠️ **她的 Conviction 是该公司首轮投资方** |
+| 2026-10-02 | [带宽的 scaling law：flops 涨百万倍，内存带宽只涨 40 倍](../videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md) | [Walter Goodwin](walter-goodwin.md)（Fractile 创始人兼 CEO；Sarah Guo 独立主持） |
 
 > **来源：[No Priors / Michael Lee](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md)**
 >

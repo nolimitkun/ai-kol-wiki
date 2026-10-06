@@ -1694,3 +1694,47 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 - [topics/llm-security.md](topics/llm-security.md)：新增"把运维换成 agent 是换形状不是消掉"、"网络不做身份与放错层的连带损害"、"追踪聚合 + 便宜智能"三节
 - [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增协议层一节（含 CGNAT、mesh、"不是你的设备就没法下策略"），以及数据中心舆论那一节的逐条处理表
 - [index.md](index.md)
+
+## 2026-10-06 — 摄取 No Priors / Fractile（第四期，本晚最后一期）：带宽的 scaling law，以及芯片产业链的交接点
+
+本晚第四期（2026-10-02，36 分钟，英文自动字幕，走 `fetch.py` 默认路径）。[Walter Goodwin](people/walter-goodwin.md)（Fractile 创始人兼 CEO，2022 年夏创办，全栈快推理芯片，约 150 人）× Sarah Guo 独立主持。
+
+### 摄取内容
+
+| 视频 | 本库此前没有的东西 |
+|---|---|
+| [No Priors / Fractile](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md) | ⚠️ **芯片产业链的交接点**（架构师 → 前端设计 → Broadcom → GDSII → TSMC，含 Broadcom 价值的两条具体来源）；⚠️ **带宽的 scaling law**（"20 年 flops 百万倍 vs 带宽 40 倍"、MoE 稀疏度与注意力两条）；⚠️ **一次公开承认的架构转向**（SRAM →高带宽 DRAM，理由是上下文长度）；**"诱人的错配"**（快推理芯片不跑长上下文注意力，要切回 GPU）；⚠️ **推理经济学坍缩成每 GB 内存成本**；**三条节奏硬约束**（fab 周期 3–5 个月 / 摊销 3–5 年 / 爬坡 12–18 个月）；⚠️ **place and route 是 AI 短期进不去的那段**；⚠️ **"自研芯片的首要用途是压低付给英伟达的价钱"**；⚠️ **前沿实验室在芯片层押重注是不理性的（九个月窗口论证）** |
+
+### ⚠️ 本次最有价值的四处
+
+1. ⚠️ **交接点那一段补上了本库芯片材料里最大的一个空白。** 此前本库从微观电路（[Reiner Pope](videos/20260522-dwarkesh-reiner-pope-chip-design.md)）到晶圆级（[Cerebras](videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)）到代工供应链（[Lip-Bu Tan](people/lip-bu-tan.md)、[Rene Haas](videos/20260903-no-priors-rene-haas-arm-cpu-supply-chain.md)）到验证工时（[肖志斌](people/xiao-zhibin.md)）都有，**但没有一份讲清一个自研项目里哪一段自己做、哪一段外包**。他还由此解释了**为什么市面上的 AI ASIC"相对雷同"是结构性的**：都和同一小批 ASIC house 合作、都用 HBM、都押 Tensor Core、都用 TSMC 同样的先进封装。
+2. ⚠️ **"带宽的 scaling law"给了本库一组三方对照。** [孙宇涛从模型侧说"架构决定 infra"](videos/20260826-uncle-moon-sun-yutao-k3-architecture.md)、[游凯超从引擎侧说"没抽中硬件彩票就吃不到红利"](topics/ai-infrastructure.md)，**而这一个从芯片侧说"我可以去发新的彩票"**。⚠️ 而他对彩票的双向性很诚实——**必须先在旧彩票上赢，才有资格发新的**，本库把这句收口进了硬件彩票那一节。
+3. ⚠️ **他指出的那段"AI 短期进不去"与肖志斌是互补而非冲突。** 肖志斌说"AI 吃掉的是验证，不是设计"；他说卡住的是 **place and route 这类 NP 难循环**（"会连着跑好几天"）与 **Cadence/Synopsys 的最终签核**。**两条合起来是本库目前最完整的"芯片流程里 AI 的边界在哪"。** ⚠️ 他还把这条的形状直接类比成 RSI，并引用了 [Beren Millidge 在 Dwarkesh 那期的"实验之间可以思考一百年"](people/beren-millidge.md)——**本库第一次看到一条 RSI 侧论证被芯片一方直接复用。**
+4. ⚠️ **他的 SRAM 转向在本库里形成一处可检验的分歧。** 他把 SRAM 路线描述成自己**主动放弃**的方案，理由是**长上下文的容量**；而 Cerebras 一侧（[Sean Lie](videos/20260902-latent-space-cerebras-sean-lie-inference-frontier.md)、[Feldman](videos/20260521-no-priors-cerebras-feldman.md)）讲的是晶圆级 SRAM 的优势，**没有正面回答容量问题**。**并列不裁决，可被 2027 年下半年的实际部署检验。**
+
+### ⚠️ 本次标注的四条限定
+
+- **创始人访谈，公司声明全部自述**：25 倍带宽、2027 下半年爬坡、150 人全栈——**本库一条都没核实**；而**最核心的论题（带宽是被低估的那条边）恰好是押注带宽的一方最有动机主张的**，视频页与人物页都把这条利益相关写在了论题旁边。
+- ⚠️ **两条产业数字也未核实**："flops 百万倍 vs 带宽 40 倍（20 年）"、"Broadcom 是 2 万亿美元公司"；**"前三大半导体 CEO 说 10 年"是主持人转述，对方明确不让公开。**
+- ⚠️ **他那条市场结构论证本库标了两面**：九个月窗口的不对称博弈是**真正的博弈论论证**，但也**恰好是第三方芯片公司最需要成立的论题**；反向证据是 **Google TPU 十多年的坚持**，而他自己在同一期里承认 TPU 开了自研的头。**记为可检验的争议。**
+- ⚠️ **主持人加的那条限定本库跟着记了**：他主张"结构上刻出三到六个月优势就赢下所有部署"，Sarah Guo 当场补"**那只有在你关于该量产哪一个的决策是正确的时候才成立**"。
+- ⚠️ **术语**：字幕把 Fractile 拼成 "Fractal"、Groq 拼成 "Grok"、Maia 拼成 "Maya"、Kimi 拼成 "Kimmy"、**Beren Millidge 拼成 "Baron Milledge"**，视频页列了还原规则；**OpenAI 自研芯片代号在字幕里是 "Halapenio"，本库无法确定还原，照录存疑、不猜。**
+
+### 更新
+
+- 新建 [videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)、[people/walter-goodwin.md](people/walter-goodwin.md)
+- [people/no-priors-hosts.md](people/no-priors-hosts.md)：访谈表新增一行
+- [topics/ai-infrastructure.md](topics/ai-infrastructure.md)：新增六小节（交接点表、带宽 scaling law、架构转向与错配、节奏的三条硬约束、GDSII 那段 AI 进不去的流程、市场结构与议价判据）
+- [index.md](index.md)
+
+### ⚠️ 本晚总结
+
+4 期全部完成并逐期推送，`lint.py` 收尾 **✅ 无问题**（265 页）。
+
+⚠️ **本晚最该记的不是单期内容，而是三组跨期结构**：
+
+1. ⚠️ **"可靠性而非能力"这条线在九天内第四次出现，而本库同时标了它的折扣。** [a16z Growth 的"今天的机会就是把能力做成可靠服务"](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)（09-30）× [Almeida 的可靠性四层](videos/20260928-a16z-diogo-almeida-smart-software-prod-not-god.md)（09-28）× [Pawlan 的"就是 Open Claw 的复刻"](videos/20260929-a16z-personal-agents-assistant-bench.md)（09-29）——**但三份都出自 a16z 频道，所以这是同一频道三次表述，不是三个独立信源。** ✅ 而本晚第二期从**另一个频道**给了它一个实现侧的补充：[Ari Weinstein 让 agent 测试自己写的软件](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)，补上"你现在就是 agent 的 QA"那一环（⚠️ 只补了"能跑"这一层，不是 Almeida 担心的设计质量那一层）。
+2. ⚠️ **"瓶颈已经离开模型"在本晚被三个完全不相干的位置独立说出。** [computer use 卡在等 doordash.com 加载](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)（"而这件事本身是一门统计科学"）× [芯片设计卡在 place and route 的 NP 难循环](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（而他自己把这个形状类比成 RSI 的实验瓶颈）× [企业 AI 卡在"被长期追踪的只有 2%"](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)。**三者的共同形状是：智能侧的边际收益在下降，而下一段收益落在等待、流程与度量上。** 本库认为这是比任何单期观点都更值得跟踪的一条。
+3. ⚠️ **本晚两次把"立场"和"事实"分开，而两次都是对友好材料做的。** ① [a16z 那条 40bps 电价](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md) 标为**与 Meta 那期同源、不构成独立验证**；② [Barrett Lyon 那期的数据中心一节](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md) 标为**立场而非事实**，并记下不对称——**最有动机否认反对声量的一方（Meta）给的是 -80 民调，这两位给的是"我没看见抗议者"。** 本库在这条线上的立场不变。
+
+✅ **顺带补上了两个悬置几个月的名字**：a16z 页上"只以 David 出现"的成长期负责人是 **David George**；"只以 Joel 出现"的安全侧主持人是 **Joel de la Garza**。两次都靠视频简介 + 本人自报。
