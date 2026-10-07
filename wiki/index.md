@@ -63,6 +63,7 @@
 - [Nikunj Handa](people/nikunj-handa.md) — OpenAI API 团队产品负责人（前 Stripe）：Decisions API 是 Jev 启发且没训新模型、校准尚未复制、12 小时缓存保证与预热、压缩三种做法、"抽象层该放在哪"
 - [Barrett Lyon](people/barrett-lyon.md) — DoxxNet 创始人 / Prolexic 创始人 / Opte 作者（本库第一个公网协议层的声音）：协议层停滞、CGNAT 是最大污点、"网络不做身份"、治理即信任、12 人 26 站点无系统管理员
 - [Jordan（SemiAnalysis / ClusterMAX）](people/semianalysis-jordan.md) — ClusterMAX 负责人，前 HPE 十年硬件系统设计：本库第一个"把 GPU 云当被测对象"的声音——NeoCloud 安全的洞在运维层、GB300 NVL72 作为换代门槛、跨站点异构 RL、"除了 Azure 我一个都不信能建 10 万卡集群"（⚠️ 全名待核）
+- [Alex Zhang](people/alex-zhang.md) — MIT 博士二年级，RLM（Recursive Language Models）作者、GPU MODE 核心成员：**"所有主流 harness 其实是同一个"**、harness 的正面定义、**locally in distribution**（短任务训练泛化到长 8–30 倍）、"RLM 就是唯一工具是代码的 harness"、**"swarm 里 95% 完全没用"**、"这是个 skill issue"、kernel 排行榜上"人在扮演一个非常强的 verifier"
 - [Vladimir Keil](people/vladimir-keil.md) — Lio 联合创始人兼 CEO，企业采购 multi-agent：**发票软件只覆盖这份工作的 20%**、500 封邮件漏一封 = 上亿损失、**自建能到 70% 但 70% 性能 ≠ 70% 自动化**、harness 的 80% 天花板 → 指向 Jev 那类 outcome 模型、FDE 的 KPI 是把自己自动化掉、"一千个工具只让流程更有效率，从没改变人怎么工作"
 - [Walter Goodwin](people/walter-goodwin.md) — Fractile 创始人兼 CEO，全栈快推理芯片：带宽的 scaling law（flops 百万倍 vs 带宽 40 倍）、SRAM→高带宽 DRAM 的公开转向、芯片产业链的交接点、"自研芯片的主要功能是议价"、前沿实验室在芯片层押重注是不理性的
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
@@ -251,6 +252,7 @@
 - 2026-09-30 [OpenAI Dev Day 现场：computer use 已经比普通人快，以及"四周前这东西还不存在"的 Decisions API](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)（Ari Weinstein + Nikunj Handa / OpenAI，分两段；⚠️ 发布日的当事方口径，性能数字均未核实）
 - 2026-09-23 [Eric Nguyen（Radical Numerics）：生物安全是一场军备竞赛，而防守方"远远落后"——dual mandate、生物防御四支柱、"同功能不同拼写"、"你没法给一个人打补丁"](videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md)（AI for science 子系列）
 - 2026-10-02 [ClusterMAX 3.0：哪些 GPU 云真的能用——"大多数 NeoCloud 的安全烂得惊人"、推理毛利从 10% 到 60% 把算力市场买空、跨站点异构 RL](videos/20261002-latent-space-clustermax3-neocloud-rankings.md)（Jordan + Dylan Patel / SemiAnalysis；"Lightning" 格式，swyx 主持；⚠️ 卖方机构为自家榜单做的宣传期，本库不采用名次）
+- 2026-10-02 ["所有 harness 其实都是同一个"：RLM、locally in distribution，以及"这是个 skill issue"](videos/20261002-latent-space-alex-zhang-recursive-language-models.md)（Alex Zhang / MIT；⚠️ 他与 Prime Intellect 合作做 Prime Agent，核心实证结果均为自述未核实）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
