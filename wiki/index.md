@@ -62,6 +62,7 @@
 - [Ari Weinstein](people/ari-weinstein.md) — OpenAI computer use agents 产品与工程负责人（前 Apple Shortcuts / Sky 创始人）：写 JavaScript 而非逐动作、accessibility 树作为 LLM 界面、瓶颈转到网页加载、agent 测自己写的软件
 - [Nikunj Handa](people/nikunj-handa.md) — OpenAI API 团队产品负责人（前 Stripe）：Decisions API 是 Jev 启发且没训新模型、校准尚未复制、12 小时缓存保证与预热、压缩三种做法、"抽象层该放在哪"
 - [Barrett Lyon](people/barrett-lyon.md) — DoxxNet 创始人 / Prolexic 创始人 / Opte 作者（本库第一个公网协议层的声音）：协议层停滞、CGNAT 是最大污点、"网络不做身份"、治理即信任、12 人 26 站点无系统管理员
+- [Jordan（SemiAnalysis / ClusterMAX）](people/semianalysis-jordan.md) — ClusterMAX 负责人，前 HPE 十年硬件系统设计：本库第一个"把 GPU 云当被测对象"的声音——NeoCloud 安全的洞在运维层、GB300 NVL72 作为换代门槛、跨站点异构 RL、"除了 Azure 我一个都不信能建 10 万卡集群"（⚠️ 全名待核）
 - [Walter Goodwin](people/walter-goodwin.md) — Fractile 创始人兼 CEO，全栈快推理芯片：带宽的 scaling law（flops 百万倍 vs 带宽 40 倍）、SRAM→高带宽 DRAM 的公开转向、芯片产业链的交接点、"自研芯片的主要功能是议价"、前沿实验室在芯片层押重注是不理性的
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
@@ -95,7 +96,7 @@
 - [曾鸣](people/zeng-ming.md) — 阿里前总参谋长 / 战略学者，本库第一份商业史学者视角：三阶段论、模型公司=AI 云、科层制衰亡、岗位→任务、看十年想三年干一年
 - [Satya Nadella](people/satya-nadella.md) — 微软董事长兼 CEO，本库第一份超大规模云厂商一号位材料：扩散优先于放缓、insider risk、capability overhang、开源制衡与应用层毛利、7–8% GDP 门槛
 - [孙宇涛](people/sun-yutao.md) — 清华博士候选人 / RetNet 与 YOCO 作者，本库技术密度最高的一期：线性注意力演进史、推理开销三分法、两个矩阵连乘的定律、"忒修斯之船"
-- [Dylan Patel](people/dylan-patel.md) — SemiAnalysis 创始人，本库唯一把芯片/数据中心/电力/信贷/实验室单位经济学串成一条链的人：算力集中、$10–15M→$100M/MW、50/10/40 预算拆分、"有效人口每年 10 倍"
+- [Dylan Patel](people/dylan-patel.md) — SemiAnalysis 创始人，本库唯一把芯片/数据中心/电力/信贷/实验室单位经济学串成一条链的人：算力集中、$10–15M→$100M/MW、50/10/40 预算拆分、"有效人口每年 10 倍"；⚠️ 2026-10-02 第二期自我修正：挤空算力市场的不是实验室而是"推理毛利从 10% 到 60%"，另有 NeoCloud 安全三代实测、"到年底 OpenAI/Anthropic 的 R&D 算力各自超过 DeepMind"（待检验）、NVIDIA 防守性收购的杠杆算式
 - [肖志斌](people/xiao-zhibin.md) — ZFlow AI 创始人兼 CEO，本库第一位芯片架构师：制程降的是功耗不是速度、SRAM 停止微缩、软件能追回 2–3 倍（但对方也能）、"下一代最伟大的芯片公司是 AI native 的"
 - [徐天音](people/tianyin-xu.md) — UIUC 终身教授（系统方向），本库第一位学术界系统研究者：形式化验证五年→五小时、"把 agent 当用户系统一定挂"、SREGym、把 ROC 翻出来复用
 - [苏廷浩](people/su-tinghao.md) — 2009 年生、17 岁高二学生，论文被 ICML 2026 接收，本库第一位"AI 原住民"本人：3 万元 / 0.05B、学习意义感的塌陷、"AI 最后替代的是 AI 研究者"
@@ -218,6 +219,7 @@
 - 2026-09-10 [Brian Armstrong（Coinbase）：给 AI 开银行账户——agentic finance、x402 与公司内部的"brain"](videos/20260910-no-priors-brian-armstrong-agentic-finance.md)（Elad Gil 独立主持）
 - 2026-09-18 [Stefano Ermon（Inception）：扩散模型为什么会赢下推理](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md)（Sarah Guo 独立主持）
 - 2026-09-24 [Michael Lee（Sequence Holdings）：买下在位者再"重新创办"它，以及"你不可能把产品卖给一条还不存在的人类流水线"](videos/20260924-no-priors-michael-lee-refounding-incumbents.md)（Sarah Guo 独立主持；⚠️ 她的 Conviction 是该公司投资方）
+- 2026-10-02 [带宽的 scaling law：20 年里 flops 涨了百万倍，内存带宽只涨了 40 倍](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（Walter Goodwin / Fractile；Sarah Guo 独立主持；⚠️ 创始人访谈，技术声明全部自述）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
@@ -247,6 +249,7 @@
 - 2026-09-29 [Claude Code 的未来：可变软件、harness 的苦涩教训，以及一次来自防守侧的 pacing 技术论证](videos/20260929-latent-space-thariq-claude-code-mods-pacing.md)（Thariq Shihipar / Anthropic；⚠️ 与 [METR 那份调查](videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) 有一处实质不一致，已标注）
 - 2026-09-30 [OpenAI Dev Day 现场：computer use 已经比普通人快，以及"四周前这东西还不存在"的 Decisions API](videos/20260930-latent-space-openai-devday-computer-use-decisions-api.md)（Ari Weinstein + Nikunj Handa / OpenAI，分两段；⚠️ 发布日的当事方口径，性能数字均未核实）
 - 2026-09-23 [Eric Nguyen（Radical Numerics）：生物安全是一场军备竞赛，而防守方"远远落后"——dual mandate、生物防御四支柱、"同功能不同拼写"、"你没法给一个人打补丁"](videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md)（AI for science 子系列）
+- 2026-10-02 [ClusterMAX 3.0：哪些 GPU 云真的能用——"大多数 NeoCloud 的安全烂得惊人"、推理毛利从 10% 到 60% 把算力市场买空、跨站点异构 RL](videos/20261002-latent-space-clustermax3-neocloud-rankings.md)（Jordan + Dylan Patel / SemiAnalysis；"Lightning" 格式，swyx 主持；⚠️ 卖方机构为自家榜单做的宣传期，本库不采用名次）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
@@ -291,4 +294,3 @@
 - 2026-09-29 [我们把这一波个人 AI agent 全试了一遍：省钱胜过省时、proactivity 才是护城河](videos/20260929-a16z-personal-agents-assistant-bench.md)（David Pawlan / Assistant Benchmark；Anish Acharya 主持）
 - 2026-09-30 [25 张图讲 2026 的市场：不是泡沫因为倍数在降、而企业 AI 被长期追踪的只有 2%](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)（David George、Sarah Wang、Alex Immerman、Santiago Rodriguez / a16z Growth；⚠️ 演示注解而非访谈，数据全部自报）
 - 2026-10-01 [用 12 个人、26 个站点造一张平行互联网：DoxxNet，以及"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)（Barrett Lyon / DoxxNet；Joel de la Garza 主持；⚠️ 约一半时长是人物故事，数据中心那一节本库记为立场而非事实）
-- 2026-10-02 [带宽的 scaling law：20 年里 flops 涨了百万倍，内存带宽只涨了 40 倍](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（Walter Goodwin / Fractile；Sarah Guo 独立主持；⚠️ 创始人访谈，技术声明全部自述）

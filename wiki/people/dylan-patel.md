@@ -2,11 +2,13 @@
 
 - **背景**: **SemiAnalysis 创始人**，半导体与 AI 算力供应链分析师。本库中他的位置是**唯一一个把芯片、数据中心、电力、信贷与实验室单位经济学串成一条链的人**——此前这条链在本库里是断开的：芯片侧有 [Reiner Pope](reiner-pope.md)、[Lip-Bu Tan](lip-bu-tan.md)、[Andrew Feldman](andrew-feldman.md)，单位经济学侧有 [Freda](freda-duan.md)，但没有人把两端接上。
 - **首次收录**: [Dwarkesh，2026-08-25](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
-- **自述立场**: 自称 libertarian（[00:38:10]）。他与 [Dwarkesh Patel](dwarkesh-patel.md) 同姓但**没有亲属关系**，本期开场两人自己澄清了这点（[00:00:00]）。
+- **自述立场**: 自称 libertarian（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md) 00:38:10）。他与 [Dwarkesh Patel](dwarkesh-patel.md) 同姓但**没有亲属关系**，那期开场两人自己澄清了这点（[视频页](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md) 00:00:00）。
 
 > ⚠️ **本页所有数字均来自他/SemiAnalysis 的口径，本库无法独立核实。** 他的模型是卖方研究产品，**读时应知道他有让"算力叙事成立"的商业动机**；同时本库也标注另一面——他在本期**多次给出对自己叙事不利的限定**（见下文第四节）。
 
 ## 立场与关注点
+
+来源：[Dwarkesh / 算力集中](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)（第一至第七节；第八节另有声明）
 
 ### 一、核心判断：两家实验室会控制世界上大部分可用算力
 
@@ -56,7 +58,25 @@
 - **他给的三条集中化动力**（[01:10:59]）：训练的规模经济被摊薄到数十亿次会话；算力短缺时领先者能收更高加价；部署更广的模型拿到更多真实世界数据。
 - ⚠️ **他自己说这是"cope"**（[01:15:04]）：他先说"唯一让人安心的是 Anthropic 今天没捕获大部分价值"，被 Dwarkesh 指出这与他自己"把推理算力收回内部"的逻辑矛盾后，直接承认 **"Yes. This is my cope."**
 
+### 八、⚠️ 2026-10-02 的第二期：他自己那条限定兑现了，而口径从"集中"换成了"谁都能赚钱"
+
+来源：[Latent Space / ClusterMAX 3.0](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md)（与 [Jordan](semianalysis-jordan.md) 同场）
+
+- ⚠️ **本页认为这一期最重要的事，是他 13 个月前给自己叙事的那条限定在这里变成了主线。** 2026-08 那期的核心是"**实验室的出价能力会把增量供给整个买走**"，而他当时的自我限定是"**$10–15M/MW 的算力谁都能赚钱**"（[那期](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md) [00:14:19]）。
+- ⚠️ **本期他给"现在是有史以来最难租到算力的时候"的归因，不再是实验室**（[ClusterMAX 那期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:12:13]）：**"显然 Anthropic 和 OpenAI 一直在买越来越小的集群尺寸。"** 真正的机制是**推理毛利翻了一个台阶**——Baseten 六到九个月前还在 **10% 毛利**，**现在 Baseten、Fireworks、Together、甚至 Morph 这种小公司用 vLLM/SGLang 加一点优化就能在开源模型上跑到 60% 毛利**。落点：**"以前我主要是在和亏钱的 OpenAI、亏钱的 Anthropic 竞争。现在所有人都能靠 GPU 赚钱。"**
+- ⚠️ **配套的第二条挤压**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:13:13]）：实验室的最小起租量从 **8k GPU 一路降到 1,000 GPU**——"**而 1,000 块更接近一个 neolab 想要的量。所以市场被挤得很厉害。**"
+- ⚠️ **他对 Google 的一组断言，本库记为最该跟踪的争议**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:17:14]–[00:18:14]）：**"到今年底，OpenAI 和 Anthropic 各自投给 R&D 的算力都会超过 DeepMind。"** 他自己做了必要区分（**Google 总量仍多，但很大一部分卖给了别处**）并承认 **TPU 的成本优势仍在**；结论是"**'Google 算力最多所以它会赢'这套说法现在已经不太成立了**"。⚠️ **口径未定义、三家无公开数字，本库记为待检验。**
+- ⚠️ **他对"实验室机会主义地变成 NeoCloud"给出了本库目前最硬的一条合同细节**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:19:14]）：**SpaceX 和 Google 的合同有双向 90 天取消权**——"**两边都处在一种小小的对峙里：谁会先眨眼，谁更信 AGI。**"
+- ⚠️ **他对 Google 投资离职研究员再回来买 GCP 这个循环的两层会计**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:21:17]）：**"只看 GCP 作为独立公司是个绝佳操作；对整个 Google 来说真的很蠢——你不该激励以 2000–3000 万美元/兆瓦卖出去，而你本来可以用它跑模型、做到 5000 万美元/兆瓦。"**（⚠️ **$/MW 为其口径，未核实。**）他的先例是 Anthropic：**"我以前从你那儿租；现在我从你那儿买 TPU，这对你是更低的毛利；而将来我要自己造芯片。"**
+- ⚠️ **而他在同期给出一条对云锁定效应的新论证**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:23:17]）：**"数据引力这些人们在前 AI 时代谈的东西，在 AI 时代相关性小得多，因为 AI 能帮你把一切迁完。"**
+- ⚠️ **安全：三代 ClusterMAX 的连续记录，本库记为他最有一手价值的一段**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:06:07]–[00:07:09]）：第一代就能**看到别人的任务、数据、存储**（已上报该公司与 NVIDIA 并评为 underperform）；第三代仍有重大问题；而**有一个案例里"我们 literally 能看到某个国家的国家情报类的东西"**。他的落点：**"本来不该由我们来发现某家公司安全好不好，但这个行业确实需要这项服务。"**
+- ⚠️ **NVIDIA 收购 Poolside / Hugging Face：他定性为防守，并给了一条资本结构推演**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:27:21]–[00:28:22]）：**钱回流买 GPU → 等于只付四分之一价 → 对方拿 100 亿现金 + 75% LTV 贷款 = 400 亿 = 一吉瓦**。结论：**"它们刚刚造出了一个真正的新竞争者"**，而**"如果这就是剧本，应该有多得多的人跟 NVIDIA 做这种交易，因为 NVIDIA 会给你加冕，只因为它们想要更多的云"**。
+- ⚠️ **他对 Demis 退出 DeepMind 领导位的反应是全期情绪最强的一处**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:24:18]）：**"彻底的黑天鹅，我从来没觉得这有可能"**；他称 Demis 是"**DeepMind 的精神领袖**"，并说**"这大概是第一次完整的前沿实验室领导层交接"**。⚠️ **纯第三方推断，无一手信息。**
+- ⚠️ **中国芯片：他把"能用"和"够用"分开**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:53:34]–[00:55:40]）。能用侧：**华为 910B/C 之后 940/950/960 快速连发**；**GLM 明说有 5 万块国产加速器在给最新模型做推理**。够用侧：按 H100/GB200 等效，**美方几家都在"几百万几百万片"，而中国只有华为过了一百万毛片、其余仍在十万量级**，"**而且华为的片子落后，你还得打折**"；预测**2028 年中国能做到几千万片**。他同时给了 CUDA 侧的机制：**"开源模型越来越会写 kernel，移植越来越容易……CUDA 的护城河正在被快速侵蚀。"**
+- ⚠️ **本库必须记的一条利益披露**（[同期](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md) [00:37:27]、[00:47:30]）：他**主动披露在 Crusoe、FluidStack（均为 SPV）、TensorWave 有个人投资，而三家在榜上都不在前列**；他给的原则是**"排名就是排名"**，激励论证是**"我们对这个行业的价值就在于我们说真话，否则就是在对着虚空喊"**。⚠️ **本页认为主动披露提高了可信度，但他同期那句"整条 infra 供应链都买我们的东西"也恰恰说明被测方与付费方高度重叠。**
+
 ## 相关页面
 
-- 主题：[AI 基础设施](../topics/ai-infrastructure.md)、[AI 商业化与价值捕获](../topics/ai-business-and-value-capture.md)、[中美 AI 对照](../topics/china-us-ai.md)、[LLM 安全](../topics/llm-security.md)、[AI for AI 与自动研究](../topics/ai-for-ai-and-auto-research.md)
-- 视频：[两家实验室很快会控制世界上大部分"劳动力"（2026-08-25）](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)
+- 主题：[AI 基础设施](../topics/ai-infrastructure.md)、[AI 商业化与价值捕获](../topics/ai-business-and-value-capture.md)、[中美 AI 对照](../topics/china-us-ai.md)、[LLM 安全](../topics/llm-security.md)、[AI for AI 与自动研究](../topics/ai-for-ai-and-auto-research.md)、[评估与基准](../topics/evaluation-and-benchmarks.md)
+- 人物：[Jordan（SemiAnalysis / ClusterMAX）](semianalysis-jordan.md)——同机构，⚠️ **两人说法不构成独立验证**
+- 视频：[两家实验室很快会控制世界上大部分"劳动力"（2026-08-25）](../videos/20260825-dwarkesh-dylan-patel-compute-centralization.md)、[ClusterMAX 3.0：哪些 GPU 云真的能用（2026-10-02）](../videos/20261002-latent-space-clustermax3-neocloud-rankings.md)

@@ -1738,3 +1738,33 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 3. ⚠️ **本晚两次把"立场"和"事实"分开，而两次都是对友好材料做的。** ① [a16z 那条 40bps 电价](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md) 标为**与 Meta 那期同源、不构成独立验证**；② [Barrett Lyon 那期的数据中心一节](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md) 标为**立场而非事实**，并记下不对称——**最有动机否认反对声量的一方（Meta）给的是 -80 民调，这两位给的是"我没看见抗议者"。** 本库在这条线上的立场不变。
 
 ✅ **顺带补上了两个悬置几个月的名字**：a16z 页上"只以 David 出现"的成长期负责人是 **David George**；"只以 Joel 出现"的安全侧主持人是 **Joel de la Garza**。两次都靠视频简介 + 本人自报。
+
+---
+
+## 2026-10-07 — 摄取 Latent Space / ClusterMAX 3.0（本晚第一期）：本库第一份"把 GPU 云当被测对象"的材料
+
+### 摄取内容
+
+- [Latent Space / SemiAnalysis，2026-10-02，58 分钟](videos/20261002-latent-space-clustermax3-neocloud-rankings.md)：**ClusterMAX 3.0 发布期**，嘉宾是 SemiAnalysis 的 ClusterMAX 负责人 [Jordan](people/semianalysis-jordan.md)（新建人物页）与创始人 [Dylan Patel](people/dylan-patel.md)（第二次收录），swyx 主持的 "Lightning" 短格式。字幕完整（en-orig 自动），无需转录。
+- **新建**：视频页 1、人物页 1（`semianalysis-jordan.md`）。
+- **更新**：[dylan-patel](people/dylan-patel.md)（新增第八节，并给原有一至七节补上缺失的「来源：」声明）、[latent-space-hosts](people/latent-space-hosts.md)（访谈表 + 首次记录 "Lightning" 格式）、[ai-infrastructure](topics/ai-infrastructure.md)、[llm-security](topics/llm-security.md)、[china-us-ai](topics/china-us-ai.md)、[ai-business-and-value-capture](topics/ai-business-and-value-capture.md)、[evaluation-and-benchmarks](topics/evaluation-and-benchmarks.md)、[index](index.md)。
+- ✅ **顺带修了 index 的一处错归档**：[No Priors / Fractile 那期](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（10-02 摄取）被写在了 a16z 小节下，已移回 No Priors 小节。
+
+### ⚠️ 本次最有价值的四处
+
+1. ⚠️ **本库第一份"去租来、跑 benchmark、看它坏不坏"的基础设施材料。** 此前本库的基础设施材料**全部来自供给侧或需求侧的自述**——芯片公司、推理服务商、超大规模厂商、实验室。**这一期的被测对象是 GPU 云本身**，而这打开了一个此前完全空白的层。
+2. ⚠️ **NeoCloud 安全：三代连续实测，而问题的技术层级低得难受。** 第一代就能**看到别人的任务、数据、存储**（已上报该公司与 NVIDIA）；最极端的一例是**"我们 literally 能看到某个国家的国家情报类的东西"**。⚠️ **而检查清单只有三件事加一类网络配置：版本、驱动、配置、InfiniBand 的 M/P key。** 那句落点本库记为本期最该被引用的一条：**"你根本不需要一个前沿模型来给它写 PoC exploit，你只需要知道该往哪儿看。"** 本库 [LLM 安全](topics/llm-security.md) 页此前所有材料都在往"更前沿"走，**而这一条说最该修的洞在运维层。**
+3. ⚠️⚠️ **Dylan Patel 对自己 2026-08 那条叙事做了一次实质自我修正，而本库认为这比任何单条数字都重要。** 那期的核心是"**实验室的出价能力把增量供给整个买走**"；**本期他明确否掉了这个归因**——"**显然 Anthropic 和 OpenAI 一直在买越来越小的集群尺寸**"——换成了**推理毛利从 10% 到 60%**："**现在所有人都能靠 GPU 赚钱，所以非常非常难拿到任何算力。**" ✅ **这恰好是他当时给自己的那条自我限定（"$10–15M/MW 谁都能赚钱"）在 13 个月后变成了主线。** ⚠️ **但两期同一人同一机构，不构成独立验证。**
+4. ⚠️ **跨站点异构 RL：本库目前见过的对"数据中心形状"最激进的一条主张。** 前提是切分失效（"**RL 现在和预训练负载一样大、有时更大**"、"**大部分负载就是 forward pass**"），落点是"**甚至不必是同一个数据中心……而在那里用不同类型的芯片其实是可以的**"。⚠️ **这是 [Eiso Kant 把 PD 解耦引入训练](videos/20260722-latent-space-poolside-eiso-kant.md) 那条线上的第二次独立表述，而方向更激进、且提出者没有资产押在上面。** 硬约束也被说清了：**数值正确性**（"哪怕只是 B200 对 B300"），所以**预训练大概仍是同构集群**。
+
+### ⚠️ 本次标注的五条限定
+
+1. **这是一家卖方研究机构为自己旗舰榜单做的宣传期。** ⚠️ **本库刻意不转述任何具体名次**，只收录方法论与实测观察。
+2. ⚠️ **嘉宾主动披露了至少三笔个人投资**（Crusoe、FluidStack 均为 SPV、TensorWave，另有一家字幕无法还原），**而四家在榜上都不在前列**。本库的判断是：**主动披露提高了可信度，但不消除利益相关**——尤其他那句"**整条 infra 供应链都买我们的东西**"同时是可信度论证和利益冲突的确认。⚠️ **本库由此在 [评估与基准](topics/evaluation-and-benchmarks.md) 页上立了一条新判据：评估模型时被测方与付费方基本分离，评估供应商时两者重叠——"第三方评估"在两种场景下的独立性不是一回事。**
+3. ⚠️ **"到今年底 OpenAI 和 Anthropic 各自的 R&D 算力超过 DeepMind"被单独标为待检验**：口径未定义、三家无公开数字、是卖方估算；**但它可被 2027 年的披露部分检验**，本库记为后续巡检应回查的一条。
+4. ⚠️ **榜单有一个方向单一的覆盖缺口**：**FluidStack（全部租给 Anthropic）、SpaceX 都拒租、测不到**。⚠️ **即最接近前沿、最供不应求的那几家恰恰是测不到的那几家**，所以"大多数 NeoCloud 安全很烂"这个结论的分母是有偏的，本库不外推到整个市场。
+5. ⚠️ **字幕有三处本库无法确定还原、两处数字不自洽，本库一律照录存疑、不引用具体数值**：领导 Poolside 的人名（"Robert Bonar"）、[00:54:36] 那家拆分芯片业务的 "BU"、Dylan 早期投资的那家（"time intellect"）；以及"刚融 2000 万 / 要给供应商 1.05 亿"的矛盾、Poolside 交易规模 70 亿 vs 120 亿的分歧。⚠️ **另有一处本库做了还原并明确标注：[00:50:33] 第二个 Trainium 被字幕写成 "training"。**
+
+### ⚠️ 一条人名待核
+
+**嘉宾全程只被叫 "Jordan"，自己也没报全名。** 本库据"HPE 十年 + 2025-06 加入 SemiAnalysis 技术员 + ClusterMAX 负责人"推测可能是 Jordan Nanos，**但转录稿里没有这个姓**，所以人物页只用 Jordan、姓氏不进任何断言，并在页首显式标为待核。
