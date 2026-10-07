@@ -63,6 +63,7 @@
 - [Nikunj Handa](people/nikunj-handa.md) — OpenAI API 团队产品负责人（前 Stripe）：Decisions API 是 Jev 启发且没训新模型、校准尚未复制、12 小时缓存保证与预热、压缩三种做法、"抽象层该放在哪"
 - [Barrett Lyon](people/barrett-lyon.md) — DoxxNet 创始人 / Prolexic 创始人 / Opte 作者（本库第一个公网协议层的声音）：协议层停滞、CGNAT 是最大污点、"网络不做身份"、治理即信任、12 人 26 站点无系统管理员
 - [Jordan（SemiAnalysis / ClusterMAX）](people/semianalysis-jordan.md) — ClusterMAX 负责人，前 HPE 十年硬件系统设计：本库第一个"把 GPU 云当被测对象"的声音——NeoCloud 安全的洞在运维层、GB300 NVL72 作为换代门槛、跨站点异构 RL、"除了 Azure 我一个都不信能建 10 万卡集群"（⚠️ 全名待核）
+- [Vladimir Keil](people/vladimir-keil.md) — Lio 联合创始人兼 CEO，企业采购 multi-agent：**发票软件只覆盖这份工作的 20%**、500 封邮件漏一封 = 上亿损失、**自建能到 70% 但 70% 性能 ≠ 70% 自动化**、harness 的 80% 天花板 → 指向 Jev 那类 outcome 模型、FDE 的 KPI 是把自己自动化掉、"一千个工具只让流程更有效率，从没改变人怎么工作"
 - [Walter Goodwin](people/walter-goodwin.md) — Fractile 创始人兼 CEO，全栈快推理芯片：带宽的 scaling law（flops 百万倍 vs 带宽 40 倍）、SRAM→高带宽 DRAM 的公开转向、芯片产业链的交接点、"自研芯片的主要功能是议价"、前沿实验室在芯片层押重注是不理性的
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
 - [Eiso Kant](people/eiso-kant.md) — Poolside CEO，neo-lab/Model Factory、行为>智能、开源商品化论证
@@ -294,3 +295,4 @@
 - 2026-09-29 [我们把这一波个人 AI agent 全试了一遍：省钱胜过省时、proactivity 才是护城河](videos/20260929-a16z-personal-agents-assistant-bench.md)（David Pawlan / Assistant Benchmark；Anish Acharya 主持）
 - 2026-09-30 [25 张图讲 2026 的市场：不是泡沫因为倍数在降、而企业 AI 被长期追踪的只有 2%](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)（David George、Sarah Wang、Alex Immerman、Santiago Rodriguez / a16z Growth；⚠️ 演示注解而非访谈，数据全部自报）
 - 2026-10-01 [用 12 个人、26 个站点造一张平行互联网：DoxxNet，以及"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)（Barrett Lyon / DoxxNet；Joel de la Garza 主持；⚠️ 约一半时长是人物故事，数据中心那一节本库记为立场而非事实）
+- 2026-10-02 [发票软件只覆盖了这份工作的 20%：采购 agent、四类 agent 分类法，以及"在位者不是在收手，是被按住了"](videos/20261002-a16z-lio-procurement-agents-incumbents.md)（Vladimir Keil / Lio + Seema Amble；Elena Burger 主持；⚠️ a16z 是 Lio 投资方，业务声明全部自述）
