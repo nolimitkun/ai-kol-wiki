@@ -109,7 +109,7 @@
 - [Ramin Hasani](people/ramin-hasani.md) — Liquid AI 联创兼 CEO：302 个神经元的线虫、STAR 硬件感知架构搜索、模型越大越要去偏置、端侧 90% 调用仍走云、下一波是 customization token
 - [Vals AI（Ryan）](people/vals-ai.md) — 第三方 AI 评估公司：本库第一份来自裁判位的材料——Llama 4 的自报落差、绝不卖训练数据（安然类比）、RSI 指数、一家公司本质上就是它的 eval、token 支出 10 倍于工资
 - [Dina Powell McCormick](people/dina-powell-mccormick.md) — Meta 总裁兼副董事长，前白宫副国家安全顾问：数据中心的在地账本、教师 5 万美元支票的税收机制、五周把人送上工地、工会转向
-- [Alex Atallah & Anjney Midha](people/openrouter-atallah-midha.md) — OpenRouter CEO / a16z GP：本库第一份来自模型路由中间层的材料——"checkpoint 做完然后一片寂静"、Google 的隐形分发优势、3 个月一轮的替代摆动、agentic fraud 与 10 万亿 token 流
+- [Alex Atallah & Anjney Midha](people/openrouter-atallah-midha.md) — OpenRouter CEO / a16z GP：本库第一份来自模型路由中间层的材料——"checkpoint 做完然后一片寂静"、Google 的隐形分发优势、3 个月一轮的替代摆动、agentic fraud 与 10 万亿 token 流；⚠️ 2026-10 补入 Atallah 的反"上帝 agent"论证（"没有任何新的人来为这份被牺牲掉的理解负责"、固定总量的皮质醇）、neurodiversity 与 marketplace 压价机制、拿 decision model 当 agent 通信的对齐检查器
 - [Anastasis Germanidis](people/anastasis-germanidis.md) — Runway 联创兼 CTO：scaling 视频预测就够了、Physics IQ、界面世界模型与神经操作系统、第三人称视频是机器人最大数据源、lucid dream test
 - [John Schulman](people/john-schulman.md) — Thinking Machines 首席科学家、OpenAI 联创（RLHF）：对齐是最后一份工作、环境的难度轴 vs 真实性轴、蒸馏对抗集中化、从 Claude 蒸出来的单一栽培
 - [Beren Millidge](people/beren-millidge.md) — Zyphra CTO：RL 有效是因为信噪比而非 bits 多、mid-training 已到 80%、架构不是乘法增益而是解锁新区间、路由服务数据给了完美 prompt 分布
@@ -124,7 +124,7 @@
 - [DHH（David Heinemeier Hansson）](people/dhh.md) — Rails 作者 / 37signals CTO / Omarchy 作者：代码之美的回报在衰减（但 token 稀缺期仍值得）、瓶颈是人类带宽、不要过度指定、Linux 的历史性翻转、六模型同题横评、"现在的编程语言是英语"
 - [Gagan Biyani](people/gagan-biyani.md) — Horowitz Andreessen Academy 联合创始人兼 CEO（Udemy 联创 / Maven 创始人）：本库第一个"办学校的人"——bundle 论、burning-desire 客户、osmosis + 强制依赖、把求知欲改写成产出
 - [Michael Lee](people/michael-lee.md) — Sequence Holdings 联创兼 CEO（前 Lone Pine / Apollo）：⚠️ 本库第一个"所有权侧"的声音——AI 影响的三分法、"给人类流水线上每个人发一台小机器"、三个选项全坏掉（尤其"你卖不给一条还不存在的流水线"）、"每家公司都有一个被歌颂的角色"、控股公司 vs 基金与"一年一笔"、organizational physics、"被监管是特性不是 bug"
-- [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义
+- [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义；⚠️ 2026-10 补入技术侧：人该是通才机器该专门化（Adam Smith → 马克思异化论）、模型训练自己的替代品（JIT 类比）、"用核弹打蝴蝶"、orthogonality thesis 在机器上可能反过来、"对齐评测要跑好几个月"、on-prem 立场反转
 - [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
 
 ## 主题
@@ -299,3 +299,4 @@
 - 2026-09-30 [25 张图讲 2026 的市场：不是泡沫因为倍数在降、而企业 AI 被长期追踪的只有 2%](videos/20260930-a16z-state-of-markets-no-bubble-2pct-tracked.md)（David George、Sarah Wang、Alex Immerman、Santiago Rodriguez / a16z Growth；⚠️ 演示注解而非访谈，数据全部自报）
 - 2026-10-01 [用 12 个人、26 个站点造一张平行互联网：DoxxNet，以及"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)（Barrett Lyon / DoxxNet；Joel de la Garza 主持；⚠️ 约一半时长是人物故事，数据中心那一节本库记为立场而非事实）
 - 2026-10-02 [发票软件只覆盖了这份工作的 20%：采购 agent、四类 agent 分类法，以及"在位者不是在收手，是被按住了"](videos/20261002-a16z-lio-procurement-agents-incumbents.md)（Vladimir Keil / Lio + Seema Amble；Elena Burger 主持；⚠️ a16z 是 Lio 投资方，业务声明全部自述）
+- 2026-10-03 [用 AGI 级模型干所有事是"用核弹打蝴蝶"：neurodiversity、反"上帝 agent"，以及 fusion 把前沿质量做到四到五折](videos/20261003-a16z-atallah-masad-neurodiversity-specialized-models.md)（Alex Atallah / OpenRouter + Amjad Masad / Replit；Erik Torenberg 主持；⚠️ a16z 与 Masad 均为 OpenRouter 投资方，性能与成本数字全部自述）
