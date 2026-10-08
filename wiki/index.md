@@ -79,6 +79,7 @@
 - [Jonathan Hurst](people/jonathan-hurst.md) — Agility Robotics 联创 / Chief Robot Officer，Digit、反奇点"雪球论"、机器人价格非弹性
 - [Péter Fankhauser](people/peter-fankhauser.md) — ANYbotics 联创兼 CEO，四足巡检 ANYmal、"不是替人是超人"（欧洲已部署视角）
 - [Amanda McMaster](people/amanda-mcmaster.md) — Boston Dynamics 临时 CEO，Spot/Atlas 的部署经济学与对华强硬立场
+- [Kevin Mandia](people/kevin-mandia.md) — Armadin 创始人兼 CEO、Mandiant 创始人：⚠️ 本库第一位职业事件响应者（以响应真实入侵为生三十年）——**20 条 kill chain 测试里开放权重与最先进闭源同分（都是 8 条，差别只在速度与成本）**、**"你一旦有了 GPU 的匿名可得性，就会看到多得多的犯罪攻击"**、**"人留在检测与响应环里就一定太慢"**、均衡器效应与归因退化、**"要保障在特定领域里行动的 agent，需要领域专业知识"（eval 必须由红队成员写）**、**"我们杀掉一个 agent 大多时候跟安全无关，是它在浪费钱"**、扫源码找几千个漏洞是噪声
 - [Steijn Pelle & Frédéric Renken](people/lassie-founders.md) — Lassie 联创（前 Robinhood / Superhuman），SMB 垂直 agent、监管拐点、"模型不知道工作流"
 - [刘子鸣（Ziming Liu）](people/liu-ziming.md) — 清华 AI 学院 / 期智研究院 PI，KAN 一作，AI for AI、元模型、physics of AI（中方 neo lab 主来源）
 - [Melisa Tokmak](people/melisa-tokmak.md) — Netic 创始人兼 CEO（前 Scale AI），实体服务业 agent、机器人时间表看空、"实验室懒惰论"
@@ -301,3 +302,4 @@
 - 2026-10-02 [发票软件只覆盖了这份工作的 20%：采购 agent、四类 agent 分类法，以及"在位者不是在收手，是被按住了"](videos/20261002-a16z-lio-procurement-agents-incumbents.md)（Vladimir Keil / Lio + Seema Amble；Elena Burger 主持；⚠️ a16z 是 Lio 投资方，业务声明全部自述）
 - 2026-10-03 [用 AGI 级模型干所有事是"用核弹打蝴蝶"：neurodiversity、反"上帝 agent"，以及 fusion 把前沿质量做到四到五折](videos/20261003-a16z-atallah-masad-neurodiversity-specialized-models.md)（Alex Atallah / OpenRouter + Amjad Masad / Replit；Erik Torenberg 主持；⚠️ a16z 与 Masad 均为 OpenRouter 投资方，性能与成本数字全部自述）
 - 2026-10-05 [付费的只有 4.5%，而顶部 1% 每月自掏 903 美元：消费级 AI 的 power user 经济，以及"订阅其实是错的商业模式"](videos/20261005-a16z-consumer-ai-top100-power-user-economy.md)（Olivia Moore + Josh Elman / a16z；Elena Burger 主持；⚠️ a16z 自有榜单、作者自述口径，本库未核实）
+- 2026-10-06 [今年 90 多个零日、20 条 kill chain 没有一个模型走过 8 条，以及"人留在检测与响应环里就一定太慢"](videos/20261006-a16z-kevin-mandia-armadin-autonomous-defense.md)（[Kevin Mandia](people/kevin-mandia.md) / Armadin 创始人兼 CEO、Mandiant 创始人；David George 主持；⚠️ a16z 是 Armadin 投资方，全部业务与性能声明自述未核实）
