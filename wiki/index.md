@@ -21,7 +21,7 @@
 - [Alex Imas & Phil Trammell](people/imas-trammell.md) — AGI 经济学（DeepMind / Epoch）
 - [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
-- [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell 等
+- [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell、Olivia Moore 等；⚠️ 2026-10-05 新增 Josh Elman（消费互联网史的对照提供者："高 COGS 杀死了先堆密度后变现"、"AI 太个人化，所以没有社交媒体式的传播"、明确拒绝 harness / wrapper 这两个词）
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 - [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
 - [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
@@ -300,3 +300,4 @@
 - 2026-10-01 [用 12 个人、26 个站点造一张平行互联网：DoxxNet，以及"网络不做身份"](videos/20261001-a16z-barrett-lyon-doxxnet-parallel-internet.md)（Barrett Lyon / DoxxNet；Joel de la Garza 主持；⚠️ 约一半时长是人物故事，数据中心那一节本库记为立场而非事实）
 - 2026-10-02 [发票软件只覆盖了这份工作的 20%：采购 agent、四类 agent 分类法，以及"在位者不是在收手，是被按住了"](videos/20261002-a16z-lio-procurement-agents-incumbents.md)（Vladimir Keil / Lio + Seema Amble；Elena Burger 主持；⚠️ a16z 是 Lio 投资方，业务声明全部自述）
 - 2026-10-03 [用 AGI 级模型干所有事是"用核弹打蝴蝶"：neurodiversity、反"上帝 agent"，以及 fusion 把前沿质量做到四到五折](videos/20261003-a16z-atallah-masad-neurodiversity-specialized-models.md)（Alex Atallah / OpenRouter + Amjad Masad / Replit；Erik Torenberg 主持；⚠️ a16z 与 Masad 均为 OpenRouter 投资方，性能与成本数字全部自述）
+- 2026-10-05 [付费的只有 4.5%，而顶部 1% 每月自掏 903 美元：消费级 AI 的 power user 经济，以及"订阅其实是错的商业模式"](videos/20261005-a16z-consumer-ai-top100-power-user-economy.md)（Olivia Moore + Josh Elman / a16z；Elena Burger 主持；⚠️ a16z 自有榜单、作者自述口径，本库未核实）
