@@ -22,6 +22,7 @@
 - [Zico Kolter & Matt Fredrikson](people/gray-swan-founders.md) — Gray Swan，AI 安全 / 红队
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 - [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell、Olivia Moore 等；⚠️ 2026-10-05 新增 Josh Elman（消费互联网史的对照提供者："高 COGS 杀死了先堆密度后变现"、"AI 太个人化，所以没有社交媒体式的传播"、明确拒绝 harness / wrapper 这两个词）
+- [Matt Garman](people/matt-garman.md) — AWS CEO、EC2 首任 GM；agent 作为用户的技术后果、瓶颈框架、Nitro/Graviton/Trainium
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 - [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
 - [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
@@ -307,3 +308,4 @@
 - 2026-10-06 [今年 90 多个零日、20 条 kill chain 没有一个模型走过 8 条，以及"人留在检测与响应环里就一定太慢"](videos/20261006-a16z-kevin-mandia-armadin-autonomous-defense.md)（[Kevin Mandia](people/kevin-mandia.md) / Armadin 创始人兼 CEO、Mandiant 创始人；David George 主持；⚠️ a16z 是 Armadin 投资方，全部业务与性能声明自述未核实）
 - 2026-10-08 ["智能是必要的，但不充分"：自治实验室、synthesis superintelligence，以及"科学发现按定义就是你没被训练过的东西"](videos/20261008-latent-space-periodic-labs-synthesis-superintelligence.md)（[Periodic Labs](people/periodic-labs.md) 两位联创；⚠️ 姓名未播报、期内正宣布融资，且全期未给出任何具体材料发现成果）
 - 2026-10-06 ["AI 斩杀线"、零人公司，以及"你知道如何造汽车其实跟你一点关系都没有"](videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md)（[陈然](people/chen-ran.md) / Pure Global CTO；月球大叔主持；⚠️ 本地转录+说话人分离，全部数字与效果为自述未核实，且他兼做财务规划收费业务）
+- 2026-10-08 ["agent 会被 P99.9 卡住，而人不会"：给 agent 造的云、2200 亿 capex，以及"从来没有一个瓶颈，只有最新的那个瓶颈"](videos/20261008-a16z-matt-garman-cloud-for-agents.md)（[Matt Garman](people/matt-garman.md) / AWS CEO；⚠️ 主持人姓名未播报；全部性能、份额与收入数字自述未核实）
