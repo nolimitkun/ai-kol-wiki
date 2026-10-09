@@ -34,8 +34,8 @@
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 140 |
-| 人物页 | 124 |
+| 视频转录稿 | 141 |
+| 人物页 | 125 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
 
@@ -49,7 +49,7 @@
 | 张小珺（商业访谈录） | 16 |
 | No Priors (Sarah Guo & Elad Gil) | 14 |
 | Dwarkesh Patel | 11 |
-| 月球大叔（Uncle Moon） | 9 |
+| 月球大叔（Uncle Moon） | 10 |
 | Lex Fridman | 8 |
 | Andrej Karpathy | 5 |
 <!-- STATS:BLOCK:END -->
