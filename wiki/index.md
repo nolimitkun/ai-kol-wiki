@@ -44,6 +44,7 @@
 - [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
+- [Periodic Labs（"Liam" & "Doge"）](people/periodic-labs.md) — 自治材料实验室 neo-lab，synthesis superintelligence；⚠️ 转录稿只播报了名、没有姓
 - [Gavriel Cohen](people/gavriel-cohen.md) — NanoClaw 作者，极简安全的开源个人 agent
 - [vLLM Omni 团队](people/vllm-omni-team.md) — 多模态/全模态推理引擎（中方 serving 基建）
 - [志鹏（Zhipeng）](people/zhipeng.md) — vLLM-Omni committer，一年从 AI 零基础到贡献者（中方开源草根视角）
@@ -303,3 +304,4 @@
 - 2026-10-03 [用 AGI 级模型干所有事是"用核弹打蝴蝶"：neurodiversity、反"上帝 agent"，以及 fusion 把前沿质量做到四到五折](videos/20261003-a16z-atallah-masad-neurodiversity-specialized-models.md)（Alex Atallah / OpenRouter + Amjad Masad / Replit；Erik Torenberg 主持；⚠️ a16z 与 Masad 均为 OpenRouter 投资方，性能与成本数字全部自述）
 - 2026-10-05 [付费的只有 4.5%，而顶部 1% 每月自掏 903 美元：消费级 AI 的 power user 经济，以及"订阅其实是错的商业模式"](videos/20261005-a16z-consumer-ai-top100-power-user-economy.md)（Olivia Moore + Josh Elman / a16z；Elena Burger 主持；⚠️ a16z 自有榜单、作者自述口径，本库未核实）
 - 2026-10-06 [今年 90 多个零日、20 条 kill chain 没有一个模型走过 8 条，以及"人留在检测与响应环里就一定太慢"](videos/20261006-a16z-kevin-mandia-armadin-autonomous-defense.md)（[Kevin Mandia](people/kevin-mandia.md) / Armadin 创始人兼 CEO、Mandiant 创始人；David George 主持；⚠️ a16z 是 Armadin 投资方，全部业务与性能声明自述未核实）
+- 2026-10-08 ["智能是必要的，但不充分"：自治实验室、synthesis superintelligence，以及"科学发现按定义就是你没被训练过的东西"](videos/20261008-latent-space-periodic-labs-synthesis-superintelligence.md)（[Periodic Labs](people/periodic-labs.md) 两位联创；⚠️ 姓名未播报、期内正宣布融资，且全期未给出任何具体材料发现成果）
