@@ -15,6 +15,7 @@
 | 2026-06-09 | [江鋆晨（Junchen Jiang）](junchen-jiang.md) | KV Cache / LMCache、大模型的记忆 | [链接](../videos/20260609-uncle-moon-junchen-jiang-kvcache.md) |
 | 2026-07-28 | [孟子立（Zili Meng）](zili-meng.md) | WiCi 无线 GPU、用 Wi-Fi 替代 PCIe、港科大教授兼创业 | [链接](../videos/20260728-uncle-moon-zili-meng-wici.md) |
 | 2026-08-09 | [李正韬（Todd Li）](todd-li.md) | Retell AI：语音 AI 呼叫中心、YC、企业落地、招聘与薪酬 | [链接](../videos/20260809-uncle-moon-todd-li-retell-ai.md) |
+| 2026-10-06 | [陈然](chen-ran.md) | AI 斩杀线、零人公司、硅谷风险认知、信息源分层、生产关系 | [链接](../videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md) |
 
 > ⚠️ **该频道对部分中文访谈提供英文配音/字幕**（字幕轨内容为英文），孟子立那期与李正韬那期均是。相应视频页的引号内为**英文原文的中译**，不是中文原话。李正韬那期的字幕轨直接标为 `en`（人工），且**全程无说话人标签、无 `>>` 换人标记**，归属按内容判断。
 
@@ -28,3 +29,11 @@
 
 - 频道在 [watchlist.yaml](../../watchlist.yaml) 中 slug 为 `uncle-moon`（min_minutes: 20）。
 - 中方对照的另一来源见 [张小珺](zhang-xiaojun.md)；技术主题落点见 [AI 算力与基础设施](../topics/ai-infrastructure.md)。
+
+> ⚠️ **频道选题的第二次外扩，以及本库第一次被受访者当面批评了选题**（2026-10-06，[陈然](chen-ran.md)）：这一期是频道内**第一期以"个人方法论 + 组织重构 + 财务"为主轴**的访谈，技术含量低于李正韬那期，而方法论密度是频道内最高的。
+> ⚠️⚠️ **而本库记下其中一条针对媒体生态（包括本库）的批评**：他把 AI 时代的信息源分成三层——**开汽车的人（真正用 AI 落地赚到钱的）**、**demo in public 的人**、**造汽车的人（做模型、infra、serving layer 的）**，然后指出 **"对于普通人而言，你知道如何造汽车其实跟你一点关系都没有"**，而 **"我们绝大多数这些报道也好、采访也好，都是围绕着造汽车这件事情来进行的"**（[视频页](../videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md) [01:50:25]–[01:53:28]）。
+> ✅ **本库认为这条批评对本库适用**：本库材料高度集中在"造汽车的人"，而这一期正是少见的"开汽车的人"一侧的材料。⚠️ **同时记下利益相关：他是在这档节目上说这段的，并当场表扬了该节目的"一手信息"定位（[视频页](../videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md) [01:31:59]）。**
+
+> **第三组频道内对照（AI 落地的前提）**：[陈然](chen-ran.md)（2026-10-06）说 **"如果你这个公司不是从上到下 all in AI、从 CTO 开始支持你，你这个公司的算法根本落不了地"**，而没有这种支持时的形态是 **"自娱自乐，写写博客，看不到商业价值，有点自嗨"**；⚠️ **这与 [徐天音](tianyin-xu.md) 那期"可靠性第一次能拿到资源"、以及 [李正韬](todd-li.md) 那期的企业销售经验方向一致——三位都把落地的瓶颈放在组织而不是模型上。** ✅ **本库认为陈然那条的特殊性在于他给了一次对照实验：同一个人、同一类工作，在没有高层支持的公司里落不了地，在自己当 CTO 的公司里把整个业务重写了一遍。**
+
+> ⚠️ **本频道首次使用本地转录 + 说话人分离的一期**（陈然那期）：该视频无字幕，本库用 `fetch.py --transcribe --diarize`（faster-whisper large-v3-turbo + pyannote）产出转录稿，**分离出 2 位说话人**。⚠️ **本地转录对公司名与专有名词破坏较重**（Trulia、Tubi TV、Claude Sonnet、Suno 等均需按上下文还原），该期视频页页首列了还原表与**五处本库无法确定还原的拼写**。

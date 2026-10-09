@@ -28,6 +28,7 @@
 - [Freda（段）](people/freda-duan.md) — Altimeter Capital 合伙人，硅谷投资，Token经济学/组织变革/软件冲击
 - [戴雨森（雨森）](people/dai-yusen.md) — 真格基金管理合伙人，Harness/Agent/组织变革/创业投资
 - [月球大叔](people/uncle-moon.md) — AI 技术向访谈主播（中方 infra 视角主来源之一）
+- [陈然](people/chen-ran.md) — 两家创业公司 CTO（医疗器械全球注册）+ 三家"零人公司"；AI 斩杀线、硅谷风险认知错位、信息源分层
 - [朱邦华（Banghua Zhu）](people/banghua-zhu.md) — SGLang 母公司 CTO，前 NexusFlow，RLHF/RLVR/RL infra
 - [江鋆晨（Junchen Jiang）](people/junchen-jiang.md) — 芝大教授 / TensorMesh CEO，KV Cache / LMCache
 - [广密](people/guangmi.md) — 硅谷 AI 投资人/研究者，"全球大模型季报"主讲（中方投资视角看硅谷全景）
@@ -305,3 +306,4 @@
 - 2026-10-05 [付费的只有 4.5%，而顶部 1% 每月自掏 903 美元：消费级 AI 的 power user 经济，以及"订阅其实是错的商业模式"](videos/20261005-a16z-consumer-ai-top100-power-user-economy.md)（Olivia Moore + Josh Elman / a16z；Elena Burger 主持；⚠️ a16z 自有榜单、作者自述口径，本库未核实）
 - 2026-10-06 [今年 90 多个零日、20 条 kill chain 没有一个模型走过 8 条，以及"人留在检测与响应环里就一定太慢"](videos/20261006-a16z-kevin-mandia-armadin-autonomous-defense.md)（[Kevin Mandia](people/kevin-mandia.md) / Armadin 创始人兼 CEO、Mandiant 创始人；David George 主持；⚠️ a16z 是 Armadin 投资方，全部业务与性能声明自述未核实）
 - 2026-10-08 ["智能是必要的，但不充分"：自治实验室、synthesis superintelligence，以及"科学发现按定义就是你没被训练过的东西"](videos/20261008-latent-space-periodic-labs-synthesis-superintelligence.md)（[Periodic Labs](people/periodic-labs.md) 两位联创；⚠️ 姓名未播报、期内正宣布融资，且全期未给出任何具体材料发现成果）
+- 2026-10-06 ["AI 斩杀线"、零人公司，以及"你知道如何造汽车其实跟你一点关系都没有"](videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md)（[陈然](people/chen-ran.md) / Pure Global CTO；月球大叔主持；⚠️ 本地转录+说话人分离，全部数字与效果为自述未核实，且他兼做财务规划收费业务）
