@@ -44,6 +44,7 @@
 - [Anton Osika](people/anton-osika.md) — Lovable 联合创始人/CEO，vibe coding、多模型路由 + post-training
 - [All-In 主播团](people/all-in-hosts.md) — Chamath / Sacks / Friedberg / Calacanis + Brad Gerstner：token ROI、监管制度、主权 AI、开源封杀之争与版权
 - [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
+- [Misha Laskin](people/misha-laskin.md) — Reflection AI 联合创始人/CEO，前 DeepMind（Gemini RL 团队）：开放权重训练账本、租 vs 拥有、"开放即安全"
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
 - [Periodic Labs（"Liam" & "Doge"）](people/periodic-labs.md) — 自治材料实验室 neo-lab，synthesis superintelligence；⚠️ 转录稿只播报了名、没有姓
@@ -226,6 +227,7 @@
 - 2026-09-18 [Stefano Ermon（Inception）：扩散模型为什么会赢下推理](videos/20260918-no-priors-stefano-ermon-diffusion-inference.md)（Sarah Guo 独立主持）
 - 2026-09-24 [Michael Lee（Sequence Holdings）：买下在位者再"重新创办"它，以及"你不可能把产品卖给一条还不存在的人类流水线"](videos/20260924-no-priors-michael-lee-refounding-incumbents.md)（Sarah Guo 独立主持；⚠️ 她的 Conviction 是该公司投资方）
 - 2026-10-02 [带宽的 scaling law：20 年里 flops 涨了百万倍，内存带宽只涨了 40 倍](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（Walter Goodwin / Fractile；Sarah Guo 独立主持；⚠️ 创始人访谈，技术声明全部自述）
+- 2026-10-09 ["开源模型是它所携带的那套基础设施的特洛伊木马"：Beam 的训练账本、RL 的 flops 超过预训练，以及"开放即安全"](videos/20261009-no-priors-misha-laskin-beam-open-model.md)（[Misha Laskin](people/misha-laskin.md) / Reflection AI 联创兼 CEO；⚠️ 刚发布首个开放权重模型，全部性能与份额数字自述未核实；"开放即安全"那一节本库记为立场并附三条限定）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
