@@ -45,6 +45,8 @@
 - [All-In 主播团](people/all-in-hosts.md) — Chamath / Sacks / Friedberg / Calacanis + Brad Gerstner：token ROI、监管制度、主权 AI、开源封杀之争与版权
 - [Andrew Feldman](people/andrew-feldman.md) — Cerebras 联合创始人/CEO，晶圆级芯片、快推理
 - [Misha Laskin](people/misha-laskin.md) — Reflection AI 联合创始人/CEO，前 DeepMind（Gemini RL 团队）：开放权重训练账本、租 vs 拥有、"开放即安全"
+- [Pushmeet Kohli](people/pushmeet-kohli.md) — Google DeepMind（AlphaFold 内部参与者）：折叠"已解决"叙事的拆解、校准优先于可解释性、"对谁可解释"
+- [Sal Candido](people/sal-candido.md) — Biohub：蛋白质语言模型与可解释性，"大部分工作是去找到那条 scaling law"、"自行车的辐条"、10x vs 10%
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
 - [Periodic Labs（"Liam" & "Doge"）](people/periodic-labs.md) — 自治材料实验室 neo-lab，synthesis superintelligence；⚠️ 转录稿只播报了名、没有姓
@@ -309,6 +311,7 @@
 - 2026-10-05 [付费的只有 4.5%，而顶部 1% 每月自掏 903 美元：消费级 AI 的 power user 经济，以及"订阅其实是错的商业模式"](videos/20261005-a16z-consumer-ai-top100-power-user-economy.md)（Olivia Moore + Josh Elman / a16z；Elena Burger 主持；⚠️ a16z 自有榜单、作者自述口径，本库未核实）
 - 2026-10-06 [今年 90 多个零日、20 条 kill chain 没有一个模型走过 8 条，以及"人留在检测与响应环里就一定太慢"](videos/20261006-a16z-kevin-mandia-armadin-autonomous-defense.md)（[Kevin Mandia](people/kevin-mandia.md) / Armadin 创始人兼 CEO、Mandiant 创始人；David George 主持；⚠️ a16z 是 Armadin 投资方，全部业务与性能声明自述未核实）
 - 2026-10-08 ["智能是必要的，但不充分"：自治实验室、synthesis superintelligence，以及"科学发现按定义就是你没被训练过的东西"](videos/20261008-latent-space-periodic-labs-synthesis-superintelligence.md)（[Periodic Labs](people/periodic-labs.md) 两位联创；⚠️ 姓名未播报、期内正宣布融资，且全期未给出任何具体材料发现成果）
+- 2026-10-10 ["蛋白质不是积木——这话我天天说，但我其实不信"：AlphaFold 到底解了什么、"先去找那条 scaling law"，以及"可解释，对谁可解释？"](videos/20261010-latent-space-alphafold-didnt-solve-protein-folding.md)（[Pushmeet Kohli](people/pushmeet-kohli.md) / Google DeepMind × [Sal Candido](people/sal-candido.md) / Biohub；⚠️ 会议现场圆桌而非访谈、主持人姓名未播报，全期只有一个量化值且未说明评测集）
 - 2026-10-06 ["AI 斩杀线"、零人公司，以及"你知道如何造汽车其实跟你一点关系都没有"](videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md)（[陈然](people/chen-ran.md) / Pure Global CTO；月球大叔主持；⚠️ 本地转录+说话人分离，全部数字与效果为自述未核实，且他兼做财务规划收费业务）
 - 2026-10-08 ["agent 会被 P99.9 卡住，而人不会"：给 agent 造的云、2200 亿 capex，以及"从来没有一个瓶颈，只有最新的那个瓶颈"](videos/20261008-a16z-matt-garman-cloud-for-agents.md)（[Matt Garman](people/matt-garman.md) / AWS CEO；⚠️ 主持人姓名未播报；全部性能、份额与收入数字自述未核实）
 - 2026-10-09 ["HBM 是一种可憎的内存，只不过是我们手上最好的那种"：30 年零个新内存、铜的死期，以及"能源容量等于经济容量"](videos/20261009-a16z-pat-gelsinger-memory-wall-optics.md)（[Pat Gelsinger](people/pat-gelsinger.md) / 前 Intel CEO、现 Playground Global GP；⚠️ 主持人姓氏未播报（稿中只有 "Rayu" 与 "Guido"）；⚠️ 他点了至少五家自己投的公司，性能承诺全部自述未核实）
