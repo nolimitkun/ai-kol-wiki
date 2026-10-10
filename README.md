@@ -30,11 +30,11 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-10-09（每次 CI 构建刷新）。
+> 自动生成于 2026-10-10（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 142 |
+| 视频转录稿 | 143 |
 | 人物页 | 126 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
@@ -43,7 +43,7 @@
 
 | 频道 | 期数 |
 |---|---|
-| a16z (Andreessen Horowitz) | 30 |
+| a16z (Andreessen Horowitz) | 31 |
 | Latent Space (swyx & Alessio) | 30 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 18 |
 | 张小珺（商业访谈录） | 16 |
