@@ -309,3 +309,4 @@
 - 2026-10-08 ["智能是必要的，但不充分"：自治实验室、synthesis superintelligence，以及"科学发现按定义就是你没被训练过的东西"](videos/20261008-latent-space-periodic-labs-synthesis-superintelligence.md)（[Periodic Labs](people/periodic-labs.md) 两位联创；⚠️ 姓名未播报、期内正宣布融资，且全期未给出任何具体材料发现成果）
 - 2026-10-06 ["AI 斩杀线"、零人公司，以及"你知道如何造汽车其实跟你一点关系都没有"](videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md)（[陈然](people/chen-ran.md) / Pure Global CTO；月球大叔主持；⚠️ 本地转录+说话人分离，全部数字与效果为自述未核实，且他兼做财务规划收费业务）
 - 2026-10-08 ["agent 会被 P99.9 卡住，而人不会"：给 agent 造的云、2200 亿 capex，以及"从来没有一个瓶颈，只有最新的那个瓶颈"](videos/20261008-a16z-matt-garman-cloud-for-agents.md)（[Matt Garman](people/matt-garman.md) / AWS CEO；⚠️ 主持人姓名未播报；全部性能、份额与收入数字自述未核实）
+- 2026-10-09 ["HBM 是一种可憎的内存，只不过是我们手上最好的那种"：30 年零个新内存、铜的死期，以及"能源容量等于经济容量"](videos/20261009-a16z-pat-gelsinger-memory-wall-optics.md)（[Pat Gelsinger](people/pat-gelsinger.md) / 前 Intel CEO、现 Playground Global GP；⚠️ 主持人姓氏未播报（稿中只有 "Rayu" 与 "Guido"）；⚠️ 他点了至少五家自己投的公司，性能承诺全部自述未核实）
