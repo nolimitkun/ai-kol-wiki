@@ -34,8 +34,8 @@
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 143 |
-| 人物页 | 126 |
+| 视频转录稿 | 144 |
+| 人物页 | 127 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
 
@@ -47,7 +47,7 @@
 | Latent Space (swyx & Alessio) | 30 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 18 |
 | 张小珺（商业访谈录） | 16 |
-| No Priors (Sarah Guo & Elad Gil) | 14 |
+| No Priors (Sarah Guo & Elad Gil) | 15 |
 | Dwarkesh Patel | 11 |
 | 月球大叔（Uncle Moon） | 10 |
 | Lex Fridman | 8 |
