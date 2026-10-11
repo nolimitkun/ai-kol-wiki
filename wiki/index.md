@@ -279,6 +279,7 @@
 - 2026-09-26 [第 290 期：Anthropic IPO 的风险因子、12 周内 token 用量 80/20 翻转、"别再叫自己 lab"](videos/20260926-all-in-anthropic-ipo-open-source-flip.md)
 - 2026-09-28 [Daniel Ek：Neko 的预防式体检、"行业没把好处讲出来"，以及把算力当监管度量](videos/20260928-all-in-daniel-ek-neko-compute-as-regulatory-metric.md)（⚠️ 采访期，AI 内容仅约 8 分钟）
 - 2026-10-02 [第 291 期：白宫超级智能峰会与《超级智能协定》——"自愿签署但衍生治理不自愿"，以及"12–18 个月后政府会按行业分配 GPU 配额"](videos/20261002-all-in-white-house-superintelligence-accord.md)（⚠️ AI 内容约 43 分钟；⚠️⚠️ **全部评价来自当事方**：Sacks 是组织者与起草参与者，Chamath 的公司正在卖协定新增那条"外部审计"所需的基础设施）
+- 2026-10-10 ["Claude 有意识吗"：Anthropic 游说宗教领袖、教宗拒绝、模型福利运动，以及 OpenAI 一天放出 700 篇数学论文](videos/20261010-all-in-claude-conscious-model-welfare-openai-math.md)（⚠️ 无嘉宾；⚠️⚠️ **Chamath 的对齐三目标框架、Friedberg 的"循环"框架、Suleyman 的"认识论镜厅"**；⚠️ **"沉默的密码学"与"软件 IP 归零"两条断言本库不采信其依据**）
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
