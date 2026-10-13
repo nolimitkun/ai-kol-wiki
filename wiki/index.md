@@ -23,6 +23,7 @@
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 - [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell、Olivia Moore 等；⚠️ 2026-10-05 新增 Josh Elman（消费互联网史的对照提供者："高 COGS 杀死了先堆密度后变现"、"AI 太个人化，所以没有社交媒体式的传播"、明确拒绝 harness / wrapper 这两个词）
 - [Matt Garman](people/matt-garman.md) — AWS CEO、EC2 首任 GM；agent 作为用户的技术后果、瓶颈框架、Nitro/Graviton/Trainium
+- [Dhaval Adjodah & Owen He](people/makermaker-founders.md) — MakerMaker.AI 联创（MIT Media Lab RL PhD / 前 DeepMind）；本库第一份"专做 RSI 一方自己把判据提得更高"的材料：optimizer-optimizee 判别式、分子/分母框架、**闭环 ≠ 起飞**、Viceroy of Variance、Amdahl 定律给出的"哪些领域不会被加速"
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 - [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
 - [Lewis Hong（洪力德）](people/lewis-hong.md) — 前SpaceX首席制造工程师，Aris Fund GP，太空/硬科技投资
@@ -316,3 +317,4 @@
 - 2026-10-06 ["AI 斩杀线"、零人公司，以及"你知道如何造汽车其实跟你一点关系都没有"](videos/20261006-uncle-moon-chen-ran-zero-person-companies-ai-kill-line.md)（[陈然](people/chen-ran.md) / Pure Global CTO；月球大叔主持；⚠️ 本地转录+说话人分离，全部数字与效果为自述未核实，且他兼做财务规划收费业务）
 - 2026-10-08 ["agent 会被 P99.9 卡住，而人不会"：给 agent 造的云、2200 亿 capex，以及"从来没有一个瓶颈，只有最新的那个瓶颈"](videos/20261008-a16z-matt-garman-cloud-for-agents.md)（[Matt Garman](people/matt-garman.md) / AWS CEO；⚠️ 主持人姓名未播报；全部性能、份额与收入数字自述未核实）
 - 2026-10-09 ["HBM 是一种可憎的内存，只不过是我们手上最好的那种"：30 年零个新内存、铜的死期，以及"能源容量等于经济容量"](videos/20261009-a16z-pat-gelsinger-memory-wall-optics.md)（[Pat Gelsinger](people/pat-gelsinger.md) / 前 Intel CEO、现 Playground Global GP；⚠️ 主持人姓氏未播报（稿中只有 "Rayu" 与 "Guido"）；⚠️ 他点了至少五家自己投的公司，性能承诺全部自述未核实）
+- 2026-10-12 ["它不是一种信念，它是经验测量"：RSI 的分子/分母框架、闭环不等于起飞，以及威斯康星那家浇花水管公司](videos/20261012-a16z-makermaker-rsi-numerator-denominator.md)（[Dhaval Adjodah & Owen He](people/makermaker-founders.md) / MakerMaker.AI 联创 × Martin Casado；⚠️ 公司尚未公开发表任何 RSI 结果，"分母在降而分子在涨"全为自述无数据；⚠️ 两位嘉宾的逐句归属由本库按语域判断）
