@@ -185,6 +185,7 @@
 - 2026-05-29 [#497 Don Lincoln：物理学之谜](videos/20260529-lex-don-lincoln-physics.md)（物理）
 - 2026-06-30 [#498 罗马帝国与拜占庭](videos/20260630-lex-kaldellis-roman-empire.md)（历史）
 - 2026-08-26 [#501 DHH：从手工雕琢 Ruby 到 100% agent 写码，以及"可塑操作系统"](videos/20260826-lex-dhh-agentic-programming-omarchy.md)
+- 2026-10-13 [与 Jensen Huang 同游台湾：出口管制的 flywheel 框架、"英语就是美国的全球优势"、TSMC 关系起源](videos/20261013-lex-jensen-huang-taiwan.md)（⚠️ **体裁是旅行 vlog 不是访谈**，约七成是夜市吃喝；实质内容集中在三段：出口管制正反论证、台湾半导体起源口述史、1996 年找 foundry 到"rough justice"合作哲学）
 
 ### 张小珺·商业访谈录
 - 2026-04-15 [广密·全球大模型季报第 9 集：Coding 是 AGI 第二幕、御三家真相、模型即 OS](videos/20260415-zhang-xiaojun-guangmi-llm-quarterly-9.md)

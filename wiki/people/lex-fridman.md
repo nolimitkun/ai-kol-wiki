@@ -12,3 +12,12 @@
 | 2026-02-12 | #491 | [Peter Steinberger：OpenClaw 爆红的开源个人 Agent](../videos/20260212-lex-openclaw-steinberger.md) |
 | 2026-03-23 | #494 | [Jensen Huang：NVIDIA 与 AI 革命](../videos/20260323-lex-jensen-huang-nvidia.md) |
 | 2026-08-26 | #501 | [DHH：从手工雕琢 Ruby 到 100% agent 写码，以及"可塑操作系统"](../videos/20260826-lex-dhh-agentic-programming-omarchy.md) |
+| 2026-10-13 | — | [与 Jensen Huang 同游台湾](../videos/20261013-lex-jensen-huang-taiwan.md)（⚠️ **非编号访谈，是旅行 vlog**；他第二次与同一嘉宾的内容，实质部分是出口管制 flywheel 论证 + 台湾产业口述史） |
+
+## 形式上的一条观察（2026-10）
+来源：[Lex / Visiting Taiwan](../videos/20261013-lex-jensen-huang-taiwan.md)
+
+2026-10-13 这期**不是他标准的坐下长访谈**，而是在 Computex 展台、台北夜市和早餐桌之间边走边聊的剪辑。
+本库据此在收录时把它与 #494 分开处理：**同一嘉宾、同一主持，证据强度不同**——vlog 里的论述没有追问、
+没有数据、常被食物打断（Jensen 自己说"这对我太重要了，等一下再讲"）。
+他在片中自述此行目的是"**理解彼此的文化与历史**……竞争但保持朋友"（[00:02:06]）。
