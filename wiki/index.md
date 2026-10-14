@@ -71,6 +71,7 @@
 - [Barrett Lyon](people/barrett-lyon.md) — DoxxNet 创始人 / Prolexic 创始人 / Opte 作者（本库第一个公网协议层的声音）：协议层停滞、CGNAT 是最大污点、"网络不做身份"、治理即信任、12 人 26 站点无系统管理员
 - [Jordan（SemiAnalysis / ClusterMAX）](people/semianalysis-jordan.md) — ClusterMAX 负责人，前 HPE 十年硬件系统设计：本库第一个"把 GPU 云当被测对象"的声音——NeoCloud 安全的洞在运维层、GB300 NVL72 作为换代门槛、跨站点异构 RL、"除了 Azure 我一个都不信能建 10 万卡集群"（⚠️ 全名待核）
 - [Alex Zhang](people/alex-zhang.md) — MIT 博士二年级，RLM（Recursive Language Models）作者、GPU MODE 核心成员：**"所有主流 harness 其实是同一个"**、harness 的正面定义、**locally in distribution**（短任务训练泛化到长 8–30 倍）、"RLM 就是唯一工具是代码的 harness"、**"swarm 里 95% 完全没用"**、"这是个 skill issue"、kernel 排行榜上"人在扮演一个非常强的 verifier"
+- [Jason Ma](people/jason-ma.md) — Dyna Robotics 联创兼首席科学家（宾大 GRASP → NVIDIA → Google DeepMind，Eureka 作者）：world action model 的第一性原理、**"不像语言模型，这里没有互联网"**、数据质量的非稳态性、执行器自研判据、**形态是数据迁移率的函数**、**"今天还在任务层面想自主性，真正的价值是无人监督数小时的工作流"**、以及一条主动给出的自我证伪条件（视觉冗余 / 触觉可能 100 倍数据效率）
 - [Vladimir Keil](people/vladimir-keil.md) — Lio 联合创始人兼 CEO，企业采购 multi-agent：**发票软件只覆盖这份工作的 20%**、500 封邮件漏一封 = 上亿损失、**自建能到 70% 但 70% 性能 ≠ 70% 自动化**、harness 的 80% 天花板 → 指向 Jev 那类 outcome 模型、FDE 的 KPI 是把自己自动化掉、"一千个工具只让流程更有效率，从没改变人怎么工作"
 - [Walter Goodwin](people/walter-goodwin.md) — Fractile 创始人兼 CEO，全栈快推理芯片：带宽的 scaling law（flops 百万倍 vs 带宽 40 倍）、SRAM→高带宽 DRAM 的公开转向、芯片产业链的交接点、"自研芯片的主要功能是议价"、前沿实验室在芯片层押重注是不理性的
 - [沈宇军](people/shen-yujun.md) — 蚂蚁灵波首席科学家，"具身原生"、机器人大脑（中方具身主来源）
@@ -263,6 +264,7 @@
 - 2026-09-23 [Eric Nguyen（Radical Numerics）：生物安全是一场军备竞赛，而防守方"远远落后"——dual mandate、生物防御四支柱、"同功能不同拼写"、"你没法给一个人打补丁"](videos/20260923-latent-space-eric-nguyen-biosecurity-arms-race.md)（AI for science 子系列）
 - 2026-10-02 [ClusterMAX 3.0：哪些 GPU 云真的能用——"大多数 NeoCloud 的安全烂得惊人"、推理毛利从 10% 到 60% 把算力市场买空、跨站点异构 RL](videos/20261002-latent-space-clustermax3-neocloud-rankings.md)（Jordan + Dylan Patel / SemiAnalysis；"Lightning" 格式，swyx 主持；⚠️ 卖方机构为自家榜单做的宣传期，本库不采用名次）
 - 2026-10-02 ["所有 harness 其实都是同一个"：RLM、locally in distribution，以及"这是个 skill issue"](videos/20261002-latent-space-alex-zhang-recursive-language-models.md)（Alex Zhang / MIT；⚠️ 他与 Prime Intellect 合作做 Prime Agent，核心实证结果均为自述未核实）
+- 2026-10-13 [Dyna-2 与 Physical AI：world action model、"这里没有互联网"、把自主性的单位从任务换成工作流](videos/20261013-latent-space-dyna-robotics-world-action-model.md)（[Jason Ma](people/jason-ma.md) / Dyna Robotics；上门实地录制含演示 B-roll；⚠️ 与发布同周、全期无第三方基准，但**嘉宾主动给出了具体的技术性自我证伪条件**；与 [Runway 那期](videos/20260925-latent-space-runway-world-models.md) 构成同一主播下的直接对位）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
