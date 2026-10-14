@@ -30,11 +30,11 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-10-13（每次 CI 构建刷新）。
+> 自动生成于 2026-10-14（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 147 |
+| 视频转录稿 | 148 |
 | 人物页 | 130 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
@@ -50,7 +50,7 @@
 | No Priors (Sarah Guo & Elad Gil) | 15 |
 | Dwarkesh Patel | 11 |
 | 月球大叔（Uncle Moon） | 10 |
-| Lex Fridman | 8 |
+| Lex Fridman | 9 |
 | Andrej Karpathy | 5 |
 <!-- STATS:BLOCK:END -->
 
