@@ -48,6 +48,7 @@
 - [Misha Laskin](people/misha-laskin.md) — Reflection AI 联合创始人/CEO，前 DeepMind（Gemini RL 团队）：开放权重训练账本、租 vs 拥有、"开放即安全"
 - [Pushmeet Kohli](people/pushmeet-kohli.md) — Google DeepMind（AlphaFold 内部参与者）：折叠"已解决"叙事的拆解、校准优先于可解释性、"对谁可解释"
 - [Sal Candido](people/sal-candido.md) — Biohub：蛋白质语言模型与可解释性，"大部分工作是去找到那条 scaling law"、"自行车的辐条"、10x vs 10%
+- [Lindon Gao](people/lindon-gao.md) — Dyna Robotics 创始人兼 CEO（前 Caper，以约 3.5 亿卖给 Instacart）：⚠️⚠️ **"机器人本身需要个保姆"**——任务级 99% 成功率不构成商业闭环；**"在任务范围之内智能体不受限，在工作流范围之内受智能体影响"**；**"大脑决定下限，本体决定上限"**；按**工作流复杂度**而非场景分级；一次完整的预训练路线自我纠正（含"我是 selectively 想听到我想听的东西"）
 - [Ian Quigley](people/ian-quigley.md) — Leash Bio 联创兼 CEO（前 Recursion）：⚠️⚠️ **"模型学到的是化学家，不是化学"**——用 1,800 维"谁做的"向量预测活性与化学式一样好；自己出题并公布"最难档没人赢过随机"；**"模型在给蛋白质起外号"**；把池化筛选数据做成物理接地 RL 环境（**一个周末 1 万多次 SAR 战役**）
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
@@ -206,6 +207,7 @@
 - 2026-08-26 [孙宇涛：领读 Kimi K3 技术报告——线性注意力的前世今生、架构—Infra 协同设计（第 152 期，124 分钟）](videos/20260826-zhang-xiaojun-sun-yutao-kimi-k3.md)
 - 2026-08-19 [苏廷浩：17 岁高二学生的 ICML 论文——三万块、0.05B 模型，以及"AI 让我们失去了一部分意义感"（第 151 期，70 分钟）](videos/20260819-zhang-xiaojun-su-tinghao-highschool-icml.md)
 - 2026-09-03 [曾鸣：产业史观、三阶段框架、会消亡的公司、"OpenAI/Anthropic 大概率不是原生时代大赢家"（第 153 期，154 分钟）](videos/20260903-zhang-xiaojun-zeng-ming-industrial-history.md)
+- 2026-10-15 ["那其实就不是机器人太慢，而是机器人本身需要个保姆"：任务到工作流的转折、从"全押高质量数据"到 all in egocentric 的自我纠正，以及"不犯错的 CEO"这个包袱（第 154 期，171 分钟）](videos/20261015-zhang-xiaojun-lindon-gao-task-to-workflow.md)（[Lindon Gao](people/lindon-gao.md) / Dyna Robotics CEO；**人工字幕**；✅ 本库第一份"任务级自主为什么不够"的第一手商业证据，与两天前的 [Jason Ma 那期](videos/20261013-latent-space-dyna-robotics-world-action-model.md) 构成同公司、同周、两位联创的交叉验证；⚠️ 发布前访谈，DYNA-2 与预训练量级全为自述无数据）
 
 ### 月球大叔
 - 2026-05-01 [SGLang/Miles 团队：DeepSeek V4 混合注意力的推理与 RL 训练适配](videos/20260501-uncle-moon-sglang-deepseek-v4.md)
