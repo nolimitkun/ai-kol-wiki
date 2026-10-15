@@ -48,6 +48,7 @@
 - [Misha Laskin](people/misha-laskin.md) — Reflection AI 联合创始人/CEO，前 DeepMind（Gemini RL 团队）：开放权重训练账本、租 vs 拥有、"开放即安全"
 - [Pushmeet Kohli](people/pushmeet-kohli.md) — Google DeepMind（AlphaFold 内部参与者）：折叠"已解决"叙事的拆解、校准优先于可解释性、"对谁可解释"
 - [Sal Candido](people/sal-candido.md) — Biohub：蛋白质语言模型与可解释性，"大部分工作是去找到那条 scaling law"、"自行车的辐条"、10x vs 10%
+- [Ian Quigley](people/ian-quigley.md) — Leash Bio 联创兼 CEO（前 Recursion）：⚠️⚠️ **"模型学到的是化学家，不是化学"**——用 1,800 维"谁做的"向量预测活性与化学式一样好；自己出题并公布"最难档没人赢过随机"；**"模型在给蛋白质起外号"**；把池化筛选数据做成物理接地 RL 环境（**一个周末 1 万多次 SAR 战役**）
 - [Akshat Bubna](people/akshat-bubna.md) — Modal CTO，agent sandbox / 弹性推理 / capital-light 云
 - [Lila Sciences（Rafa & Andy）](people/lila-sciences.md) — neo-lab，科学即 token 生成器、实验室即 verifier
 - [Periodic Labs（"Liam" & "Doge"）](people/periodic-labs.md) — 自治材料实验室 neo-lab，synthesis superintelligence；⚠️ 转录稿只播报了名、没有姓
@@ -266,6 +267,7 @@
 - 2026-10-02 ["所有 harness 其实都是同一个"：RLM、locally in distribution，以及"这是个 skill issue"](videos/20261002-latent-space-alex-zhang-recursive-language-models.md)（Alex Zhang / MIT；⚠️ 他与 Prime Intellect 合作做 Prime Agent，核心实证结果均为自述未核实）
 - 2026-10-13 [Dyna-2 与 Physical AI：world action model、"这里没有互联网"、把自主性的单位从任务换成工作流](videos/20261013-latent-space-dyna-robotics-world-action-model.md)（[Jason Ma](people/jason-ma.md) / Dyna Robotics；上门实地录制含演示 B-roll；⚠️ 与发布同周、全期无第三方基准，但**嘉宾主动给出了具体的技术性自我证伪条件**；与 [Runway 那期](videos/20260925-latent-space-runway-world-models.md) 构成同一主播下的直接对位）
 - 2026-10-13 [How to kill your SaaS：72 支队伍复刻一个 $43K/年的工具——"prompt 几乎是最后一步"、AI 评委与人工验收的背离、"我不在乎你怎么修，我需要它不坏"](videos/20261013-latent-space-kill-my-saas-43k-event-software.md)（⚠️ **自制实验复盘而非访谈**，主讲为 swyx、验收交给自己不懂技术的运营团队；本库第一份把"AI 杀死 SaaS"真的拿去做带人工验收实验的材料，⚠️ **而结论落在"所有权与责任的交换"上，并没有宣布 SaaS 已死**）
+- 2026-10-14 ["模型学到的是化学家，不是化学"：1,800 维"谁做的"向量就能预测活性、"模型在给蛋白质起外号"，以及一个周末拉出 1 万次 SAR 战役](videos/20261014-latent-space-leash-bio-chemist-not-chemistry.md)（[Ian Quigley](people/ian-quigley.md) / Leash Bio，**AI for Science 子系列**；本库第一份把"公开科学数据集学到的是社会学"做成**判决性实验**的材料，⚠️ 全部量级为自述未核实，✅ 但有两次公开自我削弱与一次明确让步；⚠️ 后 20 分钟的硬问题**大部分由 Claude 生成**）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
