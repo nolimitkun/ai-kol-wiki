@@ -93,3 +93,8 @@ V0IB8iMzrLQ  # 张小珺第 154 期 Lindon Gao（Dyna Robotics）的中文原版
              # upload_date 与时长（2h51m18s）均与英文标题版 iDaxRNIddME 完全一致。
              # 已从英文标题版取 zh-CN 人工字幕摄取，
              # wiki 页见 videos/20261015-zhang-xiaojun-lindon-gao-task-to-workflow.md
+
+# ── 2026-10-15 巡检：非 AI 主题 ──────────────────────────────
+2tAywoHiIpo  # All-In: Billy Evans（Elizabeth Holmes 丈夫）谈审判、服刑与 Nathan Fielder
+             # 的纪录片。章节表通篇为 Theranos 案（相识、起诉、庭审、判决、狱中生活、
+             # 纪录片、赔偿）；AI 仅出现在赞助商口播里，无 AI 实质内容（未 fetch）
