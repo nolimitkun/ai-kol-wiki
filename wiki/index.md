@@ -23,6 +23,7 @@
 - [Sebastian Raschka & Nathan Lambert](people/raschka-lambert.md) — ML 教育者，AI2 OLMo / RLHF
 - [a16z](people/a16z.md) — Andreessen Horowitz 频道：Benedict Evans、Sinofsky、Amble、Alex Rampell、Olivia Moore 等；⚠️ 2026-10-05 新增 Josh Elman（消费互联网史的对照提供者："高 COGS 杀死了先堆密度后变现"、"AI 太个人化，所以没有社交媒体式的传播"、明确拒绝 harness / wrapper 这两个词）
 - [Matt Garman](people/matt-garman.md) — AWS CEO、EC2 首任 GM；agent 作为用户的技术后果、瓶颈框架、Nitro/Graviton/Trainium
+- [Terry Angelos](people/terry-angelos.md) — VGS（支付凭证金库）首席战略官兼董事、前 Visa 高管；⚠️ 本库第一份来自支付基础设施一侧的 agentic commerce 材料："agent 长出了手脚，而手脚就是支付凭证"、agentic token、三步交易框架的第三步（有没有幻觉）明说无解、"任何带 breakage 模型的东西都会垮"
 - [Dhaval Adjodah & Owen He](people/makermaker-founders.md) — MakerMaker.AI 联创（MIT Media Lab RL PhD / 前 DeepMind）；本库第一份"专做 RSI 一方自己把判据提得更高"的材料：optimizer-optimizee 判别式、分子/分母框架、**闭环 ≠ 起飞**、Viceroy of Variance、Amdahl 定律给出的"哪些领域不会被加速"
 - [何小鹏](people/he-xiaopeng.md) — 小鹏集团 CEO，物理 AI / 人形机器人（中方产业操盘手视角）
 - [阳萌](people/yangmeng-steven.md) — 安克创新创始人兼CEO，消费电子/端侧AI/存算一体芯片（中方产业操盘手视角）
@@ -327,4 +328,5 @@
 - 2026-10-08 ["agent 会被 P99.9 卡住，而人不会"：给 agent 造的云、2200 亿 capex，以及"从来没有一个瓶颈，只有最新的那个瓶颈"](videos/20261008-a16z-matt-garman-cloud-for-agents.md)（[Matt Garman](people/matt-garman.md) / AWS CEO；⚠️ 主持人姓名未播报；全部性能、份额与收入数字自述未核实）
 - 2026-10-09 ["HBM 是一种可憎的内存，只不过是我们手上最好的那种"：30 年零个新内存、铜的死期，以及"能源容量等于经济容量"](videos/20261009-a16z-pat-gelsinger-memory-wall-optics.md)（[Pat Gelsinger](people/pat-gelsinger.md) / 前 Intel CEO、现 Playground Global GP；⚠️ 主持人姓氏未播报（稿中只有 "Rayu" 与 "Guido"）；⚠️ 他点了至少五家自己投的公司，性能承诺全部自述未核实）
 - 2026-10-14 ["我没法从公开文献里得出蒸馏是个大因素的结论"：蒸馏之争的一次文献级反方、开源经济为什么结构性更慢，以及把 RSI 做成一本公开台账](videos/20261014-a16z-nathan-lambert-trillium-distillation-evidence.md)（[Nathan Lambert](people/raschka-lambert.md)，**已离开 AI2、正在创办非营利开放实验室 Trillium**；⚠️ 发布周访谈且 Trillium 全为计划，✅ 但蒸馏那节他主动列出了对自己不利的反证、并对 fast takeoff 给了明确证伪条件；⚠️ 主持人姓名未播报）
+- 2026-10-15 ["过去三个月，agent 从观众变成了演员——因为它们长出了手脚，而手脚就是支付凭证"：钱包战争、agentic token，以及那把被 Stripe 一次性卡买下的吊灯](videos/20261015-a16z-vgs-agentic-tokens-wallet-wars.md)（[Terry Angelos](people/terry-angelos.md) / VGS 首席战略官兼董事；Alex Rampell 主持；⚠️⚠️ **主持人自述主导了 a16z 对 VGS 的投资、并与嘉宾同为该公司董事，两人还是 20 年前的共同创业伙伴——本库收录过最重的一类利益相关，全部份额与交易量数字自述未核实**；✅ 但"那把吊灯"的失败细节、"三步交易框架第三步无解"、以及主持人的不对称性论证三处不依赖其市场地位）
 - 2026-10-12 ["它不是一种信念，它是经验测量"：RSI 的分子/分母框架、闭环不等于起飞，以及威斯康星那家浇花水管公司](videos/20261012-a16z-makermaker-rsi-numerator-denominator.md)（[Dhaval Adjodah & Owen He](people/makermaker-founders.md) / MakerMaker.AI 联创 × Martin Casado；⚠️ 公司尚未公开发表任何 RSI 结果，"分母在降而分子在涨"全为自述无数据；⚠️ 两位嘉宾的逐句归属由本库按语域判断）
