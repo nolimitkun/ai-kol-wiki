@@ -105,7 +105,7 @@
 - [Garry Tan](people/garry-tan.md) — Y Combinator 总裁兼 CEO，markdown 即员工、token maxing、纯席位 SaaS 存疑、"20 年 white pill"
 - [Ali Massa（Kavak）](people/ali-massa.md) — 拉美二手车平台 AI 负责人，本库第一个买方自建 agent 公司：一客户一 agent、AI CEO、token 三层级
 - [Erik Allebest](people/erik-allebest.md) — Chess.com 联创兼 CEO，本库唯一的回溯样本：机器超人 30 年后的人类活动、重复不可外包、作弊检测的上界
-- [Greg Brockman](people/greg-brockman.md) — OpenAI 联创兼总裁，本库第一份前沿实验室领导层材料："AGI 是光谱不是时间点"、defender window、defense factory、"不是我们被许诺的 AI"
+- [Greg Brockman](people/greg-brockman.md) — OpenAI 联创兼总裁，本库第一份前沿实验室领导层材料："AGI 是光谱不是时间点"、defender window、defense factory、"不是我们被许诺的 AI"；⚠️ **本库唯一有两场长谈（2026-09-14 a16z、2026-10-15 No Priors）可做短期口径对照的实验室领导层**
 - [曾鸣](people/zeng-ming.md) — 阿里前总参谋长 / 战略学者，本库第一份商业史学者视角：三阶段论、模型公司=AI 云、科层制衰亡、岗位→任务、看十年想三年干一年
 - [Satya Nadella](people/satya-nadella.md) — 微软董事长兼 CEO，本库第一份超大规模云厂商一号位材料：扩散优先于放缓、insider risk、capability overhang、开源制衡与应用层毛利、7–8% GDP 门槛
 - [孙宇涛](people/sun-yutao.md) — 清华博士候选人 / RetNet 与 YOCO 作者，本库技术密度最高的一期：线性注意力演进史、推理开销三分法、两个矩阵连乘的定律、"忒修斯之船"
@@ -236,6 +236,7 @@
 - 2026-09-24 [Michael Lee（Sequence Holdings）：买下在位者再"重新创办"它，以及"你不可能把产品卖给一条还不存在的人类流水线"](videos/20260924-no-priors-michael-lee-refounding-incumbents.md)（Sarah Guo 独立主持；⚠️ 她的 Conviction 是该公司投资方）
 - 2026-10-02 [带宽的 scaling law：20 年里 flops 涨了百万倍，内存带宽只涨了 40 倍](videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md)（Walter Goodwin / Fractile；Sarah Guo 独立主持；⚠️ 创始人访谈，技术声明全部自述）
 - 2026-10-09 ["开源模型是它所携带的那套基础设施的特洛伊木马"：Beam 的训练账本、RL 的 flops 超过预训练，以及"开放即安全"](videos/20261009-no-priors-misha-laskin-beam-open-model.md)（[Misha Laskin](people/misha-laskin.md) / Reflection AI 联创兼 CEO；⚠️ 刚发布首个开放权重模型，全部性能与份额数字自述未核实；"开放即安全"那一节本库记为立场并附三条限定）
+- 2026-10-15 ["安全支出应该大幅超过软件支出"：药物发现的物理学变了没有、数学跑得快到底是因为可验证还是因为数据，以及"最好的 UI 是没有 UI"](videos/20261015-no-priors-greg-brockman-cyber-spend-drug-physics.md)（[Greg Brockman](people/greg-brockman.md) / OpenAI 联创兼总裁；⚠️⚠️ **他把"数学跑得快"归因到数据而非可验证性，与本库 [All-In 10-10](videos/20261010-all-in-claude-conscious-model-welfare-openai-math.md) 记录的通行解释正面冲突**；⚠️ 当事方叙述，全部数字（近 400 个问题、12 亿消费者、10 亿美元、25% 工程师、"80%"）自述未核实；✅ 但数据缺口、临床试验替代、安全预算三处他均主动加了限定）
 
 ### Latent Space
 - 2026-06-22 [Gray Swan：Codex/Claude Code 之后的 AI 安全](videos/20260622-latent-space-gray-swan.md)（Kolter & Fredrikson）
