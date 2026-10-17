@@ -138,6 +138,7 @@
 - [Michael Lee](people/michael-lee.md) — Sequence Holdings 联创兼 CEO（前 Lone Pine / Apollo）：⚠️ 本库第一个"所有权侧"的声音——AI 影响的三分法、"给人类流水线上每个人发一台小机器"、三个选项全坏掉（尤其"你卖不给一条还不存在的流水线"）、"每家公司都有一个被歌颂的角色"、控股公司 vs 基金与"一年一笔"、organizational physics、"被监管是特性不是 bug"
 - [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义；⚠️ 2026-10 补入技术侧：人该是通才机器该专门化（Adam Smith → 马克思异化论）、模型训练自己的替代品（JIT 类比）、"用核弹打蝴蝶"、orthogonality thesis 在机器上可能反过来、"对齐评测要跑好几个月"、on-prem 立场反转
 - [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
+- [High Taste Testers 六人组](people/high-taste-testers.md) — Latent Space 新开的重度使用者圆桌（Ben Davis、Ben Hylak / Raindrop、Dex Horthy / HumanLayer、Allison Durham、Alex Volkov / ThursdAI、swyx）；⚠️⚠️ **本库第一个以“归属无法确定”为建页理由的人物页**：六人图录无说话人标签，只按片尾自我介绍锁定少数观点，其余不认领
 
 ## 主题
 
@@ -272,6 +273,7 @@
 - 2026-10-13 [Dyna-2 与 Physical AI：world action model、"这里没有互联网"、把自主性的单位从任务换成工作流](videos/20261013-latent-space-dyna-robotics-world-action-model.md)（[Jason Ma](people/jason-ma.md) / Dyna Robotics；上门实地录制含演示 B-roll；⚠️ 与发布同周、全期无第三方基准，但**嘉宾主动给出了具体的技术性自我证伪条件**；与 [Runway 那期](videos/20260925-latent-space-runway-world-models.md) 构成同一主播下的直接对位）
 - 2026-10-13 [How to kill your SaaS：72 支队伍复刻一个 $43K/年的工具——"prompt 几乎是最后一步"、AI 评委与人工验收的背离、"我不在乎你怎么修，我需要它不坏"](videos/20261013-latent-space-kill-my-saas-43k-event-software.md)（⚠️ **自制实验复盘而非访谈**，主讲为 swyx、验收交给自己不懂技术的运营团队；本库第一份把"AI 杀死 SaaS"真的拿去做带人工验收实验的材料，⚠️ **而结论落在"所有权与责任的交换"上，并没有宣布 SaaS 已死**）
 - 2026-10-14 ["模型学到的是化学家，不是化学"：1,800 维"谁做的"向量就能预测活性、"模型在给蛋白质起外号"，以及一个周末拉出 1 万次 SAR 战役](videos/20261014-latent-space-leash-bio-chemist-not-chemistry.md)（[Ian Quigley](people/ian-quigley.md) / Leash Bio，**AI for Science 子系列**；本库第一份把"公开科学数据集学到的是社会学"做成**判决性实验**的材料，⚠️ 全部量级为自述未核实，✅ 但有两次公开自我削弱与一次明确让步；⚠️ 后 20 分钟的硬问题**大部分由 Claude 生成**）
+- 2026-10-16 [“模型想帮你忙的时候，比有人攻击你更危险”：六个 power user 的实测对照——实验室的产品执行、decision model、以及助理碎片化（High Taste Testers 第一期，75 分钟）](videos/20261016-latent-space-high-taste-testers-products-vs-models.md)（[六人组](people/high-taste-testers.md)；⚠️⚠️ **字幕无说话人标签、本库未做分离，大部分观点无法归属**，页内逐条标了确信度；✅ 四处填空缺：把产品失控归因到“产品是 AI 写的”（与同日 [a16z 那期](videos/20261016-a16z-why-ai-cant-keep-code-running.md) 构成两侧）、把提示注入重构成分类问题（附三起事故 + “约五分之一次草稿里有我不想发的东西”）、[decision model](videos/20260921-latent-space-typesafe-jev-system-one-models.md) “连厂商自己都承认没法 benchmark”、“把它们当克隆体想，克隆体会开始过上不同的人生”）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
