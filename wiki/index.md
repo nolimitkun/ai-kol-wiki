@@ -139,6 +139,7 @@
 - [Amjad Masad](people/amjad-masad.md) — Replit 创始人兼 CEO：⚠️ 本库里"降低门槛"的受益方中唯一批评其后果的人——"创业本身常常是过早优化"（嫉妒驱动 → 对不感兴趣的想法预先承诺）、引力判据、"自驾公司"（holacracy 失败是技术问题）、下棋→AI 能做 ML、硅谷也是单一文化、德性伦理 vs 奇点下的后果主义；⚠️ 2026-10 补入技术侧：人该是通才机器该专门化（Adam Smith → 马克思异化论）、模型训练自己的替代品（JIT 类比）、"用核弹打蝴蝶"、orthogonality thesis 在机器上可能反过来、"对齐评测要跑好几个月"、on-prem 立场反转
 - [Eric Nguyen](people/eric-nguyen.md) — Radical Numerics 联创兼 CEO，Evo 一作（HyenaDNA / Evo / Evo2 / Omni）：本库第一份一手生物安全材料——dual mandate、生物防御四支柱、"同功能不同拼写"这个新攻击类别、门槛下降→体量指数增长、"生物模型此前只有 base model"、"6,000 个碱基对"这条量级降温
 - [High Taste Testers 六人组](people/high-taste-testers.md) — Latent Space 新开的重度使用者圆桌（Ben Davis、Ben Hylak / Raindrop、Dex Horthy / HumanLayer、Allison Durham、Alex Volkov / ThursdAI、swyx）；⚠️⚠️ **本库第一个以“归属无法确定”为建页理由的人物页**：六人图录无说话人标签，只按片尾自我介绍锁定少数观点，其余不认领
+- [Jad Naous](people/jad-naous.md) — Grepr 创始人兼 CEO（前 Applied Intuition 首席产品官、前 a16z 投资人、前 AppDynamics）：⚠️⚠️ 本库最完整的一份“运维能不能像代码一样被 AI 解决”材料的嘉宾侧——“坏事的数量是重尾的，但用来 debug 它的那组步骤是可管理的”、确定性检测层 + LLM 推理层、10 天做完 6 个月的生产项目（但“没有哪个模型能真正想通我们做的事”）
 
 ## 主题
 
@@ -331,4 +332,5 @@
 - 2026-10-09 ["HBM 是一种可憎的内存，只不过是我们手上最好的那种"：30 年零个新内存、铜的死期，以及"能源容量等于经济容量"](videos/20261009-a16z-pat-gelsinger-memory-wall-optics.md)（[Pat Gelsinger](people/pat-gelsinger.md) / 前 Intel CEO、现 Playground Global GP；⚠️ 主持人姓氏未播报（稿中只有 "Rayu" 与 "Guido"）；⚠️ 他点了至少五家自己投的公司，性能承诺全部自述未核实）
 - 2026-10-14 ["我没法从公开文献里得出蒸馏是个大因素的结论"：蒸馏之争的一次文献级反方、开源经济为什么结构性更慢，以及把 RSI 做成一本公开台账](videos/20261014-a16z-nathan-lambert-trillium-distillation-evidence.md)（[Nathan Lambert](people/raschka-lambert.md)，**已离开 AI2、正在创办非营利开放实验室 Trillium**；⚠️ 发布周访谈且 Trillium 全为计划，✅ 但蒸馏那节他主动列出了对自己不利的反证、并对 fast takeoff 给了明确证伪条件；⚠️ 主持人姓名未播报）
 - 2026-10-15 ["过去三个月，agent 从观众变成了演员——因为它们长出了手脚，而手脚就是支付凭证"：钱包战争、agentic token，以及那把被 Stripe 一次性卡买下的吊灯](videos/20261015-a16z-vgs-agentic-tokens-wallet-wars.md)（[Terry Angelos](people/terry-angelos.md) / VGS 首席战略官兼董事；Alex Rampell 主持；⚠️⚠️ **主持人自述主导了 a16z 对 VGS 的投资、并与嘉宾同为该公司董事，两人还是 20 年前的共同创业伙伴——本库收录过最重的一类利益相关，全部份额与交易量数字自述未核实**；✅ 但"那把吊灯"的失败细节、"三步交易框架第三步无解"、以及主持人的不对称性论证三处不依赖其市场地位）
+- 2026-10-16 [“坏事的数量是重尾的，但用来 debug 它的那组步骤是可管理的”：运维能不能像代码一样被 AI 解决、以及系统史上“我们从不预测、我们超额配置”](videos/20261016-a16z-why-ai-cant-keep-code-running.md)（[Jad Naous](people/jad-naous.md) / Grepr CEO，[Martin Casado](people/a16z.md#martin-casadoa16z-普通合伙人) 主持；⚠️ **两人是研究生同组同学、且 Casado 当年把他招进 a16z，本期未说明 a16z 是否投资 Grepr**，Grepr 全部数字与效果自述未核实；✅ 本库最完整的一次正面辩论，双方都给机制、有三处当场让步；✅ 四处填空缺：系统史“我们超额配置”、把可学对象从状态空间换成排障步骤、query optimization “非常近” vs 跑集群 “还没有”、以及结尾“你说能省 90% 的 Datadog 账单？那才是我想买的”）
 - 2026-10-12 ["它不是一种信念，它是经验测量"：RSI 的分子/分母框架、闭环不等于起飞，以及威斯康星那家浇花水管公司](videos/20261012-a16z-makermaker-rsi-numerator-denominator.md)（[Dhaval Adjodah & Owen He](people/makermaker-founders.md) / MakerMaker.AI 联创 × Martin Casado；⚠️ 公司尚未公开发表任何 RSI 结果，"分母在降而分子在涨"全为自述无数据；⚠️ 两位嘉宾的逐句归属由本库按语域判断）
