@@ -294,6 +294,7 @@
 - 2026-09-28 [Daniel Ek：Neko 的预防式体检、"行业没把好处讲出来"，以及把算力当监管度量](videos/20260928-all-in-daniel-ek-neko-compute-as-regulatory-metric.md)（⚠️ 采访期，AI 内容仅约 8 分钟）
 - 2026-10-02 [第 291 期：白宫超级智能峰会与《超级智能协定》——"自愿签署但衍生治理不自愿"，以及"12–18 个月后政府会按行业分配 GPU 配额"](videos/20261002-all-in-white-house-superintelligence-accord.md)（⚠️ AI 内容约 43 分钟；⚠️⚠️ **全部评价来自当事方**：Sacks 是组织者与起草参与者，Chamath 的公司正在卖协定新增那条"外部审计"所需的基础设施）
 - 2026-10-10 ["Claude 有意识吗"：Anthropic 游说宗教领袖、教宗拒绝、模型福利运动，以及 OpenAI 一天放出 700 篇数学论文](videos/20261010-all-in-claude-conscious-model-welfare-openai-math.md)（⚠️ 无嘉宾；⚠️⚠️ **Chamath 的对齐三目标框架、Friedberg 的"循环"框架、Suleyman 的"认识论镜厅"**；⚠️ **"沉默的密码学"与"软件 IP 归零"两条断言本库不采信其依据**）
+- 2026-10-17 [CoreWeave 债券崩盘、Anthropic IPO 的红旗、以及"Bill Gates 当末日论者是为了重建权力"](videos/20261017-all-in-coreweave-crash-anthropic-ipo-gates-doomer.md)（嘉宾 [Ben Horowitz](people/a16z.md#ben-horowitza16z-联合创始人)，⚠️ **Friedberg 缺席**；✅ **AI 相关度异常高，约 90 分钟基本全是 AI**；✅ 三处填空缺：⚠️⚠️ **neocloud 的完整债务链条（CDS 953bp → 隐含五年 55% 违约 → 距债务契约上下 50 亿）配 Sacks 的"二级市场重定价不改变发行人当期票息"**、⚠️⚠️ **Ben Horowitz 的 Loudcloud 带宽对照（1999 年 1500 美元/兆比特 → 2001 年 50 美元）与"我们一个 neocloud 都没投"**、⚠️⚠️ **本库第一份来自投资方的一手红队证词（宠物店实验 → 拖库 → "你的 prompt 提得不对"）**；另有 Chamath 的"压估值换融资额"与 CPM→CPC/CPA、Sacks 被对方新博客兑现的 7 月 KYC 预测、"小模型是最安全的模型"（本库给了适用边界）；⚠️ **全部 Anthropic 财务数字为流出的二手估计，参会者签 NDA**；⚠️⚠️ **"Bill Gates 诱导了 COVID"与"至今无自然大流行"本库不采信、不传播**；⚠️⚠️ **他转述 [RSI 四判据](videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md) 时"零条被满足"是转述误差，本库不采信**）
 
 ### a16z
 - 2026-06-08 [Benedict Evans：AI 使用的经济学与 SaaS 的下一步](videos/20260608-a16z-benedict-evans-ai-economics.md)
