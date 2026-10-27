@@ -142,6 +142,7 @@
 - [Jad Naous](people/jad-naous.md) — Grepr 创始人兼 CEO（前 Applied Intuition 首席产品官、前 a16z 投资人、前 AppDynamics）：⚠️⚠️ 本库最完整的一份“运维能不能像代码一样被 AI 解决”材料的嘉宾侧——“坏事的数量是重尾的，但用来 debug 它的那组步骤是可管理的”、确定性检测层 + LLM 推理层、10 天做完 6 个月的生产项目（但“没有哪个模型能真正想通我们做的事”）
 - [Dylan Field](people/dylan-field.md) — Figma 联合创始人兼 CEO：⚠️ 本库第一份来自"专业创作工具"一侧、且被前沿实验室产品直接点名威胁的一方的材料——⚠️⚠️ **一次公开改口（"几年前我说 AI 会抬高天花板，那是错的；天花板没动，抬高它的是人"）**、"很容易把模型的进步误当成产品的进步"、SaaS-pocalypse 非二元、⚠️⚠️ **可验证域 / 不可验证域的进度差（来自产品侧的独立证词）**、"written with AI" 内部规范、"透过 AI 的镜头"、camera phone 才是真正的断裂点
 - [Jean-Denis（Town）](people/town-jean-denis.md) — Town 创始人兼 CEO、前 Plaid CTO：⚠️ 本库第一份"创始人主动砍掉已有收入产品线"的一手复盘——"pre-AI 它是个好生意，post-AI 它不是风投级生意"、在位者时钟、销售周期频率决定扩张上限；⚠️⚠️ **"软件的价值单元从 app 变成了 computer"（出自 app 层创业者本人）**、token 分配机、app 层对抗模型层的三条防线、⚠️⚠️ **tinkerer 瓶颈与"你不需要更多智能"**、"供给聚合不再值钱"
+- [Evan Conrad](people/evan-conrad.md) — SF Compute（算力现货与远期市场）：⚠️ 本库第一份来自**交易所一侧**的算力材料——实物交割必须先于金融化（LIBOR 作为可检验判据）、算力为什么还不可互换的整张清单（**"GPU 是放在电旁边的"**）、远期曲线的驼峰、中断通知期定价与"违约解除租约的市场"、⚠️⚠️ **"B300 跑推理一小时挣 40 美元而买价 5–6 美元"**、⚠️⚠️ **"你得先杀掉自己的生意，才能做成这件事"**
 
 ## 主题
 
@@ -277,6 +278,7 @@
 - 2026-10-13 [How to kill your SaaS：72 支队伍复刻一个 $43K/年的工具——"prompt 几乎是最后一步"、AI 评委与人工验收的背离、"我不在乎你怎么修，我需要它不坏"](videos/20261013-latent-space-kill-my-saas-43k-event-software.md)（⚠️ **自制实验复盘而非访谈**，主讲为 swyx、验收交给自己不懂技术的运营团队；本库第一份把"AI 杀死 SaaS"真的拿去做带人工验收实验的材料，⚠️ **而结论落在"所有权与责任的交换"上，并没有宣布 SaaS 已死**）
 - 2026-10-14 ["模型学到的是化学家，不是化学"：1,800 维"谁做的"向量就能预测活性、"模型在给蛋白质起外号"，以及一个周末拉出 1 万次 SAR 战役](videos/20261014-latent-space-leash-bio-chemist-not-chemistry.md)（[Ian Quigley](people/ian-quigley.md) / Leash Bio，**AI for Science 子系列**；本库第一份把"公开科学数据集学到的是社会学"做成**判决性实验**的材料，⚠️ 全部量级为自述未核实，✅ 但有两次公开自我削弱与一次明确让步；⚠️ 后 20 分钟的硬问题**大部分由 Claude 生成**）
 - 2026-10-16 [“模型想帮你忙的时候，比有人攻击你更危险”：六个 power user 的实测对照——实验室的产品执行、decision model、以及助理碎片化（High Taste Testers 第一期，75 分钟）](videos/20261016-latent-space-high-taste-testers-products-vs-models.md)（[六人组](people/high-taste-testers.md)；⚠️⚠️ **字幕无说话人标签、本库未做分离，大部分观点无法归属**，页内逐条标了确信度；✅ 四处填空缺：把产品失控归因到“产品是 AI 写的”（与同日 [a16z 那期](videos/20261016-a16z-why-ai-cant-keep-code-running.md) 构成两侧）、把提示注入重构成分类问题（附三起事故 + “约五分之一次草稿里有我不想发的东西”）、[decision model](videos/20260921-latent-space-typesafe-jev-system-one-models.md) “连厂商自己都承认没法 benchmark”、“把它们当克隆体想，克隆体会开始过上不同的人生”）
+- 2026-10-20 ["你得先杀掉自己的生意，才能做成这件事"：SF Compute 的实物交割、算力远期曲线的驼峰，以及"B300 跑推理一小时挣 40 美元而买价 5–6 美元"](videos/20261020-latent-space-sf-compute-physical-settlement.md)（[Evan Conrad](people/evan-conrad.md) / SF Compute；AI Engineer 大会现场，swyx 主持并自述做过衍生品交易；⚠️ **全部数字为嘉宾自述、无第三方来源，且他是该市场运营方**；✅ 四处填空缺：⚠️⚠️ **算力为什么还不可互换的整张清单（同一运营商两种 VM 差 40% 性能、"GPU 是放在电旁边的"所以可互换性被地理打碎）**、⚠️⚠️ **中断通知期作为独立定价维度与"这其实是一个违约解除租约的市场"、远期曲线的驼峰**、⚠️⚠️ **"实物交割必须先于金融化"与 LIBOR 作为可检验判据**、⚠️⚠️ **"NVIDIA / CoreWeave / hyperscaler 都做不了，因为你得先杀掉自己的生意"**；另有"花 100 元买产能平均转卖回 25 元"这个流动性指标、总产能 5% 上板、"把数据中心虚拟化并让它可编程"；✅ **结尾的"资产负债表退出"是对 [CoreWeave 债务链那期](videos/20261017-all-in-coreweave-crash-anthropic-ipo-gates-doomer.md) Loudcloud 教训的直接回应，本库另提出两期都没提的深度问题**）
 
 ### All-In Podcast
 - 2026-07-10 [开源赢麻、AGI 已至、Scorsese 的 AI 工具箱：Cerebras 与 Black Forest Labs CEO](videos/20260710-all-in-cerebras-bfl-open-source.md)
