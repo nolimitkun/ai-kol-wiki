@@ -98,3 +98,8 @@ V0IB8iMzrLQ  # 张小珺第 154 期 Lindon Gao（Dyna Robotics）的中文原版
 2tAywoHiIpo  # All-In: Billy Evans（Elizabeth Holmes 丈夫）谈审判、服刑与 Nathan Fielder
              # 的纪录片。章节表通篇为 Theranos 案（相识、起诉、庭审、判决、狱中生活、
              # 纪录片、赔偿）；AI 仅出现在赞助商口播里，无 AI 实质内容（未 fetch）
+
+# ── 重复上传（续 3） ──────────────────────────────────────────────
+86wFCPat2GY  # 张小珺第 155 期科沃斯钱程的英文标题版：upload_date（2026-10-21）与时长
+             # （2h0m）均与中文原版 vhKLKoKhI0s 一致，为同一期的英配/英文标题重复上传。
+             # 以中文原版摄取
