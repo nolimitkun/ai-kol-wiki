@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["yt-dlp>=2026.8"]  # 必须与 fetch.py 同步钉住：旧版不认识 visionos，一律 403
+# dependencies = ["yt-dlp[default]>=2026.8"]  # 必须与 fetch.py 同步钉住：旧版不认识 visionos，一律 403
 # ///
 """给已摄取的转录稿补做说话人分离，结果写成 **sidecar** 文件，不改转录稿本身。
 
@@ -90,7 +90,7 @@ def ensure_audio(d: Path, url: str, attempts: int = 3) -> tuple[Path | None, boo
     的那种 403，跟限流长得一模一样，极易误判。曾经这里写的是裸 yt-dlp，
     26 期全部在第 1 次就 403。
     """
-    existing = [p for p in d.glob("audio.*") if p.suffix != ".md"]
+    existing = fetch.audio_files(d)
     if existing:
         return existing[0], False
     if not url:
@@ -112,7 +112,7 @@ def ensure_audio(d: Path, url: str, attempts: int = 3) -> tuple[Path | None, boo
             print(f"  !! 音频下载失败（已重试 {attempts} 次）:\n{r.stderr[-500:]}",
                   file=sys.stderr)
             return None, False
-    got = [p for p in d.glob("audio.*") if p.suffix != ".md"]
+    got = fetch.audio_files(d)
     return (got[0], True) if got else (None, False)
 
 
@@ -213,7 +213,7 @@ def main() -> None:
 
     print(f"待处理 {len(targets)} 个：")
     for d, meta in targets:
-        has_audio = any(p.suffix != ".md" for p in d.glob("audio.*"))
+        has_audio = bool(fetch.audio_files(d))
         print(f"  {d.relative_to(ROOT)}  "
               f"[{meta.get('duration_minutes', '?')}min, "
               f"音频{'在本地' if has_audio else '需下载'}]")

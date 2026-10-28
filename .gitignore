@@ -8,3 +8,6 @@ __pycache__/
 _docs/
 _site/
 site/
+# yt-dlp 中断下载的残留
+*.part
+*.ytdl

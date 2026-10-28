@@ -1,6 +1,6 @@
 # /// script
 # requires-python = ">=3.10"
-# dependencies = ["yt-dlp>=2026.8"]
+# dependencies = ["yt-dlp[default]>=2026.8"]
 # ///
 """摄取单个视频：抓元数据 + 字幕，生成 sources/<kol>/<date>-<id>/transcript.md
 
@@ -86,12 +86,26 @@ def _ytdlp() -> list[str]:
     另：内联依赖对 yt-dlp 设了版本下限。uv 会缓存脚本的解析结果，本机一度停在
     2026.07.04——该版本不认识下面固定的 visionos 客户端，默认列表落到
     android_vr，媒体 URL 直接 403。没有下限时这种回退是静默的。
+
+    依赖写的是 yt-dlp[default]，不是裸 yt-dlp：新版把 YouTube「n challenge」
+    的求解脚本拆进了 yt-dlp-ejs 包，裸装时只有 runtime 没有脚本，求解失败后
+    YouTube 把音频限速到 ~100KB/s——不报错，只是慢。实测一期 95MB 音频：
+    裸装 30 分钟下不完（backfill 超时），带 [default] 7 秒。
     """
     cmd = ["yt-dlp"]
     if shutil.which("node"):
         cmd += ["--js-runtimes", "node"]
     cmd += ["--extractor-args", "youtube:player_client=visionos,default"]
     return cmd
+
+
+def audio_files(d: Path) -> list[Path]:
+    """目录里已下载完成的 audio.* 文件。
+
+    排除 yt-dlp 中断留下的 .part / .ytdl：它们也匹配 audio.*，曾被当成现成音频
+    拿去做分离——一期 120 分钟的访谈只分离出前 82 分钟，且不报任何错。
+    """
+    return [p for p in d.glob("audio.*") if p.suffix not in (".md", ".part", ".ytdl")]
 
 
 
@@ -581,10 +595,10 @@ def main() -> None:
                                  "-o", str(dest / "audio.%(ext)s"), args.url], timeout=1800)
             if r2.returncode != 0:
                 sys.exit(f"音频下载失败:\n{r2.stderr[-2000:]}")
-            audio_files = [p for p in dest.glob("audio.*") if p.suffix != ".md"]
-            if not audio_files:
+            found = audio_files(dest)
+            if not found:
                 sys.exit(f"音频文件未生成于 {dest}")
-            audio_path = audio_files[0]
+            audio_path = found[0]
 
             # 确定转录语言
             transcribe_lang = orig if orig.startswith(("zh", "en")) else \
