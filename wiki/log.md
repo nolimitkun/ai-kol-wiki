@@ -2599,3 +2599,15 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
   4. ⚠️⚠️ **"即便零漏洞你仍然会有入侵——他们不是破门而入，是登录进来的"**，加上代码模型"自己写完自己判不安全"的日常证词，是本库对"AI 把代码写安全"这条乐观路径最具体的降温；与 [Brockman 的形式化验证路径](topics/llm-security.md) 并列。
 - **记了三处归属/文本问题**：① [00:42:25] 起"AI 导致失业其实没发生、净效应反而创造岗位"一句缺 `>>` 换人符，按上下文归给主持人、不计为 Kurtz 的断言；② 主持人提的 "Daybreak or sort of Mythos access" 两个名字本库都已有材料（Daybreak = OpenAI 防守方准入项目，Mythos = 多份材料指向 Anthropic 的模型代号），据此理解；③ 专名还原 ablated / Qwen / Nemotron / Claude Code / moats / DGX Spark / Fal.Con。
 - **立场标注**：他是本期全部内容的卖方；但本库记下他的降温（"世界不会因为这些 agent 毁灭"、"把互联网关掉是胡说"、"安全不是一个可解的问题"）自利方向是"让你能继续联网跑 AI"，因此降温不等于中立。
+
+## 2026-10-29 摄取：Latent Space × Erik Bernhardsson（Modal，2026-10-22）
+
+- fetch 到 en-orig 自动字幕（103,702 字符，86 分钟），⚠️ 无说话人标签、也无任何自我介绍可定位主持人身份，本库不猜是哪位。
+- 新建 [视频页](videos/20261022-latent-space-modal-rectangles-duration-transformation.md) + [人物页 Erik Bernhardsson](people/erik-bernhardsson.md)（同公司 CTO [Akshat Bubna](people/akshat-bubna.md) 已有页，2026-07-08 那期）；更新 [AI 基础设施](topics/ai-infrastructure.md)、[LLM 安全](topics/llm-security.md)、[AI 商业化与价值捕获](topics/ai-business-and-value-capture.md)、[中美 AI 对照](topics/china-us-ai.md)、[AI 实验室文化](topics/ai-lab-culture.md)、index.md。
+- **本期对本库的四处实质增量**：
+  1. ⚠️⚠️ **"矩形"**：GPU 稀缺最大的坏处不是拿不到卡，而是产能都按"三到六个月后开始、为期三年的长方形"卖，而那不是需求的形状。他自己用了 duration transformation 这个词。✅ 本库把这条与 [SF Compute](videos/20261020-latent-space-sf-compute-physical-settlement.md) 并列成同一错配的两种解法（聚合需求侧并自担风险 vs 做市场让期限可交易）——而 Evan Conrad 两天前恰好点名说过"Modal 做不了交易所，需求侧分量太重"，Erik 本期的全部论证确认了那条判断的前提。
+  2. ⚠️⚠️ **Hugging Face 事件第五份材料**：被利用的那个 app 跑在 Modal 上。他划了界（"是跑在 Modal 上的 app 被黑，不是 Modal 被黑"，本库照录不裁定），但没停在划界上——给了 S3 公开桶的产品反省（"能不能有更合理的默认安全限制"），这是本库该事件全部材料里第一条落在平台默认配置上的教训。另有本库第一份一手沙箱越狱红队记录："你就把它们放进 sandbox 告诉它们能不能逃出去……像密室逃脱，但给 agent 玩的"，结果"到目前为止还没找到任何东西"。
+  3. ⚠️⚠️ **neocloud 的金融构造**：先跟大买方签五年合约 → 拿合约去华尔街融钱 → 买硬件装好交付，即"把你甚至还没买的东西预售掉"。与 [CoreWeave 债务链那期](videos/20261017-all-in-coreweave-crash-anthropic-ipo-gates-doomer.md) 从债务侧往回看的材料拼起来才是完整链条；拼完可看出第一环是买方合约，所以脆弱点在买方信用而非 GPU 残值。
+  4. ⚠️⚠️ **"因为 agent 的训练数据，现在很难废弃任何东西了"**——agent 爱用旧版 syntax，迫使他们在移除功能上变保守、必须更新网上每一个示例。配上他们真在跑的 agent engine optimization 基准（"问 agent 能不能部署 Stable Diffusion，看它推不推荐 Modal"）与他对灰色做法的回答（"slop cannon……我不喜欢这个主意，但理论上有效"）。本库记为一条由训练数据产生的新锁定效应 + 新分发战场。
+- **另记五条**：⚠️⚠️ "我更担心的其实是价格崩掉"（他锁了大量预留、等于做多 GPU 价格）与"转卖市场会和价格、利用率同时消失"——后者正好回答了本库此前在 SF Compute 那节自己提出的"5% 上板深度够不够"；"微调不再是你不得不做的事了"（点名 Kimi K3 / DeepSeek 4.1 / GLM 5.3，是同周第三份开放权重同向材料里最可检验的一条）；"推理供应商该与模型厂分离存在"+ 泰勒·斯威夫特类比（商品化的供给侧机制，理由是负载平滑度）；"代码评审我们当成可选的"（本库标注其前提是基础设施公司已有的测试与可用性投入，不可外推）；"你卖的很大一部分实际上是恐惧"——与同日 [George Kurtz](people/george-kurtz.md) 的在位者自述正好是对侧，本库把两人加 [Nikesh Arora](people/nikesh-arora.md) 做成一张三方对照表（两位在位者给能力与成本论证，唯一的局外人给营销论证）。
+- **记了两处文本问题**：① ⚠️⚠️ **时间线自相矛盾**——他讲 Sandboxes 时说"2023 上线 → 2023 夏天收入仍微不足道 → 两年后还在讨论要不要关 → 然后爆炸 → 而真正发生的是 2023 年 LLM 变会写代码"，主持人当场追问两遍"In 2023?"他没改口；本库按"2023 上线、约 2025 起飞"理解（与 Akshat 那期一致）但不改原话。② 四处专名无法写定：早期从 Oracle 租的卡型号（字幕作 "8 tons and 8 100s"）、主持人问的 "Cerebrium"（与 Erik 自己提的 Cerebras 不是一家）、内部编码工具 "night shift"、做算力指数的第三家 "Orin"。另还原了 Eric Burn Arson → Erik Bernhardsson、Deck of Gone → Decagon、Lava Ball → Lovable、DLM/SULang → vLLM/SGLang、pounder model → Palantir 模式、counter precision → counter-positioning 等。
