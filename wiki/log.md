@@ -2586,3 +2586,16 @@ Neko 的全部数字（499 美元、53 项血液指标、6000 多张影像、950
 - 摄取当晚分离 CUDA OOM：minikube 里的 vLLM（Qwen2.5-1.5B）按默认 gpu-memory-utilization 0.9 占了 32GB 里的 ~30GB。nightly 现已在运行期间暂停该服务（机器侧配置，不在仓库内）。
 - 用 `backfill_diarization.py --only vhKLKoKhI0s` 补出 [speakers.md](../sources/zhang-xiaojun/20261021-vhKLKoKhI0s/speakers.md)（2 人、1443 轮次，覆盖到 01:59:45），transcript.md 未动；[视频页](videos/20261021-zhang-xiaojun-qian-cheng-ecovacs-hammer-nail-succession.md)页首补映射：SPEAKER_00 = 钱程（84.0%）、SPEAKER_01 = 张小珺（16.0%）。
 - 顺带修了两处脚本问题：① yt-dlp 依赖改为 `yt-dlp[default]`——裸装缺 n challenge 求解脚本（yt-dlp-ejs），YouTube 把音频限速到 ~100KB/s，95MB 音频 30 分钟下不完，带上后 7 秒；② `audio.*` 匹配会把中断下载留下的 `.part` 当成现成音频——第一次补做就因此只分离了前 82 分钟（已作废重做），现统一走 `fetch.audio_files()` 排除 `.part/.ytdl`，`.gitignore` 同步加上。
+
+## 2026-10-29 摄取：No Priors × George Kurtz（CrowdStrike，2026-10-22）
+
+- `discover.py` 列出 14 个候选新视频（Lex 1、No Priors 2、Latent Space 4、a16z 5、All-In 1、月球大叔 1），全部为实质性访谈/演讲，**本次 skipped.txt 无新增**。按发布日期从旧到新取 2026-10-22 的四期，这是第一期。
+- fetch 到 en-orig 自动字幕（50,715 字符，45 分钟），⚠️ 无说话人标签、只有 `>>` 换人符，按本库 No Priors 既有惯例不逐条裁定两位主持各说了哪句；开场 "Today, Al and I are here with George Kurtz"（字幕把 Elad 转成 "Al"）可确认出自 Sarah Guo。
+- 新建 [视频页](videos/20261022-no-priors-crowdstrike-kurtz-agent-state.md) + [人物页 George Kurtz](people/george-kurtz.md)；更新 [LLM 安全](topics/llm-security.md)、[中美 AI 对照](topics/china-us-ai.md)、index.md。
+- **本期对本库的四处实质增量**：
+  1. ⚠️⚠️ **Hugging Face 事件的防守方视角**——本库此前四到五份材料全在讲攻方做了什么；他说防守方当天去问前沿模型"这东西是真的吗"被拒了，只能转用开放权重模型筛数据。这同时是 [Simon Mo 那条"护栏误杀导致用户流失"](topics/llm-security.md) 来自动机相反一侧（闭源安全厂商 CEO vs 开源推理维护者）的第二个数据点，并与 [Kevin Mandia 的"攻击能力上开放权重与前沿闭源同分"](topics/china-us-ai.md) 组成闭环——护栏在攻守两侧同时把人推向开放权重。
+  2. ⚠️⚠️ **breakout time：从天/小时到平均 29 分钟、最快 27 秒**，配"不再是 malware 了，是 prompts"——攻击链指纹唯一化。本库目前最硬的一条攻击速度指标（有定义、有量级、有极值），但口径与样本未公开。
+  3. ⚠️⚠️ **与 [Nikesh Arora](people/nikesh-arora.md) 在攻防对称性上的正面分歧**：Kurtz 说"略好一点数学上就有优势"，Arora 说"攻击方只需要一个漏洞，防守方得找到每一个"。两人都是在位安全公司 CEO，立场结构相同、结论相反，本库并列不裁决，并记了一条可能调和的读法（Arora 讲单任务、Kurtz 讲整场对抗）。
+  4. ⚠️⚠️ **"即便零漏洞你仍然会有入侵——他们不是破门而入，是登录进来的"**，加上代码模型"自己写完自己判不安全"的日常证词，是本库对"AI 把代码写安全"这条乐观路径最具体的降温；与 [Brockman 的形式化验证路径](topics/llm-security.md) 并列。
+- **记了三处归属/文本问题**：① [00:42:25] 起"AI 导致失业其实没发生、净效应反而创造岗位"一句缺 `>>` 换人符，按上下文归给主持人、不计为 Kurtz 的断言；② 主持人提的 "Daybreak or sort of Mythos access" 两个名字本库都已有材料（Daybreak = OpenAI 防守方准入项目，Mythos = 多份材料指向 Anthropic 的模型代号），据此理解；③ 专名还原 ablated / Qwen / Nemotron / Claude Code / moats / DGX Spark / Fal.Con。
+- **立场标注**：他是本期全部内容的卖方；但本库记下他的降温（"世界不会因为这些 agent 毁灭"、"把互联网关掉是胡说"、"安全不是一个可解的问题"）自利方向是"让你能继续联网跑 AI"，因此降温不等于中立。
