@@ -7,7 +7,7 @@
 
 > ⚠️ **专名与术语还原（自动字幕）**：**Dots**（OpenAI 的常驻 agent 产品）、**Astra**（模型）、**Daybreak**（他说的防守方准入项目名）三处字幕拼写稳定，本库照录；Galois → **"Galois"**（正确）；Math Academy → **"math academy"**；HTTPS 一句残缺作 **"should be over H"**，本库按 HTTPS 理解。
 >
-> ⚠️ **本库判为不可靠、未写定的四处**：① **[00:19:07] 他形容 Dots "It's got its own car computer"**——⚠️ **"car computer" 疑为 "cloud computer" 一类的转录错误，本库只记"他说 Dots 跑在自己的一台计算机上"，不引用那个词**；② **[00:20:07] 他列举消费侧助手时字幕作 "the Instincts Muses of the world"**——⚠️ **本库无法确定这是一个还是两个产品名、分别指什么，不解释**；③ ⚠️ **[00:37:15] 他说"即便 GPT-4 也比任何人知道得多"**——⚠️ **本期开头刚说 GPT-6 已铺给十亿人，此处出现 GPT-4 可能是他举旧例、也可能是转录错误，本库照录不改**；④ **[00:14:05] "and of one diseases" 应为 "n-of-1 diseases"（单病例罕见病），本库按后者理解并标注。**
+> ⚠️ **本库判为不可靠、未写定的四处**：① **[00:19:07] 他形容 Dots "It's got its own car computer"**——⚠️ **"car computer" 疑为 "cloud computer" 一类的转录错误，本库只记"他说 Dots 跑在自己的一台计算机上"，不引用那个词**；② **[00:20:07] 他列举消费侧助手时字幕作 "the Instincts Muses of the world"**——✅ **2026-10-29 部分解掉：[a16z 2026-10-22 那期](20261022-a16z-frontier-biggest-gap-shadow-adoption.md) 两次把 "Muse" 与 "Instinct" 作为两个并列产品提到（"你有 Muse 和 Instinct 这类产品，它们算是人的效用代理 agent"），本库据此判定这里是两个产品名而不是一个。** ⚠️ **但两者分别属于谁、具体是什么，两期都没说，本库仍不解释**（🔗 另有一条记录指向 Muse 属于 Meta 一侧，见 [High Taste Testers 那期的代号清单](20261016-latent-space-high-taste-testers-products-vs-models.md)）；③ ⚠️ **[00:37:15] 他说"即便 GPT-4 也比任何人知道得多"**——⚠️ **本期开头刚说 GPT-6 已铺给十亿人，此处出现 GPT-4 可能是他举旧例、也可能是转录错误，本库照录不改**；④ **[00:14:05] "and of one diseases" 应为 "n-of-1 diseases"（单病例罕见病），本库按后者理解并标注。**
 
 > ✅ **本页认为这一期的价值集中在四处，而其中两处与本库既有材料正面冲突**：
 > ① ⚠️⚠️ **他明确否掉了"数学跑得快是因为可验证"这个解释，把原因换成了数据**（[00:09:04]–[00:10:04]）。⚠️ **本库 [此前记录的同一问题的主流答案恰好是可验证性](20261010-all-in-claude-conscious-model-welfare-openai-math.md)（Sacks 的"证明容易验证"、Friedberg 的"整个循环能在硅内闭合"）。** ✅ **这是本库第一条来自实验室内部、且方向相反的归因，见下文第二节。**
