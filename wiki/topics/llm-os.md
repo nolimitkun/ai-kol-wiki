@@ -318,3 +318,16 @@ Sinofsky 给的平台层一般规律：**一旦你成为平台，无论加多少
 - ✅ **他给的性质判断**：**"computer use 其实是最容易理解的 AI 产品——它就是一个 AI 在用你的电脑。但因为要管理的不同状态，实现细节有时会渗出来，于是它就变得不好 grok 了。"**
 - ✅ **本页的标注：这是一条"身份与会话状态归谁持有"的问题，不是模型问题。** 🔗 **与 [Kurtz 那期的"agent 的身份与凭证"](../videos/20261022-no-priors-crowdstrike-kurtz-agent-state.md) 是同一问题的两端**——那边问企业怎么知道哪个 agent 在用谁的凭证，这边承认厂商自己都还没把一个用户的四套凭证理顺。
 - ⚠️ **而他们想要的"共享智能层"把这个问题放大了**（[00:31:19]）：**"如果每个网站都有自己的 agent、而它不跟你的 agent 说话，那会是一个非常碎片化的世界。"** ⚠️⚠️ **本页标注：这条主张要求一个跨站点、以用户 agent 为中心的上下文层，而谁持有那一层恰好是 agentic web 的核心争议（见 [AI 商业化与价值捕获](ai-business-and-value-capture.md)）。节目没有点出。**
+
+---
+
+## ⚠️ Claude Managed Agents 与 Dreaming：本页第一份"managed agent 作为平台原语"的材料（2026-10-27）
+
+来源：[Latent Space × Anthropic](../videos/20261027-latent-space-anthropic-platform-cpu-rust-distillation.md)（嘉宾 [Katelyn Lesse & Angela Jiang](../people/anthropic-platform-leads.md)）
+⚠️ **平台负责人自述，无任何采用数字。**
+
+- **CMA 在栈里的位置**（[00:42:18]）：**messages API 是原始 token 访问；CMA 是更高一层的抽象**——**定义一个 agent、起一个 session**，**省掉搭基础设施与 harness 的活**。⚠️ **与 Claude Code 的关系说得很清楚**：**共用沙箱机群与大量基础设施，但 harness 不共用**（"在 harness 层那两个产品想做的事不一样"）。
+- ⚠️⚠️ **"Dreaming 是一层套一层的 managed agents"**（[00:46:20]）：**起另一个 managed agent 去检查前一个 managed agent，然后给它写记忆。** ✅ **这是刻意的模块化设计**，别的可拼法包括 **best-of-N** 与 **verifier agent**；⚠️ **而一条用户侧观察是"有人做了一个 harness，在所有东西之间共享疯狂的记忆，然后拉起一大堆并行 agent"**，所以**他们打算把底层原语暴露出来、让用户自己构造"多智能体策略"并给模板**。
+- ✅ **本页标注这条在本页的位置**：本页此前的 harness 材料分两类——**核心 harness 必须复杂且非常安全那张清单**（厂商侧）与**各家自己造 harness 的经验**（应用侧）。⚠️⚠️ **CMA 是第三种形态：把 harness 本身作为托管产品卖，而卖点正是"每次发模型我们替你搞清楚新参数与破坏性变更"**（见 [参数泛滥那条](../people/anthropic-platform-leads.md)）。
+- ⚠️ **一处优先级的坦白**（[00:44:20]–[00:45:20]）：⚠️⚠️ **"随着发模型从安全角度变得越来越难，我们团队的精力更少放在'给这个 agent 爬一个好玩的功能'上，更多放在怎么把安全带进所有这些东西里"**；**"和今年早些时候比，我们在 skills、dreaming、memory 这些'时点注入'上确实慢下来了一点"**（⚠️ 随后被同伴打断强调"我们很爱 skills"，本页照录这处张力）。
+- 🔗 **"大脑和手分开"的安全含义（独立 vault + 占位符 + 出口代理注入 + 域名白名单）记在 [LLM 安全与治理](llm-security.md)**；✅ **本页只记其架构动机**：**harness 常驻所以首 token 快，而"你的沙箱可以死掉，但整个 agent 不会死"**。⚠️⚠️ **而第一版是一条有用的失败记录**：**"我们给 agent 做的第一版 API 就是把 Claude Code 扔进一个沙箱、上面糊一个 API"**，被否的原因是启动开销与"沙箱一死整个 agent 就没了"。
