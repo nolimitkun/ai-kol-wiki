@@ -977,3 +977,29 @@ Dwarkesh 的 18 世纪类比（被 Greenblatt 确认）：**要改变 18 世纪�
 - ⚠️⚠️ **而他对 pacing letter 的解读是**：**"几乎像是他们在为自己制造一个不在场证明……我们本来想让它停下来、想让它放慢，我们试过让你们都同意 pacing，但你们不肯，所以我们就继续了"**；以及 **"整件事算是一种德性表演（virtue signaling）。"**
 - ⚠️⚠️ **本页明确记为动机归因、不采信**：**这是对他人内心动机的推断，不可检验，而发言者在这件事上是公开的对立方。** 🔗 **本库既有的 pacing 材料见 [Daniel Ek 明确不站队的那一份](../people/daniel-ek.md)，以及 [白宫超级智能峰会那期](../videos/20261002-all-in-white-house-superintelligence-accord.md)。**
 - ⚠️ **而"回到八月那篇博客"与"26%"这两项是本节唯一可去核实的事实主张，本库此后遇到相关材料应回填。**
+
+---
+
+## ⚠️⚠️ 本页第一条应用层的"让 agent 改自己的 harness"失败模式："每个小修补都会变成整条 prompt"（Arca，2026-10-31）
+
+来源：[Latent Space × Arca（Aman Singh）](../videos/20261031-latent-space-arca-agents-prompt-people-constrain-at-capability-edges.md)（人物页：[Aman Singh（Arca）](../people/arca-aman-singh.md)）
+
+⚠️ **立场**：他代表 Arca（AI 原生财富管理机构）。✅ **而本节这条是一处自我不利的让步——他是在解释自家自动化流程里为什么还留着人，所以本页认为它的可信度高于本期其它陈述。**
+
+### 自改进闭环的形态
+
+（[00:20:10]–[00:22:11]）
+
+- **① 采集**：**员工的每一次编辑或取消都带一个"为什么"，并成为一条 eval**；**反馈与"产出它的那个 agent 的 trace"耦合入库。**
+- **② 归纳**：⚠️⚠️ **"每一晚我们跑一个流程：收集来自真实世界、来自我们在野 agent 的 trace，在它上面跑一个 meta agent，让它建议对我们 harness 的改动。"** **建议类型他给了三种**：**有误导性的工具、出错的东西、知识库里缺失的知识。**
+- **③ 放行**：⚠️ **"今天我们在真正上线一个 prompt 改动之前，仍然有一个人类工程师在环里。"**
+
+### ⚠️⚠️ 而留着那个人的理由是本页认为全期最值得保存的一句
+
+> ⚠️⚠️ **"我注意到，你要是放手让 agent 自己去改，它们会做出相当糟糕的 prompt 改动。每一个小修补都会变成整条 prompt。"**
+> ⚠️⚠️ **"而它们没法保持在元层面、把那个修补泛化成一条能泛化的 prompt。"**
+
+- ✅ **本页标注这条为什么重要**：⚠️⚠️ **本页此前关于"用 AI 加速 AI"的材料几乎全在实验室一侧、且多是能力叙述（元模型、neo labs、自改进的组织、[Sacks 转述的"造下一代模型所涉任务的 26% 已在用 RSI"](../videos/20261030-all-in-anthropic-s1-compute-multipliers-crowding-out-treasuries.md)）**；✅ **而这是第一条来自应用层、关于"让 agent 修改自己的 harness"的具体失败模式。**
+- ⚠️⚠️ **而缺陷被指认为抽象层级，这是它最有用的地方**：**agent 把一个实例修补当成了规则，而不是去归纳。也就是说失败不在"它改不动"，而在"它不会把一个样本上升成一条策略"——而这恰好是 meta 层工作的定义性要求。**
+- ✅ **本页认为这很可能是一个一般现象而不是这家公司的特例，理由是它与本库既有的另一条形成了对称**：🔗 ⚠️⚠️ **"围绕当期模型缺陷建起来的那层东西有半衰期"（[Serval 的示例库被模型吃掉](../videos/20261029-no-priors-serval-boundary-is-the-product-least-privilege.md)、[Lovable 的 skills 被模型吃掉](../videos/20261028-latent-space-supabase-declarative-schema-billions-of-databases.md)、[Anthropic 的"在一些负载上智能看起来越来越饱和了"](../videos/20261027-latent-space-anthropic-platform-cpu-rust-distillation.md)）说的是人写的脚手架会过时**；✅ **而这一条说的是机器写的修补不会泛化。两者是同一问题的相反方向：脚手架的维护者无论是人还是机器，都各有一种系统性失效。**
+- ⚠️⚠️ **而本页标注这条对 RSI 讨论的含义，并限定其射程**：**它是关于"agent 改 prompt / 改 harness"这一层的观察，不是关于"模型改模型权重"那一层的证据。** ✅ **但本页认为它仍然相关，因为 harness 与 prompt 恰恰是当期最容易被自动改动的那一层——而在这一层上，自动化的瓶颈被报告为泛化能力而不是执行能力。** 🔗 **与 [MakerMaker.AI 的 optimizer-optimizee 判别式与"闭环 ≠ 起飞"](../videos/20261012-a16z-makermaker-rsi-numerator-denominator.md) 并读：那一份把判据提得更高，而这一条给了一个闭环已经建起来、但产出质量不达标的实例。**
