@@ -138,3 +138,4 @@
 - [AI 商业化与价值捕获](../topics/ai-business-and-value-capture.md)
 - [评估与 Benchmark](../topics/evaluation-and-benchmarks.md)
 - [AI for AI / Auto Research](../topics/ai-for-ai-and-auto-research.md)
+- [Joseph Kim（OpenAI）](joseph-kim.md)（⚠️⚠️ **同日的对侧视角：模型厂商自己说"95% 是创业公司也能做的"、产品就建在对外开放的 plugin primitives 上——正对着他拒绝 managed agents 的理由；而两人在"剩下的是数据"与"知识库该交给领域专家"上意外一致**）

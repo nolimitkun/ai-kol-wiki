@@ -23,3 +23,8 @@
 | 日期 | 视频 | 频道 |
 |---|---|---|
 | 2026-06-25 | [AGI、o1、评估与 Scaling Laws](../videos/20260625-latent-space-mark-chen.md) | Latent Space |
+
+## 🔗 本库后续给 "evals crisis" 补上的机制（2026-10）
+
+- ⚠️⚠️ **[Joseph Kim（OpenAI，ChatGPT 金融业务）在 2026-10-31](../videos/20261031-latent-space-openai-finance-joseph-kim-plugin-95-percent-taste-reward-model.md) 指认了一种会自我维持的调查偏差**：**"如果数字看起来好，研究员就假定模型变强了，然后不去调查它。而如果数字很难看，你就会去调查。"** ✅ **本库认为这给本页的 "evals crisis" 提供了一个机制层面的解释——eval 的 bug 只在它让模型显得变差时才会被发现，于是让模型显得更好的 bug 会永远留在原地，而饱和被系统性低估。**
+- ⚠️ **同期他还对自家的 GDP eval 直接说"已经完全饱和，而没饱和的那些部分本质上是坏的，所以我们不报它了，也不再追踪它了"。** 🔗 完整记录见 [评估与 Benchmark](../topics/evaluation-and-benchmarks.md) 与 [Joseph Kim](joseph-kim.md)。
