@@ -1279,3 +1279,37 @@
 > ⚠️⚠️ **"我们有一个问题，是它不能正确地标引用……结果下一个模型发布就解决了。它从大概 70% 变成了 99%。我们什么都没做，而且挺好的。"**
 
 - ✅ **本页标注这条与本库"脚手架半衰期"那条线的关系，以及它多出来的那一层**：🔗 **既有材料是 [Serval 的示例库](../videos/20261029-no-priors-serval-boundary-is-the-product-least-privilege.md)、[Lovable 的 skills](../videos/20261028-latent-space-supabase-declarative-schema-billions-of-databases.md)、[Anthropic 的"智能看起来越来越饱和"](../videos/20261027-latent-space-anthropic-platform-cpu-rust-distillation.md) 都在说脚手架会被模型进步作废。** ⚠️⚠️ **而这一条说的是测量设施也在同一条曲线上：建复杂 eval 的投入可能会被下一次模型发布直接抹掉，所以"什么时候开始认真做 eval"是一个与模型进步赛跑的时点判断，而他的答案在 2026 年之前是"不该做"。** ✅ **本页认为这是对本页通篇"要自建 eval"主张的一条重要限定——自建 eval 的收益率不是常数，它随模型进步放缓而上升。**
+
+---
+
+## ⚠️⚠️ 把自己公司的历史 agent 运行记录做成可重放的 benchmark，而且同时变 model 与变 harness（Warp，2026-11-03）
+
+来源：[Latent Space × Warp.dev（Zach Lloyd）](../videos/20261103-latent-space-warp-software-factory-80-to-15-dollars-per-pr.md)
+
+> ⚠️ **立场**：**他是 Warp CEO，这一期是产品演示；本节所有数字为自述、口径自定。** ✅ **本页收录它的理由很具体：本页此前有多条买方侧的 benchmark 批评（见下），但一直缺"那你自己建一个该怎么建"的具体形态——这是第一份。**
+
+### ⚠️⚠️ 一、做法本身，以及被变动的维度有两个
+
+（[00:16:11]–[00:17:11]）
+
+- **流程**：**"把你系统里跑过的任何一个 coding agent 加进一个 benchmark 套件"** → **"你可能会策展一组跟做前端之类相关的 coding agent 运行记录"** → **"把那些同样的任务，拿去对着一个由不同配置组成的矩阵重放"**。
+- ⚠️⚠️ **而本页认为关键在于矩阵的第二个轴**：
+  > **"我是个坚定的信奉者——不只让你变模型，还要让你变 harness。所以在 Warp 里我们有我们自己的 harness，但我们实际上会让你对着 Claude Code、Codex 或者 Pi 去做 benchmark。模型你也可以挑。"**
+  - ✅ **本页标注这条为什么重要**：⚠️ **本页此前关于 harness 的材料（[Satya Nadella 的"模型 + harness"](../videos/20260915-all-in-satya-nadella-microsoft-ai.md)、[Ali Ghodsi 的 2 倍成本](../videos/20260918-a16z-ali-ghodsi-pacing-rsi-four-criteria.md)）都承认 harness 是独立变量，但从未把它写成评测矩阵的一个轴。而一旦它是一个轴，"模型排行榜"这种单轴产物在企业内部就失去了决策价值。**
+- **产出形态他自己做了对照**：**"你最后拿到的结果看起来很像 SWE 或者 Terminal Bench 那种公布出来的结果，但是跑在你自己公司真实的运行记录上。"** **坐标轴是成本对正确率**——**"你想在左上角"**。
+- ⚠️ **他给的两个点，本页只取结构不取型号**（两个模型名都是自动字幕讹写、不可确证）：**一档 95% 正确、平均 6 美元；另一档 93% 正确、2 美元。** ✅ **本页记它的意义只在于呈现了一个 2 个百分点换 3 倍价钱的决策形状。** ⚠️ **他自加时效限定**：**"这些模型现在已经有点旧了。"**
+- ⚠️ **下游用途是路由，而 harness 也在被路由**：**"你可以把这个信息喂进一个模型路由策略，或者说实话是 harness 路由策略，而它是专门针对你自己的工作流和代码库定义的。"**
+
+### ⚠️⚠️ 二、本页此前三条分散材料被收到了同一个形状上
+
+- 🔗 **[Arca 用内部 harness benchmark 否掉外部 benchmark](../videos/20261031-latent-space-arca-agents-prompt-people-constrain-at-capability-edges.md)、[Eve 批评外部 benchmark 是维度错配](../videos/20261030-a16z-eve-plaintiff-law-supply-constrained-outcome-pricing.md)**——**两者都是买方说"公开榜单对我没用"**；✅ **而这一期是把"那就自己建"做成了产品形态。**
+- ⚠️⚠️ **但本页要标出它的前置条件，因为这是本节最容易被漏掉的一句**：**可重放的任务集来自中央化的历史 agent 运行记录，而他明确说大多数公司没有这个，因为 agent 跑在工程师各自的终端里（[00:08:03]）。** ✅ **本页的归纳：公开 benchmark 的替代品不是"更好的公开 benchmark"，而是把自己的历史工作变成可重放的任务集；而这条路径的上游是可观测性，不能只要下游。** 🔗 **反例在 [Legora](../videos/20261102-latent-space-legora-cto-cant-see-the-traces-agent-as-api.md)——那家公司想要却拿不到，因为数据所有权不在客户手里。**
+
+### ⚠️ 三、scorer：常态挂着的 LLM-as-judge，以及一处本期未被问到的事
+
+（[00:09:05]–[00:11:06]）
+
+- **他叫 online eval 或 scorer**：**跨度从"你的 agent 是不是太啰嗦 / 效率高不高 / 代码质量好不好"到客户自定义的具体失败模式**（例："这个 agent 是不是在做某一类会把我们的构建搞坏的改动"）。
+- **机制是对存下来的历史 agent 对话做追溯打分**；**配置项是 judge 模型 + 跑在哪里 + 判定 prompt + 一个采样率**。⚠️ **采样率的理由是成本**：**"因为这些是正在跑的 agent，你得意识到它们的成本。"**
+- ⚠️ **他举的失败模式本页单独记，因为它是一条具体的"agent 产生的技术债"**：**冗余测试**——**"有时候它们写一堆你不需要的测试……然后就把它留在代码里了"**，后果是**"把你的代码库搞肿了，而且它浪费 token"**。
+- ⚠️⚠️ **而本页标出一处本期完全没有涉及的问题**：**整套 scorer 是 LLM-as-judge + 抽样，于是这套测量设施自身的可靠性与它所测量的对象是同一类问题，而本期没有任何 judge 校准或 judge 漂移的讨论。** 🔗 ✅ **这正好咬住本页上面 [Joseph Kim 那条"eval 的 bug 只在它让模型显得变差时才会被发现"](../videos/20261031-latent-space-openai-finance-joseph-kim-plugin-95-percent-taste-reward-model.md)——一套只在分数难看时才被审查的打分器，会把自己的误判沉淀成结论。本页不判定 Warp 有没有这个问题，只记它未被问到。**
