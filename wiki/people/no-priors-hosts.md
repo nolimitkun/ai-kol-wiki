@@ -53,6 +53,8 @@
 | 2026-10-02 | [带宽的 scaling law：flops 涨百万倍，内存带宽只涨 40 倍](../videos/20261002-no-priors-fractile-bandwidth-scaling-laws.md) | [Walter Goodwin](walter-goodwin.md)（Fractile 创始人兼 CEO；Sarah Guo 独立主持） |
 | 2026-10-09 | [Beam 的训练账本、RL 的 flops 超过预训练，以及"开放即安全"](../videos/20261009-no-priors-misha-laskin-beam-open-model.md) | [Misha Laskin](misha-laskin.md)（Reflection AI 联创兼 CEO；双主持）⚠️ **刚发布首个开放权重模型，数字全部自述** |
 | 2026-10-15 | ["安全支出应该大幅超过软件支出"：药物发现的物理学变了没有、数学跑得快到底靠什么](../videos/20261015-no-priors-greg-brockman-cyber-spend-drug-physics.md) | [Greg Brockman](greg-brockman.md)（OpenAI 联创兼总裁；双主持）⚠️ **当事方叙述，全部数字自述未核实** |
+| 2026-10-29 | [边界就是产品、权限会越收越紧、"我们从没建过定制功能"](../videos/20261029-no-priors-serval-boundary-is-the-product-least-privilege.md) | [Jake Stauch](jake-stauch.md)（Serval 联创兼 CEO） |
+| 2026-11-05 | [用加密货币的分散持有对照 AI 的集中持有、一条 IPO 市值算术，以及"数学发现被关在数据中心里"那条批评](../videos/20261105-no-priors-vlad-tenev-ownership-crypto-vs-ai-math-centralization.md) | [Vlad Tenev](vlad-tenev.md)（Robinhood 联创兼 CEO / Harmonic 联创；Sarah Guo 独立主持）⚠️⚠️ **六条自家产品线，全部数字自述、转录稿全程无利益披露** |
 
 > **来源：[No Priors / Michael Lee](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md)**
 >
