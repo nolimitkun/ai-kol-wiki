@@ -1475,3 +1475,15 @@
 ⚠️ **主持补了一条**：**"Bo Wang 和他的一些合作者刚刚有一篇 Nature 论文，讲的是在那些线性基线打赢一些模型的情况里，其实是指标本身才是问题。"** ✅ **而本页 2026-07 的 [Xaira X-Cell 那期](../videos/20260721-latent-space-xaira-xcell-virtual-cell.md) 里正是 Bo 一侧论证了"MAE 是个坏指标"——所有细胞的平均谱是 MAE 的极好局部最优，其 MAE 有时比技术重复（扰动实验事实上的 ground-truth 天花板）还低——并主推 Pearson Delta。**
 
 ✅ **本页因此把这条记为该批评的后续证据链，而不是一条新观点。** ⚠️ **主持还加了一句本页认为值得留的概括："所以显然不只是指标被 hack，也是问错了问题会导致错的答案。"**
+
+## ⚠️ "做 benchmark 和 eval，这能让你进每一家前沿实验室的门"：本页第一条把它当成个人职业路径的材料（Stanford CS146S，2026-11-08）
+
+来源：[Latent Space × Mihail Eric](../videos/20261108-latent-space-stanford-cs146s-oss-mentorship-psychosis-hiring.md)（嘉宾 [Mihail Eric](../people/mihail-eric.md) / Stanford 兼任教授、Monaco 的 Head of AI；主持 [swyx](../people/latent-space-hosts.md)）
+
+- **swyx 把它作为"课程大纲之外的第十一周"给学生**（[01:59:04]）：
+  > **"我给学生一个免费的第十一周——做 benchmark。做 benchmark 和 eval。这个能让你进每一家前沿实验室、每一家头部 agent 实验室的门。"**
+- **第二位主持补的第二条路径**：**"在任何有意思的东西上写有严谨性的好工程博文。benchmark 很多、低垂果实很多，但工程博文确实很有效——你在一件事上钻得很深。"**
+- ⚠️ **swyx 另给了商业化一侧**：**"而且那里面也有很多钱可赚。所以不只是进门，如果你把那个做成生意，你真的能赚得很多。"**
+- ✅ **例证是一条可核对的事实**：**"人们不知道 SWE-bench 本来是个本科生项目。"** **嘉宾确认是 Princeton。**
+- 🔗 ✅ **本页标注这条在本页里的位置，因为它把本页积累的全部抱怨翻成了一条机会**：⚠️⚠️ **本页此前的材料几乎全是买方在说公开 benchmark 对自己没用（[Arca 用内部 harness benchmark 否掉外部榜单](../videos/20261031-latent-space-arca-agents-prompt-people-constrain-at-capability-edges.md)、[Eve 说外部 benchmark 是维度错配](../videos/20261030-a16z-eve-plaintiff-law-supply-constrained-outcome-pricing.md)），或卖方在把"建内部 benchmark"做成产品（[Warp 在自家真实运行记录上重放](../videos/20261103-latent-space-warp-software-factory-80-to-15-dollars-per-pr.md)）。** ✅ **而这一条是第一次有人把"做 benchmark"当成**个人**的职业路径来推荐，而推荐理由恰恰就是前面那些抱怨——需求没被满足。**
+- ⚠️ **本页另记一条该期提到的可查证研究方向，记为研究指引而非结论**（[00:37:20]）：**AIE 上有论文研究 Claude Code system prompt 的 delta——"什么被改了，然后他们把性能的一堆变化画出来，试着反向工程它"**；**另有一篇看 context window 管理怎么影响下游性能。** ✅ **swyx 自己给了降权**：**"它们不是最好的论文，但相当容易上手……这是个你可以很容易扎进去的好领域。"**
