@@ -30,11 +30,11 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-11-12（每次 CI 构建刷新）。
+> 自动生成于 2026-11-13（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 207 |
+| 视频转录稿 | 208 |
 | 人物页 | 179 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
@@ -46,7 +46,7 @@
 | Latent Space (swyx & Alessio) | 53 |
 | a16z (Andreessen Horowitz) | 50 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 27 |
-| No Priors (Sarah Guo & Elad Gil) | 20 |
+| No Priors (Sarah Guo & Elad Gil) | 21 |
 | 张小珺（商业访谈录） | 18 |
 | Dwarkesh Patel | 12 |
 | 月球大叔（Uncle Moon） | 12 |
