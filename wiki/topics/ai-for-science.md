@@ -1408,3 +1408,9 @@ AI-for-science 目前收录的观点以美方（Adam Brown、Grant、Noam、Karp
 ### ⚠️ 一条点名，本页记为点名而非评测
 
 （[01:11:59]）**Periodic Labs 的模型（字幕作 "neon"）被说成"在材料科学任务上比所有模型都好而且更便宜"**，**而被强调的是那位研究员"没有任何这方面的背景"**。✅ **主持给的推论**：**"所以如果你在 AI 语言模型领域工作，即使你没有领域专长，你也能产生很大影响。"** 🔗 **与本库既有的 [Periodic Labs 材料](../people/periodic-labs.md) 并读。**
+
+## ⚠️ in silico 优先的 AI 制药路线（Isomorphic Labs / Max Jaderberg，2026-11-12）
+
+来源：[No Priors × Max Jaderberg](../videos/20261112-no-priors-max-jaderberg-isomorphic-get-out-of-real-world.md)
+
+- ⚠️ 本节只作指针，论证细节见视频页。要点：他把目标表述为"离开真实世界"、真实世界只做验证（[00:24:10]–[00:26:10]），与本页 Periodic Labs / Leash Bio 押注"让实验更快"的路线构成对照；并给出一条"分子精度决定鸡尾酒疗法可用空间"的机制论证（[00:29:11]–[00:31:13]）。⚠️ 当事公司自述，未公布临床数据，拒绝给首个临床日期（[00:34:18]）。

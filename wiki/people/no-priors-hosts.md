@@ -55,6 +55,7 @@
 | 2026-10-15 | ["安全支出应该大幅超过软件支出"：药物发现的物理学变了没有、数学跑得快到底靠什么](../videos/20261015-no-priors-greg-brockman-cyber-spend-drug-physics.md) | [Greg Brockman](greg-brockman.md)（OpenAI 联创兼总裁；双主持）⚠️ **当事方叙述，全部数字自述未核实** |
 | 2026-10-29 | [边界就是产品、权限会越收越紧、"我们从没建过定制功能"](../videos/20261029-no-priors-serval-boundary-is-the-product-least-privilege.md) | [Jake Stauch](jake-stauch.md)（Serval 联创兼 CEO） |
 | 2026-11-05 | [用加密货币的分散持有对照 AI 的集中持有、一条 IPO 市值算术，以及"数学发现被关在数据中心里"那条批评](../videos/20261105-no-priors-vlad-tenev-ownership-crypto-vs-ai-math-centralization.md) | [Vlad Tenev](vlad-tenev.md)（Robinhood 联创兼 CEO / Harmonic 联创；Sarah Guo 独立主持）⚠️⚠️ **六条自家产品线，全部数字自述、转录稿全程无利益披露** |
+| 2026-11-12 | [Isomorphic Labs 的 in silico 路线：实验精度虚线、动物模型预测力、鸡尾酒疗法](../videos/20261112-no-priors-max-jaderberg-isomorphic-get-out-of-real-world.md) | Max Jaderberg（Isomorphic Labs 总裁；Elad Gil 独立主持） |
 
 > **来源：[No Priors / Michael Lee](../videos/20260924-no-priors-michael-lee-refounding-incumbents.md)**
 >
