@@ -30,11 +30,11 @@
 <!-- STATS:BLOCK:START -->
 ## 📊 数据统计
 
-> 自动生成于 2026-11-13（每次 CI 构建刷新）。
+> 自动生成于 2026-11-14（每次 CI 构建刷新）。
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 209 |
+| 视频转录稿 | 210 |
 | 人物页 | 179 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
@@ -48,7 +48,7 @@
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 27 |
 | No Priors (Sarah Guo & Elad Gil) | 21 |
 | 张小珺（商业访谈录） | 18 |
-| Dwarkesh Patel | 12 |
+| Dwarkesh Patel | 13 |
 | 月球大叔（Uncle Moon） | 12 |
 | Lex Fridman | 10 |
 | Andrej Karpathy | 5 |
