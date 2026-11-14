@@ -22,6 +22,7 @@
 |---|---|---|
 | 2026-03-23 | [NVIDIA - The $4 Trillion Company](../videos/20260323-lex-jensen-huang-nvidia.md) | co-design、CUDA 史、scaling、电力、中国、就业 |
 | 2026-10-13 | [Visiting Taiwan w/ Jensen Huang](../videos/20261013-lex-jensen-huang-taiwan.md) | ⚠️ 旅行 vlog；出口管制 flywheel、英语优势、台湾产业起源、TSMC 关系史 |
+| 2026-11-14 | [All-In：Jensen 出局](../videos/20261114-all-in-jensen-out-nvidia-export-controls-anthropic-ipo.md) | ⚠️ 第三方讨论（非本人出镜）：辞职事件、出口管制、继任人选 |
 
 ## 国家级 flywheel 与出口管制（2026-10）
 来源：[Lex / Visiting Taiwan](../videos/20261013-lex-jensen-huang-taiwan.md)
@@ -115,3 +116,13 @@
 - **他自称的驱动力**（[03:35:33]）：**take care of families**。刘洺堉也提到十年间的变化（[02:49:25]–[02:50:27]）——"头发都白了""承担的压力大了很多"，公司从不到 2 万人到两倍以上，但仍**仔细读员工的 top-5 email**。⚠️ 还有一条：**"为什么其他公司都说 CEO 不应该是最努力的人，但是你们公司 CEO 是最努力的人？"**——刘洺堉的回答是"**这我也不懂**，但它 works"（[03:35:33]）。
 
 ⚠️ **本节的立场提示**：叙述者是 Jensen 的下属、且在片中多次表达敬意（"不愧是教主"）。**本库照记，不作为独立评价。** NVIDIA 的制度层面（不裁员、无末位淘汰、mission is the boss）见 [AI 实验室文化](../topics/ai-lab-culture.md)。
+
+## ⚠️⚠️ 辞去 CEO（2026-11）
+
+来源：[All-In 2026-11-14](../videos/20261114-all-in-jensen-out-nvidia-export-controls-anthropic-ipo.md)
+
+- ⚠️ **事件（据 All-In 转述纽时与 The Information，本库未核实）**：2026-11-06 纽时据泄露的情报备忘录报道与其关系密切的 Megaspeed 高管是中共间谍；11-08 他发全员信承认婚外情；一周内辞职，结束 33 年 CEO 任期，CFO 暂代（[00:01:05]–[00:03:09]）。股价一周约跌 15%（[00:01:05]）。
+- **四位主持的共识**：在司法调查完成前不定罪；Sacks 强调"泄密是唯一确知的犯罪"（[00:06:19]）；Friedberg 与 Jason 认为若查明无违法他会回来（[00:58:53]–[00:59:56]）。
+- **继任人选（Chamath 的提名）**：Ian Buck（内部）、Rene Haas（Arm）、Nikesh Arora（Palo Alto Networks）（[00:57:49]）。
+- 🔗 这与本页"国家级 flywheel 与出口管制"一节中他本人主张的出口立场直接相关；Friedberg 认为他"反寡头、倡导开源与全球可及"的立场是他树敌的原因（[00:17:57]、[00:44:07]，⚠️ 推测）。
+
