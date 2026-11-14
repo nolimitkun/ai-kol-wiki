@@ -22,6 +22,7 @@
 | 2026-09-01 | [Hugging Face 事件的调查者本人：1200 个 agent 的秘密留言板](../videos/20260901-dwarkesh-ajeya-cotra-agent-swarm-investigation.md) | [Ajeya Cotra](ajeya-cotra.md)（METR） |
 | 2026-09-11 | [三位研究者辩 RSI：距离递归自我改进还有多远](../videos/20260911-dwarkesh-rsi-debate-schulman-millidge-oneill.md) | [John Schulman](john-schulman.md)（Thinking Machines）、[Beren Millidge](beren-millidge.md)（Zyphra）、[Charlie O'Neill](charlie-oneill.md)（Baseten）⚠️ **四人圆桌，本库首次** |
 | 2026-09-17 | [1 万 agent 解千禧难题、多智能体的训练取舍，以及 RSI 怎么验收](../videos/20260917-dwarkesh-noam-brown-agent-swarms-rsi.md) | [Noam Brown](noam-brown.md)（OpenAI） |
+| 2026-11-13 | [递归自我改进已经开始了（视频长文）](../videos/20261113-dwarkesh-rsi-has-started-essay.md) | 无嘉宾，本人独讲 |
 
 > ⚠️ **2026-09 的这两期构成本库唯一一组"同一主持人、相隔 16 天、同一事件的两侧"的材料**：Ajeya Cotra 是 **Hugging Face 事件的外部调查者**，Noam Brown 是 **OpenAI 内部做多智能体的人**。应当一起读。
 >
@@ -49,3 +50,12 @@
 4. ⚠️ **"我仍然不认同接管看起来非常可能。"**
 
 **他自述的选题方法论**（[02:11:19]）值得记，因为它解释了这个频道的选题倾向：他用学开车时被教"**别盯着车轮正前方，看向地平线，你会开得更稳**"做比喻——"**现在就用你希望自己在 2016 年谈论今天这些 AI 时会用的方式去谈话，而不是聊些乱七八糟的东西。**"他给的十年后回看的候选题目是：**产业爆炸，以及难以监控的 AI 的本质。**
+
+## ⚠️⚠️ 2026-11 的转向：成文的 RSI 时间表
+来源：[Dwarkesh 2026-11-13](../videos/20261113-dwarkesh-rsi-has-started-essay.md)
+
+- 开场自陈："今年早些时候问我，我会说离超级智能至少大半个十年……过去三个月我改了很多"（[00:00:00]）。与上面 2026-08 的分项更新（"不确定买账'一年五年'""仍不认同接管很可能"）对照着读；本期没有谈接管与对齐。
+- **数字**：自动化研究员达到最顶尖人类 AI 研究员水平中位 **2028**，**≥25% 晚于 2032**，2027 亦可能（[00:07:24]–[00:09:27]）；spark vs software-only singularity **50/50**（[00:15:39]）；中位情景下所有领域达到顶尖人类水平在 **2028 或 2029**（[00:24:53]）。
+- ⚠️⚠️ **公开撤回自己一年半来的主要反对意见——持续学习瓶颈**（[00:33:08]–[00:36:13]）："现在我认为扩展 in-context learning 就够了"；"你可能不需要一个持续学习者来解决持续学习"。
+- ⚠️ **2026-08 那条"数学里没看到'想出拓扑学'级别的新理论"没有撤回**，而是改为论证它对 ML 不构成障碍——ML 本来就不需要多少新理论（[00:04:14]）。
+- Jerry Han 数据实验的本期口径：过去六年预训练中来自数据改进的算法进展是模型改进的 3 倍以上（[00:38:17]）。
