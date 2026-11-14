@@ -34,7 +34,7 @@
 
 | 指标 | 数量 |
 |---|---|
-| 视频转录稿 | 210 |
+| 视频转录稿 | 211 |
 | 人物页 | 179 |
 | 主题页 | 16 |
 | 关注频道 | 9（活跃 9） |
@@ -44,7 +44,7 @@
 | 频道 | 期数 |
 |---|---|
 | Latent Space (swyx & Alessio) | 53 |
-| a16z (Andreessen Horowitz) | 51 |
+| a16z (Andreessen Horowitz) | 52 |
 | All-In Podcast (Chamath, Sacks, Friedberg, Calacanis) | 27 |
 | No Priors (Sarah Guo & Elad Gil) | 21 |
 | 张小珺（商业访谈录） | 18 |
